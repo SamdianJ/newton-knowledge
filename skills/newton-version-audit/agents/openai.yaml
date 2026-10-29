@@ -1,0 +1,4 @@
+interface:
+  display_name: "Newton Version Audit"
+  short_description: "Audit Newton version drift and knowledge compatibility"
+  default_prompt: "Use $newton-version-audit to compare this knowledge base with my target Newton environment and identify required changes and validation gaps."

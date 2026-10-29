@@ -2099,7 +2099,7 @@
     "knowledge-base/scripts/build_solid_replays.py": "d6ca1930c3c09645224f2eae7c17606c3201a808dd003b8b7563d64721dab192",
     "knowledge-base/scripts/common_content.py": "ecdeb7ead6e8d2c28f350c8c460005263ec5c0b0afc739d9f0b1a4f881397502",
     "knowledge-base/scripts/curated.py": "316db13a0492c47155b7c6cd90651f9f5f5509b38f59e7440de261a351d18cc0",
-    "knowledge-base/scripts/export_local_mcp.py": "1c6f38c47bdf1bf48df1d9f1ebdebb74f7c2b6896505f6bcd9e1988ba383a07a",
+    "knowledge-base/scripts/export_local_mcp.py": "39667bfabe3c20d900de21aa6f993b65838c638a1c08e12b3d3a3ade74b7b5a0",
     "knowledge-base/scripts/extend_solvers.py": "a3b156598665702d1eb8237f5b867b5f10a607c1a9a6db5563321a87c91a3320",
     "knowledge-base/scripts/extract_sources.py": "0c891ab5ec4b5d61279af199e5ebabbb7c9c7965b6374c532eb2db834b71f4b6",
     "knowledge-base/scripts/fetch_extra_papers.py": "14e411e61f4e38a9853471eec829071e9853b4d5aa4dd3cdd0f2b87a48a821a5",
@@ -3481,8 +3481,14 @@
     "knowledge-base/sources/newton-v1.7.0/SECURITY.md": "d52a49b9b3856c473d03670e1ca106aca71eb53e65f1a9a00235053b736097f8",
     "knowledge-base/sources/newton-v1.7.0/uv.lock": "65c1a9e9ff9b76e2884ab6b8272b34d0c8dbea3b2163b5c47c39b80053d5a219",
     "manage.py": "cfdc566f06acd3480b7d24223094edfb07763b5491f0d830ca55f8d0beb5990f",
-    "README.md": "9b04d4780b4523a83a78061eda632f013ea44ed04b3978d617ca14cb07fea7ba",
+    "README.md": "dceb69febb44d7d4e977dc41f36e8d8dff7929f24d82e7b07d66070c19a5111c",
     "requirements.lock.txt": "e08a4f6d95b70865568b83f224d0b525f312408a5b82a23db8fafa3965e78e5f",
+    "skills/newton-version-audit/agents/openai.yaml": "0475a8ac1a1ae08817b0368ba5871853caefdcc0298caad753be402e8d967c40",
+    "skills/newton-version-audit/references/commands.md": "ffabc7d94eb3aaa73c66396d88d79970894afa29a6fb741d4d7bdc979f959255",
+    "skills/newton-version-audit/references/review-criteria.md": "a664001d97099542a7bd7b220bd5fa7194f8b2b3351bb8a7dfeb6f8b37045a89",
+    "skills/newton-version-audit/scripts/newton_version_audit.py": "3ffdbf70ff2e85458736ef6a4d2386cdee30f356d96b45a2749ec5bad8e6e745",
+    "skills/newton-version-audit/scripts/test_newton_version_audit.py": "d5081bb3d225645d5b05741797ef3f4e4c4646e1a7b6f893ea36b8ca8fe864f4",
+    "skills/newton-version-audit/SKILL.md": "1a0686fdeee12186f9764c7753a415dbf39ab751678fe47594dd593c388de611",
     "smoke_test.py": "1485da8f52b59befa4b2925426d23bf798bfabd268b5a02454b6ed3aa407af6d",
     "THIRD_PARTY_NOTICES.md": "d4343e454bea741509ef4cd12b81d4c3572b5fbbbd7859a582fd57f1c9bcc240"
   },
@@ -3608,7 +3614,7 @@
       "reason": "Optional original paper asset; metadata, source links and citations remain included."
     }
   ],
-  "exporter_sha256": "1c6f38c47bdf1bf48df1d9f1ebdebb74f7c2b6896505f6bcd9e1988ba383a07a",
+  "exporter_sha256": "39667bfabe3c20d900de21aa6f993b65838c638a1c08e12b3d3a3ade74b7b5a0",
   "source_pointer_sha256": "060647b7b961483cf2cd0bb70c8cf42b3b1413d5ea948e562a545e89895efa7a",
   "capabilities": {
     "stdio_mcp": true,

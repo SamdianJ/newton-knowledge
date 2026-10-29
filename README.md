@@ -55,6 +55,24 @@ knowledge-base/           保留原相对路径的知识库数据
 
 默认包不附带论文原件，保留论文映射、引用、来源链接和原件哈希清单；相应本地 PDF 链接可能不可打开。Newton 源码许可证和前端第三方许可证保留在原目录。权利说明见 `THIRD_PARTY_NOTICES.md`。
 
+## Newton 版本兼容性 Skill
+
+发布包包含 `skills/newton-version-audit/`，用于核查当前知识快照与指定 Newton 源码或安装环境之间的差异，输出受影响的知识条目、论文映射以及实验复核清单。在 Codex 中使用时，将整个技能目录复制到 `~/.codex/skills/`；如设置了 `CODEX_HOME`，则复制到其 `skills/` 子目录。可通过 `$newton-version-audit` 调用。
+
+对于另一台电脑，只需把技能的 `scripts/newton_version_audit.py` 复制过去，用实际运行 Newton 的 Python 环境执行：
+
+```console
+python newton_version_audit.py collect --installed --out target-newton.json
+```
+
+将证据 JSON 带回本仓库后执行：
+
+```console
+python skills/newton-version-audit/scripts/newton_version_audit.py compare --knowledge-root . --target target-newton.json --out .local/version-audit/report.json
+```
+
+脚本不导入 Newton、不运行仿真，也不改写现有知识快照。源码一致不等于目标环境已通过物理验证；只有版本号时会报告“证据不足”。完整流程和判断边界见 [技能说明](skills/newton-version-audit/SKILL.md)。
+
 ## 离线安装
 
 在与目标机器匹配的操作系统和 Python 版本上准备 wheelhouse：

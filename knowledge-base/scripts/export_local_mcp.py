@@ -126,9 +126,17 @@ def main():
         dest = data / path.relative_to(ROOT)
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(path, dest)
-    for path in sorted(TEMPLATES.iterdir()):
-        if path.is_file():
-            shutil.copyfile(path, output / path.name)
+    # Skills and their scripts/references travel with the portable service.
+    for path in sorted(TEMPLATES.rglob('*')):
+        relative = path.relative_to(TEMPLATES)
+        if any(part in {'__pycache__', '.git'} or part.startswith('.venv') for part in relative.parts):
+            continue
+        if path.is_file() and path.suffix not in {'.pyc', '.pyo'}:
+            if path.is_symlink() or not path.resolve().is_relative_to(TEMPLATES.resolve()):
+                raise ValueError('Release templates must be regular files: ' + str(path))
+            destination = output / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(path, destination)
     files = {p.relative_to(output).as_posix(): sha(p) for p in sorted(output.rglob('*')) if p.is_file()}
     manifest = dict(schema_version=1, build_id=store.build_id, data_root='knowledge-base', newton_version='1.7.0', source_commit=store.source_lock['commit'], files=files, omitted_resources=omitted, exporter_sha256=sha(__file__), source_pointer_sha256=sha(ROOT / 'knowledge/current.json'), capabilities=dict(stdio_mcp=True, local_website=True, physics_execution=False, paper_originals=args.include_paper_assets))
     (output / 'package-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
