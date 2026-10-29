@@ -1,0 +1,11 @@
+{
+  "case_id": "kamino_fourbar_fk",
+  "variant": "A",
+  "repeat": 1,
+  "run_id": "kamino_fourbar_fk-A-r1-20261029T051020299457Z",
+  "started_utc": "20261029T051020299457Z",
+  "protocol_sha256": "9f84bd8d778405f698db1bb1a08dba90666ecce6e6458f4a35ecaa2fec28b13a",
+  "runner_sha256": "eabd2437af9a2610bbee0f05922306ce2bc1d5c6b74fe73d048eeadaaa76fcc9",
+  "status": "failed",
+  "error": "ValueError: Installed Kamino must be the fixed source snapshot"
+}

@@ -1,0 +1,241 @@
+{
+  "run_id": "kamino_backend_guided_contact_A_r1_20261029T051006438387Z",
+  "case_id": "kamino_backend_guided_contact",
+  "variant": "A",
+  "repeat": 1,
+  "solver": "kamino",
+  "status": "completed",
+  "started_at": "2026-10-29T05:10:06.443100+00:00",
+  "runner_sha256": "9affa9a812976c3d82efece859787781a547333ab883867a047a8dbcc096b53b",
+  "protocol_sha256": "b6cac2aa44540efe13d6961f559714dcbb3c74807c073b78049896bfdd81dbaa",
+  "pid": 23172,
+  "instrumentation": "Scenario and SolverKamino construction use public APIs. Read-only solver._config and solver._contacts_kamino.model_active_contacts are version-pinned internal instrumentation, not public API promises.",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pid": 23172,
+    "device": "cpu",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "warp-lang": "1.18.0",
+      "newton": "1.7.0"
+    },
+    "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "source_sha256": {
+      "newton/__init__.py": "4adf43936dc13fc83f6ac59a720046bbcf9d3bf917fe21795cb6518277db6b05",
+      "newton/_src/solvers/kamino/solver_kamino.py": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+      "newton/_src/solvers/kamino/config.py": "4625e87ad4027fb246aeb879f816ef31cdc8441dae8872e8ce8d669aa0a3157d",
+      "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py": "f21d3054ecf8396a3fc09360eec1eebd9fd10238e6ebb2fc29d1ed439a3f2d7d",
+      "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py": "89e21067202a620192a10f5038bbf86b8bb25fe7f0359fa941987d448b15bf6a"
+    },
+    "loaded_solver": "D:\\RAG\\Newton knowledge\\sources\\newton-v1.7.0\\newton\\_src\\solvers\\kamino\\solver_kamino.py"
+  },
+  "scene_sha256": "7c48c3cf1af13ec8aff417ffa8cee0db770b34fa5d2ac20edbd4293fa215d8c9",
+  "requested_config": {
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": true,
+    "use_fk_solver": false,
+    "collision_detector": {
+      "pipeline": "unified",
+      "broadphase": "explicit",
+      "bvtype": "aabb",
+      "max_contacts": null,
+      "max_contacts_per_world": 32,
+      "max_contacts_per_pair": 12,
+      "max_triangle_pairs": 1000000,
+      "default_gap": 1e-05
+    },
+    "constraints": {
+      "alpha": 0.1,
+      "beta": 0.01,
+      "gamma": 0.1,
+      "delta": 1e-06
+    },
+    "dynamics": {
+      "preconditioning": true,
+      "linear_solver_type": "LLTB",
+      "linear_solver_kwargs": {},
+      "cull_speculative_contacts": true
+    },
+    "padmm": {
+      "primal_tolerance": 1e-06,
+      "dual_tolerance": 1e-06,
+      "compl_tolerance": 1e-06,
+      "restart_tolerance": 0.999,
+      "eta": 1e-05,
+      "rho_0": 1.0,
+      "rho_min": 1e-05,
+      "a_0": 1.0,
+      "alpha": 10.0,
+      "tau": 1.5,
+      "max_iterations": 200,
+      "penalty_update_freq": 1,
+      "penalty_update_method": "fixed",
+      "linear_solver_tolerance": 0.0,
+      "linear_solver_tolerance_ratio": 0.0,
+      "use_acceleration": true,
+      "use_graph_conditionals": false,
+      "warmstart_mode": "containers",
+      "warmstart_scale": 0.9,
+      "contact_warmstart_method": "key_and_position"
+    },
+    "dvi": {
+      "tolerance": 1e-05,
+      "regularization": 1e-06,
+      "omega": 1.0,
+      "max_alternating_iterations": 24,
+      "inequality_sweeps_per_iteration": 2,
+      "use_schur_complement": false,
+      "bilateral_solve_interval": 1,
+      "tangential_warmstart_scale": 0.97,
+      "bilateral_solver_type": "LLTB",
+      "bilateral_solver_kwargs": {},
+      "warmstart_mode": "containers",
+      "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+    },
+    "fk": null,
+    "materials": {
+      "friction_mix_mode": "average",
+      "restitution_mix_mode": "min"
+    },
+    "rotation_correction": "twopi",
+    "integrator": "euler",
+    "dynamics_solver": "padmm",
+    "angular_velocity_damping": 0.0,
+    "collect_solver_info": false,
+    "compute_solution_metrics": false
+  },
+  "initialization_s": 0.08323529991321266,
+  "resolved_config": {
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": true,
+    "use_fk_solver": false,
+    "collision_detector": {
+      "pipeline": "unified",
+      "broadphase": "explicit",
+      "bvtype": "aabb",
+      "max_contacts": null,
+      "max_contacts_per_world": 32,
+      "max_contacts_per_pair": 12,
+      "max_triangle_pairs": 1000000,
+      "default_gap": 1e-05
+    },
+    "constraints": {
+      "alpha": 0.1,
+      "beta": 0.01,
+      "gamma": 0.1,
+      "delta": 1e-06
+    },
+    "dynamics": {
+      "preconditioning": true,
+      "linear_solver_type": "LLTB",
+      "linear_solver_kwargs": {},
+      "cull_speculative_contacts": true
+    },
+    "padmm": {
+      "primal_tolerance": 1e-06,
+      "dual_tolerance": 1e-06,
+      "compl_tolerance": 1e-06,
+      "restart_tolerance": 0.999,
+      "eta": 1e-05,
+      "rho_0": 1.0,
+      "rho_min": 1e-05,
+      "a_0": 1.0,
+      "alpha": 10.0,
+      "tau": 1.5,
+      "max_iterations": 200,
+      "penalty_update_freq": 1,
+      "penalty_update_method": "fixed",
+      "linear_solver_tolerance": 0.0,
+      "linear_solver_tolerance_ratio": 0.0,
+      "use_acceleration": true,
+      "use_graph_conditionals": false,
+      "warmstart_mode": "containers",
+      "warmstart_scale": 0.9,
+      "contact_warmstart_method": "key_and_position"
+    },
+    "dvi": {
+      "tolerance": 1e-05,
+      "regularization": 1e-06,
+      "omega": 1.0,
+      "max_alternating_iterations": 24,
+      "inequality_sweeps_per_iteration": 2,
+      "use_schur_complement": false,
+      "bilateral_solve_interval": 1,
+      "tangential_warmstart_scale": 0.97,
+      "bilateral_solver_type": "LLTB",
+      "bilateral_solver_kwargs": {},
+      "warmstart_mode": "containers",
+      "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+    },
+    "fk": null,
+    "materials": {
+      "friction_mix_mode": "average",
+      "restitution_mix_mode": "min"
+    },
+    "rotation_correction": "twopi",
+    "integrator": "euler",
+    "dynamics_solver": "padmm",
+    "angular_velocity_damping": 0.0,
+    "collect_solver_info": false,
+    "compute_solution_metrics": false
+  },
+  "visual": {
+    "body_shapes": [
+      {
+        "body": 0,
+        "type": "sphere",
+        "radius": 0.1
+      }
+    ],
+    "floor": 0.0
+  },
+  "model": {
+    "body_count": 1,
+    "world_count": 1,
+    "joint_count": 1,
+    "body_mass": [
+      1.0
+    ],
+    "body_inertia": [
+      [
+        [
+          0.004000000189989805,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004000000189989805,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004000000189989805
+        ]
+      ]
+    ],
+    "body_com": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "joint_axis": [
+      [
+        0.6000000238418579,
+        0.0,
+        -0.800000011920929
+      ]
+    ]
+  },
+  "raw_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/trajectory.npz",
+  "raw_sha256": "1a948029ad08059522c542f85aea7c28b91d0f01a06c330dc322fbbe9e7f3b67",
+  "samples": 145,
+  "finished_at": "2026-10-29T05:10:14.888275+00:00"
+}

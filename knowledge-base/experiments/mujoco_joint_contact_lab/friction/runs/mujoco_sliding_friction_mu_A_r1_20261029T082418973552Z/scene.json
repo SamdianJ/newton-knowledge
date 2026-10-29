@@ -1,0 +1,51 @@
+{
+  "id": "mujoco_sliding_friction_mu",
+  "title": "薄宽盒平面滑动：滑动摩擦系数单因素对照",
+  "shape": "box",
+  "half_extents_m": [
+    0.2,
+    0.15,
+    0.025
+  ],
+  "inertia_diagonal_kg_m2": [
+    0.0077083333333333335,
+    0.013541666666666669,
+    0.020833333333333332
+  ],
+  "initial_velocity_world": [
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "body_mu_torsional_m": 0.0,
+  "body_mu_rolling_m": 0.0,
+  "steps": 300,
+  "variants": {
+    "A": {
+      "body_mu": 0.1,
+      "body_condim": 3
+    },
+    "B": {
+      "body_mu": 0.4,
+      "body_condim": 3
+    }
+  },
+  "direct_intervention": "body shape_material_mu only; plane mu=0 and equal priority expose elementwise maximum mixing",
+  "reference": "During sustained sliding v_x(t)=v_x(.05)-mu*g*(t-.05), x displacement trapezoidal/constant acceleration. Independent full trajectory impulse: m*(v_n-v_0)=sum_k dt*(F_contact_world[k]+m*g). Every force is native mj_contactForce not Newton CONTACT_F.",
+  "criteria": {
+    "analytic_sliding_velocity_max_error_m_s": 0.08,
+    "contact_force_ratio_abs_error": 0.03,
+    "minimum_sliding_speed_m_s": 0.5,
+    "lateral_speed_max_m_s": 0.02,
+    "tilt_from_vertical_max_rad": 0.03,
+    "height_deviation_from_initial_max_m": 0.003,
+    "kinetic_energy_max_positive_step_J": 0.003
+  },
+  "paired_criteria": {
+    "final_vx_A_minus_B_min_m_s": 0.6,
+    "integrated_tangential_impulse_B_minus_A_min_Ns": 0.6
+  }
+}

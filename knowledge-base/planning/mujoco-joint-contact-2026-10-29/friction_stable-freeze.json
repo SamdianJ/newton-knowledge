@@ -1,0 +1,11 @@
+{
+  "status": "frozen_before_runs",
+  "group": "friction_stable",
+  "protocol": "experiments/mujoco_joint_contact_lab/friction_stable/protocol.json",
+  "sha256": "0205504e415b5942cfc98a286841597ddd10b9d42c62fc06c0eb347b97865cfb",
+  "frozen_at_utc": "2026-10-29T08:31:28.259038+00:00",
+  "baseline_build": "35d4e7b6c3450093fc489405",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "formal_runs": 8,
+  "comparison_protocol_sha256": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b"
+}

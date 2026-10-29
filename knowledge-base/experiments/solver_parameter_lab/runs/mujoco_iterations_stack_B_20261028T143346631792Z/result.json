@@ -1,0 +1,505 @@
+{
+  "run_id": "mujoco_iterations_stack_B_20261028T143346631792Z",
+  "case_id": "mujoco_iterations_stack",
+  "solver": "mujoco",
+  "variant": "B",
+  "version": "1.7.0",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "started_at": "2026-10-28T14:33:46.634371+00:00",
+  "status": "completed",
+  "run_class": "full_variant",
+  "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+  "protocol_sha256": "dd899264137ea40dc47b6772048f53d8a9fc60402132179075e2437d2b4838c7",
+  "protocol_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_B_20261028T143346631792Z/protocol.json",
+  "archived_program": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_B_20261028T143346631792Z/run_program.py",
+  "timing_scope": "Newton solver.step plus device synchronization; state export and serialization excluded. Report initialization and cold compilation separately where observable, median after first five steps, never cross-solver performance ranking.",
+  "warmup_steps": 5,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "packages": {
+      "newton": "1.7.0",
+      "numpy": "2.5.4",
+      "warp-lang": "1.18.0",
+      "mujoco": "3.15.0",
+      "mujoco-warp": "3.15.0"
+    },
+    "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+    "warp_devices": [
+      "cpu"
+    ]
+  },
+  "source_verification": {
+    "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+    "installed_path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\mujoco\\solver_mujoco.py",
+    "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+    "expected_sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+    "matches_snapshot": true
+  },
+  "scene_sha256": "7629fcb6fb50e541dce8ee10e4c807045986735de52c97dfabf310dfc16ece86",
+  "initialization_ms": 1194.7055000346154,
+  "config": {
+    "constructor": {
+      "use_mujoco_cpu": true,
+      "use_mujoco_contacts": true,
+      "iterations": 50
+    },
+    "treatment": {
+      "iterations": 50
+    },
+    "material_values": {
+      "ke": 20000.0,
+      "kd": 300.0
+    },
+    "dt": 0.004166666666666667,
+    "steps": 240,
+    "model": {
+      "world_count": 1,
+      "body_mass": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "body_inertia": [
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ]
+      ],
+      "body_com": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "body_world": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shape_world": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gravity": [
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ],
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ]
+      ],
+      "shape_material_ke": [
+        20000.0,
+        20000.0,
+        20000.0,
+        20000.0,
+        20000.0,
+        20000.0
+      ],
+      "shape_material_kd": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "shape_material_mu": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ]
+    },
+    "scene_description": {
+      "world_count": 1,
+      "up_axis": "Z",
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "floor_z": 0.0,
+      "bodies": [
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.0,
+            0,
+            0.101
+          ],
+          "tilt_y": 0.0
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.002,
+            0,
+            0.321
+          ],
+          "tilt_y": 0.012
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.004,
+            0,
+            0.541
+          ],
+          "tilt_y": 0.024
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.006,
+            0,
+            0.761
+          ],
+          "tilt_y": 0.036000000000000004
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.008,
+            0,
+            0.981
+          ],
+          "tilt_y": 0.048
+        }
+      ],
+      "mu": 0.6,
+      "common_ke": 20000.0,
+      "common_kd": 300.0
+    },
+    "seed": "no RNG"
+  },
+  "visual": {
+    "body_shapes": [
+      {
+        "body": 0,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 1,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 2,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 3,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 4,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      }
+    ],
+    "floor": 0.0
+  },
+  "metrics": {
+    "finite": true,
+    "steps": 240,
+    "initial_penetration_mm": 0.0,
+    "max_penetration_mm": 0.49116614815014614,
+    "final_penetration_mm": 0.02625324048108335,
+    "tail_penetration_mm": 0.02625324092511994,
+    "initial_stack_height_m": 1.085682985444554,
+    "final_stack_height_m": 0.9998746767614763,
+    "max_speed_m_s": 1.2262499332427979,
+    "final_kinetic_energy_J": 1.1656501896621548e-10,
+    "max_kinetic_energy_J": 4.599932881198672,
+    "step_ms_median_after_warmup": 0.2407
+  },
+  "raw_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_B_20261028T143346631792Z/trajectory.npz",
+  "raw_sha256": "8130cb65b4a400e1b585a19a135369634506176391451751b37871131fb87b5c",
+  "samples": 241,
+  "duration_seconds": 1.0,
+  "resolved_backend": {
+    "iterations": 50,
+    "tolerance": 1e-08,
+    "integrator": 3,
+    "solver": 2,
+    "cone": 0,
+    "impratio": 1.0,
+    "disableflags": 524288,
+    "timestep": 0.004166666666666667,
+    "geom_solref": [
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ],
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ],
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ],
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ],
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ],
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ]
+    ],
+    "geom_solimp": [
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    ],
+    "geom_friction": [
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ],
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ],
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ],
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ],
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ],
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ]
+    ]
+  },
+  "finished_at": "2026-10-28T14:33:50.945719+00:00"
+}

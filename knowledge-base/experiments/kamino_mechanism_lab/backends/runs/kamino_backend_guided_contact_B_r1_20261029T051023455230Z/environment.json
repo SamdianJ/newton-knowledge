@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pid": 4608,
+  "device": "cpu",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "newton": "1.7.0"
+  },
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "source_sha256": {
+    "newton/__init__.py": "4adf43936dc13fc83f6ac59a720046bbcf9d3bf917fe21795cb6518277db6b05",
+    "newton/_src/solvers/kamino/solver_kamino.py": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "newton/_src/solvers/kamino/config.py": "4625e87ad4027fb246aeb879f816ef31cdc8441dae8872e8ce8d669aa0a3157d",
+    "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py": "f21d3054ecf8396a3fc09360eec1eebd9fd10238e6ebb2fc29d1ed439a3f2d7d",
+    "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py": "89e21067202a620192a10f5038bbf86b8bb25fe7f0359fa941987d448b15bf6a"
+  },
+  "loaded_solver": "D:\\RAG\\Newton knowledge\\sources\\newton-v1.7.0\\newton\\_src\\solvers\\kamino\\solver_kamino.py"
+}

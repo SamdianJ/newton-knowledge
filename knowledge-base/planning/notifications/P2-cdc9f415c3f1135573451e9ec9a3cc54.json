@@ -1,0 +1,17 @@
+{
+  "phase": "P2",
+  "sent": true,
+  "idempotency_key": "newton-cdc9f415c3f1135573451e9ec9a3cc54",
+  "time": "2026-10-28T13:21:19.180472+00:00",
+  "exit_code": 0,
+  "response": {
+    "ok": true,
+    "identity": "bot",
+    "data": {
+      "chat_id": "oc_ad77e9fd76e3c8e9d0a3c569da812f7e",
+      "create_time": "2026-10-28 21:21:18",
+      "message_id": "om_x100b612b222ff8a4cf17b291c4c3be0"
+    }
+  },
+  "stderr": ""
+}

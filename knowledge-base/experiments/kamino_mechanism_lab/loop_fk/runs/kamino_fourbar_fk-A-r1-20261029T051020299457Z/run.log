@@ -1,0 +1,17 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 12.8 (insufficient CUDA driver version!)
+   Devices:
+     "cpu"      : "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+   Kernel cache:
+     \\?\C:\Users\admin\AppData\Local\NVIDIA\warp\Cache\1.18.0
+Warp UserWarning: 
+   Insufficient CUDA driver version.
+   The minimum required CUDA driver version is 13.0, but the installed CUDA driver version is 12.8.
+   Visit https://nvidia.github.io/warp/stable/user_guide/installation.html for guidance.
+Traceback (most recent call last):
+  File "D:\RAG\Newton knowledge\experiments\kamino_mechanism_lab\loop_fk\run_experiment.py", line 192, in main
+    result.update(run(protocol, case, args.variant, directory))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\Newton knowledge\experiments\kamino_mechanism_lab\loop_fk\run_experiment.py", line 116, in run
+    raise ValueError("Installed Kamino must be the fixed source snapshot")
+ValueError: Installed Kamino must be the fixed source snapshot

@@ -1,0 +1,1098 @@
+{
+  "status": "passed",
+  "date": "2026-10-27",
+  "experiments": 17,
+  "variants": 34,
+  "checks": [
+    {
+      "check": "loaded solver matches official v1.7.0 snapshot",
+      "passed": true
+    },
+    {
+      "check": "final run has no failed variants",
+      "passed": true
+    },
+    {
+      "check": "17 experiments available",
+      "passed": true
+    },
+    {
+      "check": "official document snapshot hash: official-docs/solvers_index.html",
+      "passed": true
+    },
+    {
+      "check": "official document snapshot hash: official-docs/solvers_vbd.html",
+      "passed": true
+    },
+    {
+      "check": "official document snapshot hash: official-docs/concepts_simulation_tuning.html",
+      "passed": true
+    },
+    {
+      "check": "official document snapshot hash: official-docs/concepts_simulation_tuning_vbd.html",
+      "passed": true
+    },
+    {
+      "check": "official document snapshot hash: official-docs/concepts_simulation_tuning_solvers.html",
+      "passed": true
+    },
+    {
+      "check": "official document snapshot hash: official-docs/concepts_collisions.html",
+      "passed": true
+    },
+    {
+      "check": "full_surface: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "full_surface: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "full_surface: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "full_surface: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "full_surface A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "full_surface A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "full_surface A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "full_surface A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "full_surface A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "full_surface B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "full_surface B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "full_surface B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "full_surface B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "full_surface B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "iterations: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "iterations: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "iterations: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "iterations: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "iterations A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "iterations A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "iterations A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "iterations A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "iterations A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "iterations B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "iterations B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "iterations B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "iterations B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "iterations B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "substeps: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "substeps: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "substeps: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "substeps: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "substeps A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "substeps A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "substeps A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "substeps A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "substeps A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "substeps B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "substeps B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "substeps B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "substeps B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "substeps B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "stiffness: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "stiffness: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "stiffness: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "stiffness: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "stiffness A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "stiffness A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "stiffness A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "stiffness A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "stiffness A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "stiffness B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "stiffness B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "stiffness B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "stiffness B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "stiffness B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "damping: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "damping: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "damping: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "damping: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "damping A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "damping A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "damping A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "damping A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "damping A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "damping B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "damping B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "damping B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "damping B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "damping B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "self_contact: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "self_contact: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "self_contact: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "self_contact: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "self_contact A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "self_contact A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "self_contact A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "self_contact A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "self_contact A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "self_contact B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "self_contact B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "self_contact B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "self_contact B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "self_contact B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "self_margin: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "self_margin: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "self_margin: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "self_margin: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "self_margin A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "self_margin A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "self_margin A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "self_margin A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "self_margin A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "self_margin B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "self_margin B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "self_margin B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "self_margin B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "self_margin B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "contact_stiffness B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "friction: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "friction: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "friction: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "friction: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "friction A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "friction A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "friction A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "friction A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "friction A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "friction B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "friction B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "friction B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "friction B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "friction B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "friction_epsilon B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "dat: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "dat: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "dat: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "dat: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "dat A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "dat A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "dat A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "dat A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "dat A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "dat B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "dat B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "dat B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "dat B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "dat B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "dat_relaxation B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "rigid_mode B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "joint_stiffness B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "membrane: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "membrane: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "membrane: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "membrane: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "membrane A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "membrane A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "membrane A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "membrane A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "membrane A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "membrane B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "membrane B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "membrane B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "membrane B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "membrane B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "bending: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "bending: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "bending: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "bending: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "bending A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "bending A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "bending A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "bending A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "bending A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "bending B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "bending B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "bending B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "bending B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "bending B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "stabilization: A/B treatments match declared values",
+      "passed": true
+    },
+    {
+      "check": "stabilization: common settings identical",
+      "passed": true
+    },
+    {
+      "check": "stabilization: initial poses identical",
+      "passed": true
+    },
+    {
+      "check": "stabilization: identical physical horizon",
+      "passed": true
+    },
+    {
+      "check": "stabilization A: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "stabilization A: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "stabilization A: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "stabilization A: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "stabilization A: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "stabilization B: final frozen runner hash",
+      "passed": true
+    },
+    {
+      "check": "stabilization B: finite raw arrays",
+      "passed": true
+    },
+    {
+      "check": "stabilization B: bounded scene state (<5 m, quaternion components <5)",
+      "passed": true
+    },
+    {
+      "check": "stabilization B: displayed curve matches raw trajectory metric",
+      "passed": true
+    },
+    {
+      "check": "stabilization B: displayed final metric matches raw",
+      "passed": true
+    },
+    {
+      "check": "full surface changes feature coverage",
+      "passed": true
+    },
+    {
+      "check": "full surface supports sphere in this scene",
+      "passed": true
+    },
+    {
+      "check": "iterations compared against exact discrete linear reference",
+      "passed": true
+    },
+    {
+      "check": "spring static deflection agrees with mg/k A",
+      "passed": true
+    },
+    {
+      "check": "spring static deflection agrees with mg/k B",
+      "passed": true
+    },
+    {
+      "check": "DAT point stays above plane in the tested setup",
+      "passed": true
+    },
+    {
+      "check": "self-contact equilibrium tracks margin A",
+      "passed": true
+    },
+    {
+      "check": "self-contact equilibrium tracks margin B",
+      "passed": true
+    },
+    {
+      "check": "browser renders 17 experiment rows",
+      "passed": true
+    },
+    {
+      "check": "browser renders both measured panels for every row",
+      "passed": true
+    },
+    {
+      "check": "browser renders all scientific time curves",
+      "passed": true
+    },
+    {
+      "check": "all local report links resolve: []",
+      "passed": true
+    },
+    {
+      "check": "desktop has no page-wide horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "parameter search filters to full surface",
+      "passed": true
+    },
+    {
+      "check": "timeline redraws measured positions",
+      "passed": true
+    },
+    {
+      "check": "playback advances shared time",
+      "passed": true
+    },
+    {
+      "check": "group filter isolates two cloth material examples",
+      "passed": true
+    },
+    {
+      "check": "empty query state is visible",
+      "passed": true
+    },
+    {
+      "check": "mobile has no page-wide horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "no browser JavaScript errors: []",
+      "passed": true
+    }
+  ],
+  "browser": {
+    "status": "passed",
+    "browser": "Microsoft Edge headless, fresh isolated profile",
+    "viewports": [
+      [
+        1440,
+        1050
+      ],
+      [
+        390,
+        1000
+      ]
+    ],
+    "errors": [],
+    "screenshots": [
+      "screenshots/desktop.png",
+      "screenshots/cloth.png",
+      "screenshots/friction.png",
+      "screenshots/mobile.png"
+    ]
+  },
+  "limits": "One exploratory pair per scene; no independent replication, broad physical proof, hardware performance benchmark or validation of untested constructor options."
+}

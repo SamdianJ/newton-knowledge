@@ -1,0 +1,253 @@
+{
+  "tasks": [
+    {
+      "id": "T01",
+      "query": "比较 VBD MuJoCo Kamino iterations 默认值和实测依据",
+      "required_record_ids": [
+        "solver:vbd",
+        "solver:mujoco",
+        "solver:kamino"
+      ],
+      "check": "default_comparison",
+      "answer_points": [
+        "VBD 声明默认 10、MuJoCo 声明 None 与解析策略、Kamino PADMM 上限 200 分开读取",
+        "按所查询内容世代报告实测存在性"
+      ],
+      "forbidden_conclusions": [
+        "Do not rank performance by equal iteration counts"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T02",
+      "query": "球穿过粗三角布面 full surface 穿模",
+      "required_record_ids": [
+        "concept:collisions",
+        "pipeline:enable_rigid_soft_full_surface_contact",
+        "lab:full_surface"
+      ],
+      "check": "full_surface",
+      "answer_points": [
+        "定义 owner 为 CollisionPipeline，声明默认 False",
+        "动态来源行号与 VBD A/B 指标一致",
+        "其他 backend 依据适用性来源，未知则明确 unknown"
+      ],
+      "forbidden_conclusions": [
+        "Do not infer other solver support from VBD measurement"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T03",
+      "query": "导入多机器人 使用 IK controller 下发 MuJoCo 目标并读取接触力",
+      "required_record_ids": [
+        "recipe:ik-mujoco-contact",
+        "module:controllers",
+        "module:selection",
+        "concept:solver-observables"
+      ],
+      "check": "ik_contact",
+      "answer_points": [
+        "定位导入、Worlds、ArticulationView、IK/controller 和目标布局",
+        "驱动支持与 MuJoCo 路径有条件说明",
+        "说明 Contacts/observables 分配和 SensorContact 更新顺序"
+      ],
+      "forbidden_conclusions": [
+        "Do not claim this recipe was physically executed"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T04",
+      "query": "MuJoCo 刚体和 VBD 布料双向耦合 ownership attachment 子步",
+      "required_record_ids": [
+        "recipe:coupled-rigid-deformable",
+        "concept:coupling"
+      ],
+      "check": "coupling",
+      "answer_points": [
+        "ModelView 与所有权划分",
+        "Proxy 与 ADMM 的职责和入口",
+        "子 solver、接触、子步、attachment 的实际支持边界"
+      ],
+      "forbidden_conclusions": [
+        "External rigid flag alone is not two-way coupling"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T05",
+      "query": "选择部分 world 的机器人控制并掩码复位",
+      "required_record_ids": [
+        "recipe:worlds-reset",
+        "module:selection",
+        "concept:worlds"
+      ],
+      "check": "batch_reset",
+      "answer_points": [
+        "选择索引与 world 对应",
+        "目标数组布局与掩码范围",
+        "只有支持的 reset 路径才可承诺保留其他 world"
+      ],
+      "forbidden_conclusions": [
+        "Do not reset all worlds silently"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T06",
+      "query": "SensorContact CONTACT_F observables 初始化和 sensor update",
+      "required_record_ids": [
+        "recipe:mujoco-native-contact",
+        "concept:solver-observables",
+        "module:sensors"
+      ],
+      "check": "observable_order",
+      "answer_points": [
+        "先解析容量，再为同一 Contacts 请求 CONTACT_F",
+        "step 写出目标 State 后按传感器 API 更新",
+        "说明原生与外部碰撞路径初始化顺序差异"
+      ],
+      "forbidden_conclusions": [
+        "Do not allocate contact observables before resolving capacities"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T07",
+      "query": "requires_grad Warp Tape 选择可微仿真后端",
+      "required_record_ids": [
+        "topic:differentiable-simulation",
+        "solver:xpbd",
+        "solver:vbd"
+      ],
+      "check": "differentiability",
+      "answer_points": [
+        "使用版本化 backend 可微能力表",
+        "定位 requires_grad、Warp Tape 与状态历史示例",
+        "不宣称执行过梯度验证"
+      ],
+      "forbidden_conclusions": [
+        "Do not generalize differentiability to all backends"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T08",
+      "query": "SolverXPBD 参数与公开源码入口",
+      "required_record_ids": [
+        "solver:xpbd"
+      ],
+      "check": "indexed_backend",
+      "answer_points": [
+        "SolverXPBD 精确符号可被搜索发现并读来源",
+        "未整理的参数返回 not_indexed 并提供受支持续读"
+      ],
+      "forbidden_conclusions": [
+        "Do not substitute another solver parameter"
+      ],
+      "mode": "positive",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T09",
+      "query": "确认未索引符号与随机词无命中的区别",
+      "required_record_ids": [
+        "module:controllers"
+      ],
+      "check": "negative_lookup",
+      "answer_points": [
+        "真实存在性由公开符号表判定",
+        "随机未知词是 no_match，不是不支持"
+      ],
+      "forbidden_conclusions": [
+        "No match does not mean unsupported"
+      ],
+      "mode": "boundary",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T10",
+      "query": "未知参数 stage 范围 冲突 ID",
+      "required_record_ids": [
+        "module:geometry"
+      ],
+      "check": "argument_contract",
+      "answer_points": [
+        "未知参数立即拒绝",
+        "已支持过滤与基准集合一致",
+        "ID 与 solver 冲突不自动改查"
+      ],
+      "forbidden_conclusions": [
+        "Do not ignore unsupported arguments"
+      ],
+      "mode": "boundary",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T11",
+      "query": "搜索 目录 图邻居与边分页完整性",
+      "required_record_ids": [],
+      "check": "pagination",
+      "answer_points": [
+        "搜索、目录、邻居、边能遍历到最后",
+        "无重复或遗漏",
+        "旧世代或条件不一致的 cursor 明确失效"
+      ],
+      "forbidden_conclusions": [
+        "No duplicate or missing entries"
+      ],
+      "mode": "boundary",
+      "target_max_calls": null,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    },
+    {
+      "id": "T12",
+      "query": "未知版本 无实测 proposed 证据边界",
+      "required_record_ids": [
+        "solver:mujoco"
+      ],
+      "check": "evidence_boundaries",
+      "answer_points": [
+        "版本不回退",
+        "缺失实测不借用其他案例",
+        "proposed 不升级 measured"
+      ],
+      "forbidden_conclusions": [
+        "Never turn proposed into measured"
+      ],
+      "mode": "boundary",
+      "target_max_calls": 8,
+      "needs_preknown_internal_path": false,
+      "runtime_simulation_required": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+  "revisions": [
+    {
+      "runner_sha256": "c9c293ab70fad3478450aab6b95a426cd29833d53c6bc15e75fbc4fe857c6b08",
+      "classification": "harness_failure_before_solver_creation",
+      "failed_run": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z",
+      "reason": "Frozen experiment label constraints.preconditioning incorrectly mapped to stabilization Config.constraints instead of Config.dynamics."
+    },
+    {
+      "runner_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+      "classification": "approved_harness_mapping_fix",
+      "change": "Explicit protocol constraints.preconditioning to API dynamics.preconditioning mapping; value True and physical protocol unchanged; all other fields verified by AST.",
+      "approved_by": "root message before retry"
+    }
+  ]
+}

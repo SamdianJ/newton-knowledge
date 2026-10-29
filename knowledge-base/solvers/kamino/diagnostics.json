@@ -1,0 +1,87 @@
+[
+  {
+    "id": "diagnostic:kamino:1",
+    "solver": "kamino",
+    "symptom": "闭环漂移或关节约束不一致",
+    "plan": [
+      "先校验几何、关节拓扑和初始姿态。",
+      "检查 FK 是否启用及其收敛。",
+      "冻结 dt，扫描约束稳定化与 solver 预算，记录闭环误差及三类残差。"
+    ],
+    "caution": "不能仅用更强稳定化掩盖错误关节模型。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.constraints.alpha",
+      "newton:1.7.0:kamino:config.fk.tolerance"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  },
+  {
+    "id": "diagnostic:kamino:2",
+    "solver": "kamino",
+    "symptom": "PADMM 未收敛或反复达到上限",
+    "plan": [
+      "读取 status 的 converged/iterations/r_p/r_d/r_c。",
+      "冻结尺度和模型，比较 max_iterations 与各容差。",
+      "再探索 eta/rho_0、warmstart 和合法的罚参数策略。"
+    ],
+    "caution": "残差阈值不是所有任务通用的物理精度保证。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.padmm.max_iterations",
+      "newton:1.7.0:kamino:config.padmm.rho_0"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  },
+  {
+    "id": "diagnostic:kamino:3",
+    "solver": "kamino",
+    "symptom": "DVI 多接触误差增大",
+    "plan": [
+      "核对 preconditioning=False 和后端默认组合。",
+      "分别扫描外层迭代与 inequality sweeps。",
+      "在相同接触/步长/模型下与 PADMM 比较。"
+    ],
+    "caution": "后端同名残差定义不同，不可直接以单个数字排名。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+      "newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  },
+  {
+    "id": "diagnostic:kamino:4",
+    "solver": "kamino",
+    "symptom": "接触漏检或穿透",
+    "plan": [
+      "确认使用内部 collision detector 还是外部 contacts。",
+      "检查容量、gap 与几何。",
+      "最后扫描 gamma/delta 与 dt。"
+    ],
+    "caution": "delta 和稳定化不能生成缺失接触。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.use_collision_detector",
+      "newton:1.7.0:kamino:config.constraints.gamma"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  },
+  {
+    "id": "diagnostic:kamino:5",
+    "solver": "kamino",
+    "symptom": "改后端或积分器后配置报错",
+    "plan": [
+      "从新的 Config(dynamics_solver=...) 重建。",
+      "核对 sparse_dynamics / sparse_jacobian / preconditioning。",
+      "Moreau 同时启用内部碰撞；按异常定位组合约束。"
+    ],
+    "caution": "不要在完成默认解析后只改一个字段。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dynamics_solver",
+      "newton:1.7.0:kamino:config.integrator"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  }
+]

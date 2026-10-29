@@ -1,0 +1,88 @@
+{
+  "goal": "按 PRD 构建 Newton 知识库并逐阶段汇报飞书",
+  "prd": "0.2",
+  "started_at": "2026-10-28T11:48:05.754913+00:00",
+  "phases": [
+    {
+      "id": "P0",
+      "status": "complete",
+      "evidence": [
+        "evaluations/p0-validation.json"
+      ],
+      "notification": "sent",
+      "completed_at": "2026-10-28T11:53:18.390196+00:00",
+      "summary": "P0 范围与契约冻结完成：12 个公开 API、14 个概念、8 个具体后端，以及跨阶段主题和配方已建立目标台账；六工具严格输入输出、6 条证据路径、12 个任务和旧内容迁移映射已冻结。80 项检查通过，固定源码 1215 个跟踪文件哈希已锁定。此阶段冻结目标与契约，不把待建设内容计为已完成。",
+      "next_step": "推进 P1 数据与导航同步迁移，统一 Newton 总入口和 solver 专区，保持旧 ID、链接和 VBD 实验数据可追溯。",
+      "notification_receipt": "planning/notifications/P0-b9a17b82a599291c072df5a9f00c5c34.json"
+    },
+    {
+      "id": "P1",
+      "status": "complete",
+      "evidence": [
+        "evaluations/p1-validation.json",
+        "evaluations/p1-mcp-validation.json"
+      ],
+      "notification": "sent",
+      "completed_at": "2026-10-28T12:27:29.161193+00:00",
+      "summary": "P1 数据与导航迁移完成：网站新增 Newton 总入口与可展开流程、统一 8 个 solver 专区，区分 3 个深入知识库与 5 个源码索引入口。原 31 文档、169 条 solver 参数、17 组 VBD A/B、旧记录 ID 和合法读取保持可追溯；公共管线参数单列。网站、CLI、MCP 使用同一不可变构建快照。网站与迁移验收 1670 项通过；真实 stdio 客户端 241 次调用、738 项检查通过，无 VBD 隐藏回退。",
+      "next_step": "推进 P2：补齐主要模块、跨阶段主题与生命周期配方，验证六工具最小契约、6 条证据路径和 12 个冻结任务。",
+      "notification_receipt": "planning/notifications/P1-c795c7408527c886665d3831af6b3184.json"
+    },
+    {
+      "id": "P2",
+      "status": "complete",
+      "evidence": [
+        "evaluations/p2-validation.json",
+        "evaluations/p2-mcp-validation.json"
+      ],
+      "notification": "sent",
+      "completed_at": "2026-10-28T13:21:16.180628+00:00",
+      "summary": "P2 公共知识与 MCP 首版完成：12 API、14 Concepts、8 个 backend 入口、8 个跨阶段主题、7 个实际阶段和 6 条配方按目标深度交付。网站为五个主阶段及三个循环子阶段，各配方明确资源、后端和五个调度时段。真实 stdio 333 次调用、1554 项检查通过；T01–T12 必需记录全部精确读取，R01–R06 连通，过滤/分页/负面边界通过。覆盖、网站与 CLI 899 项检查通过；29 条任务凭证绑定正文哈希。MuJoCo/Kamino 新物理实验尚待 P4，本阶段不把配方当实测。",
+      "next_step": "推进 P3：新增至少 12 个有来源和证据要求的任务，深化控制、碰撞、缓存复位、批量、耦合、可微与诊断，并回归首版任务。",
+      "notification_receipt": "planning/notifications/P2-cdc9f415c3f1135573451e9ec9a3cc54.json"
+    },
+    {
+      "id": "P3",
+      "status": "complete",
+      "evidence": [
+        "evaluations/history/1ffd4bc3a9884c7450834671/p3-validation.json",
+        "evaluations/history/1ffd4bc3a9884c7450834671/p3-mcp-validation.json"
+      ],
+      "notification": "sent",
+      "completed_at": "2026-10-28T14:07:45.404421+00:00",
+      "summary": "P3 任务深度扩展完成：新增 12 条有固定源码出处的任务配方，覆盖控制布局、执行器、几何/容量、缓存通知、局部复位、观测参考系、耦合、可微历史及三个深入 solver 的关键边界。真实 stdio 72 次调用、349 项检查通过，新任务每项 5–7 次调用；首版 T01–T12 全部回归通过，普通调用数和初检召回未退化。P3 覆盖与网页 137 项检查通过。新内容为源码解释及知识任务验证，未冒充物理 A/B。",
+      "next_step": "推进 P4：建立独立实验环境，先 MuJoCo 后 Kamino，各执行至少两组可复现有效 A/B，整合数值指标与三维回放并保留原 VBD 数据。",
+      "notification_receipt": "planning/notifications/P3-f769444a85233bc1fa52dde396a28385.json"
+    },
+    {
+      "id": "P4",
+      "status": "complete",
+      "evidence": [
+        "evaluations/p4-validation.json",
+        "evaluations/p4-mcp-validation.json",
+        "evaluations/p4-physics-validation.json"
+      ],
+      "notification": "sent",
+      "completed_at": "2026-10-29T02:14:56.449960+00:00",
+      "summary": "MuJoCo/Kamino 各2组有效 CPU A/B，8个主运行与8个独立复现；252项物理复核、29次真实MCP调用/111项检查、58项网站检查通过。已接入同步三维实验表，完整保存配置diff、后端解析、原始数据与哈希；失稳压力测试不计有效组数。VBD原始数据未变。",
+      "next_step": "P5：来源与API/默认差异、证据失效、原子构建及回归归档，并完成全阶段最终验收。",
+      "notification_receipt": "planning/notifications/P4-51aa7d95993a89d6d51e74d3ed2aa328.json"
+    },
+    {
+      "id": "P5",
+      "status": "complete",
+      "evidence": [
+        "evaluations/delivery-validation.json",
+        "evaluations/p5-validation.json",
+        "evaluations/p5-mcp-validation.json",
+        "evaluations/p5-integrity-validation.json"
+      ],
+      "notification": "sent",
+      "completed_at": "2026-10-29T02:37:34.276147+00:00",
+      "summary": "P0–P5 全部验收完成，当前发布 7b662ba1eaad37315d969690。1215个来源文件校验通过；维护/失效测试184项、完整性11154项、真实兼容客户端17次调用/76项；原12任务、新12任务及网站/实验读取回归均在同一发布世代通过。已交付API/声明默认差异工具、正文与源码绑定凭据、原子构建、增量复用、版本范围与回归归档。实测保留VBD17组，MuJoCo/Kamino各2组；仅保存的CPU条件。",
+      "next_step": "按维护手册更新知识与候选版本差异；当前PRD范围已完成，后续可另立其他solver的深入知识与参数实验计划。",
+      "notification_receipt": "planning/notifications/P5-d303e1109462d7d1f8ceb94770dabc26.json"
+    }
+  ],
+  "updated_at": "2026-10-29T02:37:34.276147+00:00"
+}

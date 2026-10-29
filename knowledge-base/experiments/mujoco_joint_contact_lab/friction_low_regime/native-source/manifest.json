@@ -1,0 +1,20 @@
+{
+  "mujoco_version": "3.15.0",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/src/engine/engine_collision_driver.c",
+      "file": "experiments/mujoco_joint_contact_lab/friction/native-source/engine_collision_driver.c",
+      "sha256": "67ce97bd1ea28cc1dd6fe9086e60afdad84ccf248fd38e0d3e72b65ae03ec6fc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/src/engine/engine_core_util.c",
+      "file": "experiments/mujoco_joint_contact_lab/friction/native-source/engine_core_util.c",
+      "sha256": "7d2347f0d51b3ade707984517af62d9a09dbd0c496377cc5ff862e025ae3f78a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/src/engine/engine_core_constraint.c",
+      "file": "experiments/mujoco_joint_contact_lab/friction/native-source/engine_core_constraint.c",
+      "sha256": "a18146e7766c627d4421947d1e023d92fc6ebb60afcbbf0f0384d0aff44f0b11"
+    }
+  ]
+}

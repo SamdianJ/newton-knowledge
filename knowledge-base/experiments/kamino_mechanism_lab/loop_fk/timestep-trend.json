@@ -1,0 +1,41 @@
+{
+  "points": [
+    {
+      "variant": "A",
+      "dt_seconds": 0.004166666666666667,
+      "max_retained_gap_mm": 7.314828379903238,
+      "case_status": "completed_with_failed_criteria"
+    },
+    {
+      "variant": "A",
+      "dt_seconds": 0.0010416666666666667,
+      "max_retained_gap_mm": 0.9172800991823034,
+      "case_status": "completed_with_failed_criteria"
+    },
+    {
+      "variant": "A",
+      "dt_seconds": 0.00026041666666666666,
+      "max_retained_gap_mm": 0.06575629799185956,
+      "case_status": "passed"
+    },
+    {
+      "variant": "B",
+      "dt_seconds": 0.004166666666666667,
+      "max_retained_gap_mm": 0.1192063244118849,
+      "case_status": "completed_with_failed_criteria"
+    },
+    {
+      "variant": "B",
+      "dt_seconds": 0.0010416666666666667,
+      "max_retained_gap_mm": 0.009292412246657288,
+      "case_status": "completed_with_failed_criteria"
+    },
+    {
+      "variant": "B",
+      "dt_seconds": 0.00026041666666666666,
+      "max_retained_gap_mm": 0.0015080154285995724,
+      "case_status": "passed"
+    }
+  ],
+  "scope": "Trend only; no integrator convergence order or cross-backend performance claim."
+}

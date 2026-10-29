@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Newton knowledge canonical record",
+  "type": "object",
+  "required": [
+    "id",
+    "record_type",
+    "title",
+    "domain",
+    "stages",
+    "record_scope",
+    "owner_module",
+    "applicable_solvers",
+    "support_status",
+    "coverage",
+    "source_refs",
+    "version",
+    "commit"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "framework",
+        "workflow",
+        "solver",
+        "development"
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "asset_import",
+          "preprocess",
+          "initialization",
+          "control",
+          "collision",
+          "solver_step",
+          "output"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "record_scope": {
+      "enum": [
+        "shared",
+        "solver"
+      ]
+    },
+    "owner_module": {
+      "type": "string"
+    },
+    "owner_solver": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "applicable_solvers": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "vbd",
+          "mujoco",
+          "kamino",
+          "featherstone",
+          "implicit-mpm",
+          "semi-implicit",
+          "style3d",
+          "xpbd"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "support_status": {
+      "enum": [
+        "supported",
+        "unsupported",
+        "unknown"
+      ]
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "indexed",
+        "explained",
+        "task_validated",
+        "experiment_validated"
+      ],
+      "properties": {
+        "indexed": {
+          "type": "boolean"
+        },
+        "explained": {
+          "type": "boolean"
+        },
+        "task_validated": {
+          "type": "boolean"
+        },
+        "experiment_validated": {
+          "type": "boolean"
+        }
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "commit",
+          "sha256"
+        ]
+      }
+    },
+    "version": {
+      "const": "1.7.0"
+    },
+    "commit": {
+      "const": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+    }
+  },
+  "additionalProperties": true
+}

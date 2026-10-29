@@ -1,0 +1,71 @@
+{
+  "paths": [
+    {
+      "id": "R01",
+      "required_records": [
+        "concept:collisions",
+        "pipeline:enable_rigid_soft_full_surface_contact",
+        "lab:full_surface"
+      ],
+      "require_source_refs": true,
+      "scope": "knowledge navigation; not causal inference"
+    },
+    {
+      "id": "R02",
+      "required_records": [
+        "module:controllers",
+        "module:ik",
+        "topic:robot-control",
+        "recipe:ik-mujoco-contact",
+        "solver:mujoco"
+      ],
+      "require_source_refs": true,
+      "scope": "knowledge navigation; not causal inference"
+    },
+    {
+      "id": "R03",
+      "required_records": [
+        "module:sensors",
+        "concept:solver-observables",
+        "recipe:mujoco-native-contact",
+        "recipe:ik-mujoco-contact"
+      ],
+      "require_source_refs": true,
+      "scope": "knowledge navigation; not causal inference"
+    },
+    {
+      "id": "R04",
+      "required_records": [
+        "concept:coupling",
+        "topic:coupling",
+        "recipe:coupled-rigid-deformable",
+        "solver:vbd",
+        "solver:mujoco"
+      ],
+      "require_source_refs": true,
+      "scope": "knowledge navigation; not causal inference"
+    },
+    {
+      "id": "R05",
+      "required_records": [
+        "concept:worlds",
+        "module:selection",
+        "topic:worlds-batching",
+        "recipe:worlds-reset"
+      ],
+      "require_source_refs": true,
+      "scope": "knowledge navigation; not causal inference"
+    },
+    {
+      "id": "R06",
+      "required_records": [
+        "topic:differentiable-simulation",
+        "module:solvers",
+        "solver:vbd",
+        "solver:xpbd"
+      ],
+      "require_source_refs": true,
+      "scope": "knowledge navigation; not causal inference"
+    }
+  ]
+}

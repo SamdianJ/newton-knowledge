@@ -1,0 +1,92 @@
+{
+  "version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "generator": "scripts/extend_solvers.py",
+  "inspected_files": [
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/solver_kamino.py",
+      "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/config.py",
+      "sha256": "4625e87ad4027fb246aeb879f816ef31cdc8441dae8872e8ce8d669aa0a3157d"
+    },
+    {
+      "path": "newton/_src/sim/model.py",
+      "sha256": "69db914983d83601283d3eeef7f5bbe427dfffca68a5ba43091361246112e169"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "ea1205bb00caecd2795494b8c624b58b23b0756b17242def950034afd1ba07a4"
+    },
+    {
+      "path": "docs/solvers/mujoco.rst",
+      "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d"
+    },
+    {
+      "path": "docs/solvers/kamino.rst",
+      "sha256": "601dd9ba9279c0f2b1e1aff4864c698a2baeca68e7928532be2ce3116670e6de"
+    },
+    {
+      "path": "docs/concepts/simulation_tuning_mujoco.rst",
+      "sha256": "de420a7281d752d22bfc1ac80c840b82a08aa0ac4f2543b474caad0eded5bc67"
+    },
+    {
+      "path": "docs/concepts/simulation_tuning_solvers.rst",
+      "sha256": "5526891b027eb34b2378a66e06efee87e2999353e305804ea88002a27962e011"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/README.md",
+      "sha256": "1ffffae52cb53163db55bdb380d7ead268366fec1b16d618477769e8cb83068d"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+      "sha256": "c5fae4bff25bb14cf7c74a20961c89e24c7b4a1bc7902ee11137878acc18e6cb"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+      "sha256": "cae601049d228f6c8fa4b3f7f72722d8a5f0f16eb097c0458a8edf91820afe76"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/__init__.py",
+      "sha256": "98b1e406514959e3a5cf2404a4d42981ba7002a0a5333d8612056b8478c38793"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+      "sha256": "f21d3054ecf8396a3fc09360eec1eebd9fd10238e6ebb2fc29d1ed439a3f2d7d"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+      "sha256": "89e21067202a620192a10f5038bbf86b8bb25fe7f0359fa941987d448b15bf6a"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+      "sha256": "6749b2ff01717129801b8829e0296cb8a030465b523a02f18ff755dc2d0666dc"
+    }
+  ],
+  "solvers": {
+    "mujoco": {
+      "constructor_optional": 34,
+      "config_fields": 0,
+      "reset_fields": 0,
+      "parameters": 35,
+      "model_inputs": 20,
+      "papers": 2,
+      "experiments": 0
+    },
+    "kamino": {
+      "constructor_optional": 1,
+      "config_fields": 80,
+      "reset_fields": 4,
+      "parameters": 86,
+      "model_inputs": 10,
+      "papers": 2,
+      "experiments": 0
+    }
+  },
+  "evidence": "Static extraction plus curated reading; no new simulation runs."
+}

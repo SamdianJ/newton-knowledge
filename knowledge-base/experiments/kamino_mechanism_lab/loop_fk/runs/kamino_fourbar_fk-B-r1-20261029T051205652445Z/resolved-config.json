@@ -1,0 +1,89 @@
+{
+  "sparse_jacobian": false,
+  "sparse_dynamics": false,
+  "use_collision_detector": false,
+  "use_fk_solver": true,
+  "collision_detector": {
+    "pipeline": "unified",
+    "broadphase": "explicit",
+    "bvtype": "aabb",
+    "max_contacts": null,
+    "max_contacts_per_world": null,
+    "max_contacts_per_pair": 12,
+    "max_triangle_pairs": 1000000,
+    "default_gap": 1e-05
+  },
+  "constraints": {
+    "alpha": 0.2,
+    "beta": 0.009999999776482582,
+    "gamma": 0.009999999776482582,
+    "delta": 1e-06
+  },
+  "dynamics": {
+    "preconditioning": true,
+    "linear_solver_type": "LLTB",
+    "linear_solver_kwargs": {},
+    "cull_speculative_contacts": true
+  },
+  "padmm": {
+    "primal_tolerance": 1e-06,
+    "dual_tolerance": 1e-06,
+    "compl_tolerance": 1e-06,
+    "restart_tolerance": 0.999,
+    "eta": 1e-05,
+    "rho_0": 1.0,
+    "rho_min": 1e-05,
+    "a_0": 1.0,
+    "alpha": 10.0,
+    "tau": 1.5,
+    "max_iterations": 200,
+    "penalty_update_freq": 1,
+    "penalty_update_method": "fixed",
+    "linear_solver_tolerance": 0.0,
+    "linear_solver_tolerance_ratio": 0.0,
+    "use_acceleration": true,
+    "use_graph_conditionals": false,
+    "warmstart_mode": "containers",
+    "warmstart_scale": 0.9,
+    "contact_warmstart_method": "key_and_position"
+  },
+  "dvi": {
+    "tolerance": 1e-05,
+    "regularization": 1e-06,
+    "omega": 1.0,
+    "max_alternating_iterations": 24,
+    "inequality_sweeps_per_iteration": 2,
+    "use_schur_complement": false,
+    "bilateral_solve_interval": 1,
+    "tangential_warmstart_scale": 0.97,
+    "bilateral_solver_type": "LLTB",
+    "bilateral_solver_kwargs": {},
+    "warmstart_mode": "containers",
+    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+  },
+  "fk": {
+    "tolerance": 1e-06,
+    "max_newton_iterations": 30,
+    "max_line_search_iterations": 20,
+    "reset_state": false,
+    "add_axis_joints": true,
+    "use_incremental_solve": true,
+    "max_linear_incremental_step": 0.05,
+    "max_angular_incremental_step": 0.17453292519943295,
+    "use_regularization": false,
+    "regularization_weight": 1e-05,
+    "use_sparsity": false,
+    "preconditioner": "jacobi_block_diagonal",
+    "use_adaptive_cg_tolerance": true
+  },
+  "materials": {
+    "friction_mix_mode": "average",
+    "restitution_mix_mode": "min"
+  },
+  "rotation_correction": "twopi",
+  "integrator": "euler",
+  "dynamics_solver": "padmm",
+  "angular_velocity_damping": 0.0,
+  "collect_solver_info": false,
+  "compute_solution_metrics": false
+}

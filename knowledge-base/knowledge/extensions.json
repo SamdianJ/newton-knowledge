@@ -1,0 +1,2276 @@
+{
+  "version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "task_pack_sha256": "3c08473b1dd50ccfb12ebae87ca1644937f22d60d16ac058dc7c617d9bb56837",
+  "records": [
+    {
+      "id": "recipe:control-target-layout",
+      "family": "recipe",
+      "title": "坐标目标、DOF 布局与合法 Control 清理",
+      "summary": "坐标布局、索引和清理是三个独立动作。先在创建模型前设置 newton.use_coord_layout_targets；coord layout 下 joint_target_q 的长度是 joint_coord_count，joint_target_qd/joint_f 是 joint_dof_count。FREE/BALL/DISTA",
+      "body": "# 坐标目标、DOF 布局与合法 Control 清理\n\n## 机制与输入输出\n\n坐标布局、索引和清理是三个独立动作。先在创建模型前设置 newton.use_coord_layout_targets；coord layout 下 joint_target_q 的长度是 joint_coord_count，joint_target_qd/joint_f 是 joint_dof_count。FREE/BALL/DISTANCE 含四元数，不能把 qd 的 DOF offset 当作 q 的坐标 offset。\n\n## 配置与诊断步骤\n\n1. 从 Model 的 joint_target_q_start 与 joint_q/qd_start 核查每个关节的真实切片，再映射 controller 输出；只写被控制的关节。\n2. Reset 时使用 `control.clear(model)`：它从 model.joint_target_q 恢复合法坐标目标；不给 model 的兼容路径会零填，四元数槽可能成为 (0,0,0,0)。\n3. State.clear_forces 处理外力，执行器输出清零处理累加，Control.clear(model) 处理控制初态，不能把这三个调用混为同一个每步必做动作。\n4. 比较当前与目标四元数的有效性、关节切片长度及速度单位，再排查增益或 solver 迭代。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.Control.clear](#/record/symbol%3Anewton.Control.clear)\n- [newton.Control.joint_target_q](#/record/symbol%3Anewton.Control.joint_target_q)\n- [newton.Control.joint_target_qd](#/record/symbol%3Anewton.Control.joint_target_qd)\n\n## 相关知识\n\n- [topic:robot-control](#/record/topic%3Arobot-control)\n- [concept:conventions](#/record/concept%3Aconventions)\n- [module:selection](#/record/module%3Aselection)\n\n## 固定出处\n\n- [newton/_src/sim/control.py:76](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76)\n- [newton/_src/sim/control.py:44](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44)\n- [newton/_src/sim/control.py:50](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L50)\n- [docs/migration.rst:149](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/migration.rst#L149)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "control"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "mujoco",
+        "featherstone",
+        "kamino",
+        "vbd",
+        "xpbd",
+        "semi-implicit"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 76,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 44,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 50,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L50"
+        },
+        {
+          "path": "docs/migration.rst",
+          "line": 149,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "52f3340042c1b6a80d691218a788fec837b9eff3b526d3ff26cfefe6a21c182b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/migration.rst#L149"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/control-target-layout.md",
+      "task_id": "X01"
+    },
+    {
+      "id": "recipe:actuator-effort-scheduling",
+      "family": "recipe",
+      "title": "执行器累加、限幅与控制频率",
+      "summary": "Actuator 的输出是 effort 的 scatter-add，调用方必须先清零将被累加的输出。Delay 读取命令历史，Drive 算原始 effort，Clamping 按电机模型限制输出，然后累加并更新 drive/delay 状态。",
+      "body": "# 执行器累加、限幅与控制频率\n\n## 机制与输入输出\n\nActuator 的输出是 effort 的 scatter-add，调用方必须先清零将被累加的输出。Delay 读取命令历史，Drive 算原始 effort，Clamping 按电机模型限制输出，然后累加并更新 drive/delay 状态。\n\n## 配置与诊断步骤\n\n1. 检查实际执行器写入哪个控制输出数组，只清理该 effort 累加缓冲，保留需要持有的 targets。\n2. 记录每个 actuator 的步进周期。Delay 的 N 个 timesteps 指执行器步，而不是渲染帧；控制更新频率与仿真子步的比例必须明确。\n3. 如果 solver 同时启用同一关节的内置驱动，明确外部 effort 是替代、附加前馈还是另一项物理力，避免重复计算同一 PD 项。\n4. 初版一执行器一 DOF，不含通用 transmission 与完整电机动力学；可微与 graphable 取决于 drive 的实现，不由 Actuator 名称自动保证。\n5. Reset 同时考虑 Delay/Drive 的历史，按其接口处理；本配方不把所有执行器 reset 等价于 solver.reset。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.actuators.Actuator](#/record/symbol%3Anewton.actuators.Actuator)\n- [newton.actuators.DrivePD](#/record/symbol%3Anewton.actuators.DrivePD)\n\n## 相关知识\n\n- [module:actuators](#/record/module%3Aactuators)\n- [concept:actuators](#/record/concept%3Aactuators)\n- [stage:control](#/record/stage%3Acontrol)\n\n## 固定出处\n\n- [newton/_src/actuators/actuator.py:166](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/actuator.py#L166)\n- [newton/_src/actuators/drives/drive_pd.py:68](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/drives/drive_pd.py#L68)\n- [docs/concepts/actuators.rst:14](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/actuators.rst#L14)\n",
+      "domain": "workflow",
+      "stages": [
+        "control",
+        "solver_step"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "mujoco",
+        "featherstone",
+        "kamino",
+        "vbd",
+        "xpbd",
+        "semi-implicit"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/actuators/actuator.py",
+          "line": 166,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "76b62149572df6a84bcab063c4ce95d7c0e27d0ddf6a3983ac02a9159b176f40",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/actuator.py#L166"
+        },
+        {
+          "path": "newton/_src/actuators/drives/drive_pd.py",
+          "line": 68,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5851587036a37696e40b4dacc25f03d8d7381dc83dfcc1f7f9d99e4e82642dd",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/drives/drive_pd.py#L68"
+        },
+        {
+          "path": "docs/concepts/actuators.rst",
+          "line": 14,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7133878225ca17451672733ef37301b1aba8035e892ba4b5155d9a162fb451b7",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/actuators.rst#L14"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/actuator-effort-scheduling.md",
+      "task_id": "X02"
+    },
+    {
+      "id": "recipe:collision-preflight",
+      "family": "recipe",
+      "title": "非凸网格近似与碰撞预检",
+      "summary": "先查看碰撞形状，再比较视觉网格。ModelBuilder.approximate_meshes 默认 method=\"convex_hull\"；凸包会填平凹洞，不适合作为保留容器内腔的保证。",
+      "body": "# 非凸网格近似与碰撞预检\n\n## 机制与输入输出\n\n先查看碰撞形状，再比较视觉网格。ModelBuilder.approximate_meshes 默认 method=\"convex_hull\"；凸包会填平凹洞，不适合作为保留容器内腔的保证。\n\n## 配置与诊断步骤\n\n1. 需要非凸分解时显式选择 coacd/vhacd，并固定依赖、shape_indices 与 remeshing 参数。官方代码在缺依赖或失败且 raise_on_failure=False 时可回退 convex_hull 等后续方法。\n2. 若回退不可接受，使用 raise_on_failure=True 并检查返回的实际形状集合与 warning。keep_visual_shapes 控制保留视觉形状，不能证明碰撞近似保真。\n3. 核查每个 shape 的 collision/visibility 标记、world 分配与 add_shape_collision_filter_pair；碰撞过滤配对会移除候选，不能靠提高 iterations 恢复。\n4. 用截面、接触记录和探针位置检查内腔与壁厚，再核查质量/惯量。预处理产物和参数要保存；本库没有替用户执行本次网格分解。\n5. 接着按目标 solver 的 mesh 支持和导入转换规则确认最终使用的几何。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.ModelBuilder.approximate_meshes](#/record/symbol%3Anewton.ModelBuilder.approximate_meshes)\n- [newton.ModelBuilder.add_shape_collision_filter_pair](#/record/symbol%3Anewton.ModelBuilder.add_shape_collision_filter_pair)\n\n## 相关知识\n\n- [stage:preprocess](#/record/stage%3Apreprocess)\n- [module:geometry](#/record/module%3Ageometry)\n- [module:utils](#/record/module%3Autils)\n- [concept:collisions](#/record/concept%3Acollisions)\n\n## 固定出处\n\n- [newton/_src/sim/builder.py:8712](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712)\n- [newton/_src/sim/builder.py:2184](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184)\n- [docs/concepts/collisions.rst:1](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/collisions.rst#L1)\n",
+      "domain": "workflow",
+      "stages": [
+        "asset_import",
+        "preprocess",
+        "collision"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "vbd",
+        "mujoco",
+        "kamino",
+        "featherstone",
+        "xpbd",
+        "semi-implicit"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 8712,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 2184,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184"
+        },
+        {
+          "path": "docs/concepts/collisions.rst",
+          "line": 1,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9f636761ef4b3914b4087e870420eb1ace24fa3afb9f96f535124adcf4a1b508",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/collisions.rst#L1"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/collision-preflight.md",
+      "task_id": "X03"
+    },
+    {
+      "id": "recipe:contact-capacity-diagnosis",
+      "family": "recipe",
+      "title": "接触容量、观测冻结与溢出诊断",
+      "summary": "live contact count 要区分原始计数 raw_count 与已存储行数：刚体写入先递增计数，溢出时 raw_count 可超过 capacity，不能直接作为数组遍历上限。capacity 是已分配数组大小；CONTACT_F 分配按 rigid_contact_max + soft_contact_max，刚体槽在前，软",
+      "body": "# 接触容量、观测冻结与溢出诊断\n\n## 机制与输入输出\n\nlive contact count 要区分原始计数 raw_count 与已存储行数：刚体写入先递增计数，溢出时 raw_count 可超过 capacity，不能直接作为数组遍历上限。capacity 是已分配数组大小；CONTACT_F 分配按 rigid_contact_max + soft_contact_max，刚体槽在前，软接触槽在后。零接触不表示零容量。\n\n## 配置与诊断步骤\n\n1. 在分配接触观测前确定所选碰撞路径的容量，创建 Contacts，再给 solver.observables(kinds={CONTACT_F}, contacts=contacts)。即使容量为零也要绑定 Contacts。\n2. 分配后容量冻结在 Model 上；删除 Observables 不能解除冻结。修改已冻结容量必须从 builder 重新 finalize/new Model，再构造 solver、pipeline、Contacts 与 Observables。同容量更换 storage 也必须重新绑定相应观测；捕获了旧数组指针时还要重新捕获。\n3. 刚体数组只读取 min(raw_count, capacity) 行，并单独报告 raw_count > capacity 的 overflow。分别检查 broad-phase/triangle-pair/reduction 中间缓冲、solver 内部每对象接触列表和求解约束容量；最终计数未超限不代表中间阶段没有丢候选。nconmax/njmax 与 iterations/tolerance 不是同一类预算。\n4. VBD rigid_body_particle_contact_buffer_size 涵盖粒子和 full-surface edge/face 记录。overflow 表示可能丢接触；DAT 也无法截断未被报告的接触。\n5. 增加迭代只改变已有约束的求解预算，不能补回被过滤、漏检或溢出丢掉的行。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.solvers.SolverBase.observables](#/record/symbol%3Anewton.solvers.SolverBase.observables)\n- [newton.CollisionPipeline](#/record/symbol%3Anewton.CollisionPipeline)\n\n## 相关知识\n\n- [concept:solver-observables](#/record/concept%3Asolver-observables)\n- [concept:collisions](#/record/concept%3Acollisions)\n- [recipe:mujoco-native-contact](#/record/recipe%3Amujoco-native-contact)\n- [solver:vbd](#/record/solver%3Avbd)\n\n## 固定出处\n\n- [newton/_src/solvers/solver.py:721](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721)\n- [newton/_src/sim/collide.py:1250](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250)\n- [docs/concepts/solver_observables.rst:75](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst#L75)\n- [newton/_src/solvers/vbd/solver_vbd.py:587](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L587)\n- [newton/_src/sim/collide.py:142](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L142)\n- [newton/_src/sim/collide.py:223](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L223)\n- [newton/_src/sim/model.py:1965](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1965)\n- [newton/_src/geometry/narrow_phase.py:2225](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/geometry/narrow_phase.py#L2225)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step",
+        "output"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "vbd",
+        "mujoco",
+        "kamino",
+        "xpbd"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 721,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 1250,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250"
+        },
+        {
+          "path": "docs/concepts/solver_observables.rst",
+          "line": 75,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "47fe3b01b7e598b8a0e5f9961b54b7313fba2cb59e47e6a771fc00282529d281",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst#L75"
+        },
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 587,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L587"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 142,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L142"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 223,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L223"
+        },
+        {
+          "path": "newton/_src/sim/model.py",
+          "line": 1965,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "69db914983d83601283d3eeef7f5bbe427dfffca68a5ba43091361246112e169",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1965"
+        },
+        {
+          "path": "newton/_src/geometry/narrow_phase.py",
+          "line": 2225,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "4fa7b901d2b279a1f4dfdfedaf355ede0b08dc8c018143ef557336527d28d4bc",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/geometry/narrow_phase.py#L2225"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/contact-capacity-diagnosis.md",
+      "task_id": "X04"
+    },
+    {
+      "id": "recipe:model-update-notification",
+      "family": "recipe",
+      "title": "模型更新通知、私有缓存与捕获边界",
+      "summary": "Model 数组更新与后端私有缓存更新分开。ModelFlags 的宽泛分组与较窄分组各有自己的 bit；只检查 JOINT_DOF_PROPERTIES 不会自动覆盖所有窄通知。",
+      "body": "# 模型更新通知、私有缓存与捕获边界\n\n## 机制与输入输出\n\nModel 数组更新与后端私有缓存更新分开。ModelFlags 的宽泛分组与较窄分组各有自己的 bit；只检查 JOINT_DOF_PROPERTIES 不会自动覆盖所有窄通知。\n\n## 配置与诊断步骤\n\n1. 修改质量/质心/惯量时核对 BODY_INERTIAL_PROPERTIES；修改 armature 核对 JOINT_DOF_INERTIAL_PROPERTIES；增益、阻尼、摩擦和力限核对 JOINT_DOF_FORCE_PROPERTIES。\n2. 通过选定 SolverMuJoCo 的 notify_model_changed(flags) 处理缓存与常数更新；直接改 Python 属性或 Model Warp 数组不是刷新后端的证明。\n3. 固定源码说明 armature 和参考姿态相关更新可能重算 MuJoCo 常数，应在 reset/域随机化等时段规划，避免把完整重建放进每个子步。\n4. 重新分配、拓扑/容量变化或捕获指针失效需要重建/重新捕获；仅数据更新是否可直接复用捕获图，需按具体后端更新函数与设备条件核查。\n5. 改动后检查后端实际值、有限状态和相同输入下的响应。这里给出通知依据，不声称执行过该参数干预。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.ModelFlags](#/record/symbol%3Anewton.ModelFlags)\n- [newton.solvers.SolverMuJoCo.notify_model_changed](#/record/symbol%3Anewton.solvers.SolverMuJoCo.notify_model_changed)\n\n## 相关知识\n\n- [topic:lifecycle-observation](#/record/topic%3Alifecycle-observation)\n- [module:newton](#/record/module%3Anewton)\n- [solver:mujoco](#/record/solver%3Amujoco)\n\n## 固定出处\n\n- [newton/_src/sim/enums.py:8](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L8)\n- [newton/_src/solvers/mujoco/solver_mujoco.py:5132](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5132)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "control",
+        "solver_step"
+      ],
+      "solver": "mujoco",
+      "owner_module": "newton.solvers",
+      "applicable_solvers": [
+        "mujoco"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 8,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L8"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 5132,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5132"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/model-update-notification.md",
+      "task_id": "X05"
+    },
+    {
+      "id": "recipe:masked-reset-state-history",
+      "family": "recipe",
+      "title": "局部复位的公共状态与后端历史",
+      "summary": "公共初态恢复、Control 恢复、solver 历史重置是不同责任。ArticulationView 的 mask 和 SolverBase.reset 的 world_mask 不能直接复用。",
+      "body": "# 局部复位的公共状态与后端历史\n\n## 机制与输入输出\n\n公共初态恢复、Control 恢复、solver 历史重置是不同责任。ArticulationView 的 mask 和 SolverBase.reset 的 world_mask 不能直接复用。\n\n## 配置与诊断步骤\n\n1. 核查 view.world_count 与 Model.world_count、articulation/world 映射。view 的 mask 支持 (world_count,) 或 (world_count,count_per_world)。\n2. solver world_mask 为 (model.world_count+1,)；前面选择局部 world，最后一项选择 global world=-1。只复位 world 1 时先验证该 world 存在，显式保持其余项及 global 项为 False。\n3. 按选中对象恢复 State/Control，并同步需要的双缓冲状态。再用具体 backend 的 solver.reset(state, world_mask=..., flags=...) 清理私有历史；不要把默认 no-op 当作恢复物理初态。\n4. StateFlags 的 JOINT_Q/QD、BODY_Q/QD、PARTICLE_Q/QD 与 FORCE 分组表达公共输入变化，不是 ModelFlags。\n5. MuJoCo、VBD、Kamino 的 reset override 与缓存不同，核查选定配置；不能因 mask 同形就推断所有后端历史行为等价。global 实体还可能位于数组前后两段。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.StateFlags](#/record/symbol%3Anewton.StateFlags)\n- [newton.solvers.SolverMuJoCo.reset](#/record/symbol%3Anewton.solvers.SolverMuJoCo.reset)\n- [newton.selection.ArticulationView.set_attribute](#/record/symbol%3Anewton.selection.ArticulationView.set_attribute)\n\n## 相关知识\n\n- [recipe:worlds-reset](#/record/recipe%3Aworlds-reset)\n- [topic:worlds-batching](#/record/topic%3Aworlds-batching)\n- [concept:worlds](#/record/concept%3Aworlds)\n- [module:selection](#/record/module%3Aselection)\n\n## 固定出处\n\n- [newton/_src/sim/enums.py:73](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73)\n- [newton/_src/solvers/mujoco/solver_mujoco.py:4606](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606)\n- [newton/_src/utils/selection.py:1531](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/utils/selection.py#L1531)\n- [newton/_src/core/reset.py:19](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/core/reset.py#L19)\n- [newton/_src/solvers/solver.py:1003](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L1003)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "control",
+        "solver_step"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "mujoco",
+        "vbd",
+        "kamino"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        },
+        {
+          "path": "newton/_src/utils/selection.py",
+          "line": 1531,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "addea15e364307d21e525247166cfe778312d6200032cd52d4e479b702539e5b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/utils/selection.py#L1531"
+        },
+        {
+          "path": "newton/_src/core/reset.py",
+          "line": 19,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "4279d844afc3881aec1c8921f866beb9620ab8a8d2175116e0bebae7de2607b6",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/core/reset.py#L19"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 1003,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L1003"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/masked-reset-state-history.md",
+      "task_id": "X06"
+    },
+    {
+      "id": "recipe:contact-frame-imu-observation",
+      "family": "recipe",
+      "title": "IMU 与接触观测的时刻和参考系",
+      "summary": "SensorIMU 请求 BODY_QDD，SensorContact 请求 CONTACT_F，可合并请求 kinds，但两种传感器的输入时刻与物理定义不同。",
+      "body": "# IMU 与接触观测的时刻和参考系\n\n## 机制与输入输出\n\nSensorIMU 请求 BODY_QDD，SensorContact 请求 CONTACT_F，可合并请求 kinds，但两种传感器的输入时刻与物理定义不同。\n\n## 配置与诊断步骤\n\n1. 固定版本中 Kamino BODY_QDD 是 (body_qd_out-body_qd_in)/dt 的步平均，包括碰撞冲量除以 dt；MuJoCo Warp 使用对应后约束动力学阶段，不能把冲击下两者当同一瞬时采样。\n2. SensorIMU.update(state, observables=...) 使用所需的当前位姿和加速度，核对 site 局部参考系、重力与刚体质心/量测点关系；不要只比较数组数字。\n3. Kamino 导出的接触点在输入 body frame，wrench 关于输入 COM；SensorContact.update(state_in, contacts, observables=...) 消费相应接触。原位 step 也要保留输入位姿给需要变换的消费者。\n4. native MuJoCo CPU 仅提供 QFRC_ACTUATOR，不支持这些 BODY_QDD/CONTACT_F 请求；MuJoCo Warp 的 cpu/cuda 设备与 native CPU 选项是不同维度。\n5. 保存 dt、冲击发生的子步与输出采样时刻，才可分析读数差异。此处没有执行跨后端 IMU 实测。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.sensors.SensorIMU.update](#/record/symbol%3Anewton.sensors.SensorIMU.update)\n- [newton.sensors.SensorContact.update](#/record/symbol%3Anewton.sensors.SensorContact.update)\n\n## 相关知识\n\n- [module:sensors](#/record/module%3Asensors)\n- [concept:solver-observables](#/record/concept%3Asolver-observables)\n- [topic:lifecycle-observation](#/record/topic%3Alifecycle-observation)\n- [solver:kamino](#/record/solver%3Akamino)\n- [solver:mujoco](#/record/solver%3Amujoco)\n\n## 固定出处\n\n- [newton/_src/sensors/sensor_imu.py:208](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208)\n- [newton/_src/sensors/sensor_contact.py:618](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618)\n- [docs/concepts/solver_observables.rst:146](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst#L146)\n",
+      "domain": "workflow",
+      "stages": [
+        "solver_step",
+        "output"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "mujoco",
+        "kamino"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        },
+        {
+          "path": "docs/concepts/solver_observables.rst",
+          "line": 146,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "47fe3b01b7e598b8a0e5f9961b54b7313fba2cb59e47e6a771fc00282529d281",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst#L146"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/contact-frame-imu-observation.md",
+      "task_id": "X07"
+    },
+    {
+      "id": "recipe:coupling-interface-ownership",
+      "family": "recipe",
+      "title": "耦合接口约束与重复求解排查",
+      "summary": "ModelView 划分所有权，coupler 与子 solver 不能同时重复负责同一接口行。ADMM 的对称接口约束路径不同于代理反馈。",
+      "body": "# 耦合接口约束与重复求解排查\n\n## 机制与输入输出\n\nModelView 划分所有权，coupler 与子 solver 不能同时重复负责同一接口行。ADMM 的对称接口约束路径不同于代理反馈。\n\n## 配置与诊断步骤\n\n1. 对每个 body/particle/joint/shape 检查所属 Entry；仅当关节端点属于不同 entry 且 joint 本身不归任一子 solver 时，coupler 接管该跨 solver 关节。\n2. 当前 ADMM 关节行支持 BALL/FIXED/REVOLUTE，PRISMATIC/DISTANCE/D6 行未支持。不要根据某个子 solver 自己支持关节就推断 coupler 也支持接口行。\n3. particle-body attachment 由 ModelBuilder.add_attachment_particle_body 建立。跨 entry 由 coupler 处理；同 entry 留给该 solver，端点无 owner 或该 solver 不支持时应检查 warning。\n4. legacy coupling:body_particle_attachment 自定义行仍被 ADMM 消费，但对 VBD 直接求解不可见；迁移时分清数据布局。\n5. ContactPair 显式开启 ADMM 私有接触检测，确保子 solver 的接触路径没有再次解同一跨 entry 交互。接触摩擦从模型材料读取，不是 ContactPair 的任意字段。\n6. attachment 是物理假设，不作为夹爪接触抓取的默认替代；本知识配方未执行实际耦合任务。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.solvers.experimental.coupled.SolverCoupledADMM](#/record/symbol%3Anewton.solvers.experimental.coupled.SolverCoupledADMM)\n- [newton.ModelBuilder.add_attachment_particle_body](#/record/symbol%3Anewton.ModelBuilder.add_attachment_particle_body)\n\n## 相关知识\n\n- [concept:coupling](#/record/concept%3Acoupling)\n- [topic:coupling](#/record/topic%3Acoupling)\n- [recipe:coupled-rigid-deformable](#/record/recipe%3Acoupled-rigid-deformable)\n\n## 固定出处\n\n- [newton/_src/solvers/coupled/solver_coupled_admm.py:428](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/coupled/solver_coupled_admm.py#L428)\n- [newton/_src/sim/builder.py:10234](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L10234)\n- [docs/concepts/coupling.rst:256](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/coupling.rst#L256)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "mujoco",
+        "vbd"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/coupled/solver_coupled_admm.py",
+          "line": 428,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7b5bb8ff8b00fdc498579817ab527300868f09d57f694510788c9052472d6313",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/coupled/solver_coupled_admm.py#L428"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 10234,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L10234"
+        },
+        {
+          "path": "docs/concepts/coupling.rst",
+          "line": 256,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c88667aadf1665a246c7138832180b9f483dbdf4687084bf06ac8bba371abbe",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/coupling.rst#L256"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/coupling-interface-ownership.md",
+      "task_id": "X08"
+    },
+    {
+      "id": "recipe:differentiable-rollout-history",
+      "family": "recipe",
+      "title": "可微 rollout 的后端与状态历史",
+      "summary": "先选固定版本支持的微分路径。官方能力表仅将 SolverSemiImplicit / SolverFeatherstone 标为 basic 可微，XPBD/VBD 不支持；requires_grad=True 只是分配相关缓冲的前提。",
+      "body": "# 可微 rollout 的后端与状态历史\n\n## 机制与输入输出\n\n先选固定版本支持的微分路径。官方能力表仅将 SolverSemiImplicit / SolverFeatherstone 标为 basic 可微，XPBD/VBD 不支持；requires_grad=True 只是分配相关缓冲的前提。\n\n## 配置与诊断步骤\n\n1. 通过 builder.finalize(requires_grad=True) 分配模型，按示例创建需要梯度的 State 与标量 loss。\n2. 在 wp.Tape() 范围内记录 forward rollout 和 loss 计算，再调用 tape.backward(loss)。检查所求导的数组是否参与、是否分配 grad，以及是否被非可微流程断开。\n3. 多步时保留反向所需的中间状态/数组；不能照搬普通仿真的双缓冲交换后覆盖所有历史。按 diffsim 示例的状态列表与优化循环处理。\n4. 梯度非 None 不等于数值正确，还需有限差分等验证；当前条目是源码与示例依据，不宣称本库完成梯度数值检验。\n5. 控制器、导入器或外部组件的梯度支持也要分别核查，不能从 Warp 可微直接推导整个应用可微。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.ModelBuilder.finalize](#/record/symbol%3Anewton.ModelBuilder.finalize)\n- [newton.solvers.SolverSemiImplicit](#/record/symbol%3Anewton.solvers.SolverSemiImplicit)\n\n## 相关知识\n\n- [topic:differentiable-simulation](#/record/topic%3Adifferentiable-simulation)\n- [solver:semi-implicit](#/record/solver%3Asemi-implicit)\n- [solver:featherstone](#/record/solver%3Afeatherstone)\n- [solver:xpbd](#/record/solver%3Axpbd)\n\n## 固定出处\n\n- [newton/_src/sim/builder.py:13192](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192)\n- [newton/_src/solvers/semi_implicit/solver_semi_implicit.py:34](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34)\n- [docs/solvers/index.rst:463](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/index.rst#L463)\n- [newton/examples/diffsim/example_diffsim_ball.py:97](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/examples/diffsim/example_diffsim_ball.py#L97)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "solver_step"
+      ],
+      "solver": null,
+      "owner_module": "newton",
+      "applicable_solvers": [
+        "semi-implicit",
+        "featherstone"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 13192,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192"
+        },
+        {
+          "path": "newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+          "line": 34,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "68aa590c70b28ec438ea483535ffe49fe0b7cdd4f9b67fb9265a2303398a634b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34"
+        },
+        {
+          "path": "docs/solvers/index.rst",
+          "line": 463,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "c236670d25eb27344712457586a7f924c190423b47edace6b8c4946104ef4721",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/index.rst#L463"
+        },
+        {
+          "path": "newton/examples/diffsim/example_diffsim_ball.py",
+          "line": 97,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "c63e5fa53499e67313901ae018ffe5d1274c5b1358e6db0c5c2c1bcfa46c5ff4",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/examples/diffsim/example_diffsim_ball.py#L97"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/differentiable-rollout-history.md",
+      "task_id": "X09"
+    },
+    {
+      "id": "recipe:mujoco-contact-conversion",
+      "family": "recipe",
+      "title": "MuJoCo 接触转换与刚度解释边界",
+      "summary": "ke/kd 的数值与 MuJoCo 实际约束参数要连同接触来源、solref_mode 和 backend 判断。相同字段名不是跨路径等效的保证。",
+      "body": "# MuJoCo 接触转换与刚度解释边界\n\n## 机制与输入输出\n\nke/kd 的数值与 MuJoCo 实际约束参数要连同接触来源、solref_mode 和 backend 判断。相同字段名不是跨路径等效的保证。\n\n## 配置与诊断步骤\n\n1. 先区分 backend：Newton 1.7.0 中 use_mujoco_cpu=True 的 native CPU 分支直接调用 mj_step，不消费传入的 Newton contacts；即使 use_mujoco_contacts=False 仍使用原生碰撞。MuJoCo Warp 分支才按 use_mujoco_contacts 选择原生检测或 False 时的 Newton 接触导入，后者需要调用方先计算 contacts。Warp 的 cpu/cuda 设备与 native CPU backend 不是同一个开关。\n2. 正数 ke/kd 的旧数值映射为 timeconst=2/kd、dampratio=kd/(2*sqrt(ke))。这个 unit-mass 数值映射不是任意有效质量下的物理临界阻尼公式。\n3. Newton contacts 的 force-space 修正使用两刚体 translational body_invweight0 的和与 solimp，这不是任意铰接/偏心接触的完整 (J M^-1 J^T)^-1。固定文档明确 native contacts/CPU 不采用该逐接触因子，不能把它们解释为同一物理刚度转换。\n4. RAW、MJCF_DEFAULT、Newton force-space 模式与导入属性分别核查。SOLREF_MODE_* 是实现标记，不是公开选择 API，不从 _src 导入常量改变模式。正格式 solref 的 refsafe 使用 max(timeconst,2*dt) 作为活动约束下界，不改写存储值；负数 direct 格式绕过此规则。\n5. 记录真正的 solver/model/backend 配置及转换值，再对压入、振动和轨迹做对照。不要从相同 ke 给出严格相同响应的承诺。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.solvers.SolverMuJoCo](#/record/symbol%3Anewton.solvers.SolverMuJoCo)\n\n## 相关知识\n\n- [solver:mujoco](#/record/solver%3Amujoco)\n- [concept:simulation-tuning](#/record/concept%3Asimulation-tuning)\n- [concept:collisions](#/record/concept%3Acollisions)\n\n## 固定出处\n\n- [newton/_src/solvers/mujoco/solver_mujoco.py:470](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L470)\n- [docs/solvers/mujoco.rst:272](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L272)\n- [newton/_src/solvers/mujoco/kernels.py:189](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/kernels.py#L189)\n- [newton/_src/solvers/mujoco/solver_mujoco.py:4568](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4568)\n",
+      "domain": "workflow",
+      "stages": [
+        "preprocess",
+        "collision",
+        "solver_step"
+      ],
+      "solver": "mujoco",
+      "owner_module": "newton.solvers",
+      "applicable_solvers": [
+        "mujoco"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 470,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L470"
+        },
+        {
+          "path": "docs/solvers/mujoco.rst",
+          "line": 272,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L272"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/kernels.py",
+          "line": 189,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d1b377bcb4633d223fabe4a3969a2bbf909b9d2a0c3b5879caf9b1061f23e2be",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/kernels.py#L189"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4568,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4568"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/mujoco-contact-conversion.md",
+      "task_id": "X10"
+    },
+    {
+      "id": "recipe:kamino-backend-config-resolve",
+      "family": "recipe",
+      "title": "Kamino 后端配置组与残差语义",
+      "summary": "dynamics_solver 选择会触发一组依赖默认值。应该在 SolverKamino.Config(dynamics_solver=\"dvi\") 构造时选择后端，并核查解析后的 dynamics、线性求解和稀疏布局，而非只事后改字符串。",
+      "body": "# Kamino 后端配置组与残差语义\n\n## 机制与输入输出\n\ndynamics_solver 选择会触发一组依赖默认值。应该在 SolverKamino.Config(dynamics_solver=\"dvi\") 构造时选择后端，并核查解析后的 dynamics、线性求解和稀疏布局，而非只事后改字符串。\n\n## 配置与诊断步骤\n\n1. PADMM 是默认 proximal ADMM 路径，使用其对应的 dense Jacobian/dynamics 与线性系统配置；DVI 有自己的块/稀疏与求解器组合。实际值由 Config 的初始化/校验逻辑解析。\n2. PADMM 使用预条件冲量 x/y，但报告 r_p=||P(x-y)||_inf，r_d=||P^-1(eta(x-x_prev)+rho(y-y_prev))||_inf；P 因子将其转到物理约束单位。DVI r_p 为物理冲量的锥投影距离，r_d 为对偶锥速度距离/双边速度违约。两者 r_p 为 N·s 或 N·m·s，r_d 为 m/s 或 rad/s，r_c 为冲量-速度内积的绝对最大值 [J]；同单位不表示同一定义。\n3. 官方文档说明两者残差均为绝对最大值，未除以参考范数归一；不能按同名字段直接跨 backend 排优劣或套用同一容差。\n4. 切换后端是配置组干预，应保存所有实际 diff、终止状态和物理误差，不写成只改变一个独立参数的 A/B。\n5. 首版深入知识中 config.padmm.max_iterations=200 是 PADMM 的声明上限，不是 DVI 的等效预算。本配方没有执行后端性能比较。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.solvers.SolverKamino](#/record/symbol%3Anewton.solvers.SolverKamino)\n- [newton.solvers.SolverKamino.Config](#/record/symbol%3Anewton.solvers.SolverKamino.Config)\n\n## 相关知识\n\n- [solver:kamino](#/record/solver%3Akamino)\n- [page:solvers/kamino/parameters.md](#/record/page%3Asolvers%2Fkamino%2Fparameters.md)\n- [page:solvers/kamino/theory.md](#/record/page%3Asolvers%2Fkamino%2Ftheory.md)\n\n## 固定出处\n\n- [newton/_src/solvers/kamino/solver_kamino.py:111](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L111)\n- [newton/_src/solvers/kamino/solver_kamino.py:186](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L186)\n- [docs/solvers/kamino.rst:91](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L91)\n- [newton/_src/solvers/kamino/config.py:361](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L361)\n- [newton/_src/solvers/kamino/solver_kamino.py:485](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L485)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "solver_step",
+        "output"
+      ],
+      "solver": "kamino",
+      "owner_module": "newton.solvers",
+      "applicable_solvers": [
+        "kamino"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 111,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L111"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 186,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L186"
+        },
+        {
+          "path": "docs/solvers/kamino.rst",
+          "line": 91,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "601dd9ba9279c0f2b1e1aff4864c698a2baeca68e7928532be2ce3116670e6de",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L91"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 361,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "4625e87ad4027fb246aeb879f816ef31cdc8441dae8872e8ce8d669aa0a3157d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L361"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 485,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L485"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/kamino-backend-config-resolve.md",
+      "task_id": "X11"
+    },
+    {
+      "id": "recipe:vbd-dat-preconditions",
+      "family": "recipe",
+      "title": "VBD DAT 的前提、预算与有限保证",
+      "summary": "rigid_soft_enable_dat 是针对已报告接触的 Divide-and-Truncate 限制，不是任意非凸场景全局无穿透保证。它要求 solver-owned pipeline。",
+      "body": "# VBD DAT 的前提、预算与有限保证\n\n## 机制与输入输出\n\nrigid_soft_enable_dat 是针对已报告接触的 Divide-and-Truncate 限制，不是任意非凸场景全局无穿透保证。它要求 solver-owned pipeline。\n\n## 配置与诊断步骤\n\n1. 先构造 CollisionPipeline，再把 collision_pipeline= 传给 SolverVBD；step 必须 contacts=None。DAT 的分割平面来自检测时的参考构型。\n2. AUTO 下相关 RIGID slot 解析 PRE_POST_INIT，检测在初始化前后；快速运动可核查 ITERATIONS 调度与 collision_frequency。DAT 家族激活时对应 slot 不能为 NONE。同时启用 rigid-soft DAT 与 self-contact DAT 时，两者共享 motion reference：RIGID 与 SOFT_SELF_CONTACT 必须解析为相同调度类型，若使用 ITERATIONS 还须频率相同；应同时设置两个 slot，不能仅提高其中一个的频率。\n3. 每侧预算含 0.5 * dat_conservative_bound_relaxation * 最小查询半径，半径由 gap、soft feature radius 与 shape margin 组成；在构造时固定，后改这些字段不会自动刷新预算。该各向同性预算约束模型中每个动态 body/particle 的检测间运动，不只限制接触附近的对象。\n4. Kinematic bodies 在 solver 外运动，不被截断。overflow 丢掉的接触不参与限制；非凸几何稠密覆盖也不由此自动保证。\n5. 采样/二分可能漏掉样点间穿过再返回的轨迹；额外 interval prefix 路径仍标 experimental，不将其视为成熟无条件保证。\n6. 用具体接触记录、运动预算、检测时刻和实际轨迹排查，再决定是否增大预算/检测频率或改善几何；提高迭代不能补回缺失接触。\n\n## 适用范围与证据\n\nNewton 1.7.0 固定文档、公开 API 与源码说明；runtime_status=not_run。这里的任务验证只验证知识检索与配置推理证据，不是物理任务执行或参数 A/B。设备、后端和捕获限制按所选路径核对。\n\n## 精确 API\n\n- [newton.solvers.SolverVBD](#/record/symbol%3Anewton.solvers.SolverVBD)\n- [newton.solvers.SolverBase.set_collision_frequency](#/record/symbol%3Anewton.solvers.SolverBase.set_collision_frequency)\n\n## 相关知识\n\n- [solver:vbd](#/record/solver%3Avbd)\n- [concept:collisions](#/record/concept%3Acollisions)\n- [recipe:solver-owned-collision](#/record/recipe%3Asolver-owned-collision)\n- [pipeline:enable_rigid_soft_full_surface_contact](#/record/pipeline%3Aenable_rigid_soft_full_surface_contact)\n\n## 固定出处\n\n- [newton/_src/solvers/vbd/solver_vbd.py:167](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167)\n- [newton/_src/solvers/solver.py:623](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623)\n- [newton/_src/solvers/vbd/solver_vbd.py:612](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L612)\n- [newton/_src/solvers/vbd/solver_vbd.py:4808](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4808)\n",
+      "domain": "workflow",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step"
+      ],
+      "solver": "vbd",
+      "owner_module": "newton.solvers",
+      "applicable_solvers": [
+        "vbd"
+      ],
+      "support_status": "supported",
+      "runtime_status": "not_run",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 167,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 623,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623"
+        },
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 612,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L612"
+        },
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 4808,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4808"
+        }
+      ],
+      "target_depth": "T",
+      "canonical_path": "knowledge/pages/extended/vbd-dat-preconditions.md",
+      "task_id": "X12"
+    }
+  ],
+  "relations": [
+    {
+      "source": "recipe:control-target-layout",
+      "target": "topic:robot-control",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 76,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 44,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:control-target-layout",
+      "target": "concept:conventions",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 76,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 44,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:control-target-layout",
+      "target": "module:selection",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 76,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 44,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:control-target-layout",
+      "target": "symbol:newton.Control.clear",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 76,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 44,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:control-target-layout",
+      "target": "symbol:newton.Control.joint_target_q",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 76,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 44,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:control-target-layout",
+      "target": "symbol:newton.Control.joint_target_qd",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 76,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L76"
+        },
+        {
+          "path": "newton/_src/sim/control.py",
+          "line": 44,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "f08e99e6f667cf5c1e394696e63aff1fda21d346e3c83a12dbe21ae087632840",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/control.py#L44"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:actuator-effort-scheduling",
+      "target": "module:actuators",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/actuators/actuator.py",
+          "line": 166,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "76b62149572df6a84bcab063c4ce95d7c0e27d0ddf6a3983ac02a9159b176f40",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/actuator.py#L166"
+        },
+        {
+          "path": "newton/_src/actuators/drives/drive_pd.py",
+          "line": 68,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5851587036a37696e40b4dacc25f03d8d7381dc83dfcc1f7f9d99e4e82642dd",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/drives/drive_pd.py#L68"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:actuator-effort-scheduling",
+      "target": "concept:actuators",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/actuators/actuator.py",
+          "line": 166,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "76b62149572df6a84bcab063c4ce95d7c0e27d0ddf6a3983ac02a9159b176f40",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/actuator.py#L166"
+        },
+        {
+          "path": "newton/_src/actuators/drives/drive_pd.py",
+          "line": 68,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5851587036a37696e40b4dacc25f03d8d7381dc83dfcc1f7f9d99e4e82642dd",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/drives/drive_pd.py#L68"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:actuator-effort-scheduling",
+      "target": "stage:control",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/actuators/actuator.py",
+          "line": 166,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "76b62149572df6a84bcab063c4ce95d7c0e27d0ddf6a3983ac02a9159b176f40",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/actuator.py#L166"
+        },
+        {
+          "path": "newton/_src/actuators/drives/drive_pd.py",
+          "line": 68,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5851587036a37696e40b4dacc25f03d8d7381dc83dfcc1f7f9d99e4e82642dd",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/drives/drive_pd.py#L68"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:actuator-effort-scheduling",
+      "target": "symbol:newton.actuators.Actuator",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/actuators/actuator.py",
+          "line": 166,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "76b62149572df6a84bcab063c4ce95d7c0e27d0ddf6a3983ac02a9159b176f40",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/actuator.py#L166"
+        },
+        {
+          "path": "newton/_src/actuators/drives/drive_pd.py",
+          "line": 68,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5851587036a37696e40b4dacc25f03d8d7381dc83dfcc1f7f9d99e4e82642dd",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/drives/drive_pd.py#L68"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:actuator-effort-scheduling",
+      "target": "symbol:newton.actuators.DrivePD",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/actuators/actuator.py",
+          "line": 166,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "76b62149572df6a84bcab063c4ce95d7c0e27d0ddf6a3983ac02a9159b176f40",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/actuator.py#L166"
+        },
+        {
+          "path": "newton/_src/actuators/drives/drive_pd.py",
+          "line": 68,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5851587036a37696e40b4dacc25f03d8d7381dc83dfcc1f7f9d99e4e82642dd",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/actuators/drives/drive_pd.py#L68"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:collision-preflight",
+      "target": "stage:preprocess",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 8712,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 2184,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:collision-preflight",
+      "target": "module:geometry",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 8712,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 2184,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:collision-preflight",
+      "target": "module:utils",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 8712,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 2184,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:collision-preflight",
+      "target": "concept:collisions",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 8712,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 2184,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:collision-preflight",
+      "target": "symbol:newton.ModelBuilder.approximate_meshes",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 8712,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 2184,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:collision-preflight",
+      "target": "symbol:newton.ModelBuilder.add_shape_collision_filter_pair",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 8712,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L8712"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 2184,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L2184"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-capacity-diagnosis",
+      "target": "concept:solver-observables",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 721,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 1250,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-capacity-diagnosis",
+      "target": "concept:collisions",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 721,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 1250,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-capacity-diagnosis",
+      "target": "recipe:mujoco-native-contact",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 721,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 1250,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-capacity-diagnosis",
+      "target": "solver:vbd",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 721,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 1250,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-capacity-diagnosis",
+      "target": "symbol:newton.solvers.SolverBase.observables",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 721,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 1250,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-capacity-diagnosis",
+      "target": "symbol:newton.CollisionPipeline",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 721,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L721"
+        },
+        {
+          "path": "newton/_src/sim/collide.py",
+          "line": 1250,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1250"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:model-update-notification",
+      "target": "topic:lifecycle-observation",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 8,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L8"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 5132,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5132"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:model-update-notification",
+      "target": "module:newton",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 8,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L8"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 5132,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5132"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:model-update-notification",
+      "target": "solver:mujoco",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 8,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L8"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 5132,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5132"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:model-update-notification",
+      "target": "symbol:newton.ModelFlags",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 8,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L8"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 5132,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5132"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:model-update-notification",
+      "target": "symbol:newton.solvers.SolverMuJoCo.notify_model_changed",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 8,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L8"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 5132,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5132"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:masked-reset-state-history",
+      "target": "recipe:worlds-reset",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:masked-reset-state-history",
+      "target": "topic:worlds-batching",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:masked-reset-state-history",
+      "target": "concept:worlds",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:masked-reset-state-history",
+      "target": "module:selection",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:masked-reset-state-history",
+      "target": "symbol:newton.StateFlags",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:masked-reset-state-history",
+      "target": "symbol:newton.solvers.SolverMuJoCo.reset",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:masked-reset-state-history",
+      "target": "symbol:newton.selection.ArticulationView.set_attribute",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/enums.py",
+          "line": 73,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c625cd06abbde4d96c9ee9583b07aca6603da3a7b81e05167dc94229d8b7874",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/enums.py#L73"
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4606,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4606"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-frame-imu-observation",
+      "target": "module:sensors",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-frame-imu-observation",
+      "target": "concept:solver-observables",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-frame-imu-observation",
+      "target": "topic:lifecycle-observation",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-frame-imu-observation",
+      "target": "solver:kamino",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-frame-imu-observation",
+      "target": "solver:mujoco",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-frame-imu-observation",
+      "target": "symbol:newton.sensors.SensorIMU.update",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:contact-frame-imu-observation",
+      "target": "symbol:newton.sensors.SensorContact.update",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sensors/sensor_imu.py",
+          "line": 208,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bf6fe025c367ffb759100a04f66665e5aa8effe25fa93a446ee5d45a0ea12e92",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_imu.py#L208"
+        },
+        {
+          "path": "newton/_src/sensors/sensor_contact.py",
+          "line": 618,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3a94dca37e41b39a0dd886924c69346b3df8dd08585f925daae4a1ef80d07d24",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sensors/sensor_contact.py#L618"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:coupling-interface-ownership",
+      "target": "concept:coupling",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/coupled/solver_coupled_admm.py",
+          "line": 428,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7b5bb8ff8b00fdc498579817ab527300868f09d57f694510788c9052472d6313",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/coupled/solver_coupled_admm.py#L428"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 10234,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L10234"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:coupling-interface-ownership",
+      "target": "topic:coupling",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/coupled/solver_coupled_admm.py",
+          "line": 428,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7b5bb8ff8b00fdc498579817ab527300868f09d57f694510788c9052472d6313",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/coupled/solver_coupled_admm.py#L428"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 10234,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L10234"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:coupling-interface-ownership",
+      "target": "recipe:coupled-rigid-deformable",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/coupled/solver_coupled_admm.py",
+          "line": 428,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7b5bb8ff8b00fdc498579817ab527300868f09d57f694510788c9052472d6313",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/coupled/solver_coupled_admm.py#L428"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 10234,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L10234"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:coupling-interface-ownership",
+      "target": "symbol:newton.solvers.experimental.coupled.SolverCoupledADMM",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/coupled/solver_coupled_admm.py",
+          "line": 428,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7b5bb8ff8b00fdc498579817ab527300868f09d57f694510788c9052472d6313",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/coupled/solver_coupled_admm.py#L428"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 10234,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L10234"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:coupling-interface-ownership",
+      "target": "symbol:newton.ModelBuilder.add_attachment_particle_body",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/coupled/solver_coupled_admm.py",
+          "line": 428,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7b5bb8ff8b00fdc498579817ab527300868f09d57f694510788c9052472d6313",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/coupled/solver_coupled_admm.py#L428"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 10234,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L10234"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:differentiable-rollout-history",
+      "target": "topic:differentiable-simulation",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 13192,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192"
+        },
+        {
+          "path": "newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+          "line": 34,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "68aa590c70b28ec438ea483535ffe49fe0b7cdd4f9b67fb9265a2303398a634b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:differentiable-rollout-history",
+      "target": "solver:semi-implicit",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 13192,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192"
+        },
+        {
+          "path": "newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+          "line": 34,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "68aa590c70b28ec438ea483535ffe49fe0b7cdd4f9b67fb9265a2303398a634b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:differentiable-rollout-history",
+      "target": "solver:featherstone",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 13192,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192"
+        },
+        {
+          "path": "newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+          "line": 34,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "68aa590c70b28ec438ea483535ffe49fe0b7cdd4f9b67fb9265a2303398a634b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:differentiable-rollout-history",
+      "target": "solver:xpbd",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 13192,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192"
+        },
+        {
+          "path": "newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+          "line": 34,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "68aa590c70b28ec438ea483535ffe49fe0b7cdd4f9b67fb9265a2303398a634b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:differentiable-rollout-history",
+      "target": "symbol:newton.ModelBuilder.finalize",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 13192,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192"
+        },
+        {
+          "path": "newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+          "line": 34,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "68aa590c70b28ec438ea483535ffe49fe0b7cdd4f9b67fb9265a2303398a634b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:differentiable-rollout-history",
+      "target": "symbol:newton.solvers.SolverSemiImplicit",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 13192,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L13192"
+        },
+        {
+          "path": "newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+          "line": 34,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "68aa590c70b28ec438ea483535ffe49fe0b7cdd4f9b67fb9265a2303398a634b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/semi_implicit/solver_semi_implicit.py#L34"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:mujoco-contact-conversion",
+      "target": "solver:mujoco",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 470,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L470"
+        },
+        {
+          "path": "docs/solvers/mujoco.rst",
+          "line": 272,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L272"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:mujoco-contact-conversion",
+      "target": "concept:simulation-tuning",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 470,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L470"
+        },
+        {
+          "path": "docs/solvers/mujoco.rst",
+          "line": 272,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L272"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:mujoco-contact-conversion",
+      "target": "concept:collisions",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 470,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L470"
+        },
+        {
+          "path": "docs/solvers/mujoco.rst",
+          "line": 272,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L272"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:mujoco-contact-conversion",
+      "target": "symbol:newton.solvers.SolverMuJoCo",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 470,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L470"
+        },
+        {
+          "path": "docs/solvers/mujoco.rst",
+          "line": 272,
+          "role": "behavior_excerpt",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L272"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:kamino-backend-config-resolve",
+      "target": "solver:kamino",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 111,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L111"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 186,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L186"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:kamino-backend-config-resolve",
+      "target": "page:solvers/kamino/parameters.md",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 111,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L111"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 186,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L186"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:kamino-backend-config-resolve",
+      "target": "page:solvers/kamino/theory.md",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 111,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L111"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 186,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L186"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:kamino-backend-config-resolve",
+      "target": "symbol:newton.solvers.SolverKamino",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 111,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L111"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 186,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L186"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:kamino-backend-config-resolve",
+      "target": "symbol:newton.solvers.SolverKamino.Config",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 111,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L111"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 186,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L186"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:vbd-dat-preconditions",
+      "target": "solver:vbd",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 167,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 623,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:vbd-dat-preconditions",
+      "target": "concept:collisions",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 167,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 623,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:vbd-dat-preconditions",
+      "target": "recipe:solver-owned-collision",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 167,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 623,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:vbd-dat-preconditions",
+      "target": "pipeline:enable_rigid_soft_full_surface_contact",
+      "relation": "related_workflow",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 167,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 623,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:vbd-dat-preconditions",
+      "target": "symbol:newton.solvers.SolverVBD",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 167,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 623,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    },
+    {
+      "source": "recipe:vbd-dat-preconditions",
+      "target": "symbol:newton.solvers.SolverBase.set_collision_frequency",
+      "relation": "uses_public_api",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 167,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167"
+        },
+        {
+          "path": "newton/_src/solvers/solver.py",
+          "line": 623,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/solver.py#L623"
+        }
+      ],
+      "evidence_type": "source_checked",
+      "scope": "P3 task recipe association; no inferred causal or runtime claim"
+    }
+  ]
+}

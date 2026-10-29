@@ -1,0 +1,11 @@
+{
+  "status": "frozen_before_runs",
+  "group": "limit_switch",
+  "protocol": "experiments/kamino_pd_lab/limit_switch/protocol.json",
+  "sha256": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+  "frozen_at_utc": "2026-10-29T06:41:18.509786+00:00",
+  "baseline_build": "37213b4b24552935be27464a",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "formal_runs": 4,
+  "design_sha256": "8ba930088bc392e1ddcd536974802854648ff5fdf814fdde65d732f0e7ebdda6"
+}

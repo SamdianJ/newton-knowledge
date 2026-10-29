@@ -1,0 +1,396 @@
+[
+  {
+    "id": "full_surface",
+    "title": "粗三角形能托住小球吗？",
+    "group": "碰撞管线",
+    "scene": "full_surface",
+    "parameter": "enable_rigid_soft_full_surface_contact",
+    "values": [
+      false,
+      true
+    ],
+    "duration": 0.4,
+    "common": {},
+    "question": "顶点没有碰到球，三角形内部接触是否仍被求解？",
+    "expectation": "开启后应出现 edge/face 接触；仅粒子检测可能漏掉面内接触。",
+    "metric": "球底相对支撑面的高度",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/collisions.html"
+  },
+  {
+    "id": "iterations",
+    "title": "弹簧链：求解预算",
+    "group": "数值求解",
+    "scene": "chain",
+    "parameter": "iterations",
+    "values": [
+      1,
+      30
+    ],
+    "duration": 0.4,
+    "common": {
+      "ke": 2000.0,
+      "kd": 0.0,
+      "dt": 0.004166666666666667
+    },
+    "question": "同一物理材料，少迭代是否产生更大的有限求解误差？",
+    "expectation": "增加迭代改善收敛；不应被解释成材料刚度改变。",
+    "metric": "末端高度",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html"
+  },
+  {
+    "id": "substeps",
+    "title": "高频振子：时间步与数值耗散",
+    "group": "时间积分",
+    "scene": "oscillator",
+    "parameter": "substeps",
+    "values": [
+      1,
+      8
+    ],
+    "duration": 0.8,
+    "common": {
+      "ke": 900.0,
+      "kd": 0.0,
+      "frame_dt": 0.03333333333333333,
+      "iterations": 10
+    },
+    "question": "相同物理时间，细分时间步如何影响振幅和相位？",
+    "expectation": "更小 dt 降低时间离散误差，但计算量增加；并非单纯多做外迭代。",
+    "metric": "弹簧伸长",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html"
+  },
+  {
+    "id": "stiffness",
+    "title": "悬挂质量：材料刚度",
+    "group": "材料",
+    "scene": "hanging",
+    "parameter": "spring_stiffness",
+    "values": [
+      50.0,
+      500.0
+    ],
+    "duration": 2.0,
+    "common": {
+      "kd": 10.0,
+      "iterations": 10,
+      "dt": 0.008333333333333333
+    },
+    "question": "已知 1 kg 载荷，静态伸长是否随刚度降低？",
+    "expectation": "线性弹簧静态平衡预期伸长 mg/k；这属于材料层参数。",
+    "metric": "弹簧伸长",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html"
+  },
+  {
+    "id": "damping",
+    "title": "自由振动：材料阻尼",
+    "group": "材料",
+    "scene": "oscillator",
+    "parameter": "spring_damping",
+    "values": [
+      0.0,
+      8.0
+    ],
+    "duration": 1.5,
+    "common": {
+      "ke": 100.0,
+      "dt": 0.004166666666666667,
+      "iterations": 10
+    },
+    "question": "刚度相同，阻尼如何改变衰减速度？",
+    "expectation": "增大阻尼耗散运动能；不应与数值耗散混为一个参数。",
+    "metric": "弹簧伸长",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html"
+  },
+  {
+    "id": "self_contact",
+    "title": "两张三角薄片的接触",
+    "group": "自接触",
+    "scene": "sheets",
+    "parameter": "particle_enable_self_contact",
+    "values": [
+      false,
+      true
+    ],
+    "duration": 0.45,
+    "common": {
+      "dt": 0.008333333333333333,
+      "iterations": 15,
+      "margin": 0.01,
+      "gap": 0.08
+    },
+    "question": "没有刚体形状时，软体之间是否还会发生接触？",
+    "expectation": "粒子自接触检测与 rigid-soft 管线不同；开关控制软体 vertex-triangle/edge-edge 处理。",
+    "metric": "上片中心离下片距离",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "self_margin",
+    "title": "自接触厚度：显式 margin + gap",
+    "group": "自接触",
+    "scene": "sheets",
+    "parameter": "particle_self_contact_margin",
+    "values": [
+      0.005,
+      0.04
+    ],
+    "duration": 0.45,
+    "common": {
+      "dt": 0.008333333333333333,
+      "iterations": 15,
+      "gap": 0.08,
+      "self_contact": true
+    },
+    "question": "候选检测 slack 相同，交互距离如何影响停靠间距？",
+    "expectation": "新语义需显式 gap；margin 改交互距离，不能拿 margin 当纯检测范围。",
+    "metric": "上片中心离下片距离",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "contact_stiffness",
+    "title": "软粒子落地：法向刚度",
+    "group": "接触材料",
+    "scene": "particle_ground",
+    "parameter": "contact_ke",
+    "values": [
+      500.0,
+      50000.0
+    ],
+    "duration": 1.0,
+    "common": {
+      "dt": 0.004166666666666667,
+      "iterations": 10,
+      "kd": 30.0,
+      "mu": 0.0
+    },
+    "question": "同样的重力载荷，接触刚度如何改变静态压入量？",
+    "expectation": "二次 penalty 接触的有限刚度会产生法向压入；不能只看动画是否“站稳”。",
+    "metric": "粒子表面离地高度",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html"
+  },
+  {
+    "id": "friction",
+    "title": "滑块粒子：摩擦系数",
+    "group": "接触材料",
+    "scene": "particle_slide",
+    "parameter": "contact_mu",
+    "values": [
+      0.05,
+      0.8
+    ],
+    "duration": 1.0,
+    "common": {
+      "dt": 0.004166666666666667,
+      "iterations": 10,
+      "ke": 50000.0,
+      "kd": 50.0,
+      "epsilon": 0.001,
+      "speed": 1.0
+    },
+    "question": "法向接触相同，摩擦系数如何改变停止距离？",
+    "expectation": "mu 控制摩擦强度；同时固定摩擦平滑阈值和接触材料混合设置。",
+    "metric": "水平位移",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html"
+  },
+  {
+    "id": "friction_epsilon",
+    "title": "小推力：摩擦平滑与蠕滑",
+    "group": "摩擦正则",
+    "scene": "particle_creep",
+    "parameter": "friction_epsilon",
+    "values": [
+      0.001,
+      0.2
+    ],
+    "duration": 1.0,
+    "common": {
+      "dt": 0.004166666666666667,
+      "iterations": 10,
+      "ke": 50000.0,
+      "kd": 50.0,
+      "mu": 0.5,
+      "push": 1.0
+    },
+    "question": "mu 相同，小速度区间的正则化是否改变缓慢滑动？",
+    "expectation": "epsilon 是速度阈值，内核以 epsilon*dt 转为位移阈值；不是 mu。",
+    "metric": "水平位移",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "dat",
+    "title": "高速质点撞薄板：DAT",
+    "group": "几何截断",
+    "scene": "dat",
+    "parameter": "rigid_soft_enable_dat",
+    "values": [
+      false,
+      true
+    ],
+    "duration": 0.15,
+    "common": {
+      "dt": 0.016666666666666666,
+      "iterations": 3,
+      "ke": 100.0,
+      "kd": 0.0,
+      "speed": -8.0
+    },
+    "question": "弱 penalty + 大位移下，DAT 是否限制穿越接触面？",
+    "expectation": "owned pipeline 提供检测时刻参考，DAT 限制位移；效果仍依赖初态和候选覆盖。",
+    "metric": "质点离板顶高度",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/collisions.html"
+  },
+  {
+    "id": "dat_relaxation",
+    "title": "同一 DAT：保守系数",
+    "group": "几何截断",
+    "scene": "dat",
+    "parameter": "dat_conservative_bound_relaxation",
+    "values": [
+      0.25,
+      0.85
+    ],
+    "duration": 0.15,
+    "common": {
+      "dt": 0.016666666666666666,
+      "iterations": 3,
+      "ke": 100.0,
+      "kd": 0.0,
+      "speed": -8.0,
+      "dat": true
+    },
+    "question": "都启用 DAT，较保守系数怎样改变运动进度？",
+    "expectation": "系数在 (0,1)，影响截断与运动预算；更保守不等于更真实。",
+    "metric": "质点离板顶高度",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "rigid_mode",
+    "title": "有限刚度关节：legacy / compliant",
+    "group": "刚体约束",
+    "scene": "joint",
+    "parameter": "rigid_compliant_alm",
+    "values": [
+      false,
+      true
+    ],
+    "duration": 1.0,
+    "common": {
+      "dt": 0.008333333333333333,
+      "iterations": 15,
+      "joint_ke": 200.0,
+      "joint_kd": 15.0,
+      "alpha": 0.0
+    },
+    "question": "相同结构 ke，切换 formulation 会不会改变静态柔顺性？",
+    "expectation": "compliant 把物理 K 与数值 rho 分开；legacy hard 行与有限刚度 ALM 不物理等价。",
+    "metric": "关节平移误差",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "joint_stiffness",
+    "title": "compliant 关节的结构刚度",
+    "group": "刚体约束",
+    "scene": "joint",
+    "parameter": "rigid_joint_linear_ke",
+    "values": [
+      200.0,
+      2000.0
+    ],
+    "duration": 1.0,
+    "common": {
+      "dt": 0.008333333333333333,
+      "iterations": 15,
+      "joint_kd": 20.0,
+      "alpha": 0.0,
+      "compliant": true
+    },
+    "question": "compliant 模式下物理刚度是否控制载荷下的变形？",
+    "expectation": "结构 ke 与 drive ke 分层；有限材料刚度应在静态响应中可见。",
+    "metric": "关节平移误差",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "membrane",
+    "title": "薄膜三角形：面内拉伸",
+    "group": "薄膜材料",
+    "scene": "membrane",
+    "parameter": "tri_ke + tri_ka",
+    "values": [
+      100.0,
+      10000.0
+    ],
+    "duration": 1.0,
+    "common": {
+      "dt": 0.004166666666666667,
+      "iterations": 15,
+      "tri_kd": 20.0
+    },
+    "question": "固定上边、给下顶点相同载荷，膜材料系数如何改变伸长？",
+    "expectation": "膜参数进入三角形能量；此处共同缩放两项，未声称单独识别剪切与面积响应。",
+    "metric": "下顶点下移量",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "bending",
+    "title": "双三角形铰链：弯曲刚度",
+    "group": "薄膜材料",
+    "scene": "bending",
+    "parameter": "edge_ke",
+    "values": [
+      0.01,
+      10.0
+    ],
+    "duration": 2.0,
+    "common": {
+      "dt": 0.004166666666666667,
+      "iterations": 20,
+      "edge_kd": 0.1,
+      "tri_ke": 10000.0
+    },
+    "question": "面内材料相同，二面角弯曲项怎样抵抗自由翼下垂？",
+    "expectation": "edge_ke 控制二面角弯曲；固定网格下比较，不把离散系数当作直接测得的真实材料模量。",
+    "metric": "自由翼下移量",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  },
+  {
+    "id": "stabilization",
+    "title": "初始关节误差：alpha",
+    "group": "刚体约束",
+    "scene": "joint",
+    "parameter": "rigid_avbd_alpha",
+    "values": [
+      0.0,
+      0.95
+    ],
+    "duration": 0.5,
+    "common": {
+      "dt": 0.008333333333333333,
+      "iterations": 15,
+      "joint_ke": 2000.0,
+      "joint_kd": 5.0,
+      "compliant": true,
+      "initial_offset": -0.03,
+      "gravity": false
+    },
+    "question": "相同初始错位，误差稳定化是否改变纠正速度？",
+    "expectation": "alpha 控制 C-alpha*C0 中的既存误差处理；它不是物理刚度。",
+    "metric": "关节平移误差",
+    "unit": "mm",
+    "guide_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html"
+  }
+]

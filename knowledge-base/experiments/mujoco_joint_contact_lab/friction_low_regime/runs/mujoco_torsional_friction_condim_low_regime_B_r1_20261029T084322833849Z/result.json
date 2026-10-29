@@ -1,0 +1,26 @@
+{
+  "case": "mujoco_torsional_friction_condim_low_regime",
+  "variant": "B",
+  "repeat": 1,
+  "run_id": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z",
+  "run_directory": "experiments/mujoco_joint_contact_lab/friction_low_regime/runs/mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z",
+  "status": "completed",
+  "started_at": "2026-10-29T08:43:22.837852+00:00",
+  "runner_sha256": "5618113797309194a7318b8501fcf6a52d64dbeffa3d33913f94e9c552805fd3",
+  "protocol_sha256": "7136df96193e18891909fbface417912db6bc724121f092cf328be9958dc272a",
+  "samples": 501,
+  "raw_sha256": "649592625aa1162d4acf42133a67b4bb2cc70bba9c9f45f0034a25e425c996e2",
+  "note": "Completion is not physical acceptance",
+  "finished_at": "2026-10-29T08:43:27.572684+00:00",
+  "files_sha256": {
+    "environment.json": "7433a8e146312db11c0f900510fe174263b7b721083eb73c36a4e1931cf7d915",
+    "installed-source-validation.json": "453ff6aac8be19bed1b8bbdf9b8c2e7d4f20cb7b7d3186219952e4708c8837e5",
+    "model.xml": "fea4ad2eef915f3188dc943b46d0552ef3dfb00e916500e44989ab7fba7e34d3",
+    "protocol.json": "7136df96193e18891909fbface417912db6bc724121f092cf328be9958dc272a",
+    "resolved-config.json": "bc4decc2277565281672e837680efeb6986389bc05524a724738af4e43c88a9d",
+    "run.log": "aaaf32b6ce25e219927272ef99a676523a6a6e3512affc035a43b615d076b8f7",
+    "runner.py": "5618113797309194a7318b8501fcf6a52d64dbeffa3d33913f94e9c552805fd3",
+    "scene.json": "54abe9ef82ed3aa580396793094fa2f1ca5723976066a87ba6c045ab421b5ae5",
+    "trajectory.npz": "649592625aa1162d4acf42133a67b4bb2cc70bba9c9f45f0034a25e425c996e2"
+  }
+}

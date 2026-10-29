@@ -1,0 +1,132 @@
+[
+  {
+    "id": "claim:kamino:backend_defaults",
+    "solver": "kamino",
+    "statement_zh": "Config 构造时按 PADMM/DVI 和 sparsity 解析 Jacobian、预条件与线性求解器默认值。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dynamics_solver",
+      "newton:1.7.0:kamino:config.sparse_jacobian",
+      "newton:1.7.0:kamino:config.dynamics.preconditioning",
+      "newton:1.7.0:kamino:config.dynamics.linear_solver_type"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 485,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L485"
+      }
+    ]
+  },
+  {
+    "id": "claim:kamino:padmm_controls",
+    "solver": "kamino",
+    "statement_zh": "PADMM 的 rho_0/eta、三种残差容差与最大迭代共同控制数值求解。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.padmm.rho_0",
+      "newton:1.7.0:kamino:config.padmm.eta",
+      "newton:1.7.0:kamino:config.padmm.max_iterations",
+      "newton:1.7.0:kamino:config.padmm.primal_tolerance",
+      "newton:1.7.0:kamino:config.padmm.dual_tolerance",
+      "newton:1.7.0:kamino:config.padmm.compl_tolerance"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 469,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L469"
+      }
+    ]
+  },
+  {
+    "id": "claim:kamino:dvi_controls",
+    "solver": "kamino",
+    "statement_zh": "DVI 外层交替迭代与单边投影 sweeps 是两层预算，不等同于 PADMM iterations。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+      "newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration",
+      "newton:1.7.0:kamino:config.dvi.omega"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 797,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L797"
+      }
+    ]
+  },
+  {
+    "id": "claim:kamino:stabilization",
+    "solver": "kamino",
+    "statement_zh": "alpha/beta/gamma 分别控制双边关节、单边限位、单边接触稳定化。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.constraints.alpha",
+      "newton:1.7.0:kamino:config.constraints.beta",
+      "newton:1.7.0:kamino:config.constraints.gamma",
+      "newton:1.7.0:kamino:config.constraints.delta"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 225,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L225"
+      }
+    ]
+  },
+  {
+    "id": "claim:kamino:diagnostics",
+    "solver": "kamino",
+    "statement_zh": "status 总是维护；collect_solver_info 控制额外统计而非 status 是否存在。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.collect_solver_info",
+      "newton:1.7.0:kamino:config.compute_solution_metrics"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "docs/solvers/kamino.rst",
+        "line": 125,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L125"
+      }
+    ]
+  },
+  {
+    "id": "claim:kamino:restrictions",
+    "solver": "kamino",
+    "statement_zh": "DVI 预条件、PADMM 自适应罚参数与稀疏设置受显式校验约束。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dynamics.preconditioning",
+      "newton:1.7.0:kamino:config.padmm.penalty_update_method",
+      "newton:1.7.0:kamino:config.sparse_dynamics"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 467,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L467"
+      }
+    ]
+  }
+]

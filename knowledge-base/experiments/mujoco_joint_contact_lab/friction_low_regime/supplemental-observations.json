@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "7136df96193e18891909fbface417912db6bc724121f092cf328be9958dc272a",
+  "frozen_at_utc": "2026-10-29T08:41:21.164670+00:00",
+  "status": "supplemental_prespecified_observation_not_physical_acceptance_gate",
+  "reason": "Root approved after protocol freeze but before any formal low-regime runs. Does not alter frozen thresholds.",
+  "early_window_s": 0.02,
+  "saturation_utilization_min": 0.98,
+  "saturation_utilization_max": 1.00001,
+  "suggested_count_min": 10,
+  "applies_to": "both sliding variants and torsional B; torsional A inactive component excluded"
+}

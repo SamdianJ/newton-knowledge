@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "kamino-pd-unsaturated-tracking-1.0",
+  "status": "frozen_before_runs",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "device": "cpu",
+  "scene": {
+    "world_count": 1,
+    "body_count": 1,
+    "mass_kg": 1,
+    "inertia_com_kg_m2": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "com_in_body_m": [
+      0,
+      0,
+      0
+    ],
+    "effective_joint_inertia_kg_m2": 1,
+    "lock_inertia": true,
+    "joint": "world-to-body revolute Y at origin",
+    "geometry": "analytical rigid rotor with explicitly assigned inertia; no collision geometry",
+    "gravity": [
+      0,
+      0,
+      0
+    ],
+    "armature": 0,
+    "joint_damping": 0,
+    "joint_friction": 0,
+    "initial_joint_q_rad": 0,
+    "initial_joint_qd_rad_s": 0,
+    "joint_limits": "unbounded",
+    "kp_Nm_per_rad": 25,
+    "kd_Nm_s_per_rad": 10,
+    "effort_limit_Nm": 10,
+    "external_joint_force_Nm": 0
+  },
+  "solver": {
+    "dynamics_solver": "padmm",
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": false,
+    "use_fk_solver": false,
+    "integrator": "euler",
+    "angular_velocity_damping": 0,
+    "constraints": {
+      "preconditioning": true
+    },
+    "padmm": {
+      "use_graph_conditionals": false,
+      "max_iterations": 200,
+      "use_acceleration": true,
+      "warmstart_mode": "containers",
+      "primal_tolerance": 1e-07,
+      "dual_tolerance": 1e-07,
+      "compl_tolerance": 1e-07
+    }
+  },
+  "run": {
+    "dt_s": 0.005,
+    "steps": 800,
+    "duration_s": 4,
+    "repeats": 2,
+    "processes": "two independent OS processes for each case/variant",
+    "sampling": "t0 and every post-step state; command for step n evaluated at t_n=n*dt then held for that solve; command arrays indexed by n have 800 rows, state/status arrays have 801 rows",
+    "repeat_tolerance": {
+      "pose_atol": 1e-05,
+      "velocity_atol": 0.0001,
+      "rtol": 1e-05
+    },
+    "finite_policy": "all physical and command samples finite including t0; all post-step statuses finite; only status sample0 may contain constructor placeholders",
+    "timing": "diagnostic only, no performance comparison"
+  },
+  "reference": {
+    "equations": "With I=1, h=dt, D=I+h*kd+h*h*kp: v_next=(I*v+h*(kp*(qref-q)+kd*vref_used))/D; q_next=q+h*v_next; tau=I*(v_next-v)/h. POSITION uses vref_used=0 even when a nonzero target_qd is supplied; POSITION_VELOCITY uses supplied target_qd. Formula is unsaturated and is not clipped; force-margin acceptance must independently validate that assumption.",
+    "derivation": "Backward evaluation of spring displacement and damping: tau=kp*(qref-q-h*v_next)+kd*(vref_used-v_next); I*(v_next-v)=h*tau. This equals bounded effort row interior with m_a=h*kd+h*h*kp, not continuous-PD forward Euler.",
+    "implementation": "Independent float64 scalar recurrence in analyzer, no Newton imports. Derive I from archived COM inertia/mass/COM using parallel-axis theorem. Save reference.npz per run as analysis output, separate from raw simulation NPZ.",
+    "body_reference": "Expected body position stays at origin; quaternion represents rotation about Y, angle independently recovered using 2*atan2(qy,qw), no wrap within these targets. Compare this body angle to joint_q and scalar reference."
+  },
+  "common_criteria": {
+    "joint_position_reference_max_abs_rad": 0.0005,
+    "joint_velocity_reference_max_abs_rad_s": 0.001,
+    "reported_effort_reference_max_abs_Nm": 0.002,
+    "applied_wrench_reference_max_abs_Nm": 0.002,
+    "reported_vs_applied_max_abs_Nm": 0.0001,
+    "minimum_effort_margin_Nm": 4,
+    "reference_minimum_effort_margin_Nm": 4,
+    "joint_anchor_origin_max_norm_m": 1e-05,
+    "joint_vs_body_angle_max_abs_rad": 1e-05,
+    "body_quaternion_norm_max_abs_error": 1e-05,
+    "joint_position_max_abs_rad": 0.2,
+    "joint_velocity_max_abs_rad_s": 1,
+    "actual_drive_path": [
+      2
+    ],
+    "finite": true
+  },
+  "criteria_rationale": "q/v reference thresholds are 0.5% of 0.1rad and 0.3% of the sinusoidal peak target velocity. 0.002Nm is 0.02% of effort limit and rejects wrong mode/sign/implicit denominator. Margin >=4Nm means all outputs stay <=60% of the 10Nm finite limit; the reference is un-clipped and must also meet it. Body at COM avoids translation drift confounding scalar dynamics. Stability envelope 0.2rad/1rad/s is broader than inputs but rejects runaway. Tolerances are frozen before simulation and are not convergence residual thresholds.",
+  "cases": [
+    {
+      "id": "kamino_pd_unsaturated_step_reversal",
+      "title": "非饱和隐式PD：正负位置目标与中途反向",
+      "variants": {
+        "A": {
+          "target_mode": "POSITION",
+          "schedule": "step_reversal",
+          "sign": 1
+        },
+        "B": {
+          "target_mode": "POSITION",
+          "schedule": "step_reversal",
+          "sign": -1
+        }
+      },
+      "schedule": "qref=sign*0.1rad for step0..399; qref=-sign*0.1rad for step400..799; target_qd=0 throughout",
+      "criteria": {
+        "segment_end_error_max_abs_rad": 0.002,
+        "segment_end_velocity_max_abs_rad_s": 0.01,
+        "mirrored_q_max_abs_sum_rad": 1e-05,
+        "mirrored_v_max_abs_sum_rad_s": 0.0001,
+        "segment_constant_target_energy_max_positive_increment_J": 1e-05
+      },
+      "metric_definitions": "Endpoint samples400 and800 compared with the target held during preceding step. Within each constant-target segment E=.5*I*v^2+.5*kp*(q-target)^2 must not increase by >1e-5J per step; exclude the target-jump pair400->401 from this check. Mirrored A/B trajectories q and v must sum to zero within stated tolerances.",
+      "rationale": "kp25 kd10 I1 gives critically damped continuous limit with 0.2s time scale; 2s dwell leaves ample room for 2% endpoint accuracy while the entire transient still must match the implicit recurrence. Target reversal checks sign, memory and nonzero state response.",
+      "limitations": [
+        "Single critically damped gain setting and fixed dt, not universal PD tuning",
+        "Mirror comparison is symmetry evidence; scalar recurrence supplies independent correctness evidence"
+      ]
+    },
+    {
+      "id": "kamino_pd_unsaturated_sine_modes",
+      "title": "动态目标与速度参考语义：POSITION_VELOCITY 对 POSITION",
+      "variants": {
+        "A": {
+          "target_mode": "POSITION_VELOCITY",
+          "schedule": "sine",
+          "sign": 1
+        },
+        "B": {
+          "target_mode": "POSITION",
+          "schedule": "sine",
+          "sign": 1
+        }
+      },
+      "schedule": "For step n at t=n*dt, qref=.1*sin(pi*t)rad and supplied target_qd=.1*pi*cos(pi*t)rad/s in BOTH variants; POSITION must ignore this velocity reference while retaining kd damping.",
+      "criteria": {
+        "steady_target_rmse_A_max_rad": 0.03,
+        "steady_target_rmse_B_max_rad": 0.08,
+        "steady_rmse_relative_improvement_A_min": 0.3
+      },
+      "metric_definitions": "Tracking RMS uses state samples401..800 versus command samples400..799 (target held for corresponding step), one complete final period after 2s startup. Relative improvement=1-rmse_A/rmse_B. Report full-run tracking RMS and peak error as secondary metrics; every sample still must match its mode-specific independent recurrence.",
+      "rationale": "At 0.5Hz below the natural frequency 5rad/s, using consistent velocity reference should reduce tracking lag. Bounds .03/.08rad and >=30% relative improvement are intentionally looser than the continuous transfer-function estimates (~.02/.067rad RMS), but actual acceptance is against the discrete reference and frozen absolute gates.",
+      "limitations": [
+        "One smooth frequency/amplitude only; no claim of arbitrary-bandwidth tracking",
+        "Comparison tests target-mode semantics, not solver backend ranking"
+      ]
+    }
+  ],
+  "convergence_diagnostics": {
+    "physical_acceptance_separate": true,
+    "capture": [
+      "converged",
+      "iterations",
+      "r_p",
+      "r_d",
+      "r_c"
+    ],
+    "report": "post-step converged fraction, iteration max/distribution, max and terminal residuals; report exact frozen 1e-7 thresholds and 200 budget. Also compute whether all post-step statuses converged as a separate diagnostic boolean; it does not decide physical acceptance.",
+    "interpretation": "No claim of solver convergence solely from trajectory agreement. No claim of numerical floor or root cause from residual magnitude. Initial status0 is not a solved dynamics result."
+  },
+  "provenance": "Every attempt gets a new run ID; retain failures, raw NPZ, resolved configs, protocol and runner copies plus SHA256, logs, source-lock SHA and all 809 installed locked Python source SHA checks. No selecting favorable repeat or widening thresholds. Pure harness fixes require parent approval and new runner hash; physical revisions need a newly frozen protocol.",
+  "source_refs": [
+    {
+      "path": "newton/_src/solvers/kamino/_src/kinematics/joints.py",
+      "line": 1033
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+      "line": 1999
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/kinematics/constraints.py",
+      "line": 400
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/integrators/euler.py",
+      "line": 45
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/dynamics/wrenches.py",
+      "line": 334
+    },
+    {
+      "path": "newton/_src/solvers/kamino/solver_kamino.py",
+      "line": 276
+    }
+  ],
+  "limitations": [
+    "Newton1.7.0 pinned commit only, CPU singleworld dense PADMM",
+    "No contacts/gravity/armature/friction or translation eccentricity",
+    "Only bounded implicit PD interior; saturation and runtime limit changes belong to separate experiments",
+    "Private state/config reads are observational instrumentation, not supported user API"
+  ],
+  "frozen_at_utc": "2026-10-29T06:38:01.989182+00:00",
+  "reviewed_by": "root: source equations, observable distinctions, independent-reference gates and no post-run threshold changes"
+}

@@ -1,0 +1,633 @@
+{
+  "date": "2026-10-27",
+  "newton_version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "status": "passed",
+  "checks": [
+    {
+      "check": "official source HEAD matches pinned commit",
+      "passed": true
+    },
+    {
+      "check": "official source snapshot has no working-tree edits",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/vbd/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/vbd/interval_arithmetic.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/vbd/tri_mesh_collision.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/vbd/vbd_coupling_kernels.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/geometry/tri_mesh_collision.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/solvers/solver.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/sim/model.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "source hash docs/solvers/vbd.rst",
+      "passed": true
+    },
+    {
+      "check": "source hash docs/concepts/simulation_tuning_vbd.rst",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/tests/test_solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/tests/test_solver_vbd_contact_force.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/tests/test_vbd_interval_arithmetic.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/examples/multiphysics/example_vbd_dat_rigid_soft.py",
+      "passed": true
+    },
+    {
+      "check": "source hash newton/examples/multiphysics/example_mujoco_vbd_coupled_solver.py",
+      "passed": true
+    },
+    {
+      "check": "source hash LICENSE.md",
+      "passed": true
+    },
+    {
+      "check": "paper hash paper:vbd2024",
+      "passed": true
+    },
+    {
+      "check": "paper hash paper:avbd2025",
+      "passed": true
+    },
+    {
+      "check": "paper hash paper:dat2026",
+      "passed": true
+    },
+    {
+      "check": "all constructor inputs preserved in original order, including model",
+      "passed": true
+    },
+    {
+      "check": "every parameter has source documentation",
+      "passed": true
+    },
+    {
+      "check": "every parameter has Chinese interpretation and default-resolution field",
+      "passed": true
+    },
+    {
+      "check": "no fabricated empirical universal tuning ranges",
+      "passed": true
+    },
+    {
+      "check": "graph node IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "source symbol IDs distinguish property getters/setters",
+      "passed": true
+    },
+    {
+      "check": "graph has no dangling edges",
+      "passed": true
+    },
+    {
+      "check": "source anchors inspected recursively",
+      "passed": true
+    },
+    {
+      "check": "authored Markdown relative file links resolve: []",
+      "passed": true
+    },
+    {
+      "check": "Markdown contains no escaped-formula control characters",
+      "passed": true
+    },
+    {
+      "check": "curated retrieval smoke cases hit expected evidence in top 8",
+      "passed": true
+    },
+    {
+      "check": "retrieval rejects an unindexed Newton version",
+      "passed": true
+    },
+    {
+      "check": "executed CPU probe solver file matches source snapshot",
+      "passed": true
+    },
+    {
+      "check": "four recorded CPU probe groups passed",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "source_refs_checked": 3916,
+  "counts": {
+    "constructor_inputs": 48,
+    "optional_parameters": 47,
+    "source_symbols": 472,
+    "claims": 22,
+    "graph_nodes": 586,
+    "graph_edges": 265
+  },
+  "retrieval": {
+    "passed": 24,
+    "total": 24,
+    "top_k": 8,
+    "kind": "hand-authored smoke cases, not independent semantic QA benchmark",
+    "cases": [
+      {
+        "id": "q01",
+        "query": "rigid_compliant_alm 在 1.7.0 省略是什么模式",
+        "expected_any": [
+          "newton:1.7.0:SolverVBD:rigid_compliant_alm",
+          "c:alm_mode"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:rigid_compliant_alm",
+          "c:alm_mode",
+          "c:alm_math",
+          "c:attachment",
+          "lab:rigid_mode",
+          "module:selection",
+          "newton:1.7.0:SolverVBD:rigid_contact_hard",
+          "newton:1.7.0:SolverVBD:rigid_avbd_alpha"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q02",
+        "query": "rigid_avbd_alpha None 默认是否依赖模式",
+        "expected_any": [
+          "newton:1.7.0:SolverVBD:rigid_avbd_alpha"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:rigid_avbd_alpha",
+          "diag:coupling",
+          "newton:1.7.0:SolverVBD:rigid_joint_linear_k_start",
+          "newton:1.7.0:SolverVBD:rigid_avbd_joint_alpha",
+          "newton:1.7.0:SolverVBD:rigid_avbd_contact_alpha",
+          "model:mujoco:shape_material_kd",
+          "model:mujoco:shape_material_ke",
+          "newton:1.7.0:SolverVBD:collision_frequency"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q03",
+        "query": "particle_self_contact_margin 不传 gap",
+        "expected_any": [
+          "c:margin",
+          "newton:1.7.0:SolverVBD:particle_self_contact_margin"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:particle_self_contact_margin",
+          "exp:margin_compatibility",
+          "c:margin",
+          "newton:1.7.0:SolverVBD:particle_self_contact_radius",
+          "lab:self_margin",
+          "model:mujoco:shape_gap",
+          "newton:1.7.0:kamino:config.collision_detector.default_gap",
+          "exp:constructor_guards"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q04",
+        "query": "rigid_contact_stick_motion_eps 为什么没效果",
+        "expected_any": [
+          "c:ignored",
+          "newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps",
+          "c:ignored",
+          "model:mujoco:shape_material_kd",
+          "newton:1.7.0:mujoco:enable_multiccd",
+          "page:solvers/vbd/papers.md",
+          "lab:dat",
+          "page:solvers/mujoco/experiments.md",
+          "page:solvers/vbd/parameters.md"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q05",
+        "query": "friction_epsilon 是摩擦系数吗",
+        "expected_any": [
+          "c:friction",
+          "newton:1.7.0:SolverVBD:friction_epsilon"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:friction_epsilon",
+          "c:friction",
+          "model:soft_contact_mu",
+          "diagnostic:mujoco:2",
+          "model:shape_material_mu",
+          "model:mujoco:shape_material_mu_rolling",
+          "model:mujoco:shape_material_mu_torsional",
+          "newton:1.7.0:mujoco:impratio"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q06",
+        "query": "rigid_soft_enable_dat 能使用外部刚体 solver 吗",
+        "expected_any": [
+          "c:rigid_dat_requires",
+          "newton:1.7.0:SolverVBD:rigid_soft_enable_dat"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+          "newton:1.7.0:mujoco:solver",
+          "c:external",
+          "c:rigid_dat_requires",
+          "diagnostic:kamino:4",
+          "newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver",
+          "topic:coupling",
+          "claim:mujoco:contact_source"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q07",
+        "query": "integrate_with_external_rigid_solver 是否自动双向耦合",
+        "expected_any": [
+          "c:external",
+          "newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver",
+          "c:external",
+          "diag:coupling",
+          "topic:coupling",
+          "concept:coupling",
+          "recipe:coupled-rigid-deformable",
+          "c:attachment",
+          "model:mujoco:mujoco.condim"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q08",
+        "query": "DISTANCE joint_armature 不支持",
+        "expected_any": [
+          "c:support",
+          "capabilities:VBD:1.7.0"
+        ],
+        "returned_ids": [
+          "model:kamino:joint_armature",
+          "model:mujoco:joint_armature",
+          "c:support",
+          "capabilities:VBD:1.7.0",
+          "c:attachment",
+          "symbol:newton.ModelBuilder.joint_armature",
+          "pipeline:enable_rigid_soft_full_surface_contact",
+          "symbol:newton.Model.joint_armature"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q09",
+        "query": "CONTACT_F 是否包含软体自接触力",
+        "expected_any": [
+          "c:observable",
+          "capabilities:VBD:1.7.0"
+        ],
+        "returned_ids": [
+          "c:observable",
+          "model:particle_radius",
+          "newton:1.7.0:SolverVBD:rigid_soft_contact_use_log_barrier",
+          "newton:1.7.0:SolverVBD:particle_enable_self_contact",
+          "concept:sensors",
+          "diag:coupling",
+          "module:sensors",
+          "concept:solver-observables"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q10",
+        "query": "particle_vertex_contact_buffer_size 满了会怎样",
+        "expected_any": [
+          "newton:1.7.0:SolverVBD:particle_vertex_contact_buffer_size",
+          "c:capacity"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:particle_vertex_contact_buffer_size",
+          "c:capacity",
+          "lab:bending",
+          "lab:dat_relaxation",
+          "page:solvers/vbd/paper-code-map.md",
+          "page:solvers/mujoco/experiments.md",
+          "page:solvers/vbd/parameters.md",
+          "symbol:newton.solvers.SolverVBD"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q11",
+        "query": "tile CPU 改变材料 重建 solver",
+        "expected_any": [
+          "c:tile",
+          "newton:1.7.0:SolverVBD:particle_enable_tile_solve"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:mujoco:solver",
+          "c:tile",
+          "newton:1.7.0:SolverVBD:particle_enable_tile_solve",
+          "diag:soft",
+          "lab:damping",
+          "lab:friction",
+          "lab:iterations",
+          "lab:membrane"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q12",
+        "query": "rigid_contact_history matching disabled",
+        "expected_any": [
+          "c:history",
+          "newton:1.7.0:SolverVBD:rigid_contact_history"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:rigid_contact_history",
+          "c:history",
+          "symbol:newton.Contacts.contact_matching_mode",
+          "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._snapshot_rigid_contact_history@L2799",
+          "newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps",
+          "symbol:newton.CollisionPipeline",
+          "c:reset",
+          "diag:reset"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q13",
+        "query": "compliant ALM k_eff rho K 材料刚度",
+        "expected_any": [
+          "c:alm_math",
+          "map:compliant"
+        ],
+        "returned_ids": [
+          "c:alm_math",
+          "newton:1.7.0:kamino:config.padmm.rho_0",
+          "newton:1.7.0:SolverVBD:rigid_joint_linear_ke",
+          "newton:1.7.0:SolverVBD:rigid_avbd_beta",
+          "c:alm_mode",
+          "map:compliant",
+          "c:dual",
+          "newton:1.7.0:SolverVBD:rigid_compliant_alm"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q14",
+        "query": "F^T F 客观阻尼 Rayleigh",
+        "expected_any": [
+          "c:damping",
+          "doc:theory:4"
+        ],
+        "returned_ids": [
+          "c:damping",
+          "model:tet_materials",
+          "symbol:newton.Control.joint_f",
+          "map:elastic",
+          "symbol:newton.math.transform_wrench",
+          "page:solvers/vbd/theory.md",
+          "page:solvers/vbd/papers.md",
+          "model:soft_contact_kd"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q15",
+        "query": "tet_materials 单位 mu lambda damping",
+        "expected_any": [
+          "model:tet_materials"
+        ],
+        "returned_ids": [
+          "model:tet_materials",
+          "symbol:newton.Model.tet_materials",
+          "model:shape_material_mu",
+          "model:soft_contact_mu",
+          "model:mujoco:shape_material_mu",
+          "symbol:newton.ModelBuilder.tet_materials",
+          "model:spring_damping",
+          "model:mujoco:joint_damping"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q16",
+        "query": "隐式积分 spring 解析验证",
+        "expected_any": [
+          "exp:implicit_spring",
+          "map:variational",
+          "c:implicit"
+        ],
+        "returned_ids": [
+          "map:variational",
+          "c:implicit",
+          "model:spring_damping",
+          "solver:featherstone",
+          "diagnostic:kamino:5",
+          "solver:semi-implicit",
+          "model:spring_stiffness",
+          "newton:1.7.0:SolverVBD:model"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q17",
+        "query": "DAT 平面 截断 论文 公式",
+        "expected_any": [
+          "map:dat",
+          "c:dat"
+        ],
+        "returned_ids": [
+          "map:dat",
+          "c:dat",
+          "newton:1.7.0:SolverVBD:dat_conservative_bound_relaxation",
+          "c:damping",
+          "c:alm_math",
+          "newton:1.7.0:SolverVBD:rigid_soft_dat_use_interval_arithmetic",
+          "lab:dat_relaxation",
+          "newton:1.7.0:SolverVBD:rigid_soft_enable_dat"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q18",
+        "query": "复位 reset_contact_matching 历史",
+        "expected_any": [
+          "c:reset",
+          "diag:reset"
+        ],
+        "returned_ids": [
+          "c:reset",
+          "diag:reset",
+          "symbol:newton.CollisionPipeline.reset_contact_matching",
+          "c:step",
+          "recipe:masked-reset-state-history",
+          "topic:worlds-batching",
+          "newton:1.7.0:SolverVBD:rigid_avbd_gamma",
+          "stage:solver_step"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q19",
+        "query": "抓取滑落 摩擦 夹紧",
+        "expected_any": [
+          "diag:slip"
+        ],
+        "returned_ids": [
+          "diag:slip",
+          "diagnostic:mujoco:2",
+          "page:solvers/vbd/diagnostics.md",
+          "c:attachment",
+          "page:solvers/mujoco/diagnostics.md",
+          "model:soft_contact_mu",
+          "c:friction",
+          "model:mujoco:mujoco.condim"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q20",
+        "query": "collision_frequency_type AUTO PRE_POST_INIT",
+        "expected_any": [
+          "c:schedule",
+          "newton:1.7.0:SolverVBD:collision_frequency_type"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:collision_frequency_type",
+          "c:schedule",
+          "newton:1.7.0:SolverVBD:particle_collision_detection_interval",
+          "newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+          "code:1.7.0:newton/_src/solvers/solver.py::SolverBase.collision_frequency_type@L619",
+          "code:1.7.0:newton/_src/solvers/solver.py::SolverBase._default_collision_frequency_type@L677",
+          "code:1.7.0:newton/_src/solvers/solver.py::SolverBase._resolved_collision_frequency_type@L683",
+          "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._default_collision_frequency_type@L4690"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q21",
+        "query": "rigid_avbd_beta body-particle legacy",
+        "expected_any": [
+          "c:legacy",
+          "newton:1.7.0:SolverVBD:rigid_avbd_beta"
+        ],
+        "returned_ids": [
+          "newton:1.7.0:SolverVBD:rigid_avbd_beta",
+          "c:legacy",
+          "newton:1.7.0:SolverVBD:rigid_avbd_linear_beta",
+          "newton:1.7.0:SolverVBD:rigid_contact_k_start",
+          "exp:constructor_guards",
+          "newton:1.7.0:SolverVBD:rigid_avbd_angular_beta",
+          "newton:1.7.0:SolverVBD:rigid_joint_angular_k_start",
+          "newton:1.7.0:SolverVBD:rigid_joint_linear_k_start"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q22",
+        "query": "attachment 外部刚体 不允许",
+        "expected_any": [
+          "c:attachment",
+          "c:external"
+        ],
+        "returned_ids": [
+          "c:attachment",
+          "c:external",
+          "topic:coupling",
+          "concept:coupling",
+          "newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver",
+          "symbol:newton.ModelBuilder.attachment_particle_body_enabled",
+          "symbol:newton.Model.attachment_particle_body_stiffness",
+          "symbol:newton.ModelBuilder.attachment_particle_body_stiffness"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q23",
+        "query": "tri_materials 薄膜 厚度 单位",
+        "expected_any": [
+          "model:tri_materials"
+        ],
+        "returned_ids": [
+          "model:tri_materials",
+          "symbol:newton.ModelBuilder.tri_materials",
+          "symbol:newton.Model.tri_materials",
+          "map:elastic",
+          "newton:1.7.0:SolverVBD:particle_edge_parallel_epsilon",
+          "lab:membrane",
+          "page:solvers/vbd/model-inputs.md",
+          "model:soft_contact_kd"
+        ],
+        "passed": true
+      },
+      {
+        "id": "q24",
+        "query": "AVBD Algorithm 1 warm starting gamma",
+        "expected_any": [
+          "map:legacy",
+          "paper:avbd2025",
+          "doc:papers:2"
+        ],
+        "returned_ids": [
+          "map:legacy",
+          "newton:1.7.0:SolverVBD:rigid_avbd_gamma",
+          "newton:1.7.0:SolverVBD:rigid_avbd_contact_alpha",
+          "newton:1.7.0:kamino:config.padmm.contact_warmstart_method",
+          "newton:1.7.0:kamino:config.padmm.warmstart_scale",
+          "claim:kamino:stabilization",
+          "newton:1.7.0:SolverVBD:rigid_avbd_alpha",
+          "newton:1.7.0:SolverVBD:rigid_avbd_joint_alpha"
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "physics": "four narrow CPU behavioral groups; see experiments/results.cpu.json; not full upstream suite or real2sim validation"
+}

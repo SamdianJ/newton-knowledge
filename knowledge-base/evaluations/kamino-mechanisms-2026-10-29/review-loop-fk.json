@@ -1,0 +1,258 @@
+{
+  "reviewer": "kamino_backends independent cross-review",
+  "status": "passed_measurement_review_physical_failure_confirmed",
+  "checks": [
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_fk-A-r1-20261029T051127236829Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_fk-A-r1-20261029T051127236829Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_fk-A-r1-20261029T051127236829Z",
+      "passed": true
+    },
+    {
+      "check": "independent parallelogram corner construction kamino_fourbar_fk-A-r1-20261029T051127236829Z",
+      "passed": true
+    },
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_fk-A-r2-20261029T051205653442Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_fk-A-r2-20261029T051205653442Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_fk-A-r2-20261029T051205653442Z",
+      "passed": true
+    },
+    {
+      "check": "independent parallelogram corner construction kamino_fourbar_fk-A-r2-20261029T051205653442Z",
+      "passed": true
+    },
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_fk-B-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_fk-B-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_fk-B-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "independent parallelogram corner construction kamino_fourbar_fk-B-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_fk-B-r2-20261029T051205659625Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_fk-B-r2-20261029T051205659625Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_fk-B-r2-20261029T051205659625Z",
+      "passed": true
+    },
+    {
+      "check": "independent parallelogram corner construction kamino_fourbar_fk-B-r2-20261029T051205659625Z",
+      "passed": true
+    },
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_loop_dynamics-A-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_loop_dynamics-A-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_loop_dynamics-A-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "exact 120 integrated samples and physical duration kamino_fourbar_loop_dynamics-A-r1-20261029T051205652445Z",
+      "passed": true
+    },
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_loop_dynamics-A-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_loop_dynamics-A-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_loop_dynamics-A-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "exact 120 integrated samples and physical duration kamino_fourbar_loop_dynamics-A-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_loop_dynamics-B-r1-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_loop_dynamics-B-r1-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_loop_dynamics-B-r1-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "exact 120 integrated samples and physical duration kamino_fourbar_loop_dynamics-B-r1-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "actual archived frames match published retained gap kamino_fourbar_loop_dynamics-B-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_fourbar_loop_dynamics-B-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "frozen protocol kamino_fourbar_loop_dynamics-B-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "exact 120 integrated samples and physical duration kamino_fourbar_loop_dynamics-B-r2-20261029T051221214198Z",
+      "passed": true
+    },
+    {
+      "check": "open-chain retained-joint physical failure reproduced, not virtual-loop-only",
+      "passed": true
+    },
+    {
+      "check": "all eight completed formal runs independently reviewed",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "kamino_fourbar_fk-A-r1-20261029T051127236829Z",
+      "case_id": "kamino_fourbar_fk",
+      "variant": "A",
+      "max_retained_gap_m": 4.686061020535994e-08,
+      "worst_sample": 2,
+      "worst_joint_index": 2,
+      "worst_time_or_query": 2.0,
+      "fixed_base_rotation_max_rad": 0.0,
+      "quaternion_norm_error_max": 7.438559368466713e-08,
+      "independent_corner_reference_max_error_m": 5.314056796265019e-08
+    },
+    {
+      "run_id": "kamino_fourbar_fk-A-r2-20261029T051205653442Z",
+      "case_id": "kamino_fourbar_fk",
+      "variant": "A",
+      "max_retained_gap_m": 4.686061020535994e-08,
+      "worst_sample": 2,
+      "worst_joint_index": 2,
+      "worst_time_or_query": 2.0,
+      "fixed_base_rotation_max_rad": 0.0,
+      "quaternion_norm_error_max": 7.438559368466713e-08,
+      "independent_corner_reference_max_error_m": 5.314056796265019e-08
+    },
+    {
+      "run_id": "kamino_fourbar_fk-B-r1-20261029T051205652445Z",
+      "case_id": "kamino_fourbar_fk",
+      "variant": "B",
+      "max_retained_gap_m": 1.6137770392824767e-07,
+      "worst_sample": 2,
+      "worst_joint_index": 2,
+      "worst_time_or_query": 2.0,
+      "fixed_base_rotation_max_rad": 0.0,
+      "quaternion_norm_error_max": 3.021308723205607e-07,
+      "independent_corner_reference_max_error_m": 1.8932562297331978e-07
+    },
+    {
+      "run_id": "kamino_fourbar_fk-B-r2-20261029T051205659625Z",
+      "case_id": "kamino_fourbar_fk",
+      "variant": "B",
+      "max_retained_gap_m": 1.6137770392824767e-07,
+      "worst_sample": 2,
+      "worst_joint_index": 2,
+      "worst_time_or_query": 2.0,
+      "fixed_base_rotation_max_rad": 0.0,
+      "quaternion_norm_error_max": 3.021308723205607e-07,
+      "independent_corner_reference_max_error_m": 1.8932562297331978e-07
+    },
+    {
+      "run_id": "kamino_fourbar_loop_dynamics-A-r1-20261029T051205652445Z",
+      "case_id": "kamino_fourbar_loop_dynamics",
+      "variant": "A",
+      "max_retained_gap_m": 0.007314825622503669,
+      "worst_sample": 76,
+      "worst_joint_index": 3,
+      "worst_time_or_query": 0.31666666666666665,
+      "fixed_base_rotation_max_rad": 2.4575624618635555e-07,
+      "quaternion_norm_error_max": 6.249191821794398e-07,
+      "max_angular_speed_rad_s": 64.55066680908203
+    },
+    {
+      "run_id": "kamino_fourbar_loop_dynamics-A-r2-20261029T051221214198Z",
+      "case_id": "kamino_fourbar_loop_dynamics",
+      "variant": "A",
+      "max_retained_gap_m": 0.007314825622503669,
+      "worst_sample": 76,
+      "worst_joint_index": 3,
+      "worst_time_or_query": 0.31666666666666665,
+      "fixed_base_rotation_max_rad": 2.4575624618635555e-07,
+      "quaternion_norm_error_max": 6.249191821794398e-07,
+      "max_angular_speed_rad_s": 64.55066680908203
+    },
+    {
+      "run_id": "kamino_fourbar_loop_dynamics-B-r1-20261029T051221214198Z",
+      "case_id": "kamino_fourbar_loop_dynamics",
+      "variant": "B",
+      "max_retained_gap_m": 0.00011920335146455806,
+      "worst_sample": 120,
+      "worst_joint_index": 1,
+      "worst_time_or_query": 0.5,
+      "fixed_base_rotation_max_rad": 0.0,
+      "quaternion_norm_error_max": 2.8205852697915645e-07,
+      "max_angular_speed_rad_s": 8.009322166442871
+    },
+    {
+      "run_id": "kamino_fourbar_loop_dynamics-B-r2-20261029T051221214198Z",
+      "case_id": "kamino_fourbar_loop_dynamics",
+      "variant": "B",
+      "max_retained_gap_m": 0.00011920335146455806,
+      "worst_sample": 120,
+      "worst_joint_index": 1,
+      "worst_time_or_query": 0.5,
+      "fixed_base_rotation_max_rad": 0.0,
+      "quaternion_norm_error_max": 2.8205852697915645e-07,
+      "max_angular_speed_rad_s": 8.009322166442871
+    }
+  ],
+  "findings": [],
+  "conclusions": [
+    "Actual archived parent/child joint frames reconstruct the same 7.3148mm open-chain retained-joint drift. It is not caused by using the omitted virtual closure edge, an incorrect body index, or nominal-anchor mismatch.",
+    "add_link com=None is defined as body origin, shapes have density=0 and lock_inertia=True. No hidden COM translation enters pose-to-anchor conversion.",
+    "FK analytic positions follow four-bar corners, positive Y rotation, side-center half-height and top-center full-height. Saved joint_q_start offsets and [theta,-theta,theta,-theta] are consistent with the directed hinges.",
+    "Open and closed dynamics cover the same 0.5s with constant 0.02Nm active torque and gravity, no contacts. Angular velocities and the semi-implicit maximal-coordinate pose update make timestep refinement a justified diagnostic, but the cause is an inference until refinement is measured.",
+    "Do not replace or label the original failed structural pair as passed. New timesteps need their own frozen protocol and run IDs; same duration/model/torque and original 0.5mm gate allow a convergence study without threshold relaxation."
+  ],
+  "source_evidence": [
+    "newton/_src/sim/builder.py:5301-5347 (com=None and lock_inertia)",
+    "newton/_src/solvers/kamino/_src/integrators/euler.py:45-81 (semi-implicit update)",
+    "archived per-run scene.json joint_parent/child/joint_X_p/joint_X_c"
+  ],
+  "reviewed_program_sha256": {
+    "run_experiment.py": "c6e1b4622ab4fa6771233c030328f634161e9374c0f02adfb829c9005c19c9cb",
+    "analyze_experiments.py": "1486700bfbeb8ea15c13e0e485912aac8e5e98110a76ae8b709f09451b042f29"
+  },
+  "protocol_sha256": "9f84bd8d778405f698db1bb1a08dba90666ecce6e6458f4a35ecaa2fec28b13a"
+}

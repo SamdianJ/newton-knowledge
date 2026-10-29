@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-27",
+  "device": "cpu",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "newton": "1.7.0",
+  "warp": "1.18.0",
+  "numpy": "2.5.4",
+  "installed_solver_sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+  "solver_matches_pinned_snapshot": true,
+  "tests": [
+    {
+      "id": "exp:default_modes",
+      "status": "passed",
+      "details": {
+        "omitted_mode": false,
+        "omitted_alpha": 0.95,
+        "compliant_alpha": 0.0,
+        "warnings": [
+          "Omitting rigid_compliant_alm is deprecated as of Newton 1.6 because the default will change from the legacy penalty/AVBD path (False) to unified compliant ALM (True), which is becoming the standard for rigid VBD. The legacy path is deprecated and will be removed in a future release. Pass rigid_compliant_alm=True to adopt compliant ALM now, or rigid_compliant_alm=False to keep the legacy path during the migration window."
+        ]
+      }
+    },
+    {
+      "id": "exp:margin_compatibility",
+      "status": "passed",
+      "details": {
+        "new_margin": 0.005,
+        "gap": 0.005,
+        "query_radius": 0.01,
+        "margin_only_error": "particle_self_contact_margin is smaller than the legacy interaction radius 0.2; this would miss contacts. Pass particle_self_contact_gap explicitly to use the new margin + gap convention."
+      }
+    },
+    {
+      "id": "exp:implicit_spring",
+      "status": "passed",
+      "details": {
+        "dt": 0.01,
+        "mass": 1.0,
+        "stiffness": 100.0,
+        "rest_length": 1.0,
+        "initial_x": 1.2,
+        "expected_implicit_euler_x": 1.198019801980198,
+        "actual_x": 1.1980198621749878,
+        "absolute_error": 6.019478981933446e-08,
+        "contact": false,
+        "scope": "single linearized 1D spring step only"
+      }
+    },
+    {
+      "id": "exp:constructor_guards",
+      "status": "passed",
+      "details": [
+        {
+          "input": {
+            "dat_conservative_bound_relaxation": 1.0
+          },
+          "error": "dat_conservative_bound_relaxation must be in (0, 1), got 1.0"
+        },
+        {
+          "input": {
+            "rigid_avbd_beta": -1.0
+          },
+          "error": "rigid_avbd_beta must be >= 0, got -1.0"
+        },
+        {
+          "input": {
+            "particle_self_contact_radius": 0.01,
+            "particle_self_contact_gap": 0.01
+          },
+          "error": "particle_self_contact_gap cannot be combined with the deprecated particle_self_contact_radius; migrate to margin + gap."
+        }
+      ]
+    }
+  ],
+  "scope_limit": "No GPU/tile performance, dense contact, DAT safety, trajectory fitting or real-world validation."
+}

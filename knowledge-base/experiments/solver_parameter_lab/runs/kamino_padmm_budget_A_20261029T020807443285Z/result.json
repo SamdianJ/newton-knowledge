@@ -1,0 +1,553 @@
+{
+  "run_id": "kamino_padmm_budget_A_20261029T020807443285Z",
+  "case_id": "kamino_padmm_budget",
+  "solver": "kamino",
+  "variant": "A",
+  "version": "1.7.0",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "started_at": "2026-10-29T02:08:07.447154+00:00",
+  "status": "probe_completed_not_ab",
+  "run_class": "probe_override_not_ab",
+  "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+  "protocol_sha256": "d56f7c0f78d795d4726c3ad236d3864e33be6f0a983b7ecc2778c3dadcd9f552",
+  "protocol_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_A_20261029T020807443285Z/protocol.json",
+  "archived_program": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_A_20261029T020807443285Z/run_program.py",
+  "timing_scope": "Newton solver.step plus device synchronization; state export and serialization excluded. Report initialization and cold compilation separately where observable, median after first five steps, never cross-solver performance ranking.",
+  "warmup_steps": 5,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "packages": {
+      "newton": "1.7.0",
+      "numpy": "2.5.4",
+      "warp-lang": "1.18.0",
+      "mujoco": "3.15.0",
+      "mujoco-warp": "3.15.0"
+    },
+    "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+    "warp_devices": [
+      "cpu"
+    ]
+  },
+  "source_verification": {
+    "path": "newton/_src/solvers/kamino/solver_kamino.py",
+    "installed_path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\kamino\\solver_kamino.py",
+    "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "expected_sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "matches_snapshot": true
+  },
+  "scene_sha256": "7629fcb6fb50e541dce8ee10e4c807045986735de52c97dfabf310dfc16ece86",
+  "initialization_ms": 1971.8788000755012,
+  "config": {
+    "constructor": {
+      "sparse_jacobian": false,
+      "sparse_dynamics": false,
+      "use_collision_detector": true,
+      "use_fk_solver": false,
+      "collision_detector": {
+        "pipeline": "unified",
+        "broadphase": "explicit",
+        "bvtype": "aabb",
+        "max_contacts": null,
+        "max_contacts_per_world": 128,
+        "max_contacts_per_pair": 12,
+        "max_triangle_pairs": 1000000,
+        "default_gap": 1e-05
+      },
+      "constraints": {
+        "alpha": 0.01,
+        "beta": 0.01,
+        "gamma": 0.01,
+        "delta": 1e-06
+      },
+      "dynamics": {
+        "preconditioning": true,
+        "linear_solver_type": "LLTB",
+        "linear_solver_kwargs": {},
+        "cull_speculative_contacts": true
+      },
+      "padmm": {
+        "primal_tolerance": 1e-06,
+        "dual_tolerance": 1e-06,
+        "compl_tolerance": 1e-06,
+        "restart_tolerance": 0.999,
+        "eta": 1e-05,
+        "rho_0": 1.0,
+        "rho_min": 1e-05,
+        "a_0": 1.0,
+        "alpha": 10.0,
+        "tau": 1.5,
+        "max_iterations": 20,
+        "penalty_update_freq": 1,
+        "penalty_update_method": "fixed",
+        "linear_solver_tolerance": 0.0,
+        "linear_solver_tolerance_ratio": 0.0,
+        "use_acceleration": true,
+        "use_graph_conditionals": false,
+        "warmstart_mode": "containers",
+        "warmstart_scale": 0.9,
+        "contact_warmstart_method": "key_and_position"
+      },
+      "dvi": {
+        "tolerance": 1e-05,
+        "regularization": 1e-06,
+        "omega": 1.0,
+        "max_alternating_iterations": 24,
+        "inequality_sweeps_per_iteration": 2,
+        "use_schur_complement": false,
+        "bilateral_solve_interval": 1,
+        "tangential_warmstart_scale": 0.97,
+        "bilateral_solver_type": "LLTB",
+        "bilateral_solver_kwargs": {},
+        "warmstart_mode": "containers",
+        "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+      },
+      "fk": null,
+      "materials": {
+        "friction_mix_mode": "average",
+        "restitution_mix_mode": "min"
+      },
+      "rotation_correction": "twopi",
+      "integrator": "euler",
+      "dynamics_solver": "padmm",
+      "angular_velocity_damping": 0.0,
+      "collect_solver_info": false,
+      "compute_solution_metrics": false
+    },
+    "treatment": {
+      "max_iterations": 20
+    },
+    "material_values": {
+      "ke": 20000.0,
+      "kd": 300.0
+    },
+    "dt": 0.004166666666666667,
+    "steps": 192,
+    "model": {
+      "world_count": 1,
+      "body_mass": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "body_inertia": [
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ],
+        [
+          [
+            0.0266666691750288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0266666691750288,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0266666691750288
+          ]
+        ]
+      ],
+      "body_com": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "body_world": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shape_world": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gravity": [
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ],
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ]
+      ],
+      "shape_material_ke": [
+        20000.0,
+        20000.0,
+        20000.0,
+        20000.0,
+        20000.0,
+        20000.0
+      ],
+      "shape_material_kd": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "shape_material_mu": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ]
+    },
+    "scene_description": {
+      "world_count": 1,
+      "up_axis": "Z",
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "floor_z": 0.0,
+      "bodies": [
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.0,
+            0,
+            0.101
+          ],
+          "tilt_y": 0.0
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.002,
+            0,
+            0.321
+          ],
+          "tilt_y": 0.012
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.004,
+            0,
+            0.541
+          ],
+          "tilt_y": 0.024
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.006,
+            0,
+            0.761
+          ],
+          "tilt_y": 0.036000000000000004
+        },
+        {
+          "shape": "box",
+          "half_extents": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "density": 500.0,
+          "at": [
+            0.008,
+            0,
+            0.981
+          ],
+          "tilt_y": 0.048
+        }
+      ],
+      "mu": 0.6,
+      "common_ke": 20000.0,
+      "common_kd": 300.0
+    },
+    "seed": "no RNG"
+  },
+  "visual": {
+    "body_shapes": [
+      {
+        "body": 0,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 1,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 2,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 3,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "body": 4,
+        "type": "box",
+        "half_extents": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      }
+    ],
+    "floor": 0.0
+  },
+  "metrics": {
+    "finite": true,
+    "steps": 192,
+    "initial_penetration_mm": 0.0,
+    "max_penetration_mm": 1.1521617284249301,
+    "final_penetration_mm": 0.20409222437269003,
+    "tail_penetration_mm": 0.1551865096925131,
+    "initial_stack_height_m": 1.085682985444554,
+    "final_stack_height_m": 1.0076441898772668,
+    "max_speed_m_s": 1.1445001363754272,
+    "final_kinetic_energy_J": 0.22294710052418226,
+    "max_kinetic_energy_J": 4.2009897726588346,
+    "step_ms_median_after_warmup": 4.4158,
+    "r_p_final": 0.043160997331142426,
+    "r_p_p95": 0.07498147487640379,
+    "r_p_mean": 0.020825579472139328,
+    "r_d_final": 0.03502187505364418,
+    "r_d_p95": 0.24718283563852309,
+    "r_d_mean": 0.06933456058028248,
+    "r_c_final": 0.21792110800743103,
+    "r_c_p95": 1.6842982172966,
+    "r_c_mean": 0.44397300623764835,
+    "iterations_final": 20.0,
+    "iterations_p95": 20.0,
+    "iterations_mean": 20.0,
+    "converged_final": 0.0,
+    "converged_p95": 0.0,
+    "converged_mean": 0.0
+  },
+  "raw_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_A_20261029T020807443285Z/trajectory.npz",
+  "raw_sha256": "8b9f73c139d65d189909ffa02970156faad64c46e88ffa892eed453ed4c82abb",
+  "samples": 193,
+  "duration_seconds": 0.8,
+  "resolved_backend": {
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": true,
+    "use_fk_solver": false,
+    "collision_detector": {
+      "pipeline": "unified",
+      "broadphase": "explicit",
+      "bvtype": "aabb",
+      "max_contacts": null,
+      "max_contacts_per_world": 128,
+      "max_contacts_per_pair": 12,
+      "max_triangle_pairs": 1000000,
+      "default_gap": 1e-05
+    },
+    "constraints": {
+      "alpha": 0.01,
+      "beta": 0.01,
+      "gamma": 0.01,
+      "delta": 1e-06
+    },
+    "dynamics": {
+      "preconditioning": true,
+      "linear_solver_type": "LLTB",
+      "linear_solver_kwargs": {},
+      "cull_speculative_contacts": true
+    },
+    "padmm": {
+      "primal_tolerance": 1e-06,
+      "dual_tolerance": 1e-06,
+      "compl_tolerance": 1e-06,
+      "restart_tolerance": 0.999,
+      "eta": 1e-05,
+      "rho_0": 1.0,
+      "rho_min": 1e-05,
+      "a_0": 1.0,
+      "alpha": 10.0,
+      "tau": 1.5,
+      "max_iterations": 20,
+      "penalty_update_freq": 1,
+      "penalty_update_method": "fixed",
+      "linear_solver_tolerance": 0.0,
+      "linear_solver_tolerance_ratio": 0.0,
+      "use_acceleration": true,
+      "use_graph_conditionals": false,
+      "warmstart_mode": "containers",
+      "warmstart_scale": 0.9,
+      "contact_warmstart_method": "key_and_position"
+    },
+    "dvi": {
+      "tolerance": 1e-05,
+      "regularization": 1e-06,
+      "omega": 1.0,
+      "max_alternating_iterations": 24,
+      "inequality_sweeps_per_iteration": 2,
+      "use_schur_complement": false,
+      "bilateral_solve_interval": 1,
+      "tangential_warmstart_scale": 0.97,
+      "bilateral_solver_type": "LLTB",
+      "bilateral_solver_kwargs": {},
+      "warmstart_mode": "containers",
+      "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+    },
+    "fk": null,
+    "materials": {
+      "friction_mix_mode": "average",
+      "restitution_mix_mode": "min"
+    },
+    "rotation_correction": "twopi",
+    "integrator": "euler",
+    "dynamics_solver": "padmm",
+    "angular_velocity_damping": 0.0,
+    "collect_solver_info": false,
+    "compute_solution_metrics": false
+  },
+  "finished_at": "2026-10-29T02:08:13.635416+00:00"
+}

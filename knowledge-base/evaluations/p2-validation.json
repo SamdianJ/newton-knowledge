@@ -1,0 +1,3632 @@
+{
+  "phase": "P2",
+  "status": "passed",
+  "build_id": "fa73a0e8a744f2ee8ffd6495",
+  "passed": 904,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "real stdio acceptance uses published generation",
+      "passed": true
+    },
+    {
+      "check": "every frozen task passes independently",
+      "passed": true
+    },
+    {
+      "check": "separate coverage denominator api",
+      "passed": true
+    },
+    {
+      "check": "separate coverage denominator concept",
+      "passed": true
+    },
+    {
+      "check": "separate coverage denominator solver",
+      "passed": true
+    },
+    {
+      "check": "separate coverage denominator topic",
+      "passed": true
+    },
+    {
+      "check": "separate coverage denominator stage",
+      "passed": true
+    },
+    {
+      "check": "separate coverage denominator recipe",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:newton",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:newton",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:newton",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:actuators",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:actuators",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:actuators",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:controllers",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:controllers",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:controllers",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:geometry",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:geometry",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:geometry",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:ik",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:ik",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:ik",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:math",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:math",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:selection",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:selection",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:selection",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:sensors",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:sensors",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:sensors",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:solvers",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:solvers",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:solvers",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:usd",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:usd",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:usd",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:utils",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:utils",
+      "passed": true
+    },
+    {
+      "check": "actual authored content module:viewer",
+      "passed": true
+    },
+    {
+      "check": "explained coverage module:viewer",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance module:viewer",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:worlds",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:worlds",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:worlds",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:articulations",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:articulations",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:articulations",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:deformables",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:deformables",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:deformables",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:mass-inertia",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:mass-inertia",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:mass-inertia",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:sites",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:sites",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:sites",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:sensors",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:sensors",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:sensors",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:conventions",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:conventions",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:conventions",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:usd-parsing",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:usd-parsing",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:usd-parsing",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:custom-attributes",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:custom-attributes",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:custom-attributes",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:collisions",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:collisions",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:collisions",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:simulation-tuning",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:simulation-tuning",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:simulation-tuning",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:coupling",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:coupling",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:coupling",
+      "passed": true
+    },
+    {
+      "check": "actual authored content concept:actuators",
+      "passed": true
+    },
+    {
+      "check": "explained coverage concept:actuators",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance concept:actuators",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:vbd",
+      "passed": true
+    },
+    {
+      "check": "explained coverage solver:vbd",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:vbd",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:mujoco",
+      "passed": true
+    },
+    {
+      "check": "explained coverage solver:mujoco",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:mujoco",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:kamino",
+      "passed": true
+    },
+    {
+      "check": "explained coverage solver:kamino",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:kamino",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:featherstone",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:featherstone",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:implicit-mpm",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:implicit-mpm",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:semi-implicit",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:semi-implicit",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:style3d",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:style3d",
+      "passed": true
+    },
+    {
+      "check": "actual authored content solver:xpbd",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance solver:xpbd",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "explained coverage topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "explained coverage topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "explained coverage topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "check": "explained coverage topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "explained coverage topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:environment",
+      "passed": true
+    },
+    {
+      "check": "explained coverage topic:environment",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:environment",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:development-testing",
+      "passed": true
+    },
+    {
+      "check": "explained coverage topic:development-testing",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:development-testing",
+      "passed": true
+    },
+    {
+      "check": "actual authored content topic:migration-integrations",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance topic:migration-integrations",
+      "passed": true
+    },
+    {
+      "check": "actual authored content stage:asset_import",
+      "passed": true
+    },
+    {
+      "check": "explained coverage stage:asset_import",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance stage:asset_import",
+      "passed": true
+    },
+    {
+      "check": "stage summary and official reading link stage:asset_import",
+      "passed": true
+    },
+    {
+      "check": "actual authored content stage:preprocess",
+      "passed": true
+    },
+    {
+      "check": "explained coverage stage:preprocess",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance stage:preprocess",
+      "passed": true
+    },
+    {
+      "check": "stage summary and official reading link stage:preprocess",
+      "passed": true
+    },
+    {
+      "check": "actual authored content stage:initialization",
+      "passed": true
+    },
+    {
+      "check": "explained coverage stage:initialization",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance stage:initialization",
+      "passed": true
+    },
+    {
+      "check": "stage summary and official reading link stage:initialization",
+      "passed": true
+    },
+    {
+      "check": "actual authored content stage:control",
+      "passed": true
+    },
+    {
+      "check": "explained coverage stage:control",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance stage:control",
+      "passed": true
+    },
+    {
+      "check": "stage summary and official reading link stage:control",
+      "passed": true
+    },
+    {
+      "check": "actual authored content stage:collision",
+      "passed": true
+    },
+    {
+      "check": "explained coverage stage:collision",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance stage:collision",
+      "passed": true
+    },
+    {
+      "check": "stage summary and official reading link stage:collision",
+      "passed": true
+    },
+    {
+      "check": "actual authored content stage:solver_step",
+      "passed": true
+    },
+    {
+      "check": "explained coverage stage:solver_step",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance stage:solver_step",
+      "passed": true
+    },
+    {
+      "check": "stage summary and official reading link stage:solver_step",
+      "passed": true
+    },
+    {
+      "check": "actual authored content stage:output",
+      "passed": true
+    },
+    {
+      "check": "explained coverage stage:output",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance stage:output",
+      "passed": true
+    },
+    {
+      "check": "stage summary and official reading link stage:output",
+      "passed": true
+    },
+    {
+      "check": "actual authored content recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "explained coverage recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "recipe scheduling contract recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "actual authored content recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "explained coverage recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "recipe scheduling contract recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "actual authored content recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "explained coverage recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "recipe scheduling contract recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "actual authored content recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "explained coverage recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "recipe scheduling contract recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "actual authored content recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "explained coverage recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "recipe scheduling contract recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "actual authored content recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "explained coverage recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "body-specific accepted task receipt recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "pinned provenance recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "recipe scheduling contract recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/guide/overview.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/model.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/state.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/control.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/contacts.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/collide.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/actuators.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/actuators.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_actuators.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/actuators/actuator.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/actuators/drives/drive_pd.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/controllers.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_controllers.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/controllers/impl/differential_ik/model_based.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/geometry.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/collisions.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_geometry.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/geometry/utils.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/geometry/types.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/geometry/narrow_phase.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/ik.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_ik.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/ik/ik_solver.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sim/ik/ik_objectives.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/math.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/conventions.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_math.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/selection.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/utils/selection.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_selection.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/sensors.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/sensors.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_sensors.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sensors/sensor_contact.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/sensors/sensor_imu.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/solvers.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/solvers/index.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_solvers.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/solver.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/usd.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/usd_parsing.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_usd.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/utils/import_usd.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/utils.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_utils.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/viewer.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/guide/visualization.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/api/newton_viewer.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/viewer/viewer_gl.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/viewer/viewer_usd.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/viewer/viewer_null.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/worlds.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/articulations.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/solvers/mujoco.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/deformable_objects.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/geometry/tri_mesh_collision.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/mass_inertia.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/sites.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/custom_attributes.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/solver_observables.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/simulation_tuning.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/concepts/coupling.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/solvers/vbd.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/solvers/kamino.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/kamino/solver_kamino.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/featherstone/solver_featherstone.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/implicit_mpm/solver_implicit_mpm.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/style3d/solver_style3d.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/solvers/xpbd/solver_xpbd.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/migration.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/core/reset.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/examples/multiphysics/example_mujoco_vbd_coupled_solver.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/examples/diffsim/example_diffsim_ball.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/guide/compatibility.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash pyproject.toml",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/guide/installation.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/guide/development.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash CODING_GUIDELINES.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash docs/guide/source_code_guidelines.rst",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/tests/__main__.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/utils/import_urdf.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/_src/utils/import_mjcf.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/examples/controllers/example_controller_differential_ik.py",
+      "passed": true
+    },
+    {
+      "check": "referenced source hash newton/examples/selection/example_selection_cartpole.py",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:alm_math",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:alm_mode",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:attachment",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:cache",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:capacity",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:damping",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:dat",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:dual",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:external",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:friction",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:history",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:ignored",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:implicit",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:legacy",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:margin",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:observable",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:reset",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:rigid_dat_requires",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:schedule",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:step",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:support",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves c:tile",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves capabilities:VBD:1.7.0",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:kamino:backend_defaults",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:kamino:diagnostics",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:kamino:dvi_controls",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:kamino:padmm_controls",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:kamino:restrictions",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:kamino:stabilization",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:mujoco:capacity",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:mujoco:contact_source",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:mujoco:defaults",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:mujoco:integration",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:mujoco:sleeping",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves claim:mujoco:worlds",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:coupling",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:dat_config",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:oscillation",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:penetration",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:performance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:reset",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:slip",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diag:soft",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:kamino:1",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:kamino:2",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:kamino:3",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:kamino:4",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:kamino:5",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:mujoco:1",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:mujoco:2",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:mujoco:3",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves diagnostic:mujoco:4",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:implementation:0",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:implementation:1",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:implementation:2",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:implementation:3",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:implementation:4",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:implementation:5",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:implementation:6",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:papers:0",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:papers:1",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:papers:2",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:papers:3",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:papers:4",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:theory:0",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:theory:1",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:theory:2",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:theory:3",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:theory:4",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:theory:5",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:version-notes:0",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:version-notes:1",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:version-notes:2",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves doc:version-notes:3",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves exp:constructor_guards",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves exp:default_modes",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves exp:implicit_spring",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves exp:margin_compatibility",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:bending",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:contact_stiffness",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:damping",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:dat",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:dat_relaxation",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:friction",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:friction_epsilon",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:full_surface",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:joint_stiffness",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:membrane",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:rigid_mode",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:self_contact",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:self_margin",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:stabilization",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:stiffness",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves lab:substeps",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:block",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:compliant",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:dat",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:detect",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:elastic",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:friction",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:kamino:backend_defaults",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:kamino:diagnostics",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:kamino:dvi_controls",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:kamino:padmm_controls",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:kamino:restrictions",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:kamino:stabilization",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:legacy",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:mujoco:capacity",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:mujoco:contact_source",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:mujoco:defaults",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:mujoco:integration",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:mujoco:sleeping",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:mujoco:worlds",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves map:variational",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:body_inertia",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:body_mass",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:edge_bending_properties",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:joint_enabled",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:joint_limit_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:joint_target_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:joint_target_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:body_inertia",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:body_mass",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:joint_armature",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:joint_effort_limit",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:joint_limit_lower",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:joint_limit_upper",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:joint_target_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:joint_target_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:shape_material_mu",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:kamino:shape_material_restitution",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:body_inertia",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:body_mass",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:joint_armature",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:joint_effort_limit",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:joint_limit_lower",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:joint_limit_upper",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:joint_target_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:joint_target_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:mujoco.condim",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:mujoco.geom_solimp",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:mujoco.solref",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:mujoco.solref_mode",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:shape_material_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:shape_material_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:mujoco:shape_material_mu",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:particle_mass",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:particle_q",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:particle_radius",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:shape_material_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:shape_material_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:shape_material_mu",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:soft_contact_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:soft_contact_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:soft_contact_mu",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:spring_damping",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:spring_stiffness",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:tet_materials",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves model:tri_materials",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:collision_frequency",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:collision_frequency_type",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:collision_pipeline",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:dat_conservative_bound_relaxation",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:deterministic",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:friction_epsilon",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:model",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_collision_detection_interval",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_conservative_bound_relaxation",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_edge_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_edge_parallel_epsilon",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_enable_self_contact",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_enable_tile_solve",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_external_edge_contact_filtering_map",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_external_vertex_contact_filtering_map",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_rest_shape_contact_exclusion_radius",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_self_contact_gap",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_self_contact_margin",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_self_contact_radius",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_topological_contact_filter_threshold",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:particle_vertex_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_avbd_alpha",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_avbd_angular_beta",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_avbd_beta",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_avbd_contact_alpha",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_avbd_gamma",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_avbd_joint_alpha",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_avbd_linear_beta",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_body_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_body_particle_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_compliant_alm",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_contact_hard",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_contact_history",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_contact_k_start",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_contact_stick_freeze_angular_eps",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_contact_stick_freeze_translation_eps",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_joint_angular_k_start",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_joint_angular_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_joint_angular_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_joint_linear_k_start",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_joint_linear_kd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_joint_linear_ke",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_soft_contact_use_log_barrier",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_soft_dat_use_interval_arithmetic",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.angular_velocity_damping",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collect_solver_info",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.broadphase",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.bvtype",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.default_gap",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.max_contacts",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.max_contacts_per_pair",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.max_contacts_per_world",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.max_triangle_pairs",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.collision_detector.pipeline",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.compute_solution_metrics",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.constraints",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.constraints.alpha",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.constraints.beta",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.constraints.delta",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.constraints.gamma",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.bilateral_solve_interval",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.bilateral_solver_kwargs",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.bilateral_solver_type",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.contact_warmstart_method",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.omega",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.regularization",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.tangential_warmstart_scale",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.use_schur_complement",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dvi.warmstart_mode",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dynamics",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dynamics.cull_speculative_contacts",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dynamics.linear_solver_kwargs",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dynamics.linear_solver_type",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dynamics.preconditioning",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.dynamics_solver",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.add_axis_joints",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.max_angular_incremental_step",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.max_line_search_iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.max_linear_incremental_step",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.max_newton_iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.preconditioner",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.regularization_weight",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.reset_state",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.use_adaptive_cg_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.use_incremental_solve",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.use_regularization",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.fk.use_sparsity",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.integrator",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.materials",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.materials.friction_mix_mode",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.materials.restitution_mix_mode",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.a_0",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.alpha",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.compl_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.contact_warmstart_method",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.dual_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.eta",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.linear_solver_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.linear_solver_tolerance_ratio",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.penalty_update_freq",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.penalty_update_method",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.primal_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.restart_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.rho_0",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.rho_min",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.tau",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.use_acceleration",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.use_graph_conditionals",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.warmstart_mode",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.padmm.warmstart_scale",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.rotation_correction",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.sparse_dynamics",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.sparse_jacobian",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.use_collision_detector",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:config.use_fk_solver",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:model",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:reset.base_pose",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:reset.base_velocity",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:reset.body_poses",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:kamino:reset.body_velocities",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:ccd_iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:ccd_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:cone",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:density",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:deterministic",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:disable_contacts",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:disable_sensors",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:enable_multiccd",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:enable_sleeping",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:impratio",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:include_sites",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:integrator",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:jacobian",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:ls_iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:ls_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:magnetic",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:model",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:nconmax",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:njmax",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:njmax_nnz",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:nvmax",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:save_to_mjcf",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:sdf_initpoints",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:sdf_iterations",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:separate_worlds",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:skip_visual_only_geoms",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:sleep_tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:solver",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:tolerance",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:update_data_interval",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:use_mujoco_contacts",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:use_mujoco_cpu",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:viscosity",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves newton:1.7.0:mujoco:wind",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:README.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:agent/WORKFLOW.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:evaluations/REPORT.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:experiments/vbd_parameter_lab/PILOT_NOTES.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:experiments/vbd_parameter_lab/README.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:mcp_service/README.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:site/README.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/papers.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/theory.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/kamino/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/papers.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/theory.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/mujoco/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/papers.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/theory.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves page:solvers/vbd/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves paper:avbd2025",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves paper:dat2026",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves paper:kamino-loops-2025",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves paper:mujoco-2012",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves paper:mujoco-2014",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves paper:proximal-admm-2024",
+      "passed": true
+    },
+    {
+      "check": "legacy ID still resolves paper:vbd2024",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/full_surface/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/full_surface/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/iterations/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/iterations/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/substeps/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/substeps/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/stiffness/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/stiffness/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/damping/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/damping/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/self_contact/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/self_contact/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/self_margin/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/self_margin/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/contact_stiffness/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/contact_stiffness/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/friction/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/friction/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/friction_epsilon/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/friction_epsilon/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/dat/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/dat/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/dat_relaxation/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/dat_relaxation/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/rigid_mode/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/rigid_mode/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/joint_stiffness/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/joint_stiffness/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/membrane/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/membrane/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/bending/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/bending/B.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/stabilization/A.npz",
+      "passed": true
+    },
+    {
+      "check": "saved VBD raw unchanged experiments/vbd_parameter_lab/data/stabilization/B.npz",
+      "passed": true
+    },
+    {
+      "check": "HTTP data and index generation coherent",
+      "passed": true
+    },
+    {
+      "check": "CLI uses same canonical build",
+      "passed": true
+    },
+    {
+      "check": "UI route #/",
+      "passed": true
+    },
+    {
+      "check": "all backends visible at root",
+      "passed": true
+    },
+    {
+      "check": "root contains coding and test summaries",
+      "passed": true
+    },
+    {
+      "check": "UI route #/workflow",
+      "passed": true
+    },
+    {
+      "check": "five stages with three nested loop phases",
+      "passed": true
+    },
+    {
+      "check": "expanded stage gives input/output summary",
+      "passed": true
+    },
+    {
+      "check": "expanded stage links official Newton docs",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Anewton",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:newton",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:newton",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Aactuators",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:actuators",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:actuators",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Acontrollers",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:controllers",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:controllers",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Ageometry",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:geometry",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:geometry",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Aik",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:ik",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:ik",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Amath",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:math",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:math",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Aselection",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:selection",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:selection",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Asensors",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:sensors",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:sensors",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Asolvers",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:solvers",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:solvers",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Ausd",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:usd",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:usd",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Autils",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:utils",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:utils",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/module%3Aviewer",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for module:viewer",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel module:viewer",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Aworlds",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:worlds",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:worlds",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Aarticulations",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:articulations",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:articulations",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Adeformables",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:deformables",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:deformables",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Amass-inertia",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:mass-inertia",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:mass-inertia",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Asites",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:sites",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:sites",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Asensors",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:sensors",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:sensors",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Aconventions",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:conventions",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:conventions",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Ausd-parsing",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:usd-parsing",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:usd-parsing",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Acustom-attributes",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:custom-attributes",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:custom-attributes",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Asolver-observables",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Acollisions",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:collisions",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:collisions",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Asimulation-tuning",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:simulation-tuning",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:simulation-tuning",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Acoupling",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:coupling",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:coupling",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/concept%3Aactuators",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for concept:actuators",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel concept:actuators",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Avbd",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:vbd",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Amujoco",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:mujoco",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Akamino",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:kamino",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Afeatherstone",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:featherstone",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Aimplicit-mpm",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:implicit-mpm",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Asemi-implicit",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:semi-implicit",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Astyle3d",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:style3d",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/solver%3Axpbd",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for solver:xpbd",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Arobot-control",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Aworlds-batching",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Acoupling",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Adifferentiable-simulation",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Alifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Aenvironment",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:environment",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:environment",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Adevelopment-testing",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:development-testing",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:development-testing",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/topic%3Amigration-integrations",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for topic:migration-integrations",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel topic:migration-integrations",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/stage%3Aasset_import",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for stage:asset_import",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel stage:asset_import",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/stage%3Apreprocess",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for stage:preprocess",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel stage:preprocess",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/stage%3Ainitialization",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for stage:initialization",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel stage:initialization",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/stage%3Acontrol",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for stage:control",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel stage:control",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/stage%3Acollision",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for stage:collision",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel stage:collision",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/stage%3Asolver_step",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for stage:solver_step",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel stage:solver_step",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/stage%3Aoutput",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for stage:output",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel stage:output",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/recipe%3Aexternal-collision",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/recipe%3Asolver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/recipe%3Amujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/recipe%3Acoupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/recipe%3Aik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/recipe%3Aworlds-reset",
+      "passed": true
+    },
+    {
+      "check": "no planned placeholder for recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "public knowledge source panel recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "UI route #/record/recipe%3Aik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "recipe displays actual backend and layout conditions",
+      "passed": true
+    },
+    {
+      "check": "readable graph relationships in UI",
+      "passed": true
+    },
+    {
+      "check": "UI route #/solvers/vbd/parameters",
+      "passed": true
+    },
+    {
+      "check": "scoped parameter count vbd",
+      "passed": true
+    },
+    {
+      "check": "UI route #/solvers/mujoco/parameters",
+      "passed": true
+    },
+    {
+      "check": "scoped parameter count mujoco",
+      "passed": true
+    },
+    {
+      "check": "UI route #/solvers/kamino/parameters",
+      "passed": true
+    },
+    {
+      "check": "scoped parameter count kamino",
+      "passed": true
+    },
+    {
+      "check": "UI route #/solvers/vbd/parameters",
+      "passed": true
+    },
+    {
+      "check": "changing solver changes dataset and retains section",
+      "passed": true
+    },
+    {
+      "check": "UI route #setting/full_surface",
+      "passed": true
+    },
+    {
+      "check": "shared pipeline owner and breadcrumb",
+      "passed": true
+    },
+    {
+      "check": "UI route #experiments?case=full_surface&view=3d",
+      "passed": true
+    },
+    {
+      "check": "existing real VBD 3D replay preserved",
+      "passed": true
+    },
+    {
+      "check": "UI route #/solvers/mujoco/experiments",
+      "passed": true
+    },
+    {
+      "check": "scoped measured lab, no VBD fallback mujoco",
+      "passed": true
+    },
+    {
+      "check": "UI route #/solvers/kamino/experiments",
+      "passed": true
+    },
+    {
+      "check": "scoped measured lab, no VBD fallback kamino",
+      "passed": true
+    },
+    {
+      "check": "UI route #/search?q=CONTACT_F&solver=mujoco&include_shared=true&stage=output",
+      "passed": true
+    },
+    {
+      "check": "cross-module scoped search UI",
+      "passed": true
+    },
+    {
+      "check": "UI route #/document/solvers/vbd/theory.md",
+      "passed": true
+    },
+    {
+      "check": "math and source-backed legacy theory remains renderable",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/theory.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/papers.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/vbd/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes agent/WORKFLOW.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes experiments/vbd_parameter_lab/README.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes experiments/vbd_parameter_lab/PILOT_NOTES.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes evaluations/REPORT.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes README.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes site/README.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes mcp_service/README.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/theory.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/papers.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/mujoco/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/theory.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/papers.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "all original document routes solvers/kamino/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "UI route #/workflow",
+      "passed": true
+    },
+    {
+      "check": "mobile workflow fits screen",
+      "passed": true
+    },
+    {
+      "check": "no browser errors []",
+      "passed": true
+    },
+    {
+      "check": "no failed UI requests []",
+      "passed": true
+    },
+    {
+      "check": "offline UI has no external requests []",
+      "passed": true
+    }
+  ],
+  "evidence": [
+    "evaluations/p2-mcp-validation.json",
+    "evaluations/p2-mcp-trace.json",
+    "site/screenshots/p2/",
+    "knowledge/validation-receipts.json"
+  ],
+  "scope": "Coverage, provenance, website/CLI/MCP and frozen knowledge tasks. No upstream full test or new physical experiment is claimed."
+}

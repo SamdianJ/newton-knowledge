@@ -1,0 +1,705 @@
+[
+  {
+    "call": {
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "full_surface 穿模",
+        "limit": 5
+      }
+    },
+    "result": {
+      "status": "ok",
+      "version": "1.7.0",
+      "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "build_id": "20ff987101029bf587c835c6",
+      "read_only": true,
+      "requested_scope": {
+        "solver": "all"
+      },
+      "resolved_scope": {
+        "solver": "all"
+      },
+      "applied_filters": {
+        "kind": "all",
+        "domain": "all",
+        "stage": "all",
+        "solver": "all",
+        "include_shared": false
+      },
+      "query": "full_surface 穿模",
+      "hits": [
+        {
+          "id": "pipeline:enable_rigid_soft_full_surface_contact",
+          "record_type": "parameter",
+          "title": "enable_rigid_soft_full_surface_contact",
+          "record_scope": "shared",
+          "owner_solver": null,
+          "owner_module": "newton",
+          "domain": "workflow",
+          "stages": [
+            "collision",
+            "solver_step"
+          ],
+          "coverage": {
+            "experiment_validated": false,
+            "explained": true,
+            "indexed": true,
+            "task_validated": false
+          },
+          "evidence_type": "source_checked",
+          "route": "#/solvers/shared/parameters/enable_rigid_soft_full_surface_contact",
+          "summary": "公共碰撞管线的 full surface 接触开关；现有 VBD 案例量测其覆盖效果。",
+          "read_next_call": {
+            "tool": "get_parameter",
+            "arguments": {
+              "record_id": "pipeline:enable_rigid_soft_full_surface_contact",
+              "solver": "shared"
+            }
+          },
+          "source_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "path": "newton/_src/sim/collide.py",
+              "start_line": 1283,
+              "max_lines": 60
+            }
+          }
+        },
+        {
+          "id": "lab:full_surface",
+          "record_type": "lab_experiment",
+          "title": "粗三角形能托住小球吗？",
+          "record_scope": "solver",
+          "owner_solver": "vbd",
+          "owner_module": "newton.solvers",
+          "domain": "solver",
+          "stages": [
+            "solver_step"
+          ],
+          "coverage": {
+            "experiment_validated": true,
+            "explained": true,
+            "indexed": true,
+            "task_validated": false
+          },
+          "evidence_type": "measured",
+          "route": "#/solvers/vbd/experiments?case=full_surface",
+          "summary": "A 未生成接触，球底降到支撑面下 761 mm；B 生成面接触并被托住，终态压入约 0.245 mm。覆盖面内接触得到支持，但有限 penalty 仍有小压入。",
+          "read_next_call": {
+            "tool": "get_experiment",
+            "arguments": {
+              "experiment_id": "lab:full_surface",
+              "solver": "vbd"
+            }
+          },
+          "source_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "path": "newton/_src/sim/collide.py",
+              "start_line": 1338,
+              "max_lines": 60
+            }
+          }
+        },
+        {
+          "id": "symbol:newton.CollisionPipeline.soft_contact_pair_count",
+          "record_type": "source_symbol",
+          "title": "newton.CollisionPipeline.soft_contact_pair_count",
+          "record_scope": "shared",
+          "owner_solver": null,
+          "owner_module": "newton",
+          "domain": "framework",
+          "stages": [],
+          "coverage": {
+            "experiment_validated": false,
+            "explained": false,
+            "indexed": true,
+            "task_validated": false
+          },
+          "evidence_type": "source_checked",
+          "route": "#/record/symbol%3Anewton.CollisionPipeline.soft_contact_pair_count",
+          "summary": "Number of precomputed (particle, shape) pairs launched for soft contacts.",
+          "read_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "symbol_id": "symbol:newton.CollisionPipeline.soft_contact_pair_count"
+            }
+          },
+          "source_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "path": "newton/_src/sim/collide.py",
+              "start_line": 1991,
+              "max_lines": 60
+            }
+          }
+        },
+        {
+          "id": "symbol:newton.CollisionPipeline",
+          "record_type": "source_symbol",
+          "title": "newton.CollisionPipeline",
+          "record_scope": "shared",
+          "owner_solver": null,
+          "owner_module": "newton",
+          "domain": "framework",
+          "stages": [],
+          "coverage": {
+            "experiment_validated": false,
+            "explained": false,
+            "indexed": true,
+            "task_validated": false
+          },
+          "evidence_type": "source_checked",
+          "route": "#/record/symbol%3Anewton.CollisionPipeline",
+          "summary": "Full-featured collision pipeline with GJK/MPR narrow phase and pluggable broad phase.",
+          "read_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "symbol_id": "symbol:newton.CollisionPipeline"
+            }
+          },
+          "source_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "path": "newton/_src/sim/collide.py",
+              "start_line": 1250,
+              "max_lines": 60
+            }
+          }
+        },
+        {
+          "id": "symbol:newton.Model.collide",
+          "record_type": "source_symbol",
+          "title": "newton.Model.collide",
+          "record_scope": "shared",
+          "owner_solver": null,
+          "owner_module": "newton",
+          "domain": "framework",
+          "stages": [],
+          "coverage": {
+            "experiment_validated": false,
+            "explained": false,
+            "indexed": true,
+            "task_validated": false
+          },
+          "evidence_type": "source_checked",
+          "route": "#/record/symbol%3Anewton.Model.collide",
+          "summary": "Generate contact points for the particles and rigid bodies in the model using the default collision",
+          "read_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "symbol_id": "symbol:newton.Model.collide"
+            }
+          },
+          "source_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "path": "newton/_src/sim/model.py",
+              "start_line": 2038,
+              "max_lines": 60
+            }
+          }
+        }
+      ],
+      "total": 262,
+      "next_cursor": "eyJidWlsZCI6IjIwZmY5ODcxMDEwMjliZjU4N2M4MzVjNiIsInN0cmVhbSI6InNlYXJjaCIsInF1ZXJ5IjoiZTgzMjQ3MzUxYTY4ODVkYTM0M2Q5MWRhYmUyM2Q2MmYyMTg4ZDdiOTllYmQ1MzYwYzNlMTVkYmFjZGRiMTMwYiIsIm9mZnNldCI6NX0",
+      "ranking": "lexical relevance, not confidence"
+    }
+  },
+  {
+    "call": {
+      "tool": "get_parameter",
+      "arguments": {
+        "name": "enable_rigid_soft_full_surface_contact"
+      }
+    },
+    "result": {
+      "status": "no_match",
+      "version": "1.7.0",
+      "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "build_id": "20ff987101029bf587c835c6",
+      "read_only": true,
+      "requested_scope": {
+        "solver": "vbd"
+      },
+      "resolved_scope": {
+        "solver": "vbd",
+        "scope_resolution": "legacy_default"
+      },
+      "applied_filters": {
+        "solver": "vbd"
+      },
+      "query": "enable_rigid_soft_full_surface_contact",
+      "reason": "No parameter record in this scope; this is not proof of unsupported physics."
+    }
+  },
+  {
+    "call": {
+      "tool": "get_experiment",
+      "arguments": {
+        "experiment_id": "full_surface"
+      }
+    },
+    "result": {
+      "status": "ok",
+      "version": "1.7.0",
+      "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "build_id": "20ff987101029bf587c835c6",
+      "read_only": true,
+      "requested_scope": {
+        "solver": "vbd"
+      },
+      "resolved_scope": {
+        "solver": "vbd"
+      },
+      "applied_filters": {
+        "solver": "vbd"
+      },
+      "record": {
+        "id": "lab:full_surface",
+        "record_type": "lab_experiment",
+        "title": "粗三角形能托住小球吗？",
+        "record_scope": "solver",
+        "owner_solver": "vbd",
+        "owner_module": "newton.solvers",
+        "domain": "solver",
+        "stages": [
+          "solver_step"
+        ],
+        "coverage": {
+          "experiment_validated": true,
+          "explained": true,
+          "indexed": true,
+          "task_validated": false
+        },
+        "evidence_type": "measured",
+        "route": "#/solvers/vbd/experiments?case=full_surface",
+        "summary": "A 未生成接触，球底降到支撑面下 761 mm；B 生成面接触并被托住，终态压入约 0.245 mm。覆盖面内接触得到支持，但有限 penalty 仍有小压入。",
+        "read_next_call": {
+          "tool": "get_experiment",
+          "arguments": {
+            "experiment_id": "lab:full_surface",
+            "solver": "vbd"
+          }
+        },
+        "source_next_call": {
+          "tool": "get_source",
+          "arguments": {
+            "path": "newton/_src/sim/collide.py",
+            "start_line": 1338,
+            "max_lines": 60
+          }
+        }
+      },
+      "experiment": {
+        "associations": [
+          "pipeline:enable_rigid_soft_full_surface_contact"
+        ],
+        "common": {},
+        "comparison_status": "observed_in_this_minimal_case",
+        "duration": 0.4,
+        "expectation": "开启后应出现 edge/face 接触；仅粒子检测可能漏掉面内接触。",
+        "group": "碰撞管线",
+        "guide_url": "https://newton-physics.github.io/newton/latest/concepts/collisions.html",
+        "id": "full_surface",
+        "metric": "球底相对支撑面的高度",
+        "observation": "A 未生成接触，球底降到支撑面下 761 mm；B 生成面接触并被托住，终态压入约 0.245 mm。覆盖面内接触得到支持，但有限 penalty 仍有小压入。",
+        "parameter": "enable_rigid_soft_full_surface_contact",
+        "plot": "plots/full_surface.svg",
+        "question": "顶点没有碰到球，三角形内部接触是否仍被求解？",
+        "record_id": "lab:full_surface",
+        "reference_kind": null,
+        "scene": "full_surface",
+        "source": {
+          "line": 1338,
+          "needle": "enable_rigid_soft_full_surface_contact: Generate",
+          "path": "newton/_src/sim/collide.py",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1338"
+        },
+        "title": "粗三角形能托住小球吗？",
+        "unit": "mm",
+        "values": [
+          false,
+          true
+        ],
+        "variants": [
+          {
+            "config": {
+              "body_mass": [
+                0.5
+              ],
+              "common": {},
+              "dt": 0.008333333333333333,
+              "duration": 0.4,
+              "gravity": [
+                0.0,
+                0.0,
+                -9.8100004196167
+              ],
+              "model_counts": {
+                "bodies": 1,
+                "particles": 3,
+                "springs": 0,
+                "triangles": 1
+              },
+              "particle_mass": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pipeline": {
+                "broad_phase": "nxn",
+                "enable_rigid_soft_full_surface_contact": false,
+                "soft_contact_gap": 0.06
+              },
+              "seed": "deterministic construction; no RNG",
+              "solver": {
+                "iterations": 10,
+                "particle_enable_tile_solve": false,
+                "rigid_compliant_alm": true
+              },
+              "treatment": {
+                "enable_rigid_soft_full_surface_contact": false
+              }
+            },
+            "metrics": {
+              "estimated_solver_ms_total": 245.48160284757614,
+              "final": -761.1505126953125,
+              "finite": true,
+              "max": 40.0,
+              "max_edge_face_records": 0,
+              "max_soft_contact_records": 0,
+              "min": -761.1505126953125,
+              "step_ms_median_after_warmup": 5.114200059324503,
+              "steps": 48,
+              "tail_mean": -622.1757202148438
+            },
+            "program_sha256": "2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a",
+            "raw_file": "data/full_surface/A.npz",
+            "value": false,
+            "variant": "A"
+          },
+          {
+            "config": {
+              "body_mass": [
+                0.5
+              ],
+              "common": {},
+              "dt": 0.008333333333333333,
+              "duration": 0.4,
+              "gravity": [
+                0.0,
+                0.0,
+                -9.8100004196167
+              ],
+              "model_counts": {
+                "bodies": 1,
+                "particles": 3,
+                "springs": 0,
+                "triangles": 1
+              },
+              "particle_mass": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pipeline": {
+                "broad_phase": "nxn",
+                "enable_rigid_soft_full_surface_contact": true,
+                "soft_contact_gap": 0.06
+              },
+              "seed": "deterministic construction; no RNG",
+              "solver": {
+                "iterations": 10,
+                "particle_enable_tile_solve": false,
+                "rigid_compliant_alm": true
+              },
+              "treatment": {
+                "enable_rigid_soft_full_surface_contact": true
+              }
+            },
+            "metrics": {
+              "estimated_solver_ms_total": 245.29440701007843,
+              "final": -0.24528801441192627,
+              "finite": true,
+              "max": 40.0,
+              "max_edge_face_records": 1,
+              "max_soft_contact_records": 1,
+              "min": -0.6820783019065857,
+              "step_ms_median_after_warmup": 5.110300146043301,
+              "steps": 48,
+              "tail_mean": -0.24528202414512634
+            },
+            "program_sha256": "2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a",
+            "raw_file": "data/full_surface/B.npz",
+            "value": true,
+            "variant": "B"
+          }
+        ]
+      },
+      "source_refs": [
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 1338,
+          "needle": "enable_rigid_soft_full_surface_contact: Generate",
+          "path": "newton/_src/sim/collide.py",
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1338",
+          "verification": "verified_snapshot"
+        }
+      ],
+      "detail": "summary",
+      "scope_note": "Observed only for the saved scene, configuration and runtime; not a universal tuning guarantee.",
+      "artifacts": [
+        {
+          "path": "experiments/vbd_parameter_lab/data/full_surface/A.npz",
+          "url": "/files/experiments/vbd_parameter_lab/data/full_surface/A.npz",
+          "program_sha256": "2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a"
+        },
+        {
+          "path": "experiments/vbd_parameter_lab/data/full_surface/B.npz",
+          "url": "/files/experiments/vbd_parameter_lab/data/full_surface/B.npz",
+          "program_sha256": "2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a"
+        }
+      ],
+      "view_url": "/files/experiments/vbd_parameter_lab/index-3d.html?case=full_surface"
+    }
+  },
+  {
+    "call": {
+      "tool": "get_relations",
+      "arguments": {
+        "node_id": "pipeline:enable_rigid_soft_full_surface_contact",
+        "limit": 8
+      }
+    },
+    "result": {
+      "status": "ok",
+      "version": "1.7.0",
+      "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "build_id": "20ff987101029bf587c835c6",
+      "read_only": true,
+      "requested_scope": {},
+      "resolved_scope": {},
+      "applied_filters": {},
+      "node_id": "pipeline:enable_rigid_soft_full_surface_contact",
+      "edges": [
+        {
+          "evidence": "experiments/vbd_parameter_lab/report-data.json",
+          "id": "edge:0cb9f17b7c4d6c2a19f0",
+          "relation": "varies_in_case",
+          "source": "lab:full_surface",
+          "target": "pipeline:enable_rigid_soft_full_surface_contact"
+        },
+        {
+          "evidence_type": "source_checked",
+          "id": "edge:b85642f33acb2358c330",
+          "relation": "supported_by",
+          "source": "pipeline:enable_rigid_soft_full_surface_contact",
+          "source_refs": [
+            {
+              "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+              "line": 1283,
+              "path": "newton/_src/sim/collide.py",
+              "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+              "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1283",
+              "verification": "verified_snapshot"
+            }
+          ],
+          "target": "source:newton/_src/sim/collide.py:1283"
+        }
+      ],
+      "neighbors": [
+        {
+          "id": "lab:full_surface",
+          "record_type": "lab_experiment",
+          "title": "粗三角形能托住小球吗？",
+          "record_scope": "solver",
+          "owner_solver": "vbd",
+          "owner_module": "newton.solvers",
+          "domain": "solver",
+          "stages": [
+            "solver_step"
+          ],
+          "coverage": {
+            "experiment_validated": true,
+            "explained": true,
+            "indexed": true,
+            "task_validated": false
+          },
+          "evidence_type": "measured",
+          "route": "#/solvers/vbd/experiments?case=full_surface",
+          "summary": "A 未生成接触，球底降到支撑面下 761 mm；B 生成面接触并被托住，终态压入约 0.245 mm。覆盖面内接触得到支持，但有限 penalty 仍有小压入。",
+          "read_next_call": {
+            "tool": "get_experiment",
+            "arguments": {
+              "experiment_id": "lab:full_surface",
+              "solver": "vbd"
+            }
+          },
+          "source_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "path": "newton/_src/sim/collide.py",
+              "start_line": 1338,
+              "max_lines": 60
+            }
+          }
+        },
+        {
+          "id": "source:newton/_src/sim/collide.py:1283",
+          "title": "collide.py:1283",
+          "record_type": "source_symbol",
+          "read_next_call": {
+            "tool": "get_source",
+            "arguments": {
+              "path": "newton/_src/sim/collide.py",
+              "start_line": 1283,
+              "max_lines": 60
+            }
+          }
+        }
+      ],
+      "total_edges": 2,
+      "offset": 0,
+      "next_cursor": null,
+      "edge_cursor": null,
+      "next_call": null,
+      "semantics": "One hop; source-backed associations and curated mappings are not inferred causal guarantees."
+    }
+  },
+  {
+    "call": {
+      "tool": "get_document",
+      "arguments": {
+        "path": "solvers/vbd/theory.md",
+        "max_lines": 35
+      }
+    },
+    "result": {
+      "status": "ok",
+      "version": "1.7.0",
+      "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "build_id": "20ff987101029bf587c835c6",
+      "read_only": true,
+      "requested_scope": {},
+      "resolved_scope": {},
+      "applied_filters": {},
+      "record": {
+        "id": "page:solvers/vbd/theory.md",
+        "record_type": "document",
+        "title": "VBD · 原理与机制",
+        "record_scope": "solver",
+        "owner_solver": "vbd",
+        "owner_module": "newton.solvers",
+        "domain": "solver",
+        "stages": [
+          "solver_step"
+        ],
+        "coverage": {
+          "experiment_validated": false,
+          "explained": true,
+          "indexed": true,
+          "task_validated": false
+        },
+        "evidence_type": "source_checked",
+        "route": "#/document/solvers/vbd/theory.md",
+        "summary": "适用版本：Newton 1.7.0。Newton 是引擎名称；VBD 局部更新使用 Newton 型线性化，并不是每步装配并求解整个场景的全局 Newton 系统。",
+        "read_next_call": {
+          "tool": "get_document",
+          "arguments": {
+            "record_id": "page:solvers/vbd/theory.md"
+          }
+        },
+        "source_next_call": null
+      },
+      "path": "solvers/vbd/theory.md",
+      "section": "",
+      "start_line": 1,
+      "end_line": 35,
+      "total_lines": 69,
+      "text": "# VBD 原理：从能量到每一步计算\n\n适用版本：Newton 1.7.0。Newton 是引擎名称；VBD 局部更新使用 Newton 型线性化，并不是每步装配并求解整个场景的全局 Newton 系统。\n\n## 1. 隐式 Euler 的变分形式\n\n以无额外速度相关项的粒子系统说明。位置 x、速度 v、质量矩阵 M、时间步 h、外加加速度 a：\n\n$$y=x^n+h v^n+h^2a,\\qquad G(x)=\\frac{1}{2h^2}(x-y)^T M(x-y)+E(x).$$\n\n惯性项希望粒子靠近自由预测位置 y，材料与接触项 E 希望满足弹性/接触关系。求解这个平衡后，由位置差得到速度。对应 [Vertex Block Descent](https://graphics.cs.utah.edu/research/projects/vbd/vbd-siggraph2024.pdf) PDF p.3 Eqs.(2)–(4)、p.4 Eq.(6)，及 [`SolverVBD._initialize_particles`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3187-L3224)、[`SolverVBD._finalize_particles`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4625-L4636)。\n\n这不是“忽略时间积分、直接把物体投影回去”。质量和步长进入局部系统，改变 h 会同时改变时间离散误差、惯性权重与数值耗散。材料阻尼、隐式积分耗散和有限迭代误差应分开识别。\n\n## 2. 将大系统拆成顶点块\n\n固定其他顶点，仅更新 i 的三个坐标：\n\n$$f_i=-\\nabla_iG,\\quad H_i=\\frac{m_i}{h^2}I+\\sum_j\\nabla_i^2E_j,\\quad H_i\\Delta x_i=f_i.$$\n\n每次只处理与 i 相邻的力元。按拓扑着色安排同色块并行，不同颜色依次消费更新状态；动态接触另有积累/近似处理，不能把所有接触一概称为无耦合并行。对应论文 p.4 Eqs.(7)–(9)、Sec.3.9，以及 [`SolverVBD._solve_particle_iteration`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3747-L3982)、[`solve_elasticity`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2720-L2857)。\n\n标量核用 3×3 逆，行列式绝对值不大于 `1e-8` 时跳过该更新。CUDA 还存在 tiled 特化路径。一次局部 Newton 更新不保证已求出局部最优，论文讨论的可选 line search 也不等于 Newton 当前所有路径都执行 line search。不能把“论文在极端测试中稳定”改写成任意初值/任意 dt 的正确性保证。\n\n## 3. 刚体块、legacy AVBD 与 compliant ALM\n\n刚体使用平移和转动的 6 自由度局部块；力、力矩、惯性、约束雅可比进入局部系统，[`solve_rigid_body`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L6219-L6493) 调用 [`ldlt6_solve`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L326-L408)。\n\nlegacy AVBD 引入拉格朗日乘子，双边硬约束的示意能量为 `0.5*k*C²+lambda*C`，随后更新 lambda 与 penalty。实际实现还含误差稳定化 `C-alpha*C0`、单边投影、罚参数上限与 warm start。论文依据是 [Augmented Vertex Block Descent](https://graphics.cs.utah.edu/research/projects/avbd/Augmented_VBD-SIGGRAPH25.pdf) PDF pp.3–6；对应 [`_update_joint_structural_dual`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L1425-L1464)。软行和硬行的 dual 规则不同。\n\nNewton 1.7.0 推荐的 compliant ALM 是需要单独理解的实现扩展：\n\n$$s=\\frac{K}{K+\\rho},\\quad k_{eff}=\\frac{K\\rho}{K+\\rho},\\quad F_{row}=k_{eff}C+s\\lambda.$$\n$$\\lambda^+=s\\,[\\lambda+\\rho(C-\\alpha C_0)].$$\n",
+      "truncated": true,
+      "next_call": {
+        "tool": "get_document",
+        "arguments": {
+          "record_id": "page:solvers/vbd/theory.md",
+          "section": "",
+          "start_line": 36,
+          "max_lines": 35
+        }
+      },
+      "source_refs": [],
+      "relations_next_call": {
+        "tool": "get_relations",
+        "arguments": {
+          "node_id": "page:solvers/vbd/theory.md"
+        }
+      }
+    }
+  },
+  {
+    "call": {
+      "tool": "get_source",
+      "arguments": {
+        "path": "newton/_src/sim/collide.py",
+        "start_line": 1275,
+        "max_lines": 20
+      }
+    },
+    "result": {
+      "status": "ok",
+      "version": "1.7.0",
+      "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "build_id": "20ff987101029bf587c835c6",
+      "read_only": true,
+      "requested_scope": {},
+      "resolved_scope": {
+        "scope": "newton"
+      },
+      "applied_filters": {},
+      "path": "newton/_src/sim/collide.py",
+      "symbol_id": "",
+      "start_line": 1275,
+      "end_line": 1294,
+      "total_lines": 2804,
+      "lines": [
+        "        reduce_contacts: bool = True,",
+        "        rigid_contact_max: int | None = None,",
+        "        max_triangle_pairs: int = 1000000,",
+        "        shape_pairs_filtered: wp.array[wp.vec2i] | None = None,",
+        "        include_static_kinematic_pairs: bool = True,",
+        "        soft_contact_max: int | None = None,",
+        "        soft_contact_gap: float | None = None,",
+        "        soft_contact_margin: float | None = None,",
+        "        enable_rigid_soft_full_surface_contact: bool = False,",
+        "        requires_grad: bool | None = None,",
+        "        broad_phase: Literal[\"nxn\", \"sap\", \"explicit\"]",
+        "        | BroadPhaseAllPairs",
+        "        | BroadPhaseSAP",
+        "        | BroadPhaseExplicit",
+        "        | None = None,",
+        "        narrow_phase: NarrowPhase | None = None,",
+        "        sdf_hydroelastic_config: HydroelasticSDF.Config | None = None,",
+        "        shape_pairs_max: int | None = None,",
+        "        deterministic: bool = False,",
+        "        contact_matching: Literal[\"disabled\", \"latest\", \"sticky\"] = \"disabled\","
+      ],
+      "text": "        reduce_contacts: bool = True,\n        rigid_contact_max: int | None = None,\n        max_triangle_pairs: int = 1000000,\n        shape_pairs_filtered: wp.array[wp.vec2i] | None = None,\n        include_static_kinematic_pairs: bool = True,\n        soft_contact_max: int | None = None,\n        soft_contact_gap: float | None = None,\n        soft_contact_margin: float | None = None,\n        enable_rigid_soft_full_surface_contact: bool = False,\n        requires_grad: bool | None = None,\n        broad_phase: Literal[\"nxn\", \"sap\", \"explicit\"]\n        | BroadPhaseAllPairs\n        | BroadPhaseSAP\n        | BroadPhaseExplicit\n        | None = None,\n        narrow_phase: NarrowPhase | None = None,\n        sdf_hydroelastic_config: HydroelasticSDF.Config | None = None,\n        shape_pairs_max: int | None = None,\n        deterministic: bool = False,\n        contact_matching: Literal[\"disabled\", \"latest\", \"sticky\"] = \"disabled\",",
+      "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+      "manifest_sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+      "verification": "verified_snapshot",
+      "truncated": true,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1275-L1294",
+      "next_call": {
+        "tool": "get_source",
+        "arguments": {
+          "path": "newton/_src/sim/collide.py",
+          "start_line": 1295,
+          "max_lines": 20,
+          "scope": "newton"
+        }
+      }
+    }
+  }
+]

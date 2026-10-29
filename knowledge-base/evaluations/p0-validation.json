@@ -1,0 +1,333 @@
+{
+  "status": "passed",
+  "phase": "P0",
+  "tested_at": "2026-10-29T02:35:41.512618+00:00",
+  "passed": 81,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "coverage denominators and all required topic/workflow/recipe targets are frozen",
+      "passed": true
+    },
+    {
+      "check": "stable planned IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "aliases have no conflicting owners",
+      "passed": true
+    },
+    {
+      "check": "every scope entry has source, target, current state, owner and deferred boundary",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:newton",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:actuators",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:controllers",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:geometry",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:ik",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:math",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:selection",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:sensors",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:solvers",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:usd",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:utils",
+      "passed": true
+    },
+    {
+      "check": "source verified: module:viewer",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:worlds",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:articulations",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:deformables",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:mass-inertia",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:sites",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:sensors",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:conventions",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:usd-parsing",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:custom-attributes",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:collisions",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:simulation-tuning",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:coupling",
+      "passed": true
+    },
+    {
+      "check": "source verified: concept:actuators",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:vbd",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:mujoco",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:kamino",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:featherstone",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:implicit-mpm",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:semi-implicit",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:style3d",
+      "passed": true
+    },
+    {
+      "check": "source verified: solver:xpbd",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:environment",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:development-testing",
+      "passed": true
+    },
+    {
+      "check": "source verified: topic:migration-integrations",
+      "passed": true
+    },
+    {
+      "check": "source verified: stage:asset_import",
+      "passed": true
+    },
+    {
+      "check": "source verified: stage:preprocess",
+      "passed": true
+    },
+    {
+      "check": "source verified: stage:initialization",
+      "passed": true
+    },
+    {
+      "check": "source verified: stage:control",
+      "passed": true
+    },
+    {
+      "check": "source verified: stage:collision",
+      "passed": true
+    },
+    {
+      "check": "source verified: stage:solver_step",
+      "passed": true
+    },
+    {
+      "check": "source verified: stage:output",
+      "passed": true
+    },
+    {
+      "check": "source verified: recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "source verified: recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "source verified: recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "source verified: recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "source verified: recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "source verified: recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "frozen scope points to the actual PRD revision",
+      "passed": true
+    },
+    {
+      "check": "baseline preserves all existing documents, parameter IDs and A/B cases",
+      "passed": true
+    },
+    {
+      "check": "all legacy search identities/routes frozen",
+      "passed": true
+    },
+    {
+      "check": "every existing search ID has an explicit migration target",
+      "passed": true
+    },
+    {
+      "check": "migration inventory covers authoring, generator, generated output, index and route",
+      "passed": true
+    },
+    {
+      "check": "all six required evidence paths are frozen",
+      "passed": true
+    },
+    {
+      "check": "required path endpoints resolve to planned or existing identities",
+      "passed": true
+    },
+    {
+      "check": "all twelve acceptance tasks are frozen",
+      "passed": true
+    },
+    {
+      "check": "task evidence targets, answer points and forbidden conclusions are explicit",
+      "passed": true
+    },
+    {
+      "check": "no acceptance task is given an internal source path",
+      "passed": true
+    },
+    {
+      "check": "exactly six read-only tools are specified",
+      "passed": true
+    },
+    {
+      "check": "strict arguments and read-only contract: search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "strict arguments and read-only contract: get_parameter",
+      "passed": true
+    },
+    {
+      "check": "strict arguments and read-only contract: get_experiment",
+      "passed": true
+    },
+    {
+      "check": "strict arguments and read-only contract: get_relations",
+      "passed": true
+    },
+    {
+      "check": "strict arguments and read-only contract: get_document",
+      "passed": true
+    },
+    {
+      "check": "strict arguments and read-only contract: get_source",
+      "passed": true
+    },
+    {
+      "check": "first-release filtering, shared scope and pagination specified",
+      "passed": true
+    },
+    {
+      "check": "all record types have a precise-read path",
+      "passed": true
+    },
+    {
+      "check": "public export inventory covers all twelve API entries",
+      "passed": true
+    },
+    {
+      "check": "incremental public __all__ includes core objects and submodules",
+      "passed": true
+    },
+    {
+      "check": "phase reports target the exact user-authorized conversation",
+      "passed": true
+    }
+  ]
+}

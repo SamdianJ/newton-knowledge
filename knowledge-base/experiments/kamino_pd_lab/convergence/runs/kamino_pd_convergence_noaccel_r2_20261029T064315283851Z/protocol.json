@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "kamino-pd-convergence-1.0",
+  "status": "frozen_before_runs",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "device": "cpu",
+  "scene": {
+    "world_count": 1,
+    "gravity": [
+      0,
+      0,
+      0
+    ],
+    "body_count": 1,
+    "mass_kg": 1,
+    "inertia_com_kg_m2": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "com_in_body_m": [
+      0.5,
+      0,
+      0
+    ],
+    "lock_inertia": true,
+    "joint": "world-to-body revolute about world Y; body origin and both joint anchors initially at origin",
+    "effective_joint_inertia_kg_m2": 1.25,
+    "collision": "none, no shape or contact detector; this isolates joint drive and reset",
+    "initial_joint_q_rad": 0,
+    "initial_joint_qd_rad_s": 0,
+    "armature": 0,
+    "joint_damping": 0,
+    "joint_friction": 0,
+    "joint_limits": "unbounded"
+  },
+  "common_solver": {
+    "dynamics_solver": "padmm",
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": false,
+    "use_fk_solver": false,
+    "padmm.use_graph_conditionals": false,
+    "padmm.max_iterations": 200,
+    "padmm.use_acceleration": true,
+    "padmm.primal_tolerance": 1e-07,
+    "padmm.dual_tolerance": 1e-07,
+    "padmm.compl_tolerance": 1e-07,
+    "integrator": "default Euler; resolved full config saved",
+    "padmm.warmstart_mode": "containers",
+    "dynamics.preconditioning": true,
+    "collect_solver_info": false
+  },
+  "drive": {
+    "target_mode": "POSITION",
+    "target_ke": 100.0,
+    "target_kd": 2.0,
+    "joint_effort_limit_Nm": 1.0,
+    "joint_f": 0.0
+  },
+  "common_run": {
+    "dt_s": 0.005,
+    "steps": 80,
+    "duration_s": 0.4,
+    "repeats": 2,
+    "repeat_processes": "independent process per case/variant/repeat",
+    "control_schedule": "PD target +1 rad for steps0..39; -1 rad for steps40..79; target velocity0, explicit effort0. dt0.005s;0.4s total.",
+    "sample": "initial state plus every output state; save body_q, body_qd, joint_q, joint_qd, joint_lambdas_tau, body_qdd, control arrays, status fields, internal applied body wrench and time",
+    "repeat_tolerance": {
+      "pose_atol": 1e-05,
+      "velocity_atol": 0.0001,
+      "rtol": 1e-05
+    },
+    "performance": "timing metadata only, no performance ranking",
+    "finite_required": true,
+    "instrumentation": "Read-only Python wrappers around selected original PADMM _step/_step_accel delegate exactly once then export pre/post arrays for every active iteration. No kernel, model, source, return value, or arithmetic modification. After terminal stop, skip export of subsequent no-op loop calls. Export status after each outer step; initial status deliberately absent/NaN placeholders with defined mask."
+  },
+  "variants": {
+    "baseline": {
+      "overrides": {},
+      "purpose": "Reproduce legacy strict saturated PD and validate passive observation against both old baseline repeats."
+    },
+    "budget1000": {
+      "overrides": {
+        "padmm.max_iterations": 1000
+      },
+      "purpose": "Distinguish insufficient 200-iteration budget from persistent plateau under unchanged strict tolerances."
+    },
+    "compl1e6": {
+      "overrides": {
+        "padmm.compl_tolerance": 1e-06
+      },
+      "purpose": "Isolate complementarity stopping tolerance only; always also score original strict gates, never label relaxed stop a strict convergence solution."
+    },
+    "noaccel": {
+      "overrides": {
+        "padmm.use_acceleration": false
+      },
+      "purpose": "Test acceleration/restart path involvement with all tolerances and budget fixed."
+    },
+    "noprecondition": {
+      "overrides": {
+        "dynamics.preconditioning": false
+      },
+      "purpose": "Test diagonal scaling involvement with fixed strict stopping tolerances and budget."
+    }
+  },
+  "pair_cases": [
+    {
+      "id": "kamino_pd_iteration_budget",
+      "A": "baseline",
+      "B": "budget1000"
+    },
+    {
+      "id": "kamino_pd_complementarity_gate",
+      "A": "baseline",
+      "B": "compl1e6"
+    },
+    {
+      "id": "kamino_pd_acceleration",
+      "A": "baseline",
+      "B": "noaccel"
+    },
+    {
+      "id": "kamino_pd_preconditioning",
+      "A": "baseline",
+      "B": "noprecondition"
+    }
+  ],
+  "formal_run_count": 10,
+  "repeats_per_variant": 2,
+  "legacy_baselines": [
+    "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r1_20261029T051555321909Z",
+    "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r2_20261029T051607693722Z"
+  ],
+  "physical_criteria": {
+    "joint_velocity_reference_max_abs_rad_s": 0.002,
+    "joint_position_euler_reference_max_abs_rad": 0.001,
+    "applied_effort_signed_max_abs_error_Nm": 0.002,
+    "applied_effort_max_Nm": 1.001,
+    "joint_anchor_origin_max_norm_m": 0.0005,
+    "bounded_reported_effort_max_error_Nm": 0.002,
+    "routing": [
+      2
+    ]
+  },
+  "evidence_criteria": {
+    "all_physical_arrays_finite": true,
+    "all_defined_iteration_arrays_finite": true,
+    "installed_locked_python_files_match": true,
+    "exact_single_override_difference": true,
+    "active_iteration_count_equals_reported_terminal_iterations_each_step": true,
+    "reported_stop_matches_independent_boolean": true,
+    "minimum_solve_iterations": 2,
+    "initial_status_excluded": true,
+    "export_schema_constant": true,
+    "repeat_pose_atol": 1e-05,
+    "repeat_velocity_atol": 0.0001,
+    "repeat_rtol": 1e-05,
+    "baseline_matches_legacy_pose_atol": 1e-05,
+    "baseline_matches_legacy_velocity_atol": 0.0001,
+    "baseline_matches_legacy_rtol": 1e-05,
+    "baseline_status_converged_all_false": true,
+    "baseline_iterations_all_200": true,
+    "residual_reconstruction_roundoff": "Per iteration NumPy float64 recomputation; allowed difference 64*float32_eps times sum of absolute expression terms plus 1e-12. For r_p use P*(abs(x)+abs(y)), r_d invP*(abs(eta*dx)+abs(rho*dy)), r_c sum of abs gap*directional velocity terms. Additional float32 reconstruction retained. Never round residuals before boolean stopping check."
+  },
+  "residual_definitions": {
+    "r_p": "max_i abs(P_i*(x_i-y_i)), physical generalized impulse",
+    "r_d": "max_i abs((eta*(x_i-x_previous_i)+rho*(y_i-y_input_i))/P_i), physical constraint velocity. Accelerated y_input=y_hat before iteration; nonaccelerated y_input=y_p.",
+    "r_c": "max bounded rows abs((x-lower)*max(z,0)+(upper-x)*max(-z,0)); preconditioned bounds and x,z scaling cancel, units J. No contacts/limits in this scene.",
+    "stop": "iterations>1 and all three terminal residuals <= actual float32 configured tolerances",
+    "strict_stop": "Same rule against all 1e-7 regardless of variant configured tolerance."
+  },
+  "saved_iteration_channels": [
+    "outer_step",
+    "iteration",
+    "status(all scalar fields)",
+    "x",
+    "y",
+    "z",
+    "pre_x_p",
+    "pre_y_input",
+    "pre_z_input",
+    "P",
+    "lower",
+    "upper",
+    "bcgo",
+    "nbc",
+    "vio",
+    "rho",
+    "eta",
+    "config_tolerances",
+    "roundoff/ULP diagnostics derived only after run"
+  ],
+  "diagnostic_classification": {
+    "insufficient_budget_supported": "Strict converged fraction increases with1000 budget and previously failing steps pass all original1e-7 residual gates; physical gates also pass. State trajectory changes must be reported.",
+    "persistent_plateau": "For steps0,1,39,40,41,79 report final20 active iterations range, exact-unchanged and distinct state counts; flag <=5% residual change over last20 with no strict stop. Longer budget median terminal rc ratio >=0.8 supports persistence, not proof of impossibility.",
+    "precision_consistent": "Independently matched residuals; plateau/short cycle; record x-bound gap in float32 ULP and whether rho*(y-x) is <0.5 ULP(z). Such evidence supports float32 quantization sensitivity but cannot prove a universal floor without matched higher-precision implementation.",
+    "tolerance_only": "compl1e6 may set configured converged while original strict check remains false; explicitly not a root-cause fix.",
+    "acceleration_or_scaling_sensitivity": "Single-factor strict convergence improvement with physical gates preserved is specific evidence; do not generalize to all scenes or rank performance."
+  },
+  "limitations": [
+    "No float64 Newton solver implementation; no claim of exact global precision floor.",
+    "CPU single revolute, no contact; no performance comparison because instrumentation synchronizes every iteration.",
+    "Legacy source and raw evidence immutable. All failed attempts retained; harness fixes require documented review and new fingerprint, never overwritten runs."
+  ],
+  "source_refs": [
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/math.py",
+      "line": 109
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+      "line": 939
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+      "line": 1017
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+      "line": 387
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+      "line": 562
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/dynamics/dual.py",
+      "line": 1135
+    },
+    {
+      "path": "newton/_src/solvers/kamino/config.py",
+      "line": 469
+    }
+  ],
+  "frozen_at_utc": "2026-10-29T06:38:01.986811+00:00",
+  "reviewed_by": "root: source equations, observable distinctions, independent-reference gates and no post-run threshold changes"
+}

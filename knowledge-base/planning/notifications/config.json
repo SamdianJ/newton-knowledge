@@ -1,0 +1,8 @@
+{
+  "provider": "lark-cli",
+  "identity": "bot",
+  "chat_id": "oc_ad77e9fd76e3c8e9d0a3c569da812f7e",
+  "authorized_purpose": "PRD phase completion reports",
+  "skill": "lark-im",
+  "send_only_after_verified_phase": true
+}

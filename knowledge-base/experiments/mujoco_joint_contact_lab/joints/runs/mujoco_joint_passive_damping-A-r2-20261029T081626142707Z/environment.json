@@ -1,0 +1,23 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "newton": "1.7.0",
+    "mujoco": "3.15.0"
+  },
+  "device": "cpu",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "source_validation": {
+    "checked_python_files": 809,
+    "missing": [],
+    "changed": [],
+    "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+  },
+  "source_refs_sha256": {
+    "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+    "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+  },
+  "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+}

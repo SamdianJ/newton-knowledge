@@ -1,0 +1,935 @@
+{
+  "version": "1.7.0",
+  "build_id": "7b662ba1eaad37315d969690",
+  "denominators": {
+    "api": 12,
+    "concept": 14,
+    "recipe": 6,
+    "solver": 8,
+    "stage": 7,
+    "topic": 8
+  },
+  "entries": [
+    {
+      "id": "module:newton",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 9
+    },
+    {
+      "id": "module:actuators",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "module:controllers",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "module:geometry",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "module:ik",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "module:math",
+      "family": "api",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "module:selection",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "module:sensors",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 6
+    },
+    {
+      "id": "module:solvers",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 6
+    },
+    {
+      "id": "module:usd",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "module:utils",
+      "family": "api",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "module:viewer",
+      "family": "api",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 6
+    },
+    {
+      "id": "concept:worlds",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "concept:articulations",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:deformables",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:mass-inertia",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:sites",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "concept:sensors",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:conventions",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:usd-parsing",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:custom-attributes",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:solver-observables",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "concept:collisions",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "concept:simulation-tuning",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:coupling",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "concept:actuators",
+      "family": "concept",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "solver:vbd",
+      "family": "solver",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "solver:mujoco",
+      "family": "solver",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "solver:kamino",
+      "family": "solver",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "solver:featherstone",
+      "family": "solver",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "solver:implicit-mpm",
+      "family": "solver",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "solver:semi-implicit",
+      "family": "solver",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "solver:style3d",
+      "family": "solver",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "solver:xpbd",
+      "family": "solver",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "topic:robot-control",
+      "family": "topic",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "topic:worlds-batching",
+      "family": "topic",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "topic:coupling",
+      "family": "topic",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "topic:differentiable-simulation",
+      "family": "topic",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "topic:lifecycle-observation",
+      "family": "topic",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "topic:environment",
+      "family": "topic",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "topic:development-testing",
+      "family": "topic",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 4
+    },
+    {
+      "id": "topic:migration-integrations",
+      "family": "topic",
+      "target_depth": "I",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": false,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "stage:asset_import",
+      "family": "stage",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "stage:preprocess",
+      "family": "stage",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "stage:initialization",
+      "family": "stage",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "stage:control",
+      "family": "stage",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "stage:collision",
+      "family": "stage",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "stage:solver_step",
+      "family": "stage",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 1
+    },
+    {
+      "id": "stage:output",
+      "family": "stage",
+      "target_depth": "E",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": false
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 2
+    },
+    {
+      "id": "recipe:external-collision",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "recipe:solver-owned-collision",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "recipe:mujoco-native-contact",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "recipe:coupled-rigid-deformable",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 3
+    },
+    {
+      "id": "recipe:ik-mujoco-contact",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 5
+    },
+    {
+      "id": "recipe:worlds-reset",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_count": 6
+    },
+    {
+      "id": "recipe:control-target-layout",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 4
+    },
+    {
+      "id": "recipe:actuator-effort-scheduling",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 3
+    },
+    {
+      "id": "recipe:collision-preflight",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 3
+    },
+    {
+      "id": "recipe:contact-capacity-diagnosis",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 4
+    },
+    {
+      "id": "recipe:model-update-notification",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 2
+    },
+    {
+      "id": "recipe:masked-reset-state-history",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 5
+    },
+    {
+      "id": "recipe:contact-frame-imu-observation",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 3
+    },
+    {
+      "id": "recipe:coupling-interface-ownership",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 3
+    },
+    {
+      "id": "recipe:differentiable-rollout-history",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 4
+    },
+    {
+      "id": "recipe:mujoco-contact-conversion",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 3
+    },
+    {
+      "id": "recipe:kamino-backend-config-resolve",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 5
+    },
+    {
+      "id": "recipe:vbd-dat-preconditions",
+      "family": "recipe",
+      "target_depth": "T",
+      "coverage": {
+        "experiment_validated": false,
+        "explained": true,
+        "indexed": true,
+        "task_validated": true
+      },
+      "deferred": null,
+      "source_count": 3
+    }
+  ],
+  "solvers": [
+    {
+      "id": "featherstone",
+      "coverage_level": "indexed",
+      "parameter_records": 0,
+      "measured_pairs": 0
+    },
+    {
+      "id": "implicit-mpm",
+      "coverage_level": "indexed",
+      "parameter_records": 0,
+      "measured_pairs": 0
+    },
+    {
+      "id": "kamino",
+      "coverage_level": "deep",
+      "parameter_records": 86,
+      "measured_pairs": 2
+    },
+    {
+      "id": "mujoco",
+      "coverage_level": "deep",
+      "parameter_records": 35,
+      "measured_pairs": 2
+    },
+    {
+      "id": "semi-implicit",
+      "coverage_level": "indexed",
+      "parameter_records": 0,
+      "measured_pairs": 0
+    },
+    {
+      "id": "style3d",
+      "coverage_level": "indexed",
+      "parameter_records": 0,
+      "measured_pairs": 0
+    },
+    {
+      "id": "vbd",
+      "coverage_level": "deep",
+      "parameter_records": 48,
+      "measured_pairs": 17
+    },
+    {
+      "id": "xpbd",
+      "coverage_level": "indexed",
+      "parameter_records": 0,
+      "measured_pairs": 0
+    }
+  ]
+}

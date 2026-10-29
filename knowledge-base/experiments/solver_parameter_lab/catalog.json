@@ -1,0 +1,1430 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4",
+  "status": "passed",
+  "cases": [
+    {
+      "id": "mujoco_iterations_stack",
+      "record_id": "lab:mujoco_iterations_stack",
+      "solver": "mujoco",
+      "title": "MuJoCo · 接触迭代预算",
+      "parameter": "iterations",
+      "observation": "iterations=5 → 50 时，峰值地面穿透 0.735 → 0.491 mm；末态最高点 0.999874 → 0.999875 m。主要差异出现在接触瞬态，稳定末态差异很小；1 次迭代的失稳压力测试单独归档，不计入有效 A/B。",
+      "associations": [
+        "newton:1.7.0:mujoco:iterations"
+      ],
+      "variants": [
+        {
+          "run_id": "mujoco_iterations_stack_A_20261029T020948178413Z",
+          "variant": "A",
+          "metrics": {
+            "finite": true,
+            "steps": 240,
+            "initial_penetration_mm": 0.0,
+            "max_penetration_mm": 0.7348506995498022,
+            "final_penetration_mm": 0.02671720677255296,
+            "tail_penetration_mm": 0.026717203418933206,
+            "initial_stack_height_m": 1.085682985444554,
+            "final_stack_height_m": 0.9998740679163334,
+            "max_speed_m_s": 1.2262499332427979,
+            "final_kinetic_energy_J": 8.68583692431652e-11,
+            "max_kinetic_energy_J": 4.599932881198672,
+            "step_ms_median_after_warmup": 0.2424
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_A_20261029T020948178413Z/trajectory.npz",
+          "raw_sha256": "d5acc21e1998a50b38dcdaa3bad88f44f157470ffeddb26ad59fb98aa0748e95",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "7629fcb6fb50e541dce8ee10e4c807045986735de52c97dfabf310dfc16ece86",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "iterations": 5
+            },
+            "constructor": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "iterations": 5
+            },
+            "material_values": {
+              "ke": 20000.0,
+              "kd": 300.0
+            }
+          },
+          "resolved_treatment": 5,
+          "result_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_A_20261029T020948178413Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_A_20261029T020854580900Z/result.json",
+            "run_id": "mujoco_iterations_stack_A_20261029T020854580900Z",
+            "raw_sha256": "2339dd30823a31f8b20dde659b4d1389bf9fc7dc30373709ddaa5b5d62891617",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        },
+        {
+          "run_id": "mujoco_iterations_stack_B_20261029T020954357022Z",
+          "variant": "B",
+          "metrics": {
+            "finite": true,
+            "steps": 240,
+            "initial_penetration_mm": 0.0,
+            "max_penetration_mm": 0.49116614815014614,
+            "final_penetration_mm": 0.02625324048108335,
+            "tail_penetration_mm": 0.02625324092511994,
+            "initial_stack_height_m": 1.085682985444554,
+            "final_stack_height_m": 0.9998746767614763,
+            "max_speed_m_s": 1.2262499332427979,
+            "final_kinetic_energy_J": 1.1656501896621548e-10,
+            "max_kinetic_energy_J": 4.599932881198672,
+            "step_ms_median_after_warmup": 0.2372
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_B_20261029T020954357022Z/trajectory.npz",
+          "raw_sha256": "cac6995842fa624b900992c196a3222c8c5c5db71fe22eb6c615ef6b07ff95b5",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "7629fcb6fb50e541dce8ee10e4c807045986735de52c97dfabf310dfc16ece86",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "iterations": 50
+            },
+            "constructor": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "iterations": 50
+            },
+            "material_values": {
+              "ke": 20000.0,
+              "kd": 300.0
+            }
+          },
+          "resolved_treatment": 50,
+          "result_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_B_20261029T020954357022Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/mujoco_iterations_stack_B_20261029T020900654150Z/result.json",
+            "run_id": "mujoco_iterations_stack_B_20261029T020900654150Z",
+            "raw_sha256": "9f2503d7f3dbb1daabbbad70b515938db71ebc1e5c8214e81dce260a347b8813",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        }
+      ],
+      "source_refs": [
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 4076,
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "repository": "newton-physics/newton",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4076",
+          "verification": "verified_snapshot"
+        }
+      ],
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "device": "cpu",
+        "packages": {
+          "newton": "1.7.0",
+          "numpy": "2.5.4",
+          "warp-lang": "1.18.0",
+          "mujoco": "3.15.0",
+          "mujoco-warp": "3.15.0"
+        },
+        "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+        "warp_devices": [
+          "cpu"
+        ]
+      },
+      "viewer_url": "/files/experiments/solver_parameter_lab/index.html?solver=mujoco&case=mujoco_iterations_stack",
+      "protocol_file": "planning/p4/protocol.json",
+      "diff_file": "experiments/solver_parameter_lab/mujoco_iterations_stack-diff.json",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.10100000351667404,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0020000000949949026,
+              0.0,
+              0.32100000977516174,
+              0.0,
+              0.0059999641962349415,
+              0.0,
+              0.9999819993972778
+            ],
+            [
+              0.004000000189989805,
+              0.0,
+              0.5410000085830688,
+              0.0,
+              0.011999712325632572,
+              0.0,
+              0.9999279975891113
+            ],
+            [
+              0.006000000052154064,
+              0.0,
+              0.7609999775886536,
+              0.0,
+              0.01799902692437172,
+              0.0,
+              0.9998379945755005
+            ],
+            [
+              0.00800000037997961,
+              0.0,
+              0.9810000061988831,
+              0.0,
+              0.023997696116566658,
+              0.0,
+              0.9997119903564453
+            ]
+          ],
+          "body_count": 5,
+          "particle_count": 0,
+          "truncated": false
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.10100000351667404,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0020000000949949026,
+              0.0,
+              0.32100000977516174,
+              0.0,
+              0.0059999641962349415,
+              0.0,
+              0.9999819993972778
+            ],
+            [
+              0.004000000189989805,
+              0.0,
+              0.5410000085830688,
+              0.0,
+              0.011999712325632572,
+              0.0,
+              0.9999279975891113
+            ],
+            [
+              0.006000000052154064,
+              0.0,
+              0.7609999775886536,
+              0.0,
+              0.01799902692437172,
+              0.0,
+              0.9998379945755005
+            ],
+            [
+              0.00800000037997961,
+              0.0,
+              0.9810000061988831,
+              0.0,
+              0.023997696116566658,
+              0.0,
+              0.9997119903564453
+            ]
+          ],
+          "body_count": 5,
+          "particle_count": 0,
+          "truncated": false
+        }
+      ],
+      "limitations": "单个固定场景；每个 A/B 值独立进程运行两次并核对轨迹。无随机重复或统计显著性声明。仅 CPU / 指定后端，不推及 GPU、其他场景或性能排名。",
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "solver_parameter_lab/run_experiments.py",
+          "max_lines": 100
+        }
+      }
+    },
+    {
+      "id": "mujoco_contact_response",
+      "record_id": "lab:mujoco_contact_response",
+      "solver": "mujoco",
+      "title": "MuJoCo · 接触软化参数组",
+      "parameter": "shape_material_ke + shape_material_kd",
+      "observation": "ke/kd 共同调整后，峰值穿透 13.448 → 2.914 mm，尾段穿透 0.1310 → 0.0186 mm。不能归因于单独 ke；positive solref 的 time constant 还受 refsafe 的 2dt 下限约束。",
+      "associations": [
+        "model:mujoco:shape_material_ke",
+        "model:mujoco:shape_material_kd"
+      ],
+      "variants": [
+        {
+          "run_id": "mujoco_contact_response_A_20261029T021000437530Z",
+          "variant": "A",
+          "metrics": {
+            "finite": true,
+            "steps": 240,
+            "initial_penetration_mm": 0.0,
+            "max_penetration_mm": 13.447797298431402,
+            "final_penetration_mm": 0.13101696968079168,
+            "tail_penetration_mm": 0.13101696968079168,
+            "initial_stack_height_m": 0.4499999940395355,
+            "final_stack_height_m": 0.19986898303031922,
+            "max_speed_m_s": 2.2072489261627197,
+            "final_kinetic_energy_J": 1.8352412146406538e-13,
+            "max_kinetic_energy_J": 2.435973882675171,
+            "step_ms_median_after_warmup": 0.2099
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_A_20261029T021000437530Z/trajectory.npz",
+          "raw_sha256": "fc83b82e9775d61c271fa4362eda140cdc9fcdb637348bed89df42ca241611ac",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "303eb6a988e85557593e8da874a85c175490235385381caf006e96380526ad13",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "ke": 2000,
+              "kd_rule": "2*sqrt(2000)"
+            },
+            "constructor": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "iterations": 50
+            },
+            "material_values": {
+              "ke": 2000.0,
+              "kd": 89.44271909999159
+            }
+          },
+          "resolved_treatment": [
+            [
+              0.022360680624842644,
+              1.0
+            ],
+            [
+              0.022360680624842644,
+              1.0
+            ]
+          ],
+          "result_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_A_20261029T021000437530Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_A_20261029T020906840592Z/result.json",
+            "run_id": "mujoco_contact_response_A_20261029T020906840592Z",
+            "raw_sha256": "c9041aed5edbba53f7b8ff63745c6ec0d0d35b199ac4df40cff2bf7245a90836",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        },
+        {
+          "run_id": "mujoco_contact_response_B_20261029T021006524488Z",
+          "variant": "B",
+          "metrics": {
+            "finite": true,
+            "steps": 240,
+            "initial_penetration_mm": 0.0,
+            "max_penetration_mm": 2.9139876365661674,
+            "final_penetration_mm": 0.018587708473211118,
+            "tail_penetration_mm": 0.018587708473211118,
+            "initial_stack_height_m": 0.4499999940395355,
+            "final_stack_height_m": 0.1999814122915268,
+            "max_speed_m_s": 2.2072489261627197,
+            "final_kinetic_energy_J": 3.9172072703597127e-13,
+            "max_kinetic_energy_J": 2.435973882675171,
+            "step_ms_median_after_warmup": 0.2126
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_B_20261029T021006524488Z/trajectory.npz",
+          "raw_sha256": "5378f728696b8c6110f36bf3f4d8ffb0dffcbd59ae7fc22932cfc07c10eb91a5",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "303eb6a988e85557593e8da874a85c175490235385381caf006e96380526ad13",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "ke": 200000,
+              "kd_rule": "2*sqrt(200000)"
+            },
+            "constructor": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "iterations": 50
+            },
+            "material_values": {
+              "ke": 200000.0,
+              "kd": 894.4271909999159
+            }
+          },
+          "resolved_treatment": [
+            [
+              0.0022360680159181356,
+              1.0
+            ],
+            [
+              0.0022360680159181356,
+              1.0
+            ]
+          ],
+          "result_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_B_20261029T021006524488Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_B_20261029T020912899141Z/result.json",
+            "run_id": "mujoco_contact_response_B_20261029T020912899141Z",
+            "raw_sha256": "1887173e7522b00f08d097ab6ab3542329934be39c9d8520364eb9e37eb569ff",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        }
+      ],
+      "source_refs": [
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 698,
+          "path": "newton/_src/sim/model.py",
+          "repository": "newton-physics/newton",
+          "sha256": "69db914983d83601283d3eeef7f5bbe427dfffca68a5ba43091361246112e169",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L698",
+          "verification": "verified_snapshot"
+        },
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 5062,
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "repository": "newton-physics/newton",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5062",
+          "verification": "verified_snapshot"
+        },
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 700,
+          "path": "newton/_src/sim/model.py",
+          "repository": "newton-physics/newton",
+          "sha256": "69db914983d83601283d3eeef7f5bbe427dfffca68a5ba43091361246112e169",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L700",
+          "verification": "verified_snapshot"
+        },
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 5063,
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "repository": "newton-physics/newton",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5063",
+          "verification": "verified_snapshot"
+        }
+      ],
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "device": "cpu",
+        "packages": {
+          "newton": "1.7.0",
+          "numpy": "2.5.4",
+          "warp-lang": "1.18.0",
+          "mujoco": "3.15.0",
+          "mujoco-warp": "3.15.0"
+        },
+        "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+        "warp_devices": [
+          "cpu"
+        ]
+      },
+      "viewer_url": "/files/experiments/solver_parameter_lab/index.html?solver=mujoco&case=mujoco_contact_response",
+      "protocol_file": "planning/p4/protocol.json",
+      "diff_file": "experiments/solver_parameter_lab/mujoco_contact_response-diff.json",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.3499999940395355,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.3499999940395355,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false
+        }
+      ],
+      "limitations": "单个固定场景；每个 A/B 值独立进程运行两次并核对轨迹。无随机重复或统计显著性声明。仅 CPU / 指定后端，不推及 GPU、其他场景或性能排名。",
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "solver_parameter_lab/run_experiments.py",
+          "max_lines": 100
+        }
+      }
+    },
+    {
+      "id": "kamino_padmm_budget",
+      "record_id": "lab:kamino_padmm_budget",
+      "solver": "kamino",
+      "title": "Kamino · PADMM 迭代预算",
+      "parameter": "config.padmm.max_iterations",
+      "observation": "20 → 60 次预算时，峰值地面穿透 1.152 → 0.042 mm，末态 r_d 0.035 → 0.00166。60 次也并非每步都收敛（比例 8.3%）；残差与穿透需要同时看。2 次的严重误差运行单独归档。",
+      "associations": [
+        "newton:1.7.0:kamino:config.padmm.max_iterations"
+      ],
+      "variants": [
+        {
+          "run_id": "kamino_padmm_budget_A_20261029T021012631164Z",
+          "variant": "A",
+          "metrics": {
+            "finite": true,
+            "steps": 192,
+            "initial_penetration_mm": 0.0,
+            "max_penetration_mm": 1.1521617284249301,
+            "final_penetration_mm": 0.20409222437269003,
+            "tail_penetration_mm": 0.1551865096925131,
+            "initial_stack_height_m": 1.085682985444554,
+            "final_stack_height_m": 1.0076441898772668,
+            "max_speed_m_s": 1.1445001363754272,
+            "final_kinetic_energy_J": 0.22294710052418226,
+            "max_kinetic_energy_J": 4.2009897726588346,
+            "step_ms_median_after_warmup": 4.4557,
+            "r_p_final": 0.043160997331142426,
+            "r_p_p95": 0.07498147487640379,
+            "r_p_mean": 0.020825579472139328,
+            "r_d_final": 0.03502187505364418,
+            "r_d_p95": 0.24718283563852309,
+            "r_d_mean": 0.06933456058028248,
+            "r_c_final": 0.21792110800743103,
+            "r_c_p95": 1.6842982172966,
+            "r_c_mean": 0.44397300623764835,
+            "iterations_final": 20.0,
+            "iterations_p95": 20.0,
+            "iterations_mean": 20.0,
+            "converged_final": 0.0,
+            "converged_p95": 0.0,
+            "converged_mean": 0.0
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_A_20261029T021012631164Z/trajectory.npz",
+          "raw_sha256": "a8f536ffbd5d99e7c39d8bf1ad688daf326b213d474256ff47d7ebcb95fe2c0b",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "7629fcb6fb50e541dce8ee10e4c807045986735de52c97dfabf310dfc16ece86",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "max_iterations": 20
+            },
+            "constructor": {
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "use_collision_detector": true,
+              "use_fk_solver": false,
+              "collision_detector": {
+                "pipeline": "unified",
+                "broadphase": "explicit",
+                "bvtype": "aabb",
+                "max_contacts": null,
+                "max_contacts_per_world": 128,
+                "max_contacts_per_pair": 12,
+                "max_triangle_pairs": 1000000,
+                "default_gap": 1e-05
+              },
+              "constraints": {
+                "alpha": 0.01,
+                "beta": 0.01,
+                "gamma": 0.01,
+                "delta": 1e-06
+              },
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-06,
+                "dual_tolerance": 1e-06,
+                "compl_tolerance": 1e-06,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 20,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              },
+              "dvi": {
+                "tolerance": 1e-05,
+                "regularization": 1e-06,
+                "omega": 1.0,
+                "max_alternating_iterations": 24,
+                "inequality_sweeps_per_iteration": 2,
+                "use_schur_complement": false,
+                "bilateral_solve_interval": 1,
+                "tangential_warmstart_scale": 0.97,
+                "bilateral_solver_type": "LLTB",
+                "bilateral_solver_kwargs": {},
+                "warmstart_mode": "containers",
+                "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+              },
+              "fk": null,
+              "materials": {
+                "friction_mix_mode": "average",
+                "restitution_mix_mode": "min"
+              },
+              "rotation_correction": "twopi",
+              "integrator": "euler",
+              "dynamics_solver": "padmm",
+              "angular_velocity_damping": 0.0,
+              "collect_solver_info": false,
+              "compute_solution_metrics": false
+            },
+            "material_values": {
+              "ke": 20000.0,
+              "kd": 300.0
+            }
+          },
+          "resolved_treatment": 20,
+          "result_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_A_20261029T021012631164Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_A_20261029T020919080902Z/result.json",
+            "run_id": "kamino_padmm_budget_A_20261029T020919080902Z",
+            "raw_sha256": "0a4eb94b5797ab8fc7bb8f8f44def3b097c4dc83a2795962625e4929c98c3f20",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        },
+        {
+          "run_id": "kamino_padmm_budget_B_20261029T021019663459Z",
+          "variant": "B",
+          "metrics": {
+            "finite": true,
+            "steps": 192,
+            "initial_penetration_mm": 0.0,
+            "max_penetration_mm": 0.042013461004339336,
+            "final_penetration_mm": 0.007863273459196574,
+            "tail_penetration_mm": 0.003840175472850999,
+            "initial_stack_height_m": 1.085682985444554,
+            "final_stack_height_m": 1.0000216817893333,
+            "max_speed_m_s": 1.1853750944137573,
+            "final_kinetic_energy_J": 0.0019356033518852177,
+            "max_kinetic_energy_J": 4.203200741242219,
+            "step_ms_median_after_warmup": 7.9761,
+            "r_p_final": 0.00024396330991294235,
+            "r_p_p95": 0.001652724103769287,
+            "r_p_mean": 0.000497335951504437,
+            "r_d_final": 0.0016649630852043629,
+            "r_d_p95": 0.01226666942238807,
+            "r_d_mean": 0.004503002323477171,
+            "r_c_final": 3.852219379041344e-07,
+            "r_c_p95": 0.04817387200891968,
+            "r_c_mean": 0.011149212150081132,
+            "iterations_final": 60.0,
+            "iterations_p95": 60.0,
+            "iterations_mean": 58.885416666666664,
+            "converged_final": 0.0,
+            "converged_p95": 1.0,
+            "converged_mean": 0.08333333333333333
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_B_20261029T021019663459Z/trajectory.npz",
+          "raw_sha256": "2c32c2087eede0fc15c384339ff4b566a277d556301ac18c37bf87c2081a5752",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "7629fcb6fb50e541dce8ee10e4c807045986735de52c97dfabf310dfc16ece86",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "max_iterations": 60
+            },
+            "constructor": {
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "use_collision_detector": true,
+              "use_fk_solver": false,
+              "collision_detector": {
+                "pipeline": "unified",
+                "broadphase": "explicit",
+                "bvtype": "aabb",
+                "max_contacts": null,
+                "max_contacts_per_world": 128,
+                "max_contacts_per_pair": 12,
+                "max_triangle_pairs": 1000000,
+                "default_gap": 1e-05
+              },
+              "constraints": {
+                "alpha": 0.01,
+                "beta": 0.01,
+                "gamma": 0.01,
+                "delta": 1e-06
+              },
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-06,
+                "dual_tolerance": 1e-06,
+                "compl_tolerance": 1e-06,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 60,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              },
+              "dvi": {
+                "tolerance": 1e-05,
+                "regularization": 1e-06,
+                "omega": 1.0,
+                "max_alternating_iterations": 24,
+                "inequality_sweeps_per_iteration": 2,
+                "use_schur_complement": false,
+                "bilateral_solve_interval": 1,
+                "tangential_warmstart_scale": 0.97,
+                "bilateral_solver_type": "LLTB",
+                "bilateral_solver_kwargs": {},
+                "warmstart_mode": "containers",
+                "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+              },
+              "fk": null,
+              "materials": {
+                "friction_mix_mode": "average",
+                "restitution_mix_mode": "min"
+              },
+              "rotation_correction": "twopi",
+              "integrator": "euler",
+              "dynamics_solver": "padmm",
+              "angular_velocity_damping": 0.0,
+              "collect_solver_info": false,
+              "compute_solution_metrics": false
+            },
+            "material_values": {
+              "ke": 20000.0,
+              "kd": 300.0
+            }
+          },
+          "resolved_treatment": 60,
+          "result_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_B_20261029T021019663459Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/kamino_padmm_budget_B_20261029T020926072977Z/result.json",
+            "run_id": "kamino_padmm_budget_B_20261029T020926072977Z",
+            "raw_sha256": "84c1d72071fdc5ed4658131119eef6412e3e648b9b719d8817a25ebe69da03cc",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        }
+      ],
+      "source_refs": [
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 537,
+          "path": "newton/_src/solvers/kamino/config.py",
+          "repository": "newton-physics/newton",
+          "sha256": "4625e87ad4027fb246aeb879f816ef31cdc8441dae8872e8ce8d669aa0a3157d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L537",
+          "verification": "verified_snapshot"
+        }
+      ],
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "device": "cpu",
+        "packages": {
+          "newton": "1.7.0",
+          "numpy": "2.5.4",
+          "warp-lang": "1.18.0",
+          "mujoco": "3.15.0",
+          "mujoco-warp": "3.15.0"
+        },
+        "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+        "warp_devices": [
+          "cpu"
+        ]
+      },
+      "viewer_url": "/files/experiments/solver_parameter_lab/index.html?solver=kamino&case=kamino_padmm_budget",
+      "protocol_file": "planning/p4/protocol.json",
+      "diff_file": "experiments/solver_parameter_lab/kamino_padmm_budget-diff.json",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.10100000351667404,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0020000000949949026,
+              0.0,
+              0.32100000977516174,
+              0.0,
+              0.0059999641962349415,
+              0.0,
+              0.9999819993972778
+            ],
+            [
+              0.004000000189989805,
+              0.0,
+              0.5410000085830688,
+              0.0,
+              0.011999712325632572,
+              0.0,
+              0.9999279975891113
+            ],
+            [
+              0.006000000052154064,
+              0.0,
+              0.7609999775886536,
+              0.0,
+              0.01799902692437172,
+              0.0,
+              0.9998379945755005
+            ],
+            [
+              0.00800000037997961,
+              0.0,
+              0.9810000061988831,
+              0.0,
+              0.023997696116566658,
+              0.0,
+              0.9997119903564453
+            ]
+          ],
+          "body_count": 5,
+          "particle_count": 0,
+          "truncated": false
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.10100000351667404,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0020000000949949026,
+              0.0,
+              0.32100000977516174,
+              0.0,
+              0.0059999641962349415,
+              0.0,
+              0.9999819993972778
+            ],
+            [
+              0.004000000189989805,
+              0.0,
+              0.5410000085830688,
+              0.0,
+              0.011999712325632572,
+              0.0,
+              0.9999279975891113
+            ],
+            [
+              0.006000000052154064,
+              0.0,
+              0.7609999775886536,
+              0.0,
+              0.01799902692437172,
+              0.0,
+              0.9998379945755005
+            ],
+            [
+              0.00800000037997961,
+              0.0,
+              0.9810000061988831,
+              0.0,
+              0.023997696116566658,
+              0.0,
+              0.9997119903564453
+            ]
+          ],
+          "body_count": 5,
+          "particle_count": 0,
+          "truncated": false
+        }
+      ],
+      "limitations": "单个固定场景；每个 A/B 值独立进程运行两次并核对轨迹。无随机重复或统计显著性声明。仅 CPU / 指定后端，不推及 GPU、其他场景或性能排名。",
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "solver_parameter_lab/run_experiments.py",
+          "max_lines": 100
+        }
+      }
+    },
+    {
+      "id": "kamino_contact_stabilization",
+      "record_id": "lab:kamino_contact_stabilization",
+      "solver": "kamino",
+      "title": "Kamino · 接触位置稳定化",
+      "parameter": "config.constraints.gamma",
+      "observation": "γ=0 时，末态仍重叠 15.000 mm，但迭代收敛率 100%；γ=0.2 时重叠消退，峰值速度 0.720 m/s。位置修正与速度约束收敛是不同问题。",
+      "associations": [
+        "newton:1.7.0:kamino:config.constraints.gamma"
+      ],
+      "variants": [
+        {
+          "run_id": "kamino_contact_stabilization_A_20261029T021027425041Z",
+          "variant": "A",
+          "metrics": {
+            "finite": true,
+            "steps": 144,
+            "initial_penetration_mm": 14.999999105930334,
+            "max_penetration_mm": 14.999999105930334,
+            "final_penetration_mm": 14.999999105930334,
+            "tail_penetration_mm": 14.999999105930332,
+            "initial_stack_height_m": 0.18500000089406968,
+            "final_stack_height_m": 0.18500000089406968,
+            "max_speed_m_s": 8.066495524872153e-07,
+            "final_kinetic_energy_J": 3.2534175006815325e-13,
+            "max_kinetic_energy_J": 3.2534175006815325e-13,
+            "step_ms_median_after_warmup": 7.2823,
+            "r_p_final": 0.0,
+            "r_p_p95": 0.0,
+            "r_p_mean": 0.0,
+            "r_d_final": 8.317298920701433e-07,
+            "r_d_p95": 8.317298920701433e-07,
+            "r_d_mean": 8.301164911017622e-07,
+            "r_c_final": 0.0,
+            "r_c_p95": 0.0,
+            "r_c_mean": 0.0,
+            "iterations_final": 9.0,
+            "iterations_p95": 9.0,
+            "iterations_mean": 9.034722222222221,
+            "converged_final": 1.0,
+            "converged_p95": 1.0,
+            "converged_mean": 1.0
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_A_20261029T021027425041Z/trajectory.npz",
+          "raw_sha256": "decd94f6d95a9160ec0af27d0e79cc1ab9a19b19ebe44a9776815bad1a6c8147",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "528621817875da88c0e6a8427fad148fd9b31c7fb27d28af903e7cbcccd2f631",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "gamma": 0.0
+            },
+            "constructor": {
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "use_collision_detector": true,
+              "use_fk_solver": false,
+              "collision_detector": {
+                "pipeline": "unified",
+                "broadphase": "explicit",
+                "bvtype": "aabb",
+                "max_contacts": null,
+                "max_contacts_per_world": 128,
+                "max_contacts_per_pair": 12,
+                "max_triangle_pairs": 1000000,
+                "default_gap": 1e-05
+              },
+              "constraints": {
+                "alpha": 0.01,
+                "beta": 0.01,
+                "gamma": 0.0,
+                "delta": 1e-06
+              },
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-06,
+                "dual_tolerance": 1e-06,
+                "compl_tolerance": 1e-06,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 60,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              },
+              "dvi": {
+                "tolerance": 1e-05,
+                "regularization": 1e-06,
+                "omega": 1.0,
+                "max_alternating_iterations": 24,
+                "inequality_sweeps_per_iteration": 2,
+                "use_schur_complement": false,
+                "bilateral_solve_interval": 1,
+                "tangential_warmstart_scale": 0.97,
+                "bilateral_solver_type": "LLTB",
+                "bilateral_solver_kwargs": {},
+                "warmstart_mode": "containers",
+                "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+              },
+              "fk": null,
+              "materials": {
+                "friction_mix_mode": "average",
+                "restitution_mix_mode": "min"
+              },
+              "rotation_correction": "twopi",
+              "integrator": "euler",
+              "dynamics_solver": "padmm",
+              "angular_velocity_damping": 0.0,
+              "collect_solver_info": false,
+              "compute_solution_metrics": false
+            },
+            "material_values": {
+              "ke": 20000.0,
+              "kd": 300.0
+            }
+          },
+          "resolved_treatment": 0.0,
+          "result_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_A_20261029T021027425041Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_A_20261029T020933769940Z/result.json",
+            "run_id": "kamino_contact_stabilization_A_20261029T020933769940Z",
+            "raw_sha256": "41430e6065421bcf4ccf1a223e47bc2a6851f6b5730fa1cf4376a2d6a6b61900",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        },
+        {
+          "run_id": "kamino_contact_stabilization_B_20261029T021034749645Z",
+          "variant": "B",
+          "metrics": {
+            "finite": true,
+            "steps": 144,
+            "initial_penetration_mm": 14.999999105930334,
+            "max_penetration_mm": 14.999999105930334,
+            "final_penetration_mm": 0.0,
+            "tail_penetration_mm": 0.0,
+            "initial_stack_height_m": 0.18500000089406968,
+            "final_stack_height_m": 0.2000009998679161,
+            "max_speed_m_s": 0.719952404499054,
+            "final_kinetic_energy_J": 3.2454095834355545e-13,
+            "max_kinetic_energy_J": 0.2591657340526581,
+            "step_ms_median_after_warmup": 6.9865,
+            "r_p_final": 0.0,
+            "r_p_p95": 4.9559655934672264e-08,
+            "r_p_mean": 2.548966375624949e-08,
+            "r_d_final": 8.317297215398867e-07,
+            "r_d_p95": 8.317297215398867e-07,
+            "r_d_mean": 6.446669794415871e-07,
+            "r_c_final": 0.0,
+            "r_c_p95": 1.2418018542348352e-07,
+            "r_c_mean": 1.555736644139512e-08,
+            "iterations_final": 9.0,
+            "iterations_p95": 9.0,
+            "iterations_mean": 8.715277777777779,
+            "converged_final": 1.0,
+            "converged_p95": 1.0,
+            "converged_mean": 1.0
+          },
+          "raw_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_B_20261029T021034749645Z/trajectory.npz",
+          "raw_sha256": "4993d5f37b219e753b994ff7c465865dc77942ee0cf9179d4ce1ceeb010abea4",
+          "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+          "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+          "scene_sha256": "528621817875da88c0e6a8427fad148fd9b31c7fb27d28af903e7cbcccd2f631",
+          "environment": {
+            "python": "3.12.14",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "device": "cpu",
+            "packages": {
+              "newton": "1.7.0",
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "mujoco": "3.15.0",
+              "mujoco-warp": "3.15.0"
+            },
+            "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+            "warp_devices": [
+              "cpu"
+            ]
+          },
+          "config": {
+            "treatment": {
+              "gamma": 0.2
+            },
+            "constructor": {
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "use_collision_detector": true,
+              "use_fk_solver": false,
+              "collision_detector": {
+                "pipeline": "unified",
+                "broadphase": "explicit",
+                "bvtype": "aabb",
+                "max_contacts": null,
+                "max_contacts_per_world": 128,
+                "max_contacts_per_pair": 12,
+                "max_triangle_pairs": 1000000,
+                "default_gap": 1e-05
+              },
+              "constraints": {
+                "alpha": 0.01,
+                "beta": 0.01,
+                "gamma": 0.2,
+                "delta": 1e-06
+              },
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-06,
+                "dual_tolerance": 1e-06,
+                "compl_tolerance": 1e-06,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 60,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              },
+              "dvi": {
+                "tolerance": 1e-05,
+                "regularization": 1e-06,
+                "omega": 1.0,
+                "max_alternating_iterations": 24,
+                "inequality_sweeps_per_iteration": 2,
+                "use_schur_complement": false,
+                "bilateral_solve_interval": 1,
+                "tangential_warmstart_scale": 0.97,
+                "bilateral_solver_type": "LLTB",
+                "bilateral_solver_kwargs": {},
+                "warmstart_mode": "containers",
+                "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+              },
+              "fk": null,
+              "materials": {
+                "friction_mix_mode": "average",
+                "restitution_mix_mode": "min"
+              },
+              "rotation_correction": "twopi",
+              "integrator": "euler",
+              "dynamics_solver": "padmm",
+              "angular_velocity_damping": 0.0,
+              "collect_solver_info": false,
+              "compute_solution_metrics": false
+            },
+            "material_values": {
+              "ke": 20000.0,
+              "kd": 300.0
+            }
+          },
+          "resolved_treatment": 0.2,
+          "result_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_B_20261029T021034749645Z/result.json",
+          "reproduction": {
+            "result_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_B_20261029T020940992051Z/result.json",
+            "run_id": "kamino_contact_stabilization_B_20261029T020940992051Z",
+            "raw_sha256": "c3e8f6f94fa167d5e63634a200ea2e4adadc8cfaef95a093561a67597ab685be",
+            "tolerances": {
+              "independent_process_repetitions_per_variant": 2,
+              "pose_atol": 1e-05,
+              "velocity_atol": 0.0001,
+              "rtol": 1e-05,
+              "timing_excluded": true
+            }
+          }
+        }
+      ],
+      "source_refs": [
+        {
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "line": 248,
+          "path": "newton/_src/solvers/kamino/config.py",
+          "repository": "newton-physics/newton",
+          "sha256": "4625e87ad4027fb246aeb879f816ef31cdc8441dae8872e8ce8d669aa0a3157d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L248",
+          "verification": "verified_snapshot"
+        }
+      ],
+      "environment": {
+        "python": "3.12.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "device": "cpu",
+        "packages": {
+          "newton": "1.7.0",
+          "numpy": "2.5.4",
+          "warp-lang": "1.18.0",
+          "mujoco": "3.15.0",
+          "mujoco-warp": "3.15.0"
+        },
+        "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+        "warp_devices": [
+          "cpu"
+        ]
+      },
+      "viewer_url": "/files/experiments/solver_parameter_lab/index.html?solver=kamino&case=kamino_contact_stabilization",
+      "protocol_file": "planning/p4/protocol.json",
+      "diff_file": "experiments/solver_parameter_lab/kamino_contact_stabilization-diff.json",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.08500000089406967,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.08500000089406967,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false
+        }
+      ],
+      "limitations": "单个固定场景；每个 A/B 值独立进程运行两次并核对轨迹。无随机重复或统计显著性声明。仅 CPU / 指定后端，不推及 GPU、其他场景或性能排名。",
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "solver_parameter_lab/run_experiments.py",
+          "max_lines": 100
+        }
+      }
+    }
+  ],
+  "analyzer_sha256": "fbf2d0f0a76ce57390305e6c8122eeda8e87be30f1b693c0663b6f372aea68e8",
+  "report_sha256": "9034b6fc8ba255169b38162b4e2d73cbbdfd286d42c21379565f4331f6d5b5d3",
+  "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99"
+}

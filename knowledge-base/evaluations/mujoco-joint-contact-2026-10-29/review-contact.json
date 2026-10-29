@@ -1,0 +1,2086 @@
+{
+  "status": "passed",
+  "checks": 278,
+  "passed_checks": 278,
+  "review_script_sha256": "4b3cfa186c67e09d2531fcbac73c84a660ba11e6cb11748ea27368b162ba4db8",
+  "reviewed_group_hashes": {
+    "protocol.json": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+    "runner.py": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+    "analyze.py": "05ebb99be7f4a6d8dea332b5d38a2f326605bbff4934edaa8033e9c50bee8a5e",
+    "analysis.json": "41569ee6ee37f190984add941333658110680196b78546cb996d9e0117ecfdaf",
+    "publication.json": "d0e53638ed14cef931edd3f4d080693e9b24c1c501077e16f24671da647926ad",
+    "RESULTS.md": "88ed1eaea1fcb472c3ca0984c1ccfcd88b6fa023e6bcdb7012821a3022667e92"
+  },
+  "measurements": [
+    {
+      "run_id": "native_gap_activation_A_r1_20261029T082234657141Z",
+      "raw_sha256": "4647cce02ab2766d0cb369f50ffcb45181c8540c3f0911789195726fbe4791fd",
+      "detection_s": 0.0905,
+      "activation_s": 0.0905,
+      "independent_restitution": 0.13649868965148926,
+      "impulse_max_error_Ns": 1.2250494418886149e-07,
+      "inactive_steps": 0
+    },
+    {
+      "run_id": "native_gap_activation_A_r2_20261029T082240990327Z",
+      "raw_sha256": "4647cce02ab2766d0cb369f50ffcb45181c8540c3f0911789195726fbe4791fd",
+      "detection_s": 0.0905,
+      "activation_s": 0.0905,
+      "independent_restitution": 0.13649868965148926,
+      "impulse_max_error_Ns": 1.2250494418886149e-07,
+      "inactive_steps": 0
+    },
+    {
+      "run_id": "native_gap_activation_B_r1_20261029T082247191134Z",
+      "raw_sha256": "0e1f2735afa7dc06f546abb08076df5a9ff6b36ff75ac5cc2f9164114042f5ca",
+      "detection_s": 0.0505,
+      "activation_s": 0.0905,
+      "independent_restitution": 0.13649868965148926,
+      "impulse_max_error_Ns": 1.2250494418886149e-07,
+      "inactive_steps": 541
+    },
+    {
+      "run_id": "native_gap_activation_B_r2_20261029T082253452010Z",
+      "raw_sha256": "0e1f2735afa7dc06f546abb08076df5a9ff6b36ff75ac5cc2f9164114042f5ca",
+      "detection_s": 0.0505,
+      "activation_s": 0.0905,
+      "independent_restitution": 0.13649868965148926,
+      "impulse_max_error_Ns": 1.2250494418886149e-07,
+      "inactive_steps": 541
+    },
+    {
+      "run_id": "native_solref_rebound_A_r1_20261029T082209426737Z",
+      "raw_sha256": "9a68550f90f3198adae78a03bb59c31e8494e2afcb8e89a9125410249f105548",
+      "detection_s": 0.1005,
+      "activation_s": 0.1005,
+      "independent_restitution": 0.5831485390663147,
+      "impulse_max_error_Ns": 6.434210719774569e-08,
+      "inactive_steps": 0
+    },
+    {
+      "run_id": "native_solref_rebound_A_r2_20261029T082215785321Z",
+      "raw_sha256": "9a68550f90f3198adae78a03bb59c31e8494e2afcb8e89a9125410249f105548",
+      "detection_s": 0.1005,
+      "activation_s": 0.1005,
+      "independent_restitution": 0.5831485390663147,
+      "impulse_max_error_Ns": 6.434210719774569e-08,
+      "inactive_steps": 0
+    },
+    {
+      "run_id": "native_solref_rebound_B_r1_20261029T082222092040Z",
+      "raw_sha256": "4bbcf26d9d6e32bb056b57fba8e3f1094f97e61f7508357f5981a1e0d32b8fc5",
+      "detection_s": 0.1005,
+      "activation_s": 0.1005,
+      "independent_restitution": 0.13649898767471313,
+      "impulse_max_error_Ns": 9.433906755784705e-08,
+      "inactive_steps": 0
+    },
+    {
+      "run_id": "native_solref_rebound_B_r2_20261029T082228398424Z",
+      "raw_sha256": "4bbcf26d9d6e32bb056b57fba8e3f1094f97e61f7508357f5981a1e0d32b8fc5",
+      "detection_s": 0.1005,
+      "activation_s": 0.1005,
+      "independent_restitution": 0.13649898767471313,
+      "impulse_max_error_Ns": 9.433906755784705e-08,
+      "inactive_steps": 0
+    }
+  ],
+  "findings": [
+    "Additional inertia audit: actual eigenvalues differ from authored .001 by at most4.19e-10kgm2 (float32 import/export). Initial extra1e-10 absolute audit was too strict; retained initial report/script, then bounded tolerance1e-9. Frozen protocol physics gates unchanged; off-axis spin is zero.",
+    "No blocking finding. Contact sample is preintegration geometry and solve impulse; state is postintegration, alignment verified independently.",
+    "MuJoCo3.15 source engine_collision_driver.c1946 uses margin+gap for candidate generation;1831/1840 retains includemargin and excludes distance>=margin. Measured gap changes detection only, with80 inactive samples and identical physical trajectory.",
+    "Authored raw solref ratio intervention also changes effective stiffness for positive solref: fixed timeconst alone is not a constant-stiffness damping-only experiment; publication states this boundary.",
+    "Native contact diagnostics do not imply Newton CONTACT_F support. No new simulation was run.",
+    "Eight instrumentation-incomplete attempts remain archived; exclusion does not remove negative physics."
+  ],
+  "checks_detail": [
+    {
+      "name": "formal_run_count",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z body/qvel post integration",
+      "actual": 2.9737118989459077e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z priority contact solref",
+      "actual": 4.470348362317633e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z includemargin retains margin",
+      "actual": 2.2351741811588166e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z inactive means outside margin",
+      "actual": null,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z independent first detection",
+      "actual": 0.0905,
+      "expected": 0.09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z independent first activation",
+      "actual": 0.0905,
+      "expected": 0.09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z entire trajectory impulse",
+      "actual": 1.2250494418886149e-07,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z reported restitution",
+      "actual": 0.13649868965148926,
+      "expected": 0.13649868965148926,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r1_20261029T082234657141Z reported events",
+      "actual": [
+        0.0905,
+        0.0905
+      ],
+      "expected": [
+        0.0905,
+        0.0905
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z body/qvel post integration",
+      "actual": 2.9737118989459077e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z priority contact solref",
+      "actual": 4.470348362317633e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z includemargin retains margin",
+      "actual": 2.2351741811588166e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z inactive means outside margin",
+      "actual": null,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z independent first detection",
+      "actual": 0.0905,
+      "expected": 0.09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z independent first activation",
+      "actual": 0.0905,
+      "expected": 0.09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z entire trajectory impulse",
+      "actual": 1.2250494418886149e-07,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z reported restitution",
+      "actual": 0.13649868965148926,
+      "expected": 0.13649868965148926,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_A_r2_20261029T082240990327Z reported events",
+      "actual": [
+        0.0905,
+        0.0905
+      ],
+      "expected": [
+        0.0905,
+        0.0905
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z body/qvel post integration",
+      "actual": 2.9737118989459077e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z priority contact solref",
+      "actual": 4.470348362317633e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z includemargin retains margin",
+      "actual": 2.2351741811588166e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z inactive means outside margin",
+      "actual": 1.955777406692505e-07,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z independent first detection",
+      "actual": 0.0505,
+      "expected": 0.049999999999999996,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z independent first activation",
+      "actual": 0.0905,
+      "expected": 0.09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z entire trajectory impulse",
+      "actual": 1.2250494418886149e-07,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z reported restitution",
+      "actual": 0.13649868965148926,
+      "expected": 0.13649868965148926,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r1_20261029T082247191134Z reported events",
+      "actual": [
+        0.0505,
+        0.0905
+      ],
+      "expected": [
+        0.0505,
+        0.0905
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z body/qvel post integration",
+      "actual": 2.9737118989459077e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z priority contact solref",
+      "actual": 4.470348362317633e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z includemargin retains margin",
+      "actual": 2.2351741811588166e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z inactive means outside margin",
+      "actual": 1.955777406692505e-07,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z independent first detection",
+      "actual": 0.0505,
+      "expected": 0.049999999999999996,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z independent first activation",
+      "actual": 0.0905,
+      "expected": 0.09,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z entire trajectory impulse",
+      "actual": 1.2250494418886149e-07,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z reported restitution",
+      "actual": 0.13649868965148926,
+      "expected": 0.13649868965148926,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activation_B_r2_20261029T082253452010Z reported events",
+      "actual": [
+        0.0505,
+        0.0905
+      ],
+      "expected": [
+        0.0505,
+        0.0905
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z body/qvel post integration",
+      "actual": 2.6403076058834074e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z priority contact solref",
+      "actual": 2.980232227667301e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z includemargin retains margin",
+      "actual": 0.0,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z inactive means outside margin",
+      "actual": null,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z independent first detection",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z independent first activation",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z entire trajectory impulse",
+      "actual": 6.434210719774569e-08,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z reported restitution",
+      "actual": 0.5831485390663147,
+      "expected": 0.5831485390663147,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z reported events",
+      "actual": [
+        0.1005,
+        0.1005
+      ],
+      "expected": [
+        0.1005,
+        0.1005
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r1_20261029T082209426737Z frozen restitution gate",
+      "actual": 0.5831485390663147,
+      "expected": 0.35,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z body/qvel post integration",
+      "actual": 2.6403076058834074e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z priority contact solref",
+      "actual": 2.980232227667301e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z includemargin retains margin",
+      "actual": 0.0,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z inactive means outside margin",
+      "actual": null,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z independent first detection",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z independent first activation",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z entire trajectory impulse",
+      "actual": 6.434210719774569e-08,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z reported restitution",
+      "actual": 0.5831485390663147,
+      "expected": 0.5831485390663147,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z reported events",
+      "actual": [
+        0.1005,
+        0.1005
+      ],
+      "expected": [
+        0.1005,
+        0.1005
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_A_r2_20261029T082215785321Z frozen restitution gate",
+      "actual": 0.5831485390663147,
+      "expected": 0.35,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z body/qvel post integration",
+      "actual": 2.8343575708689173e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z priority contact solref",
+      "actual": 4.470348362317633e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z includemargin retains margin",
+      "actual": 0.0,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z inactive means outside margin",
+      "actual": null,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z independent first detection",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z independent first activation",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z entire trajectory impulse",
+      "actual": 9.433906755784705e-08,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z reported restitution",
+      "actual": 0.13649898767471313,
+      "expected": 0.13649898767471313,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z reported events",
+      "actual": [
+        0.1005,
+        0.1005
+      ],
+      "expected": [
+        0.1005,
+        0.1005
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r1_20261029T082222092040Z frozen restitution gate",
+      "actual": 0.13649898767471313,
+      "expected": 0.25,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z immutable archive",
+      "actual": 8,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z protocol fingerprint",
+      "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z program fingerprint",
+      "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z time shape",
+      "actual": 801,
+      "expected": 801,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z actual native dt",
+      "actual": 0.0,
+      "expected": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z native time alignment",
+      "actual": 2.7755575615628914e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z preintegration contact time",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z body/qpos post integration",
+      "actual": 6.437301636186277e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z body/qvel post integration",
+      "actual": 2.8343575708689173e-08,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z body/joint same origin",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z initial state",
+      "actual": [
+        0.15000000596046448,
+        -1.0
+      ],
+      "expected": [
+        0.15,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z zero gravity",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z inertia",
+      "actual": [
+        0.0010000000474974513,
+        0.000999999581836164,
+        0.000999999581836164
+      ],
+      "expected": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z mass",
+      "actual": [
+        0.0,
+        1.0
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z raw solref mode",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z actual backend",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z independent surface distance",
+      "actual": 7.450580569168253e-10,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z inactive force exact zero",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z force maps generalized force",
+      "actual": 0.0,
+      "expected": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z force nonnegative",
+      "actual": 0.0,
+      "expected": -1e-10,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z priority contact solref",
+      "actual": 4.470348362317633e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z includemargin retains margin",
+      "actual": 0.0,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z inactive means outside margin",
+      "actual": null,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z independent first detection",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z independent first activation",
+      "actual": 0.1005,
+      "expected": 0.09999999999999999,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z entire trajectory impulse",
+      "actual": 9.433906755784705e-08,
+      "expected": 0.002,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z independent free flight",
+      "actual": 3.2782554626464844e-07,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z reported restitution",
+      "actual": 0.13649898767471313,
+      "expected": 0.13649898767471313,
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z reported events",
+      "actual": [
+        0.1005,
+        0.1005
+      ],
+      "expected": [
+        0.1005,
+        0.1005
+      ],
+      "passed": true
+    },
+    {
+      "name": "native_solref_rebound_B_r2_20261029T082228398424Z frozen restitution gate",
+      "actual": 0.13649898767471313,
+      "expected": 0.25,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundA exact repeat body_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundA exact repeat body_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundA exact repeat joint_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundA exact repeat joint_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundA exact repeat step_contact_normal_force",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundB exact repeat body_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundB exact repeat body_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundB exact repeat joint_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundB exact repeat joint_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_solref_reboundB exact repeat step_contact_normal_force",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationA exact repeat body_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationA exact repeat body_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationA exact repeat joint_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationA exact repeat joint_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationA exact repeat step_contact_normal_force",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationB exact repeat body_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationB exact repeat body_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationB exact repeat joint_q",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationB exact repeat joint_qd",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "native_gap_activationB exact repeat step_contact_normal_force",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "gap physical trajectories equivalent r1",
+      "actual": 0.0,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "gap force activation equal r1",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "gap physical trajectories equivalent r2",
+      "actual": 0.0,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "gap force activation equal r2",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "all excluded retained",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    }
+  ]
+}

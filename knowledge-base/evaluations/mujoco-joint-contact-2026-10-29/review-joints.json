@@ -1,0 +1,2390 @@
+{
+  "status": "passed",
+  "checks": 282,
+  "passed_checks": 282,
+  "reviewer": "independent contact agent",
+  "review_script_sha256": "8d23807b4d802f11b33ab92542076a81554089fa3a4a4d0244fb68451c6b74fc",
+  "reviewed_files_sha256": {
+    "runner.py": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+    "analyze.py": "49cdffc70d35044dfdadeaf3ba4913a5412fa2531623ef3fa2184fae7ef0f0ed",
+    "analysis.json": "ae3258f0a475b7fa7c980fe99a2de5f8a0362f8e792b45c8a5a01edf1de00ccb",
+    "protocol.json": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+    "publication.json": "39025b31b39c9eba9861603f690392829787b1efc072ba40dccc39e0f2dc3be7",
+    "RESULTS.md": "22779ae526f29c0e417f8b759ed2cf27939377a9faca558df9dc4109f8770bb8"
+  },
+  "measurements": [
+    {
+      "id": "mujoco_joint_passive_damping",
+      "variant": "A",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 0.0,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 5.9127807761072404e-08,
+      "v_reference_max_rad_s": 0.0,
+      "final_q_rad": 2.0000000000000013,
+      "final_v_rad_s": 1.0,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_passive_damping",
+      "variant": "A",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 0.0,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 5.9127807761072404e-08,
+      "v_reference_max_rad_s": 0.0,
+      "final_q_rad": 2.0000000000000013,
+      "final_v_rad_s": 1.0,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_passive_damping",
+      "variant": "B",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 5.5077470362263625e-17,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 2.3015707567575205e-07,
+      "v_reference_max_rad_s": 1.8908479154644553e-07,
+      "final_q_rad": 0.4907686040319452,
+      "final_v_rad_s": 0.01846232390250102,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_passive_damping",
+      "variant": "B",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 5.5077470362263625e-17,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 2.3015707567575205e-07,
+      "v_reference_max_rad_s": 1.8908479154644553e-07,
+      "final_q_rad": 0.4907686040319452,
+      "final_v_rad_s": 0.01846232390250102,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_armature_inertia",
+      "variant": "A",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 2.0469737016526324e-16,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 1.0471343991902415e-06,
+      "v_reference_max_rad_s": 1.0051727294957402e-06,
+      "final_q_rad": 2.0020009546283766,
+      "final_v_rad_s": 2.0000009536746997,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_armature_inertia",
+      "variant": "A",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 2.0469737016526324e-16,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 1.0471343991902415e-06,
+      "v_reference_max_rad_s": 1.0051727294957402e-06,
+      "final_q_rad": 2.0020009546283766,
+      "final_v_rad_s": 2.0000009536746997,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_armature_inertia",
+      "variant": "B",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 8.456776945386935e-17,
+      "native_inertia_kgm2": 3.99999952316287,
+      "q_reference_max_rad": 8.296966547138851e-08,
+      "v_reference_max_rad_s": 7.319450379128511e-08,
+      "final_q_rad": 0.5005000596642579,
+      "final_v_rad_s": 0.5000000596046541,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_armature_inertia",
+      "variant": "B",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 8.456776945386935e-17,
+      "native_inertia_kgm2": 3.99999952316287,
+      "q_reference_max_rad": 8.296966547138851e-08,
+      "v_reference_max_rad_s": 7.319450379128511e-08,
+      "final_q_rad": 0.5005000596642579,
+      "final_v_rad_s": 0.5000000596046541,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_pd_damping",
+      "variant": "A",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 5.1154013750581706e-17,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 1.937718269867661e-07,
+      "v_reference_max_rad_s": 1.153518989022162e-06,
+      "final_q_rad": 0.18363272657446036,
+      "final_v_rad_s": -0.2720325056378247,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_pd_damping",
+      "variant": "A",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 5.1154013750581706e-17,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 1.937718269867661e-07,
+      "v_reference_max_rad_s": 1.153518989022162e-06,
+      "final_q_rad": 0.18363272657446036,
+      "final_v_rad_s": -0.2720325056378247,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_pd_damping",
+      "variant": "B",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 1.3877787807814457e-17,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 8.44000545840995e-09,
+      "v_reference_max_rad_s": 4.880602044732285e-08,
+      "final_q_rad": 0.09994498374434636,
+      "final_v_rad_s": 0.00024438131413197743,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_pd_damping",
+      "variant": "B",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 1.3877787807814457e-17,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 8.44000545840995e-09,
+      "v_reference_max_rad_s": 4.880602044732285e-08,
+      "final_q_rad": 0.09994498374434636,
+      "final_v_rad_s": 0.00024438131413197743,
+      "constraint_max_iterations": 0
+    },
+    {
+      "id": "mujoco_joint_upper_limit",
+      "variant": "A",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 1.9778445294970545e-13,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 4.960393906738858e-08,
+      "v_reference_max_rad_s": 2.2244453429243194e-07,
+      "final_q_rad": 0.1001097841636003,
+      "final_v_rad_s": -8.713221247136336e-14,
+      "constraint_max_iterations": 1
+    },
+    {
+      "id": "mujoco_joint_upper_limit",
+      "variant": "A",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 1.9778445294970545e-13,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 4.960393906738858e-08,
+      "v_reference_max_rad_s": 2.2244453429243194e-07,
+      "final_q_rad": 0.1001097841636003,
+      "final_v_rad_s": -8.713221247136336e-14,
+      "constraint_max_iterations": 1
+    },
+    {
+      "id": "mujoco_joint_upper_limit",
+      "variant": "B",
+      "repeat": 1,
+      "momentum_identity_max_Nms": 1.8988613548244964e-13,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 1.0059452057453733e-07,
+      "v_reference_max_rad_s": 3.271102905211265e-07,
+      "final_q_rad": 0.20010978565371632,
+      "final_v_rad_s": -1.0156591851560286e-13,
+      "constraint_max_iterations": 1
+    },
+    {
+      "id": "mujoco_joint_upper_limit",
+      "variant": "B",
+      "repeat": 2,
+      "momentum_identity_max_Nms": 1.8988613548244964e-13,
+      "native_inertia_kgm2": 0.9999995231628702,
+      "q_reference_max_rad": 1.0059452057453733e-07,
+      "v_reference_max_rad_s": 3.271102905211265e-07,
+      "final_q_rad": 0.20010978565371632,
+      "final_v_rad_s": -1.0156591851560286e-13,
+      "constraint_max_iterations": 1
+    }
+  ],
+  "checks_detail": [
+    {
+      "name": "frozen protocol",
+      "actual": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+      "expected": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+      "passed": true
+    },
+    {
+      "name": "analysis fingerprint",
+      "actual": "49cdffc70d35044dfdadeaf3ba4913a5412fa2531623ef3fa2184fae7ef0f0ed",
+      "expected": "49cdffc70d35044dfdadeaf3ba4913a5412fa2531623ef3fa2184fae7ef0f0ed",
+      "passed": true
+    },
+    {
+      "name": "publication analysis fingerprint",
+      "actual": "ae3258f0a475b7fa7c980fe99a2de5f8a0362f8e792b45c8a5a01edf1de00ccb",
+      "expected": "ae3258f0a475b7fa7c980fe99a2de5f8a0362f8e792b45c8a5a01edf1de00ccb",
+      "passed": true
+    },
+    {
+      "name": "formal unique runs",
+      "actual": 16,
+      "expected": 16,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z after freeze",
+      "actual": "2026-10-29T08:16:09.819083+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z inertia",
+      "actual": 4.768371304475494e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z native momentum identity",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z native semiimplicit position",
+      "actual": 2.203098814490545e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z closed form q reference",
+      "actual": 5.9127807761072404e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z closed form v reference",
+      "actual": 0.0,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z after freeze",
+      "actual": "2026-10-29T08:16:26.144707+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z inertia",
+      "actual": 4.768371304475494e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z native momentum identity",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z native semiimplicit position",
+      "actual": 2.203098814490545e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z closed form q reference",
+      "actual": 5.9127807761072404e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z closed form v reference",
+      "actual": 0.0,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z after freeze",
+      "actual": "2026-10-29T08:16:32.303861+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z native momentum identity",
+      "actual": 5.5077470362263625e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z native semiimplicit position",
+      "actual": 2.7755575615628914e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z closed form q reference",
+      "actual": 2.3015707567575205e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z closed form v reference",
+      "actual": 1.8908479154644553e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z after freeze",
+      "actual": "2026-10-29T08:16:38.421866+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z native momentum identity",
+      "actual": 5.5077470362263625e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z native semiimplicit position",
+      "actual": 2.7755575615628914e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z closed form q reference",
+      "actual": 2.3015707567575205e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z closed form v reference",
+      "actual": 1.8908479154644553e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z after freeze",
+      "actual": "2026-10-29T08:16:44.583915+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z inertia",
+      "actual": 4.768371304475494e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z native momentum identity",
+      "actual": 2.0469737016526324e-16,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z native semiimplicit position",
+      "actual": 2.1597307275911248e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z closed form q reference",
+      "actual": 1.0471343991902415e-06,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z closed form v reference",
+      "actual": 1.0051727294957402e-06,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z after freeze",
+      "actual": "2026-10-29T08:16:51.011320+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z inertia",
+      "actual": 4.768371304475494e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z native momentum identity",
+      "actual": 2.0469737016526324e-16,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z native semiimplicit position",
+      "actual": 2.1597307275911248e-16,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z closed form q reference",
+      "actual": 1.0471343991902415e-06,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z closed form v reference",
+      "actual": 1.0051727294957402e-06,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z after freeze",
+      "actual": "2026-10-29T08:16:57.224723+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z native momentum identity",
+      "actual": 8.456776945386935e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z native semiimplicit position",
+      "actual": 5.377642775528102e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z closed form q reference",
+      "actual": 8.296966547138851e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z closed form v reference",
+      "actual": 7.319450379128511e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z after freeze",
+      "actual": "2026-10-29T08:17:03.400413+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z native momentum identity",
+      "actual": 8.456776945386935e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z native semiimplicit position",
+      "actual": 5.377642775528102e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z closed form q reference",
+      "actual": 8.296966547138851e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z closed form v reference",
+      "actual": 7.319450379128511e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z after freeze",
+      "actual": "2026-10-29T08:17:09.546497+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z native momentum identity",
+      "actual": 5.1154013750581706e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z native semiimplicit position",
+      "actual": 1.3850682753502319e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z actual actuator pre-state",
+      "actual": 3.725290342870835e-08,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z closed form q reference",
+      "actual": 1.937718269867661e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z closed form v reference",
+      "actual": 1.153518989022162e-06,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z after freeze",
+      "actual": "2026-10-29T08:17:15.743546+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z native momentum identity",
+      "actual": 5.1154013750581706e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z native semiimplicit position",
+      "actual": 1.3850682753502319e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z actual actuator pre-state",
+      "actual": 3.725290342870835e-08,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z closed form q reference",
+      "actual": 1.937718269867661e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z closed form v reference",
+      "actual": 1.153518989022162e-06,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z after freeze",
+      "actual": "2026-10-29T08:17:21.989517+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z inertia",
+      "actual": 4.768371304475494e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z native momentum identity",
+      "actual": 1.3877787807814457e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z native semiimplicit position",
+      "actual": 6.935505772118211e-18,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z actual actuator pre-state",
+      "actual": 3.725290328993047e-08,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z closed form q reference",
+      "actual": 8.44000545840995e-09,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z closed form v reference",
+      "actual": 4.880602044732285e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z after freeze",
+      "actual": "2026-10-29T08:17:28.209854+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z inertia",
+      "actual": 4.768371304475494e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z native momentum identity",
+      "actual": 1.3877787807814457e-17,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z native semiimplicit position",
+      "actual": 6.935505772118211e-18,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z actual actuator pre-state",
+      "actual": 3.725290328993047e-08,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z closed form q reference",
+      "actual": 8.44000545840995e-09,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z closed form v reference",
+      "actual": 4.880602044732285e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z after freeze",
+      "actual": "2026-10-29T08:17:34.441252+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z native momentum identity",
+      "actual": 1.9778445294970545e-13,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z native semiimplicit position",
+      "actual": 6.938893903907228e-18,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z analytical first limit event",
+      "actual": 0.448,
+      "expected": 0.448,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z not hard clipped",
+      "actual": 0.006066187866912973,
+      "expected": ">0",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z final reaction",
+      "actual": 9.529466105107076e-11,
+      "expected": 0.01,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z closed form q reference",
+      "actual": 4.960393906738858e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z closed form v reference",
+      "actual": 2.2244453429243194e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z after freeze",
+      "actual": "2026-10-29T08:17:40.636946+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z native momentum identity",
+      "actual": 1.9778445294970545e-13,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z native semiimplicit position",
+      "actual": 6.938893903907228e-18,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z analytical first limit event",
+      "actual": 0.448,
+      "expected": 0.448,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z not hard clipped",
+      "actual": 0.006066187866912973,
+      "expected": ">0",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z final reaction",
+      "actual": 9.529466105107076e-11,
+      "expected": 0.01,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z closed form q reference",
+      "actual": 4.960393906738858e-08,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z closed form v reference",
+      "actual": 2.2244453429243194e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z after freeze",
+      "actual": "2026-10-29T08:17:46.830400+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z native momentum identity",
+      "actual": 1.8988613548244964e-13,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z native semiimplicit position",
+      "actual": 1.3846129951410827e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z analytical first limit event",
+      "actual": 0.632,
+      "expected": 0.632,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z not hard clipped",
+      "actual": 0.008049196569207134,
+      "expected": ">0",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z final reaction",
+      "actual": 2.123011595411839e-07,
+      "expected": 0.01,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z closed form q reference",
+      "actual": 1.0059452057453733e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z closed form v reference",
+      "actual": 3.271102905211265e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z archive integrity",
+      "actual": 7,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z protocol/program",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z installed sources",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z source ref current hashes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z after freeze",
+      "actual": "2026-10-29T08:17:53.107119+00:00",
+      "expected": "2026-10-29T08:13:37.668963+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z force time alignment",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z physical arrays finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z final backend",
+      "actual": {
+        "timestep": 0.002,
+        "integrator": 0,
+        "solver": 2,
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "disableflags": 524288,
+        "enableflags": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "integrator": "euler",
+        "solver": "newton",
+        "iterations": 100,
+        "tolerance": 1e-10,
+        "update_data_interval": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z inertia",
+      "actual": 4.768371302255048e-07,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z native momentum identity",
+      "actual": 1.8988613548244964e-13,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z native semiimplicit position",
+      "actual": 1.3846129951410827e-17,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z reported passive pre-state",
+      "actual": 0.0,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z actual actuator pre-state",
+      "actual": 0.0,
+      "expected": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z analytical first limit event",
+      "actual": 0.632,
+      "expected": 0.632,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z not hard clipped",
+      "actual": 0.008049196569207134,
+      "expected": ">0",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z final reaction",
+      "actual": 2.123011595411839e-07,
+      "expected": 0.01,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z closed form q reference",
+      "actual": 1.0059452057453733e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z closed form v reference",
+      "actual": 3.271102905211265e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z native warnings",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_dampingA independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_passive_dampingB independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertiaA independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_armature_inertiaB independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_dampingA independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_pd_dampingB independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limitA independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "mujoco_joint_upper_limitB independent repeats",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "t": 0.0,
+        "force_t": 0.0,
+        "qfrc_passive": 0.0,
+        "qfrc_actuator": 0.0,
+        "qfrc_applied": 0.0,
+        "qfrc_constraint": 0.0,
+        "qacc": 0.0,
+        "solver_niter": 0.0,
+        "native_mass_matrix": 0.0,
+        "nefc": 0.0,
+        "warning_number": 0.0
+      },
+      "expected": "all physical/diagnostic arrays exact",
+      "passed": true
+    },
+    {
+      "name": "retained initial harness failure",
+      "actual": "failed",
+      "expected": "failed",
+      "passed": true
+    },
+    {
+      "name": "native diagnostic only mass matrix",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "scope": "Independent closed-form/matrix-power references, native momentum identities, source and archive integrity, force/state alignment, repeat diagnostics, retained pre-step harness failure. No simulation and no group analyzer import.",
+  "limitations": [
+    "Only the frozen single-hinge Euler/native CPU scenes; no general gains or solver convergence claim.",
+    "Upper limit exact reference ends at activation; soft transient verified by bounded penetration and late force balance, not an invented analytic waveform.",
+    "Nominal inertia differs by float export rounding; measured inertia used only for separate momentum identity, frozen nominal reference remains unchanged."
+  ]
+}

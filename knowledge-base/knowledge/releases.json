@@ -1,0 +1,18 @@
+{
+  "active_version": "1.7.0",
+  "releases": [
+    {
+      "version": "1.7.0",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "status": "published",
+      "source_lock": "manifests/source-lock.json",
+      "api_inventory": "knowledge/releases/1.7.0/source-inventory.json",
+      "coverage_matrix": "evaluations/coverage-matrix.json",
+      "deep_solvers": ["vbd", "mujoco", "kamino"],
+      "indexed_solvers": ["featherstone", "semi-implicit", "xpbd", "implicit-mpm", "style3d"],
+      "measured_pairs": {"vbd": 17, "mujoco": 2, "kamino": 2},
+      "runtime_scope": "CPU measurements in saved protocols; no GPU validation claimed"
+    }
+  ],
+  "candidate_policy": "Static comparison proposals only. No automatic publication or physical-evidence inheritance. A new release needs separate source lock, IDs, contract routing, curation and acceptance."
+}

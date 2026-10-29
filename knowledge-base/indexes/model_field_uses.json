@@ -1,0 +1,3694 @@
+{
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "scope": "direct model.field / self.model.field syntax in VBD modules; aliases are not resolved",
+  "fields": {
+    "tet_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 126,
+        "end_line": 126,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L126"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1057,
+        "end_line": 1057,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1057"
+      }
+    ],
+    "tri_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 129,
+        "end_line": 129,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L129"
+      }
+    ],
+    "edge_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 134,
+        "end_line": 134,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L134"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1087,
+        "end_line": 1087,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1087"
+      }
+    ],
+    "soft_mesh_adjacency_device": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1037,
+        "end_line": 1037,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1037"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1035,
+        "end_line": 1035,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1035"
+      }
+    ],
+    "particle_q": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1044,
+        "end_line": 1044,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1044"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1029,
+        "end_line": 1029,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1029"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1031,
+        "end_line": 1031,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1031"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1103,
+        "end_line": 1103,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1103"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2748,
+        "end_line": 2748,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2748"
+      }
+    ],
+    "joint_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1860,
+        "end_line": 1860,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1860"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2473,
+        "end_line": 2473,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2473"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 929,
+        "end_line": 929,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L929"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1987,
+        "end_line": 1987,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1987"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2147,
+        "end_line": 2147,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2147"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2180,
+        "end_line": 2180,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2180"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2762,
+        "end_line": 2762,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2762"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4306,
+        "end_line": 4306,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4306"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1302,
+        "end_line": 1302,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1302"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1303,
+        "end_line": 1303,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1303"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1304,
+        "end_line": 1304,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1304"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1305,
+        "end_line": 1305,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1305"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1315,
+        "end_line": 1315,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1315"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1316,
+        "end_line": 1316,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1316"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1317,
+        "end_line": 1317,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1317"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1320,
+        "end_line": 1320,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1320"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1321,
+        "end_line": 1321,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1321"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1346,
+        "end_line": 1346,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1346"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1347,
+        "end_line": 1347,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1347"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1415,
+        "end_line": 1415,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1415"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1422,
+        "end_line": 1422,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1422"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1753,
+        "end_line": 1753,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1753"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1811,
+        "end_line": 1811,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1811"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1820,
+        "end_line": 1820,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1820"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2151,
+        "end_line": 2151,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2151"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2184,
+        "end_line": 2184,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2184"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2234,
+        "end_line": 2234,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2234"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2324,
+        "end_line": 2324,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2324"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3647,
+        "end_line": 3647,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3647"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4662,
+        "end_line": 4662,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4662"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1326,
+        "end_line": 1326,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1326"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1338,
+        "end_line": 1338,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1338"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1339,
+        "end_line": 1339,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1339"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1977,
+        "end_line": 1977,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1977"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3591,
+        "end_line": 3591,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3591"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3708,
+        "end_line": 3708,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3708"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4309,
+        "end_line": 4309,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4309"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4686,
+        "end_line": 4686,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4686"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3596,
+        "end_line": 3596,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3596"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3655,
+        "end_line": 3655,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3655"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3738,
+        "end_line": 3738,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3738"
+      }
+    ],
+    "joint_dof_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2224,
+        "end_line": 2224,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2224"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1307,
+        "end_line": 1307,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1307"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1309,
+        "end_line": 1309,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1309"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1312,
+        "end_line": 1312,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1312"
+      }
+    ],
+    "body_color_groups": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4037,
+        "end_line": 4037,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4037"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1394,
+        "end_line": 1394,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1394"
+      }
+    ],
+    "particle_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 903,
+        "end_line": 903,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L903"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1020,
+        "end_line": 1020,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1020"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1093,
+        "end_line": 1093,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1093"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1094,
+        "end_line": 1094,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1094"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1104,
+        "end_line": 1104,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1104"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1105,
+        "end_line": 1105,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1105"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1357,
+        "end_line": 1357,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1357"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1768,
+        "end_line": 1768,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1768"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2306,
+        "end_line": 2306,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2306"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2722,
+        "end_line": 2722,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2722"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3009,
+        "end_line": 3009,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3009"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3040,
+        "end_line": 3040,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3040"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3192,
+        "end_line": 3192,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3192"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3453,
+        "end_line": 3453,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3453"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3765,
+        "end_line": 3765,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3765"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4628,
+        "end_line": 4628,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4628"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1363,
+        "end_line": 1363,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1363"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1635,
+        "end_line": 1635,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1635"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2876,
+        "end_line": 2876,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2876"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2970,
+        "end_line": 2970,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2970"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3013,
+        "end_line": 3013,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3013"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3156,
+        "end_line": 3156,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3156"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3220,
+        "end_line": 3220,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3220"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3382,
+        "end_line": 3382,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3382"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3392,
+        "end_line": 3392,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3392"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4283,
+        "end_line": 4283,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4283"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4368,
+        "end_line": 4368,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4368"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4634,
+        "end_line": 4634,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4634"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1065,
+        "end_line": 1065,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1065"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1086,
+        "end_line": 1086,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1086"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3049,
+        "end_line": 3049,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3049"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4002,
+        "end_line": 4002,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4002"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4075,
+        "end_line": 4075,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4075"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1257,
+        "end_line": 1257,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1257"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2742,
+        "end_line": 2742,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2742"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 762,
+        "end_line": 762,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L762"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 881,
+        "end_line": 881,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L881"
+      }
+    ],
+    "shape_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1741,
+        "end_line": 1741,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1741"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2952,
+        "end_line": 2952,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2952"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1363,
+        "end_line": 1363,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1363"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2876,
+        "end_line": 2876,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2876"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 895,
+        "end_line": 895,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L895"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1248,
+        "end_line": 1248,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1248"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1257,
+        "end_line": 1257,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1257"
+      }
+    ],
+    "joint_type": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1814,
+        "end_line": 1814,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1814"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1862,
+        "end_line": 1862,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1862"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1948,
+        "end_line": 1948,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1948"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2228,
+        "end_line": 2228,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2228"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2481,
+        "end_line": 2481,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2481"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1822,
+        "end_line": 1822,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1822"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2153,
+        "end_line": 2153,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2153"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2186,
+        "end_line": 2186,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2186"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4183,
+        "end_line": 4183,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4183"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4311,
+        "end_line": 4311,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4311"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4666,
+        "end_line": 4666,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4666"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3600,
+        "end_line": 3600,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3600"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3657,
+        "end_line": 3657,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3657"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3712,
+        "end_line": 3712,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3712"
+      }
+    ],
+    "body_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2137,
+        "end_line": 2137,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2137"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2374,
+        "end_line": 2374,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2374"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2862,
+        "end_line": 2862,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2862"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2895,
+        "end_line": 2895,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2895"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2912,
+        "end_line": 2912,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2912"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 693,
+        "end_line": 693,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L693"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1235,
+        "end_line": 1235,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1235"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1236,
+        "end_line": 1236,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1236"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1239,
+        "end_line": 1239,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1239"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1242,
+        "end_line": 1242,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1242"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1243,
+        "end_line": 1243,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1243"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1244,
+        "end_line": 1244,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1244"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1250,
+        "end_line": 1250,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1250"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1260,
+        "end_line": 1260,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1260"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1475,
+        "end_line": 1475,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1475"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2763,
+        "end_line": 2763,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2763"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2968,
+        "end_line": 2968,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2968"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3065,
+        "end_line": 3065,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3065"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3092,
+        "end_line": 3092,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3092"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3170,
+        "end_line": 3170,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3170"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3758,
+        "end_line": 3758,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3758"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4658,
+        "end_line": 4658,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4658"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1252,
+        "end_line": 1252,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1252"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1262,
+        "end_line": 1262,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1262"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3173,
+        "end_line": 3173,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3173"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3639,
+        "end_line": 3639,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3639"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4440,
+        "end_line": 4440,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4440"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1581,
+        "end_line": 1581,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1581"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1655,
+        "end_line": 1655,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1655"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2368,
+        "end_line": 2368,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2368"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2328,
+        "end_line": 2328,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2328"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2342,
+        "end_line": 2342,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2342"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2337,
+        "end_line": 2337,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2337"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2359,
+        "end_line": 2359,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2359"
+      }
+    ],
+    "soft_mesh_adjacency": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2304,
+        "end_line": 2304,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2304"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2306,
+        "end_line": 2306,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2306"
+      }
+    ],
+    "attachment_particle_body_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2366,
+        "end_line": 2366,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2366"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 783,
+        "end_line": 783,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L783"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 879,
+        "end_line": 879,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L879"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3774,
+        "end_line": 3774,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3774"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4043,
+        "end_line": 4043,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4043"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3777,
+        "end_line": 3777,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3777"
+      }
+    ],
+    "body_q": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2866,
+        "end_line": 2866,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2866"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1223,
+        "end_line": 1223,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1223"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1224,
+        "end_line": 1224,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1224"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1225,
+        "end_line": 1225,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1225"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1827,
+        "end_line": 1827,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1827"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2778,
+        "end_line": 2778,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2778"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4176,
+        "end_line": 4176,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4176"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4325,
+        "end_line": 4325,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4325"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3671,
+        "end_line": 3671,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3671"
+      }
+    ],
+    "spring_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3867,
+        "end_line": 3867,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3867"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3883,
+        "end_line": 3883,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3883"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3876,
+        "end_line": 3876,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3876"
+      }
+    ],
+    "tri_materials": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 130,
+        "end_line": 130,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L130"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3930,
+        "end_line": 3930,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3930"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3962,
+        "end_line": 3962,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3962"
+      }
+    ],
+    "edge_bending_properties": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 135,
+        "end_line": 135,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L135"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3935,
+        "end_line": 3935,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3935"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3967,
+        "end_line": 3967,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3967"
+      }
+    ],
+    "body_qd": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 992,
+        "end_line": 992,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L992"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2779,
+        "end_line": 2779,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2779"
+      }
+    ],
+    "device": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1047,
+        "end_line": 1047,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1047"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1050,
+        "end_line": 1050,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1050"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1721,
+        "end_line": 1721,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1721"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3910,
+        "end_line": 3910,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3910"
+      }
+    ],
+    "particle_color_groups": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1097,
+        "end_line": 1097,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1097"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3773,
+        "end_line": 3773,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3773"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3913,
+        "end_line": 3913,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3913"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3922,
+        "end_line": 3922,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3922"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3951,
+        "end_line": 3951,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3951"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3954,
+        "end_line": 3954,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3954"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3818,
+        "end_line": 3818,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3818"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3822,
+        "end_line": 3822,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3822"
+      }
+    ],
+    "world_count": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1211,
+        "end_line": 1211,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1211"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2761,
+        "end_line": 2761,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2761"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2771,
+        "end_line": 2771,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2771"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2746,
+        "end_line": 2746,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2746"
+      }
+    ],
+    "joint_dof_dim": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1863,
+        "end_line": 1863,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1863"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1953,
+        "end_line": 1953,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1953"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2232,
+        "end_line": 2232,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2232"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2188,
+        "end_line": 2188,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2188"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2777,
+        "end_line": 2777,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2777"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4219,
+        "end_line": 4219,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4219"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4326,
+        "end_line": 4326,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4326"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3607,
+        "end_line": 3607,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3607"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3666,
+        "end_line": 3666,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3666"
+      }
+    ],
+    "joint_qd_start": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1949,
+        "end_line": 1949,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1949"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2231,
+        "end_line": 2231,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2231"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2187,
+        "end_line": 2187,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2187"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2776,
+        "end_line": 2776,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2776"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4192,
+        "end_line": 4192,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4192"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4320,
+        "end_line": 4320,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4320"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3606,
+        "end_line": 3606,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3606"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3665,
+        "end_line": 3665,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3665"
+      }
+    ],
+    "joint_target_ke": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1950,
+        "end_line": 1950,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1950"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2190,
+        "end_line": 2190,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2190"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4201,
+        "end_line": 4201,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4201"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4336,
+        "end_line": 4336,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4336"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3682,
+        "end_line": 3682,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3682"
+      }
+    ],
+    "joint_target_kd": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1951,
+        "end_line": 1951,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1951"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2191,
+        "end_line": 2191,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2191"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4202,
+        "end_line": 4202,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4202"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4337,
+        "end_line": 4337,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4337"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3683,
+        "end_line": 3683,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3683"
+      }
+    ],
+    "joint_limit_ke": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1952,
+        "end_line": 1952,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1952"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2192,
+        "end_line": 2192,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2192"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4207,
+        "end_line": 4207,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4207"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4342,
+        "end_line": 4342,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4342"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3686,
+        "end_line": 3686,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3686"
+      }
+    ],
+    "joint_q": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2229,
+        "end_line": 2229,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2229"
+      }
+    ],
+    "joint_q_start": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2230,
+        "end_line": 2230,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2230"
+      }
+    ],
+    "control": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2573,
+        "end_line": 2573,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2573"
+      }
+    ],
+    "shape_body": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2906,
+        "end_line": 2906,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2906"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3497,
+        "end_line": 3497,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3497"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3802,
+        "end_line": 3802,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3802"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4404,
+        "end_line": 4404,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4404"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4451,
+        "end_line": 4451,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4451"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4589,
+        "end_line": 4589,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4589"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1605,
+        "end_line": 1605,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1605"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1678,
+        "end_line": 1678,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1678"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3024,
+        "end_line": 3024,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3024"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3138,
+        "end_line": 3138,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3138"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3404,
+        "end_line": 3404,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3404"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4265,
+        "end_line": 4265,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4265"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4296,
+        "end_line": 4296,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4296"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3266,
+        "end_line": 3266,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3266"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4019,
+        "end_line": 4019,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4019"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4090,
+        "end_line": 4090,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4090"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4154,
+        "end_line": 4154,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4154"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3335,
+        "end_line": 3335,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3335"
+      }
+    ],
+    "shape_type": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2907,
+        "end_line": 2907,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2907"
+      }
+    ],
+    "shape_scale": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2908,
+        "end_line": 2908,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2908"
+      }
+    ],
+    "shape_transform": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2909,
+        "end_line": 2909,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2909"
+      }
+    ],
+    "shape_collision_radius": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2910,
+        "end_line": 2910,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2910"
+      }
+    ],
+    "body_com": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2911,
+        "end_line": 2911,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2911"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3068,
+        "end_line": 3068,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3068"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3501,
+        "end_line": 3501,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3501"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3806,
+        "end_line": 3806,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3806"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4407,
+        "end_line": 4407,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4407"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4455,
+        "end_line": 4455,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4455"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4592,
+        "end_line": 4592,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4592"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4655,
+        "end_line": 4655,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4655"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1568,
+        "end_line": 1568,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1568"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1591,
+        "end_line": 1591,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1591"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1685,
+        "end_line": 1685,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1685"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3029,
+        "end_line": 3029,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3029"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3143,
+        "end_line": 3143,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3143"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3176,
+        "end_line": 3176,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3176"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3628,
+        "end_line": 3628,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3628"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4181,
+        "end_line": 4181,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4181"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3599,
+        "end_line": 3599,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3599"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3688,
+        "end_line": 3688,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3688"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4054,
+        "end_line": 4054,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4054"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4088,
+        "end_line": 4088,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4088"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4129,
+        "end_line": 4129,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4129"
+      }
+    ],
+    "body_flags": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1478,
+        "end_line": 1478,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1478"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3498,
+        "end_line": 3498,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3498"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1565,
+        "end_line": 1565,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1565"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1679,
+        "end_line": 1679,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1679"
+      }
+    ],
+    "body_world": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1480,
+        "end_line": 1480,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1480"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2772,
+        "end_line": 2772,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2772"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3625,
+        "end_line": 3625,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3625"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3336,
+        "end_line": 3336,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3336"
+      }
+    ],
+    "joint_parent": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1823,
+        "end_line": 1823,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1823"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2155,
+        "end_line": 2155,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2155"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2325,
+        "end_line": 2325,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2325"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4185,
+        "end_line": 4185,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4185"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4313,
+        "end_line": 4313,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4313"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4668,
+        "end_line": 4668,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4668"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3602,
+        "end_line": 3602,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3602"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3660,
+        "end_line": 3660,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3660"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3716,
+        "end_line": 3716,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3716"
+      }
+    ],
+    "joint_child": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1824,
+        "end_line": 1824,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1824"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2156,
+        "end_line": 2156,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2156"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2326,
+        "end_line": 2326,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2326"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4186,
+        "end_line": 4186,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4186"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4314,
+        "end_line": 4314,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4314"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4669,
+        "end_line": 4669,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4669"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3603,
+        "end_line": 3603,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3603"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3661,
+        "end_line": 3661,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3661"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3717,
+        "end_line": 3717,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3717"
+      }
+    ],
+    "joint_X_p": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1825,
+        "end_line": 1825,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1825"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4187,
+        "end_line": 4187,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4187"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4315,
+        "end_line": 4315,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4315"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4670,
+        "end_line": 4670,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4670"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3604,
+        "end_line": 3604,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3604"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3662,
+        "end_line": 3662,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3662"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3718,
+        "end_line": 3718,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3718"
+      }
+    ],
+    "joint_X_c": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1826,
+        "end_line": 1826,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1826"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4188,
+        "end_line": 4188,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4188"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4316,
+        "end_line": 4316,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4316"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4671,
+        "end_line": 4671,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4671"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3605,
+        "end_line": 3605,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3605"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3663,
+        "end_line": 3663,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3663"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3719,
+        "end_line": 3719,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3719"
+      }
+    ],
+    "joint_enabled": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2154,
+        "end_line": 2154,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2154"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4184,
+        "end_line": 4184,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4184"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4312,
+        "end_line": 4312,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4312"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4667,
+        "end_line": 4667,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4667"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3601,
+        "end_line": 3601,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3601"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3659,
+        "end_line": 3659,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3659"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3713,
+        "end_line": 3713,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3713"
+      }
+    ],
+    "attachment_particle_body_body": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2373,
+        "end_line": 2373,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2373"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3786,
+        "end_line": 3786,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3786"
+      }
+    ],
+    "joint_world": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2773,
+        "end_line": 2773,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2773"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3658,
+        "end_line": 3658,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3658"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3714,
+        "end_line": 3714,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3714"
+      }
+    ],
+    "shape_source": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2942,
+        "end_line": 2942,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2942"
+      }
+    ],
+    "gravity": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3207,
+        "end_line": 3207,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3207"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3624,
+        "end_line": 3624,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3624"
+      }
+    ],
+    "particle_world": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3208,
+        "end_line": 3208,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3208"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2747,
+        "end_line": 2747,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2747"
+      }
+    ],
+    "particle_inv_mass": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3212,
+        "end_line": 3212,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3212"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1667,
+        "end_line": 1667,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1667"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1706,
+        "end_line": 1706,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1706"
+      }
+    ],
+    "particle_flags": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3214,
+        "end_line": 3214,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3214"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1666,
+        "end_line": 1666,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1666"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1705,
+        "end_line": 1705,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1705"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3927,
+        "end_line": 3927,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3927"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3959,
+        "end_line": 3959,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3959"
+      }
+    ],
+    "soft_contact_ke": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3435,
+        "end_line": 3435,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3435"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1713,
+        "end_line": 1713,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1713"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3902,
+        "end_line": 3902,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3902"
+      }
+    ],
+    "soft_contact_kd": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3436,
+        "end_line": 3436,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3436"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1714,
+        "end_line": 1714,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1714"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3903,
+        "end_line": 3903,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3903"
+      }
+    ],
+    "soft_contact_mu": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3437,
+        "end_line": 3437,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3437"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1715,
+        "end_line": 1715,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1715"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3904,
+        "end_line": 3904,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3904"
+      }
+    ],
+    "shape_material_ke": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3438,
+        "end_line": 3438,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3438"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3320,
+        "end_line": 3320,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3320"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3355,
+        "end_line": 3355,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3355"
+      }
+    ],
+    "shape_material_kd": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3439,
+        "end_line": 3439,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3439"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3321,
+        "end_line": 3321,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3321"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3356,
+        "end_line": 3356,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3356"
+      }
+    ],
+    "shape_material_mu": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3440,
+        "end_line": 3440,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3440"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3322,
+        "end_line": 3322,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3322"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3357,
+        "end_line": 3357,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3357"
+      }
+    ],
+    "shape_margin": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3811,
+        "end_line": 3811,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3811"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4468,
+        "end_line": 4468,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4468"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1604,
+        "end_line": 1604,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1604"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1690,
+        "end_line": 1690,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1690"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4297,
+        "end_line": 4297,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4297"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2878,
+        "end_line": 2878,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2878"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4020,
+        "end_line": 4020,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4020"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4104,
+        "end_line": 4104,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4104"
+      }
+    ],
+    "particle_radius": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4450,
+        "end_line": 4450,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4450"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1587,
+        "end_line": 1587,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1587"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1672,
+        "end_line": 1672,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1672"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4295,
+        "end_line": 4295,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4295"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2877,
+        "end_line": 2877,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2877"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4018,
+        "end_line": 4018,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4018"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4084,
+        "end_line": 4084,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4084"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3827,
+        "end_line": 3827,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3827"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3853,
+        "end_line": 3853,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3853"
+      }
+    ],
+    "attachment_particle_body_particle": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 880,
+        "end_line": 880,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L880"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3787,
+        "end_line": 3787,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3787"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4056,
+        "end_line": 4056,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4056"
+      }
+    ],
+    "body_inv_mass": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1564,
+        "end_line": 1564,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1564"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1680,
+        "end_line": 1680,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1680"
+      }
+    ],
+    "tri_indices": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1709,
+        "end_line": 1709,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1709"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3112,
+        "end_line": 3112,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3112"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3897,
+        "end_line": 3897,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3897"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3928,
+        "end_line": 3928,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3928"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3960,
+        "end_line": 3960,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3960"
+      }
+    ],
+    "edge_indices": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1710,
+        "end_line": 1710,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1710"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3113,
+        "end_line": 3113,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3113"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3898,
+        "end_line": 3898,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3898"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3932,
+        "end_line": 3932,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3932"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3964,
+        "end_line": 3964,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3964"
+      }
+    ],
+    "body_inertia": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3629,
+        "end_line": 3629,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3629"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4179,
+        "end_line": 4179,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4179"
+      }
+    ],
+    "body_mass": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4177,
+        "end_line": 4177,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4177"
+      }
+    ],
+    "joint_axis": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4189,
+        "end_line": 4189,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4189"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4317,
+        "end_line": 4317,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4317"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3608,
+        "end_line": 3608,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3608"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3664,
+        "end_line": 3664,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3664"
+      }
+    ],
+    "joint_target_q_start": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4193,
+        "end_line": 4193,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4193"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4321,
+        "end_line": 4321,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4321"
+      }
+    ],
+    "joint_limit_lower": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4205,
+        "end_line": 4205,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4205"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4340,
+        "end_line": 4340,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4340"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3684,
+        "end_line": 3684,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3684"
+      }
+    ],
+    "joint_limit_upper": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4206,
+        "end_line": 4206,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4206"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4341,
+        "end_line": 4341,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4341"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3685,
+        "end_line": 3685,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3685"
+      }
+    ],
+    "joint_limit_kd": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4208,
+        "end_line": 4208,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4208"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4343,
+        "end_line": 4343,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4343"
+      }
+    ],
+    "particle_qd": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2749,
+        "end_line": 2749,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2749"
+      }
+    ],
+    "particle_colors": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3783,
+        "end_line": 3783,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3783"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3875,
+        "end_line": 3875,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3875"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3896,
+        "end_line": 3896,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3896"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3850,
+        "end_line": 3850,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3850"
+      }
+    ],
+    "attachment_particle_body_body_point": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3788,
+        "end_line": 3788,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3788"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4057,
+        "end_line": 4057,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4057"
+      }
+    ],
+    "attachment_particle_body_stiffness": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3789,
+        "end_line": 3789,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3789"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4058,
+        "end_line": 4058,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4058"
+      }
+    ],
+    "attachment_particle_body_damping": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3790,
+        "end_line": 3790,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3790"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4059,
+        "end_line": 4059,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4059"
+      }
+    ],
+    "attachment_particle_body_enabled": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3791,
+        "end_line": 3791,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3791"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4060,
+        "end_line": 4060,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4060"
+      }
+    ],
+    "spring_indices": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3877,
+        "end_line": 3877,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3877"
+      }
+    ],
+    "spring_rest_length": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3878,
+        "end_line": 3878,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3878"
+      }
+    ],
+    "spring_stiffness": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3879,
+        "end_line": 3879,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3879"
+      }
+    ],
+    "spring_damping": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3880,
+        "end_line": 3880,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3880"
+      }
+    ],
+    "particle_mass": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3925,
+        "end_line": 3925,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3925"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3957,
+        "end_line": 3957,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3957"
+      }
+    ],
+    "tri_poses": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3929,
+        "end_line": 3929,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3929"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3961,
+        "end_line": 3961,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3961"
+      }
+    ],
+    "tri_areas": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3931,
+        "end_line": 3931,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3931"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3963,
+        "end_line": 3963,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3963"
+      }
+    ],
+    "edge_rest_angle": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3933,
+        "end_line": 3933,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3933"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3965,
+        "end_line": 3965,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3965"
+      }
+    ],
+    "edge_rest_length": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3934,
+        "end_line": 3934,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3934"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3966,
+        "end_line": 3966,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3966"
+      }
+    ],
+    "tet_indices": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3936,
+        "end_line": 3936,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3936"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3968,
+        "end_line": 3968,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3968"
+      }
+    ],
+    "tet_poses": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3937,
+        "end_line": 3937,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3937"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3969,
+        "end_line": 3969,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3969"
+      }
+    ],
+    "tet_materials": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3938,
+        "end_line": 3938,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3938"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3970,
+        "end_line": 3970,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3970"
+      }
+    ],
+    "shape_world": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3334,
+        "end_line": 3334,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3334"
+      }
+    ]
+  }
+}

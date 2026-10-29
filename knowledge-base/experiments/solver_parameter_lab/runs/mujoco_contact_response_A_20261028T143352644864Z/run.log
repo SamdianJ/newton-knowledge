@@ -1,0 +1,18 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 12.8 (insufficient CUDA driver version!)
+   Devices:
+     "cpu"      : "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+   Kernel cache:
+     \\?\C:\Users\admin\AppData\Local\NVIDIA\warp\Cache\1.18.0
+Warp UserWarning: 
+   Insufficient CUDA driver version.
+   The minimum required CUDA driver version is 13.0, but the installed CUDA driver version is 12.8.
+   Visit https://nvidia.github.io/warp/stable/user_guide/installation.html for guidance.
+Module validate_and_correct_inertia_kernel_1ff2ac62 6ad45b8 load on device 'cpu' took 2.85 ms  (cached)
+Module newton._src.geometry.bvh 4a1c07f load on device 'cpu' took 1.12 ms  (cached)
+Module newton._src.sim.articulation 2e73608 load on device 'cpu' took 1.06 ms  (cached)
+Module newton._src.solvers.mujoco.kernels 7f286e9 load on device 'cpu' took 1.45 ms  (cached)
+PROGRESS mujoco_contact_response A 60/240
+PROGRESS mujoco_contact_response A 120/240
+PROGRESS mujoco_contact_response A 180/240
+PROGRESS mujoco_contact_response A 240/240

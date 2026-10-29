@@ -1,0 +1,502 @@
+[
+  {
+    "id": "model:particle_mass",
+    "field": "particle_mass",
+    "units": "kg",
+    "description_zh": "质量；零质量粒子为运动学粒子。与 dt 共同决定惯性块，不可用错误质量补偿尺度错误。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 640,
+      "end_line": 640,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L640"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 2720,
+      "end_line": 2857,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2720-L2857"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:particle_radius",
+    "field": "particle_radius",
+    "units": "m",
+    "description_zh": "刚柔碰撞粒子几何半径；不同于软体自接触 margin，也参与刚柔 DAT 查询半径下界。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 644,
+      "end_line": 644,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L644"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/solver_vbd.py",
+      "line": 2837,
+      "end_line": 2896,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2837-L2896"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:tri_materials",
+    "field": "tri_materials",
+    "units": "官方 Model 标注 [Pa, Pa, Pa·s, Pa·s, Pa]；薄膜有效量纲/厚度换算待核验",
+    "description_zh": "前三项为膜弹性与阻尼；内核乘静止面积，不能仅按 Pa 标签把真实三维杨氏模量直接填入；需明确厚度与离散能量约定。后两项存在不等于 VBD 全部使用。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 909,
+      "end_line": 909,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L909"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 533,
+      "end_line": 662,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L533-L662"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:edge_bending_properties",
+    "field": "edge_bending_properties",
+    "units": "官方 Model 标注 [N·m/rad, N·s]；有效刚度与静止边长约定待核验",
+    "description_zh": "二面角弯曲参数；内核还乘静止边长，不能直接替代连续材料弯曲模量。官方单位标签和离散系数换算需单独校验。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 926,
+      "end_line": 926,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L926"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 695,
+      "end_line": 846,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L695-L846"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:tet_materials",
+    "field": "tet_materials",
+    "units": "[mu Pa, lambda Pa, damping Pa·s]",
+    "description_zh": "体积弹性参数与客观阻尼，内核内部乘静止体积。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 943,
+      "end_line": 943,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L943"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 179,
+      "end_line": 322,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L179-L322"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:particle_q",
+    "field": "particle_q",
+    "units": "m",
+    "description_zh": "模型初始/静止构形；参与自接触静止过滤，不能与可变 State.particle_q 混淆。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 636,
+      "end_line": 636,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L636"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/solver_vbd.py",
+      "line": 1002,
+      "end_line": 1105,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1002-L1105"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:soft_contact_ke",
+    "field": "soft_contact_ke",
+    "units": "N/m（具体势函数须核查）",
+    "description_zh": "软接触刚度；二次与 barrier 路径需按实际力函数解释。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1197,
+      "end_line": 1197,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1197"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 850,
+      "end_line": 879,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L850-L879"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:soft_contact_kd",
+    "field": "soft_contact_kd",
+    "units": "N·s/m",
+    "description_zh": "软接触阻尼；不是全局刚体阻尼。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1199,
+      "end_line": 1199,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1199"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 883,
+      "end_line": 897,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L883-L897"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:soft_contact_mu",
+    "field": "soft_contact_mu",
+    "units": "无量纲",
+    "description_zh": "软接触材料摩擦系数；不同于 friction_epsilon。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1203,
+      "end_line": 1203,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1203"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 1348,
+      "end_line": 1378,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L1348-L1378"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:shape_material_ke",
+    "field": "shape_material_ke",
+    "units": "N/m",
+    "description_zh": "每形状接触刚度；最终有效接触材料由接触初始化/混合规则决定。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 698,
+      "end_line": 698,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L698"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 4750,
+      "end_line": 4853,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L4750-L4853"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:shape_material_kd",
+    "field": "shape_material_kd",
+    "units": "N·s/m",
+    "description_zh": "每形状接触阻尼；记录两侧材料与混合后的接触记录。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 700,
+      "end_line": 700,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L700"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 4750,
+      "end_line": 4853,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L4750-L4853"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:shape_material_mu",
+    "field": "shape_material_mu",
+    "units": "无量纲",
+    "description_zh": "每形状摩擦系数；不能把单一形状值当作每个接触的最终 mu。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 706,
+      "end_line": 706,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L706"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 4750,
+      "end_line": 4853,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L4750-L4853"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:body_mass",
+    "field": "body_mass",
+    "units": "kg",
+    "description_zh": "刚体质量，连同转动惯量、质心决定局部 6×6 系统。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 972,
+      "end_line": 972,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L972"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 6219,
+      "end_line": 6493,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L6219-L6493"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:body_inertia",
+    "field": "body_inertia",
+    "units": "kg·m²",
+    "description_zh": "刚体惯量，需与几何、质心、质量一致；不是任意的稳定性旋钮。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 968,
+      "end_line": 968,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L968"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 6219,
+      "end_line": 6493,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L6219-L6493"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:joint_target_ke",
+    "field": "joint_target_ke",
+    "units": "平移 N/m / 转动 N·m/rad",
+    "description_zh": "REVOLUTE/PRISMATIC/D6 drive 与 ROD 材料；与非 ROD structural ke 分层。ROD 材料更新用 JOINT_DOF_PROPERTIES 或 JOINT_DOF_FORCE_PROPERTIES，不负责静止构形缓存。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1054,
+      "end_line": 1054,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1054"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 2894,
+      "end_line": 3757,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L2894-L3757"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:joint_target_kd",
+    "field": "joint_target_kd",
+    "units": "平移 N·s/m / 转动 N·m·s/rad",
+    "description_zh": "绝对物理阻尼；ROD 材料更新用 JOINT_DOF_PROPERTIES 或 JOINT_DOF_FORCE_PROPERTIES。ROD rest frame/rest pose 缓存另需 JOINT_PROPERTIES/BODY_PROPERTIES。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1056,
+      "end_line": 1056,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1056"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 2894,
+      "end_line": 3757,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L2894-L3757"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:joint_limit_ke",
+    "field": "joint_limit_ke",
+    "units": "依线性/角度 DOF",
+    "description_zh": "支持的关节限位行材料，不等同结构连接刚度。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1074,
+      "end_line": 1074,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1074"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "line": 2894,
+      "end_line": 3757,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L2894-L3757"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:joint_enabled",
+    "field": "joint_enabled",
+    "units": "布尔",
+    "description_zh": "使能标志读 live；JOINT_PROPERTIES 通知还会刷新派生接触 conditioning。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1068,
+      "end_line": 1068,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1068"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/solver_vbd.py",
+      "line": 167,
+      "end_line": 4866,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167-L4866"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:spring_stiffness",
+    "field": "spring_stiffness",
+    "units": "N/m",
+    "description_zh": "粒子弹簧刚度，本样板一维 CPU 探针使用的能量项。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 879,
+      "end_line": 879,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L879"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 1706,
+      "end_line": 1744,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L1706-L1744"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  },
+  {
+    "id": "model:spring_damping",
+    "field": "spring_damping",
+    "units": "N·s/m",
+    "description_zh": "粒子弹簧阻尼，探针取 0 以便与解析隐式步比较。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 881,
+      "end_line": 881,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L881"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "line": 1706,
+      "end_line": 1744,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L1706-L1744"
+    },
+    "constructor_parameter": false,
+    "default_policy": "Read instantiated model and builder/importer configuration; no universal scene default asserted.",
+    "version": "1.7.0"
+  }
+]

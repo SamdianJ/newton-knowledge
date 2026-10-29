@@ -1,0 +1,32 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "newton": "1.7.0"
+  },
+  "device": "cpu",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "source_path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\kamino\\solver_kamino.py",
+  "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39",
+  "installed_source_validation": {
+    "checked_python_files": 809,
+    "missing": [],
+    "changed": [],
+    "installed_parent": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages"
+  },
+  "source_refs_sha256": {
+    "newton/_src/solvers/kamino/_src/solvers/padmm/math.py": "0554bf71b58df47e5bf39a69d4c2d4f89751e90ed9f96418f3d7b13084d89c36",
+    "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py": "6749b2ff01717129801b8829e0296cb8a030465b523a02f18ff755dc2d0666dc",
+    "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py": "f21d3054ecf8396a3fc09360eec1eebd9fd10238e6ebb2fc29d1ed439a3f2d7d",
+    "newton/_src/solvers/kamino/_src/dynamics/dual.py": "85bdc7bd874a80a664229a048bb4b1cc515f4495dfdc807db4d0d53584af3d2c",
+    "newton/_src/solvers/kamino/config.py": "4625e87ad4027fb246aeb879f816ef31cdc8441dae8872e8ce8d669aa0a3157d"
+  },
+  "private_instrumentation": [
+    "read-only delegation of PADMMSolver._step/_step_accel",
+    "solver_fd.data state/status/config/penalty",
+    "problem_fd.data P/bounds/layout",
+    "internal joints lambda, bodies applied wrench and time"
+  ]
+}

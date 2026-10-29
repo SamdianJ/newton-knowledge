@@ -1,0 +1,26 @@
+{
+  "world_count": 1,
+  "up_axis": "Z",
+  "gravity": [
+    0,
+    0,
+    -9.81
+  ],
+  "floor_z": 0.0,
+  "bodies": [
+    {
+      "shape": "sphere",
+      "radius": 0.1,
+      "density": 238.732414637843,
+      "at": [
+        0,
+        0,
+        0.35
+      ],
+      "tilt_y": 0.0
+    }
+  ],
+  "mu": 0.6,
+  "common_ke": 20000.0,
+  "common_kd": 300.0
+}

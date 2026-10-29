@@ -1,0 +1,589 @@
+{
+  "phase": "P3",
+  "status": "passed",
+  "build_id": "fa73a0e8a744f2ee8ffd6495",
+  "passed": 143,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "twelve new scenarios passed on published build",
+      "passed": true
+    },
+    {
+      "check": "all original frozen tasks regress on same build",
+      "passed": true
+    },
+    {
+      "check": "no original task success or ordinary call-cost regression",
+      "passed": true
+    },
+    {
+      "check": "original initial retrieval recall does not regress",
+      "passed": true
+    },
+    {
+      "check": "new recipes separately counted from six frozen base recipes",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X01",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X01",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X01",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X01",
+      "passed": true
+    },
+    {
+      "check": "source hash X01 newton/_src/sim/control.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X01 newton/_src/sim/control.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X01 newton/_src/sim/control.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X01 docs/migration.rst",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X02",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X02",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X02",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X02",
+      "passed": true
+    },
+    {
+      "check": "source hash X02 newton/_src/actuators/actuator.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X02 newton/_src/actuators/drives/drive_pd.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X02 docs/concepts/actuators.rst",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X03",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X03",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X03",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X03",
+      "passed": true
+    },
+    {
+      "check": "source hash X03 newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X03 newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X03 docs/concepts/collisions.rst",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X04",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X04",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X04",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X04",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 newton/_src/solvers/solver.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 newton/_src/sim/collide.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 docs/concepts/solver_observables.rst",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 newton/_src/sim/collide.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 newton/_src/sim/collide.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 newton/_src/sim/model.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X04 newton/_src/geometry/narrow_phase.py",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X05",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X05",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X05",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X05",
+      "passed": true
+    },
+    {
+      "check": "source hash X05 newton/_src/sim/enums.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X05 newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X06",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X06",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X06",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X06",
+      "passed": true
+    },
+    {
+      "check": "source hash X06 newton/_src/sim/enums.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X06 newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X06 newton/_src/utils/selection.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X06 newton/_src/core/reset.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X06 newton/_src/solvers/solver.py",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X07",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X07",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X07",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X07",
+      "passed": true
+    },
+    {
+      "check": "source hash X07 newton/_src/sensors/sensor_imu.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X07 newton/_src/sensors/sensor_contact.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X07 docs/concepts/solver_observables.rst",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X08",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X08",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X08",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X08",
+      "passed": true
+    },
+    {
+      "check": "source hash X08 newton/_src/solvers/coupled/solver_coupled_admm.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X08 newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X08 docs/concepts/coupling.rst",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X09",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X09",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X09",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X09",
+      "passed": true
+    },
+    {
+      "check": "source hash X09 newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X09 newton/_src/solvers/semi_implicit/solver_semi_implicit.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X09 docs/solvers/index.rst",
+      "passed": true
+    },
+    {
+      "check": "source hash X09 newton/examples/diffsim/example_diffsim_ball.py",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X10",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X10",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X10",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X10",
+      "passed": true
+    },
+    {
+      "check": "source hash X10 newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X10 docs/solvers/mujoco.rst",
+      "passed": true
+    },
+    {
+      "check": "source hash X10 newton/_src/solvers/mujoco/kernels.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X10 newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X11",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X11",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X11",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X11",
+      "passed": true
+    },
+    {
+      "check": "source hash X11 newton/_src/solvers/kamino/solver_kamino.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X11 newton/_src/solvers/kamino/solver_kamino.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X11 docs/solvers/kamino.rst",
+      "passed": true
+    },
+    {
+      "check": "source hash X11 newton/_src/solvers/kamino/config.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X11 newton/_src/solvers/kamino/solver_kamino.py",
+      "passed": true
+    },
+    {
+      "check": "exact-body accepted task evidence X12",
+      "passed": true
+    },
+    {
+      "check": "source explanation not physical run X12",
+      "passed": true
+    },
+    {
+      "check": "frozen task question kept out of indexed text X12",
+      "passed": true
+    },
+    {
+      "check": "actual source coverage X12",
+      "passed": true
+    },
+    {
+      "check": "source hash X12 newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X12 newton/_src/solvers/solver.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X12 newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "source hash X12 newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "full public-layer and website regression: {\"phase\": \"P2\", \"status\": \"passed\", \"build_id\": \"fa73a0e8a744f2ee8ffd6495\", \"passed\": 904, \"failed\": 0, \"evidence\": [\"evaluations/p2-mcp-validation.json\", \"evaluations/p2-mcp-trace.json\", \"site/screenshots/p2/\", \"knowledge/validation-receipts.json\"], \"scope\": \"Coverage, provenance, website/CLI/MCP and frozen knowledge tasks. No upstream full test or new physical experiment is claimed.\"}\n",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X01",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X02",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X03",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X04",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X05",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X06",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X07",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X08",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X09",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X10",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X11",
+      "passed": true
+    },
+    {
+      "check": "new recipe visible in library X12",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X01",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X01",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X02",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X02",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X03",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X03",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X04",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X04",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X05",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X05",
+      "passed": true
+    },
+    {
+      "check": "specialized recipe keeps owner solver X05",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X06",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X06",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X07",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X07",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X08",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X08",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X09",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X09",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X10",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X10",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X11",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X11",
+      "passed": true
+    },
+    {
+      "check": "specialized recipe keeps owner solver X11",
+      "passed": true
+    },
+    {
+      "check": "recipe runtime scope visible X12",
+      "passed": true
+    },
+    {
+      "check": "recipe has exact local source navigation X12",
+      "passed": true
+    },
+    {
+      "check": "specialized recipe keeps owner solver X12",
+      "passed": true
+    },
+    {
+      "check": "new recipe mobile layout fits screen",
+      "passed": true
+    },
+    {
+      "check": "no new recipe browser errors []",
+      "passed": true
+    }
+  ],
+  "evidence": [
+    "planning/p3/tasks.json",
+    "evaluations/p3-mcp-validation.json",
+    "evaluations/p3-mcp-trace.json",
+    "evaluations/p2-mcp-validation.json",
+    "evaluations/p2-validation.json",
+    "site/screenshots/p3/"
+  ]
+}

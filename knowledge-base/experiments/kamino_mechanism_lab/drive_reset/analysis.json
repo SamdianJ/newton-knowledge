@@ -1,0 +1,2622 @@
+{
+  "status": "passed",
+  "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+  "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f",
+  "analyzer_sha256": "16b7fb52307aabd416198bc2144bc6cb153374325e616c0a14272e1726642034",
+  "runs_selected": 12,
+  "passed_checks": 212,
+  "failed_checks": 0,
+  "cases": [
+    {
+      "id": "kamino_drive_effort_paths",
+      "title": "显式力矩与有界隐式PD：相同力限下的正反饱和响应",
+      "criteria": {
+        "joint_velocity_reference_max_abs_rad_s": 0.002,
+        "joint_position_euler_reference_max_abs_rad": 0.001,
+        "applied_effort_signed_max_abs_error_Nm": 0.002,
+        "applied_effort_max_Nm": 1.001,
+        "joint_anchor_origin_max_norm_m": 0.0005,
+        "routing_A_dof_act_paths": [
+          0
+        ],
+        "routing_B_dof_act_paths": [
+          2
+        ],
+        "bounded_reported_effort_max_error_Nm": 0.002
+      },
+      "variants": [
+        {
+          "variant": "A",
+          "runs": [
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051530488850Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "joint_velocity_reference_max_abs_rad_s": 2.722144127609294e-07,
+                "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+                "applied_effort_signed_max_abs_error_Nm": 0.0,
+                "applied_effort_max_Nm": 1.0,
+                "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+                "continuous_time_position_max_error_rad": 0.0003999814540147674,
+                "positive_effort_mean_Nm": 1.0,
+                "negative_effort_mean_Nm": -1.0,
+                "actual_final_q_rad": 0.03199998661875725,
+                "actual_final_qd_rad_s": -1.7974525690078735e-07,
+                "analytical_effective_inertia_kg_m2": 1.25,
+                "status_converged_fraction": 1.0,
+                "status_iterations_max": 13,
+                "terminal_residuals": {
+                  "r_p": 0.0,
+                  "r_d": 2.524978803819522e-08,
+                  "r_c": 0.0
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 8,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "actual": 2.722144127609294e-07,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_position_euler_reference_max_abs_rad",
+                  "actual": 1.0387182237947545e-07,
+                  "expected": {
+                    "max": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_signed_max_abs_error_Nm",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_max_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "max": 1.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "actual": 3.1005999971966958e-06,
+                  "expected": {
+                    "max": 0.0005
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "actual drive routing",
+                  "actual": [
+                    0
+                  ],
+                  "expected": [
+                    0
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051530488850Z/trajectory.npz",
+              "raw_sha256": "a08b1e11752473274685f7aef621ff6438882a8bd55b4c40a013ee007be4f429",
+              "result_sha256": "eeb6ac5da05946119ae721fad1d596a190e41610c3a931e3c8631af8865f1103",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            },
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r2_20261029T051542833277Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "joint_velocity_reference_max_abs_rad_s": 2.722144127609294e-07,
+                "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+                "applied_effort_signed_max_abs_error_Nm": 0.0,
+                "applied_effort_max_Nm": 1.0,
+                "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+                "continuous_time_position_max_error_rad": 0.0003999814540147674,
+                "positive_effort_mean_Nm": 1.0,
+                "negative_effort_mean_Nm": -1.0,
+                "actual_final_q_rad": 0.03199998661875725,
+                "actual_final_qd_rad_s": -1.7974525690078735e-07,
+                "analytical_effective_inertia_kg_m2": 1.25,
+                "status_converged_fraction": 1.0,
+                "status_iterations_max": 13,
+                "terminal_residuals": {
+                  "r_p": 0.0,
+                  "r_d": 2.524978803819522e-08,
+                  "r_c": 0.0
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 8,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "actual": 2.722144127609294e-07,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_position_euler_reference_max_abs_rad",
+                  "actual": 1.0387182237947545e-07,
+                  "expected": {
+                    "max": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_signed_max_abs_error_Nm",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_max_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "max": 1.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "actual": 3.1005999971966958e-06,
+                  "expected": {
+                    "max": 0.0005
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "actual drive routing",
+                  "actual": [
+                    0
+                  ],
+                  "expected": [
+                    0
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r2_20261029T051542833277Z/trajectory.npz",
+              "raw_sha256": "c31c5c3292d0d47c6c227c1209f6a10039c41ebd96818500e5960903f1ba8100",
+              "result_sha256": "aecf679a2aaebe0961d230919ab6f18bfc43a2c611ed09e48b37769d89ae9bd4",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            }
+          ],
+          "repeat_checks": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        },
+        {
+          "variant": "B",
+          "runs": [
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r1_20261029T051555321909Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+                "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+                "applied_effort_signed_max_abs_error_Nm": 0.0,
+                "applied_effort_max_Nm": 1.0,
+                "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+                "bounded_reported_effort_max_error_Nm": 0.0,
+                "continuous_time_position_max_error_rad": 0.0003999814540147674,
+                "positive_effort_mean_Nm": 1.0,
+                "negative_effort_mean_Nm": -1.0,
+                "actual_final_q_rad": 0.03199998661875725,
+                "actual_final_qd_rad_s": -1.5040859580039978e-07,
+                "analytical_effective_inertia_kg_m2": 1.25,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 0.0,
+                  "r_c": 4.3994853626827535e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 8,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "actual": 2.3561716086528683e-07,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_position_euler_reference_max_abs_rad",
+                  "actual": 1.0387182237947545e-07,
+                  "expected": {
+                    "max": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_signed_max_abs_error_Nm",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_max_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "max": 1.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "actual": 3.1005999971966958e-06,
+                  "expected": {
+                    "max": 0.0005
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "actual drive routing",
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "bounded_reported_effort_max_error_Nm",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r1_20261029T051555321909Z/trajectory.npz",
+              "raw_sha256": "2f597ada7cb5380ae60ead29d9b5de02b3ed81a19b7347a11499d12a75f309b4",
+              "result_sha256": "c39ce60289afc78b6e079a9999f97197c95c37ed1bc4b4bacff195b25b81e3b1",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            },
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r2_20261029T051607693722Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+                "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+                "applied_effort_signed_max_abs_error_Nm": 0.0,
+                "applied_effort_max_Nm": 1.0,
+                "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+                "bounded_reported_effort_max_error_Nm": 0.0,
+                "continuous_time_position_max_error_rad": 0.0003999814540147674,
+                "positive_effort_mean_Nm": 1.0,
+                "negative_effort_mean_Nm": -1.0,
+                "actual_final_q_rad": 0.03199998661875725,
+                "actual_final_qd_rad_s": -1.5040859580039978e-07,
+                "analytical_effective_inertia_kg_m2": 1.25,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 0.0,
+                  "r_c": 4.3994853626827535e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 8,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "actual": 2.3561716086528683e-07,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_position_euler_reference_max_abs_rad",
+                  "actual": 1.0387182237947545e-07,
+                  "expected": {
+                    "max": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_signed_max_abs_error_Nm",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "applied_effort_max_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "max": 1.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "actual": 3.1005999971966958e-06,
+                  "expected": {
+                    "max": 0.0005
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "actual drive routing",
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "bounded_reported_effort_max_error_Nm",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.002
+                  },
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r2_20261029T051607693722Z/trajectory.npz",
+              "raw_sha256": "011b8bac4b08ab9989f3d49e9945cae8b97c3a349dd2a2ebbf2ab6ec1cdc997a",
+              "result_sha256": "ec0b0b76baa606923bf31f8549cec256afa71d52a6059a33db23df5916bd49e4",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            }
+          ],
+          "repeat_checks": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        }
+      ],
+      "paired_checks": [],
+      "limitations": [
+        "Saturated branch only; does not calibrate unsaturated PD tracking, effort limit transitions or multi-DoF joints",
+        "PADMM CPU, single revolute, no gravity/contact/armature",
+        "Internal arrays are instrumentation, not a supported application API",
+        "Bounded-PD terminal convergence stayed false under the frozen 1e-7 tolerances and 200-iteration budget; terminal status was diagnostic, not an acceptance gate. No thresholds were relaxed."
+      ],
+      "source_refs": [
+        {
+          "path": "newton/tests/kamino/test_kamino_solver_joint_effort_limit.py",
+          "line": 24
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+          "line": 263
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 899
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+          "line": 690
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+          "line": 930
+        },
+        {
+          "path": "docs/solvers/kamino.rst",
+          "line": 130
+        }
+      ],
+      "status": "passed",
+      "metrics": {
+        "run_metrics": [
+          {
+            "variant": "A",
+            "repeat": 1,
+            "joint_velocity_reference_max_abs_rad_s": 2.722144127609294e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "continuous_time_position_max_error_rad": 0.0003999814540147674,
+            "positive_effort_mean_Nm": 1.0,
+            "negative_effort_mean_Nm": -1.0,
+            "actual_final_q_rad": 0.03199998661875725,
+            "actual_final_qd_rad_s": -1.7974525690078735e-07,
+            "analytical_effective_inertia_kg_m2": 1.25,
+            "status_converged_fraction": 1.0,
+            "status_iterations_max": 13,
+            "terminal_residuals": {
+              "r_p": 0.0,
+              "r_d": 2.524978803819522e-08,
+              "r_c": 0.0
+            }
+          },
+          {
+            "variant": "A",
+            "repeat": 2,
+            "joint_velocity_reference_max_abs_rad_s": 2.722144127609294e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "continuous_time_position_max_error_rad": 0.0003999814540147674,
+            "positive_effort_mean_Nm": 1.0,
+            "negative_effort_mean_Nm": -1.0,
+            "actual_final_q_rad": 0.03199998661875725,
+            "actual_final_qd_rad_s": -1.7974525690078735e-07,
+            "analytical_effective_inertia_kg_m2": 1.25,
+            "status_converged_fraction": 1.0,
+            "status_iterations_max": 13,
+            "terminal_residuals": {
+              "r_p": 0.0,
+              "r_d": 2.524978803819522e-08,
+              "r_c": 0.0
+            }
+          },
+          {
+            "variant": "B",
+            "repeat": 1,
+            "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "continuous_time_position_max_error_rad": 0.0003999814540147674,
+            "positive_effort_mean_Nm": 1.0,
+            "negative_effort_mean_Nm": -1.0,
+            "actual_final_q_rad": 0.03199998661875725,
+            "actual_final_qd_rad_s": -1.5040859580039978e-07,
+            "analytical_effective_inertia_kg_m2": 1.25,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 0.0,
+              "r_c": 4.3994853626827535e-07
+            }
+          },
+          {
+            "variant": "B",
+            "repeat": 2,
+            "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "continuous_time_position_max_error_rad": 0.0003999814540147674,
+            "positive_effort_mean_Nm": 1.0,
+            "negative_effort_mean_Nm": -1.0,
+            "actual_final_q_rad": 0.03199998661875725,
+            "actual_final_qd_rad_s": -1.5040859580039978e-07,
+            "analytical_effective_inertia_kg_m2": 1.25,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 0.0,
+              "r_c": 4.3994853626827535e-07
+            }
+          }
+        ],
+        "replay": []
+      },
+      "plot": "experiments/kamino_mechanism_lab/drive_reset/kamino_drive_effort_paths.svg",
+      "solver_status_summary": {
+        "A": [
+          1.0,
+          1.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      },
+      "observation": "两种驱动路径均把正反请求限制为 ±1 N·m，转角/角速度吻合独立有效惯量参考。显式路径 terminal converged=100%；有界隐式PD在冻结的1e-7容差下为0%，到达200迭代预算。物理验收通过不等于该收敛标志通过。"
+    },
+    {
+      "id": "kamino_reset_default_replay",
+      "title": "有历史求解器默认reset与全新求解器的同初态重放",
+      "criteria": {
+        "warmup_abs_q_min_rad": 0.001,
+        "warmup_abs_lambda_min_Nm": 0.5,
+        "reset_body_pose_max_abs_from_initial": 1e-06,
+        "reset_body_velocity_max_abs": 1e-06,
+        "reset_joint_velocity_max_abs": 1e-06,
+        "reset_joint_effort_max_abs": 1e-07,
+        "reset_body_acceleration_max_abs": 1e-07,
+        "reset_internal_time_max_abs": 1e-07,
+        "reset_internal_steps": 0,
+        "success_mask": true,
+        "control_unchanged": true,
+        "paired_replay_pose_max_abs": 1e-05,
+        "paired_replay_velocity_max_abs": 0.0001,
+        "paired_replay_rtol": 1e-05
+      },
+      "variants": [
+        {
+          "variant": "A",
+          "runs": [
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r1_20261029T051620661119Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "reset_body_pose_max_abs_from_initial": 0.0,
+                "reset_body_velocity_max_abs": 0.0,
+                "reset_joint_velocity_max_abs": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 0.0,
+                  "r_c": 4.3994853626827535e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 9,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_pose_max_abs_from_initial",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r1_20261029T051620661119Z/trajectory.npz",
+              "raw_sha256": "1e0a6ae32ec53da8a567dfa75cc897020367b0d3aef49849529e7ad50691785b",
+              "result_sha256": "6f90773fe86a3e7849245322155445fba62aed8d323fce2127642c0467fffaf3",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            },
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r2_20261029T051633919830Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "reset_body_pose_max_abs_from_initial": 0.0,
+                "reset_body_velocity_max_abs": 0.0,
+                "reset_joint_velocity_max_abs": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 0.0,
+                  "r_c": 4.3994853626827535e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 9,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_pose_max_abs_from_initial",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r2_20261029T051633919830Z/trajectory.npz",
+              "raw_sha256": "59152097af32ccbcc33975490ba212ef133ce09869a481acbbc56b7be8505a4e",
+              "result_sha256": "d2f7bd26e2026c85ff78c5058cc7ae6cc6cb778d9ba82b3c5561fd5ce762a784",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            }
+          ],
+          "repeat_checks": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        },
+        {
+          "variant": "B",
+          "runs": [
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r1_20261029T051646414985Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "warmup_abs_q_actual_rad": 0.028199944645166397,
+                "warmup_abs_lambda_actual_Nm": 1.0,
+                "reset_body_pose_max_abs_from_initial": 0.0,
+                "reset_body_velocity_max_abs": 0.0,
+                "reset_joint_velocity_max_abs": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 0.0,
+                  "r_c": 4.3994853626827535e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 10,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "required non-vacuous warmup saved",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_q_min_rad",
+                  "actual": 0.028199944645166397,
+                  "expected": {
+                    "min": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_lambda_min_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "min": 0.5
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_pose_max_abs_from_initial",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r1_20261029T051646414985Z/trajectory.npz",
+              "raw_sha256": "11a09ff48230a2733c30a80b4f6ecfe4989be64088936cf472bc3264394cded7",
+              "result_sha256": "e5dd6736997ba69f4e8a4bd8effaaaddf921e3e389a58172893e632e45859d79",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            },
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r2_20261029T051704357829Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "warmup_abs_q_actual_rad": 0.028199944645166397,
+                "warmup_abs_lambda_actual_Nm": 1.0,
+                "reset_body_pose_max_abs_from_initial": 0.0,
+                "reset_body_velocity_max_abs": 0.0,
+                "reset_joint_velocity_max_abs": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 0.0,
+                  "r_c": 4.3994853626827535e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 10,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "required non-vacuous warmup saved",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_q_min_rad",
+                  "actual": 0.028199944645166397,
+                  "expected": {
+                    "min": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_lambda_min_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "min": 0.5
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_pose_max_abs_from_initial",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_velocity_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r2_20261029T051704357829Z/trajectory.npz",
+              "raw_sha256": "439f05457363ab70223ac028f015e4d25302764b5d4163befaf7f2201c9509bc",
+              "result_sha256": "6c68c2d8c13afca003c58b11a388e2f2146433d9a13fefa7cfd2abe6ce34a994",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            }
+          ],
+          "repeat_checks": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        }
+      ],
+      "paired_checks": [
+        {
+          "repeat": 1,
+          "fields": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "fields": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        }
+      ],
+      "limitations": [
+        "Tests default ResetConfig but explicitly uses internal warmstarting, not all warmstart modes",
+        "Single world, no mask/flags/contact/FK/callback reset",
+        "Status is recorded but exact iteration-count equality is not a physical criterion",
+        "Bounded-PD terminal convergence stayed false under the frozen 1e-7 tolerances and 200-iteration budget; terminal status was diagnostic, not an acceptance gate. No thresholds were relaxed."
+      ],
+      "source_refs": [
+        {
+          "path": "newton/tests/kamino/test_kamino_solver_joint_effort_limit.py",
+          "line": 24
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+          "line": 263
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 899
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+          "line": 690
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+          "line": 930
+        },
+        {
+          "path": "docs/solvers/kamino.rst",
+          "line": 130
+        }
+      ],
+      "status": "passed",
+      "metrics": {
+        "run_metrics": [
+          {
+            "variant": "A",
+            "repeat": 1,
+            "reset_body_pose_max_abs_from_initial": 0.0,
+            "reset_body_velocity_max_abs": 0.0,
+            "reset_joint_velocity_max_abs": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 0.0,
+              "r_c": 4.3994853626827535e-07
+            }
+          },
+          {
+            "variant": "A",
+            "repeat": 2,
+            "reset_body_pose_max_abs_from_initial": 0.0,
+            "reset_body_velocity_max_abs": 0.0,
+            "reset_joint_velocity_max_abs": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 0.0,
+              "r_c": 4.3994853626827535e-07
+            }
+          },
+          {
+            "variant": "B",
+            "repeat": 1,
+            "warmup_abs_q_actual_rad": 0.028199944645166397,
+            "warmup_abs_lambda_actual_Nm": 1.0,
+            "reset_body_pose_max_abs_from_initial": 0.0,
+            "reset_body_velocity_max_abs": 0.0,
+            "reset_joint_velocity_max_abs": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 0.0,
+              "r_c": 4.3994853626827535e-07
+            }
+          },
+          {
+            "variant": "B",
+            "repeat": 2,
+            "warmup_abs_q_actual_rad": 0.028199944645166397,
+            "warmup_abs_lambda_actual_Nm": 1.0,
+            "reset_body_pose_max_abs_from_initial": 0.0,
+            "reset_body_velocity_max_abs": 0.0,
+            "reset_joint_velocity_max_abs": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 0.0,
+              "r_c": 4.3994853626827535e-07
+            }
+          }
+        ],
+        "replay": [
+          {
+            "repeat": 1,
+            "fields": {
+              "body_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "body_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              }
+            }
+          },
+          {
+            "repeat": 2,
+            "fields": {
+              "body_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "body_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              }
+            }
+          }
+        ]
+      },
+      "plot": "experiments/kamino_mechanism_lab/drive_reset/kamino_reset_default_replay.svg",
+      "solver_status_summary": {
+        "A": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      },
+      "observation": "形成非零运动和乘子历史后，所测reset模式与fresh参考的重放、独立进程重复在保存数组中一致；Control保持不变且重放前显式重发命令。有界PD terminal converged=0%，reset和物理一致性通过不构成求解收敛保证。"
+    },
+    {
+      "id": "kamino_reset_preserve_replay",
+      "title": "preserve reset保持运动状态并清除历史后的重放",
+      "criteria": {
+        "warmup_abs_q_min_rad": 0.001,
+        "warmup_abs_lambda_min_Nm": 0.5,
+        "preserved_body_pose_max_abs_error": 1e-06,
+        "preserved_body_velocity_max_abs_error": 1e-06,
+        "reset_joint_effort_max_abs": 1e-07,
+        "reset_body_acceleration_max_abs": 1e-07,
+        "reset_internal_time_max_abs": 1e-07,
+        "reset_internal_steps": 0,
+        "success_mask": true,
+        "control_unchanged": true,
+        "paired_replay_pose_max_abs": 1e-05,
+        "paired_replay_velocity_max_abs": 0.0001,
+        "paired_replay_rtol": 1e-05
+      },
+      "variants": [
+        {
+          "variant": "A",
+          "runs": [
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r1_20261029T051721685673Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "warmup_abs_q_actual_rad": 0.028199944645166397,
+                "warmup_abs_lambda_actual_Nm": 1.0,
+                "preserved_body_pose_max_abs_error": 0.0,
+                "preserved_body_velocity_max_abs_error": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 2.6009493427829426e-15,
+                  "r_c": 4.6655193841615983e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 10,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "required non-vacuous warmup saved",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_q_min_rad",
+                  "actual": 0.028199944645166397,
+                  "expected": {
+                    "min": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_lambda_min_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "min": 0.5
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_pose_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_velocity_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r1_20261029T051721685673Z/trajectory.npz",
+              "raw_sha256": "7cd0ba4059f6b1d14f0a67fdd19c994f30379a426d6ed4563c59178b901ca288",
+              "result_sha256": "cc2aab153ba0e0e1ebc32537f2bc2aea4f9a86130f3116a029ac71a2a891944d",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            },
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r2_20261029T051739976407Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "warmup_abs_q_actual_rad": 0.028199944645166397,
+                "warmup_abs_lambda_actual_Nm": 1.0,
+                "preserved_body_pose_max_abs_error": 0.0,
+                "preserved_body_velocity_max_abs_error": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 2.6009493427829426e-15,
+                  "r_c": 4.6655193841615983e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 10,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "required non-vacuous warmup saved",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_q_min_rad",
+                  "actual": 0.028199944645166397,
+                  "expected": {
+                    "min": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_lambda_min_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "min": 0.5
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_pose_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_velocity_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r2_20261029T051739976407Z/trajectory.npz",
+              "raw_sha256": "36f2700c28fbbd87622b025bb146f36c4494214e2c79f317672af3c5a04984d9",
+              "result_sha256": "092531e08d2f57ae1653612f3071809b3a0f237cc99bf5e4052b0c40c7605a90",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            }
+          ],
+          "repeat_checks": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        },
+        {
+          "variant": "B",
+          "runs": [
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r1_20261029T051758572345Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "warmup_abs_q_actual_rad": 0.028199944645166397,
+                "warmup_abs_lambda_actual_Nm": 1.0,
+                "preserved_body_pose_max_abs_error": 0.0,
+                "preserved_body_velocity_max_abs_error": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 2.6009493427829426e-15,
+                  "r_c": 4.6655193841615983e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 10,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "required non-vacuous warmup saved",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_q_min_rad",
+                  "actual": 0.028199944645166397,
+                  "expected": {
+                    "min": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_lambda_min_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "min": 0.5
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_pose_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_velocity_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r1_20261029T051758572345Z/trajectory.npz",
+              "raw_sha256": "ee646aa751e70bc8e3907dff64c4667327fec93a67dbf57ec77f7df6d046edd6",
+              "result_sha256": "50df0fedd25a05af4b70dff9d723e9e2109bf713f3cfe231cf9db774e6a95465",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            },
+            {
+              "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r2_20261029T051816554007Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "warmup_abs_q_actual_rad": 0.028199944645166397,
+                "warmup_abs_lambda_actual_Nm": 1.0,
+                "preserved_body_pose_max_abs_error": 0.0,
+                "preserved_body_velocity_max_abs_error": 0.0,
+                "reset_joint_effort_max_abs": 0.0,
+                "reset_body_acceleration_max_abs": 0.0,
+                "reset_internal_time_max_abs": 0.0,
+                "status_converged_fraction": 0.0,
+                "status_iterations_max": 200,
+                "terminal_residuals": {
+                  "r_p": 1.0761949553739214e-08,
+                  "r_d": 2.6009493427829426e-15,
+                  "r_c": 4.6655193841615983e-07
+                }
+              },
+              "checks": [
+                {
+                  "name": "file hashes",
+                  "actual": 10,
+                  "expected": "all archived files match result",
+                  "passed": true
+                },
+                {
+                  "name": "installed pinned Python sources",
+                  "actual": 809,
+                  "expected": "no missing/changed files",
+                  "passed": true
+                },
+                {
+                  "name": "all raw trajectory floats finite",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "samples",
+                  "actual": 81,
+                  "expected": 81,
+                  "passed": true
+                },
+                {
+                  "name": "full physical model mass",
+                  "actual": [
+                    1.0
+                  ],
+                  "expected": [
+                    1.0
+                  ],
+                  "passed": true
+                },
+                {
+                  "name": "required non-vacuous warmup saved",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_q_min_rad",
+                  "actual": 0.028199944645166397,
+                  "expected": {
+                    "min": 0.001
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "warmup_abs_lambda_min_Nm",
+                  "actual": 1.0,
+                  "expected": {
+                    "min": 0.5
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_pose_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "preserved_body_velocity_max_abs_error",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-06
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_joint_effort_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_body_acceleration_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_time_max_abs",
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-07
+                  },
+                  "passed": true
+                },
+                {
+                  "name": "reset_internal_steps",
+                  "actual": 0,
+                  "expected": 0,
+                  "passed": true
+                },
+                {
+                  "name": "control_unchanged",
+                  "actual": true,
+                  "expected": true,
+                  "passed": true
+                },
+                {
+                  "name": "success_mask",
+                  "actual": [
+                    true
+                  ],
+                  "expected": [
+                    true
+                  ],
+                  "passed": true
+                }
+              ],
+              "raw_file": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r2_20261029T051816554007Z/trajectory.npz",
+              "raw_sha256": "946209c9cdab0f71de9d76e362930dc098161047663316dee4a6b23815cd3282",
+              "result_sha256": "6a4aa3445fc185908b5a944b89b365141836baf50665781c6b8dcab7175f72fb",
+              "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+              "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f"
+            }
+          ],
+          "repeat_checks": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        }
+      ],
+      "paired_checks": [
+        {
+          "repeat": 1,
+          "fields": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "fields": {
+            "body_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_q": {
+              "max_abs": 0.0,
+              "atol": 1e-05,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "body_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            },
+            "joint_qd": {
+              "max_abs": 0.0,
+              "atol": 0.0001,
+              "rtol": 1e-05,
+              "passed": true
+            }
+          }
+        }
+      ],
+      "limitations": [
+        "Preserve assumes supplied body states are consistent; no projection of invalid states is claimed",
+        "Single world, no contact-history matching or masked reset",
+        "The fresh reference also uses preserve reset to derive consistent joint data from body state",
+        "Bounded-PD terminal convergence stayed false under the frozen 1e-7 tolerances and 200-iteration budget; terminal status was diagnostic, not an acceptance gate. No thresholds were relaxed."
+      ],
+      "source_refs": [
+        {
+          "path": "newton/tests/kamino/test_kamino_solver_joint_effort_limit.py",
+          "line": 24
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+          "line": 263
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 899
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+          "line": 690
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+          "line": 930
+        },
+        {
+          "path": "docs/solvers/kamino.rst",
+          "line": 130
+        }
+      ],
+      "status": "passed",
+      "metrics": {
+        "run_metrics": [
+          {
+            "variant": "A",
+            "repeat": 1,
+            "warmup_abs_q_actual_rad": 0.028199944645166397,
+            "warmup_abs_lambda_actual_Nm": 1.0,
+            "preserved_body_pose_max_abs_error": 0.0,
+            "preserved_body_velocity_max_abs_error": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 2.6009493427829426e-15,
+              "r_c": 4.6655193841615983e-07
+            }
+          },
+          {
+            "variant": "A",
+            "repeat": 2,
+            "warmup_abs_q_actual_rad": 0.028199944645166397,
+            "warmup_abs_lambda_actual_Nm": 1.0,
+            "preserved_body_pose_max_abs_error": 0.0,
+            "preserved_body_velocity_max_abs_error": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 2.6009493427829426e-15,
+              "r_c": 4.6655193841615983e-07
+            }
+          },
+          {
+            "variant": "B",
+            "repeat": 1,
+            "warmup_abs_q_actual_rad": 0.028199944645166397,
+            "warmup_abs_lambda_actual_Nm": 1.0,
+            "preserved_body_pose_max_abs_error": 0.0,
+            "preserved_body_velocity_max_abs_error": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 2.6009493427829426e-15,
+              "r_c": 4.6655193841615983e-07
+            }
+          },
+          {
+            "variant": "B",
+            "repeat": 2,
+            "warmup_abs_q_actual_rad": 0.028199944645166397,
+            "warmup_abs_lambda_actual_Nm": 1.0,
+            "preserved_body_pose_max_abs_error": 0.0,
+            "preserved_body_velocity_max_abs_error": 0.0,
+            "reset_joint_effort_max_abs": 0.0,
+            "reset_body_acceleration_max_abs": 0.0,
+            "reset_internal_time_max_abs": 0.0,
+            "status_converged_fraction": 0.0,
+            "status_iterations_max": 200,
+            "terminal_residuals": {
+              "r_p": 1.0761949553739214e-08,
+              "r_d": 2.6009493427829426e-15,
+              "r_c": 4.6655193841615983e-07
+            }
+          }
+        ],
+        "replay": [
+          {
+            "repeat": 1,
+            "fields": {
+              "body_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "body_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              }
+            }
+          },
+          {
+            "repeat": 2,
+            "fields": {
+              "body_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_q": {
+                "max_abs": 0.0,
+                "atol": 1e-05,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "body_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              },
+              "joint_qd": {
+                "max_abs": 0.0,
+                "atol": 0.0001,
+                "rtol": 1e-05,
+                "passed": true
+              }
+            }
+          }
+        ]
+      },
+      "plot": "experiments/kamino_mechanism_lab/drive_reset/kamino_reset_preserve_replay.svg",
+      "solver_status_summary": {
+        "A": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      },
+      "observation": "形成非零运动和乘子历史后，所测reset模式与fresh参考的重放、独立进程重复在保存数组中一致；Control保持不变且重放前显式重发命令。有界PD terminal converged=0%，reset和物理一致性通过不构成求解收敛保证。"
+    }
+  ],
+  "excluded_runs": [
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051023670602Z",
+      "status": "failed",
+      "classification": "preflight_failed",
+      "reason": "ValueError(\"'D:\\\\\\\\RAG\\\\\\\\Newton knowledge\\\\\\\\experiments\\\\\\\\.venv_multisolver\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\newton\\\\\\\\_src\\\\\\\\solvers\\\\\\\\kamino\\\\\\\\solver_kamino.py' is not in the subpath of 'D:\\\\\\\\RAG\\\\\\\\Newton knowledge\\\\\\\\sources\\\\\\\\newton-v1.7.0'\")",
+      "runner_sha256": "b3beb4a4e529089ac8f2b0d02e80e59fea96a4af4a30061a4a4e7e18bd569a50"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051046468332Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Installed wrapper contents matched but full installed tree not yet checked",
+      "runner_sha256": "4a0f91f9b966917ddae278c803fcd263bdcb956b890a3b037b91ef1daf79b325"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051158257908Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r2_20261029T051211139771Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r1_20261029T051223960041Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r2_20261029T051236765291Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r1_20261029T051249137408Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r2_20261029T051301658654Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r1_20261029T051314002840Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r2_20261029T051331648046Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r1_20261029T051348870017Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r2_20261029T051406521947Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r1_20261029T051423989121Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r2_20261029T051441342976Z",
+      "status": "completed",
+      "classification": "excluded_instrumentation_incomplete",
+      "reason": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871"
+    }
+  ],
+  "independent_analysis": "NumPy analytic rotor impulse and geometry; file/hash and repeated/fresh-vs-reset checks. No Newton import or simulation in this analyzer."
+}

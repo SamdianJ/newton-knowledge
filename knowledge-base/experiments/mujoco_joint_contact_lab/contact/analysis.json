@@ -1,0 +1,3421 @@
+{
+  "status": "passed",
+  "checks": 270,
+  "passed_checks": 270,
+  "analyzer_sha256": "05ebb99be7f4a6d8dea332b5d38a2f326605bbff4934edaa8033e9c50bee8a5e",
+  "cases": [
+    {
+      "id": "native_solref_rebound",
+      "record_id": "lab:native_solref_rebound",
+      "solver": "mujoco",
+      "title": "原生 solref 阻尼比与回弹",
+      "parameter": "solref",
+      "physical_acceptance": "passed",
+      "observation": "固定 timeconst .02 s，阻尼比 .2 / 1 的实测回弹速度比为 0.583149 / 0.136499；该正值 solref 干预同时改变有效刚度。",
+      "limitations": [
+        "native CPU frictionless sphere-plane only",
+        "constant solimp and fixed timestep",
+        "positive solref ratio changes effective stiffness as well as damping ratio",
+        "no pair override, mesh, multiccd, runtime margin changes or MuJoCo Warp claim",
+        "MuJoCo 3.15 modern gap semantics only"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 1447,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1447"
+        },
+        {
+          "path": "newton/_src/utils/import_mjcf.py",
+          "line": 1097,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "469e25e1313b342f52ebc6ada4a9a4b5c9f280ff97a66438e2e5356012ebb9a0",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/utils/import_mjcf.py#L1097"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 4619,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L4619"
+        },
+        {
+          "path": "docs/solvers/mujoco.rst",
+          "line": 286,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L286"
+        },
+        {
+          "path": "newton/tests/test_mujoco_solver.py",
+          "line": 13894,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9887c5bd24aa3a0ec51f7da564a8c85bf8a6e569e3812b5de8bee2428d7b4d5d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_mujoco_solver.py#L13894"
+        }
+      ],
+      "official_sources": [
+        {
+          "file": "engine_collision_driver.c",
+          "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/src/engine/engine_collision_driver.c",
+          "sha256": "67ce97bd1ea28cc1dd6fe9086e60afdad84ccf248fd38e0d3e72b65ae03ec6fc",
+          "bytes": 76873
+        },
+        {
+          "file": "modeling.rst",
+          "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/doc/modeling.rst",
+          "sha256": "8ee62692e3244dd6692a68480989aaf485ef0eb1cbf219abeec63b526d52b787",
+          "bytes": 122345
+        },
+        {
+          "file": "computation-index.rst",
+          "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/doc/computation/index.rst",
+          "sha256": "f6a00ef24c8e973b21899ff9f3f0828a1643ff71e1769b133688dea0babe360a",
+          "bytes": 151427
+        }
+      ],
+      "associations": [
+        "model:mujoco:mujoco.solref"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "Supported MJCF authored raw solref ratio A/B; time constant, priority, solimp, condim and backend fixed.",
+      "variants": [
+        {
+          "run_id": "native_solref_rebound_A_r1_20261029T082209426737Z",
+          "variant": "A",
+          "repeat": 1,
+          "metrics": {
+            "detection_time_s": 0.1005,
+            "activation_time_s": 0.1005,
+            "restitution": 0.5831485390663147,
+            "tail_velocity_peak_to_peak_mps": 0.0,
+            "final_surface_distance_m": 0.16758374571800233,
+            "inactive_pre_force_samples": 0,
+            "inactive_force_max_N": 0.0,
+            "impulse_residual_Ns": 5.8965658578102875e-08,
+            "geometry_error_m": 7.450580569168253e-10,
+            "freeflight_position_error_m": 3.2782554626464844e-07,
+            "freeflight_velocity_error_mps": 0.0,
+            "max_energy_ratio": 1.0,
+            "off_axis_speed_max": 0.0,
+            "peak_normal_force_N": 213.34389830619443,
+            "min_surface_distance_m": -0.0030601948499679593,
+            "solver_iterations_max": 1,
+            "actual_timestep_s": 0.0005
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_A_r1_20261029T082209426737Z/trajectory.npz",
+          "raw_sha256": "9a68550f90f3198adae78a03bb59c31e8494e2afcb8e89a9125410249f105548",
+          "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_A_r1_20261029T082209426737Z/result.json",
+          "config": {
+            "scene": {
+              "solref": [
+                0.02,
+                0.2
+              ],
+              "margin": 0,
+              "gap": 0
+            },
+            "native_options": {
+              "timestep": 0.002,
+              "iterations": 100,
+              "tolerance": 1e-12,
+              "solver": 2,
+              "integrator": 0,
+              "enableflags": 0,
+              "disableflags": 524288,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_timestep_s": 0.0005,
+            "native_option_snapshot": "before_first_step",
+            "native_geom": {
+              "geom_type": [
+                0,
+                2
+              ],
+              "geom_bodyid": [
+                0,
+                1
+              ],
+              "geom_priority": [
+                0,
+                1
+              ],
+              "geom_solref": [
+                [
+                  0.07999999821186066,
+                  1.0
+                ],
+                [
+                  0.019999999552965164,
+                  0.20000000298023224
+                ]
+              ],
+              "geom_solimp": [
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ],
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "geom_margin": [
+                0.0,
+                0.0
+              ],
+              "geom_gap": [
+                0.0,
+                0.0
+              ],
+              "geom_condim": [
+                1,
+                1
+              ],
+              "geom_friction": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "refsafe_enabled": true,
+            "use_mujoco_cpu": true
+          },
+          "reproduction": {
+            "run_id": "native_solref_rebound_A_r2_20261029T082215785321Z",
+            "variant": "A",
+            "repeat": 2,
+            "metrics": {
+              "detection_time_s": 0.1005,
+              "activation_time_s": 0.1005,
+              "restitution": 0.5831485390663147,
+              "tail_velocity_peak_to_peak_mps": 0.0,
+              "final_surface_distance_m": 0.16758374571800233,
+              "inactive_pre_force_samples": 0,
+              "inactive_force_max_N": 0.0,
+              "impulse_residual_Ns": 5.8965658578102875e-08,
+              "geometry_error_m": 7.450580569168253e-10,
+              "freeflight_position_error_m": 3.2782554626464844e-07,
+              "freeflight_velocity_error_mps": 0.0,
+              "max_energy_ratio": 1.0,
+              "off_axis_speed_max": 0.0,
+              "peak_normal_force_N": 213.34389830619443,
+              "min_surface_distance_m": -0.0030601948499679593,
+              "solver_iterations_max": 1,
+              "actual_timestep_s": 0.0005
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_A_r2_20261029T082215785321Z/trajectory.npz",
+            "raw_sha256": "9a68550f90f3198adae78a03bb59c31e8494e2afcb8e89a9125410249f105548",
+            "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+            "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+            "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_A_r2_20261029T082215785321Z/result.json",
+            "config": {
+              "scene": {
+                "solref": [
+                  0.02,
+                  0.2
+                ],
+                "margin": 0,
+                "gap": 0
+              },
+              "native_options": {
+                "timestep": 0.002,
+                "iterations": 100,
+                "tolerance": 1e-12,
+                "solver": 2,
+                "integrator": 0,
+                "enableflags": 0,
+                "disableflags": 524288,
+                "gravity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "actual_timestep_s": 0.0005,
+              "native_option_snapshot": "before_first_step",
+              "native_geom": {
+                "geom_type": [
+                  0,
+                  2
+                ],
+                "geom_bodyid": [
+                  0,
+                  1
+                ],
+                "geom_priority": [
+                  0,
+                  1
+                ],
+                "geom_solref": [
+                  [
+                    0.07999999821186066,
+                    1.0
+                  ],
+                  [
+                    0.019999999552965164,
+                    0.20000000298023224
+                  ]
+                ],
+                "geom_solimp": [
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ],
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ]
+                ],
+                "geom_margin": [
+                  0.0,
+                  0.0
+                ],
+                "geom_gap": [
+                  0.0,
+                  0.0
+                ],
+                "geom_condim": [
+                  1,
+                  1
+                ],
+                "geom_friction": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              },
+              "refsafe_enabled": true,
+              "use_mujoco_cpu": true
+            }
+          },
+          "label": "ratio .2"
+        },
+        {
+          "run_id": "native_solref_rebound_B_r1_20261029T082222092040Z",
+          "variant": "B",
+          "repeat": 1,
+          "metrics": {
+            "detection_time_s": 0.1005,
+            "activation_time_s": 0.1005,
+            "restitution": 0.13649898767471313,
+            "tail_velocity_peak_to_peak_mps": 0.0,
+            "final_surface_distance_m": 0.03012205362319946,
+            "inactive_pre_force_samples": 0,
+            "inactive_force_max_N": 0.0,
+            "impulse_residual_Ns": 7.674853974570794e-08,
+            "geometry_error_m": 7.450580569168253e-10,
+            "freeflight_position_error_m": 3.2782554626464844e-07,
+            "freeflight_velocity_error_mps": 0.0,
+            "max_energy_ratio": 1.0,
+            "off_axis_speed_max": 0.0,
+            "peak_normal_force_N": 101.24956710262259,
+            "min_surface_distance_m": -0.00738916099071503,
+            "solver_iterations_max": 1,
+            "actual_timestep_s": 0.0005
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_B_r1_20261029T082222092040Z/trajectory.npz",
+          "raw_sha256": "4bbcf26d9d6e32bb056b57fba8e3f1094f97e61f7508357f5981a1e0d32b8fc5",
+          "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_B_r1_20261029T082222092040Z/result.json",
+          "config": {
+            "scene": {
+              "solref": [
+                0.02,
+                1
+              ],
+              "margin": 0,
+              "gap": 0
+            },
+            "native_options": {
+              "timestep": 0.002,
+              "iterations": 100,
+              "tolerance": 1e-12,
+              "solver": 2,
+              "integrator": 0,
+              "enableflags": 0,
+              "disableflags": 524288,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_timestep_s": 0.0005,
+            "native_option_snapshot": "before_first_step",
+            "native_geom": {
+              "geom_type": [
+                0,
+                2
+              ],
+              "geom_bodyid": [
+                0,
+                1
+              ],
+              "geom_priority": [
+                0,
+                1
+              ],
+              "geom_solref": [
+                [
+                  0.07999999821186066,
+                  1.0
+                ],
+                [
+                  0.019999999552965164,
+                  1.0
+                ]
+              ],
+              "geom_solimp": [
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ],
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "geom_margin": [
+                0.0,
+                0.0
+              ],
+              "geom_gap": [
+                0.0,
+                0.0
+              ],
+              "geom_condim": [
+                1,
+                1
+              ],
+              "geom_friction": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "refsafe_enabled": true,
+            "use_mujoco_cpu": true
+          },
+          "reproduction": {
+            "run_id": "native_solref_rebound_B_r2_20261029T082228398424Z",
+            "variant": "B",
+            "repeat": 2,
+            "metrics": {
+              "detection_time_s": 0.1005,
+              "activation_time_s": 0.1005,
+              "restitution": 0.13649898767471313,
+              "tail_velocity_peak_to_peak_mps": 0.0,
+              "final_surface_distance_m": 0.03012205362319946,
+              "inactive_pre_force_samples": 0,
+              "inactive_force_max_N": 0.0,
+              "impulse_residual_Ns": 7.674853974570794e-08,
+              "geometry_error_m": 7.450580569168253e-10,
+              "freeflight_position_error_m": 3.2782554626464844e-07,
+              "freeflight_velocity_error_mps": 0.0,
+              "max_energy_ratio": 1.0,
+              "off_axis_speed_max": 0.0,
+              "peak_normal_force_N": 101.24956710262259,
+              "min_surface_distance_m": -0.00738916099071503,
+              "solver_iterations_max": 1,
+              "actual_timestep_s": 0.0005
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_B_r2_20261029T082228398424Z/trajectory.npz",
+            "raw_sha256": "4bbcf26d9d6e32bb056b57fba8e3f1094f97e61f7508357f5981a1e0d32b8fc5",
+            "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+            "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+            "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_B_r2_20261029T082228398424Z/result.json",
+            "config": {
+              "scene": {
+                "solref": [
+                  0.02,
+                  1
+                ],
+                "margin": 0,
+                "gap": 0
+              },
+              "native_options": {
+                "timestep": 0.002,
+                "iterations": 100,
+                "tolerance": 1e-12,
+                "solver": 2,
+                "integrator": 0,
+                "enableflags": 0,
+                "disableflags": 524288,
+                "gravity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "actual_timestep_s": 0.0005,
+              "native_option_snapshot": "before_first_step",
+              "native_geom": {
+                "geom_type": [
+                  0,
+                  2
+                ],
+                "geom_bodyid": [
+                  0,
+                  1
+                ],
+                "geom_priority": [
+                  0,
+                  1
+                ],
+                "geom_solref": [
+                  [
+                    0.07999999821186066,
+                    1.0
+                  ],
+                  [
+                    0.019999999552965164,
+                    1.0
+                  ]
+                ],
+                "geom_solimp": [
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ],
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ]
+                ],
+                "geom_margin": [
+                  0.0,
+                  0.0
+                ],
+                "geom_gap": [
+                  0.0,
+                  0.0
+                ],
+                "geom_condim": [
+                  1,
+                  1
+                ],
+                "geom_friction": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              },
+              "refsafe_enabled": true,
+              "use_mujoco_cpu": true
+            }
+          },
+          "label": "ratio 1"
+        }
+      ],
+      "protocol_file": "experiments/mujoco_joint_contact_lab/contact/protocol.json",
+      "runner_file": "experiments/mujoco_joint_contact_lab/contact/runner.py",
+      "acceptance_results": [
+        {
+          "name": "A r1 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r1 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "A r1 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r1 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "A r1 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "A r1 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r1 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            0.20000000298023224
+          ],
+          "expected": [
+            0.02,
+            0.2
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_margin",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_gap",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 contact priority solref error",
+          "actual": 2.980232227667301e-09,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 contact includemargin error",
+          "actual": 0.0,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 impulse",
+          "actual": 5.8965658578102875e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "A r1 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 tail plateau",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0001
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 separated outgoing",
+          "actual": [
+            0.16758374571800233,
+            0.5831485390663147
+          ],
+          "expected": ">0",
+          "passed": true
+        },
+        {
+          "name": "A r1 restitution gate",
+          "actual": 0.5831485390663147,
+          "expected": {
+            ">=": 0.35
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r2 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "A r2 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r2 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "A r2 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "A r2 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r2 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            0.20000000298023224
+          ],
+          "expected": [
+            0.02,
+            0.2
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_margin",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_gap",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 contact priority solref error",
+          "actual": 2.980232227667301e-09,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 contact includemargin error",
+          "actual": 0.0,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 impulse",
+          "actual": 5.8965658578102875e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "A r2 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 tail plateau",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0001
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 separated outgoing",
+          "actual": [
+            0.16758374571800233,
+            0.5831485390663147
+          ],
+          "expected": ">0",
+          "passed": true
+        },
+        {
+          "name": "A r2 restitution gate",
+          "actual": 0.5831485390663147,
+          "expected": {
+            ">=": 0.35
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat body_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat joint_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat body_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat joint_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat detection_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat activation_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r1 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "B r1 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r1 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "B r1 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "B r1 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r1 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            1.0
+          ],
+          "expected": [
+            0.02,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_margin",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_gap",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 contact priority solref error",
+          "actual": 4.470348362317633e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 contact includemargin error",
+          "actual": 0.0,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 impulse",
+          "actual": 7.674853974570794e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "B r1 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 tail plateau",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 separated outgoing",
+          "actual": [
+            0.03012205362319946,
+            0.13649898767471313
+          ],
+          "expected": ">0",
+          "passed": true
+        },
+        {
+          "name": "B r1 restitution gate",
+          "actual": 0.13649898767471313,
+          "expected": {
+            "<=": 0.25
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r2 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "B r2 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r2 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "B r2 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "B r2 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r2 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            1.0
+          ],
+          "expected": [
+            0.02,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_margin",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_gap",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 contact priority solref error",
+          "actual": 4.470348362317633e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 contact includemargin error",
+          "actual": 0.0,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 impulse",
+          "actual": 7.674853974570794e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "B r2 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 tail plateau",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 separated outgoing",
+          "actual": [
+            0.03012205362319946,
+            0.13649898767471313
+          ],
+          "expected": ">0",
+          "passed": true
+        },
+        {
+          "name": "B r2 restitution gate",
+          "actual": 0.13649898767471313,
+          "expected": {
+            "<=": 0.25
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat body_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat joint_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat body_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat joint_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat detection_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat activation_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "restitution intervention r1",
+          "actual": 0.44664955139160156,
+          "expected": {
+            "min": 0.2
+          },
+          "passed": true
+        },
+        {
+          "name": "restitution intervention r2",
+          "actual": 0.44664955139160156,
+          "expected": {
+            "min": 0.2
+          },
+          "passed": true
+        }
+      ],
+      "plot": "contact/native_solref_rebound.svg"
+    },
+    {
+      "id": "native_gap_activation",
+      "record_id": "lab:native_gap_activation",
+      "solver": "mujoco",
+      "title": "gap 提前检测但不提前激活接触力",
+      "parameter": "shape_gap shape_margin",
+      "physical_acceptance": "passed",
+      "observation": "gap 0 / .04 m 的首次检测为 0.0905 / 0.0505 s；首次激活均为 0.0905 s。较大 gap 提供 80 个提前检测但无力样本，A/B 轨迹等价。",
+      "limitations": [
+        "native CPU frictionless sphere-plane only",
+        "constant solimp and fixed timestep",
+        "positive solref ratio changes effective stiffness as well as damping ratio",
+        "no pair override, mesh, multiccd, runtime margin changes or MuJoCo Warp claim",
+        "MuJoCo 3.15 modern gap semantics only"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 1447,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1447"
+        },
+        {
+          "path": "newton/_src/utils/import_mjcf.py",
+          "line": 1097,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "469e25e1313b342f52ebc6ada4a9a4b5c9f280ff97a66438e2e5356012ebb9a0",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/utils/import_mjcf.py#L1097"
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 4619,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/builder.py#L4619"
+        },
+        {
+          "path": "docs/solvers/mujoco.rst",
+          "line": 286,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/mujoco.rst#L286"
+        },
+        {
+          "path": "newton/tests/test_mujoco_solver.py",
+          "line": 13894,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9887c5bd24aa3a0ec51f7da564a8c85bf8a6e569e3812b5de8bee2428d7b4d5d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_mujoco_solver.py#L13894"
+        }
+      ],
+      "official_sources": [
+        {
+          "file": "engine_collision_driver.c",
+          "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/src/engine/engine_collision_driver.c",
+          "sha256": "67ce97bd1ea28cc1dd6fe9086e60afdad84ccf248fd38e0d3e72b65ae03ec6fc",
+          "bytes": 76873
+        },
+        {
+          "file": "modeling.rst",
+          "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/doc/modeling.rst",
+          "sha256": "8ee62692e3244dd6692a68480989aaf485ef0eb1cbf219abeec63b526d52b787",
+          "bytes": 122345
+        },
+        {
+          "file": "computation-index.rst",
+          "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/doc/computation/index.rst",
+          "sha256": "f6a00ef24c8e973b21899ff9f3f0828a1643ff71e1769b133688dea0babe360a",
+          "bytes": 151427
+        }
+      ],
+      "associations": [
+        "model:mujoco:shape_gap",
+        "model:mujoco:shape_margin"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "Only gap varied directly; margin fixed geometric activation reference, not a margin A/B sweep.",
+      "variants": [
+        {
+          "run_id": "native_gap_activation_A_r1_20261029T082234657141Z",
+          "variant": "A",
+          "repeat": 1,
+          "metrics": {
+            "detection_time_s": 0.0905,
+            "activation_time_s": 0.0905,
+            "restitution": 0.13649868965148926,
+            "tail_velocity_peak_to_peak_mps": 0.0,
+            "final_surface_distance_m": 0.04148646146059036,
+            "inactive_pre_force_samples": 0,
+            "inactive_force_max_N": 0.0,
+            "impulse_residual_Ns": 7.428866211078855e-08,
+            "geometry_error_m": 7.450580569168253e-10,
+            "freeflight_position_error_m": 3.2782554626464844e-07,
+            "freeflight_velocity_error_mps": 0.0,
+            "max_energy_ratio": 1.0,
+            "off_axis_speed_max": 0.0,
+            "peak_normal_force_N": 101.2495158798765,
+            "min_surface_distance_m": 0.002610851824283597,
+            "solver_iterations_max": 1,
+            "actual_timestep_s": 0.0005
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_A_r1_20261029T082234657141Z/trajectory.npz",
+          "raw_sha256": "4647cce02ab2766d0cb369f50ffcb45181c8540c3f0911789195726fbe4791fd",
+          "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_A_r1_20261029T082234657141Z/result.json",
+          "config": {
+            "scene": {
+              "solref": [
+                0.02,
+                1
+              ],
+              "margin": 0.01,
+              "gap": 0
+            },
+            "native_options": {
+              "timestep": 0.002,
+              "iterations": 100,
+              "tolerance": 1e-12,
+              "solver": 2,
+              "integrator": 0,
+              "enableflags": 0,
+              "disableflags": 524288,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_timestep_s": 0.0005,
+            "native_option_snapshot": "before_first_step",
+            "native_geom": {
+              "geom_type": [
+                0,
+                2
+              ],
+              "geom_bodyid": [
+                0,
+                1
+              ],
+              "geom_priority": [
+                0,
+                1
+              ],
+              "geom_solref": [
+                [
+                  0.07999999821186066,
+                  1.0
+                ],
+                [
+                  0.019999999552965164,
+                  1.0
+                ]
+              ],
+              "geom_solimp": [
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ],
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "geom_margin": [
+                0.0,
+                0.009999999776482582
+              ],
+              "geom_gap": [
+                0.0,
+                0.0
+              ],
+              "geom_condim": [
+                1,
+                1
+              ],
+              "geom_friction": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "refsafe_enabled": true,
+            "use_mujoco_cpu": true
+          },
+          "reproduction": {
+            "run_id": "native_gap_activation_A_r2_20261029T082240990327Z",
+            "variant": "A",
+            "repeat": 2,
+            "metrics": {
+              "detection_time_s": 0.0905,
+              "activation_time_s": 0.0905,
+              "restitution": 0.13649868965148926,
+              "tail_velocity_peak_to_peak_mps": 0.0,
+              "final_surface_distance_m": 0.04148646146059036,
+              "inactive_pre_force_samples": 0,
+              "inactive_force_max_N": 0.0,
+              "impulse_residual_Ns": 7.428866211078855e-08,
+              "geometry_error_m": 7.450580569168253e-10,
+              "freeflight_position_error_m": 3.2782554626464844e-07,
+              "freeflight_velocity_error_mps": 0.0,
+              "max_energy_ratio": 1.0,
+              "off_axis_speed_max": 0.0,
+              "peak_normal_force_N": 101.2495158798765,
+              "min_surface_distance_m": 0.002610851824283597,
+              "solver_iterations_max": 1,
+              "actual_timestep_s": 0.0005
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_A_r2_20261029T082240990327Z/trajectory.npz",
+            "raw_sha256": "4647cce02ab2766d0cb369f50ffcb45181c8540c3f0911789195726fbe4791fd",
+            "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+            "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+            "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_A_r2_20261029T082240990327Z/result.json",
+            "config": {
+              "scene": {
+                "solref": [
+                  0.02,
+                  1
+                ],
+                "margin": 0.01,
+                "gap": 0
+              },
+              "native_options": {
+                "timestep": 0.002,
+                "iterations": 100,
+                "tolerance": 1e-12,
+                "solver": 2,
+                "integrator": 0,
+                "enableflags": 0,
+                "disableflags": 524288,
+                "gravity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "actual_timestep_s": 0.0005,
+              "native_option_snapshot": "before_first_step",
+              "native_geom": {
+                "geom_type": [
+                  0,
+                  2
+                ],
+                "geom_bodyid": [
+                  0,
+                  1
+                ],
+                "geom_priority": [
+                  0,
+                  1
+                ],
+                "geom_solref": [
+                  [
+                    0.07999999821186066,
+                    1.0
+                  ],
+                  [
+                    0.019999999552965164,
+                    1.0
+                  ]
+                ],
+                "geom_solimp": [
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ],
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ]
+                ],
+                "geom_margin": [
+                  0.0,
+                  0.009999999776482582
+                ],
+                "geom_gap": [
+                  0.0,
+                  0.0
+                ],
+                "geom_condim": [
+                  1,
+                  1
+                ],
+                "geom_friction": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              },
+              "refsafe_enabled": true,
+              "use_mujoco_cpu": true
+            }
+          },
+          "label": "gap 0 m"
+        },
+        {
+          "run_id": "native_gap_activation_B_r1_20261029T082247191134Z",
+          "variant": "B",
+          "repeat": 1,
+          "metrics": {
+            "detection_time_s": 0.0505,
+            "activation_time_s": 0.0905,
+            "restitution": 0.13649868965148926,
+            "tail_velocity_peak_to_peak_mps": 0.0,
+            "final_surface_distance_m": 0.04148646146059036,
+            "inactive_pre_force_samples": 80,
+            "inactive_force_max_N": 0.0,
+            "impulse_residual_Ns": 7.428866211078855e-08,
+            "geometry_error_m": 7.450580569168253e-10,
+            "freeflight_position_error_m": 3.2782554626464844e-07,
+            "freeflight_velocity_error_mps": 0.0,
+            "max_energy_ratio": 1.0,
+            "off_axis_speed_max": 0.0,
+            "peak_normal_force_N": 101.2495158798765,
+            "min_surface_distance_m": 0.002610851824283597,
+            "solver_iterations_max": 1,
+            "actual_timestep_s": 0.0005
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_B_r1_20261029T082247191134Z/trajectory.npz",
+          "raw_sha256": "0e1f2735afa7dc06f546abb08076df5a9ff6b36ff75ac5cc2f9164114042f5ca",
+          "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_B_r1_20261029T082247191134Z/result.json",
+          "config": {
+            "scene": {
+              "solref": [
+                0.02,
+                1
+              ],
+              "margin": 0.01,
+              "gap": 0.04
+            },
+            "native_options": {
+              "timestep": 0.002,
+              "iterations": 100,
+              "tolerance": 1e-12,
+              "solver": 2,
+              "integrator": 0,
+              "enableflags": 0,
+              "disableflags": 524288,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_timestep_s": 0.0005,
+            "native_option_snapshot": "before_first_step",
+            "native_geom": {
+              "geom_type": [
+                0,
+                2
+              ],
+              "geom_bodyid": [
+                0,
+                1
+              ],
+              "geom_priority": [
+                0,
+                1
+              ],
+              "geom_solref": [
+                [
+                  0.07999999821186066,
+                  1.0
+                ],
+                [
+                  0.019999999552965164,
+                  1.0
+                ]
+              ],
+              "geom_solimp": [
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ],
+                [
+                  0.9900000095367432,
+                  0.9900000095367432,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "geom_margin": [
+                0.0,
+                0.009999999776482582
+              ],
+              "geom_gap": [
+                0.0,
+                0.03999999910593033
+              ],
+              "geom_condim": [
+                1,
+                1
+              ],
+              "geom_friction": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "refsafe_enabled": true,
+            "use_mujoco_cpu": true
+          },
+          "reproduction": {
+            "run_id": "native_gap_activation_B_r2_20261029T082253452010Z",
+            "variant": "B",
+            "repeat": 2,
+            "metrics": {
+              "detection_time_s": 0.0505,
+              "activation_time_s": 0.0905,
+              "restitution": 0.13649868965148926,
+              "tail_velocity_peak_to_peak_mps": 0.0,
+              "final_surface_distance_m": 0.04148646146059036,
+              "inactive_pre_force_samples": 80,
+              "inactive_force_max_N": 0.0,
+              "impulse_residual_Ns": 7.428866211078855e-08,
+              "geometry_error_m": 7.450580569168253e-10,
+              "freeflight_position_error_m": 3.2782554626464844e-07,
+              "freeflight_velocity_error_mps": 0.0,
+              "max_energy_ratio": 1.0,
+              "off_axis_speed_max": 0.0,
+              "peak_normal_force_N": 101.2495158798765,
+              "min_surface_distance_m": 0.002610851824283597,
+              "solver_iterations_max": 1,
+              "actual_timestep_s": 0.0005
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_B_r2_20261029T082253452010Z/trajectory.npz",
+            "raw_sha256": "0e1f2735afa7dc06f546abb08076df5a9ff6b36ff75ac5cc2f9164114042f5ca",
+            "program_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+            "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+            "result_file": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_B_r2_20261029T082253452010Z/result.json",
+            "config": {
+              "scene": {
+                "solref": [
+                  0.02,
+                  1
+                ],
+                "margin": 0.01,
+                "gap": 0.04
+              },
+              "native_options": {
+                "timestep": 0.002,
+                "iterations": 100,
+                "tolerance": 1e-12,
+                "solver": 2,
+                "integrator": 0,
+                "enableflags": 0,
+                "disableflags": 524288,
+                "gravity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "actual_timestep_s": 0.0005,
+              "native_option_snapshot": "before_first_step",
+              "native_geom": {
+                "geom_type": [
+                  0,
+                  2
+                ],
+                "geom_bodyid": [
+                  0,
+                  1
+                ],
+                "geom_priority": [
+                  0,
+                  1
+                ],
+                "geom_solref": [
+                  [
+                    0.07999999821186066,
+                    1.0
+                  ],
+                  [
+                    0.019999999552965164,
+                    1.0
+                  ]
+                ],
+                "geom_solimp": [
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ],
+                  [
+                    0.9900000095367432,
+                    0.9900000095367432,
+                    0.0010000000474974513,
+                    0.5,
+                    2.0
+                  ]
+                ],
+                "geom_margin": [
+                  0.0,
+                  0.009999999776482582
+                ],
+                "geom_gap": [
+                  0.0,
+                  0.03999999910593033
+                ],
+                "geom_condim": [
+                  1,
+                  1
+                ],
+                "geom_friction": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              },
+              "refsafe_enabled": true,
+              "use_mujoco_cpu": true
+            }
+          },
+          "label": "gap .04 m"
+        }
+      ],
+      "protocol_file": "experiments/mujoco_joint_contact_lab/contact/protocol.json",
+      "runner_file": "experiments/mujoco_joint_contact_lab/contact/runner.py",
+      "acceptance_results": [
+        {
+          "name": "A r1 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r1 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "A r1 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r1 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "A r1 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "A r1 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r1 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            1.0
+          ],
+          "expected": [
+            0.02,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_margin",
+          "actual": 0.009999999776482582,
+          "expected": 0.01,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_gap",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r1 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 contact priority solref error",
+          "actual": 4.470348362317633e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 contact includemargin error",
+          "actual": 2.2351741811588166e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r1 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 impulse",
+          "actual": 7.428866211078855e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "A r1 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "A r1 activation prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r2 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "A r2 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r2 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "A r2 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "A r2 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "A r2 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            1.0
+          ],
+          "expected": [
+            0.02,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_margin",
+          "actual": 0.009999999776482582,
+          "expected": 0.01,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_gap",
+          "actual": 0.0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "A r2 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 contact priority solref error",
+          "actual": 4.470348362317633e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 contact includemargin error",
+          "actual": 2.2351741811588166e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "A r2 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 impulse",
+          "actual": 7.428866211078855e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "A r2 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "A r2 activation prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat body_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat joint_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat body_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat joint_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat detection_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "A repeat activation_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r1 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "B r1 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r1 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "B r1 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "B r1 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r1 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            1.0
+          ],
+          "expected": [
+            0.02,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_margin",
+          "actual": 0.009999999776482582,
+          "expected": 0.01,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_gap",
+          "actual": 0.03999999910593033,
+          "expected": 0.04,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r1 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 contact priority solref error",
+          "actual": 4.470348362317633e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 contact includemargin error",
+          "actual": 2.2351741811588166e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r1 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 impulse",
+          "actual": 7.428866211078855e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "B r1 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 activation prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 inactive count",
+          "actual": 80,
+          "expected": {
+            "min": 70
+          },
+          "passed": true
+        },
+        {
+          "name": "B r1 inactive force",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-10
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 all finite",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r2 samples",
+          "actual": 801,
+          "expected": 801,
+          "passed": true
+        },
+        {
+          "name": "B r2 installed 809 hashes",
+          "actual": {
+            "checked_python_files": 809,
+            "missing": [],
+            "changed": []
+          },
+          "expected": {
+            "files": 809,
+            "changed": [],
+            "missing": []
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 all archive hashes",
+          "actual": 8,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r2 protocol",
+          "actual": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "expected": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+          "passed": true
+        },
+        {
+          "name": "B r2 program",
+          "actual": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "expected": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+          "passed": true
+        },
+        {
+          "name": "B r2 native CPU refsafety margin workaround",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "B r2 actual dt max error",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-15
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_solref",
+          "actual": [
+            0.019999999552965164,
+            1.0
+          ],
+          "expected": [
+            0.02,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_margin",
+          "actual": 0.009999999776482582,
+          "expected": 0.01,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_gap",
+          "actual": 0.03999999910593033,
+          "expected": 0.04,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_priority",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_condim",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "B r2 geom_solimp",
+          "actual": [
+            0.9900000095367432,
+            0.9900000095367432,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.99,
+            0.99,
+            0.001,
+            0.5,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 floor solref",
+          "actual": [
+            0.07999999821186066,
+            1.0
+          ],
+          "expected": [
+            0.08,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 imported raw mode",
+          "actual": [
+            1,
+            1
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 contact priority solref error",
+          "actual": 4.470348362317633e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 contact includemargin error",
+          "actual": 2.2351741811588166e-10,
+          "expected": {
+            "max": 2e-08
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 mass",
+          "actual": [
+            0.0,
+            1.0
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "name": "B r2 geometry",
+          "actual": 7.450580569168253e-10,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 freeflight position",
+          "actual": 3.2782554626464844e-07,
+          "expected": {
+            "max": 2e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 freeflight velocity",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 impulse",
+          "actual": 7.428866211078855e-08,
+          "expected": {
+            "max": 0.002
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 energy",
+          "actual": 1.0,
+          "expected": {
+            "max": 1.05
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 off axis",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 nonnegative force",
+          "actual": 0.0,
+          "expected": -1e-10,
+          "passed": true
+        },
+        {
+          "name": "B r2 detection prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 activation prediction error",
+          "actual": 0.0005000000000000004,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 inactive count",
+          "actual": 80,
+          "expected": {
+            "min": 70
+          },
+          "passed": true
+        },
+        {
+          "name": "B r2 inactive force",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-10
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat body_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat joint_q",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-06
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat body_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat joint_qd",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat detection_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "B repeat activation_time_s",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "detection advance error r1",
+          "actual": 6.938893903907228e-18,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "activation timing difference r1",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "gap physical position equivalence r1",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "gap physical velocity equivalence r1",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0001
+          },
+          "passed": true
+        },
+        {
+          "name": "detection advance error r2",
+          "actual": 6.938893903907228e-18,
+          "expected": {
+            "max": 0.001
+          },
+          "passed": true
+        },
+        {
+          "name": "activation timing difference r2",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0005
+          },
+          "passed": true
+        },
+        {
+          "name": "gap physical position equivalence r2",
+          "actual": 0.0,
+          "expected": {
+            "max": 1e-05
+          },
+          "passed": true
+        },
+        {
+          "name": "gap physical velocity equivalence r2",
+          "actual": 0.0,
+          "expected": {
+            "max": 0.0001
+          },
+          "passed": true
+        }
+      ],
+      "plot": "contact/native_gap_activation.svg"
+    }
+  ],
+  "formal_runs": [
+    "native_solref_rebound_A_r1_20261029T082209426737Z",
+    "native_solref_rebound_A_r2_20261029T082215785321Z",
+    "native_solref_rebound_B_r1_20261029T082222092040Z",
+    "native_solref_rebound_B_r2_20261029T082228398424Z",
+    "native_gap_activation_A_r1_20261029T082234657141Z",
+    "native_gap_activation_A_r2_20261029T082240990327Z",
+    "native_gap_activation_B_r1_20261029T082247191134Z",
+    "native_gap_activation_B_r2_20261029T082253452010Z"
+  ],
+  "excluded_attempts": {
+    "reason": "Construction-time opt.timestep is default .002 before wrapper step sets frozen .0005. Old snapshots lack per-step actual timestep; exclusion is instrumentation completeness, never physical outcome. Added explicit pre-step sampling label plus native timestep/time after every step; no simulation or thresholds changed.",
+    "old_runner_sha256": "6e43b4dc2f27dfc3055fafdd8389711c4647071d45055cea2e72765abbb14141",
+    "new_runner_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+    "excluded_runs": [
+      "native_gap_activation_A_r1_20261029T082102081914Z",
+      "native_gap_activation_A_r2_20261029T082108622357Z",
+      "native_gap_activation_B_r1_20261029T082115281084Z",
+      "native_gap_activation_B_r2_20261029T082121702358Z",
+      "native_solref_rebound_A_r1_20261029T082026329151Z",
+      "native_solref_rebound_A_r2_20261029T082042720036Z",
+      "native_solref_rebound_B_r1_20261029T082049013112Z",
+      "native_solref_rebound_B_r2_20261029T082055642848Z"
+    ],
+    "excluded_status": "excluded_instrumentation_incomplete"
+  }
+}

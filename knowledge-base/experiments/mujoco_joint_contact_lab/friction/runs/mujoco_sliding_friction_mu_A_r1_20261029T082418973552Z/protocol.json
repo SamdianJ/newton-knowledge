@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "mujoco-friction-1.0",
+  "status": "frozen_before_runs",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "native_mujoco_version": "3.15.0",
+  "device": "cpu",
+  "solver": {
+    "use_mujoco_cpu": true,
+    "use_mujoco_contacts": true,
+    "solver": 2,
+    "integrator": 0,
+    "cone": 1,
+    "jacobian": 0,
+    "iterations": 100,
+    "tolerance": 1e-10,
+    "ls_iterations": 50,
+    "update_data_interval": 1,
+    "impratio": 1.0,
+    "interpretation": "native CPU Newton solver/Euler/elliptic/dense; integer options checked against enum constants and actual mj_model.opt"
+  },
+  "common_scene": {
+    "mass_kg": 1.0,
+    "gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "com_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "initial_penetration_m": 1e-05,
+    "initial_quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "ground": {
+      "mu": 0.0,
+      "mu_torsional_m": 0.0,
+      "mu_rolling_m": 0.0,
+      "condim": 3,
+      "priority": 0
+    },
+    "shape_density": 0.0,
+    "geometry_margin_m": 0.0,
+    "raw_solref": [
+      0.01,
+      1.0
+    ],
+    "raw_solimp": [
+      0.95,
+      0.95,
+      0.001,
+      0.5,
+      2.0
+    ],
+    "geom_solmix": 1.0,
+    "priority": 0,
+    "world_count": 1,
+    "contacts": "native MuJoCo-generated, no explicit pair, no Newton contacts",
+    "no_actuators": true,
+    "joint": "one free joint, no damping/frictionloss/armature"
+  },
+  "run": {
+    "dt_s": 0.001,
+    "independent_repeats": [
+      1,
+      2
+    ],
+    "settled_analysis_starts_s": 0.05,
+    "warmup": "none; initial tiny overlap, all transient steps retained; Coulomb constant-N approximation scored from t=.05 with measured velocity as starting value, independent impulse balance scored from t0",
+    "sampling": "state arrays include t0 and every output; step contact arrays represent forces used over pre-step n to post-step n+1. Read mj_contactForce immediately after solver.step without mj_forward, mj_step or backend mutation. Contact pos/frame correspond to force solve at pre-integration state; aggregate wrench about pre-step COM.",
+    "performance": "not compared"
+  },
+  "cases": [
+    {
+      "id": "mujoco_sliding_friction_mu",
+      "title": "薄宽盒平面滑动：滑动摩擦系数单因素对照",
+      "shape": "box",
+      "half_extents_m": [
+        0.2,
+        0.15,
+        0.025
+      ],
+      "inertia_diagonal_kg_m2": [
+        0.0077083333333333335,
+        0.013541666666666669,
+        0.020833333333333332
+      ],
+      "initial_velocity_world": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "body_mu_torsional_m": 0.0,
+      "body_mu_rolling_m": 0.0,
+      "steps": 300,
+      "variants": {
+        "A": {
+          "body_mu": 0.1,
+          "body_condim": 3
+        },
+        "B": {
+          "body_mu": 0.4,
+          "body_condim": 3
+        }
+      },
+      "direct_intervention": "body shape_material_mu only; plane mu=0 and equal priority expose elementwise maximum mixing",
+      "reference": "During sustained sliding v_x(t)=v_x(.05)-mu*g*(t-.05), x displacement trapezoidal/constant acceleration. Independent full trajectory impulse: m*(v_n-v_0)=sum_k dt*(F_contact_world[k]+m*g). Every force is native mj_contactForce not Newton CONTACT_F.",
+      "criteria": {
+        "analytic_sliding_velocity_max_error_m_s": 0.08,
+        "contact_force_ratio_abs_error": 0.03,
+        "minimum_sliding_speed_m_s": 0.5,
+        "lateral_speed_max_m_s": 0.02,
+        "tilt_from_vertical_max_rad": 0.03,
+        "height_deviation_from_initial_max_m": 0.003,
+        "kinetic_energy_max_positive_step_J": 0.003
+      },
+      "paired_criteria": {
+        "final_vx_A_minus_B_min_m_s": 0.6,
+        "integrated_tangential_impulse_B_minus_A_min_Ns": 0.6
+      }
+    },
+    {
+      "id": "mujoco_torsional_friction_condim",
+      "title": "球体法线自旋：condim 3 与 4 的扭转摩擦作用",
+      "shape": "sphere",
+      "radius_m": 0.1,
+      "inertia_diagonal_kg_m2": [
+        0.004,
+        0.004,
+        0.004
+      ],
+      "initial_velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10.0
+      ],
+      "body_mu_torsional_m": 0.002,
+      "body_mu_rolling_m": 0.0,
+      "steps": 500,
+      "variants": {
+        "A": {
+          "body_mu": 0.3,
+          "body_condim": 3
+        },
+        "B": {
+          "body_mu": 0.3,
+          "body_condim": 4
+        }
+      },
+      "direct_intervention": "body mujoco.condim only; fixed torsional coefficient .002 m, plane condim3/torsion0 and equal priority. Sphere single point eliminates multi-point tangential-friction spin torque.",
+      "reference": "A has no torsion component and omega_z stays10. B while spinning: omega_z(t)=omega_z(.05)-mu_torsion*m*g/Izz*(t-.05). Independent angular momentum: Izz*(omega_z[n]-omega_z[0])=sum_k dt*tau_world_z_about_COM[k]. Verify torque opposing spin and actual enabled contact dim.",
+      "criteria": {
+        "analytic_spin_velocity_max_error_rad_s": 0.25,
+        "spin_A_max_change_rad_s": 0.02,
+        "torsion_A_max_abs_torque_Nm": 1e-05,
+        "torsion_B_ratio_abs_error_m": 0.00025,
+        "minimum_spin_speed_rad_s": 5.0,
+        "lateral_speed_max_m_s": 0.005,
+        "off_axis_angular_speed_max_rad_s": 0.02,
+        "height_deviation_from_initial_max_m": 0.003,
+        "kinetic_energy_max_positive_step_J": 0.0001,
+        "angular_impulse_balance_max_error_Nms": 2e-05
+      },
+      "paired_criteria": {
+        "final_omega_A_minus_B_min_rad_s": 1.5,
+        "integrated_torsion_impulse_B_min_Nms": 0.006
+      }
+    }
+  ],
+  "common_criteria": {
+    "all_physical_and_contact_arrays_finite": true,
+    "linear_impulse_balance_max_error_Ns": 0.0002,
+    "settled_contact_present_fraction_min": 0.99,
+    "settled_positive_normal_force_fraction_min": 0.99,
+    "settled_mean_normal_force_relative_error_max": 0.1,
+    "max_penetration_m": 0.003,
+    "contact_friction_abs_error": 1e-07,
+    "actual_dim_matches_expected": true,
+    "expected_dynamic_ground_pair_only": true,
+    "native_contact_force_only_no_Newton_CONTACT_F": true,
+    "repeat_q_atol": 1e-05,
+    "repeat_qd_atol": 0.0001,
+    "repeat_force_atol": 0.002,
+    "repeat_rtol": 1e-05,
+    "installed_locked_python_files": 809
+  },
+  "mixing_rule": {
+    "same_priority": "condim=max(geom_condim); each of3 friction components=max(geom pair); expand[slide,slide,torsion,roll,roll]; clamp each contact coefficient to mjMINMU=1e-5 even if component unused by condim.",
+    "different_priority": "Higher-priority geom supplies condim/friction; not varied here.",
+    "solref_solimp": "both identical rawvalues, identical priority andsolmix1 ensure no averaging ambiguity; verify actual compiled geom fields and percontactfields",
+    "units": "slide dimensionless; torsion and rolling coefficients metres. mj_contactForce returns force N then torque Nm in normal/tangent contact frame.",
+    "scope": "No explicit contact pairs, anisotropy, rolling condim6, GPU or Newton external contact path tested."
+  },
+  "contact_observations": [
+    "step index/time",
+    "ncon",
+    "per-contact dim/friction5/geom IDs/dist/pos/frame/efc_address",
+    "per-contact6Dforce_torque native",
+    "aggregate world force and torque about pre-step COM",
+    "native qpos/qvel/qacc and qfrc_constraint",
+    "native solver_niter/warnings",
+    "compiled body/geom mass/inertia/priority/condim/friction/solref/solimp and native options"
+  ],
+  "force_sign_convention": "mj_contactForce contact-frame wrench acts positive on geom2; invert for dynamic geom1. Transform each3-vector by frame.T. Torque about pre-step COM=contact torque + (contact_pos-preCOM) cross contact_force. Independent impulse balance must pass, otherwise reject evidence rather than choose a sign from outcomes.",
+  "physical_acceptance": "All per-run physical gates and pair directional effect gates, with independent repeats. Negative outcomes are retained; no post-run gate changes. Exact source/backend/config/contact-mixing checks are evidence validity, separate from physics.",
+  "threshold_rationale": "Expected sliding velocity separation .3*g*.3=.883m/s, paired gate.6; allowed .08m/s reference error tolerates initial soft normal transient but requires active sustained slip and little tilt. Expected spin loss .002*9.81/.004*.5=2.4525rad/s, paired gate1.5; .25rad/s reference tolerance plus independent torque/angular impulse excludes translation or rolling artefacts. Normal-ratio gates apply only t>=.05, all rawtransients retained.",
+  "source_refs": [
+    {
+      "path": "newton/_src/sim/builder.py",
+      "line": 791
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1390
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 7000
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 4557
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 556
+    }
+  ],
+  "native_source_refs": [
+    {
+      "file": "native-source/engine_collision_driver.c",
+      "line": 1599,
+      "mechanism": "priority/max mixing and3to5 expansion"
+    },
+    {
+      "file": "native-source/engine_core_constraint.c",
+      "line": 170,
+      "mechanism": "minimum friction coefficient clamp"
+    },
+    {
+      "file": "native-source/engine_core_util.c",
+      "line": 1080,
+      "mechanism": "mj_contactForce frame output and zeroing unused components"
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/3.15.0/computation/index.html",
+      "mechanism": "condim4 torsion and6 rolling; length units"
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/3.15.0/modeling.html#contact-parameters",
+      "mechanism": "mixing semantics"
+    }
+  ],
+  "provenance": "Everyrun uniqueUTC folder with protocol/runner copy+hash, source-lock and all809 installed Python checks, native version/library hash, raw NPZ+contacts, config/options, logs. Failure retained. Pureharness fixes logged/new fingerprint; physics revisions require new frozenprotocol.",
+  "frozen_at_utc": "2026-10-29T08:20:05.562620+00:00",
+  "reviewed_by": "root: independent reference, intervention, observation alignment and acceptance reviewed before simulation"
+}

@@ -1,0 +1,94 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 12.8 (insufficient CUDA driver version!)
+   Devices:
+     "cpu"      : "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+   Kernel cache:
+     \\?\C:\Users\admin\AppData\Local\NVIDIA\warp\Cache\1.18.0
+RUN full_surface A enable_rigid_soft_full_surface_contact=False
+Warp UserWarning: 
+   Insufficient CUDA driver version.
+   The minimum required CUDA driver version is 13.0, but the installed CUDA driver version is 12.8.
+   Visit https://nvidia.github.io/warp/stable/user_guide/installation.html for guidance.
+Module warp._src.coloring 811e0ea load on device 'cpu' took 2.28 ms  (cached)
+Module newton._src.utils.mesh 92b663b load on device 'cpu' took 1.13 ms  (cached)
+Module validate_and_correct_inertia_kernel_1ff2ac62 6ad45b8 load on device 'cpu' took 1.01 ms  (cached)
+Module newton._src.geometry.bvh 4a1c07f load on device 'cpu' took 0.97 ms  (cached)
+Module newton._src.solvers.vbd.rigid_vbd_kernels 070f7da load on device 'cpu' took 1.41 ms  (cached)
+Module newton._src.solvers.solver 5e8bff5 load on device 'cpu' took 0.98 ms  (cached)
+Module newton._src.sim.collide 764cc4c load on device 'cpu' took 0.91 ms  (cached)
+Module narrow_phase_primitive_write_contact_False_False_False b8baf6c load on device 'cpu' took 1.07 ms  (cached)
+Module newton._src.geometry.narrow_phase 1e9647c load on device 'cpu' took 0.99 ms  (cached)
+Module newton._src.geometry.kernels 1118560 load on device 'cpu' took 1.01 ms  (cached)
+Module newton._src.solvers.xpbd.kernels 06d846e load on device 'cpu' took 1.50 ms  (cached)
+Module newton._src.solvers.vbd.particle_vbd_kernels d0cd8ab load on device 'cpu' took 1.16 ms  (cached)
+Module create_accumulate_body_body_contacts_per_body__locals__accumulate_body_body_contacts_per_body_94d724d6 9beebf5 load on device 'cpu' took 1.69 ms  (cached)
+Module create_update_duals_body_body_contacts__locals__update_duals_body_body_contacts_b19bbc98 4c48e6f load on device 'cpu' took 1.41 ms  (cached)
+{"id": "full_surface", "variant": "A", "metrics": {"final": -761.1505126953125, "min": -761.1505126953125, "max": 40.0, "tail_mean": -622.1757202148438, "step_ms_median_after_warmup": 5.114200059324503, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 48}}
+RUN full_surface B enable_rigid_soft_full_surface_contact=True
+Module newton._src.geometry.soft_contacts_sdf 34286c5 load on device 'cpu' took 1.60 ms  (cached)
+{"id": "full_surface", "variant": "B", "metrics": {"final": -0.24528801441192627, "min": -0.6820783019065857, "max": 40.0, "tail_mean": -0.24528202414512634, "step_ms_median_after_warmup": 5.110300146043301, "max_soft_contact_records": 1, "max_edge_face_records": 1, "finite": true, "steps": 48}}
+RUN iterations A iterations=1
+{"id": "iterations", "variant": "A", "metrics": {"final": 204.656982421875, "min": 136.71270751953125, "max": 325.0, "tail_mean": 170.90919494628906, "step_ms_median_after_warmup": 0.15620002523064613, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 96}}
+RUN iterations B iterations=30
+{"id": "iterations", "variant": "B", "metrics": {"final": 309.67901611328125, "min": 211.7425079345703, "max": 325.0, "tail_mean": 287.35772705078125, "step_ms_median_after_warmup": 1.7657000571489334, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 96}}
+RUN substeps A substeps=1
+{"id": "substeps", "variant": "A", "metrics": {"final": 0.029325485229492188, "min": -30.000001907348633, "max": 120.00000762939453, "tail_mean": -0.023448467254638672, "step_ms_median_after_warmup": 0.6367999594658613, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 24, "final_energy_fraction": 5.972117378405528e-08}}
+RUN substeps B substeps=8
+{"id": "substeps", "variant": "B", "metrics": {"final": 8.371710777282715, "min": -98.80558013916016, "max": 120.00000762939453, "tail_mean": -6.606407642364502, "step_ms_median_after_warmup": 0.6458999123424292, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 192, "final_energy_fraction": 0.050955407321453094}}
+RUN stiffness A spring_stiffness=50.0
+{"id": "stiffness", "variant": "A", "metrics": {"final": 196.21070861816406, "min": 0.0, "max": 203.65536499023438, "tail_mean": 196.18873596191406, "step_ms_median_after_warmup": 0.6479998119175434, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 240, "static_prediction_mm": 196.20000000000002}}
+RUN stiffness B spring_stiffness=500.0
+{"id": "stiffness", "variant": "B", "metrics": {"final": 19.619972229003906, "min": 0.0, "max": 26.745588302612305, "tail_mean": 19.620067596435547, "step_ms_median_after_warmup": 0.6438000127673149, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 240, "static_prediction_mm": 19.62}}
+RUN damping A spring_damping=0.0
+{"id": "damping", "variant": "A", "metrics": {"final": -66.21512603759766, "min": -112.42607116699219, "max": 120.00000762939453, "tail_mean": 36.70889663696289, "step_ms_median_after_warmup": 0.660100020468235, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 360, "final_energy_fraction": 0.5355414748191833}}
+RUN damping B spring_damping=8.0
+{"id": "damping", "variant": "B", "metrics": {"final": 0.22801756858825684, "min": -28.377294540405273, "max": 120.00000762939453, "tail_mean": 0.1658172607421875, "step_ms_median_after_warmup": 0.6478000432252884, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 360, "final_energy_fraction": 6.829349786130479e-06}}
+RUN self_contact A particle_enable_self_contact=False
+{"id": "self_contact", "variant": "A", "metrics": {"final": -851.6564331054688, "min": -851.6564331054688, "max": 160.0, "tail_mean": -677.9379272460938, "step_ms_median_after_warmup": 1.795200165361166, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 54}}
+RUN self_contact B particle_enable_self_contact=True
+{"id": "self_contact", "variant": "B", "metrics": {"final": 9.987809181213379, "min": 8.764997482299805, "max": 160.0, "tail_mean": 9.988300323486328, "step_ms_median_after_warmup": 3.428800031542778, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 54}}
+RUN self_margin A particle_self_contact_margin=0.005
+{"id": "self_margin", "variant": "A", "metrics": {"final": 4.986355781555176, "min": 4.798205852508545, "max": 160.0, "tail_mean": 4.986358165740967, "step_ms_median_after_warmup": 3.3378000371158123, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 54}}
+RUN self_margin B particle_self_contact_margin=0.04
+{"id": "self_margin", "variant": "B", "metrics": {"final": 39.98854446411133, "min": 39.07954025268555, "max": 160.0, "tail_mean": 39.98853302001953, "step_ms_median_after_warmup": 3.340299939736724, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 54}}
+RUN contact_stiffness A contact_ke=500.0
+Module narrow_phase_gjk_mpr_True_False_write_contact_support_map_lean_post_process_minkowski_only 807e92f load on device 'cpu' took 2.13 ms  (cached)
+{"id": "contact_stiffness", "variant": "A", "metrics": {"final": -19.604209899902344, "min": -30.349515914916992, "max": 55.0, "tail_mean": -19.62363624572754, "step_ms_median_after_warmup": 1.3675999362021685, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN contact_stiffness B contact_ke=50000.0
+{"id": "contact_stiffness", "variant": "B", "metrics": {"final": -0.1961980015039444, "min": -2.489518404006958, "max": 55.0, "tail_mean": -0.1961980164051056, "step_ms_median_after_warmup": 1.3558999635279179, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN friction A contact_mu=0.05
+{"id": "friction", "variant": "A", "metrics": {"final": 754.4961547851562, "min": 0.0, "max": 754.4961547851562, "tail_mean": 700.2349243164062, "step_ms_median_after_warmup": 1.3679999392479658, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN friction B contact_mu=0.8
+{"id": "friction", "variant": "B", "metrics": {"final": 62.99787902832031, "min": 0.0, "max": 62.99787902832031, "tail_mean": 62.99787139892578, "step_ms_median_after_warmup": 1.371599966660142, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN friction_epsilon A friction_epsilon=0.001
+{"id": "friction_epsilon", "variant": "A", "metrics": {"final": 0.10832897573709488, "min": 0.0, "max": 0.10832897573709488, "tail_mean": 0.09755490720272064, "step_ms_median_after_warmup": 1.3981000520288944, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN friction_epsilon B friction_epsilon=0.2
+{"id": "friction_epsilon", "variant": "B", "metrics": {"final": 21.065950393676758, "min": 0.0, "max": 21.065950393676758, "tail_mean": 18.91115379333496, "step_ms_median_after_warmup": 1.3939000200480223, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN dat A rigid_soft_enable_dat=False
+{"id": "dat", "variant": "A", "metrics": {"final": -1045.20068359375, "min": -1045.20068359375, "max": 120.0, "tail_mean": -980.6864624023438, "step_ms_median_after_warmup": 0.7496500620618463, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 9}}
+RUN dat B rigid_soft_enable_dat=True
+{"id": "dat", "variant": "B", "metrics": {"final": 0.0020000000949949026, "min": 0.0020000000949949026, "max": 120.0, "tail_mean": 0.0020000000949949026, "step_ms_median_after_warmup": 1.1646499624475837, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 9}}
+RUN dat_relaxation A dat_conservative_bound_relaxation=0.25
+{"id": "dat_relaxation", "variant": "A", "metrics": {"final": 0.06346872448921204, "min": 0.06346872448921204, "max": 120.0, "tail_mean": 0.0859375149011612, "step_ms_median_after_warmup": 1.173950033262372, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 9}}
+RUN dat_relaxation B dat_conservative_bound_relaxation=0.85
+{"id": "dat_relaxation", "variant": "B", "metrics": {"final": 0.0020000000949949026, "min": 0.0020000000949949026, "max": 120.0, "tail_mean": 0.0020000000949949026, "step_ms_median_after_warmup": 1.1755500454455614, "max_soft_contact_records": 1, "max_edge_face_records": 0, "finite": true, "steps": 9}}
+RUN rigid_mode A rigid_compliant_alm=False
+{"id": "rigid_mode", "variant": "A", "metrics": {"final": 2.996593713760376, "min": 0.0, "max": 3.986448049545288, "tail_mean": 2.996593952178955, "step_ms_median_after_warmup": 1.645500073209405, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 120}}
+RUN rigid_mode B rigid_compliant_alm=True
+{"id": "rigid_mode", "variant": "B", "metrics": {"final": 49.057395935058594, "min": 0.0, "max": 54.61022186279297, "tail_mean": 49.09599685668945, "step_ms_median_after_warmup": 1.6834998968988657, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 120}}
+RUN joint_stiffness A rigid_joint_linear_ke=200.0
+{"id": "joint_stiffness", "variant": "A", "metrics": {"final": 49.051971435546875, "min": 0.0, "max": 50.69422912597656, "tail_mean": 49.044395446777344, "step_ms_median_after_warmup": 1.6693000216037035, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 120}}
+RUN joint_stiffness B rigid_joint_linear_ke=2000.0
+{"id": "joint_stiffness", "variant": "B", "metrics": {"final": 4.904895782470703, "min": 0.0, "max": 6.266415119171143, "tail_mean": 4.904895782470703, "step_ms_median_after_warmup": 1.7001000232994556, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 120}}
+RUN membrane A tri_ke + tri_ka=100.0
+{"id": "membrane", "variant": "A", "metrics": {"final": 31.48310661315918, "min": 0.0, "max": 31.48310661315918, "tail_mean": 31.001562118530273, "step_ms_median_after_warmup": 1.7502999398857355, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN membrane B tri_ke + tri_ka=10000.0
+{"id": "membrane", "variant": "B", "metrics": {"final": 0.3269761800765991, "min": 0.0, "max": 0.38333237171173096, "tail_mean": 0.3269761800765991, "step_ms_median_after_warmup": 1.7499998211860657, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 240}}
+RUN bending A edge_ke=0.01
+{"id": "bending", "variant": "A", "metrics": {"final": 249.42430114746094, "min": 0.0, "max": 250.20370483398438, "tail_mean": 248.6814422607422, "step_ms_median_after_warmup": 2.2822997998446226, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 480}}
+RUN bending B edge_ke=10.0
+{"id": "bending", "variant": "B", "metrics": {"final": 38.958160400390625, "min": 0.0, "max": 67.87458038330078, "tail_mean": 40.080135345458984, "step_ms_median_after_warmup": 2.3191000800579786, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 480}}
+RUN stabilization A rigid_avbd_alpha=0.0
+{"id": "stabilization", "variant": "A", "metrics": {"final": -0.09834766387939453, "min": -14.24008560180664, "max": 30.000001907348633, "tail_mean": 0.11025024950504303, "step_ms_median_after_warmup": 1.6743000596761703, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 60}}
+RUN stabilization B rigid_avbd_alpha=0.95
+{"id": "stabilization", "variant": "B", "metrics": {"final": 1.7354786396026611, "min": 1.7354786396026611, "max": 30.000001907348633, "tail_mean": 2.5230207443237305, "step_ms_median_after_warmup": 1.6740001738071442, "max_soft_contact_records": 0, "max_edge_face_records": 0, "finite": true, "steps": 60}}

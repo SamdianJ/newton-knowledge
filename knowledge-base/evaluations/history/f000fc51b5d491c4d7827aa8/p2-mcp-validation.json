@@ -1,0 +1,6729 @@
+{
+  "phase": "P2",
+  "status": "passed",
+  "build_id": "f000fc51b5d491c4d7827aa8",
+  "passed": 1566,
+  "failed": 0,
+  "calls": 336,
+  "tasks": [
+    {
+      "id": "T01",
+      "query": "比较 VBD MuJoCo Kamino iterations 默认值和实测依据",
+      "status": "passed",
+      "required_record_ids": [
+        "solver:kamino",
+        "solver:mujoco",
+        "solver:vbd"
+      ],
+      "read_record_ids": [
+        "newton:1.7.0:SolverVBD:iterations",
+        "newton:1.7.0:kamino:config.padmm.max_iterations",
+        "newton:1.7.0:mujoco:iterations",
+        "solver:kamino",
+        "solver:mujoco",
+        "solver:vbd"
+      ],
+      "missing": [],
+      "calls": 8,
+      "recall_at_5": 0.3333333333333333,
+      "reciprocal_rank": 0.25,
+      "logical_json_chars": 41558,
+      "utf8_bytes": 46426,
+      "tokenizer_tokens": 14522,
+      "answer_evidence": {
+        "VBD default 10": true,
+        "MuJoCo conditional None": true,
+        "PADMM default 200": true,
+        "distinct measurements": true
+      }
+    },
+    {
+      "id": "T02",
+      "query": "球穿过粗三角布面 full surface 穿模",
+      "status": "passed",
+      "required_record_ids": [
+        "concept:collisions",
+        "lab:full_surface",
+        "pipeline:enable_rigid_soft_full_surface_contact"
+      ],
+      "read_record_ids": [
+        "concept:collisions",
+        "lab:full_surface",
+        "pipeline:enable_rigid_soft_full_surface_contact"
+      ],
+      "missing": [],
+      "calls": 5,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "logical_json_chars": 39308,
+      "utf8_bytes": 41654,
+      "tokenizer_tokens": 11520,
+      "answer_evidence": {
+        "CollisionPipeline owner and False": true,
+        "verified exact source": true,
+        "measured finite penalty": true,
+        "other backend unknown": true
+      }
+    },
+    {
+      "id": "T03",
+      "query": "导入多机器人 使用 IK controller 下发 MuJoCo 目标并读取接触力",
+      "status": "passed",
+      "required_record_ids": [
+        "concept:solver-observables",
+        "module:controllers",
+        "module:selection",
+        "recipe:ik-mujoco-contact"
+      ],
+      "read_record_ids": [
+        "concept:solver-observables",
+        "module:controllers",
+        "module:selection",
+        "recipe:ik-mujoco-contact"
+      ],
+      "missing": [],
+      "calls": 6,
+      "recall_at_5": 0.25,
+      "reciprocal_rank": 0.5,
+      "logical_json_chars": 61094,
+      "utf8_bytes": 70542,
+      "tokenizer_tokens": 21833,
+      "answer_evidence": {
+        "ControllerDifferentialIK": true,
+        "joint_coord_count": true,
+        "joint_dof_count": true,
+        "use_coord_layout_targets": true,
+        "CONTACT_F": true,
+        "MuJoCo Warp": true,
+        "state_in": true,
+        "state_out": true
+      }
+    },
+    {
+      "id": "T04",
+      "query": "MuJoCo 刚体和 VBD 布料双向耦合 ownership attachment 子步",
+      "status": "passed",
+      "required_record_ids": [
+        "concept:coupling",
+        "recipe:coupled-rigid-deformable"
+      ],
+      "read_record_ids": [
+        "concept:coupling",
+        "recipe:coupled-rigid-deformable"
+      ],
+      "missing": [],
+      "calls": 4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.25,
+      "logical_json_chars": 33914,
+      "utf8_bytes": 39812,
+      "tokenizer_tokens": 12083,
+      "answer_evidence": {
+        "ModelView": true,
+        "owned": true,
+        "Proxy": true,
+        "ADMM": true,
+        "substeps": true,
+        "attachment": true,
+        "ContactPair": true,
+        "PRISMATIC/DISTANCE/D6": true,
+        "不等同": true
+      }
+    },
+    {
+      "id": "T05",
+      "query": "选择部分 world 的机器人控制并掩码复位",
+      "status": "passed",
+      "required_record_ids": [
+        "concept:worlds",
+        "module:selection",
+        "recipe:worlds-reset"
+      ],
+      "read_record_ids": [
+        "concept:worlds",
+        "module:selection",
+        "recipe:worlds-reset"
+      ],
+      "missing": [],
+      "calls": 5,
+      "recall_at_5": 0.3333333333333333,
+      "reciprocal_rank": 1.0,
+      "logical_json_chars": 49221,
+      "utf8_bytes": 55093,
+      "tokenizer_tokens": 17852,
+      "answer_evidence": {
+        "world_count+1": true,
+        "count_per_world": true,
+        "global": true,
+        "set_attribute": true,
+        "no-op": true,
+        "solver.reset": true
+      }
+    },
+    {
+      "id": "T06",
+      "query": "SensorContact CONTACT_F observables 初始化和 sensor update",
+      "status": "passed",
+      "required_record_ids": [
+        "concept:solver-observables",
+        "module:sensors",
+        "recipe:mujoco-native-contact"
+      ],
+      "read_record_ids": [
+        "concept:solver-observables",
+        "module:sensors",
+        "recipe:mujoco-native-contact"
+      ],
+      "missing": [],
+      "calls": 5,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 0.5,
+      "logical_json_chars": 55259,
+      "utf8_bytes": 61829,
+      "tokenizer_tokens": 19715,
+      "answer_evidence": {
+        "冻结": true,
+        "contacts=contacts": true,
+        "get_max_contact_count": true,
+        "pipeline.collide": true,
+        "state_in": true,
+        "state_out": true,
+        "QFRC_ACTUATOR": true,
+        "use_mujoco_cpu=True": true
+      }
+    },
+    {
+      "id": "T07",
+      "query": "requires_grad Warp Tape 选择可微仿真后端",
+      "status": "passed",
+      "required_record_ids": [
+        "solver:vbd",
+        "solver:xpbd",
+        "topic:differentiable-simulation"
+      ],
+      "read_record_ids": [
+        "solver:vbd",
+        "solver:xpbd",
+        "topic:differentiable-simulation"
+      ],
+      "missing": [],
+      "calls": 5,
+      "recall_at_5": 0.3333333333333333,
+      "reciprocal_rank": 1.0,
+      "logical_json_chars": 41562,
+      "utf8_bytes": 45146,
+      "tokenizer_tokens": 14679,
+      "answer_evidence": {
+        "SolverSemiImplicit": true,
+        "SolverFeatherstone": true,
+        "SolverVBD": true,
+        "SolverXPBD": true,
+        "requires_grad=True": true,
+        "tape.backward": true,
+        "没有": true
+      }
+    },
+    {
+      "id": "T08",
+      "query": "SolverXPBD 参数与公开源码入口",
+      "status": "passed",
+      "required_record_ids": [
+        "solver:xpbd"
+      ],
+      "read_record_ids": [
+        "solver:xpbd"
+      ],
+      "missing": [],
+      "calls": 4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "logical_json_chars": 27774,
+      "utf8_bytes": 28864,
+      "tokenizer_tokens": 7822,
+      "answer_evidence": {
+        "exact public class source": true,
+        "known but not curated": true
+      }
+    },
+    {
+      "id": "T09",
+      "query": "确认未索引符号与随机词无命中的区别",
+      "status": "passed",
+      "required_record_ids": [
+        "module:controllers"
+      ],
+      "read_record_ids": [
+        "module:controllers"
+      ],
+      "missing": [],
+      "calls": 4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "logical_json_chars": 11771,
+      "utf8_bytes": 13039,
+      "tokenizer_tokens": 3812,
+      "answer_evidence": {
+        "known public export distinguished": true,
+        "random no_match": true
+      }
+    },
+    {
+      "id": "T10",
+      "query": "未知参数 stage 范围 冲突 ID",
+      "status": "passed",
+      "required_record_ids": [
+        "module:geometry"
+      ],
+      "read_record_ids": [
+        "module:geometry"
+      ],
+      "missing": [],
+      "calls": 6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "logical_json_chars": 21732,
+      "utf8_bytes": 23408,
+      "tokenizer_tokens": 7100,
+      "answer_evidence": {
+        "unknown fields and stage reject": true,
+        "ID-solver conflict": true,
+        "filters really apply": true
+      }
+    },
+    {
+      "id": "T11",
+      "query": "搜索 目录 图邻居与边分页完整性",
+      "status": "passed",
+      "required_record_ids": [],
+      "read_record_ids": [],
+      "missing": [],
+      "calls": 174,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "logical_json_chars": 2993308,
+      "utf8_bytes": 3015573,
+      "tokenizer_tokens": 794165,
+      "answer_evidence": {
+        "query cursor mismatch": true,
+        "real previous-build cursor invalidates": true
+      }
+    },
+    {
+      "id": "T12",
+      "query": "未知版本 无实测 proposed 证据边界",
+      "status": "passed",
+      "required_record_ids": [
+        "solver:mujoco"
+      ],
+      "read_record_ids": [
+        "diagnostic:mujoco:1",
+        "solver:mujoco"
+      ],
+      "missing": [],
+      "calls": 6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "logical_json_chars": 10794,
+      "utf8_bytes": 12336,
+      "tokenizer_tokens": 4037,
+      "answer_evidence": {
+        "version never falls back": true,
+        "no borrowed measurement": true,
+        "proposed stays proposed": true
+      }
+    }
+  ],
+  "checks": [
+    {
+      "check": "external stdio initialize",
+      "passed": true
+    },
+    {
+      "check": "exactly six preserved tools",
+      "passed": true
+    },
+    {
+      "check": "frozen strict schema search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "read-only hints search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "frozen strict schema get_parameter",
+      "passed": true
+    },
+    {
+      "check": "read-only hints get_parameter",
+      "passed": true
+    },
+    {
+      "check": "frozen strict schema get_experiment",
+      "passed": true
+    },
+    {
+      "check": "read-only hints get_experiment",
+      "passed": true
+    },
+    {
+      "check": "frozen strict schema get_relations",
+      "passed": true
+    },
+    {
+      "check": "read-only hints get_relations",
+      "passed": true
+    },
+    {
+      "check": "frozen strict schema get_document",
+      "passed": true
+    },
+    {
+      "check": "read-only hints get_document",
+      "passed": true
+    },
+    {
+      "check": "frozen strict schema get_source",
+      "passed": true
+    },
+    {
+      "check": "read-only hints get_source",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result search_knowledge {'query': '比较 VBD MuJoCo Kamino iterations 默认值和实测依据', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result get_parameter {'record_id': 'newton:1.7.0:SolverVBD:iterations', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result get_parameter {'record_id': 'newton:1.7.0:mujoco:iterations', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result get_document {'record_id': 'solver:kamino'}",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 Kamino field discovered in returned solver document",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result search_knowledge {'query': 'config.padmm.max_iterations', 'solver': 'kamino', 'kind': 'parameter', 'limit':",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result get_parameter {'record_id': 'newton:1.7.0:kamino:config.padmm.max_iterations', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result get_document {'record_id': 'solver:vbd'}",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 expected result get_document {'record_id': 'solver:mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "T01 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T01 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T01 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T01 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T01 call target 8",
+      "passed": true
+    },
+    {
+      "check": "T01 VBD default 10",
+      "passed": true
+    },
+    {
+      "check": "T01 MuJoCo conditional None",
+      "passed": true
+    },
+    {
+      "check": "T01 PADMM default 200",
+      "passed": true
+    },
+    {
+      "check": "T01 distinct measurements",
+      "passed": true
+    },
+    {
+      "check": "T02 expected result search_knowledge {'query': '球穿过粗三角布面 full surface 穿模', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T02 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T02 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T02 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T02 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T02 expected result get_parameter {'record_id': 'pipeline:enable_rigid_soft_full_surface_contact', 'solver': 'shared'}",
+      "passed": true
+    },
+    {
+      "check": "T02 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T02 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T02 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T02 expected result get_experiment {'experiment_id': 'lab:full_surface', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "T02 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T02 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T02 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T02 expected result get_document {'record_id': 'concept:collisions'}",
+      "passed": true
+    },
+    {
+      "check": "T02 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T02 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T02 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T02 expected result get_source {'path': 'newton/_src/sim/collide.py', 'start_line': 1283, 'max_lines': 60}",
+      "passed": true
+    },
+    {
+      "check": "T02 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T02 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T02 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T02 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T02 call target 5",
+      "passed": true
+    },
+    {
+      "check": "T02 CollisionPipeline owner and False",
+      "passed": true
+    },
+    {
+      "check": "T02 verified exact source",
+      "passed": true
+    },
+    {
+      "check": "T02 measured finite penalty",
+      "passed": true
+    },
+    {
+      "check": "T02 other backend unknown",
+      "passed": true
+    },
+    {
+      "check": "T03 expected result search_knowledge {'query': '导入多机器人 使用 IK controller 下发 MuJoCo 目标并读取接触力', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T03 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T03 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T03 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T03 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T03 expected result get_document {'record_id': 'recipe:ik-mujoco-contact'}",
+      "passed": true
+    },
+    {
+      "check": "T03 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T03 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T03 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T03 expected result get_relations {'node_id': 'recipe:ik-mujoco-contact', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "T03 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T03 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T03 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T03 required neighbor discovered module:controllers",
+      "passed": true
+    },
+    {
+      "check": "T03 expected result get_document {'record_id': 'module:controllers'}",
+      "passed": true
+    },
+    {
+      "check": "T03 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T03 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T03 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T03 required neighbor discovered module:selection",
+      "passed": true
+    },
+    {
+      "check": "T03 expected result get_document {'record_id': 'module:selection'}",
+      "passed": true
+    },
+    {
+      "check": "T03 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T03 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T03 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T03 required neighbor discovered concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "T03 expected result get_document {'record_id': 'concept:solver-observables'}",
+      "passed": true
+    },
+    {
+      "check": "T03 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T03 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T03 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T03 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T03 call target 6",
+      "passed": true
+    },
+    {
+      "check": "T03 ControllerDifferentialIK",
+      "passed": true
+    },
+    {
+      "check": "T03 joint_coord_count",
+      "passed": true
+    },
+    {
+      "check": "T03 joint_dof_count",
+      "passed": true
+    },
+    {
+      "check": "T03 use_coord_layout_targets",
+      "passed": true
+    },
+    {
+      "check": "T03 CONTACT_F",
+      "passed": true
+    },
+    {
+      "check": "T03 MuJoCo Warp",
+      "passed": true
+    },
+    {
+      "check": "T03 state_in",
+      "passed": true
+    },
+    {
+      "check": "T03 state_out",
+      "passed": true
+    },
+    {
+      "check": "T04 expected result search_knowledge {'query': 'MuJoCo 刚体和 VBD 布料双向耦合 ownership attachment 子步', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T04 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T04 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T04 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T04 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T04 expected result get_document {'record_id': 'recipe:coupled-rigid-deformable'}",
+      "passed": true
+    },
+    {
+      "check": "T04 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T04 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T04 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T04 expected result get_relations {'node_id': 'recipe:coupled-rigid-deformable', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "T04 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T04 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T04 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T04 required neighbor discovered concept:coupling",
+      "passed": true
+    },
+    {
+      "check": "T04 expected result get_document {'record_id': 'concept:coupling'}",
+      "passed": true
+    },
+    {
+      "check": "T04 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T04 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T04 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T04 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T04 call target 4",
+      "passed": true
+    },
+    {
+      "check": "T04 ModelView",
+      "passed": true
+    },
+    {
+      "check": "T04 owned",
+      "passed": true
+    },
+    {
+      "check": "T04 Proxy",
+      "passed": true
+    },
+    {
+      "check": "T04 ADMM",
+      "passed": true
+    },
+    {
+      "check": "T04 substeps",
+      "passed": true
+    },
+    {
+      "check": "T04 attachment",
+      "passed": true
+    },
+    {
+      "check": "T04 ContactPair",
+      "passed": true
+    },
+    {
+      "check": "T04 PRISMATIC/DISTANCE/D6",
+      "passed": true
+    },
+    {
+      "check": "T04 不等同",
+      "passed": true
+    },
+    {
+      "check": "T05 expected result search_knowledge {'query': '选择部分 world 的机器人控制并掩码复位', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T05 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T05 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T05 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T05 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T05 expected result get_document {'record_id': 'recipe:worlds-reset'}",
+      "passed": true
+    },
+    {
+      "check": "T05 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T05 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T05 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T05 expected result get_relations {'node_id': 'recipe:worlds-reset', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "T05 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T05 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T05 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T05 required neighbor discovered module:selection",
+      "passed": true
+    },
+    {
+      "check": "T05 expected result get_document {'record_id': 'module:selection'}",
+      "passed": true
+    },
+    {
+      "check": "T05 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T05 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T05 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T05 required neighbor discovered concept:worlds",
+      "passed": true
+    },
+    {
+      "check": "T05 expected result get_document {'record_id': 'concept:worlds'}",
+      "passed": true
+    },
+    {
+      "check": "T05 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T05 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T05 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T05 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T05 call target 5",
+      "passed": true
+    },
+    {
+      "check": "T05 world_count+1",
+      "passed": true
+    },
+    {
+      "check": "T05 count_per_world",
+      "passed": true
+    },
+    {
+      "check": "T05 global",
+      "passed": true
+    },
+    {
+      "check": "T05 set_attribute",
+      "passed": true
+    },
+    {
+      "check": "T05 no-op",
+      "passed": true
+    },
+    {
+      "check": "T05 solver.reset",
+      "passed": true
+    },
+    {
+      "check": "T06 expected result search_knowledge {'query': 'SensorContact CONTACT_F observables 初始化和 sensor update', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T06 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T06 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T06 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T06 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T06 expected result get_document {'record_id': 'module:sensors'}",
+      "passed": true
+    },
+    {
+      "check": "T06 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T06 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T06 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T06 expected result get_relations {'node_id': 'module:sensors', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "T06 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T06 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T06 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T06 required neighbor discovered recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "T06 expected result get_document {'record_id': 'recipe:mujoco-native-contact'}",
+      "passed": true
+    },
+    {
+      "check": "T06 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T06 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T06 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T06 required neighbor discovered concept:solver-observables",
+      "passed": true
+    },
+    {
+      "check": "T06 expected result get_document {'record_id': 'concept:solver-observables'}",
+      "passed": true
+    },
+    {
+      "check": "T06 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T06 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T06 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T06 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T06 call target 5",
+      "passed": true
+    },
+    {
+      "check": "T06 冻结",
+      "passed": true
+    },
+    {
+      "check": "T06 contacts=contacts",
+      "passed": true
+    },
+    {
+      "check": "T06 get_max_contact_count",
+      "passed": true
+    },
+    {
+      "check": "T06 pipeline.collide",
+      "passed": true
+    },
+    {
+      "check": "T06 state_in",
+      "passed": true
+    },
+    {
+      "check": "T06 state_out",
+      "passed": true
+    },
+    {
+      "check": "T06 QFRC_ACTUATOR",
+      "passed": true
+    },
+    {
+      "check": "T06 use_mujoco_cpu=True",
+      "passed": true
+    },
+    {
+      "check": "T07 expected result search_knowledge {'query': 'requires_grad Warp Tape 选择可微仿真后端', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T07 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T07 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T07 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T07 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T07 expected result get_document {'record_id': 'topic:differentiable-simulation'}",
+      "passed": true
+    },
+    {
+      "check": "T07 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T07 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T07 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T07 expected result get_relations {'node_id': 'topic:differentiable-simulation', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "T07 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T07 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T07 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T07 required neighbor discovered solver:xpbd",
+      "passed": true
+    },
+    {
+      "check": "T07 expected result get_document {'record_id': 'solver:xpbd'}",
+      "passed": true
+    },
+    {
+      "check": "T07 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T07 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T07 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T07 required neighbor discovered solver:vbd",
+      "passed": true
+    },
+    {
+      "check": "T07 expected result get_document {'record_id': 'solver:vbd'}",
+      "passed": true
+    },
+    {
+      "check": "T07 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T07 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T07 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T07 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T07 call target 5",
+      "passed": true
+    },
+    {
+      "check": "T07 SolverSemiImplicit",
+      "passed": true
+    },
+    {
+      "check": "T07 SolverFeatherstone",
+      "passed": true
+    },
+    {
+      "check": "T07 SolverVBD",
+      "passed": true
+    },
+    {
+      "check": "T07 SolverXPBD",
+      "passed": true
+    },
+    {
+      "check": "T07 requires_grad=True",
+      "passed": true
+    },
+    {
+      "check": "T07 tape.backward",
+      "passed": true
+    },
+    {
+      "check": "T07 没有",
+      "passed": true
+    },
+    {
+      "check": "T08 expected result search_knowledge {'query': 'SolverXPBD 参数与公开源码入口', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T08 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T08 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T08 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T08 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T08 expected result get_document {'record_id': 'solver:xpbd'}",
+      "passed": true
+    },
+    {
+      "check": "T08 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T08 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T08 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T08 expected result get_source {'path': 'newton/_src/solvers/xpbd/solver_xpbd.py', 'start_line': 51, 'max_lines': 100}",
+      "passed": true
+    },
+    {
+      "check": "T08 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T08 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T08 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T08 expected result get_parameter {'name': 'iterations', 'solver': 'xpbd'}",
+      "passed": true
+    },
+    {
+      "check": "T08 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T08 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T08 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T08 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T08 call target 4",
+      "passed": true
+    },
+    {
+      "check": "T08 exact public class source",
+      "passed": true
+    },
+    {
+      "check": "T08 known but not curated",
+      "passed": true
+    },
+    {
+      "check": "T09 expected result search_knowledge {'query': 'ControllerDifferentialIK', 'kind': 'api', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T09 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T09 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T09 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T09 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T09 expected result get_document {'record_id': 'module:controllers'}",
+      "passed": true
+    },
+    {
+      "check": "T09 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T09 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T09 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T09 expected result search_knowledge {'query': 'newton.controllers.ControllerDifferentialIK', 'kind': 'parameter', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T09 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T09 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T09 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T09 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T09 expected result search_knowledge {'query': 'zzqv_never_a_newton_symbol_981237', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T09 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T09 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T09 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T09 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T09 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T09 call target 4",
+      "passed": true
+    },
+    {
+      "check": "T09 known public export distinguished",
+      "passed": true
+    },
+    {
+      "check": "T09 random no_match",
+      "passed": true
+    },
+    {
+      "check": "T10 expected result search_knowledge {'query': '几何与碰撞工具', 'kind': 'api', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T10 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T10 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T10 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T10 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T10 expected result get_document {'record_id': 'module:geometry'}",
+      "passed": true
+    },
+    {
+      "check": "T10 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T10 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T10 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T10 expected result search_knowledge {'query': 'contact', 'stage': 'unsupported_stage'}",
+      "passed": true
+    },
+    {
+      "check": "T10 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T10 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T10 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T10 expected result search_knowledge {'query': 'contact', 'extra_filter': True}",
+      "passed": true
+    },
+    {
+      "check": "T10 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T10 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T10 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T10 expected result get_parameter {'record_id': 'newton:1.7.0:SolverVBD:iterations', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "T10 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T10 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T10 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T10 expected result search_knowledge {'query': 'CONTACT_F', 'solver': 'mujoco', 'include_shared': True, 'stage': 'output', 'lim",
+      "passed": true
+    },
+    {
+      "check": "T10 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T10 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T10 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T10 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T10 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T10 call target 6",
+      "passed": true
+    },
+    {
+      "check": "T10 unknown fields and stage reject",
+      "passed": true
+    },
+    {
+      "check": "T10 ID-solver conflict",
+      "passed": true
+    },
+    {
+      "check": "T10 filters really apply",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20}",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'newton', 'limit': 20, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 spans former 300-candidate limit",
+      "passed": true
+    },
+    {
+      "check": "T11 complete search no duplicates",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7}",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_document {'limit': 7, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOCIsInN0cmVhbSI6ImRvY3",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 complete document inventory",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result get_relations {'node_id': 'module:controllers', 'limit': 5, 'edge_cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVk",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 graph exact readers",
+      "passed": true
+    },
+    {
+      "check": "T11 complete edge stream",
+      "passed": true
+    },
+    {
+      "check": "T11 complete neighbor stream",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'iterations', 'limit': 1}",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'contact', 'limit': 1, 'cursor': 'eyJidWlsZCI6ImYwMDBmYzUxYjVkNDkxYzRkNzgyN2FhOC",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 expected result search_knowledge {'query': 'Solver', 'solver': 'vbd', 'limit': 5, 'cursor': 'eyJidWlsZCI6IjIwZmY5ODcxMDEwMj",
+      "passed": true
+    },
+    {
+      "check": "T11 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T11 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T11 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T11 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T11 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T11 query cursor mismatch",
+      "passed": true
+    },
+    {
+      "check": "T11 real previous-build cursor invalidates",
+      "passed": true
+    },
+    {
+      "check": "T12 expected result search_knowledge {'query': 'SolverMuJoCo', 'kind': 'solver', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T12 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T12 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T12 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T12 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T12 expected result get_document {'record_id': 'solver:mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "T12 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T12 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T12 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T12 expected result get_parameter {'name': 'iterations', 'solver': 'mujoco', 'version': '9.9.9'}",
+      "passed": true
+    },
+    {
+      "check": "T12 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T12 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T12 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T12 expected result get_experiment {'experiment_id': 'full_surface', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "T12 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T12 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T12 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T12 expected result search_knowledge {'query': 'iterations', 'kind': 'diagnostic', 'solver': 'mujoco', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "T12 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T12 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T12 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T12 compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T12 expected result get_document {'record_id': 'diagnostic:mujoco:1'}",
+      "passed": true
+    },
+    {
+      "check": "T12 coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "T12 envelope schema",
+      "passed": true
+    },
+    {
+      "check": "T12 response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T12 mandatory records read []",
+      "passed": true
+    },
+    {
+      "check": "T12 call target 6",
+      "passed": true
+    },
+    {
+      "check": "T12 version never falls back",
+      "passed": true
+    },
+    {
+      "check": "T12 no borrowed measurement",
+      "passed": true
+    },
+    {
+      "check": "T12 proposed stays proposed",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'concept:collisions', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'concept:collisions', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'lab:full_surface', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'lab:full_surface', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'pipeline:enable_rigid_soft_full_surface_contact', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'pipeline:enable_rigid_soft_full_surface_contact', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "R01 connected exact readers and pinned source refs",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'module:controllers', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'module:controllers', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'module:ik', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'module:ik', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'recipe:ik-mujoco-contact', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'recipe:ik-mujoco-contact', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'solver:mujoco', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'solver:mujoco', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'topic:robot-control', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'topic:robot-control', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "R02 connected exact readers and pinned source refs",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'concept:solver-observables', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'concept:solver-observables', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'module:sensors', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'module:sensors', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'recipe:ik-mujoco-contact', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'recipe:ik-mujoco-contact', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'recipe:mujoco-native-contact', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'recipe:mujoco-native-contact', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "R03 connected exact readers and pinned source refs",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'concept:coupling', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'concept:coupling', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'recipe:coupled-rigid-deformable', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'recipe:coupled-rigid-deformable', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'solver:mujoco', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'solver:mujoco', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'solver:vbd', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'solver:vbd', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'topic:coupling', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'topic:coupling', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "R04 connected exact readers and pinned source refs",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'concept:worlds', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'concept:worlds', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'module:selection', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'module:selection', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'recipe:worlds-reset', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'recipe:worlds-reset', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'topic:worlds-batching', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'topic:worlds-batching', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "R05 connected exact readers and pinned source refs",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'module:solvers', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'module:solvers', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'solver:vbd', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'solver:vbd', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'solver:xpbd', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'solver:xpbd', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_document {'record_id': 'topic:differentiable-simulation', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "paths expected result get_relations {'node_id': 'topic:differentiable-simulation', 'limit': 12}",
+      "passed": true
+    },
+    {
+      "check": "paths coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "paths envelope schema",
+      "passed": true
+    },
+    {
+      "check": "paths response within total budget",
+      "passed": true
+    },
+    {
+      "check": "R06 connected exact readers and pinned source refs",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': '运动学与机器人控制', 'kind': 'topic', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'topic:robot-control'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/controllers/impl/differential_ik/model_based.py', 'start_line': 32, ",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified topic:robot-control",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': 'Worlds 与批量复位', 'kind': 'topic', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'topic:worlds-batching'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/core/reset.py', 'start_line': 1, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': '刚体与可变形体耦合', 'kind': 'topic', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'topic:coupling'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'docs/concepts/coupling.rst', 'start_line': 1, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified topic:coupling",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': '生命周期 复位与量测', 'kind': 'topic', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'topic:lifecycle-observation'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/sensors/sensor_contact.py', 'start_line': 618, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': '外部碰撞与步进', 'kind': 'recipe', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'recipe:external-collision'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "recipe five scheduling periods recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/solvers/solver.py', 'start_line': 721, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified recipe:external-collision",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': 'Solver 持有碰撞资源', 'kind': 'recipe', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'recipe:solver-owned-collision'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "recipe five scheduling periods recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "concrete VBD owned-pipeline setup and step responsibility",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/solvers/solver.py', 'start_line': 721, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': 'MuJoCo 原生接触量测', 'kind': 'recipe', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'recipe:mujoco-native-contact'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "recipe five scheduling periods recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/solvers/solver.py', 'start_line': 721, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': '刚体与 VBD 耦合方案', 'kind': 'recipe', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'recipe:coupled-rigid-deformable'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "recipe five scheduling periods recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'docs/concepts/coupling.rst', 'start_line': 1, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': '多机器人 IK 控制与接触力', 'kind': 'recipe', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'recipe:ik-mujoco-contact'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "recipe five scheduling periods recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/controllers/impl/differential_ik/model_based.py', 'start_line': 511,",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result search_knowledge {'query': '批量选择与复位', 'kind': 'recipe', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks compact five hits",
+      "passed": true
+    },
+    {
+      "check": "T-depth topic/recipe discoverable recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_document {'record_id': 'recipe:worlds-reset'}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "T-depth exact source-backed explanation recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "recipe five scheduling periods recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks expected result get_source {'path': 'newton/_src/core/reset.py', 'start_line': 1, 'max_lines': 20}",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks envelope schema",
+      "passed": true
+    },
+    {
+      "check": "supplementary-lifecycle-tasks response within total budget",
+      "passed": true
+    },
+    {
+      "check": "recipe source hash verified recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_document {}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "legacy empty document inventory succeeds within budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'contact', 'unknown_argument': True}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_parameter {'unknown_argument': True}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_experiment {'experiment_id': 'full_surface', 'unknown_argument': True}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_relations {'node_id': 'module:controllers', 'unknown_argument': True}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_document {'unknown_argument': True}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_source {'unknown_argument': True}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_source {'path': '../pyproject.toml'}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_source {'path': 'C:/Windows/win.ini'}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_source {'path': '%2e%2e/pyproject.toml'}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_source {'path': '.git/config'}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_source {'path': 'newton/not_tracked.py'}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_document {'record_id': 'recipe:ik-mujoco-contact', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_document {'record_id': 'recipe:ik-mujoco-contact', 'section': '', 'start_line': 9, 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "text exact next line",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'vbd', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope vbd",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'mujoco', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope mujoco",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'kamino', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope kamino",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'featherstone', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope featherstone",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'implicit-mpm', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope implicit-mpm",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'semi-implicit', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope semi-implicit",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'style3d', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope style3d",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result search_knowledge {'query': 'Solver', 'solver': 'xpbd', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries compact five hits",
+      "passed": true
+    },
+    {
+      "check": "strict solver scope xpbd",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_experiment {'experiment_id': 'full_surface', 'detail': 'full'}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "boundaries expected result get_experiment {'experiment_id': 'full_surface', 'detail': 'summary'}",
+      "passed": true
+    },
+    {
+      "check": "boundaries coherent structured build",
+      "passed": true
+    },
+    {
+      "check": "boundaries envelope schema",
+      "passed": true
+    },
+    {
+      "check": "boundaries response within total budget",
+      "passed": true
+    },
+    {
+      "check": "detail really controls bounded geometry",
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "mean_recall_at_5": 0.7196969696969697,
+    "MRR": 0.7727272727272727,
+    "all_mandatory_records_read": true,
+    "tokenizer": "tiktoken 0.12.0 / o200k_base",
+    "token_measurement": "Exact token count of serialized tool JSON. Host hidden prompts/envelopes and actual LLM billing usage are not instrumented.",
+    "actual_llm_usage_tokens": null,
+    "total_tool_json_tokens": 1207515
+  },
+  "validated_records": [
+    {
+      "id": "concept:collisions",
+      "body_sha256": "3b19e8addc1641cb8ae4f73dfd82e710b6a4274520cd09e1584b9c8aa08d0b48"
+    },
+    {
+      "id": "concept:coupling",
+      "body_sha256": "0f5473f86f763b6e475432a392af4dbb7662a7e72c7877b1fddfada4241148b4"
+    },
+    {
+      "id": "concept:solver-observables",
+      "body_sha256": "ec2d52d78ad17b8a2b72669fb61706b263957a32c84a0383f842c5020436f903"
+    },
+    {
+      "id": "concept:worlds",
+      "body_sha256": "e5ed71eae3040e2910cd3a13b8002f7bda0dd0500b8801e6dd1abbf4b7446bb8"
+    },
+    {
+      "id": "diagnostic:mujoco:1",
+      "body_sha256": "2ab9e2522143428b3716a9ba1bcc1b2908a78ac244fa3efa0c3869c102ad12f2"
+    },
+    {
+      "id": "lab:full_surface",
+      "body_sha256": "a91962f6c69a596675d21d4f9f75061c695947f8a5de0965d4d18006008ba0ea"
+    },
+    {
+      "id": "module:controllers",
+      "body_sha256": "97d74ca13eea116d0999e06967f4ec267953a693ce310b61687dedb898d0d19c"
+    },
+    {
+      "id": "module:geometry",
+      "body_sha256": "3fffdba37182778e4b83b294d35a40f447d9a680c4f3dae40a7245c0d82c7fd4"
+    },
+    {
+      "id": "module:selection",
+      "body_sha256": "47e28435670d0afe325836247412e8f8955bdc4aff2cddc0c3f8d19283f14b21"
+    },
+    {
+      "id": "module:sensors",
+      "body_sha256": "1f6dada8cd754447f3071e4c74f44484baf64bba17b60644e938bd10c473e42d"
+    },
+    {
+      "id": "newton:1.7.0:SolverVBD:iterations",
+      "body_sha256": "7924a5de031806483a71b2b220e982bd185ed83082fa191fd1d5b672e106a88f"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.max_iterations",
+      "body_sha256": "865c777bb142a7b584d282659b59437db15a25a84d3a5e67f6a9fad0dfbb0787"
+    },
+    {
+      "id": "newton:1.7.0:mujoco:iterations",
+      "body_sha256": "e1d4bd2118605d5a1d668319f78b0ffc46d5647261540e08eaacb22af6d92eb6"
+    },
+    {
+      "id": "pipeline:enable_rigid_soft_full_surface_contact",
+      "body_sha256": "1f4092af564614c7905911a9b647f34d8a4fb55da69eb0eb0cc7c7c9bcc73cbd"
+    },
+    {
+      "id": "recipe:coupled-rigid-deformable",
+      "body_sha256": "5da9eeb4c9b56a8b9871c9f595aab69df0854fdc17e26f8ef55c854b3d5f44d4"
+    },
+    {
+      "id": "recipe:external-collision",
+      "body_sha256": "01836179ba62c35016cbdc630e686d1635bfde007bd719da2522679b2194c06e"
+    },
+    {
+      "id": "recipe:ik-mujoco-contact",
+      "body_sha256": "cf223f554d80e80cfed80c9ae253dcc0d76f97629ddba5c1930c8c2aa42a35de"
+    },
+    {
+      "id": "recipe:mujoco-native-contact",
+      "body_sha256": "a54686f7d3c092b3a46fef2a4e43592348ff07c71f55e9c62819309b169276c3"
+    },
+    {
+      "id": "recipe:solver-owned-collision",
+      "body_sha256": "6aae775f551010eb5b7a0ab0105bd8ed89dc244c1c4e9598f90ebb2ea9af0082"
+    },
+    {
+      "id": "recipe:worlds-reset",
+      "body_sha256": "aa3f58482e0b94c72a8ee3d1062e6ae583e08ee5be6e3c88e754b910861800e0"
+    },
+    {
+      "id": "solver:kamino",
+      "body_sha256": "5e93571dfb092d4cac1bce2a9f9bffd4ad0ca55dddaccd0ff9085e6a7399b7e9"
+    },
+    {
+      "id": "solver:mujoco",
+      "body_sha256": "de6c721e7d3590aae45b344461a34f5a3ab47768a42118042d2eab6a7d71547e"
+    },
+    {
+      "id": "solver:vbd",
+      "body_sha256": "287a392c18b65802feeb9f7e640984fb99c3a8aef6f3dd787bf738dc39cb03a6"
+    },
+    {
+      "id": "solver:xpbd",
+      "body_sha256": "ba9c61082d6fa88c01cdef9da5fdb744acc57b431f662ac7b773d24ac5b569e9"
+    },
+    {
+      "id": "topic:coupling",
+      "body_sha256": "6351713f85cec0ac88729620ef53c8fc6fe49177b70284c42f6f613a2b57c3c2"
+    },
+    {
+      "id": "topic:differentiable-simulation",
+      "body_sha256": "c3eff1e98ece5ccd8d2e332c8e0a0b85c71d68a9e543c19d5a6879ac1a048986"
+    },
+    {
+      "id": "topic:lifecycle-observation",
+      "body_sha256": "31f6b6e41acea553239045c81fa207733b92621729a97b677e2530bd2702d266"
+    },
+    {
+      "id": "topic:robot-control",
+      "body_sha256": "13d88c4cb3cf7755f45318051c1cc3c67a82587d9d92fb879c7575fe6dad97f6"
+    },
+    {
+      "id": "topic:worlds-batching",
+      "body_sha256": "cd0f8fee3e6c78fd6c77e8cc6de2b52a3dfb6ce6a29fe9147ae1b912cf4fa56c"
+    }
+  ]
+}

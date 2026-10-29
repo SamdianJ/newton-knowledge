@@ -1,0 +1,106 @@
+[
+  {
+    "topic": "self-contact barrier continuity",
+    "symbol": "test_self_contact_barrier_c2_at_tau",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 1064,
+      "end_line": 1064,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L1064"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  },
+  {
+    "topic": "self-contact barrier near minimum distance",
+    "symbol": "test_self_contact_barrier_c2_at_d_min",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 1107,
+      "end_line": 1107,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L1107"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  },
+  {
+    "topic": "rigid DAT trajectory",
+    "symbol": "test_rigid_dat_trajectory_truncation",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 7316,
+      "end_line": 7316,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L7316"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  },
+  {
+    "topic": "interval arithmetic returning trajectory",
+    "symbol": "test_rigid_dat_interval_flag_catches_returning_sdf_arc",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 7450,
+      "end_line": 7450,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L7450"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  },
+  {
+    "topic": "rigid DAT sphere drop",
+    "symbol": "test_rigid_dat_sphere_drop_penetration_free",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 7556,
+      "end_line": 7556,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L7556"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  },
+  {
+    "topic": "rigid DAT graph capture",
+    "symbol": "test_rigid_dat_graph_capture_replays_match_eager",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 7573,
+      "end_line": 7573,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L7573"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  },
+  {
+    "topic": "owned pipeline dependency",
+    "symbol": "test_rigid_dat_requires_owned_pipeline",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 7635,
+      "end_line": 7635,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L7635"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  },
+  {
+    "topic": "positive query radius",
+    "symbol": "test_rigid_dat_requires_positive_rigid_soft_query_radius",
+    "source": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/tests/test_solver_vbd.py",
+      "line": 7643,
+      "end_line": 7643,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/test_solver_vbd.py#L7643"
+    },
+    "execution_status": "not_run_in_this_delivery"
+  }
+]

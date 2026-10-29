@@ -1,0 +1,21 @@
+{
+  "requested_diff": [
+    {
+      "path": "constructor.iterations",
+      "A": 5,
+      "B": 50
+    },
+    {
+      "path": "treatment.iterations",
+      "A": 5,
+      "B": 50
+    }
+  ],
+  "resolved_diff": [
+    {
+      "path": "iterations",
+      "A": 5,
+      "B": 50
+    }
+  ]
+}

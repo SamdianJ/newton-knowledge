@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "date": "2026-10-28T10:59:11.844992+08:00",
+  "checks": [
+    {
+      "check": "3D page embeds byte-identical simulation data to original",
+      "passed": true
+    },
+    {
+      "check": "all original numerical results preserved",
+      "passed": true
+    },
+    {
+      "check": "all 17 comparison rows present",
+      "passed": true
+    },
+    {
+      "check": "all 34 panels rendered with shared WebGL renderer",
+      "passed": true
+    },
+    {
+      "check": "all 17 scientific curves preserved",
+      "passed": true
+    },
+    {
+      "check": "all local 3D report links resolve",
+      "passed": true
+    },
+    {
+      "check": "desktop no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "drag rotates panel A geometry",
+      "passed": true
+    },
+    {
+      "check": "dragging A updates B camera",
+      "passed": true
+    },
+    {
+      "check": "A/B share identical orbit state",
+      "passed": true
+    },
+    {
+      "check": "wheel zoom works",
+      "passed": true
+    },
+    {
+      "check": "A/B zoom stays linked",
+      "passed": true
+    },
+    {
+      "check": "Shift drag pans the shared camera",
+      "passed": true
+    },
+    {
+      "check": "top XY preset works",
+      "passed": true
+    },
+    {
+      "check": "front XZ preset works",
+      "passed": true
+    },
+    {
+      "check": "reset restores 3D orbit",
+      "passed": true
+    },
+    {
+      "check": "expanded paired 3D view renders",
+      "passed": true
+    },
+    {
+      "check": "expanded timeline updates inline playback",
+      "passed": true
+    },
+    {
+      "check": "expanded A/B use identical physical time",
+      "passed": true
+    },
+    {
+      "check": "expanded playback advances",
+      "passed": true
+    },
+    {
+      "check": "Escape closes and removes expanded view",
+      "passed": true
+    },
+    {
+      "check": "mobile no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "mobile expanded view no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "no JavaScript errors: []",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "browser": "Microsoft Edge headless, isolated profile",
+  "data_source": "same recorded Newton 1.7.0 trajectories; no new simulation",
+  "screenshots": [
+    "screenshots-3d/cloth.png",
+    "screenshots-3d/desktop.png",
+    "screenshots-3d/expanded.png",
+    "screenshots-3d/friction.png",
+    "screenshots-3d/mobile-expanded.png",
+    "screenshots-3d/mobile.png"
+  ]
+}

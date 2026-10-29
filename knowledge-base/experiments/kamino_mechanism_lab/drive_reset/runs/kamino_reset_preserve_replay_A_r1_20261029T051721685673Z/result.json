@@ -1,0 +1,26 @@
+{
+  "case": "kamino_reset_preserve_replay",
+  "variant": "A",
+  "repeat": 1,
+  "status": "completed",
+  "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+  "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f",
+  "started_at": "2026-10-29T05:17:21.691292+00:00",
+  "run_directory": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r1_20261029T051721685673Z",
+  "samples": 81,
+  "raw_sha256": "7cd0ba4059f6b1d14f0a67fdd19c994f30379a426d6ed4563c59178b901ca288",
+  "note": "Completion is not acceptance; independent analyzer applies frozen criteria.",
+  "finished_at": "2026-10-29T05:17:38.348519+00:00",
+  "files_sha256": {
+    "environment.json": "dd96fa05f950205c5d9426efc1f6d6d50c08ba4701e16799b0fb35dddf241d1d",
+    "installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "protocol.json": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+    "reset-snapshots.npz": "7460065017c840af10e74e26f97b8919ed5d279cad3c09d98595146300017279",
+    "resolved-config.json": "d1072caddf58bee3be5ca36792c8e19e91eab2266e4a94089656f8fcf64a6bec",
+    "run.log": "925d1f9ca1f147d6241f521189e4bb024ff35faa35ef51c7078e55b6ce42fce8",
+    "runner.py": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f",
+    "scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "trajectory.npz": "7cd0ba4059f6b1d14f0a67fdd19c994f30379a426d6ed4563c59178b901ca288",
+    "warmup.npz": "6b2a0f4042d1789031d68ffe2b9cb785fba51177373f013e2feddbc4a203c6b7"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "run_id": "mujoco_contact_response_A_20261028T143133852456Z",
+  "case_id": "mujoco_contact_response",
+  "solver": "mujoco",
+  "variant": "A",
+  "version": "1.7.0",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "started_at": "2026-10-28T14:31:33.855455+00:00",
+  "status": "failed",
+  "run_class": "probe_override_not_ab",
+  "program_sha256": "f57d6249bcd62e121ed616343974f52f3a6ac89492f1e75593d4b6aad6a25ca6",
+  "protocol_sha256": "dd899264137ea40dc47b6772048f53d8a9fc60402132179075e2437d2b4838c7",
+  "protocol_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_A_20261028T143133852456Z/protocol.json",
+  "archived_program": "experiments/solver_parameter_lab/runs/mujoco_contact_response_A_20261028T143133852456Z/run_program.py",
+  "timing_scope": "Newton solver.step plus device synchronization; state export and serialization excluded. Report initialization and cold compilation separately where observable, median after first five steps, never cross-solver performance ranking.",
+  "warmup_steps": 5,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "packages": {
+      "newton": "1.7.0",
+      "numpy": "2.5.4",
+      "warp-lang": "1.18.0",
+      "mujoco": "3.15.0",
+      "mujoco-warp": "3.15.0"
+    },
+    "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+    "warp_devices": [
+      "cpu"
+    ]
+  },
+  "source_verification": {
+    "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+    "installed_path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\mujoco\\solver_mujoco.py",
+    "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+    "expected_sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+    "matches_snapshot": true
+  },
+  "scene_sha256": "303eb6a988e85557593e8da874a85c175490235385381caf006e96380526ad13",
+  "initialization_ms": 1168.194399913773,
+  "config": {
+    "constructor": {
+      "use_mujoco_cpu": true,
+      "use_mujoco_contacts": true,
+      "iterations": 50
+    },
+    "treatment": {
+      "ke": 2000,
+      "kd_rule": "2*sqrt(2000)"
+    },
+    "material_values": {
+      "ke": 2000.0,
+      "kd": 89.44271909999159
+    },
+    "dt": 0.004166666666666667,
+    "steps": 10,
+    "model": {
+      "world_count": 1,
+      "body_mass": [
+        1.0
+      ],
+      "body_inertia": [
+        [
+          [
+            0.004000000189989805,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.004000000189989805,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.004000000189989805
+          ]
+        ]
+      ],
+      "body_com": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "body_world": [
+        0
+      ],
+      "shape_world": [
+        -1,
+        0
+      ],
+      "gravity": [
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ],
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ]
+      ],
+      "shape_material_ke": [
+        2000.0,
+        2000.0
+      ],
+      "shape_material_kd": [
+        89.44271850585938,
+        89.44271850585938
+      ],
+      "shape_material_mu": [
+        0.6000000238418579,
+        0.6000000238418579
+      ]
+    },
+    "scene_description": {
+      "world_count": 1,
+      "up_axis": "Z",
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "floor_z": 0.0,
+      "bodies": [
+        {
+          "shape": "sphere",
+          "radius": 0.1,
+          "density": 238.732414637843,
+          "at": [
+            0,
+            0,
+            0.35
+          ],
+          "tilt_y": 0.0
+        }
+      ],
+      "mu": 0.6,
+      "common_ke": 20000.0,
+      "common_kd": 300.0
+    },
+    "seed": "no RNG"
+  },
+  "visual": {
+    "body_shapes": [
+      {
+        "body": 0,
+        "type": "sphere",
+        "radius": 0.1
+      }
+    ],
+    "floor": 0.0
+  },
+  "metrics": {
+    "finite": true,
+    "steps": 10,
+    "initial_penetration_mm": 0.0,
+    "max_penetration_mm": 0.0,
+    "final_penetration_mm": 0.0,
+    "tail_penetration_mm": 0.0,
+    "initial_stack_height_m": 0.4499999940395355,
+    "final_stack_height_m": 0.440632826089859,
+    "max_speed_m_s": 0.4087499678134918,
+    "final_kinetic_energy_J": 0.08353827148675919,
+    "max_kinetic_energy_J": 0.08353827148675919,
+    "step_ms_median_after_warmup": 0.207
+  },
+  "raw_file": "experiments/solver_parameter_lab/runs/mujoco_contact_response_A_20261028T143133852456Z/trajectory.npz",
+  "raw_sha256": "6c6adf41662b4525eed66d7c6ea3d7d6b216d15d046dc1a3331d5bf1fb1fe330",
+  "samples": 11,
+  "duration_seconds": 0.041666666666666664,
+  "resolved_backend": {
+    "iterations": 50,
+    "tolerance": 1e-08,
+    "integrator": 3,
+    "solver": 2,
+    "cone": 0,
+    "impratio": 1.0,
+    "disableflags": 524288,
+    "timestep": 0.004166666666666667,
+    "geom_solref": [
+      [
+        0.022360680624842644,
+        1.0
+      ],
+      [
+        0.022360680624842644,
+        1.0
+      ]
+    ],
+    "geom_solimp": [
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    ],
+    "geom_friction": [
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ],
+      [
+        0.6000000238418579,
+        0.004999999888241291,
+        9.999999747378752e-05
+      ]
+    ]
+  },
+  "error": "RuntimeError: No actual contact in contact experiment",
+  "finished_at": "2026-10-28T14:31:38.179058+00:00"
+}

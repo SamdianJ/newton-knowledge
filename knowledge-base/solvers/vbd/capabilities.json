@@ -1,0 +1,50 @@
+{
+  "version": "1.7.0",
+  "evidence": {
+    "repository": "newton-physics/newton",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "path": "newton/_src/solvers/vbd/solver_vbd.py",
+    "line": 167,
+    "end_line": 4866,
+    "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167-L4866"
+  },
+  "supported": [
+    "cloth triangles and bending edges",
+    "tetrahedral deformables",
+    "particle springs",
+    "rigid bodies",
+    "BALL",
+    "FIXED",
+    "FREE",
+    "REVOLUTE",
+    "PRISMATIC",
+    "D6",
+    "ROD",
+    "particle-body compliant attachments when VBD owns both",
+    "joint-owned mimic for supported joint types"
+  ],
+  "unsupported": [
+    "DISTANCE joint",
+    "joint_armature",
+    "joint_friction",
+    "joint_effort_limit",
+    "joint_velocity_limit",
+    "joint_target_mode",
+    "equality constraints",
+    "deprecated sparse mimic constraints"
+  ],
+  "conditional": [
+    "rigid-soft DAT requires owned collision pipeline and no external-rigid solver",
+    "CONTACT_F excludes soft self-contact",
+    "tile solve CUDA only",
+    "contact history requires matching",
+    "ROD Dahl requires authored positive custom parameters"
+  ],
+  "not_claimed": [
+    "automatic differentiability or calibrated gradient pipeline",
+    "global nonpenetration/inversion guarantee for arbitrary scenes",
+    "OGC full availability; pinned docs say future work",
+    "physical identification from monocular video alone"
+  ],
+  "status": "experimental according to release source"
+}

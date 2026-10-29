@@ -1,0 +1,149 @@
+{
+  "solver": "kamino",
+  "status": "probe_passed",
+  "counts_as_ab": false,
+  "python": "3.12.14",
+  "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+  "packages": {
+    "newton": "1.7.0",
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "mujoco": "3.15.0",
+    "mujoco-warp": "3.15.0"
+  },
+  "warp_devices": [
+    "cpu"
+  ],
+  "solver_source": {
+    "path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\kamino\\solver_kamino.py",
+    "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "manifest_sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d"
+  },
+  "requested_config": {
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": true,
+    "use_fk_solver": false,
+    "collision_detector": {
+      "pipeline": "unified",
+      "broadphase": "explicit",
+      "bvtype": "aabb",
+      "max_contacts": null,
+      "max_contacts_per_world": 16,
+      "max_contacts_per_pair": 12,
+      "max_triangle_pairs": 1000000,
+      "default_gap": 1e-05
+    },
+    "constraints": {
+      "alpha": 0.01,
+      "beta": 0.01,
+      "gamma": 0.01,
+      "delta": 1e-06
+    },
+    "dynamics": {
+      "preconditioning": true,
+      "linear_solver_type": "LLTB",
+      "linear_solver_kwargs": {},
+      "cull_speculative_contacts": true
+    },
+    "padmm": {
+      "primal_tolerance": 1e-06,
+      "dual_tolerance": 1e-06,
+      "compl_tolerance": 1e-06,
+      "restart_tolerance": 0.999,
+      "eta": 1e-05,
+      "rho_0": 1.0,
+      "rho_min": 1e-05,
+      "a_0": 1.0,
+      "alpha": 10.0,
+      "tau": 1.5,
+      "max_iterations": 4,
+      "penalty_update_freq": 1,
+      "penalty_update_method": "fixed",
+      "linear_solver_tolerance": 0.0,
+      "linear_solver_tolerance_ratio": 0.0,
+      "use_acceleration": true,
+      "use_graph_conditionals": false,
+      "warmstart_mode": "containers",
+      "warmstart_scale": 0.9,
+      "contact_warmstart_method": "key_and_position"
+    },
+    "dvi": {
+      "tolerance": 1e-05,
+      "regularization": 1e-06,
+      "omega": 1.0,
+      "max_alternating_iterations": 24,
+      "inequality_sweeps_per_iteration": 2,
+      "use_schur_complement": false,
+      "bilateral_solve_interval": 1,
+      "tangential_warmstart_scale": 0.97,
+      "bilateral_solver_type": "LLTB",
+      "bilateral_solver_kwargs": {},
+      "warmstart_mode": "containers",
+      "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+    },
+    "fk": null,
+    "materials": {
+      "friction_mix_mode": "average",
+      "restitution_mix_mode": "min"
+    },
+    "rotation_correction": "twopi",
+    "integrator": "euler",
+    "dynamics_solver": "padmm",
+    "angular_velocity_damping": 0.0,
+    "collect_solver_info": false,
+    "compute_solution_metrics": false
+  },
+  "heights": [
+    0.0949999988079071,
+    0.09498867392539978,
+    0.09501410275697708,
+    0.09506162256002426,
+    0.09511127322912216,
+    0.09515616297721863,
+    0.09519767016172409,
+    0.09523828327655792,
+    0.09527897834777832
+  ],
+  "terminal_status": {
+    "converged": [
+      0
+    ],
+    "iterations": [
+      4
+    ],
+    "r_p": [
+      0.0
+    ],
+    "r_d": [
+      0.0016582569805905223
+    ],
+    "r_c": [
+      0.0
+    ],
+    "r_dx": [
+      0.0009193606674671173
+    ],
+    "r_dy": [
+      0.0004737784038297832
+    ],
+    "r_dz": [
+      0.0
+    ],
+    "r_a": [
+      2.2446597824909986e-07
+    ],
+    "r_a_p": [
+      2.2446597824909986e-07
+    ],
+    "r_a_pp": [
+      5.423561333373073e-07
+    ],
+    "restart": [
+      0
+    ],
+    "num_restarts": [
+      0
+    ]
+  }
+}

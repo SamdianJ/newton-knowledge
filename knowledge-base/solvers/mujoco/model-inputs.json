@@ -1,0 +1,478 @@
+[
+  {
+    "id": "model:mujoco:body_mass",
+    "solver": "mujoco",
+    "field": "body_mass",
+    "units": "kg",
+    "description_zh": "刚体质量；先从参考尺度与密度确定，避免用质量补偿错误接触。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 972,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L972"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 4936,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4936"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:body_inertia",
+    "solver": "mujoco",
+    "field": "body_inertia",
+    "units": "kg·m²",
+    "description_zh": "刚体惯量张量；影响转动与约束条件数。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 968,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L968"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 4980,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4980"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:joint_armature",
+    "solver": "mujoco",
+    "field": "joint_armature",
+    "units": "依自由度而定",
+    "description_zh": "关节附加惯量；需区分转动与平移自由度。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1050,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1050"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 5166,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5166"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:joint_target_ke",
+    "solver": "mujoco",
+    "field": "joint_target_ke",
+    "units": "依自由度而定",
+    "description_zh": "关节 PD 比例增益；不同 solver 的执行/隐式路径需分别核对。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1054,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1054"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6341,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6341"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:joint_target_kd",
+    "solver": "mujoco",
+    "field": "joint_target_kd",
+    "units": "依自由度而定",
+    "description_zh": "关节 PD 导数增益。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1056,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1056"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6342,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6342"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:joint_effort_limit",
+    "solver": "mujoco",
+    "field": "joint_effort_limit",
+    "units": "N 或 N·m",
+    "description_zh": "执行器力/力矩上限；与驱动方式共同作用。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1060,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1060"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6338,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6338"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:joint_limit_lower",
+    "solver": "mujoco",
+    "field": "joint_limit_lower",
+    "units": "m 或 rad",
+    "description_zh": "关节下限及参考坐标约定。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1070,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1070"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6329,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6329"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:joint_limit_upper",
+    "solver": "mujoco",
+    "field": "joint_limit_upper",
+    "units": "m 或 rad",
+    "description_zh": "关节上限及参考坐标约定。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1072,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1072"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6330,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6330"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:shape_material_mu",
+    "solver": "mujoco",
+    "field": "shape_material_mu",
+    "units": "无量纲",
+    "description_zh": "形状表面摩擦；需同时检查材料混合和接触维度。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 706,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L706"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6362,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6362"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:joint_damping",
+    "solver": "mujoco",
+    "field": "joint_damping",
+    "units": "N·s/m 或 N·m·s/rad",
+    "description_zh": "关节被动黏性阻尼，导出为 MuJoCo dof_damping；区别于 PD 目标速度误差项 joint_target_kd。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 1058,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1058"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6398,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6398"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:shape_material_mu_torsional",
+    "solver": "mujoco",
+    "field": "shape_material_mu_torsional",
+    "units": "m",
+    "description_zh": "扭转摩擦系数，控制接触法线方向的摩擦力矩尺度；需 condim≥4 才启用。单位为长度，不与无量纲滑动摩擦系数混用。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 710,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L710"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6365,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6365"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:shape_material_mu_rolling",
+    "solver": "mujoco",
+    "field": "shape_material_mu_rolling",
+    "units": "m",
+    "description_zh": "滚动摩擦系数，控制切向旋转的摩擦力矩尺度；需 condim=6 才启用。此次扭转实验不构成滚动摩擦验证。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 712,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L712"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6366,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6366"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:shape_margin",
+    "solver": "mujoco",
+    "field": "shape_margin",
+    "units": "m",
+    "description_zh": "形状接触裕量；需核对 native 后端实际 geom_margin 与 CCD 标志，不能仅根据请求值推断激活距离。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 726,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L726"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 5079,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5079"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:shape_gap",
+    "solver": "mujoco",
+    "field": "shape_gap",
+    "units": "m",
+    "description_zh": "形状接触候选间隙；应区分候选生成与活动约束，语义以固定 MuJoCo 版本及实际 geom_gap 为准。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 718,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L718"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 6368,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6368"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:shape_material_ke",
+    "solver": "mujoco",
+    "field": "shape_material_ke",
+    "units": "按转换模式解释",
+    "description_zh": "接触刚度输入会转换为 MuJoCo solref；MuJoCo Warp 的 Newton-contacts force-space 路径有额外条件。native CPU 不消费外部 Newton contacts。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 698,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L698"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 5062,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5062"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:shape_material_kd",
+    "solver": "mujoco",
+    "field": "shape_material_kd",
+    "units": "按转换模式解释",
+    "description_zh": "接触阻尼输入，不能把 VBD penalty 单位/效果直接搬到 MuJoCo。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/sim/model.py",
+      "line": 700,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L700"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 5063,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L5063"
+    },
+    "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+    "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:mujoco.solref",
+    "solver": "mujoco",
+    "field": "mujoco.solref",
+    "units": "见字段定义",
+    "description_zh": "接触参考响应参数；正值格式与直接负值格式含义不同。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1449,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1449"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1449,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1449"
+    },
+    "default_policy": "读取已注册 mujoco 自定义属性及实际模型值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:mujoco.geom_solimp",
+    "solver": "mujoco",
+    "field": "mujoco.geom_solimp",
+    "units": "见字段定义",
+    "description_zh": "约束阻抗曲线；与 solref 共同定义接触软化。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1425,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1425"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1425,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1425"
+    },
+    "default_policy": "读取已注册 mujoco 自定义属性及实际模型值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:mujoco.condim",
+    "solver": "mujoco",
+    "field": "mujoco.condim",
+    "units": "见字段定义",
+    "description_zh": "接触维度，决定是否含切向/扭转/滚动摩擦。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1390,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1390"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1390,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1390"
+    },
+    "default_policy": "读取已注册 mujoco 自定义属性及实际模型值。",
+    "experiments": []
+  },
+  {
+    "id": "model:mujoco:mujoco.solref_mode",
+    "solver": "mujoco",
+    "field": "mujoco.solref_mode",
+    "units": "见字段定义",
+    "description_zh": "ke/kd 转换模式；逐接触 force-space 修正属于 MuJoCo Warp 的 Newton-contacts 路径。native CPU 不消费外部 contacts，原生检测也不采用该逐接触修正。",
+    "model_definition": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1463,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1463"
+    },
+    "consumer": {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 1463,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1463"
+    },
+    "default_policy": "读取已注册 mujoco 自定义属性及实际模型值。",
+    "experiments": []
+  }
+]

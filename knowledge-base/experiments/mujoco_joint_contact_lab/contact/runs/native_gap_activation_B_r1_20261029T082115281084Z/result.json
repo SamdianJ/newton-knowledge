@@ -1,0 +1,27 @@
+{
+  "run_id": "native_gap_activation_B_r1_20261029T082115281084Z",
+  "case": "native_gap_activation",
+  "variant": "B",
+  "repeat": 1,
+  "status": "completed",
+  "run_directory": "experiments/mujoco_joint_contact_lab/contact/runs/native_gap_activation_B_r1_20261029T082115281084Z",
+  "program_sha256": "6e43b4dc2f27dfc3055fafdd8389711c4647071d45055cea2e72765abbb14141",
+  "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+  "scene_sha256": "572f2be1f8d9702031b173488c12f3422316422164afdce564bf7caae24eb4d4",
+  "started_at": "2026-10-29T08:21:15.290257+00:00",
+  "samples": 801,
+  "raw_sha256": "f1bed48ed5a0744e88a3360503ca7167b4104fbe4fcf52919d9aa5fad0aa13e7",
+  "config_sha256": "a17c685f15ba10e9b645e4a9f8ddb821b596a8f13ff0c4402b97096cb08a534e",
+  "note": "Completion separate from frozen physical acceptance",
+  "finished_at": "2026-10-29T08:21:19.890365+00:00",
+  "files_sha256": {
+    "environment.json": "7024352b142c0392fcfa9ea10a399bf66cec2f724be2c3c6a13c5b3c3160551f",
+    "installed-source-validation.json": "599493a32c53fe7bbf16aac8e0b1156582a5bc6a9a650ee85770b9503606a604",
+    "protocol.json": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+    "resolved-config.json": "a17c685f15ba10e9b645e4a9f8ddb821b596a8f13ff0c4402b97096cb08a534e",
+    "run.log": "ac40629f1b9bd5fd4c449f0f3de64a25e4a103d572b24b8dd1b5f80f77ee5b8b",
+    "runner.py": "6e43b4dc2f27dfc3055fafdd8389711c4647071d45055cea2e72765abbb14141",
+    "scene.xml": "572f2be1f8d9702031b173488c12f3422316422164afdce564bf7caae24eb4d4",
+    "trajectory.npz": "f1bed48ed5a0744e88a3360503ca7167b4104fbe4fcf52919d9aa5fad0aa13e7"
+  }
+}

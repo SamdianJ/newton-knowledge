@@ -1,0 +1,27 @@
+{
+  "run_id": "native_solref_rebound_A_r2_20261029T082042720036Z",
+  "case": "native_solref_rebound",
+  "variant": "A",
+  "repeat": 2,
+  "status": "completed",
+  "run_directory": "experiments/mujoco_joint_contact_lab/contact/runs/native_solref_rebound_A_r2_20261029T082042720036Z",
+  "program_sha256": "6e43b4dc2f27dfc3055fafdd8389711c4647071d45055cea2e72765abbb14141",
+  "protocol_sha256": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+  "scene_sha256": "c3be0d72960fe0f300b3a83603122ca610ef3ba6e627f812d417f7da64da8cc5",
+  "started_at": "2026-10-29T08:20:42.729567+00:00",
+  "samples": 801,
+  "raw_sha256": "1867ed632437585c7557533678645777a23b0586945da3b6fc3daa74ad53dcf9",
+  "config_sha256": "92c2fc20dbf8374b348d77b1efaebaad494cc709cb9d1dc15e6daf5c9b869dac",
+  "note": "Completion separate from frozen physical acceptance",
+  "finished_at": "2026-10-29T08:20:47.209701+00:00",
+  "files_sha256": {
+    "environment.json": "7024352b142c0392fcfa9ea10a399bf66cec2f724be2c3c6a13c5b3c3160551f",
+    "installed-source-validation.json": "599493a32c53fe7bbf16aac8e0b1156582a5bc6a9a650ee85770b9503606a604",
+    "protocol.json": "8acf6051cc232801a4414bbb7aea41b429f50c36ee621f408be368cf517ff7dc",
+    "resolved-config.json": "92c2fc20dbf8374b348d77b1efaebaad494cc709cb9d1dc15e6daf5c9b869dac",
+    "run.log": "8058624c103b8e200485c1f7c903a34bc32eeb92efbdb44cc0b3a5ed6850e625",
+    "runner.py": "6e43b4dc2f27dfc3055fafdd8389711c4647071d45055cea2e72765abbb14141",
+    "scene.xml": "c3be0d72960fe0f300b3a83603122ca610ef3ba6e627f812d417f7da64da8cc5",
+    "trajectory.npz": "1867ed632437585c7557533678645777a23b0586945da3b6fc3daa74ad53dcf9"
+  }
+}

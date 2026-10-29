@@ -1,0 +1,292 @@
+{
+  "protocol_id": "mujoco-joint-mechanisms-1.0",
+  "status": "frozen_before_runs",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "native_mujoco_version": "3.15.0",
+  "device": "cpu",
+  "scene": {
+    "world_count": 1,
+    "body_count": 1,
+    "mass_kg": 1,
+    "inertia_com_kg_m2": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "com_m": [
+      0,
+      0,
+      0
+    ],
+    "joint": "world-to-body revolute Y at origin",
+    "gravity": [
+      0,
+      0,
+      0
+    ],
+    "lock_inertia": true,
+    "geometry": "analytical rotor, no collision geometry",
+    "joint_friction": 0,
+    "joint_stiffness": 0,
+    "effort_limit_Nm": 100,
+    "initial_q_rad": 0
+  },
+  "solver": {
+    "use_mujoco_cpu": true,
+    "use_mujoco_contacts": true,
+    "integrator": "euler",
+    "solver": "newton",
+    "iterations": 100,
+    "tolerance": 1e-10,
+    "update_data_interval": 0
+  },
+  "run": {
+    "dt_s": 0.002,
+    "steps": 1000,
+    "duration_s": 2,
+    "repeats": 2,
+    "independent_process_per_repeat": true,
+    "repeat_pose_atol": 1e-06,
+    "repeat_velocity_atol": 1e-06,
+    "repeat_rtol": 1e-06,
+    "state_sampling": "1001 states at t=n*h including initial; raw Newton body_q/qd,joint_q/qd and native qpos/qvel stored. Native integration owns qpos/qvel after initialization because update_data_interval=0; no midrun state edit.",
+    "force_sampling": "1000 raw mj_data qfrc_passive/qfrc_actuator/qfrc_applied/qfrc_constraint/qacc/nefc/solver_niter samples immediately AFTER mj_step. For Euler these forces were evaluated at pre-integration state n, whereas qpos/qvel are state n+1. Store force_t=n*h and compare force[n] to state[n], never silently treat as endpoint forces. No extra mj_forward changes native integration state.",
+    "finite": "every physical, native, command and diagnostic array finite; no initial unsolved force sample inserted"
+  },
+  "common_criteria": {
+    "q_reference_max_abs_rad": 0.0001,
+    "v_reference_max_abs_rad_s": 0.0001,
+    "force_reference_max_abs_Nm": 0.001,
+    "native_vs_newton_q_max_abs_rad": 1e-06,
+    "native_vs_newton_v_max_abs_rad_s": 1e-06,
+    "anchor_max_norm_m": 1e-06,
+    "quat_norm_error_max": 2e-06,
+    "all_actual_fields_match": true,
+    "warnings_badqpos_badqvel_badqacc": 0
+  },
+  "reference": "Independent float64 scalar reference with I=I_com_y+m*(com_x^2+com_z^2)+armature. MuJoCo Euler includes joint damping implicitly, actuator PD damping explicitly: tau_act=kp*(qref-q_n)-kd*v_n, v_next=(I*v_n+h*(external_tau+tau_act))/(I+h*damping), q_next=q_n+h*v_next. This is not Kamino's fully implicit PD recurrence. Passive force reported is -damping*v_n even though the velocity integration uses implicit damping. Limit case uses only preactivation free-flight recurrence and late static force balance/range translation, not an invented exact soft-limit transient solution.",
+  "cases": [
+    {
+      "id": "mujoco_joint_passive_damping",
+      "title": "被动关节阻尼：无驱动自由转子的能量衰减",
+      "parameter": "joint_damping",
+      "base": {
+        "mode": "NONE",
+        "damping": 0,
+        "armature": 0,
+        "kp": 0,
+        "kd": 0,
+        "qref": 0,
+        "initial_v": 1,
+        "external_tau": 0,
+        "limit_lower": -10000000000.0,
+        "limit_upper": 10000000000.0,
+        "limit_ke": 20000,
+        "limit_kd": 1000
+      },
+      "variants": {
+        "A": {
+          "damping": 0
+        },
+        "B": {
+          "damping": 2
+        }
+      },
+      "actual_fields": [
+        "dof_damping",
+        "dof_armature",
+        "nu=0",
+        "dof_frictionloss=0"
+      ],
+      "criteria": {
+        "energy_positive_increment_max_J": 1e-07,
+        "A_final_energy_relative_error_max": 1e-05,
+        "B_final_energy_ratio_max": 0.001,
+        "B_to_A_final_speed_ratio_max": 0.03
+      },
+      "interpretation": "damping is always-active passive dissipation, not joint_target_kd and not dry friction. v_n=v0*(I/(I+h*damping))^n, E=.5*I*v^2; also report continuous exp(-d*t/I) as secondary discretization comparison.",
+      "rationale": "Damped endpoint speed ~exp(-4)=.0183 and energy ratio ~.00034, so <=.03/<=.001 reject absent damping while tolerating Euler discretization. Zero-damping control must conserve speed/energy."
+    },
+    {
+      "id": "mujoco_joint_armature_inertia",
+      "title": "Armature：同力矩下的有效惯量与加速度",
+      "parameter": "joint_armature",
+      "base": {
+        "mode": "NONE",
+        "damping": 0,
+        "armature": 0,
+        "kp": 0,
+        "kd": 0,
+        "qref": 0,
+        "initial_v": 0,
+        "external_tau": 1,
+        "limit_lower": -10000000000.0,
+        "limit_upper": 10000000000.0,
+        "limit_ke": 20000,
+        "limit_kd": 1000
+      },
+      "variants": {
+        "A": {
+          "armature": 0
+        },
+        "B": {
+          "armature": 3
+        }
+      },
+      "actual_fields": [
+        "dof_armature",
+        "body_mass",
+        "body_inertia",
+        "native qM diagonal"
+      ],
+      "criteria": {
+        "effective_inertia_max_abs_error_kg_m2": 1e-06,
+        "B_to_A_speed_ratio_error_from_quarter_max": 1e-05,
+        "B_to_A_acceleration_ratio_error_from_quarter_max": 1e-05
+      },
+      "interpretation": "I_eff=1+armature. Armature changes rotational generalized inertia while body mass and physical inertia remain fixed; it is not damping. With constant 1Nm, a=1/I_eff, v_n=n*h/I_eff, q_n=h*h*n*(n+1)/(2*I_eff).",
+      "rationale": "0 versus3 makes effective inertia1 versus4 and acceleration/speed exactly quarter, a strong discriminating ratio independent of curve appearance."
+    },
+    {
+      "id": "mujoco_joint_pd_damping",
+      "title": "驱动阻尼：同位置增益下振荡与收敛",
+      "parameter": "joint_target_kd",
+      "base": {
+        "mode": "POSITION",
+        "damping": 0,
+        "armature": 0,
+        "kp": 25,
+        "kd": 0,
+        "qref": 0.1,
+        "initial_v": 0,
+        "external_tau": 0,
+        "limit_lower": -10000000000.0,
+        "limit_upper": 10000000000.0,
+        "limit_ke": 20000,
+        "limit_kd": 1000
+      },
+      "variants": {
+        "A": {
+          "kd": 0
+        },
+        "B": {
+          "kd": 10
+        }
+      },
+      "actual_fields": [
+        "actuator_gainprm[0]=kp",
+        "actuator_biasprm[1]=-kp",
+        "actuator_biasprm[2]=-kd",
+        "dof_damping=0",
+        "jnt_actfrcrange=[-100,100]"
+      ],
+      "criteria": {
+        "A_overshoot_min_rad": 0.09,
+        "A_overshoot_max_rad": 0.11,
+        "B_overshoot_max_rad": 0.005,
+        "B_endpoint_error_max_rad": 0.001,
+        "B_endpoint_speed_max_rad_s": 0.005,
+        "minimum_effort_margin_Nm": 90
+      },
+      "interpretation": "Only target_kd changes. kp25 supplies restoring actuation, kd10 critically damps I1 in the continuous limit. Euler actuator damping remains explicit; whole trajectory/torque must match the discrete scalar reference. This validates kp export at25 but is not a kp sweep.",
+      "rationale": "No-damping oscillator reaches near .2rad while critical damping approaches .1rad without large overshoot; .002s is far below the explicit stability scale. Force margin excludes saturation as explanation."
+    },
+    {
+      "id": "mujoco_joint_upper_limit",
+      "title": "关节上限：到达时刻、软约束反力与停止位置",
+      "parameter": "joint_limit_upper",
+      "base": {
+        "mode": "NONE",
+        "damping": 0,
+        "armature": 0,
+        "kp": 0,
+        "kd": 0,
+        "qref": 0,
+        "initial_v": 0,
+        "external_tau": 1,
+        "limit_lower": -0.5,
+        "limit_upper": 0.1,
+        "limit_ke": 20000,
+        "limit_kd": 1000
+      },
+      "variants": {
+        "A": {
+          "limit_upper": 0.1
+        },
+        "B": {
+          "limit_upper": 0.2
+        }
+      },
+      "actual_fields": [
+        "jnt_limited=1",
+        "jnt_range",
+        "jnt_margin=0",
+        "jnt_solref",
+        "jnt_solimp",
+        "dof_invweight0"
+      ],
+      "criteria": {
+        "first_constraint_time_error_max_s": 0.006,
+        "peak_upper_violation_max_rad": 0.02,
+        "tail_mean_violation_min_rad": -0.001,
+        "tail_mean_violation_max_rad": 0.001,
+        "tail_speed_max_abs_rad_s": 0.001,
+        "tail_force_balance_max_abs_Nm": 0.01,
+        "B_minus_A_plateau_shift_error_from_0p1_max_rad": 0.002,
+        "B_minus_A_onset_delay_min_s": 0.15,
+        "B_minus_A_onset_delay_max_s": 0.22
+      },
+      "reference_scope": "Compute free-flight q_n=h²*n*(n+1)/2; expected activation force_t is first pre-step n with q_n>=upper. Actual first force_t with abs(qfrc_constraint)>1e-6 must match within .006s. Compare q/v to free-flight only through that first activation input state. Tail is last250steps (.5s): external+constraint=0, small speed, plateau near specified range. Shift of plateau follows .1rad range change. Do not claim exact transient soft-limit force or zero penetration.",
+      "rationale": "Expected arrival ~.446/.632s; range shift creates ~.185s delay. Force-space limit_ke20000/kd1000 and fixed default solimp are intended to absorb impact with bounded penetration; record actual exported response parameters. A failed penetration/settling gate remains a negative result, not permission to hard-clamp q."
+    }
+  ],
+  "source_refs": [
+    {
+      "path": "newton/_src/sim/builder.py",
+      "line": 5713
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 7500
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 7577
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 9679
+    },
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "line": 4568
+    }
+  ],
+  "official_reference_urls": [
+    "https://mujoco.readthedocs.io/en/3.15.0/computation/index.html#numerical-integration",
+    "https://mujoco.readthedocs.io/en/3.15.0/modeling.html#solver-parameters"
+  ],
+  "provenance": "All809 installed locked Newton Python files checked against manifests/source-lock.json each run. Record native package version, actual mj_model fields and native integration options. New run directory every attempt, with raw NPZ, protocol and runner copies+SHA, result and full log. Keep failed attempts; harness fixes require parent approval and new runner hash. No physical thresholds changed after observing results.",
+  "limitations": [
+    "Native CPU MuJoCo3.15.0 with Newton1.7.0 only; no MuJoCo Warp claim",
+    "One scalar joint, diagonal constant inertia, no gravity/contact or coupled joints",
+    "Euler selected for auditable discrete references; not a recommendation over default implicitfast",
+    "Joint limit is soft and transient waveform is not claimed analytically reproduced",
+    "No kp sweep, effort/velocity-limit sweep or runtime property update tested",
+    "Model export/native diagnostic arrays are observational instrumentation"
+  ],
+  "frozen_at_utc": "2026-10-29T08:13:37.668963+00:00",
+  "reviewed_by": "root: distinct passive/actuator damping, independent native-Euler reference, force/state time alignment, soft-limit reference scope"
+}

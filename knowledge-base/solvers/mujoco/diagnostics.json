@@ -1,0 +1,70 @@
+[
+  {
+    "id": "diagnostic:mujoco:1",
+    "solver": "mujoco",
+    "symptom": "穿透或接触响应偏软",
+    "plan": [
+      "确认编译后的几何、接触记录和碰撞来源。",
+      "冻结质量/尺度与 dt，比较 solref/solimp 或相应 ke/kd 转换模式。",
+      "再扫 iterations/tolerance，分别量测穿透和收敛。"
+    ],
+    "caution": "更高迭代不能修复几何漏检。",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:iterations",
+      "newton:1.7.0:mujoco:use_mujoco_contacts"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  },
+  {
+    "id": "diagnostic:mujoco:2",
+    "solver": "mujoco",
+    "symptom": "抓持缓慢滑落",
+    "plan": [
+      "确认 condim、mu、cone 与 impratio。",
+      "冻结驱动目标，记录切向位移和法向力。",
+      "逐组比较摩擦模型和接触软化。"
+    ],
+    "caution": "impratio 不是摩擦系数。",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:impratio",
+      "newton:1.7.0:mujoco:cone"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  },
+  {
+    "id": "diagnostic:mujoco:3",
+    "solver": "mujoco",
+    "symptom": "控制目标改变但状态没有跟随",
+    "plan": [
+      "检查控制端口、关节切片与驱动映射；control 和外力每步提交，不受 update_data_interval 降采样。",
+      "核对 joint ref、关节坐标与 actuator target。",
+      "另行检查 state 的 update_data_interval 同步；先用逐步 state 同步和固定控制输入建立基线。"
+    ],
+    "caution": "先排查同步和参考坐标，再调整增益。",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:update_data_interval"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  },
+  {
+    "id": "diagnostic:mujoco:4",
+    "solver": "mujoco",
+    "symptom": "多接触场景容量或编译问题",
+    "plan": [
+      "检查 nconmax/njmax/njmax_nnz 告警与初始接触数。",
+      "确认 world 拆分与 CPU/GPU 路径。",
+      "容量与优化预算分别扫描。"
+    ],
+    "caution": "容量设置不能当作材料参数。",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:nconmax",
+      "newton:1.7.0:mujoco:njmax",
+      "newton:1.7.0:mujoco:separate_worlds"
+    ],
+    "evidence_type": "proposed",
+    "status": "not_run"
+  }
+]

@@ -1,0 +1,1226 @@
+{
+  "passed": 305,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "official source HEAD is still the pinned release",
+      "passed": true
+    },
+    {
+      "check": "official source snapshot has no edits",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/solver_kamino.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/config.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/sim/model.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: pyproject.toml",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: docs/solvers/mujoco.rst",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: docs/solvers/kamino.rst",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: docs/concepts/simulation_tuning_mujoco.rst",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: docs/concepts/simulation_tuning_solvers.rst",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/README.md",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/_src/solver_kamino_impl.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/_src/core/conversions.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/_src/solvers/padmm/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+      "passed": true
+    },
+    {
+      "check": "inspected source hash: newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+      "passed": true
+    },
+    {
+      "check": "original paper hash: paper:mujoco-2012",
+      "passed": true
+    },
+    {
+      "check": "per-page paper text available: paper:mujoco-2012",
+      "passed": true
+    },
+    {
+      "check": "original paper hash: paper:mujoco-2014",
+      "passed": true
+    },
+    {
+      "check": "per-page paper text available: paper:mujoco-2014",
+      "passed": true
+    },
+    {
+      "check": "original paper hash: paper:kamino-loops-2025",
+      "passed": true
+    },
+    {
+      "check": "per-page paper text available: paper:kamino-loops-2025",
+      "passed": true
+    },
+    {
+      "check": "original paper hash: paper:proximal-admm-2024",
+      "passed": true
+    },
+    {
+      "check": "per-page paper text available: paper:proximal-admm-2024",
+      "passed": true
+    },
+    {
+      "check": "complete constructor signature: mujoco",
+      "passed": true
+    },
+    {
+      "check": "no invented measured evidence: mujoco",
+      "passed": true
+    },
+    {
+      "check": "diagnostic plans explicitly proposed: mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: diagnostics.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: diagnostics.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: experiments.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: experiments.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: implementation.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: implementation.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: model-inputs.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: model-inputs.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: paper-code-map.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: paper-code-map.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: papers.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: papers.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: parameters.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: parameters.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: theory.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: theory.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: version-notes.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: version-notes.md mujoco",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4070",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4072",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4073",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4074",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4075",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4076",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4077",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4078",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4079",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4080",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4081",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4082",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4083",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4084",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4085",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4086",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4087",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4088",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4089",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4090",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4091",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4092",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4093",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4557",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4094",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4095",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4096",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4097",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4098",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4099",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4100",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4557",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4101",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4102",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4557",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4103",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4104",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4105",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:972",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4936",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:968",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4980",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:1050",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:5166",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:1054",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6341",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:1056",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6342",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:1060",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6338",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:1070",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6329",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:1072",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6330",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:706",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6362",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:1058",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6398",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:710",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6365",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:712",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6366",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:726",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:5079",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:718",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6368",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:698",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:5062",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/sim/model.py:700",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:5063",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1449",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1449",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1425",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1425",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1390",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1390",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1463",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1463",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1655",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4418",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1844",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4583",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4117",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6277",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1655",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4418",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:1844",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4583",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4117",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6277",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6023",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:7992",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4557",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:9557",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:5012",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:6023",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4552",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco newton/_src/solvers/mujoco/solver_mujoco.py:4557",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: mujoco docs/solvers/mujoco.rst:5",
+      "passed": true
+    },
+    {
+      "check": "complete constructor signature: kamino",
+      "passed": true
+    },
+    {
+      "check": "all public Kamino config and reset dataclass fields included in source order",
+      "passed": true
+    },
+    {
+      "check": "no invented measured evidence: kamino",
+      "passed": true
+    },
+    {
+      "check": "diagnostic plans explicitly proposed: kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: diagnostics.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: diagnostics.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: experiments.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: experiments.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: implementation.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: implementation.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: model-inputs.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: model-inputs.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: paper-code-map.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: paper-code-map.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: papers.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: papers.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: parameters.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: parameters.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: pd-experiments.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: pd-experiments.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: theory.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: theory.md kamino",
+      "passed": true
+    },
+    {
+      "check": "no escaped math control characters: version-notes.md kamino",
+      "passed": true
+    },
+    {
+      "check": "local references resolve: version-notes.md kamino",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:736",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:737",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:191",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:197",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:202",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:207",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:220",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:227",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:234",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:241",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:248",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:255",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:262",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:269",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:276",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:285",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:292",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:299",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:308",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:644",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:656",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:670",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:686",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:83",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:89",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:95",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:101",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:110",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:119",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:127",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:134",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:234",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:241",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:248",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:255",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:366",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:372",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:382",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:388",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:474",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:480",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:486",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:492",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:499",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:505",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:511",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:518",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:524",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:530",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:537",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:543",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:550",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:556",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:565",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:574",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:580",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:587",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:594",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:604",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:802",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:808",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:814",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:820",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:828",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:835",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:847",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:855",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:862",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:870",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:876",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:882",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:983",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:990",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:997",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1004",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1013",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1021",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1028",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1035",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1042",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1057",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1064",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1070",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1076",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1155",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:1161",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:972",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1598",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:968",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1601",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:1050",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1211",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:1054",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1213",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:1056",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1214",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:1060",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1216",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:1070",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1225",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:1072",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1226",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:706",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1429",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/sim/model.py:708",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/core/conversions.py:1429",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:485",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:469",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:797",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:225",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino docs/solvers/kamino.rst:125",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:467",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:485",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:469",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:797",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/config.py:225",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino docs/solvers/kamino.rst:125",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/solver_kamino.py:467",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/solver.py:562",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/solver.py:955",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py:395",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py:447",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/solver.py:995",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/solver.py:527",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/solver.py:1009",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py:617",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py:698",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/solver.py:1203",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py:698",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/dvi/solver.py:450",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino newton/_src/solvers/kamino/_src/solvers/dvi/solver.py:698",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino docs/solvers/kamino.rst:111",
+      "passed": true
+    },
+    {
+      "check": "valid pinned source anchor: kamino docs/solvers/kamino.rst:5",
+      "passed": true
+    },
+    {
+      "check": "combined graph IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "combined graph has no dangling relations",
+      "passed": true
+    }
+  ]
+}

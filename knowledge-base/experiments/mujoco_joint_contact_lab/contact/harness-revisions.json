@@ -1,0 +1,16 @@
+{
+  "reason": "Construction-time opt.timestep is default .002 before wrapper step sets frozen .0005. Old snapshots lack per-step actual timestep; exclusion is instrumentation completeness, never physical outcome. Added explicit pre-step sampling label plus native timestep/time after every step; no simulation or thresholds changed.",
+  "old_runner_sha256": "6e43b4dc2f27dfc3055fafdd8389711c4647071d45055cea2e72765abbb14141",
+  "new_runner_sha256": "385f5d80ed7ea33563de490dd3f3deeebb994ce6517e04791e9f58786fc2ae38",
+  "excluded_runs": [
+    "native_gap_activation_A_r1_20261029T082102081914Z",
+    "native_gap_activation_A_r2_20261029T082108622357Z",
+    "native_gap_activation_B_r1_20261029T082115281084Z",
+    "native_gap_activation_B_r2_20261029T082121702358Z",
+    "native_solref_rebound_A_r1_20261029T082026329151Z",
+    "native_solref_rebound_A_r2_20261029T082042720036Z",
+    "native_solref_rebound_B_r1_20261029T082049013112Z",
+    "native_solref_rebound_B_r2_20261029T082055642848Z"
+  ],
+  "excluded_status": "excluded_instrumentation_incomplete"
+}

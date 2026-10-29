@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "status": "designed_before_runs_pending_parent_freeze",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "device": "cpu",
+  "scene": {
+    "world_count": 1,
+    "gravity": [0, 0, 0],
+    "body_count": 1,
+    "mass_kg": 1,
+    "inertia_com_kg_m2": [[1,0,0],[0,1,0],[0,0,1]],
+    "com_in_body_m": [0.5,0,0],
+    "lock_inertia": true,
+    "joint": "world-to-body revolute about world Y; body origin and both joint anchors initially at origin",
+    "effective_joint_inertia_kg_m2": 1.25,
+    "collision": "none, no shape or contact detector; this isolates joint drive and reset",
+    "initial_joint_q_rad": 0,
+    "initial_joint_qd_rad_s": 0,
+    "armature": 0,
+    "joint_damping": 0,
+    "joint_friction": 0,
+    "joint_limits": "unbounded"
+  },
+  "common_solver": {
+    "dynamics_solver": "padmm",
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": false,
+    "use_fk_solver": false,
+    "padmm.use_graph_conditionals": false,
+    "padmm.max_iterations": 200,
+    "padmm.use_acceleration": true,
+    "padmm.primal_tolerance": 1e-7,
+    "padmm.dual_tolerance": 1e-7,
+    "padmm.compl_tolerance": 1e-7,
+    "integrator": "default Euler; resolved full config saved"
+  },
+  "common_run": {
+    "dt_s": 0.005,
+    "steps": 80,
+    "duration_s": 0.4,
+    "repeats": 2,
+    "repeat_processes": "independent process per case/variant/repeat",
+    "control_schedule": "steps 0..39 positive, steps 40..79 negative; request explicit effort +/-10 N m or PD target +/-1 rad",
+    "sample": "initial state plus every output state; save body_q, body_qd, joint_q, joint_qd, joint_lambdas_tau, body_qdd, control arrays, status fields, internal applied body wrench and time",
+    "repeat_tolerance": {"pose_atol": 1e-5, "velocity_atol": 1e-4, "rtol": 1e-5},
+    "performance": "timing metadata only, no performance ranking",
+    "finite_required": true
+  },
+  "cases": [
+    {
+      "id": "kamino_drive_effort_paths",
+      "title": "显式力矩与有界隐式PD：相同力限下的正反饱和响应",
+      "variants": {
+        "A": {"drive": "explicit", "target_mode": "NONE", "effort_limit_Nm": 1, "kp": 0, "kd": 0, "warmstart_mode": "containers"},
+        "B": {"drive": "bounded_implicit_pd", "target_mode": "POSITION", "effort_limit_Nm": 1, "kp": 100, "kd": 2, "warmstart_mode": "containers"}
+      },
+      "independent_reference": "For rotor inertia I=1+1*(0.5)^2=1.25, signed applied effort is +/-1. Compute velocity from cumulative tau*dt/I and Euler position from cumulative updated velocity. Also report continuous-time position (expected dt discretization gap); do not require equal performance.",
+      "criteria": {
+        "joint_velocity_reference_max_abs_rad_s": 0.002,
+        "joint_position_euler_reference_max_abs_rad": 0.001,
+        "applied_effort_signed_max_abs_error_Nm": 0.002,
+        "applied_effort_max_Nm": 1.001,
+        "joint_anchor_origin_max_norm_m": 0.0005,
+        "routing_A_dof_act_paths": [0],
+        "routing_B_dof_act_paths": [2],
+        "bounded_reported_effort_max_error_Nm": 0.002
+      },
+      "threshold_rationale": "At peak expected velocity 0.16 rad/s, 0.002 is 1.25%; 0.001 rad is well below the 0.032 rad pulse displacement. Effort error 0.002 is 0.2% of the imposed physical bound. Anchor drift 0.5 mm is 0.1% of COM radius. Limits permit float32 iterative integration but reject missing clamping, wrong branch/sign and order-of-magnitude inertia errors.",
+      "limitations": ["Saturated branch only; does not calibrate unsaturated PD tracking, effort limit transitions or multi-DoF joints", "PADMM CPU, single revolute, no gravity/contact/armature", "Internal arrays are instrumentation, not a supported application API"]
+    },
+    {
+      "id": "kamino_reset_default_replay",
+      "title": "有历史求解器默认reset与全新求解器的同初态重放",
+      "variants": {"A": "fresh solver + default reset + pulse replay", "B": "60-step warmup + default reset + pulse replay"},
+      "drive": "bounded_implicit_pd kp=100 kd=2 effort_limit=1",
+      "warmstart_mode": "internal",
+      "warmup": "60 steps at dt=.005: 40 positive-target, 20 negative-target; save history arrays before reset",
+      "control_ownership": "Capture control before/after reset and require byte-identical values; explicitly set replay control afterwards. Reset receives State only and is not claimed to clear external Control.",
+      "criteria": {
+        "warmup_abs_q_min_rad": 0.001,
+        "warmup_abs_lambda_min_Nm": 0.5,
+        "reset_body_pose_max_abs_from_initial": 1e-6,
+        "reset_body_velocity_max_abs": 1e-6,
+        "reset_joint_velocity_max_abs": 1e-6,
+        "reset_joint_effort_max_abs": 1e-7,
+        "reset_body_acceleration_max_abs": 1e-7,
+        "reset_internal_time_max_abs": 1e-7,
+        "reset_internal_steps": 0,
+        "success_mask": true,
+        "control_unchanged": true,
+        "paired_replay_pose_max_abs": 1e-5,
+        "paired_replay_velocity_max_abs": 1e-4,
+        "paired_replay_rtol": 1e-5
+      },
+      "threshold_rationale": "Default reset writes model initial float32 data and zeros; near-machine exact reset threshold checks lifecycle, while replay uses established independent-process tolerances. Nonzero warmup gates ensure reset was not vacuous.",
+      "limitations": ["Tests default ResetConfig but explicitly uses internal warmstarting, not all warmstart modes", "Single world, no mask/flags/contact/FK/callback reset", "Status is recorded but exact iteration-count equality is not a physical criterion"]
+    },
+    {
+      "id": "kamino_reset_preserve_replay",
+      "title": "preserve reset保持运动状态并清除历史后的重放",
+      "variants": {"A": "warm donor creates consistent body state; new solver receives only copied body_q/body_qd then preserve reset", "B": "same 60-step warmup; aged solver preserve reset"},
+      "drive": "bounded_implicit_pd kp=100 kd=2 effort_limit=1",
+      "warmstart_mode": "internal",
+      "warmup": "same 60-step protocol as default case",
+      "criteria": {
+        "warmup_abs_q_min_rad": 0.001,
+        "warmup_abs_lambda_min_Nm": 0.5,
+        "preserved_body_pose_max_abs_error": 1e-6,
+        "preserved_body_velocity_max_abs_error": 1e-6,
+        "reset_joint_effort_max_abs": 1e-7,
+        "reset_body_acceleration_max_abs": 1e-7,
+        "reset_internal_time_max_abs": 1e-7,
+        "reset_internal_steps": 0,
+        "success_mask": true,
+        "control_unchanged": true,
+        "paired_replay_pose_max_abs": 1e-5,
+        "paired_replay_velocity_max_abs": 1e-4,
+        "paired_replay_rtol": 1e-5
+      },
+      "threshold_rationale": "Preserve means pose/velocity should remain within float32 conversion roundoff. Fresh comparison receives no historical multipliers; replay equality tests observable reset isolation without relying on private scratch-buffer layouts.",
+      "limitations": ["Preserve assumes supplied body states are consistent; no projection of invalid states is claimed", "Single world, no contact-history matching or masked reset", "The fresh reference also uses preserve reset to derive consistent joint data from body state"]
+    }
+  ],
+  "failure_policy": "Keep every failed run and its protocol/runner/log. No threshold widening after observation. Implementation-only runner fixes require parent review and explicit new runner fingerprint; any scenario/criteria revision gets a new version before another measured run.",
+  "source_refs": [
+    {"path":"newton/tests/kamino/test_kamino_solver_joint_effort_limit.py","line":24},
+    {"path":"newton/_src/solvers/kamino/_src/core/joints.py","line":263},
+    {"path":"newton/_src/solvers/kamino/solver_kamino.py","line":899},
+    {"path":"newton/_src/solvers/kamino/_src/solver_kamino_impl.py","line":690},
+    {"path":"newton/_src/solvers/kamino/_src/solver_kamino_impl.py","line":930},
+    {"path":"docs/solvers/kamino.rst","line":130}
+  ]
+}

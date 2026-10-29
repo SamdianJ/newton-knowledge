@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_runs",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "newton_version": "1.7.0",
+  "mujoco_version": "3.15.0",
+  "design_sha256": "d5eadb253bf2a971a751bbc7c9dc905c561813ca032e46060e534d50d7207781",
+  "source_refs": [
+    {
+      "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+      "lines": [
+        1447,
+        1461,
+        4068,
+        4367,
+        4555,
+        7010
+      ],
+      "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+    },
+    {
+      "path": "newton/_src/utils/import_mjcf.py",
+      "lines": [
+        1097,
+        1111,
+        1144
+      ],
+      "sha256": "469e25e1313b342f52ebc6ada4a9a4b5c9f280ff97a66438e2e5356012ebb9a0"
+    },
+    {
+      "path": "newton/_src/sim/builder.py",
+      "lines": [
+        4619
+      ],
+      "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767"
+    },
+    {
+      "path": "docs/solvers/mujoco.rst",
+      "lines": [
+        286,
+        636
+      ],
+      "sha256": "53070411f278bad6d339ba494817f783119210ddec5c266cf6b5c30b94249d9d"
+    },
+    {
+      "path": "newton/tests/test_mujoco_solver.py",
+      "lines": [
+        13894
+      ],
+      "sha256": "9887c5bd24aa3a0ec51f7da564a8c85bf8a6e569e3812b5de8bee2428d7b4d5d"
+    }
+  ],
+  "official_sources": [
+    {
+      "file": "engine_collision_driver.c",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/src/engine/engine_collision_driver.c",
+      "sha256": "67ce97bd1ea28cc1dd6fe9086e60afdad84ccf248fd38e0d3e72b65ae03ec6fc",
+      "bytes": 76873
+    },
+    {
+      "file": "modeling.rst",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/doc/modeling.rst",
+      "sha256": "8ee62692e3244dd6692a68480989aaf485ef0eb1cbf219abeec63b526d52b787",
+      "bytes": 122345
+    },
+    {
+      "file": "computation-index.rst",
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco/3.15.0/doc/computation/index.rst",
+      "sha256": "f6a00ef24c8e973b21899ff9f3f0828a1643ff71e1769b133688dea0babe360a",
+      "bytes": 151427
+    }
+  ],
+  "run": {
+    "dt_s": 0.0005,
+    "steps": 800,
+    "repeats": 2,
+    "independent_processes": true
+  },
+  "scene": {
+    "mass_kg": 1,
+    "radius_m": 0.05,
+    "initial_z_m": 0.15,
+    "initial_vz_mps": -1,
+    "gravity": [
+      0,
+      0,
+      0
+    ],
+    "inertia_kg_m2": 0.001,
+    "floor_solref": [
+      0.08,
+      1
+    ],
+    "sphere_priority": 1,
+    "floor_priority": 0,
+    "solimp": [
+      0.99,
+      0.99,
+      0.001,
+      0.5,
+      2
+    ],
+    "condim": 1,
+    "friction": [
+      0,
+      0,
+      0
+    ]
+  },
+  "solver": {
+    "use_mujoco_cpu": true,
+    "use_mujoco_contacts": true,
+    "enable_multiccd": false,
+    "solver": "newton",
+    "integrator": "euler",
+    "iterations": 100,
+    "tolerance": 1e-12,
+    "update_data_interval": 1
+  },
+  "cases": [
+    {
+      "id": "native_solref_rebound",
+      "title": "原生 solref 阻尼比与回弹",
+      "variants": {
+        "A": {
+          "solref": [
+            0.02,
+            0.2
+          ],
+          "margin": 0,
+          "gap": 0
+        },
+        "B": {
+          "solref": [
+            0.02,
+            1
+          ],
+          "margin": 0,
+          "gap": 0
+        }
+      },
+      "criteria": {
+        "A_restitution_min": 0.35,
+        "B_restitution_max": 0.25,
+        "restitution_difference_min": 0.2,
+        "detection_time_s": {
+          "A": 0.1,
+          "B": 0.1
+        },
+        "tail_velocity_peak_to_peak_max": 0.0001
+      }
+    },
+    {
+      "id": "native_gap_activation",
+      "title": "gap 提前检测但不提前激活接触力",
+      "variants": {
+        "A": {
+          "solref": [
+            0.02,
+            1
+          ],
+          "margin": 0.01,
+          "gap": 0
+        },
+        "B": {
+          "solref": [
+            0.02,
+            1
+          ],
+          "margin": 0.01,
+          "gap": 0.04
+        }
+      },
+      "criteria": {
+        "detection_time_s": {
+          "A": 0.09,
+          "B": 0.05
+        },
+        "activation_time_s": 0.09,
+        "detection_advance_s": 0.04,
+        "inactive_samples_B_min": 70,
+        "inactive_force_abs_max": 1e-10,
+        "activation_difference_dt_max": 1,
+        "position_AB_max": 1e-05,
+        "velocity_AB_max": 0.0001
+      }
+    }
+  ],
+  "shared_criteria": {
+    "event_tolerance_dt": 2,
+    "geometry_error_max": 2e-05,
+    "freeflight_velocity_error_max": 1e-05,
+    "impulse_residual_max": 0.002,
+    "energy_ratio_max": 1.05,
+    "normal_force_min": -1e-10,
+    "off_axis_velocity_abs_max": 1e-06,
+    "repeat_position_atol": 1e-06,
+    "repeat_velocity_atol": 1e-05,
+    "repeat_event_tolerance_dt": 1,
+    "all_numeric_finite": true,
+    "exported_fields_match": true,
+    "installed_locked_python_files": 809,
+    "raw_and_source_hashes_match": true
+  },
+  "sampling": {
+    "state": "801 t/body_q/body_qd/joint_q/joint_qd",
+    "contact": "800 step_* aligned with preintegration t[n]",
+    "private_instrumentation_read_only": [
+      "mj_model",
+      "mj_data",
+      "mj_contactForce"
+    ],
+    "force_reference": "m delta_v = sum(native qfrc_constraint_z * dt) N s; contact normal force nonnegative N"
+  },
+  "limitations": [
+    "native CPU frictionless sphere-plane only",
+    "constant solimp and fixed timestep",
+    "positive solref ratio changes effective stiffness as well as damping ratio",
+    "no pair override, mesh, multiccd, runtime margin changes or MuJoCo Warp claim",
+    "MuJoCo 3.15 modern gap semantics only"
+  ],
+  "frozen_at_utc": "2026-10-29T08:20:05.564753+00:00",
+  "reviewed_by": "root: independent reference, intervention, observation alignment and acceptance reviewed before simulation"
+}

@@ -1,0 +1,6 @@
+<mujoco model="newton_native_contact"><compiler angle="radian"/>
+<option gravity="0 0 0" timestep="0.0005"><flag refsafe="enable"/></option>
+<worldbody><geom name="floor" type="plane" size="2 2 0.1" priority="0" condim="1" friction="0 0 0" solimp="0.99 0.99 0.001 0.5 2" solref="0.08 1" margin="0" gap="0"/>
+<body name="sphere" pos="0 0 0.15"><freejoint name="free"/><inertial pos="0 0 0" mass="1" diaginertia="0.001 0.001 0.001"/>
+<geom name="ball" type="sphere" size="0.05" priority="1" condim="1" friction="0 0 0" solimp="0.99 0.99 0.001 0.5 2" solref="0.02 1" margin="0.01" gap="0"/>
+</body></worldbody></mujoco>

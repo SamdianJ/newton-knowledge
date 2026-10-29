@@ -1,0 +1,78 @@
+{
+  "baseline_version": "1.7.0-fixture",
+  "candidate_version": "1.8.0-fixture",
+  "baseline_commit": null,
+  "candidate_commit": null,
+  "api": {
+    "added": {
+      "newton.Bar": {
+        "symbol_kind": "class",
+        "signature": "",
+        "path": "newton/__init__.py",
+        "resolution": null
+      }
+    },
+    "removed": {
+      "newton.Foo": {
+        "symbol_kind": "class",
+        "signature": "",
+        "path": "newton/__init__.py",
+        "resolution": null
+      }
+    },
+    "changed": {
+      "newton.Model": {
+        "before": {
+          "symbol_kind": "class",
+          "signature": "(self, dt=0.01)",
+          "path": "newton/__init__.py",
+          "resolution": null
+        },
+        "after": {
+          "symbol_kind": "class",
+          "signature": "(self, dt=0.02)",
+          "path": "newton/__init__.py",
+          "resolution": null
+        }
+      }
+    }
+  },
+  "defaults": {
+    "added": {},
+    "removed": {},
+    "changed": {
+      "newton/__init__.py::Model.__init__.dt": {
+        "before": "0.01",
+        "after": "0.02"
+      },
+      "newton/__init__.py::Model.gain": {
+        "before": "1.0",
+        "after": "2.0"
+      }
+    }
+  },
+  "files": {
+    "added": {},
+    "removed": {},
+    "changed": {
+      "newton/__init__.py": {
+        "before": "2411edd0e469fa8e06fc02255910b3ccb7cb76023758bf533a7e4cfbbd57c2e2",
+        "after": "2f5d60a5de5e6add02edffc1e51baf142157080bee111cc4285acf16449b8f77"
+      },
+      "pyproject.toml": {
+        "before": "3f5198bd8355ec7bd1511c6bb0eb53f921e22eeea3df47a7b056df12eb9f1a7c",
+        "after": "8e38641c9183dd296417c11e7b4688d74f2a24c66585a54598af5d73a93fdf14"
+      }
+    }
+  },
+  "may_publish": false,
+  "physical_evidence_inherited": false,
+  "required_actions": [
+    "Assign an independent version/source lock and version-scoped IDs.",
+    "Review changed declarations against backend resolution and ownership.",
+    "Invalidate body/source-dependent task and physical evidence.",
+    "Curate and pass contracts, frozen tasks and physical reproduction for the new version before publication."
+  ],
+  "scope": "Static comparison; this is not support or physical validation of the candidate.",
+  "fixture_only": true
+}

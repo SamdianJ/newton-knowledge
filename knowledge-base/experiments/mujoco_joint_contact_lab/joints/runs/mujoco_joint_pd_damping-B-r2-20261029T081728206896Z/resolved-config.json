@@ -1,0 +1,252 @@
+{
+  "mj_model": {
+    "body_mass": [
+      0.0,
+      1.0
+    ],
+    "body_inertia": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.9999995231628418,
+        0.9999995231628418
+      ]
+    ],
+    "body_ipos": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "jnt_type": [
+      3
+    ],
+    "jnt_range": [
+      [
+        -10000000000.0,
+        10000000000.0
+      ]
+    ],
+    "jnt_limited": [
+      false
+    ],
+    "jnt_margin": [
+      0.0
+    ],
+    "jnt_solref": [
+      [
+        0.03999997302889824,
+        0.7905696630477905
+      ]
+    ],
+    "jnt_solimp": [
+      [
+        0.8999999761581421,
+        0.949999988079071,
+        0.0010000000474974513,
+        0.5,
+        2.0
+      ]
+    ],
+    "jnt_actfrcrange": [
+      [
+        -100.0,
+        100.0
+      ]
+    ],
+    "jnt_actfrclimited": [
+      true
+    ],
+    "dof_armature": [
+      0.0
+    ],
+    "dof_damping": [
+      0.0
+    ],
+    "dof_frictionloss": [
+      0.0
+    ],
+    "dof_invweight0": [
+      1.0000004768373572
+    ],
+    "actuator_gainprm": [
+      [
+        25.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "actuator_biasprm": [
+      [
+        0.0,
+        -25.0,
+        -10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "actuator_gear": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "actuator_trnid": [
+      [
+        0,
+        -1
+      ]
+    ]
+  },
+  "counts": {
+    "nq": 1,
+    "nv": 1,
+    "nu": 1,
+    "njnt": 1,
+    "nbody": 2,
+    "ngeom": 0
+  },
+  "opt": {
+    "timestep": 0.002,
+    "integrator": 0,
+    "solver": 2,
+    "iterations": 100,
+    "tolerance": 1e-10,
+    "disableflags": 524288,
+    "enableflags": 0,
+    "gravity": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "native_mass_matrix_initial": [
+    [
+      0.9999995231628702
+    ]
+  ],
+  "native_inertia_field_mapping": "Protocol qM means native generalized inertia; MuJoCo3.15 names packed storage M, expanded read-only by mj_fullM(model,data,dst).",
+  "newton": {
+    "body_mass": [
+      1.0
+    ],
+    "body_inertia": [
+      [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    ],
+    "body_com": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "joint_damping": [
+      0.0
+    ],
+    "joint_armature": [
+      0.0
+    ],
+    "joint_target_ke": [
+      25.0
+    ],
+    "joint_target_kd": [
+      10.0
+    ],
+    "joint_target_mode": [
+      1
+    ],
+    "joint_limit_lower": [
+      -10000000000.0
+    ],
+    "joint_limit_upper": [
+      10000000000.0
+    ],
+    "joint_limit_ke": [
+      20000.0
+    ],
+    "joint_limit_kd": [
+      1000.0
+    ]
+  },
+  "use_mujoco_cpu": true,
+  "update_data_interval": 0,
+  "treatment": {
+    "mode": "POSITION",
+    "damping": 0,
+    "armature": 0,
+    "kp": 25,
+    "kd": 10,
+    "qref": 0.1,
+    "initial_v": 0,
+    "external_tau": 0,
+    "limit_lower": -10000000000.0,
+    "limit_upper": 10000000000.0,
+    "limit_ke": 20000,
+    "limit_kd": 1000
+  },
+  "requested": {
+    "use_mujoco_cpu": true,
+    "use_mujoco_contacts": true,
+    "integrator": "euler",
+    "solver": "newton",
+    "iterations": 100,
+    "tolerance": 1e-10,
+    "update_data_interval": 0
+  },
+  "opt_final": {
+    "timestep": 0.002,
+    "integrator": 0,
+    "solver": 2,
+    "iterations": 100,
+    "tolerance": 1e-10,
+    "disableflags": 524288,
+    "enableflags": 0,
+    "gravity": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

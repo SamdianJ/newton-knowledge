@@ -1,0 +1,454 @@
+{
+  "phase": "P4",
+  "status": "passed",
+  "build_id": "8a7a02fd821cc6b9eebd093f",
+  "passed": 111,
+  "failed": 0,
+  "calls": 29,
+  "checks": [
+    {
+      "name": "successful search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "bounded search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "discover actual experiment mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "scope mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "summary/full mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "real A/B mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "exact replay mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "raw hash mujoco_iterations_stack_A_20261029T020948178413Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction mujoco_iterations_stack_A_20261029T020948178413Z",
+      "passed": true
+    },
+    {
+      "name": "raw hash mujoco_iterations_stack_B_20261029T020954357022Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction mujoco_iterations_stack_B_20261029T020954357022Z",
+      "passed": true
+    },
+    {
+      "name": "successful get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded get_parameter",
+      "passed": true
+    },
+    {
+      "name": "parameter association newton:1.7.0:mujoco:iterations",
+      "passed": true
+    },
+    {
+      "name": "successful get_relations",
+      "passed": true
+    },
+    {
+      "name": "bounded get_relations",
+      "passed": true
+    },
+    {
+      "name": "graph group relation mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "frozen runner source mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "Newton definition source mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "successful search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "bounded search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "discover actual experiment mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "scope mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "summary/full mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "real A/B mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "exact replay mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "raw hash mujoco_contact_response_A_20261029T021000437530Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction mujoco_contact_response_A_20261029T021000437530Z",
+      "passed": true
+    },
+    {
+      "name": "raw hash mujoco_contact_response_B_20261029T021006524488Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction mujoco_contact_response_B_20261029T021006524488Z",
+      "passed": true
+    },
+    {
+      "name": "successful get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded get_parameter",
+      "passed": true
+    },
+    {
+      "name": "parameter association model:mujoco:shape_material_ke",
+      "passed": true
+    },
+    {
+      "name": "successful get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded get_parameter",
+      "passed": true
+    },
+    {
+      "name": "parameter association model:mujoco:shape_material_kd",
+      "passed": true
+    },
+    {
+      "name": "successful get_relations",
+      "passed": true
+    },
+    {
+      "name": "bounded get_relations",
+      "passed": true
+    },
+    {
+      "name": "graph group relation mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "frozen runner source mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "Newton definition source mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "successful search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "bounded search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "discover actual experiment kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "scope kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "summary/full kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "real A/B kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "exact replay kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "raw hash kamino_padmm_budget_A_20261029T021012631164Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction kamino_padmm_budget_A_20261029T021012631164Z",
+      "passed": true
+    },
+    {
+      "name": "raw hash kamino_padmm_budget_B_20261029T021019663459Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction kamino_padmm_budget_B_20261029T021019663459Z",
+      "passed": true
+    },
+    {
+      "name": "successful get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded get_parameter",
+      "passed": true
+    },
+    {
+      "name": "parameter association newton:1.7.0:kamino:config.padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "name": "successful get_relations",
+      "passed": true
+    },
+    {
+      "name": "bounded get_relations",
+      "passed": true
+    },
+    {
+      "name": "graph group relation kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "frozen runner source kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "Newton definition source kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "successful search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "bounded search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "discover actual experiment kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "scope kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "successful get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded get_experiment",
+      "passed": true
+    },
+    {
+      "name": "summary/full kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "real A/B kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "exact replay kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "raw hash kamino_contact_stabilization_A_20261029T021027425041Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction kamino_contact_stabilization_A_20261029T021027425041Z",
+      "passed": true
+    },
+    {
+      "name": "raw hash kamino_contact_stabilization_B_20261029T021034749645Z",
+      "passed": true
+    },
+    {
+      "name": "independent reproduction kamino_contact_stabilization_B_20261029T021034749645Z",
+      "passed": true
+    },
+    {
+      "name": "successful get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded get_parameter",
+      "passed": true
+    },
+    {
+      "name": "parameter association newton:1.7.0:kamino:config.constraints.gamma",
+      "passed": true
+    },
+    {
+      "name": "successful get_relations",
+      "passed": true
+    },
+    {
+      "name": "bounded get_relations",
+      "passed": true
+    },
+    {
+      "name": "graph group relation kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "frozen runner source kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "successful get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded get_source",
+      "passed": true
+    },
+    {
+      "name": "Newton definition source kamino_contact_stabilization",
+      "passed": true
+    }
+  ]
+}

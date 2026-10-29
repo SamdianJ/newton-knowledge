@@ -1,0 +1,21 @@
+{
+  "requested_diff": [
+    {
+      "path": "constructor.padmm.max_iterations",
+      "A": 20,
+      "B": 60
+    },
+    {
+      "path": "treatment.max_iterations",
+      "A": 20,
+      "B": 60
+    }
+  ],
+  "resolved_diff": [
+    {
+      "path": "padmm.max_iterations",
+      "A": 20,
+      "B": 60
+    }
+  ]
+}

@@ -1,0 +1,4915 @@
+{
+  "schema_version": "1.0",
+  "group": "joints",
+  "formal_runs": 16,
+  "analysis_sha256": "ae3258f0a475b7fa7c980fe99a2de5f8a0362f8e792b45c8a5a01edf1de00ccb",
+  "cases": [
+    {
+      "id": "mujoco_joint_passive_damping",
+      "record_id": "lab:mujoco_joint_passive_damping",
+      "solver": "mujoco",
+      "title": "被动关节阻尼：无驱动自由转子的能量衰减",
+      "parameter": "joint_damping",
+      "experiment_kind": "single_factor",
+      "observation": "初速1rad/s、无驱动时，被动damping从0变2，2s末速度从1降至0.0184623rad/s，动能剩0.03409%；无阻尼对照能量不变。符合含隐式被动阻尼的Euler独立参考。",
+      "physical_acceptance": "passed",
+      "variants": [
+        {
+          "run_id": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 5.9127809093340034e-08,
+            "native_vs_newton_v_max_abs_rad_s": 0.0,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "q_reference_max_abs_rad": 5.9127809093340034e-08,
+            "v_reference_max_abs_rad_s": 0.0,
+            "force_reference_max_abs_Nm": 0.0,
+            "final_q_rad": 2.0,
+            "final_v_rad_s": 1.0,
+            "max_native_iterations": 0,
+            "effective_inertia_kg_m2": 0.9999995231628702,
+            "final_energy_ratio": 1.0,
+            "energy_positive_increment_max_J": 0.0,
+            "A_final_energy_relative_error_max": 0.0,
+            "continuous_velocity_max_error_rad_s": 0.0
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-A-r1-20261029T081609816084Z/trajectory.npz",
+          "raw_sha256": "05ead3b88135783834b268985ecccb0746bc157d1414ee3e78f51412e27e9f4a",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-A-r1-20261029T081609816084Z/result.json",
+          "variant": "A",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "NONE",
+              "damping": 0,
+              "armature": 0,
+              "kp": 0,
+              "kd": 0,
+              "qref": 0,
+              "initial_v": 1,
+              "external_tau": 0,
+              "limit_lower": -10000000000.0,
+              "limit_upper": 10000000000.0,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -10000000000.0,
+                  10000000000.0
+                ]
+              ],
+              "jnt_limited": [
+                false
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.03999997302889824,
+                  0.7905696630477905
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                0.0
+              ],
+              "dof_damping": [
+                0.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                1.0000004768373572
+              ],
+              "actuator_gainprm": [],
+              "actuator_biasprm": [],
+              "actuator_gear": [],
+              "actuator_trnid": []
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-A-r1-20261029T081609816084Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 5.9127809093340034e-08,
+              "native_vs_newton_v_max_abs_rad_s": 0.0,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "q_reference_max_abs_rad": 5.9127809093340034e-08,
+              "v_reference_max_abs_rad_s": 0.0,
+              "force_reference_max_abs_Nm": 0.0,
+              "final_q_rad": 2.0,
+              "final_v_rad_s": 1.0,
+              "max_native_iterations": 0,
+              "effective_inertia_kg_m2": 0.9999995231628702,
+              "final_energy_ratio": 1.0,
+              "energy_positive_increment_max_J": 0.0,
+              "A_final_energy_relative_error_max": 0.0,
+              "continuous_velocity_max_error_rad_s": 0.0
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-A-r2-20261029T081626142707Z/trajectory.npz",
+            "raw_sha256": "56acac6b1b10f2db14551a4cf2973b5f1dd820b65cdcb2c5acf802df27a71abc",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-A-r2-20261029T081626142707Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        },
+        {
+          "run_id": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 1.4881804066835258e-08,
+            "native_vs_newton_v_max_abs_rad_s": 2.9642956422826217e-08,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "q_reference_max_abs_rad": 2.3015707473206248e-07,
+            "v_reference_max_abs_rad_s": 1.8908479082480056e-07,
+            "force_reference_max_abs_Nm": 3.5013719490439854e-07,
+            "final_q_rad": 0.4907686114311218,
+            "final_v_rad_s": 0.018462324514985085,
+            "max_native_iterations": 0,
+            "effective_inertia_kg_m2": 0.9999995231628702,
+            "final_energy_ratio": 0.000340857426635921,
+            "energy_positive_increment_max_J": 0.0,
+            "B_final_energy_ratio_max": 0.000340857426635921,
+            "continuous_velocity_max_error_rad_s": 0.0007343681757103759
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-B-r1-20261029T081632299133Z/trajectory.npz",
+          "raw_sha256": "8095fb454c0b500eda5984e077bdaed6840ef29853988c254d9e5beb3f6857b5",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-B-r1-20261029T081632299133Z/result.json",
+          "variant": "B",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "NONE",
+              "damping": 2,
+              "armature": 0,
+              "kp": 0,
+              "kd": 0,
+              "qref": 0,
+              "initial_v": 1,
+              "external_tau": 0,
+              "limit_lower": -10000000000.0,
+              "limit_upper": 10000000000.0,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -10000000000.0,
+                  10000000000.0
+                ]
+              ],
+              "jnt_limited": [
+                false
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.03999997302889824,
+                  0.7905696630477905
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                0.0
+              ],
+              "dof_damping": [
+                2.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                1.0000004768373572
+              ],
+              "actuator_gainprm": [],
+              "actuator_biasprm": [],
+              "actuator_gear": [],
+              "actuator_trnid": []
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-B-r1-20261029T081632299133Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 1.4881804066835258e-08,
+              "native_vs_newton_v_max_abs_rad_s": 2.9642956422826217e-08,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "q_reference_max_abs_rad": 2.3015707473206248e-07,
+              "v_reference_max_abs_rad_s": 1.8908479082480056e-07,
+              "force_reference_max_abs_Nm": 3.5013719490439854e-07,
+              "final_q_rad": 0.4907686114311218,
+              "final_v_rad_s": 0.018462324514985085,
+              "max_native_iterations": 0,
+              "effective_inertia_kg_m2": 0.9999995231628702,
+              "final_energy_ratio": 0.000340857426635921,
+              "energy_positive_increment_max_J": 0.0,
+              "B_final_energy_ratio_max": 0.000340857426635921,
+              "continuous_velocity_max_error_rad_s": 0.0007343681757103759
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-B-r2-20261029T081638419866Z/trajectory.npz",
+            "raw_sha256": "ca48c63c7e4f2f97318d9429e91479338c812cb1a8b2f91373c7f8236680102e",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_passive_damping-B-r2-20261029T081638419866Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        }
+      ],
+      "protocol_file": "experiments/mujoco_joint_contact_lab/joints/protocol.json",
+      "runner_file": "experiments/mujoco_joint_contact_lab/joints/runner.py",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 5713
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7500
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7577
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 9679
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4568
+        }
+      ],
+      "associations": [
+        "model:mujoco:joint_damping"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "直接单因素干预 joint_damping；其余导出参数只作固定场景的生效确认，不冒充参数扫描。",
+      "limitations": [
+        "Native CPU MuJoCo3.15.0 with Newton1.7.0 only; no MuJoCo Warp claim",
+        "One scalar joint, diagonal constant inertia, no gravity/contact or coupled joints",
+        "Euler selected for auditable discrete references; not a recommendation over default implicitfast",
+        "Joint limit is soft and transient waveform is not claimed analytically reproduced",
+        "No kp sweep, effort/velocity-limit sweep or runtime property update tested",
+        "Model export/native diagnostic arrays are observational instrumentation"
+      ],
+      "plot": "joints/mujoco_joint_passive_damping.svg",
+      "replay": {
+        "time_field": "t",
+        "source": "saved raw Newton body/joint trajectory",
+        "force_time_field": "force_t",
+        "force_state_alignment": "force[n] evaluated at state[n]; state[n+1] is the integration output"
+      },
+      "acceptance_results": {
+        "status": "passed",
+        "criteria": {
+          "q_reference_max_abs_rad": 0.0001,
+          "v_reference_max_abs_rad_s": 0.0001,
+          "force_reference_max_abs_Nm": 0.001,
+          "native_vs_newton_q_max_abs_rad": 1e-06,
+          "native_vs_newton_v_max_abs_rad_s": 1e-06,
+          "anchor_max_norm_m": 1e-06,
+          "quat_norm_error_max": 2e-06,
+          "all_actual_fields_match": true,
+          "warnings_badqpos_badqvel_badqacc": 0,
+          "energy_positive_increment_max_J": 1e-07,
+          "A_final_energy_relative_error_max": 1e-05,
+          "B_final_energy_ratio_max": 0.001,
+          "B_to_A_final_speed_ratio_max": 0.03
+        },
+        "paired_checks": [
+          {
+            "name": "B_to_A_final_speed_ratio_max",
+            "repeat": 1,
+            "actual": 0.018462324514985085,
+            "limit": 0.03,
+            "passed": true
+          },
+          {
+            "name": "B_to_A_final_speed_ratio_max",
+            "repeat": 2,
+            "actual": 0.018462324514985085,
+            "limit": 0.03,
+            "passed": true
+          }
+        ],
+        "runs": [
+          {
+            "run_id": "mujoco_joint_passive_damping-A-r1-20261029T081609816084Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  1.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 5.9127809093340034e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 5.9127809093340034e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "energy_positive_increment_max_J",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-07
+                },
+                "passed": true
+              },
+              {
+                "name": "A_final_energy_relative_error_max",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-05
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_passive_damping-A-r2-20261029T081626142707Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  1.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 5.9127809093340034e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 5.9127809093340034e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "energy_positive_increment_max_J",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-07
+                },
+                "passed": true
+              },
+              {
+                "name": "A_final_energy_relative_error_max",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-05
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  1.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 1.4881804066835258e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 2.9642956422826217e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 2.3015707473206248e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 1.8908479082480056e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 3.5013719490439854e-07,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "energy_positive_increment_max_J",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-07
+                },
+                "passed": true
+              },
+              {
+                "name": "B_final_energy_ratio_max",
+                "actual": 0.000340857426635921,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_passive_damping-B-r2-20261029T081638419866Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  1.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 1.4881804066835258e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 2.9642956422826217e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 2.3015707473206248e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 1.8908479082480056e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 3.5013719490439854e-07,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "energy_positive_increment_max_J",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-07
+                },
+                "passed": true
+              },
+              {
+                "name": "B_final_energy_ratio_max",
+                "actual": 0.000340857426635921,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mujoco_joint_armature_inertia",
+      "record_id": "lab:mujoco_joint_armature_inertia",
+      "solver": "mujoco",
+      "title": "Armature：同力矩下的有效惯量与加速度",
+      "parameter": "joint_armature",
+      "experiment_kind": "single_factor",
+      "observation": "armature从0增至3，在相同1N·m力矩下原生有效惯量约从1增至4kg·m²，速度和加速度降为约1/4；物理body质量及惯量没有增加。它改变惯量，不是耗散阻尼。",
+      "physical_acceptance": "passed",
+      "variants": [
+        {
+          "run_id": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 9.250602284183174e-08,
+            "native_vs_newton_v_max_abs_rad_s": 5.912815415065609e-08,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "q_reference_max_abs_rad": 1.0471343974138847e-06,
+            "v_reference_max_abs_rad_s": 1.005172727941428e-06,
+            "force_reference_max_abs_Nm": 0.0,
+            "final_q_rad": 2.0020010471343994,
+            "final_v_rad_s": 2.0000009536743164,
+            "max_native_iterations": 0,
+            "effective_inertia_kg_m2": 0.9999995231628702,
+            "effective_inertia_max_abs_error_kg_m2": 4.768371304475494e-07,
+            "mean_acceleration_rad_s2": 1.0000004768373572
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z/trajectory.npz",
+          "raw_sha256": "09a2bdda87ba8bcd29dfffe95e5eb25bb33184e15f7cc07861e930b2cf07a703",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z/result.json",
+          "variant": "A",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "NONE",
+              "damping": 0,
+              "armature": 0,
+              "kp": 0,
+              "kd": 0,
+              "qref": 0,
+              "initial_v": 0,
+              "external_tau": 1,
+              "limit_lower": -10000000000.0,
+              "limit_upper": 10000000000.0,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -10000000000.0,
+                  10000000000.0
+                ]
+              ],
+              "jnt_limited": [
+                false
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.03999997302889824,
+                  0.7905696630477905
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                0.0
+              ],
+              "dof_damping": [
+                0.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                1.0000004768373572
+              ],
+              "actuator_gainprm": [],
+              "actuator_biasprm": [],
+              "actuator_gear": [],
+              "actuator_trnid": []
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 9.250602284183174e-08,
+              "native_vs_newton_v_max_abs_rad_s": 5.912815415065609e-08,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "q_reference_max_abs_rad": 1.0471343974138847e-06,
+              "v_reference_max_abs_rad_s": 1.005172727941428e-06,
+              "force_reference_max_abs_Nm": 0.0,
+              "final_q_rad": 2.0020010471343994,
+              "final_v_rad_s": 2.0000009536743164,
+              "max_native_iterations": 0,
+              "effective_inertia_kg_m2": 0.9999995231628702,
+              "effective_inertia_max_abs_error_kg_m2": 4.768371304475494e-07,
+              "mean_acceleration_rad_s2": 1.0000004768373572
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z/trajectory.npz",
+            "raw_sha256": "358dd76c91fad50455a311baabbda8e24f32b2d88a88410ebe74ebe4aad09523",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        },
+        {
+          "run_id": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 2.3305407603757544e-08,
+            "native_vs_newton_v_max_abs_rad_s": 1.4901154421487206e-08,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "q_reference_max_abs_rad": 8.29696650272993e-08,
+            "v_reference_max_abs_rad_s": 7.319450340270706e-08,
+            "force_reference_max_abs_Nm": 0.0,
+            "final_q_rad": 0.5005000829696655,
+            "final_v_rad_s": 0.5000000596046448,
+            "max_native_iterations": 0,
+            "effective_inertia_kg_m2": 3.99999952316287,
+            "effective_inertia_max_abs_error_kg_m2": 4.768371302255048e-07,
+            "mean_acceleration_rad_s2": 0.25000002980232416
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z/trajectory.npz",
+          "raw_sha256": "c6dc32dda33209d6b783afdbba2629b9e586e01222341b6961b01642944da997",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z/result.json",
+          "variant": "B",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "NONE",
+              "damping": 0,
+              "armature": 3,
+              "kp": 0,
+              "kd": 0,
+              "qref": 0,
+              "initial_v": 0,
+              "external_tau": 1,
+              "limit_lower": -10000000000.0,
+              "limit_upper": 10000000000.0,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -10000000000.0,
+                  10000000000.0
+                ]
+              ],
+              "jnt_limited": [
+                false
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.15999993681907654,
+                  0.3952847719192505
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                3.0
+              ],
+              "dof_damping": [
+                0.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                0.25000002980232416
+              ],
+              "actuator_gainprm": [],
+              "actuator_biasprm": [],
+              "actuator_gear": [],
+              "actuator_trnid": []
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 2.3305407603757544e-08,
+              "native_vs_newton_v_max_abs_rad_s": 1.4901154421487206e-08,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "q_reference_max_abs_rad": 8.29696650272993e-08,
+              "v_reference_max_abs_rad_s": 7.319450340270706e-08,
+              "force_reference_max_abs_Nm": 0.0,
+              "final_q_rad": 0.5005000829696655,
+              "final_v_rad_s": 0.5000000596046448,
+              "max_native_iterations": 0,
+              "effective_inertia_kg_m2": 3.99999952316287,
+              "effective_inertia_max_abs_error_kg_m2": 4.768371302255048e-07,
+              "mean_acceleration_rad_s2": 0.25000002980232416
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z/trajectory.npz",
+            "raw_sha256": "08566105d8e5ecb349697707a1409f66f6e10d6d2aaefa0b4e3a9fdf2bf418cc",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        }
+      ],
+      "protocol_file": "experiments/mujoco_joint_contact_lab/joints/protocol.json",
+      "runner_file": "experiments/mujoco_joint_contact_lab/joints/runner.py",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 5713
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7500
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7577
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 9679
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4568
+        }
+      ],
+      "associations": [
+        "model:mujoco:joint_armature"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "直接单因素干预 joint_armature；其余导出参数只作固定场景的生效确认，不冒充参数扫描。",
+      "limitations": [
+        "Native CPU MuJoCo3.15.0 with Newton1.7.0 only; no MuJoCo Warp claim",
+        "One scalar joint, diagonal constant inertia, no gravity/contact or coupled joints",
+        "Euler selected for auditable discrete references; not a recommendation over default implicitfast",
+        "Joint limit is soft and transient waveform is not claimed analytically reproduced",
+        "No kp sweep, effort/velocity-limit sweep or runtime property update tested",
+        "Model export/native diagnostic arrays are observational instrumentation"
+      ],
+      "plot": "joints/mujoco_joint_armature_inertia.svg",
+      "replay": {
+        "time_field": "t",
+        "source": "saved raw Newton body/joint trajectory",
+        "force_time_field": "force_t",
+        "force_state_alignment": "force[n] evaluated at state[n]; state[n+1] is the integration output"
+      },
+      "acceptance_results": {
+        "status": "passed",
+        "criteria": {
+          "q_reference_max_abs_rad": 0.0001,
+          "v_reference_max_abs_rad_s": 0.0001,
+          "force_reference_max_abs_Nm": 0.001,
+          "native_vs_newton_q_max_abs_rad": 1e-06,
+          "native_vs_newton_v_max_abs_rad_s": 1e-06,
+          "anchor_max_norm_m": 1e-06,
+          "quat_norm_error_max": 2e-06,
+          "all_actual_fields_match": true,
+          "warnings_badqpos_badqvel_badqacc": 0,
+          "effective_inertia_max_abs_error_kg_m2": 1e-06,
+          "B_to_A_speed_ratio_error_from_quarter_max": 1e-05,
+          "B_to_A_acceleration_ratio_error_from_quarter_max": 1e-05
+        },
+        "paired_checks": [
+          {
+            "name": "B_to_A_speed_ratio_error_from_quarter_max",
+            "repeat": 1,
+            "actual": 8.940692453052179e-08,
+            "limit": 1e-05,
+            "passed": true
+          },
+          {
+            "name": "B_to_A_acceleration_ratio_error_from_quarter_max",
+            "repeat": 1,
+            "actual": 8.940697249215646e-08,
+            "limit": 1e-05,
+            "passed": true
+          },
+          {
+            "name": "B_to_A_speed_ratio_error_from_quarter_max",
+            "repeat": 2,
+            "actual": 8.940692453052179e-08,
+            "limit": 1e-05,
+            "passed": true
+          },
+          {
+            "name": "B_to_A_acceleration_ratio_error_from_quarter_max",
+            "repeat": 2,
+            "actual": 8.940697249215646e-08,
+            "limit": 1e-05,
+            "passed": true
+          }
+        ],
+        "runs": [
+          {
+            "run_id": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 9.250602284183174e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 5.912815415065609e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 1.0471343974138847e-06,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 1.005172727941428e-06,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "effective_inertia_max_abs_error_kg_m2",
+                "actual": 4.768371304475494e-07,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_armature_inertia-A-r2-20261029T081651007854Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 9.250602284183174e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 5.912815415065609e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 1.0471343974138847e-06,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 1.005172727941428e-06,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "effective_inertia_max_abs_error_kg_m2",
+                "actual": 4.768371304475494e-07,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_armature_inertia-B-r1-20261029T081657223598Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 2.3305407603757544e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 1.4901154421487206e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 8.29696650272993e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 7.319450340270706e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "effective_inertia_max_abs_error_kg_m2",
+                "actual": 4.768371302255048e-07,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_armature_inertia-B-r2-20261029T081703398159Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 2.3305407603757544e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 1.4901154421487206e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 8.29696650272993e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 7.319450340270706e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "effective_inertia_max_abs_error_kg_m2",
+                "actual": 4.768371302255048e-07,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mujoco_joint_pd_damping",
+      "record_id": "lab:mujoco_joint_pd_damping",
+      "solver": "mujoco",
+      "title": "驱动阻尼：同位置增益下振荡与收敛",
+      "parameter": "joint_target_kd",
+      "experiment_kind": "single_factor",
+      "observation": "固定kp25、目标0.1rad，target_kd从0变10，过冲从0.100001rad降为0，末误差5.50e-5rad。两者驱动力矩和轨迹均吻合独立离散参考；此处只扫描kd，不代表已经扫描kp。",
+      "physical_acceptance": "passed",
+      "variants": [
+        {
+          "run_id": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 7.400272339364022e-09,
+            "native_vs_newton_v_max_abs_rad_s": 2.7447982553496786e-08,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "q_reference_max_abs_rad": 1.9377182665369919e-07,
+            "v_reference_max_abs_rad_s": 1.1535189906874965e-06,
+            "force_reference_max_abs_Nm": 4.723607798573504e-06,
+            "final_q_rad": 0.1836327314376831,
+            "final_v_rad_s": -0.2720324993133545,
+            "max_native_iterations": 0,
+            "effective_inertia_kg_m2": 0.9999995231628702,
+            "A_overshoot_max_rad": 0.1000012531876564,
+            "A_overshoot_min_rad": 0.1000012531876564,
+            "minimum_effort_margin_Nm": 97.49996879897515
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-A-r1-20261029T081709544495Z/trajectory.npz",
+          "raw_sha256": "239ac3765304b15351c76447266435960e0eb9989d6ee1905b4e41479d17d885",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-A-r1-20261029T081709544495Z/result.json",
+          "variant": "A",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "POSITION",
+              "damping": 0,
+              "armature": 0,
+              "kp": 25,
+              "kd": 0,
+              "qref": 0.1,
+              "initial_v": 0,
+              "external_tau": 0,
+              "limit_lower": -10000000000.0,
+              "limit_upper": 10000000000.0,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -10000000000.0,
+                  10000000000.0
+                ]
+              ],
+              "jnt_limited": [
+                false
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.03999997302889824,
+                  0.7905696630477905
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                0.0
+              ],
+              "dof_damping": [
+                0.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                1.0000004768373572
+              ],
+              "actuator_gainprm": [
+                [
+                  25.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "actuator_biasprm": [
+                [
+                  0.0,
+                  -25.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "actuator_gear": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "actuator_trnid": [
+                [
+                  0,
+                  -1
+                ]
+              ]
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-A-r1-20261029T081709544495Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 7.400272339364022e-09,
+              "native_vs_newton_v_max_abs_rad_s": 2.7447982553496786e-08,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "q_reference_max_abs_rad": 1.9377182665369919e-07,
+              "v_reference_max_abs_rad_s": 1.1535189906874965e-06,
+              "force_reference_max_abs_Nm": 4.723607798573504e-06,
+              "final_q_rad": 0.1836327314376831,
+              "final_v_rad_s": -0.2720324993133545,
+              "max_native_iterations": 0,
+              "effective_inertia_kg_m2": 0.9999995231628702,
+              "A_overshoot_max_rad": 0.1000012531876564,
+              "A_overshoot_min_rad": 0.1000012531876564,
+              "minimum_effort_margin_Nm": 97.49996879897515
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-A-r2-20261029T081715741545Z/trajectory.npz",
+            "raw_sha256": "597202a692da7afa6ba2d501a0136c40c20548f088444c53102a55260ecc2c5c",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-A-r2-20261029T081715741545Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        },
+        {
+          "run_id": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 3.720818528285541e-09,
+            "native_vs_newton_v_max_abs_rad_s": 7.4348321388306715e-09,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "q_reference_max_abs_rad": 8.44000510452636e-09,
+            "v_reference_max_abs_rad_s": 4.8806020502834e-08,
+            "force_reference_max_abs_Nm": 4.612492969791049e-07,
+            "final_q_rad": 0.09994498640298843,
+            "final_v_rad_s": 0.0002443813136778772,
+            "max_native_iterations": 0,
+            "effective_inertia_kg_m2": 0.9999995231628702,
+            "B_overshoot_max_rad": 0.0,
+            "B_endpoint_error_max_rad": 5.501508712768555e-05,
+            "B_endpoint_speed_max_rad_s": 0.0002443813136778772,
+            "minimum_effort_margin_Nm": 97.4999999627471
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-B-r1-20261029T081721987061Z/trajectory.npz",
+          "raw_sha256": "f49dc17d9e3f2d7604a34798c96ff8b7be96cc8d05575ce57d373446ca96d1c1",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-B-r1-20261029T081721987061Z/result.json",
+          "variant": "B",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "POSITION",
+              "damping": 0,
+              "armature": 0,
+              "kp": 25,
+              "kd": 10,
+              "qref": 0.1,
+              "initial_v": 0,
+              "external_tau": 0,
+              "limit_lower": -10000000000.0,
+              "limit_upper": 10000000000.0,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -10000000000.0,
+                  10000000000.0
+                ]
+              ],
+              "jnt_limited": [
+                false
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.03999997302889824,
+                  0.7905696630477905
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                0.0
+              ],
+              "dof_damping": [
+                0.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                1.0000004768373572
+              ],
+              "actuator_gainprm": [
+                [
+                  25.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "actuator_biasprm": [
+                [
+                  0.0,
+                  -25.0,
+                  -10.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "actuator_gear": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "actuator_trnid": [
+                [
+                  0,
+                  -1
+                ]
+              ]
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-B-r1-20261029T081721987061Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 3.720818528285541e-09,
+              "native_vs_newton_v_max_abs_rad_s": 7.4348321388306715e-09,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "q_reference_max_abs_rad": 8.44000510452636e-09,
+              "v_reference_max_abs_rad_s": 4.8806020502834e-08,
+              "force_reference_max_abs_Nm": 4.612492969791049e-07,
+              "final_q_rad": 0.09994498640298843,
+              "final_v_rad_s": 0.0002443813136778772,
+              "max_native_iterations": 0,
+              "effective_inertia_kg_m2": 0.9999995231628702,
+              "B_overshoot_max_rad": 0.0,
+              "B_endpoint_error_max_rad": 5.501508712768555e-05,
+              "B_endpoint_speed_max_rad_s": 0.0002443813136778772,
+              "minimum_effort_margin_Nm": 97.4999999627471
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-B-r2-20261029T081728206896Z/trajectory.npz",
+            "raw_sha256": "e8b62564de0f8b9b35b03cacf36e9793c13ea5cafd7ea8dfb1563a5d8eac1167",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_pd_damping-B-r2-20261029T081728206896Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        }
+      ],
+      "protocol_file": "experiments/mujoco_joint_contact_lab/joints/protocol.json",
+      "runner_file": "experiments/mujoco_joint_contact_lab/joints/runner.py",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 5713
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7500
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7577
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 9679
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4568
+        }
+      ],
+      "associations": [
+        "model:mujoco:joint_target_kd"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "直接单因素干预 joint_target_kd；其余导出参数只作固定场景的生效确认，不冒充参数扫描。",
+      "limitations": [
+        "Native CPU MuJoCo3.15.0 with Newton1.7.0 only; no MuJoCo Warp claim",
+        "One scalar joint, diagonal constant inertia, no gravity/contact or coupled joints",
+        "Euler selected for auditable discrete references; not a recommendation over default implicitfast",
+        "Joint limit is soft and transient waveform is not claimed analytically reproduced",
+        "No kp sweep, effort/velocity-limit sweep or runtime property update tested",
+        "Model export/native diagnostic arrays are observational instrumentation"
+      ],
+      "plot": "joints/mujoco_joint_pd_damping.svg",
+      "replay": {
+        "time_field": "t",
+        "source": "saved raw Newton body/joint trajectory",
+        "force_time_field": "force_t",
+        "force_state_alignment": "force[n] evaluated at state[n]; state[n+1] is the integration output"
+      },
+      "acceptance_results": {
+        "status": "passed",
+        "criteria": {
+          "q_reference_max_abs_rad": 0.0001,
+          "v_reference_max_abs_rad_s": 0.0001,
+          "force_reference_max_abs_Nm": 0.001,
+          "native_vs_newton_q_max_abs_rad": 1e-06,
+          "native_vs_newton_v_max_abs_rad_s": 1e-06,
+          "anchor_max_norm_m": 1e-06,
+          "quat_norm_error_max": 2e-06,
+          "all_actual_fields_match": true,
+          "warnings_badqpos_badqvel_badqacc": 0,
+          "A_overshoot_min_rad": 0.09,
+          "A_overshoot_max_rad": 0.11,
+          "B_overshoot_max_rad": 0.005,
+          "B_endpoint_error_max_rad": 0.001,
+          "B_endpoint_speed_max_rad_s": 0.005,
+          "minimum_effort_margin_Nm": 90
+        },
+        "paired_checks": [],
+        "runs": [
+          {
+            "run_id": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 7.400272339364022e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 2.7447982553496786e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 1.9377182665369919e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 1.1535189906874965e-06,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 4.723607798573504e-06,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "A_overshoot_max_rad",
+                "actual": 0.1000012531876564,
+                "expected": {
+                  "max": 0.11
+                },
+                "passed": true
+              },
+              {
+                "name": "A_overshoot_min_rad",
+                "actual": 0.1000012531876564,
+                "expected": {
+                  "min": 0.09
+                },
+                "passed": true
+              },
+              {
+                "name": "minimum_effort_margin_Nm",
+                "actual": 97.49996879897515,
+                "expected": {
+                  "min": 90
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_pd_damping-A-r2-20261029T081715741545Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 7.400272339364022e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 2.7447982553496786e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 1.9377182665369919e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 1.1535189906874965e-06,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 4.723607798573504e-06,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "A_overshoot_max_rad",
+                "actual": 0.1000012531876564,
+                "expected": {
+                  "max": 0.11
+                },
+                "passed": true
+              },
+              {
+                "name": "A_overshoot_min_rad",
+                "actual": 0.1000012531876564,
+                "expected": {
+                  "min": 0.09
+                },
+                "passed": true
+              },
+              {
+                "name": "minimum_effort_margin_Nm",
+                "actual": 97.49996879897515,
+                "expected": {
+                  "min": 90
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_pd_damping-B-r1-20261029T081721987061Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 3.720818528285541e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 7.4348321388306715e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 8.44000510452636e-09,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 4.8806020502834e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 4.612492969791049e-07,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "B_overshoot_max_rad",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.005
+                },
+                "passed": true
+              },
+              {
+                "name": "B_endpoint_error_max_rad",
+                "actual": 5.501508712768555e-05,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "B_endpoint_speed_max_rad_s",
+                "actual": 0.0002443813136778772,
+                "expected": {
+                  "max": 0.005
+                },
+                "passed": true
+              },
+              {
+                "name": "minimum_effort_margin_Nm",
+                "actual": 97.4999999627471,
+                "expected": {
+                  "min": 90
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_pd_damping-B-r2-20261029T081728206896Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 3.720818528285541e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 7.4348321388306715e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 8.44000510452636e-09,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 4.8806020502834e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 4.612492969791049e-07,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "B_overshoot_max_rad",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.005
+                },
+                "passed": true
+              },
+              {
+                "name": "B_endpoint_error_max_rad",
+                "actual": 5.501508712768555e-05,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "B_endpoint_speed_max_rad_s",
+                "actual": 0.0002443813136778772,
+                "expected": {
+                  "max": 0.005
+                },
+                "passed": true
+              },
+              {
+                "name": "minimum_effort_margin_Nm",
+                "actual": 97.4999999627471,
+                "expected": {
+                  "min": 90
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mujoco_joint_upper_limit",
+      "record_id": "lab:mujoco_joint_upper_limit",
+      "solver": "mujoco",
+      "title": "关节上限：到达时刻、软约束反力与停止位置",
+      "parameter": "joint_limit_upper",
+      "experiment_kind": "single_factor",
+      "observation": "上限从0.1移至0.2rad，首次限位反力由0.448s延后至0.632s，末位置随范围平移约0.1rad。最大软穿越0.00607/0.00805rad，末残差约1.10e-4rad；末反力抵消1N·m外力矩，不是硬裁剪到限位。",
+      "physical_acceptance": "passed",
+      "variants": [
+        {
+          "run_id": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 3.72403281823086e-09,
+            "native_vs_newton_v_max_abs_rad_s": 1.4781892543336284e-08,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "first_constraint_time_s": 0.448,
+            "first_constraint_time_error_max_s": 0.0,
+            "peak_upper_violation_max_rad": 0.006066188216209412,
+            "tail_mean_violation_min_rad": 0.00010979920625686646,
+            "tail_mean_violation_max_rad": 0.00010979920625686646,
+            "tail_speed_max_abs_rad_s": 8.509364545460085e-13,
+            "tail_force_balance_max_abs_Nm": 9.529466105107076e-11,
+            "tail_mean_position_rad": 0.10010980069637299,
+            "tail_mean_constraint_torque_Nm": -1.000000000013238,
+            "q_reference_max_abs_rad": 4.9603938970244066e-08,
+            "v_reference_max_abs_rad_s": 2.2244453395936503e-07,
+            "force_reference_max_abs_Nm": 0.0,
+            "final_q_rad": 0.10010978579521179,
+            "final_v_rad_s": -8.713221252365858e-14,
+            "max_native_iterations": 1,
+            "effective_inertia_kg_m2": 0.9999995231628702
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-A-r1-20261029T081734438578Z/trajectory.npz",
+          "raw_sha256": "96905e023e3db847029e91816937207ff82a80d2b2ddeae226953a2689f88727",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-A-r1-20261029T081734438578Z/result.json",
+          "variant": "A",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "NONE",
+              "damping": 0,
+              "armature": 0,
+              "kp": 0,
+              "kd": 0,
+              "qref": 0,
+              "initial_v": 0,
+              "external_tau": 1,
+              "limit_lower": -0.5,
+              "limit_upper": 0.1,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -0.5,
+                  0.10000000149011612
+                ]
+              ],
+              "jnt_limited": [
+                true
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.03999997302889824,
+                  0.7905696630477905
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                0.0
+              ],
+              "dof_damping": [
+                0.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                1.0000004768373572
+              ],
+              "actuator_gainprm": [],
+              "actuator_biasprm": [],
+              "actuator_gear": [],
+              "actuator_trnid": []
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-A-r1-20261029T081734438578Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 3.72403281823086e-09,
+              "native_vs_newton_v_max_abs_rad_s": 1.4781892543336284e-08,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "first_constraint_time_s": 0.448,
+              "first_constraint_time_error_max_s": 0.0,
+              "peak_upper_violation_max_rad": 0.006066188216209412,
+              "tail_mean_violation_min_rad": 0.00010979920625686646,
+              "tail_mean_violation_max_rad": 0.00010979920625686646,
+              "tail_speed_max_abs_rad_s": 8.509364545460085e-13,
+              "tail_force_balance_max_abs_Nm": 9.529466105107076e-11,
+              "tail_mean_position_rad": 0.10010980069637299,
+              "tail_mean_constraint_torque_Nm": -1.000000000013238,
+              "q_reference_max_abs_rad": 4.9603938970244066e-08,
+              "v_reference_max_abs_rad_s": 2.2244453395936503e-07,
+              "force_reference_max_abs_Nm": 0.0,
+              "final_q_rad": 0.10010978579521179,
+              "final_v_rad_s": -8.713221252365858e-14,
+              "max_native_iterations": 1,
+              "effective_inertia_kg_m2": 0.9999995231628702
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-A-r2-20261029T081740633947Z/trajectory.npz",
+            "raw_sha256": "f32f92453136d35072907fbcbe182ee5a0c8ad6a6e0787be3a822afc292f7e3d",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-A-r2-20261029T081740633947Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        },
+        {
+          "run_id": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z",
+          "metrics": {
+            "native_vs_newton_q_max_abs_rad": 7.4478807010613934e-09,
+            "native_vs_newton_v_max_abs_rad_s": 2.9563787751207826e-08,
+            "anchor_max_norm_m": 0.0,
+            "quat_norm_error_max": 5.960464477539063e-08,
+            "first_constraint_time_s": 0.632,
+            "first_constraint_time_error_max_s": 0.0,
+            "peak_upper_violation_max_rad": 0.008049190044403076,
+            "tail_mean_violation_min_rad": 0.00010973215103149414,
+            "tail_mean_violation_max_rad": 0.00010973215103149414,
+            "tail_speed_max_abs_rad_s": 5.372152056537516e-09,
+            "tail_force_balance_max_abs_Nm": 2.123011595411839e-07,
+            "tail_mean_position_rad": 0.20010973513126373,
+            "tail_mean_constraint_torque_Nm": -1.0000000115894443,
+            "q_reference_max_abs_rad": 1.005945203802483e-07,
+            "v_reference_max_abs_rad_s": 3.271102900770373e-07,
+            "force_reference_max_abs_Nm": 0.0,
+            "final_q_rad": 0.20010977983474731,
+            "final_v_rad_s": -1.015659182191514e-13,
+            "max_native_iterations": 1,
+            "effective_inertia_kg_m2": 0.9999995231628702
+          },
+          "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-B-r1-20261029T081746828401Z/trajectory.npz",
+          "raw_sha256": "8279b1da1ce9e754e560ad6c455bf36b03c4d2d5c69c604002034f1ced5813d4",
+          "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+          "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+          "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-B-r1-20261029T081746828401Z/result.json",
+          "variant": "B",
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0",
+              "mujoco": "3.15.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "source_validation": {
+              "checked_python_files": 809,
+              "missing": [],
+              "changed": [],
+              "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39"
+            },
+            "source_refs_sha256": {
+              "newton/_src/sim/builder.py": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+              "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+            },
+            "instrumentation": "Read-only native mj_model/mj_data observations; Newton ModelBuilder/SolverMuJoCo public scene/step API."
+          },
+          "config": {
+            "treatment": {
+              "mode": "NONE",
+              "damping": 0,
+              "armature": 0,
+              "kp": 0,
+              "kd": 0,
+              "qref": 0,
+              "initial_v": 0,
+              "external_tau": 1,
+              "limit_lower": -0.5,
+              "limit_upper": 0.2,
+              "limit_ke": 20000,
+              "limit_kd": 1000
+            },
+            "requested": {
+              "use_mujoco_cpu": true,
+              "use_mujoco_contacts": true,
+              "integrator": "euler",
+              "solver": "newton",
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "update_data_interval": 0
+            },
+            "actual_native_options": {
+              "timestep": 0.002,
+              "integrator": 0,
+              "solver": 2,
+              "iterations": 100,
+              "tolerance": 1e-10,
+              "disableflags": 524288,
+              "enableflags": 0,
+              "gravity": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "actual_native_model": {
+              "body_mass": [
+                0.0,
+                1.0
+              ],
+              "body_inertia": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.0,
+                  0.9999995231628418,
+                  0.9999995231628418
+                ]
+              ],
+              "body_ipos": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "jnt_type": [
+                3
+              ],
+              "jnt_range": [
+                [
+                  -0.5,
+                  0.20000000298023224
+                ]
+              ],
+              "jnt_limited": [
+                true
+              ],
+              "jnt_margin": [
+                0.0
+              ],
+              "jnt_solref": [
+                [
+                  0.03999997302889824,
+                  0.7905696630477905
+                ]
+              ],
+              "jnt_solimp": [
+                [
+                  0.8999999761581421,
+                  0.949999988079071,
+                  0.0010000000474974513,
+                  0.5,
+                  2.0
+                ]
+              ],
+              "jnt_actfrcrange": [
+                [
+                  -100.0,
+                  100.0
+                ]
+              ],
+              "jnt_actfrclimited": [
+                true
+              ],
+              "dof_armature": [
+                0.0
+              ],
+              "dof_damping": [
+                0.0
+              ],
+              "dof_frictionloss": [
+                0.0
+              ],
+              "dof_invweight0": [
+                1.0000004768373572
+              ],
+              "actuator_gainprm": [],
+              "actuator_biasprm": [],
+              "actuator_gear": [],
+              "actuator_trnid": []
+            },
+            "full_config_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-B-r1-20261029T081746828401Z/resolved-config.json",
+            "full_config_field": null
+          },
+          "reproduction": {
+            "run_id": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z",
+            "metrics": {
+              "native_vs_newton_q_max_abs_rad": 7.4478807010613934e-09,
+              "native_vs_newton_v_max_abs_rad_s": 2.9563787751207826e-08,
+              "anchor_max_norm_m": 0.0,
+              "quat_norm_error_max": 5.960464477539063e-08,
+              "first_constraint_time_s": 0.632,
+              "first_constraint_time_error_max_s": 0.0,
+              "peak_upper_violation_max_rad": 0.008049190044403076,
+              "tail_mean_violation_min_rad": 0.00010973215103149414,
+              "tail_mean_violation_max_rad": 0.00010973215103149414,
+              "tail_speed_max_abs_rad_s": 5.372152056537516e-09,
+              "tail_force_balance_max_abs_Nm": 2.123011595411839e-07,
+              "tail_mean_position_rad": 0.20010973513126373,
+              "tail_mean_constraint_torque_Nm": -1.0000000115894443,
+              "q_reference_max_abs_rad": 1.005945203802483e-07,
+              "v_reference_max_abs_rad_s": 3.271102900770373e-07,
+              "force_reference_max_abs_Nm": 0.0,
+              "final_q_rad": 0.20010977983474731,
+              "final_v_rad_s": -1.015659182191514e-13,
+              "max_native_iterations": 1,
+              "effective_inertia_kg_m2": 0.9999995231628702
+            },
+            "raw_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-B-r2-20261029T081753105119Z/trajectory.npz",
+            "raw_sha256": "b8823858345eabf3b118035189e78f192dcd3283c4348a877eedeb2604662d40",
+            "program_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+            "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+            "result_file": "experiments/mujoco_joint_contact_lab/joints/runs/mujoco_joint_upper_limit-B-r2-20261029T081753105119Z/result.json",
+            "checks": [
+              {
+                "name": "repeat_body_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_body_qd",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_q",
+                "max_abs": 0.0,
+                "passed": true
+              },
+              {
+                "name": "repeat_joint_qd",
+                "max_abs": 0.0,
+                "passed": true
+              }
+            ],
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "body_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_q": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              },
+              "joint_qd": {
+                "atol": 1e-06,
+                "rtol": 1e-06
+              }
+            }
+          }
+        }
+      ],
+      "protocol_file": "experiments/mujoco_joint_contact_lab/joints/protocol.json",
+      "runner_file": "experiments/mujoco_joint_contact_lab/joints/runner.py",
+      "source_refs": [
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 5713
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7500
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 7577
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 9679
+        },
+        {
+          "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+          "line": 4568
+        }
+      ],
+      "associations": [
+        "model:mujoco:joint_limit_upper"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "直接单因素干预 joint_limit_upper；其余导出参数只作固定场景的生效确认，不冒充参数扫描。",
+      "limitations": [
+        "Native CPU MuJoCo3.15.0 with Newton1.7.0 only; no MuJoCo Warp claim",
+        "One scalar joint, diagonal constant inertia, no gravity/contact or coupled joints",
+        "Euler selected for auditable discrete references; not a recommendation over default implicitfast",
+        "Joint limit is soft and transient waveform is not claimed analytically reproduced",
+        "No kp sweep, effort/velocity-limit sweep or runtime property update tested",
+        "Model export/native diagnostic arrays are observational instrumentation"
+      ],
+      "plot": "joints/mujoco_joint_upper_limit.svg",
+      "replay": {
+        "time_field": "t",
+        "source": "saved raw Newton body/joint trajectory",
+        "force_time_field": "force_t",
+        "force_state_alignment": "force[n] evaluated at state[n]; state[n+1] is the integration output"
+      },
+      "acceptance_results": {
+        "status": "passed",
+        "criteria": {
+          "q_reference_max_abs_rad": 0.0001,
+          "v_reference_max_abs_rad_s": 0.0001,
+          "force_reference_max_abs_Nm": 0.001,
+          "native_vs_newton_q_max_abs_rad": 1e-06,
+          "native_vs_newton_v_max_abs_rad_s": 1e-06,
+          "anchor_max_norm_m": 1e-06,
+          "quat_norm_error_max": 2e-06,
+          "all_actual_fields_match": true,
+          "warnings_badqpos_badqvel_badqacc": 0,
+          "first_constraint_time_error_max_s": 0.006,
+          "peak_upper_violation_max_rad": 0.02,
+          "tail_mean_violation_min_rad": -0.001,
+          "tail_mean_violation_max_rad": 0.001,
+          "tail_speed_max_abs_rad_s": 0.001,
+          "tail_force_balance_max_abs_Nm": 0.01,
+          "B_minus_A_plateau_shift_error_from_0p1_max_rad": 0.002,
+          "B_minus_A_onset_delay_min_s": 0.15,
+          "B_minus_A_onset_delay_max_s": 0.22
+        },
+        "paired_checks": [
+          {
+            "name": "B_minus_A_plateau_shift_error_from_0p1_max_rad",
+            "repeat": 1,
+            "actual": 6.55651092584808e-08,
+            "limit": 0.002,
+            "passed": true
+          },
+          {
+            "name": "B_minus_A_onset_delay_min_s",
+            "repeat": 1,
+            "actual": 0.184,
+            "limit": 0.15,
+            "passed": true
+          },
+          {
+            "name": "B_minus_A_onset_delay_max_s",
+            "repeat": 1,
+            "actual": 0.184,
+            "limit": 0.22,
+            "passed": true
+          },
+          {
+            "name": "B_minus_A_plateau_shift_error_from_0p1_max_rad",
+            "repeat": 2,
+            "actual": 6.55651092584808e-08,
+            "limit": 0.002,
+            "passed": true
+          },
+          {
+            "name": "B_minus_A_onset_delay_min_s",
+            "repeat": 2,
+            "actual": 0.184,
+            "limit": 0.15,
+            "passed": true
+          },
+          {
+            "name": "B_minus_A_onset_delay_max_s",
+            "repeat": 2,
+            "actual": 0.184,
+            "limit": 0.22,
+            "passed": true
+          }
+        ],
+        "runs": [
+          {
+            "run_id": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 3.72403281823086e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 1.4781892543336284e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "limit_activated",
+                "actual": 752,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "first_constraint_time_error_max_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.006
+                },
+                "passed": true
+              },
+              {
+                "name": "peak_upper_violation_max_rad",
+                "actual": 0.006066188216209412,
+                "expected": {
+                  "max": 0.02
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_min_rad",
+                "actual": 0.00010979920625686646,
+                "expected": {
+                  "min": -0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_max_rad",
+                "actual": 0.00010979920625686646,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_speed_max_abs_rad_s",
+                "actual": 8.509364545460085e-13,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_force_balance_max_abs_Nm",
+                "actual": 9.529466105107076e-11,
+                "expected": {
+                  "max": 0.01
+                },
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 4.9603938970244066e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 2.2244453395936503e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_upper_limit-A-r2-20261029T081740633947Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 3.72403281823086e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 1.4781892543336284e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "limit_activated",
+                "actual": 752,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "first_constraint_time_error_max_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.006
+                },
+                "passed": true
+              },
+              {
+                "name": "peak_upper_violation_max_rad",
+                "actual": 0.006066188216209412,
+                "expected": {
+                  "max": 0.02
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_min_rad",
+                "actual": 0.00010979920625686646,
+                "expected": {
+                  "min": -0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_max_rad",
+                "actual": 0.00010979920625686646,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_speed_max_abs_rad_s",
+                "actual": 8.509364545460085e-13,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_force_balance_max_abs_Nm",
+                "actual": 9.529466105107076e-11,
+                "expected": {
+                  "max": 0.01
+                },
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 4.9603938970244066e-08,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 2.2244453395936503e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_upper_limit-B-r1-20261029T081746828401Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 7.4478807010613934e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 2.9563787751207826e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "limit_activated",
+                "actual": 610,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "first_constraint_time_error_max_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.006
+                },
+                "passed": true
+              },
+              {
+                "name": "peak_upper_violation_max_rad",
+                "actual": 0.008049190044403076,
+                "expected": {
+                  "max": 0.02
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_min_rad",
+                "actual": 0.00010973215103149414,
+                "expected": {
+                  "min": -0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_max_rad",
+                "actual": 0.00010973215103149414,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_speed_max_abs_rad_s",
+                "actual": 5.372152056537516e-09,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_force_balance_max_abs_Nm",
+                "actual": 2.123011595411839e-07,
+                "expected": {
+                  "max": 0.01
+                },
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 1.005945203802483e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 3.271102900770373e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          },
+          {
+            "run_id": "mujoco_joint_upper_limit-B-r2-20261029T081753105119Z",
+            "checks": [
+              {
+                "name": "hashes",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "809_locked_sources",
+                "actual": 809,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_arrays_finite",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "sample_counts",
+                "actual": [
+                  1001,
+                  1000
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "actual_backend_options",
+                "actual": {
+                  "timestep": 0.002,
+                  "integrator": 0,
+                  "solver": 2,
+                  "iterations": 100,
+                  "tolerance": 1e-10,
+                  "disableflags": 524288,
+                  "enableflags": 0,
+                  "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "all_actual_fields_match",
+                "actual": true,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "initial_conditions",
+                "actual": [
+                  0.0,
+                  0.0
+                ],
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_q_max_abs_rad",
+                "actual": 7.4478807010613934e-09,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "native_vs_newton_v_max_abs_rad_s",
+                "actual": 2.9563787751207826e-08,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "anchor_max_norm_m",
+                "actual": 0.0,
+                "expected": {
+                  "max": 1e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "quat_norm_error_max",
+                "actual": 5.960464477539063e-08,
+                "expected": {
+                  "max": 2e-06
+                },
+                "passed": true
+              },
+              {
+                "name": "warnings_all_zero",
+                "actual": 0,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "limit_activated",
+                "actual": 610,
+                "expected": null,
+                "passed": true
+              },
+              {
+                "name": "first_constraint_time_error_max_s",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.006
+                },
+                "passed": true
+              },
+              {
+                "name": "peak_upper_violation_max_rad",
+                "actual": 0.008049190044403076,
+                "expected": {
+                  "max": 0.02
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_min_rad",
+                "actual": 0.00010973215103149414,
+                "expected": {
+                  "min": -0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_mean_violation_max_rad",
+                "actual": 0.00010973215103149414,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_speed_max_abs_rad_s",
+                "actual": 5.372152056537516e-09,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              },
+              {
+                "name": "tail_force_balance_max_abs_Nm",
+                "actual": 2.123011595411839e-07,
+                "expected": {
+                  "max": 0.01
+                },
+                "passed": true
+              },
+              {
+                "name": "q_reference_max_abs_rad",
+                "actual": 1.005945203802483e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "v_reference_max_abs_rad_s",
+                "actual": 3.271102900770373e-07,
+                "expected": {
+                  "max": 0.0001
+                },
+                "passed": true
+              },
+              {
+                "name": "force_reference_max_abs_Nm",
+                "actual": 0.0,
+                "expected": {
+                  "max": 0.001
+                },
+                "passed": true
+              }
+            ],
+            "status": "passed"
+          }
+        ]
+      }
+    }
+  ],
+  "excluded_runs": [
+    {
+      "run_id": "mujoco_joint_passive_damping-A-r1-20261029T081425465819Z",
+      "status": "failed",
+      "error": "AttributeError(\"'mujoco._structs.MjData' object has no attribute 'qM'\")",
+      "runner_sha256": "0f830e455f422e717b4148826160d496278f9cfd9d244c832b26be8864d3299c"
+    }
+  ]
+}

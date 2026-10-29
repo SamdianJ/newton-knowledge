@@ -1,0 +1,24 @@
+{
+  "case": "kamino_drive_effort_paths",
+  "variant": "B",
+  "repeat": 2,
+  "status": "completed",
+  "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+  "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871",
+  "started_at": "2026-10-29T05:12:36.769112+00:00",
+  "run_directory": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r2_20261029T051236765291Z",
+  "samples": 81,
+  "raw_sha256": "76ef0fc6a9c2a247705cb5f32db6f182ef337a897e600d1512cb1cb1f75a0f1f",
+  "note": "Completion is not acceptance; independent analyzer applies frozen criteria.",
+  "finished_at": "2026-10-29T05:12:47.603909+00:00",
+  "files_sha256": {
+    "environment.json": "dd96fa05f950205c5d9426efc1f6d6d50c08ba4701e16799b0fb35dddf241d1d",
+    "installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "protocol.json": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+    "resolved-config.json": "2c5850847f21eb6d75d01a48433dddf0fd08a45b9fdc4e1a447b3402bb274c87",
+    "run.log": "538fbde7282ec561225bfb7301dd69cdabea912ebf22ab78cf1fdb79b4d875bd",
+    "runner.py": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871",
+    "scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "trajectory.npz": "76ef0fc6a9c2a247705cb5f32db6f182ef337a897e600d1512cb1cb1f75a0f1f"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "solver": "mujoco",
+  "status": "probe_passed",
+  "counts_as_ab": false,
+  "python": "3.12.14",
+  "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+  "packages": {
+    "newton": "1.7.0",
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "mujoco": "3.15.0",
+    "mujoco-warp": "3.15.0"
+  },
+  "warp_devices": [
+    "cpu"
+  ],
+  "solver_source": {
+    "path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\mujoco\\solver_mujoco.py",
+    "sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+    "manifest_sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f"
+  },
+  "heights": [
+    0.0949999988079071,
+    0.09615866094827652,
+    0.09714701026678085,
+    0.0979650467634201,
+    0.09861277043819427,
+    0.09909018129110336,
+    0.09939727932214737,
+    0.0995340645313263,
+    0.09963087737560272
+  ],
+  "native_options": {
+    "iterations": 5,
+    "geom_solref": [
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ],
+      [
+        0.006666666828095913,
+        1.0606601238250732
+      ]
+    ],
+    "ncon": 1
+  }
+}

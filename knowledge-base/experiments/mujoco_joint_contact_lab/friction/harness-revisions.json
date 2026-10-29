@@ -1,0 +1,25 @@
+{
+  "reason": "Read-only observation correction: constructor snapshot .002 does not directly record actual .001 step timestep. Old 8 runs excluded uniformly before physical scoring, not selected by outcome. Protocol unchanged; root authorized rerun.",
+  "old_runner_sha256": "f8f3f7f3959c017186b8b7691adae099c103b1049ed1d09d0121161a310327c1",
+  "new_runner_sha256": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+  "excluded_run_ids": [
+    "mujoco_sliding_friction_mu_A_r1_20261029T082036185701Z",
+    "mujoco_sliding_friction_mu_A_r2_20261029T082049098060Z",
+    "mujoco_sliding_friction_mu_B_r1_20261029T082056008365Z",
+    "mujoco_sliding_friction_mu_B_r2_20261029T082102777868Z",
+    "mujoco_torsional_friction_condim_A_r1_20261029T082109601899Z",
+    "mujoco_torsional_friction_condim_A_r2_20261029T082116469830Z",
+    "mujoco_torsional_friction_condim_B_r1_20261029T082123213679Z",
+    "mujoco_torsional_friction_condim_B_r2_20261029T082129873757Z"
+  ],
+  "old_runs_status": [
+    "completed",
+    "completed",
+    "completed",
+    "completed",
+    "completed",
+    "completed",
+    "completed",
+    "completed"
+  ]
+}

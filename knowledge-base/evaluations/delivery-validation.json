@@ -1,0 +1,225 @@
+{
+  "phase": "P5",
+  "status": "passed",
+  "build_id": "7b662ba1eaad37315d969690",
+  "version": "1.7.0",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "passed p2-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p2-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p3-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p3-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p4-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p4-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p5-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p5-mcp-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p2-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p2-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p3-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p3-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p4-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p4-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p5-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p5-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p5-integrity-validation.json",
+      "passed": true
+    },
+    {
+      "name": "same published generation p5-integrity-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p4-physics-validation.json",
+      "passed": true
+    },
+    {
+      "name": "passed p0-validation.json",
+      "passed": true
+    },
+    {
+      "name": "live server generation",
+      "passed": true
+    },
+    {
+      "name": "frozen independent scope denominators",
+      "passed": true
+    },
+    {
+      "name": "41 current exact-body/source receipts",
+      "passed": true
+    },
+    {
+      "name": "maintenance instructions readable on website",
+      "passed": true
+    },
+    {
+      "name": "live solver cards show actual measured evidence",
+      "passed": true
+    },
+    {
+      "name": "final browser console []",
+      "passed": true
+    }
+  ],
+  "evidence": {
+    "p2-mcp-validation.json": {
+      "sha256": "623f90613ee3003c4003074ddeccd44419a93dfb9c9a4661b93908d96ee39317",
+      "passed": 1566,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P2"
+    },
+    "p3-mcp-validation.json": {
+      "sha256": "447dcb33a2f049b6131ce84b2775b24ca791ccbdd6625d87cc77795726c5f4cc",
+      "passed": 349,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P3"
+    },
+    "p4-mcp-validation.json": {
+      "sha256": "53c21df92ea603645993d249ec699c7be43c2d11cafb5337a5eaa011b46eaf33",
+      "passed": 111,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P4"
+    },
+    "p5-mcp-validation.json": {
+      "sha256": "cb6b12090ac66b881fca150cb365b3d9a0823bdb7d431fd1ccfe6a3075c64c92",
+      "passed": 76,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P5"
+    },
+    "p2-validation.json": {
+      "sha256": "52908ea5fd4ea9aae6136d8d4eaee8435d3daaa76d88cc0bab159cfbff3b8390",
+      "passed": 899,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P2"
+    },
+    "p3-validation.json": {
+      "sha256": "3bed3e69ff618b0d1a18b30702f2a1bf2b9cc4696affc23e7b33eed6228dfe4e",
+      "passed": 137,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P3"
+    },
+    "p4-validation.json": {
+      "sha256": "2134ae393a20388138a032710b07a66eb0dde0c0e1fc1113df75d3610d5e8125",
+      "passed": 58,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P4"
+    },
+    "p5-validation.json": {
+      "sha256": "dbd4fa2b0b04ffb6f2895e8f4b94034bf2f3cebabc82e817a9b9088c3cb3f822",
+      "passed": 184,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P5"
+    },
+    "p5-integrity-validation.json": {
+      "sha256": "5a5308e3f475a00c5b0204db06d5e29337e052ab51868bde6de7b810f57021a8",
+      "passed": 11154,
+      "failed": 0,
+      "build_id": "7b662ba1eaad37315d969690",
+      "phase": "P5"
+    },
+    "p4-physics-validation.json": {
+      "sha256": "0d789c247753eafdb52ceed760c459aa7580fa6620667c527588708b296ded13",
+      "passed": 252,
+      "failed": 0,
+      "build_id": null,
+      "phase": "P4"
+    },
+    "p0-validation.json": {
+      "sha256": "4867179e656484985686a2c29d3cea4d39f8013b2cb054542380c60da78773ef",
+      "passed": 81,
+      "failed": 0,
+      "build_id": null,
+      "phase": "P0"
+    }
+  },
+  "scope": {
+    "API_modules": 12,
+    "concepts": 14,
+    "backends": 8,
+    "cross_stage_topics": 8,
+    "actual_stages": 7,
+    "base_recipes": 6,
+    "additional_recipes": 12,
+    "documents": 99,
+    "canonical_records": 2676,
+    "task_validated_records": 41,
+    "measured_pairs": {
+      "featherstone": 0,
+      "implicit-mpm": 0,
+      "kamino": 2,
+      "mujoco": 2,
+      "semi-implicit": 0,
+      "style3d": 0,
+      "vbd": 17,
+      "xpbd": 0
+    },
+    "new_solver_primary_runs": 8,
+    "new_solver_independent_reproduction_runs": 8,
+    "not_claimed": [
+      "GPU physical validation",
+      "full upstream Newton suite",
+      "free-form LLM task quality or actual billing tokens",
+      "complete parameter experiments for all backends",
+      "an actual additional Newton release"
+    ]
+  }
+}

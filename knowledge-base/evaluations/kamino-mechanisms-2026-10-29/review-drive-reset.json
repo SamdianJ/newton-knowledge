@@ -1,0 +1,931 @@
+{
+  "reviewer": "kamino_loop_fk independent agent",
+  "reviewed_at_utc": "2026-10-29T05:23:39.442004+00:00",
+  "status": "passed_with_stated_boundaries",
+  "files": {
+    "runner.py": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f",
+    "analyze.py": "16b7fb52307aabd416198bc2144bc6cb153374325e616c0a14272e1726642034",
+    "analysis.json": "2ee7b2d2399e28e86f5dc3cbb7817acf4df6b45904a2c9a9d9686b8bdd7141f0",
+    "protocol.json": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74"
+  },
+  "review_script_sha256": "6547486d2d20e376e1cab042b87c1ccbe923a091c24c607f8ae16e2ad93226fc",
+  "passed_checks": 147,
+  "failed_checks": 0,
+  "scope": "Read-only code review and independent raw-array recomputation; no simulation, original analyzer execution or source/data modification.",
+  "findings": [],
+  "source_unit_evidence": [
+    {
+      "path": "newton/_src/solvers/kamino/_src/kinematics/constraints.py",
+      "line": 400,
+      "finding": "lambda_tau_j = inv_dt * raw constraint impulse; exported revolute channel is torque in N m."
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/dynamics/wrenches.py",
+      "line": 334,
+      "finding": "Dense effort wrench multiplies impulse by inv_dt; w_a_i angular Y is N m, not impulse."
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/solvers/common.py",
+      "line": 146,
+      "finding": "Warmstart multiplies joint_lambda_tau_j by dt to recover impulse."
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/kinematics/resets.py",
+      "line": 375,
+      "finding": "Reset clears reported effort multiplier."
+    }
+  ],
+  "review_conclusions": [
+    "Initial status placeholders are excluded only at sample zero; physical channels retain sample zero and all post-step status entries must be finite. Lambda channel retains all 81 samples; explicit drive legitimately has zero-width effort-constraint channel.",
+    "Independent archived mass/COM/inertia checks establish I_y=1+1*(0.5)^2=1.25 kg m^2. Signed pulse torque and scalar semi-implicit recurrence independently reproduce claimed errors.",
+    "Prewarm is non-vacuous: q=0.028199944645166397 rad and |lambda_tau|=1 N m with nonzero body velocity. Fresh preserve donor contributes body pose/velocity only; newly built solver is reset under same mode as aged solver before identical commands.",
+    "All three Control arrays exist and are identical before/after reset, including nonzero target -1 rad. Commands are explicitly reissued during replay; reset does not promise Control clearing.",
+    "Repeated processes and fresh-versus-aged replay physical arrays are exactly equal in this cohort. This verifies measured replay consistency, not completeness of hidden solver-state clearing.",
+    "Final analysis explicitly reports bounded-PD converged fraction 0 at 200 iterations and 1e-7 tolerance. Physical/reset gates passing must never be presented as solver convergence passing."
+  ],
+  "remaining_boundaries": [
+    "CPU PADMM only, single revolute and single world, no contacts/gravity/armature",
+    "Saturated PD only; no unsaturated tracking, transitions, multi-DoF or timestep-general validation",
+    "No masked reset, arbitrary inconsistent preserve states or all warmstart internals tested",
+    "Bounded-PD convergence deficit remains an observed diagnostic limitation; no thresholds relaxed"
+  ],
+  "runs": [
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051530488850Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        0
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 1.0,
+      "independent_q_error_rad": 1.0387182237947545e-07,
+      "independent_v_error_rad_s": 2.722144127609294e-07
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r2_20261029T051542833277Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        0
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 1.0,
+      "independent_q_error_rad": 1.0387182237947545e-07,
+      "independent_v_error_rad_s": 2.722144127609294e-07
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r1_20261029T051555321909Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "independent_q_error_rad": 1.0387182237947545e-07,
+      "independent_v_error_rad_s": 2.3561716086528683e-07
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r2_20261029T051607693722Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "independent_q_error_rad": 1.0387182237947545e-07,
+      "independent_v_error_rad_s": 2.3561716086528683e-07
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r1_20261029T051620661119Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_A_r2_20261029T051633919830Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r1_20261029T051646414985Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "warm_q_rad": 0.028199944645166397,
+      "warm_lambda_Nm": 1.0
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_default_replay_B_r2_20261029T051704357829Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "warm_q_rad": 0.028199944645166397,
+      "warm_lambda_Nm": 1.0
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r1_20261029T051721685673Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "warm_q_rad": 0.028199944645166397,
+      "warm_lambda_Nm": 1.0
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_A_r2_20261029T051739976407Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "warm_q_rad": 0.028199944645166397,
+      "warm_lambda_Nm": 1.0
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r1_20261029T051758572345Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "warm_q_rad": 0.028199944645166397,
+      "warm_lambda_Nm": 1.0
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_reset_preserve_replay_B_r2_20261029T051816554007Z",
+      "effective_inertia_kg_m2": 1.25,
+      "lambda_shape": [
+        81,
+        1
+      ],
+      "initial_nonfinite_status_fields": [],
+      "post_step_converged_fraction": 0.0,
+      "warm_q_rad": 0.028199944645166397,
+      "warm_lambda_Nm": 1.0
+    }
+  ],
+  "checks": [
+    {
+      "name": "kamino_drive_effort_paths/A/1/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/analytic position",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/analytic velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/signed physical torque",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/1/lambda full trajectory shape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/analytic position",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/analytic velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/signed physical torque",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/A/2/lambda full trajectory shape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/analytic position",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/analytic velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/signed physical torque",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/lambda full trajectory shape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/1/lambda is Nm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/analytic position",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/analytic velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/signed physical torque",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/lambda full trajectory shape",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/B/2/lambda is Nm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/repeat/A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_drive_effort_paths/repeat/B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/1/default pose velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/A/2/default pose velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/default pose velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/1/non-vacuous prewarm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/default pose velocity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/B/2/non-vacuous prewarm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/repeat/A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/repeat/B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/fresh-aged/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_default_replay/fresh-aged/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/body preservation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/1/non-vacuous prewarm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/body preservation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/A/2/non-vacuous prewarm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/body preservation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/1/non-vacuous prewarm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/archive hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/summary hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/physical finite including t0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/all post-step statuses finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/inertia and COM",
+      "passed": true,
+      "detail": 1.25
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/convergence summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/all Control fields preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/Control target nonzero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/zero cleared fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/body preservation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/B/2/non-vacuous prewarm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/repeat/A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/repeat/B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/fresh-aged/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "kamino_reset_preserve_replay/fresh-aged/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "selected complete cohort",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "_meta": null,
+  "ttlMs": 0,
+  "cacheScope": "private",
+  "nextCursor": null,
+  "tools": [
+    {
+      "name": "search_knowledge",
+      "title": null,
+      "description": "Search VBD/MuJoCo/Kamino knowledge, optionally scoped to one solver. Returns evidence and exact next-call arguments including solver. Lexical ranking is not confidence.",
+      "inputSchema": {
+        "properties": {
+          "query": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          },
+          "kind": {
+            "default": "all",
+            "enum": [
+              "all",
+              "parameter",
+              "model_input",
+              "claim",
+              "diagnostic",
+              "mapping",
+              "document",
+              "paper",
+              "experiment",
+              "lab_experiment",
+              "capabilities"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "limit": {
+            "default": 6,
+            "maximum": 20,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          },
+          "version": {
+            "default": "1.7.0",
+            "maxLength": 32,
+            "title": "Version",
+            "type": "string"
+          },
+          "solver": {
+            "default": "all",
+            "enum": [
+              "all",
+              "vbd",
+              "mujoco",
+              "kamino"
+            ],
+            "title": "Solver",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "type": "object",
+        "title": "search_knowledgeArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "search_knowledgeDictOutput"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": null
+    },
+    {
+      "name": "get_parameter",
+      "title": null,
+      "description": "Read a constructor parameter, Model input, full-surface pipeline setting or substeps. Includes defaults, provenance and linked experiments. Explicit material-component/group aliases are labeled.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "version": {
+            "default": "1.7.0",
+            "maxLength": 32,
+            "title": "Version",
+            "type": "string"
+          },
+          "solver": {
+            "default": "vbd",
+            "enum": [
+              "vbd",
+              "mujoco",
+              "kamino"
+            ],
+            "title": "Solver",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "title": "get_parameterArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_parameterDictOutput"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": null
+    },
+    {
+      "name": "get_experiment",
+      "title": null,
+      "description": "Read one of 17 saved VBD A/B cases: settings, conditions, both metric sets, observation, source and artifact links. full adds initial XYZ geometry, never all frames. Does not run simulation.",
+      "inputSchema": {
+        "properties": {
+          "experiment_id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Experiment Id",
+            "type": "string"
+          },
+          "detail": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "full"
+            ],
+            "title": "Detail",
+            "type": "string"
+          },
+          "version": {
+            "default": "1.7.0",
+            "maxLength": 32,
+            "title": "Version",
+            "type": "string"
+          },
+          "solver": {
+            "default": "vbd",
+            "enum": [
+              "vbd",
+              "mujoco",
+              "kamino"
+            ],
+            "title": "Solver",
+            "type": "string"
+          }
+        },
+        "required": [
+          "experiment_id"
+        ],
+        "type": "object",
+        "title": "get_experimentArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_experimentDictOutput"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": null
+    },
+    {
+      "name": "get_relations",
+      "title": null,
+      "description": "Read bounded, paginated one-hop curated relationships. Use related_node_id/association IDs from other tools. Never infers causal edges or recursively expands the graph.",
+      "inputSchema": {
+        "properties": {
+          "node_id": {
+            "maxLength": 600,
+            "minLength": 1,
+            "title": "Node Id",
+            "type": "string"
+          },
+          "limit": {
+            "default": 12,
+            "maximum": 30,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          },
+          "offset": {
+            "default": 0,
+            "maximum": 10000,
+            "minimum": 0,
+            "title": "Offset",
+            "type": "integer"
+          },
+          "version": {
+            "default": "1.7.0",
+            "maxLength": 32,
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "node_id"
+        ],
+        "type": "object",
+        "title": "get_relationsArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_relationsDictOutput"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": null
+    },
+    {
+      "name": "get_document",
+      "title": null,
+      "description": "List readable documents when path is empty; otherwise read original Markdown, optionally an exact heading. Pagination uses original 1-based line numbers and explicit truncation markers.",
+      "inputSchema": {
+        "properties": {
+          "path": {
+            "default": "",
+            "maxLength": 300,
+            "title": "Path",
+            "type": "string"
+          },
+          "section": {
+            "default": "",
+            "maxLength": 300,
+            "title": "Section",
+            "type": "string"
+          },
+          "start_line": {
+            "default": 1,
+            "minimum": 1,
+            "title": "Start Line",
+            "type": "integer"
+          },
+          "max_lines": {
+            "default": 100,
+            "maximum": 200,
+            "minimum": 1,
+            "title": "Max Lines",
+            "type": "integer"
+          },
+          "version": {
+            "default": "1.7.0",
+            "maxLength": 32,
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "title": "get_documentArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_documentDictOutput"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": null
+    },
+    {
+      "name": "get_source",
+      "title": null,
+      "description": "Read a bounded source excerpt with hash and exact lines. newton paths are relative to the official release root. experiment allows only run_lab.py or analyze_lab.py. No arbitrary paths or execution.",
+      "inputSchema": {
+        "properties": {
+          "path": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Path",
+            "type": "string"
+          },
+          "start_line": {
+            "default": 1,
+            "minimum": 1,
+            "title": "Start Line",
+            "type": "integer"
+          },
+          "max_lines": {
+            "default": 100,
+            "maximum": 200,
+            "minimum": 1,
+            "title": "Max Lines",
+            "type": "integer"
+          },
+          "scope": {
+            "default": "newton",
+            "enum": [
+              "newton",
+              "experiment"
+            ],
+            "title": "Scope",
+            "type": "string"
+          },
+          "version": {
+            "default": "1.7.0",
+            "maxLength": 32,
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "type": "object",
+        "title": "get_sourceArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "get_sourceDictOutput"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": null
+    }
+  ],
+  "resultType": "complete"
+}

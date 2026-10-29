@@ -1,0 +1,238 @@
+{
+  "protocol_id": "kamino-loop-dt-refinement-1.0",
+  "status": "frozen_before_runs",
+  "version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "device": "cpu",
+  "scene": {
+    "kind": "fixed-base planar parallelogram in XZ plane; four boxes and four revolute Y hinges",
+    "body_names": [
+      "base",
+      "right",
+      "top",
+      "left"
+    ],
+    "dimensions_xyz_m": [
+      [
+        0.1,
+        0.01,
+        0.01
+      ],
+      [
+        0.01,
+        0.01,
+        0.1
+      ],
+      [
+        0.1,
+        0.01,
+        0.01
+      ],
+      [
+        0.01,
+        0.01,
+        0.1
+      ]
+    ],
+    "mass_kg": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "inertia": "diagonal cuboid mass formula m*(b^2+c^2)/12, explicit mass/inertia with lock_inertia=True",
+    "body_centers_m": [
+      [
+        0,
+        0,
+        0.005
+      ],
+      [
+        0.056,
+        0,
+        0.061
+      ],
+      [
+        0,
+        0,
+        0.117
+      ],
+      [
+        -0.056,
+        0,
+        0.061
+      ]
+    ],
+    "hinge_positions_m": [
+      [
+        0.056,
+        0,
+        0.005
+      ],
+      [
+        0.056,
+        0,
+        0.117
+      ],
+      [
+        -0.056,
+        0,
+        0.117
+      ],
+      [
+        -0.056,
+        0,
+        0.005
+      ]
+    ],
+    "joint_order": [
+      "world_fixed_base",
+      "base_right",
+      "right_top",
+      "top_left",
+      "left_base_loop"
+    ],
+    "articulation": "world_fixed_base plus first three revolute joints form spanning tree; loop hinge remains outside articulation",
+    "actuation": "base_right EFFORT; all other revolute joints NONE; no limits, armature, friction or PD",
+    "collision": "none: no contact generation, all shapes noncolliding; shape geometry only for replay",
+    "worlds": 1,
+    "randomness": "none"
+  },
+  "solver": {
+    "backend": "padmm",
+    "use_fk_solver": true,
+    "use_collision_detector": false,
+    "padmm.use_graph_conditionals": false,
+    "padmm.max_iterations": 200,
+    "padmm.primal_tolerance": 1e-06,
+    "padmm.dual_tolerance": 1e-06,
+    "padmm.compl_tolerance": 1e-06,
+    "constraints.alpha": 0.2,
+    "fk.tolerance": 1e-06,
+    "fk.max_newton_iterations": 30,
+    "fk.use_incremental_solve": true,
+    "fk.use_regularization": false
+  },
+  "cases": [
+    {
+      "id": "kamino_fourbar_loop_dt960",
+      "solver_override": {
+        "use_fk_solver": false
+      },
+      "question": "Does the loop-closing constraint retain closure during nontrivial motion, compared with the same bodies/spanning tree without the closing hinge?",
+      "variants": {
+        "A": {
+          "loop_closing_hinge": false
+        },
+        "B": {
+          "loop_closing_hinge": true
+        }
+      },
+      "initial_state": "All four body transforms as scene definition, all velocities zero; no FK needed for the initially consistent geometry",
+      "dt_s": 0.0010416666666666667,
+      "steps": 480,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "actuator_torque_Nm": 0.02,
+      "procedure": "Reset to default, clear forces each step, apply constant active-joint torque, step and swap states. Save t=0 and every output step. No collision calls. Compute virtual missing hinge anchors in A identically to the real hinge in B.",
+      "metrics": [
+        "loop anchor gap m",
+        "maximum retained-joint anchor gap m",
+        "hinge-axis mismatch",
+        "active angle range rad",
+        "body and joint trajectories",
+        "solver status and physical residuals if exposed",
+        "step elapsed time after warmup (descriptive only)"
+      ],
+      "acceptance": {
+        "all_finite_both": true,
+        "both_variants_max_retained_anchor_gap_m": 0.0005,
+        "both_variants_max_axis_mismatch_norm": 0.0001,
+        "closed_loop_max_anchor_gap_m": 0.0005,
+        "closed_loop_active_angle_range_min_rad": 0.01,
+        "open_loop_max_virtual_gap_min_m": 0.001,
+        "open_vs_closed_max_gap_ratio_min": 5
+      },
+      "threshold_basis": "0.5mm is below 0.5% of 112mm hinge spacing, and 1mm/5x negative-control gates establish that measuring the closure edge matters. If the separation does not occur, retain runs as inconclusive rather than altering thresholds. Structural intervention, not single-parameter A/B.",
+      "secondary_question": "Does retained-tree positional drift decrease as dt is refined from the previous 1/240s failure? Report trend only, no required convergence order."
+    },
+    {
+      "id": "kamino_fourbar_loop_dt3840",
+      "solver_override": {
+        "use_fk_solver": false
+      },
+      "question": "Does the loop-closing constraint retain closure during nontrivial motion, compared with the same bodies/spanning tree without the closing hinge?",
+      "variants": {
+        "A": {
+          "loop_closing_hinge": false
+        },
+        "B": {
+          "loop_closing_hinge": true
+        }
+      },
+      "initial_state": "All four body transforms as scene definition, all velocities zero; no FK needed for the initially consistent geometry",
+      "dt_s": 0.00026041666666666666,
+      "steps": 1920,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "actuator_torque_Nm": 0.02,
+      "procedure": "Reset to default, clear forces each step, apply constant active-joint torque, step and swap states. Save t=0 and every output step. No collision calls. Compute virtual missing hinge anchors in A identically to the real hinge in B.",
+      "metrics": [
+        "loop anchor gap m",
+        "maximum retained-joint anchor gap m",
+        "hinge-axis mismatch",
+        "active angle range rad",
+        "body and joint trajectories",
+        "solver status and physical residuals if exposed",
+        "step elapsed time after warmup (descriptive only)"
+      ],
+      "acceptance": {
+        "all_finite_both": true,
+        "both_variants_max_retained_anchor_gap_m": 0.0005,
+        "both_variants_max_axis_mismatch_norm": 0.0001,
+        "closed_loop_max_anchor_gap_m": 0.0005,
+        "closed_loop_active_angle_range_min_rad": 0.01,
+        "open_loop_max_virtual_gap_min_m": 0.001,
+        "open_vs_closed_max_gap_ratio_min": 5
+      },
+      "threshold_basis": "0.5mm is below 0.5% of 112mm hinge spacing, and 1mm/5x negative-control gates establish that measuring the closure edge matters. If the separation does not occur, retain runs as inconclusive rather than altering thresholds. Structural intervention, not single-parameter A/B.",
+      "secondary_question": "Does retained-tree positional drift decrease as dt is refined from the previous 1/240s failure? Report trend only, no required convergence order."
+    }
+  ],
+  "repeats": {
+    "count_per_variant": 2,
+    "isolation": "separate OS process",
+    "pose_atol": 1e-05,
+    "velocity_atol": 0.0001,
+    "rtol": 1e-05,
+    "timing_excluded": true
+  },
+  "artifacts": [
+    "protocol frozen copy and SHA256",
+    "runner copy and SHA256",
+    "source commit and source-lock hashes",
+    "actual resolved config",
+    "environment versions/device",
+    "scene geometry and joint anchors",
+    "NPZ raw arrays",
+    "per-run metrics/checks",
+    "stdout/stderr log"
+  ],
+  "failure_policy": "Never overwrite failed runs or broaden thresholds after observing results. API/harness fixes require a versioned runner record and a documented reason; physical protocol changes require a new frozen protocol revision before subsequent runs.",
+  "scope_limitations": [
+    "one fixed-base four-bar, one active hinge, planar branch near initial pose",
+    "no contacts, joint limits, motors, multiworld, GPU, singular toggle configurations or underactuated FK",
+    "no claim of general loop solvability, global branch selection, long-time stability or backend performance",
+    "Timestep refinement does not prove integrator convergence order, long-time accuracy, general closed-loop behavior or performance superiority."
+  ],
+  "predecessor_protocol": "protocol.json",
+  "design_basis": "Follow-up to preserved 1/240s open-chain retained-joint gap 7.3148mm; no relaxed acceptance thresholds. Same physical scene, initial state, forces, solver iteration budget and 0.5s duration. Each timestep gets its own topology pair; only a pair meeting all original criteria is accepted.",
+  "frozen_at_utc": "2026-10-29T05:15:54.543149+00:00",
+  "reviewed_by": "root agent; original thresholds and physics retained"
+}

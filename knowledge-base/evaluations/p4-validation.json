@@ -1,0 +1,247 @@
+{
+  "phase": "P4",
+  "status": "passed",
+  "build_id": "8a7a02fd821cc6b9eebd093f",
+  "passed": 58,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "four independently verified physical pairs",
+      "passed": true
+    },
+    {
+      "name": "real stdio on current generation",
+      "passed": true
+    },
+    {
+      "name": "two original P4 valid pairs retained mujoco",
+      "passed": true
+    },
+    {
+      "name": "two original P4 valid pairs retained kamino",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/full_surface/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/full_surface/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/iterations/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/iterations/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/substeps/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/substeps/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/stiffness/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/stiffness/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/damping/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/damping/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/self_contact/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/self_contact/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/self_margin/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/self_margin/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/contact_stiffness/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/contact_stiffness/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/friction/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/friction/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/friction_epsilon/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/friction_epsilon/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/dat/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/dat/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/dat_relaxation/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/dat_relaxation/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/rigid_mode/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/rigid_mode/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/joint_stiffness/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/joint_stiffness/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/membrane/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/membrane/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/bending/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/bending/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/stabilization/A.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD raw unchanged experiments/vbd_parameter_lab/data/stabilization/B.npz",
+      "passed": true
+    },
+    {
+      "name": "original VBD runner unchanged",
+      "passed": true
+    },
+    {
+      "name": "only scoped cases rendered mujoco",
+      "passed": true
+    },
+    {
+      "name": "two pairs actual 3D canvases mujoco",
+      "passed": true
+    },
+    {
+      "name": "scrub measured time mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "complete measured curve mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "download raw A/B mujoco_iterations_stack",
+      "passed": true
+    },
+    {
+      "name": "scrub measured time mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "complete measured curve mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "download raw A/B mujoco_contact_response",
+      "passed": true
+    },
+    {
+      "name": "only scoped cases rendered kamino",
+      "passed": true
+    },
+    {
+      "name": "two pairs actual 3D canvases kamino",
+      "passed": true
+    },
+    {
+      "name": "scrub measured time kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "complete measured curve kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "download raw A/B kamino_padmm_budget",
+      "passed": true
+    },
+    {
+      "name": "scrub measured time kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "complete measured curve kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "download raw A/B kamino_contact_stabilization",
+      "passed": true
+    },
+    {
+      "name": "case deep link isolated",
+      "passed": true
+    },
+    {
+      "name": "mobile lab no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "browser errors []",
+      "passed": true
+    }
+  ],
+  "evidence": [
+    "evaluations/p4-physics-validation.json",
+    "evaluations/p4-mcp-validation.json",
+    "evaluations/p4-mcp-trace.json",
+    "site/screenshots/p4/"
+  ]
+}

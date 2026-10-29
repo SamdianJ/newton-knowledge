@@ -1,0 +1,21 @@
+{
+  "run_id": "mujoco_joint_upper_limit-A-r1-20261029T081734438578Z",
+  "case": "mujoco_joint_upper_limit",
+  "variant": "A",
+  "repeat": 1,
+  "status": "completed",
+  "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+  "runner_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+  "started_at_utc": "2026-10-29T08:17:34.441252+00:00",
+  "samples": 1001,
+  "finished_at_utc": "2026-10-29T08:17:38.888756+00:00",
+  "files_sha256": {
+    "environment.json": "033151c20edf505add6444caa655e6cece8896e596ed92ff3b3b0da9c2153c8c",
+    "installed-source-validation.json": "ea9da0ca34fb345be758bfbff9a94dc238031ea3735aed4d04f1e4af4961534a",
+    "protocol.json": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+    "resolved-config.json": "1347fcae8b21142135cd6688ce218a9f94c0eb77ac2aa1796a89bfb2a3b82894",
+    "run.log": "91c9ca17abb0d4776ffcc5e612f6bc9247ec730444e29f658581fec443c6b14a",
+    "runner.py": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+    "trajectory.npz": "96905e023e3db847029e91816937207ff82a80d2b2ddeae226953a2689f88727"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "case": "kamino_drive_effort_paths",
+  "variant": "A",
+  "repeat": 1,
+  "status": "completed",
+  "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+  "runner_sha256": "4a0f91f9b966917ddae278c803fcd263bdcb956b890a3b037b91ef1daf79b325",
+  "started_at": "2026-10-29T05:10:46.473667+00:00",
+  "run_directory": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051046468332Z",
+  "samples": 81,
+  "raw_sha256": "a2c75534fc948f0195485b917afa85446aeb7cfdeddbea6d4af5612a4bad8282",
+  "note": "Completion is not acceptance; independent analyzer applies frozen criteria.",
+  "finished_at": "2026-10-29T05:10:57.095145+00:00",
+  "files_sha256": {
+    "environment.json": "3fac16737d8d7efe211ed12f1b7299845a2fdf82e03b2ab10eea7f43467030ec",
+    "protocol.json": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+    "resolved-config.json": "9705cc50d6e611ee701c2fac8227b7d76e9efc9940f8086f030aae7cc4c5834b",
+    "run.log": "9727e12812b6c1d75ee7573ece5c008ca95c8f434182c68ede4df153e4b770cf",
+    "runner.py": "4a0f91f9b966917ddae278c803fcd263bdcb956b890a3b037b91ef1daf79b325",
+    "scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "trajectory.npz": "a2c75534fc948f0195485b917afa85446aeb7cfdeddbea6d4af5612a4bad8282"
+  }
+}

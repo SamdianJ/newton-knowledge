@@ -1,0 +1,1705 @@
+{
+  "phase": "P3",
+  "status": "passed",
+  "build_id": "9a95b5a5289c936a2b6580d3",
+  "passed": 349,
+  "failed": 0,
+  "calls": 72,
+  "tasks": [
+    {
+      "id": "X01",
+      "query": "BALL 关节目标出现零四元数，joint_target_q 和 qd 长度不一样，怎样清理控制又保留合法旋转目标？",
+      "record_id": "recipe:control-target-layout",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "newton/_src/sim/control.py",
+        "docs/migration.rst"
+      ],
+      "answer_evidence": {
+        "coordinate and DOF split": true,
+        "real clear implementation": true
+      },
+      "tokenizer_tokens": 17451,
+      "logical_json_chars": 62974,
+      "utf8_bytes": 64990
+    },
+    {
+      "id": "X02",
+      "query": "接入 Actuator 后关节施力随帧数增长，Delay、Drive、Clamping 怎样调度，怎样避免与后端驱动重复施力？",
+      "record_id": "recipe:actuator-effort-scheduling",
+      "status": "passed",
+      "calls": 5,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "docs/concepts/actuators.rst"
+      ],
+      "answer_evidence": {
+        "actual additive effort contract": true,
+        "schedule and double-drive explanation": true
+      },
+      "tokenizer_tokens": 14614,
+      "logical_json_chars": 47865,
+      "utf8_bytes": 50318
+    },
+    {
+      "id": "X03",
+      "query": "导入的凹容器碰撞看起来变实心，convex decomposition 失败会怎样，怎样保留视觉网格并检查过滤？",
+      "record_id": "recipe:collision-preflight",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "newton/_src/sim/builder.py",
+        "docs/concepts/collisions.rst"
+      ],
+      "answer_evidence": {
+        "actual geometry API contract": true,
+        "candidate filtering distinct": true
+      },
+      "tokenizer_tokens": 19180,
+      "logical_json_chars": 73555,
+      "utf8_bytes": 76015
+    },
+    {
+      "id": "X04",
+      "query": "分配 CONTACT_F 后换更大碰撞容量报错，接触被丢弃时增加迭代次数有用吗？",
+      "record_id": "recipe:contact-capacity-diagnosis",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "docs/concepts/solver_observables.rst",
+        "newton/_src/solvers/vbd/solver_vbd.py"
+      ],
+      "answer_evidence": {
+        "actual allocation freeze": true,
+        "capacity not iterations": true
+      },
+      "tokenizer_tokens": 21193,
+      "logical_json_chars": 80280,
+      "utf8_bytes": 82779
+    },
+    {
+      "id": "X05",
+      "query": "修改 MuJoCo 的 armature 或质量没有生效，应通知哪些 ModelFlags，缓存和已捕获图如何处理？",
+      "record_id": "recipe:model-update-notification",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "newton/_src/sim/enums.py",
+        "newton/_src/solvers/mujoco/solver_mujoco.py"
+      ],
+      "answer_evidence": {
+        "narrow flags are distinct actual bits": true,
+        "specific notifications and graph boundaries": true
+      },
+      "tokenizer_tokens": 18589,
+      "logical_json_chars": 66891,
+      "utf8_bytes": 69363
+    },
+    {
+      "id": "X06",
+      "query": "只复位 world 1 的机器人和 solver 历史，怎样保留其他 world 与 global 实体，view mask 能直接复用吗？",
+      "record_id": "recipe:masked-reset-state-history",
+      "status": "passed",
+      "calls": 7,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "newton/_src/core/reset.py",
+        "newton/_src/solvers/solver.py",
+        "newton/_src/solvers/mujoco/solver_mujoco.py"
+      ],
+      "answer_evidence": {
+        "actual reset mask shape": true,
+        "global and public/private reset split": true
+      },
+      "tokenizer_tokens": 20586,
+      "logical_json_chars": 71708,
+      "utf8_bytes": 73736
+    },
+    {
+      "id": "X07",
+      "query": "IMU 在冲击时 MuJoCo 与 Kamino 读数不同，SensorContact 的接触点又错位，应使用哪些 observables 和状态坐标？",
+      "record_id": "recipe:contact-frame-imu-observation",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "newton/_src/sensors/sensor_imu.py",
+        "docs/concepts/solver_observables.rst"
+      ],
+      "answer_evidence": {
+        "actual backend acceleration difference": true,
+        "consumer distinction": true
+      },
+      "tokenizer_tokens": 15227,
+      "logical_json_chars": 53050,
+      "utf8_bytes": 55080
+    },
+    {
+      "id": "X08",
+      "query": "ADMM 耦合时关节或 attachment 好像被解两次，跨 solver 约束所有权如何分配，哪些关节行支持？",
+      "record_id": "recipe:coupling-interface-ownership",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "docs/concepts/coupling.rst",
+        "newton/_src/solvers/coupled/solver_coupled_admm.py"
+      ],
+      "answer_evidence": {
+        "actual interface joint restrictions": true,
+        "attachment and owner boundaries": true
+      },
+      "tokenizer_tokens": 18323,
+      "logical_json_chars": 68868,
+      "utf8_bytes": 71084
+    },
+    {
+      "id": "X09",
+      "query": "多步 Warp Tape rollout 梯度缺失，能直接用 XPBD 吗，状态历史、requires_grad 和 loss 应怎样安排？",
+      "record_id": "recipe:differentiable-rollout-history",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "docs/solvers/index.rst",
+        "newton/examples/diffsim/example_diffsim_ball.py"
+      ],
+      "answer_evidence": {
+        "actual Tape example and state history": true,
+        "backend limitation and no runtime claim": true
+      },
+      "tokenizer_tokens": 18056,
+      "logical_json_chars": 62114,
+      "utf8_bytes": 64292
+    },
+    {
+      "id": "X10",
+      "query": "同样 ke kd 在 MuJoCo 原生接触和 Newton 碰撞导入响应不同，solref 映射、有效质量和 refsafe 怎么理解？",
+      "record_id": "recipe:mujoco-contact-conversion",
+      "status": "passed",
+      "calls": 6,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "docs/solvers/mujoco.rst",
+        "newton/_src/solvers/mujoco/kernels.py"
+      ],
+      "answer_evidence": {
+        "actual numerical mapping and inverse-weight limit": true,
+        "no private-API or universal mass claim": true
+      },
+      "tokenizer_tokens": 18827,
+      "logical_json_chars": 61591,
+      "utf8_bytes": 63960
+    },
+    {
+      "id": "X11",
+      "query": "Kamino 从 PADMM 改成 DVI 只改字符串够吗，依赖默认和 r_p r_d r_c 能直接比较吗？",
+      "record_id": "recipe:kamino-backend-config-resolve",
+      "status": "passed",
+      "calls": 7,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "docs/solvers/kamino.rst",
+        "newton/_src/solvers/kamino/config.py",
+        "newton/_src/solvers/kamino/solver_kamino.py"
+      ],
+      "answer_evidence": {
+        "actual dependent defaults": true,
+        "residuals not normalized and different definitions": true
+      },
+      "tokenizer_tokens": 21554,
+      "logical_json_chars": 77079,
+      "utf8_bytes": 79684
+    },
+    {
+      "id": "X12",
+      "query": "VBD 打开 rigid_soft_enable_dat 就能保证完全不穿透吗，owned pipeline、运动预算、检测频率和 kinematic 有什么限制？",
+      "record_id": "recipe:vbd-dat-preconditions",
+      "status": "passed",
+      "calls": 5,
+      "recall_at_5": 1,
+      "reciprocal_rank": 1.0,
+      "source_paths": [
+        "newton/_src/solvers/vbd/solver_vbd.py"
+      ],
+      "answer_evidence": {
+        "actual DAT limits": true,
+        "owned resource and construction-time budget": true
+      },
+      "tokenizer_tokens": 18496,
+      "logical_json_chars": 68775,
+      "utf8_bytes": 71616
+    }
+  ],
+  "checks": [
+    {
+      "check": "P3 pre-content task pack unchanged",
+      "passed": true
+    },
+    {
+      "check": "X01 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X01 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X01 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X01 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X01 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X01 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X01 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X01 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X01 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X01 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X01 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X01 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X01 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X01 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X01 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X01 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X01 requested factual source returned newton/_src/sim/control.py",
+      "passed": true
+    },
+    {
+      "check": "X01 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X01 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X01 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X01 source baseline hash verified newton/_src/sim/control.py",
+      "passed": true
+    },
+    {
+      "check": "X01 requested factual source returned docs/migration.rst",
+      "passed": true
+    },
+    {
+      "check": "X01 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X01 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X01 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X01 source baseline hash verified docs/migration.rst",
+      "passed": true
+    },
+    {
+      "check": "X01 source-and-answer rubric coordinate and DOF split",
+      "passed": true
+    },
+    {
+      "check": "X01 source-and-answer rubric real clear implementation",
+      "passed": true
+    },
+    {
+      "check": "X01 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X02 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X02 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X02 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X02 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X02 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X02 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X02 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X02 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X02 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X02 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X02 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X02 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X02 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X02 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X02 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X02 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X02 requested factual source returned docs/concepts/actuators.rst",
+      "passed": true
+    },
+    {
+      "check": "X02 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X02 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X02 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X02 source baseline hash verified docs/concepts/actuators.rst",
+      "passed": true
+    },
+    {
+      "check": "X02 source-and-answer rubric actual additive effort contract",
+      "passed": true
+    },
+    {
+      "check": "X02 source-and-answer rubric schedule and double-drive explanation",
+      "passed": true
+    },
+    {
+      "check": "X02 call target 5",
+      "passed": true
+    },
+    {
+      "check": "X03 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X03 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X03 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X03 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X03 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X03 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X03 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X03 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X03 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X03 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X03 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X03 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X03 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X03 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X03 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X03 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X03 requested factual source returned newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "X03 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X03 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X03 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X03 source baseline hash verified newton/_src/sim/builder.py",
+      "passed": true
+    },
+    {
+      "check": "X03 requested factual source returned docs/concepts/collisions.rst",
+      "passed": true
+    },
+    {
+      "check": "X03 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X03 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X03 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X03 source baseline hash verified docs/concepts/collisions.rst",
+      "passed": true
+    },
+    {
+      "check": "X03 source-and-answer rubric actual geometry API contract",
+      "passed": true
+    },
+    {
+      "check": "X03 source-and-answer rubric candidate filtering distinct",
+      "passed": true
+    },
+    {
+      "check": "X03 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X04 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X04 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X04 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X04 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X04 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X04 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X04 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X04 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X04 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X04 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X04 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X04 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X04 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X04 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X04 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X04 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X04 requested factual source returned docs/concepts/solver_observables.rst",
+      "passed": true
+    },
+    {
+      "check": "X04 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X04 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X04 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X04 source baseline hash verified docs/concepts/solver_observables.rst",
+      "passed": true
+    },
+    {
+      "check": "X04 requested factual source returned newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "X04 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X04 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X04 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X04 source baseline hash verified newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "X04 source-and-answer rubric actual allocation freeze",
+      "passed": true
+    },
+    {
+      "check": "X04 source-and-answer rubric capacity not iterations",
+      "passed": true
+    },
+    {
+      "check": "X04 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X05 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X05 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X05 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X05 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X05 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X05 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X05 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X05 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X05 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X05 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X05 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X05 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X05 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X05 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X05 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X05 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X05 requested factual source returned newton/_src/sim/enums.py",
+      "passed": true
+    },
+    {
+      "check": "X05 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X05 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X05 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X05 source baseline hash verified newton/_src/sim/enums.py",
+      "passed": true
+    },
+    {
+      "check": "X05 requested factual source returned newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "X05 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X05 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X05 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X05 source baseline hash verified newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "X05 source-and-answer rubric narrow flags are distinct actual bits",
+      "passed": true
+    },
+    {
+      "check": "X05 source-and-answer rubric specific notifications and graph boundaries",
+      "passed": true
+    },
+    {
+      "check": "X05 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X06 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X06 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X06 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X06 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X06 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X06 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X06 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X06 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X06 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X06 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X06 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X06 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X06 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X06 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X06 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X06 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X06 requested factual source returned newton/_src/core/reset.py",
+      "passed": true
+    },
+    {
+      "check": "X06 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X06 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X06 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X06 source baseline hash verified newton/_src/core/reset.py",
+      "passed": true
+    },
+    {
+      "check": "X06 requested factual source returned newton/_src/solvers/solver.py",
+      "passed": true
+    },
+    {
+      "check": "X06 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X06 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X06 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X06 source baseline hash verified newton/_src/solvers/solver.py",
+      "passed": true
+    },
+    {
+      "check": "X06 requested factual source returned newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "X06 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X06 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X06 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X06 source baseline hash verified newton/_src/solvers/mujoco/solver_mujoco.py",
+      "passed": true
+    },
+    {
+      "check": "X06 source-and-answer rubric actual reset mask shape",
+      "passed": true
+    },
+    {
+      "check": "X06 source-and-answer rubric global and public/private reset split",
+      "passed": true
+    },
+    {
+      "check": "X06 call target 7",
+      "passed": true
+    },
+    {
+      "check": "X07 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X07 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X07 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X07 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X07 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X07 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X07 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X07 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X07 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X07 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X07 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X07 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X07 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X07 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X07 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X07 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X07 requested factual source returned newton/_src/sensors/sensor_imu.py",
+      "passed": true
+    },
+    {
+      "check": "X07 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X07 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X07 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X07 source baseline hash verified newton/_src/sensors/sensor_imu.py",
+      "passed": true
+    },
+    {
+      "check": "X07 requested factual source returned docs/concepts/solver_observables.rst",
+      "passed": true
+    },
+    {
+      "check": "X07 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X07 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X07 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X07 source baseline hash verified docs/concepts/solver_observables.rst",
+      "passed": true
+    },
+    {
+      "check": "X07 source-and-answer rubric actual backend acceleration difference",
+      "passed": true
+    },
+    {
+      "check": "X07 source-and-answer rubric consumer distinction",
+      "passed": true
+    },
+    {
+      "check": "X07 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X08 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X08 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X08 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X08 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X08 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X08 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X08 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X08 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X08 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X08 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X08 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X08 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X08 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X08 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X08 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X08 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X08 requested factual source returned docs/concepts/coupling.rst",
+      "passed": true
+    },
+    {
+      "check": "X08 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X08 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X08 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X08 source baseline hash verified docs/concepts/coupling.rst",
+      "passed": true
+    },
+    {
+      "check": "X08 requested factual source returned newton/_src/solvers/coupled/solver_coupled_admm.py",
+      "passed": true
+    },
+    {
+      "check": "X08 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X08 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X08 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X08 source baseline hash verified newton/_src/solvers/coupled/solver_coupled_admm.py",
+      "passed": true
+    },
+    {
+      "check": "X08 source-and-answer rubric actual interface joint restrictions",
+      "passed": true
+    },
+    {
+      "check": "X08 source-and-answer rubric attachment and owner boundaries",
+      "passed": true
+    },
+    {
+      "check": "X08 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X09 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X09 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X09 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X09 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X09 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X09 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X09 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X09 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X09 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X09 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X09 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X09 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X09 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X09 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X09 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X09 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X09 requested factual source returned docs/solvers/index.rst",
+      "passed": true
+    },
+    {
+      "check": "X09 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X09 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X09 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X09 source baseline hash verified docs/solvers/index.rst",
+      "passed": true
+    },
+    {
+      "check": "X09 requested factual source returned newton/examples/diffsim/example_diffsim_ball.py",
+      "passed": true
+    },
+    {
+      "check": "X09 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X09 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X09 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X09 source baseline hash verified newton/examples/diffsim/example_diffsim_ball.py",
+      "passed": true
+    },
+    {
+      "check": "X09 source-and-answer rubric actual Tape example and state history",
+      "passed": true
+    },
+    {
+      "check": "X09 source-and-answer rubric backend limitation and no runtime claim",
+      "passed": true
+    },
+    {
+      "check": "X09 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X10 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X10 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X10 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X10 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X10 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X10 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X10 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X10 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X10 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X10 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X10 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X10 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X10 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X10 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X10 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X10 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X10 requested factual source returned docs/solvers/mujoco.rst",
+      "passed": true
+    },
+    {
+      "check": "X10 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X10 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X10 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X10 source baseline hash verified docs/solvers/mujoco.rst",
+      "passed": true
+    },
+    {
+      "check": "X10 requested factual source returned newton/_src/solvers/mujoco/kernels.py",
+      "passed": true
+    },
+    {
+      "check": "X10 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X10 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X10 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X10 source baseline hash verified newton/_src/solvers/mujoco/kernels.py",
+      "passed": true
+    },
+    {
+      "check": "X10 source-and-answer rubric actual numerical mapping and inverse-weight limit",
+      "passed": true
+    },
+    {
+      "check": "X10 source-and-answer rubric no private-API or universal mass claim",
+      "passed": true
+    },
+    {
+      "check": "X10 call target 6",
+      "passed": true
+    },
+    {
+      "check": "X11 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X11 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X11 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X11 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X11 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X11 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X11 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X11 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X11 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X11 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X11 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X11 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X11 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X11 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X11 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X11 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X11 requested factual source returned docs/solvers/kamino.rst",
+      "passed": true
+    },
+    {
+      "check": "X11 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X11 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X11 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X11 source baseline hash verified docs/solvers/kamino.rst",
+      "passed": true
+    },
+    {
+      "check": "X11 requested factual source returned newton/_src/solvers/kamino/config.py",
+      "passed": true
+    },
+    {
+      "check": "X11 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X11 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X11 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X11 source baseline hash verified newton/_src/solvers/kamino/config.py",
+      "passed": true
+    },
+    {
+      "check": "X11 requested factual source returned newton/_src/solvers/kamino/solver_kamino.py",
+      "passed": true
+    },
+    {
+      "check": "X11 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X11 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X11 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X11 source baseline hash verified newton/_src/solvers/kamino/solver_kamino.py",
+      "passed": true
+    },
+    {
+      "check": "X11 source-and-answer rubric actual dependent defaults",
+      "passed": true
+    },
+    {
+      "check": "X11 source-and-answer rubric residuals not normalized and different definitions",
+      "passed": true
+    },
+    {
+      "check": "X11 call target 7",
+      "passed": true
+    },
+    {
+      "check": "X12 held-out question not copied into indexed prose",
+      "passed": true
+    },
+    {
+      "check": "X12 successful exact read search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "X12 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X12 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X12 relevant recipe discovered",
+      "passed": true
+    },
+    {
+      "check": "X12 successful exact read get_document",
+      "passed": true
+    },
+    {
+      "check": "X12 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X12 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X12 complete exact recipe read",
+      "passed": true
+    },
+    {
+      "check": "X12 successful exact read get_relations",
+      "passed": true
+    },
+    {
+      "check": "X12 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X12 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X12 related API is discoverable",
+      "passed": true
+    },
+    {
+      "check": "X12 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X12 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X12 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X12 requested factual source returned newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "X12 successful exact read get_source",
+      "passed": true
+    },
+    {
+      "check": "X12 coherent snapshot",
+      "passed": true
+    },
+    {
+      "check": "X12 bounded tool response",
+      "passed": true
+    },
+    {
+      "check": "X12 source baseline hash verified newton/_src/solvers/vbd/solver_vbd.py",
+      "passed": true
+    },
+    {
+      "check": "X12 source-and-answer rubric actual DAT limits",
+      "passed": true
+    },
+    {
+      "check": "X12 source-and-answer rubric owned resource and construction-time budget",
+      "passed": true
+    },
+    {
+      "check": "X12 call target 5",
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "recall_at_5": 1.0,
+    "MRR": 1.0,
+    "tokenizer": "tiktoken 0.12.0 / o200k_base",
+    "actual_llm_usage_tokens": null,
+    "measurement": "Exact token counts of serialized tools; deterministic evidence workflow, no free-form LLM or physical simulation claim."
+  },
+  "validated_records": [
+    {
+      "id": "recipe:control-target-layout",
+      "body_sha256": "05633789f602a1d770fce7a331313eaa2c53d7cd61f7c91a94eb3a4db5f953e7"
+    },
+    {
+      "id": "recipe:actuator-effort-scheduling",
+      "body_sha256": "1d87ec8410c42419071945189ec49d982aa5df2ae4f6915a5d1d1b2d6efab16a"
+    },
+    {
+      "id": "recipe:collision-preflight",
+      "body_sha256": "52aa9a99cf100adb735c221e5bca357c3fbbd730782a22590b447082778df164"
+    },
+    {
+      "id": "recipe:contact-capacity-diagnosis",
+      "body_sha256": "ac58b6b30b193eed0d23c3736a0dfe158b8c9b87759c48f56c8986ad3bed43e2"
+    },
+    {
+      "id": "recipe:model-update-notification",
+      "body_sha256": "55678ac32b40c93fe731c497d54cd6dc1804aefce9697aa095928a90ea34ab11"
+    },
+    {
+      "id": "recipe:masked-reset-state-history",
+      "body_sha256": "e8e3f701e4572c3ba9297c3e215caeee50ea9a31dbb7010b7978e6f1f3e20131"
+    },
+    {
+      "id": "recipe:contact-frame-imu-observation",
+      "body_sha256": "b4d9c13b96e0b2e369d85c3e0cb917c7868c7b01ea25f08d77595ae7cbefcfd2"
+    },
+    {
+      "id": "recipe:coupling-interface-ownership",
+      "body_sha256": "43a953e907c0ff3c31b4abe8acd6cbd0890730b2c1228a7e987043b0f1ae60a2"
+    },
+    {
+      "id": "recipe:differentiable-rollout-history",
+      "body_sha256": "c3a76d1b4147fcb43bd1ab26a1bf11153e03e4aec6a3ad94a9e4be617b3cf79f"
+    },
+    {
+      "id": "recipe:mujoco-contact-conversion",
+      "body_sha256": "c7415be05602353bea0ebc22ab6dda2cd6c1fb8607c54dbf86b65a074960287d"
+    },
+    {
+      "id": "recipe:kamino-backend-config-resolve",
+      "body_sha256": "2ec3e86f3672d5551598cfc773b76a6ce9c004a6e4f6f91c854eddd9495bba10"
+    },
+    {
+      "id": "recipe:vbd-dat-preconditions",
+      "body_sha256": "cbde57692a365c6895f7f8752e8b08e68415d8f50212df2cd86bd00df4dbeaf8"
+    }
+  ]
+}

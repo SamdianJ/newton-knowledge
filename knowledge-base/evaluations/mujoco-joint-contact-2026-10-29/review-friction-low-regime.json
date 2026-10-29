@@ -1,0 +1,1720 @@
+{
+  "status": "passed",
+  "review_script_sha256": "d9cc92adc9368cd4f9db51b10a314a425071b26a728eb2ca9ff407e548bc621e",
+  "reviewed_files_sha256": {
+    "protocol.json": "7136df96193e18891909fbface417912db6bc724121f092cf328be9958dc272a",
+    "runner.py": "5618113797309194a7318b8501fcf6a52d64dbeffa3d33913f94e9c552805fd3",
+    "analyze.py": "ee5e94cb9a904355ce5f0f308fe53519032a7eba9e4a92a3eb59d0c036326733",
+    "analysis.json": "3acc7be887d748f047044187f6740383ac33bad03e5df2da2d133c701bec9331",
+    "publication.json": "a6022353ce83bedee33a8fbcf310d90f7e4459202e6c3b20384953305e6ac7ba",
+    "RESULTS.md": "dc669501d77429b86750d9e97a7f6aad78867dff37c69301959a3e46957f5719"
+  },
+  "prerun_design_sha256": "ee20526eeb1d347e04ea90945fe495273e57c40d9c0db49678cffb0f3f14ffb7",
+  "checks": 210,
+  "passed_checks": 210,
+  "measurements": [
+    {
+      "case": "mujoco_sliding_friction_mu_low_regime",
+      "variant": "A",
+      "repeat": 1,
+      "run_id": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z",
+      "first_normal_N": 9.790645575635697,
+      "predicted_first_normal_N": 9.790645161365411,
+      "initial_QP_error_N": 4.1427028563134627e-07,
+      "initial_KKT_branch": "saturated_boundary",
+      "linear_impulse_error_Ns": 1.2713052114764894e-07,
+      "per_step_linear_identity_error_mps": 9.171851631896227e-10,
+      "angular_impulse_error_Nms": null,
+      "constant_load_reference_error": 1.3800024986285186e-07,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 0.001000000047497451,
+      "cone_utilization_min": 0.9999999999999998,
+      "cone_utilization_max": 1.0000000000000002,
+      "supplemental_early_saturated_steps": 20,
+      "final_vx": 0.017056873068213463,
+      "final_wz": -1.8733946123422623e-20,
+      "tangent_impulse_Ns": 0.002942999354230552,
+      "torsion_impulse_Nms": 1.8431436932253577e-21,
+      "raw_sha256": "a620fecc356d8d99b0d547e3f875a40195623103dc26d8444d9b7868435f3e35"
+    },
+    {
+      "case": "mujoco_sliding_friction_mu_low_regime",
+      "variant": "A",
+      "repeat": 2,
+      "run_id": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z",
+      "first_normal_N": 9.790645575635697,
+      "predicted_first_normal_N": 9.790645161365411,
+      "initial_QP_error_N": 4.1427028563134627e-07,
+      "initial_KKT_branch": "saturated_boundary",
+      "linear_impulse_error_Ns": 1.2713052114764894e-07,
+      "per_step_linear_identity_error_mps": 9.171851631896227e-10,
+      "angular_impulse_error_Nms": null,
+      "constant_load_reference_error": 1.3800024986285186e-07,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 0.001000000047497451,
+      "cone_utilization_min": 0.9999999999999998,
+      "cone_utilization_max": 1.0000000000000002,
+      "supplemental_early_saturated_steps": 20,
+      "final_vx": 0.017056873068213463,
+      "final_wz": -1.8733946123422623e-20,
+      "tangent_impulse_Ns": 0.002942999354230552,
+      "torsion_impulse_Nms": 1.8431436932253577e-21,
+      "raw_sha256": "a620fecc356d8d99b0d547e3f875a40195623103dc26d8444d9b7868435f3e35"
+    },
+    {
+      "case": "mujoco_sliding_friction_mu_low_regime",
+      "variant": "B",
+      "repeat": 1,
+      "run_id": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z",
+      "first_normal_N": 9.802966022289104,
+      "predicted_first_normal_N": 9.8029656077255,
+      "initial_QP_error_N": 4.1456360300173856e-07,
+      "initial_KKT_branch": "saturated_boundary",
+      "linear_impulse_error_Ns": 1.2588650412581626e-07,
+      "per_step_linear_identity_error_mps": 9.212310080492512e-10,
+      "angular_impulse_error_Nms": null,
+      "constant_load_reference_error": 8.633971214193348e-08,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 0.004000000189989804,
+      "cone_utilization_min": 0.9999999999999998,
+      "cone_utilization_max": 1.0000000000000002,
+      "supplemental_early_saturated_steps": 20,
+      "final_vx": 0.008227936923503876,
+      "final_wz": 1.5995281977817394e-19,
+      "tangent_impulse_Ns": 0.011771989856309248,
+      "torsion_impulse_Nms": 6.7220534694101274e-21,
+      "raw_sha256": "9c32f222dd3d2d7873ab1ff0af2d3262c6c6e74a24f8f9856154449b8db6d270"
+    },
+    {
+      "case": "mujoco_sliding_friction_mu_low_regime",
+      "variant": "B",
+      "repeat": 2,
+      "run_id": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z",
+      "first_normal_N": 9.802966022289104,
+      "predicted_first_normal_N": 9.8029656077255,
+      "initial_QP_error_N": 4.1456360300173856e-07,
+      "initial_KKT_branch": "saturated_boundary",
+      "linear_impulse_error_Ns": 1.2588650412581626e-07,
+      "per_step_linear_identity_error_mps": 9.212310080492512e-10,
+      "angular_impulse_error_Nms": null,
+      "constant_load_reference_error": 8.633971214193348e-08,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 0.004000000189989804,
+      "cone_utilization_min": 0.9999999999999998,
+      "cone_utilization_max": 1.0000000000000002,
+      "supplemental_early_saturated_steps": 20,
+      "final_vx": 0.008227936923503876,
+      "final_wz": 1.5995281977817394e-19,
+      "tangent_impulse_Ns": 0.011771989856309248,
+      "torsion_impulse_Nms": 6.7220534694101274e-21,
+      "raw_sha256": "9c32f222dd3d2d7873ab1ff0af2d3262c6c6e74a24f8f9856154449b8db6d270"
+    },
+    {
+      "case": "mujoco_torsional_friction_condim_low_regime",
+      "variant": "A",
+      "repeat": 1,
+      "run_id": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z",
+      "first_normal_N": 9.419487077772024,
+      "predicted_first_normal_N": 9.419486679136162,
+      "initial_QP_error_N": 3.986358620977626e-07,
+      "initial_KKT_branch": "cone_interior",
+      "linear_impulse_error_Ns": 2.1022629360878386e-07,
+      "per_step_linear_identity_error_mps": 4.733663043791567e-10,
+      "angular_impulse_error_Nms": 1.4781951904296875e-08,
+      "constant_load_reference_error": 3.4570693969726562e-06,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 0.0,
+      "cone_utilization_min": 0.0,
+      "cone_utilization_max": 1.2719542074685662e-15,
+      "supplemental_early_saturated_steps": 0,
+      "final_vx": 5.491124759099048e-19,
+      "final_wz": 0.9999991059303284,
+      "tangent_impulse_Ns": -1.10838603581383e-17,
+      "torsion_impulse_Nms": -0.0,
+      "raw_sha256": "7e35e6e8db129e32426673884df39b4b46eb47ab89dcaf910f822e94dbd4574c"
+    },
+    {
+      "case": "mujoco_torsional_friction_condim_low_regime",
+      "variant": "A",
+      "repeat": 2,
+      "run_id": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z",
+      "first_normal_N": 9.419487077772024,
+      "predicted_first_normal_N": 9.419486679136162,
+      "initial_QP_error_N": 3.986358620977626e-07,
+      "initial_KKT_branch": "cone_interior",
+      "linear_impulse_error_Ns": 2.1022629360878386e-07,
+      "per_step_linear_identity_error_mps": 4.733663043791567e-10,
+      "angular_impulse_error_Nms": 1.4781951904296875e-08,
+      "constant_load_reference_error": 3.4570693969726562e-06,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 0.0,
+      "cone_utilization_min": 0.0,
+      "cone_utilization_max": 1.2719542074685662e-15,
+      "supplemental_early_saturated_steps": 0,
+      "final_vx": 5.491124759099048e-19,
+      "final_wz": 0.9999991059303284,
+      "tangent_impulse_Ns": -1.10838603581383e-17,
+      "torsion_impulse_Nms": -0.0,
+      "raw_sha256": "7e35e6e8db129e32426673884df39b4b46eb47ab89dcaf910f822e94dbd4574c"
+    },
+    {
+      "case": "mujoco_torsional_friction_condim_low_regime",
+      "variant": "B",
+      "repeat": 1,
+      "run_id": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z",
+      "first_normal_N": 9.42306214469092,
+      "predicted_first_normal_N": 9.423061746155039,
+      "initial_QP_error_N": 3.985358816294138e-07,
+      "initial_KKT_branch": "saturated_boundary",
+      "linear_impulse_error_Ns": 2.100315225224134e-07,
+      "per_step_linear_identity_error_mps": 4.739375238831459e-10,
+      "angular_impulse_error_Nms": 1.1475296139438541e-08,
+      "constant_load_reference_error": 2.7528961181744194e-06,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 1.9999999494757507e-05,
+      "cone_utilization_min": 0.9999999999999998,
+      "cone_utilization_max": 1.0000000000000002,
+      "supplemental_early_saturated_steps": 20,
+      "final_vx": 1.2120256655291135e-20,
+      "final_wz": 0.9754766225814819,
+      "tangent_impulse_Ns": -1.0984428940781153e-20,
+      "torsion_impulse_Nms": 9.809995750338489e-05,
+      "raw_sha256": "649592625aa1162d4acf42133a67b4bb2cc70bba9c9f45f0034a25e425c996e2"
+    },
+    {
+      "case": "mujoco_torsional_friction_condim_low_regime",
+      "variant": "B",
+      "repeat": 2,
+      "run_id": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z",
+      "first_normal_N": 9.42306214469092,
+      "predicted_first_normal_N": 9.423061746155039,
+      "initial_QP_error_N": 3.985358816294138e-07,
+      "initial_KKT_branch": "saturated_boundary",
+      "linear_impulse_error_Ns": 2.100315225224134e-07,
+      "per_step_linear_identity_error_mps": 4.739375238831459e-10,
+      "angular_impulse_error_Nms": 1.1475296139438541e-08,
+      "constant_load_reference_error": 2.7528961181744194e-06,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "full_positive_normal_fraction": 1.0,
+      "force_ratio": 1.9999999494757507e-05,
+      "cone_utilization_min": 0.9999999999999998,
+      "cone_utilization_max": 1.0000000000000002,
+      "supplemental_early_saturated_steps": 20,
+      "final_vx": 1.2120256655291135e-20,
+      "final_wz": 0.9754766225814819,
+      "tangent_impulse_Ns": -1.0984428940781153e-20,
+      "torsion_impulse_Nms": 9.809995750338489e-05,
+      "raw_sha256": "649592625aa1162d4acf42133a67b4bb2cc70bba9c9f45f0034a25e425c996e2"
+    }
+  ],
+  "checks_detail": [
+    {
+      "name": "frozen protocol",
+      "actual": "7136df96193e18891909fbface417912db6bc724121f092cf328be9958dc272a",
+      "expected": "7136df96193e18891909fbface417912db6bc724121f092cf328be9958dc272a",
+      "passed": true
+    },
+    {
+      "name": "prerun design hash",
+      "actual": "ee20526eeb1d347e04ea90945fe495273e57c40d9c0db49678cffb0f3f14ffb7",
+      "expected": "ee20526eeb1d347e04ea90945fe495273e57c40d9c0db49678cffb0f3f14ffb7",
+      "passed": true
+    },
+    {
+      "name": "analyzer fingerprint",
+      "actual": "ee5e94cb9a904355ce5f0f308fe53519032a7eba9e4a92a3eb59d0c036326733",
+      "expected": "ee5e94cb9a904355ce5f0f308fe53519032a7eba9e4a92a3eb59d0c036326733",
+      "passed": true
+    },
+    {
+      "name": "publication analysis fingerprint",
+      "actual": "3acc7be887d748f047044187f6740383ac33bad03e5df2da2d133c701bec9331",
+      "expected": "3acc7be887d748f047044187f6740383ac33bad03e5df2da2d133c701bec9331",
+      "passed": true
+    },
+    {
+      "name": "formal run count",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z start after freeze",
+      "actual": "2026-10-29T08:42:40.702991+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z J transpose force",
+      "actual": 1.8441652475978375e-16,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z accumulated linear impulse",
+      "actual": 1.2713052114764894e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z pre-run QP prediction",
+      "actual": 4.1427028563134627e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z first N below mg",
+      "actual": 9.790645575635697,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z cone feasible",
+      "actual": 1.0000000000000002,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z supplemental 20 early saturated steps",
+      "actual": 20,
+      "expected": 20,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z constant-load speed reference",
+      "actual": 1.3800024986285186e-07,
+      "expected": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z force ratio",
+      "actual": 0.001000000047497451,
+      "expected": 0.001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r1_20261029T084240698986Z sustained slip",
+      "actual": 0.017056873068213463,
+      "expected": 0.005,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z start after freeze",
+      "actual": "2026-10-29T08:42:47.805700+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z J transpose force",
+      "actual": 1.8441652475978375e-16,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z accumulated linear impulse",
+      "actual": 1.2713052114764894e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z pre-run QP prediction",
+      "actual": 4.1427028563134627e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z first N below mg",
+      "actual": 9.790645575635697,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z cone feasible",
+      "actual": 1.0000000000000002,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z supplemental 20 early saturated steps",
+      "actual": 20,
+      "expected": 20,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z constant-load speed reference",
+      "actual": 1.3800024986285186e-07,
+      "expected": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z force ratio",
+      "actual": 0.001000000047497451,
+      "expected": 0.001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_A_r2_20261029T084247801186Z sustained slip",
+      "actual": 0.017056873068213463,
+      "expected": 0.005,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z start after freeze",
+      "actual": "2026-10-29T08:42:54.879096+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z J transpose force",
+      "actual": 1.9246465919103727e-16,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z accumulated linear impulse",
+      "actual": 1.2588650412581626e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z pre-run QP prediction",
+      "actual": 4.1456360300173856e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z first N below mg",
+      "actual": 9.802966022289104,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z cone feasible",
+      "actual": 1.0000000000000002,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z supplemental 20 early saturated steps",
+      "actual": 20,
+      "expected": 20,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z constant-load speed reference",
+      "actual": 8.633971214193348e-08,
+      "expected": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z force ratio",
+      "actual": 0.004000000189989804,
+      "expected": 0.004,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r1_20261029T084254875093Z sustained slip",
+      "actual": 0.008227936923503876,
+      "expected": 0.005,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z start after freeze",
+      "actual": "2026-10-29T08:43:01.837813+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z J transpose force",
+      "actual": 1.9246465919103727e-16,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z accumulated linear impulse",
+      "actual": 1.2588650412581626e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z pre-run QP prediction",
+      "actual": 4.1456360300173856e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z first N below mg",
+      "actual": 9.802966022289104,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z cone feasible",
+      "actual": 1.0000000000000002,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z supplemental 20 early saturated steps",
+      "actual": 20,
+      "expected": 20,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z constant-load speed reference",
+      "actual": 8.633971214193348e-08,
+      "expected": 0.0008,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z force ratio",
+      "actual": 0.004000000189989804,
+      "expected": 0.004,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime_B_r2_20261029T084301831597Z sustained slip",
+      "actual": 0.008227936923503876,
+      "expected": 0.005,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z start after freeze",
+      "actual": "2026-10-29T08:43:08.743747+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z J transpose force",
+      "actual": 3.0814879110195774e-33,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z accumulated linear impulse",
+      "actual": 2.1022629360878386e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z pre-run QP prediction",
+      "actual": 3.986358620977626e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z first N below mg",
+      "actual": 9.419487077772024,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z cone feasible",
+      "actual": 1.2719542074685662e-15,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z angular impulse",
+      "actual": 1.4781951904296875e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z constant-load spin reference",
+      "actual": 3.4570693969726562e-06,
+      "expected": 0.0025,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r1_20261029T084308739659Z condim3 torque zero",
+      "actual": 0.0,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z start after freeze",
+      "actual": "2026-10-29T08:43:15.846337+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z J transpose force",
+      "actual": 3.0814879110195774e-33,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z accumulated linear impulse",
+      "actual": 2.1022629360878386e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z pre-run QP prediction",
+      "actual": 3.986358620977626e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z first N below mg",
+      "actual": 9.419487077772024,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z cone feasible",
+      "actual": 1.2719542074685662e-15,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z angular impulse",
+      "actual": 1.4781951904296875e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z constant-load spin reference",
+      "actual": 3.4570693969726562e-06,
+      "expected": 0.0025,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_A_r2_20261029T084315840359Z condim3 torque zero",
+      "actual": 0.0,
+      "expected": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z start after freeze",
+      "actual": "2026-10-29T08:43:22.837852+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z J transpose force",
+      "actual": 2.407412430484045e-35,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z accumulated linear impulse",
+      "actual": 2.100315225224134e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z pre-run QP prediction",
+      "actual": 3.985358816294138e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z first N below mg",
+      "actual": 9.42306214469092,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z cone feasible",
+      "actual": 1.0000000000000002,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z supplemental 20 early saturated steps",
+      "actual": 20,
+      "expected": 20,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z angular impulse",
+      "actual": 1.1475296139438541e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z constant-load spin reference",
+      "actual": 2.7528961181744194e-06,
+      "expected": 0.0025,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z torsion ratio",
+      "actual": 1.9999999494757507e-05,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r1_20261029T084322833849Z active torsion above floor",
+      "actual": 1.9999999494757503e-05,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z completed",
+      "actual": "completed",
+      "expected": "completed",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z protocol/code identity",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z start after freeze",
+      "actual": "2026-10-29T08:43:29.799280+00:00",
+      "expected": "2026-10-29T08:41:21.164670+00:00",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z locked source 809",
+      "actual": 809,
+      "expected": 809,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z all finite",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z actual timestep",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z actual backend",
+      "actual": {
+        "use_mujoco_cpu": true,
+        "use_mujoco_contacts": true,
+        "update_data_interval": 1
+      },
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z actual cone/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z independent world wrench",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z J transpose force",
+      "actual": 2.407412430484045e-35,
+      "expected": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z contact/native force",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z R scaling",
+      "actual": 0.0,
+      "expected": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z accumulated linear impulse",
+      "actual": 2.100315225224134e-07,
+      "expected": 0.0002,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z settled active",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z settled positive force",
+      "actual": 1.0,
+      "expected": 0.99,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z reported full 100% bearing",
+      "actual": 1.0,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z pre-run QP prediction",
+      "actual": 3.985358816294138e-07,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z first N below mg",
+      "actual": 9.42306214469092,
+      "expected": 9.81,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z cone feasible",
+      "actual": 1.0000000000000002,
+      "expected": 1.00001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z supplemental 20 early saturated steps",
+      "actual": 20,
+      "expected": 20,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z angular impulse",
+      "actual": 1.1475296139438541e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z constant-load spin reference",
+      "actual": 2.7528961181744194e-06,
+      "expected": 0.0025,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z torsion ratio",
+      "actual": 1.9999999494757507e-05,
+      "expected": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime_B_r2_20261029T084329795279Z active torsion above floor",
+      "actual": 1.9999999494757503e-05,
+      "expected": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regimeA all arrays exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_nefc": 0.0,
+        "native_efc_R": 0.0,
+        "native_efc_KBIP": 0.0,
+        "native_efc_aref": 0.0,
+        "native_efc_force": 0.0,
+        "native_efc_vel": 0.0,
+        "native_efc_b": 0.0,
+        "native_efc_J": 0.0,
+        "native_efc_pos": 0.0,
+        "native_efc_margin": 0.0,
+        "native_contact_regularized_mu": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regimeB all arrays exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_nefc": 0.0,
+        "native_efc_R": 0.0,
+        "native_efc_KBIP": 0.0,
+        "native_efc_aref": 0.0,
+        "native_efc_force": 0.0,
+        "native_efc_vel": 0.0,
+        "native_efc_b": 0.0,
+        "native_efc_J": 0.0,
+        "native_efc_pos": 0.0,
+        "native_efc_margin": 0.0,
+        "native_contact_regularized_mu": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime1 paired effect",
+      "actual": 0.008828936144709587,
+      "expected": 0.006,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime1 paired impulse",
+      "actual": 0.008828990502078696,
+      "expected": 0.006,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime2 paired effect",
+      "actual": 0.008828936144709587,
+      "expected": 0.006,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_low_regime2 paired impulse",
+      "actual": 0.008828990502078696,
+      "expected": 0.006,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regimeA all arrays exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_nefc": 0.0,
+        "native_efc_R": 0.0,
+        "native_efc_KBIP": 0.0,
+        "native_efc_aref": 0.0,
+        "native_efc_force": 0.0,
+        "native_efc_vel": 0.0,
+        "native_efc_b": 0.0,
+        "native_efc_J": 0.0,
+        "native_efc_pos": 0.0,
+        "native_efc_margin": 0.0,
+        "native_contact_regularized_mu": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regimeB all arrays exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_nefc": 0.0,
+        "native_efc_R": 0.0,
+        "native_efc_KBIP": 0.0,
+        "native_efc_aref": 0.0,
+        "native_efc_force": 0.0,
+        "native_efc_vel": 0.0,
+        "native_efc_b": 0.0,
+        "native_efc_J": 0.0,
+        "native_efc_pos": 0.0,
+        "native_efc_margin": 0.0,
+        "native_contact_regularized_mu": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime1 paired effect",
+      "actual": 0.024522483348846436,
+      "expected": 0.015,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime1 paired impulse",
+      "actual": 9.809995750338489e-05,
+      "expected": 6e-05,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime2 paired effect",
+      "actual": 0.024522483348846436,
+      "expected": 0.015,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_low_regime2 paired impulse",
+      "actual": 9.809995750338489e-05,
+      "expected": 6e-05,
+      "passed": true
+    },
+    {
+      "name": "four original negatives retained",
+      "actual": [
+        {
+          "group": "friction",
+          "id": "mujoco_sliding_friction_mu",
+          "physical_acceptance": "failed_criteria"
+        },
+        {
+          "group": "friction",
+          "id": "mujoco_torsional_friction_condim",
+          "physical_acceptance": "failed_criteria"
+        },
+        {
+          "group": "friction_stable",
+          "id": "mujoco_sliding_friction_mu_stable",
+          "physical_acceptance": "failed_criteria"
+        },
+        {
+          "group": "friction_stable",
+          "id": "mujoco_torsional_friction_condim_stable",
+          "physical_acceptance": "failed_criteria"
+        }
+      ],
+      "expected": "four failed_criteria",
+      "passed": true
+    }
+  ],
+  "original_negative_cases": [
+    {
+      "group": "friction",
+      "id": "mujoco_sliding_friction_mu",
+      "physical_acceptance": "failed_criteria"
+    },
+    {
+      "group": "friction",
+      "id": "mujoco_torsional_friction_condim",
+      "physical_acceptance": "failed_criteria"
+    },
+    {
+      "group": "friction_stable",
+      "id": "mujoco_sliding_friction_mu_stable",
+      "physical_acceptance": "failed_criteria"
+    },
+    {
+      "group": "friction_stable",
+      "id": "mujoco_torsional_friction_condim_stable",
+      "physical_acceptance": "failed_criteria"
+    }
+  ],
+  "scope": "Independent raw contact-frame wrench reconstruction, preregistered QP prediction lookup, R/J force identities, linear/angular impulses, mg reference, actual bearing, cone utilization, repeat and frozen provenance. No target analyzer import and no physics.",
+  "limitations": [
+    "Low-regime local result only; does not solve or supersede four original failed cases.",
+    "The 20 early saturation samples are supplemental diagnostics, not retroactive frozen physical acceptance.",
+    "No generic gain/friction/time-step recommendation and no broad solver convergence claim."
+  ]
+}

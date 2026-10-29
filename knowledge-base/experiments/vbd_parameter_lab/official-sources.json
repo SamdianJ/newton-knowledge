@@ -1,0 +1,55 @@
+{
+  "purpose": "Frozen copies of mutable latest guides; not Newton 1.7.0 documentation.",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "attribution": "Newton developers; original document rights retained. See original pages for license.",
+  "pages": [
+    {
+      "url": "https://newton-physics.github.io/newton/latest/solvers/index.html",
+      "resolved_url": "https://newton-physics.github.io/newton/latest/solvers/index.html",
+      "retrieved_at_utc": "2026-10-27T11:43:49.067016+00:00",
+      "path": "official-docs/solvers_index.html",
+      "sha256": "f749d61764a6d9f6cb33add1d24e61829321760d8a81fcdd1095da39fd805485",
+      "bytes": 109919
+    },
+    {
+      "url": "https://newton-physics.github.io/newton/latest/solvers/vbd.html",
+      "resolved_url": "https://newton-physics.github.io/newton/latest/solvers/vbd.html",
+      "retrieved_at_utc": "2026-10-27T11:43:48.931493+00:00",
+      "path": "official-docs/solvers_vbd.html",
+      "sha256": "faac13fbba4bd55d5e6c1bce09504bcab00226a3e86e6a19d9c38d4fac4e6d69",
+      "bytes": 45666
+    },
+    {
+      "url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html",
+      "resolved_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning.html",
+      "retrieved_at_utc": "2026-10-27T11:43:48.919243+00:00",
+      "path": "official-docs/concepts_simulation_tuning.html",
+      "sha256": "dfe09b1489bfbbbd4f2b9a6b2f9c7433b8fc75d22fac490c8e1cad9cb815baad",
+      "bytes": 46045
+    },
+    {
+      "url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html",
+      "resolved_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_vbd.html",
+      "retrieved_at_utc": "2026-10-27T11:43:48.960257+00:00",
+      "path": "official-docs/concepts_simulation_tuning_vbd.html",
+      "sha256": "ef73352466e0e4cd4817ab9ed568df3dff4291d46782d633710f983a6042539b",
+      "bytes": 45325
+    },
+    {
+      "url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_solvers.html",
+      "resolved_url": "https://newton-physics.github.io/newton/latest/concepts/simulation_tuning_solvers.html",
+      "retrieved_at_utc": "2026-10-27T11:43:49.650643+00:00",
+      "path": "official-docs/concepts_simulation_tuning_solvers.html",
+      "sha256": "ae2080167f9b194627db50de2709e0d30414e82a20bf1785fc513a4a969604bb",
+      "bytes": 98189
+    },
+    {
+      "url": "https://newton-physics.github.io/newton/latest/concepts/collisions.html",
+      "resolved_url": "https://newton-physics.github.io/newton/latest/concepts/collisions.html",
+      "retrieved_at_utc": "2026-10-27T11:43:49.763352+00:00",
+      "path": "official-docs/concepts_collisions.html",
+      "sha256": "5aacb3b13b6f6c39aa5094d69f81469063caf460fc15af08b46f0c6c7461f00d",
+      "bytes": 330366
+    }
+  ]
+}

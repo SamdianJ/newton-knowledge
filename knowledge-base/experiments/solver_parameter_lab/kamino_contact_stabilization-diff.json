@@ -1,0 +1,21 @@
+{
+  "requested_diff": [
+    {
+      "path": "constructor.constraints.gamma",
+      "A": 0.0,
+      "B": 0.2
+    },
+    {
+      "path": "treatment.gamma",
+      "A": 0.0,
+      "B": 0.2
+    }
+  ],
+  "resolved_diff": [
+    {
+      "path": "constraints.gamma",
+      "A": 0.0,
+      "B": 0.2
+    }
+  ]
+}

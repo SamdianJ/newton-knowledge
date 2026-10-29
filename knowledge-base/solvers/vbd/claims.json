@@ -1,0 +1,705 @@
+[
+  {
+    "id": "c:implicit",
+    "statement_zh": "VBD 通过惯性势能与材料能量构造隐式积分问题，逐顶点解 3×3 局部系统；每次局部 Newton 更新不等于完整求解全局最小值。",
+    "scope": "particle",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+        "line": 2720,
+        "end_line": 2857,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2720-L2857"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::solve_elasticity@L2720"
+    ],
+    "paper_refs": [
+      {
+        "id": "paper:vbd2024",
+        "locator": "PDF pp.3–4, Eqs.(2)–(9)",
+        "relation": "method_background_not_implementation_identity"
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:iterations"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:step",
+    "statement_zh": "step 的顺序为初始化、交错外迭代、最终输出；每个外迭代先刚体后粒子，最后更新速度及历史。",
+    "scope": "all",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2513,
+        "end_line": 2609,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2513-L2609"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.step@L2513"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:iterations"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:alm_mode",
+    "statement_zh": "Newton 1.7.0 省略 rigid_compliant_alm 实际选择 legacy False；推荐显式 True 启用 compliant ALM。",
+    "scope": "rigid",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 353,
+        "end_line": 1000,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 708,
+        "end_line": 708,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L708"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.__init__@L353"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_compliant_alm"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:alm_math",
+    "statement_zh": "compliant ALM 将材料刚度 K 与数值 rho 分开，s=K/(K+rho)，k_eff=K*rho/(K+rho)，行力项为 k_eff*C+s*lambda；并非直接等同 AVBD 论文 legacy 公式。",
+    "scope": "rigid compliant",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+        "line": 153,
+        "end_line": 163,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L153-L163"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_material_force_terms@L153"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_compliant_alm",
+      "newton:1.7.0:SolverVBD:rigid_joint_linear_ke"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:dual",
+    "statement_zh": "compliant 的有限刚度双边行按 lambda <- s*(lambda+rho*(C-alpha*C0)) 更新；单边接触还投影法向非负和切向 Coulomb 圆盘。",
+    "scope": "rigid compliant",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+        "line": 1078,
+        "end_line": 1103,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L1078-L1103"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+        "line": 1400,
+        "end_line": 1400,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L1400"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_compliant_contact_dual_step@L1078"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_avbd_alpha",
+      "newton:1.7.0:SolverVBD:rigid_avbd_contact_alpha"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:legacy",
+    "statement_zh": "legacy 硬行积累乘子，软行不按同样方式积累；beta 控制 penalty 增长，compliant 刚体结构行走内部 rho 策略。body-particle 路径仍有 penalty 更新。",
+    "scope": "legacy / body-particle",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+        "line": 1425,
+        "end_line": 1464,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L1425-L1464"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4008,
+        "end_line": 4008,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4008"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_update_joint_structural_dual@L1425"
+    ],
+    "paper_refs": [
+      {
+        "id": "paper:avbd2025",
+        "locator": "PDF pp.3–6, Eqs.(8)–(12),(19), Algorithm 1",
+        "relation": "method_background_not_implementation_identity"
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_avbd_beta",
+      "newton:1.7.0:SolverVBD:rigid_contact_hard"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:friction",
+    "statement_zh": "friction_epsilon 是速度平滑阈值，内核将它乘 dt；摩擦系数来自材料 mu。",
+    "scope": "contact",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+        "line": 1348,
+        "end_line": 1378,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L1348-L1378"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+        "line": 984,
+        "end_line": 984,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L984"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::compute_friction@L1348"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:friction_epsilon"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:margin",
+    "statement_zh": "1.7.0 的 margin 单独设置仍为旧检测半径语义；新语义必须显式设置 gap，query radius=margin+gap。",
+    "scope": "soft self-contact",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 353,
+        "end_line": 1000,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 759,
+        "end_line": 759,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L759"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.__init__@L353"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:particle_self_contact_margin",
+      "newton:1.7.0:SolverVBD:particle_self_contact_gap",
+      "newton:1.7.0:SolverVBD:particle_self_contact_radius"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:dat",
+    "statement_zh": "DAT 在候选接触定义的区域内截断位移；开启开关并不证明任意场景都无穿透或无翻转，初始合法性、候选覆盖及容量均需验证。",
+    "scope": "DAT conditional",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+        "line": 2054,
+        "end_line": 2188,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2054-L2188"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::apply_planar_truncation_parallel_by_collision@L2054"
+    ],
+    "paper_refs": [
+      {
+        "id": "paper:dat2026",
+        "locator": "PDF pp.3–5, Sec.3, Eqs.(11)–(16)",
+        "relation": "method_background_not_implementation_identity"
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+      "newton:1.7.0:SolverVBD:dat_conservative_bound_relaxation"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:capacity",
+    "statement_zh": "顶点/边自接触容量溢出会静默丢弃候选对；不能用增大 iterations 补偿已丢弃的候选。",
+    "scope": "soft self-contact",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 353,
+        "end_line": 1000,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 450,
+        "end_line": 450,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L450"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.__init__@L353"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:particle_vertex_contact_buffer_size",
+      "newton:1.7.0:SolverVBD:particle_edge_contact_buffer_size"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:external",
+    "statement_zh": "integrate_with_external_rigid_solver=True 只让 VBD 使用外部已积分刚体状态，本选项文档定义为单向耦合。",
+    "scope": "external rigid",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 3747,
+        "end_line": 3982,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3747-L3982"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._solve_particle_iteration@L3747"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:tile",
+    "statement_zh": "tile solve 仅 CUDA 可用，构造时根据材料类别特化；三角形/边刚度改变后需重建，CPU 探针不覆盖该路径。",
+    "scope": "particle CUDA",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1002,
+        "end_line": 1105,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1002-L1105"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._init_particle_system@L1002"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:particle_enable_tile_solve"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:history",
+    "statement_zh": "rigid_contact_history 需要有效 contact matching；owned pipeline 禁用 matching 时构造会拒绝。跨帧对应关系属于 pipeline。",
+    "scope": "rigid history",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 353,
+        "end_line": 1000,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 861,
+        "end_line": 861,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L861"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.__init__@L353"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_contact_history"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:ignored",
+    "statement_zh": "三个 rigid_contact_stick_* 参数在 1.7.0 已弃用并忽略。",
+    "scope": "constructor",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 353,
+        "end_line": 1000,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 722,
+        "end_line": 722,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L722"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.__init__@L353"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps",
+      "newton:1.7.0:SolverVBD:rigid_contact_stick_freeze_translation_eps",
+      "newton:1.7.0:SolverVBD:rigid_contact_stick_freeze_angular_eps"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:schedule",
+    "statement_zh": "solver 拥有 pipeline 时自己运行碰撞检测；AUTO 的 self-contact 和 rigid DAT 为 PRE_POST_INIT，普通 owned rigid 为 PRE_INIT。同时启用刚柔 DAT 与自接触时，RIGID/SOFT_SELF_CONTACT 必须同解析类型，ITERATIONS 时还须同频率。",
+    "scope": "collision ownership",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4690,
+        "end_line": 4712,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4690-L4712"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 4808,
+        "end_line": 4808,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4808"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._default_collision_frequency_type@L4690"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:collision_pipeline",
+      "newton:1.7.0:SolverVBD:collision_frequency_type",
+      "newton:1.7.0:SolverVBD:collision_frequency"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:support",
+    "statement_zh": "VBD 支持 BALL/FIXED/FREE/REVOLUTE/PRISMATIC/D6/ROD；DISTANCE、joint_armature、joint_friction、effort/velocity limits、joint_target_mode 和 equality constraints 不在此版本支持集合。",
+    "scope": "rigid feature boundary",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 167,
+        "end_line": 4866,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167-L4866"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD@L167"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:observable",
+    "statement_zh": "CONTACT_F 在最终迭代构形导出刚体-刚体与刚柔接触记录；不包含软体自接触力，不能把它当作所有接触力。",
+    "scope": "observables",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 167,
+        "end_line": 4866,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167-L4866"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD@L167"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:reset",
+    "statement_zh": "VBD reset 清理自己的历史但不代替重新碰撞；突变重置还需 reset_contact_matching。JOINT_Q/QD 不直接作为最大坐标状态重置。",
+    "scope": "lifecycle",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2612,
+        "end_line": 2797,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2612-L2797"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.reset@L2612"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:cache",
+    "statement_zh": "非 ROD 结构材料/布局/静止角在构造缓存；ROD target ke/kd 材料更新用 JOINT_DOF_PROPERTIES 或 JOINT_DOF_FORCE_PROPERTIES。ROD rest frame/rest pose 更新需 JOINT_PROPERTIES 或 BODY_PROPERTIES 才刷新静止弯扭角；直接改数组不保证派生量更新。",
+    "scope": "lifecycle",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1403,
+        "end_line": 1433,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1403-L1433"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 1803,
+        "end_line": 1803,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L1803"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.notify_model_changed@L1403"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_joint_linear_ke",
+      "newton:1.7.0:SolverVBD:rigid_joint_angular_ke"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:attachment",
+    "statement_zh": "粒子-刚体 attachment 要求 VBD 积分两端，不支持 external-rigid 模式；物理引擎支持 attachment 不等于真实抓取任务允许虚拟粘接。",
+    "scope": "model and task boundary",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 353,
+        "end_line": 1000,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.__init__@L353"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:rigid_dat_requires",
+    "statement_zh": "rigid_soft_enable_dat 要求 solver-owned collision_pipeline，禁止 external rigid solver，存在刚柔查询时要求 soft_contact_gap+最小粒子半径+最小 shape_margin 为正。",
+    "scope": "rigid-soft DAT",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/solver_vbd.py",
+        "line": 2837,
+        "end_line": 2896,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2837-L2896"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._init_rigid_penetration_free@L2837"
+    ],
+    "paper_refs": [],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+      "newton:1.7.0:SolverVBD:collision_pipeline"
+    ],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  },
+  {
+    "id": "c:damping",
+    "statement_zh": "1.7.0 膜/体积弹性内核使用基于 F^T F 的客观阻尼，不能直接把 VBD 2024 论文的简化 Rayleigh 阻尼公式当作当前 tri_kd/tet damping 实现。",
+    "scope": "particle material",
+    "version": "1.7.0",
+    "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+    "evidence_kind": "source_reading_and_qualified_interpretation",
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+        "line": 533,
+        "end_line": 662,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L533-L662"
+      }
+    ],
+    "symbol_ids": [
+      "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::evaluate_neo_hookean_membrane_force_hessian@L533"
+    ],
+    "paper_refs": [
+      {
+        "id": "paper:vbd2024",
+        "locator": "PDF p.4 Sec.3.3 is background, not current damping identity",
+        "relation": "method_background_not_implementation_identity"
+      }
+    ],
+    "parameter_ids": [],
+    "empirical_scope": null,
+    "review_status": "source_checked; not an empirical universal guarantee"
+  }
+]

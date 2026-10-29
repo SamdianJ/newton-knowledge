@@ -1,0 +1,767 @@
+{
+  "status": "passed",
+  "checks_passed": 97,
+  "checks_total": 97,
+  "checks": [
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/archived protocol and runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/physical model inertia",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/independent scalar reference",
+      "passed": true,
+      "actual": {
+        "effort": 2.6592179560580576e-06,
+        "q": 1.4049535024263093e-07,
+        "qd": 9.93194808979192e-07
+      }
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/wrench same reference",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/actual current limits",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/same-step impulse bound",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/exact notify edges",
+      "passed": true,
+      "actual": [
+        20,
+        40,
+        80,
+        100
+      ]
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/public notify precedes control and step",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/notification state invariance",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/bounded row retained",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/first post-notify step 20",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/first post-notify step 40",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/first post-notify step 80",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/first post-notify step 100",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/all20 branch phase0",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/all20 branch phase1",
+      "passed": true,
+      "actual": 2.098713755607605
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/all20 branch phase2",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/all20 branch phase3",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/all20 branch phase4",
+      "passed": true,
+      "actual": 0.5704751014709473
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/all20 branch phase5",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/strict status independently consistent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/solved status finite",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/archived protocol and runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/physical model inertia",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/independent scalar reference",
+      "passed": true,
+      "actual": {
+        "effort": 2.6592179560580576e-06,
+        "q": 1.4049535024263093e-07,
+        "qd": 9.93194808979192e-07
+      }
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/wrench same reference",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/actual current limits",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/same-step impulse bound",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/exact notify edges",
+      "passed": true,
+      "actual": [
+        20,
+        40,
+        80,
+        100
+      ]
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/public notify precedes control and step",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/notification state invariance",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/bounded row retained",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/first post-notify step 20",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/first post-notify step 40",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/first post-notify step 80",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/first post-notify step 100",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/all20 branch phase0",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/all20 branch phase1",
+      "passed": true,
+      "actual": 2.098713755607605
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/all20 branch phase2",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/all20 branch phase3",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/all20 branch phase4",
+      "passed": true,
+      "actual": 0.5704751014709473
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/all20 branch phase5",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/strict status independently consistent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/solved status finite",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/archived protocol and runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/physical model inertia",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/independent scalar reference",
+      "passed": true,
+      "actual": {
+        "effort": 0.0,
+        "q": 7.392764090133341e-08,
+        "qd": 2.42842361320144e-07
+      }
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/wrench same reference",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/actual current limits",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/same-step impulse bound",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/exact notify edges",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/public notify precedes control and step",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/notification state invariance",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/bounded row retained",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/all20 branch phase0",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/all20 branch phase1",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/all20 branch phase2",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/all20 branch phase3",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/all20 branch phase4",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/all20 branch phase5",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/strict status independently consistent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/solved status finite",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/archived protocol and runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/physical model inertia",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/independent scalar reference",
+      "passed": true,
+      "actual": {
+        "effort": 0.0,
+        "q": 7.392764090133341e-08,
+        "qd": 2.42842361320144e-07
+      }
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/wrench same reference",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/actual current limits",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/same-step impulse bound",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/exact notify edges",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/public notify precedes control and step",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/notification state invariance",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/bounded row retained",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/all20 branch phase0",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/all20 branch phase1",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/all20 branch phase2",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/all20 branch phase3",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/all20 branch phase4",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/all20 branch phase5",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/strict status independently consistent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/solved status finite",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "four unique runs",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat A/body_q",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat A/body_qd",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat A/joint_q",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat A/joint_qd",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat A/joint_lambdas_tau",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat B/body_q",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat B/body_qd",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat B/joint_q",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat B/joint_qd",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact independent repeat B/joint_lambdas_tau",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "static public notification API present",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "static snapshots copy arrays",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z",
+      "variant": "A",
+      "repeat": 1,
+      "reference_errors": {
+        "effort": 2.6592179560580576e-06,
+        "q": 1.4049535024263093e-07,
+        "qd": 9.93194808979192e-07
+      },
+      "first_post_notify_steps": [
+        {
+          "step": 20,
+          "actual_Nm": 1.901286244392395,
+          "reference_Nm": 1.9012864918357248,
+          "error_Nm": 2.474433298260692e-07,
+          "limit_Nm": 4.0
+        },
+        {
+          "step": 40,
+          "actual_Nm": 0.25,
+          "reference_Nm": 0.25,
+          "error_Nm": 0.0,
+          "limit_Nm": 0.25
+        },
+        {
+          "step": 80,
+          "actual_Nm": -3.4295248985290527,
+          "reference_Nm": -3.429523883767932,
+          "error_Nm": 1.0147611209099239e-06,
+          "limit_Nm": 4.0
+        },
+        {
+          "step": 100,
+          "actual_Nm": -0.25,
+          "reference_Nm": -0.25,
+          "error_Nm": 0.0,
+          "limit_Nm": 0.25
+        }
+      ],
+      "branches": [
+        {
+          "phase": 0,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 1,
+          "saturated": false,
+          "value": 2.098713755607605
+        },
+        {
+          "phase": 2,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 3,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 4,
+          "saturated": false,
+          "value": 0.5704751014709473
+        },
+        {
+          "phase": 5,
+          "saturated": true,
+          "value": 0.0
+        }
+      ],
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z",
+      "variant": "A",
+      "repeat": 2,
+      "reference_errors": {
+        "effort": 2.6592179560580576e-06,
+        "q": 1.4049535024263093e-07,
+        "qd": 9.93194808979192e-07
+      },
+      "first_post_notify_steps": [
+        {
+          "step": 20,
+          "actual_Nm": 1.901286244392395,
+          "reference_Nm": 1.9012864918357248,
+          "error_Nm": 2.474433298260692e-07,
+          "limit_Nm": 4.0
+        },
+        {
+          "step": 40,
+          "actual_Nm": 0.25,
+          "reference_Nm": 0.25,
+          "error_Nm": 0.0,
+          "limit_Nm": 0.25
+        },
+        {
+          "step": 80,
+          "actual_Nm": -3.4295248985290527,
+          "reference_Nm": -3.429523883767932,
+          "error_Nm": 1.0147611209099239e-06,
+          "limit_Nm": 4.0
+        },
+        {
+          "step": 100,
+          "actual_Nm": -0.25,
+          "reference_Nm": -0.25,
+          "error_Nm": 0.0,
+          "limit_Nm": 0.25
+        }
+      ],
+      "branches": [
+        {
+          "phase": 0,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 1,
+          "saturated": false,
+          "value": 2.098713755607605
+        },
+        {
+          "phase": 2,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 3,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 4,
+          "saturated": false,
+          "value": 0.5704751014709473
+        },
+        {
+          "phase": 5,
+          "saturated": true,
+          "value": 0.0
+        }
+      ],
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z",
+      "variant": "B",
+      "repeat": 1,
+      "reference_errors": {
+        "effort": 0.0,
+        "q": 7.392764090133341e-08,
+        "qd": 2.42842361320144e-07
+      },
+      "first_post_notify_steps": [],
+      "branches": [
+        {
+          "phase": 0,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 1,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 2,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 3,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 4,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 5,
+          "saturated": true,
+          "value": 0.0
+        }
+      ],
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z",
+      "variant": "B",
+      "repeat": 2,
+      "reference_errors": {
+        "effort": 0.0,
+        "q": 7.392764090133341e-08,
+        "qd": 2.42842361320144e-07
+      },
+      "first_post_notify_steps": [],
+      "branches": [
+        {
+          "phase": 0,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 1,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 2,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 3,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 4,
+          "saturated": true,
+          "value": 0.0
+        },
+        {
+          "phase": 5,
+          "saturated": true,
+          "value": 0.0
+        }
+      ],
+      "strict_fraction": 1.0
+    }
+  ],
+  "findings": [],
+  "scope": "Independent raw-array scalar reference, notification order, current bounds, first-step effects, actual saturation branches and strict-status checks. No simulation rerun or group-file modification.",
+  "limitations": [
+    "Finite-positive .25/4 Nm updates preserve one bounded row; no zero/inf or unnotified-update contract tested.",
+    "State invariance across notify is supported by copied event diagnostics and static runner inspection; complete before/after notification states were not separately saved.",
+    "This smaller drive converges under strict tolerances; that does not resolve the high-gain/offset-COM saturation case."
+  ],
+  "evidence_sha256": {
+    "experiments/kamino_pd_lab/limit_switch/analysis.json": "fe3afee2dad99b6256ed4d09b7ed90dd2b26c22352c87a0b78b28927f4aa6682",
+    "experiments/kamino_pd_lab/limit_switch/protocol.json": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+    "experiments/kamino_pd_lab/limit_switch/runner.py": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+    "evaluations/kamino-pd-2026-10-29/review_limit_switch.py": "79e8d2882814a0b5571e879c8aa4a44f7c2c7d3e5a466fc5fe4b0d7da2f43004"
+  }
+}

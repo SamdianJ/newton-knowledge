@@ -1,0 +1,534 @@
+{
+  "status": "completed_with_failed_criteria",
+  "protocol_sha256": "9cdc6a4e7d276036d6b6edbf4e70cee12705d39805824ba63336438471056e04",
+  "runner_sha256": "c6e1b4622ab4fa6771233c030328f634161e9374c0f02adfb829c9005c19c9cb",
+  "analyzer_sha256": "cb3d45de98aca1d3452fed5fc606e0632c47d35f59cf2a382ac2c1d144681279",
+  "cases": [
+    {
+      "id": "kamino_fourbar_loop_dt960",
+      "title": "闭环约束与移除闭环边的动力学对照",
+      "status": "completed_with_failed_criteria",
+      "variants": {
+        "A": {
+          "loop_closing_hinge": false
+        },
+        "B": {
+          "loop_closing_hinge": true
+        }
+      },
+      "runs": [
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-A-r1-20261029T051615214167Z",
+          "variant": "A",
+          "repeat": 1,
+          "status": "failed_criteria",
+          "metrics": {
+            "max_retained_joint_gap_m": 0.0009172800991823033,
+            "max_loop_or_virtual_gap_m": 0.338453974610944,
+            "max_hinge_axis_mismatch": 4.388048165228091e-07,
+            "samples": 481,
+            "active_angle_range_rad": 4.348449230194092,
+            "solver_converged_fraction": 0.9916666666666667,
+            "max_r_p": 0.0,
+            "max_r_d": 4.0284548958879896e-06,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.01741919992491603
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": false,
+            "retained_joint_axes": true,
+            "open_control_separation": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-A-r1-20261029T051615214167Z/trajectory.npz",
+          "raw_sha256": "921c69e49d0a7012908f780b0039ebf33e861de256828838f63aff4e8468ec53",
+          "body_q_sha256": "28a9e013f02c793f7de2c7ea288c14747f42f6a4fd6257820960ceb5565f5371"
+        },
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-A-r2-20261029T051615202886Z",
+          "variant": "A",
+          "repeat": 2,
+          "status": "failed_criteria",
+          "metrics": {
+            "max_retained_joint_gap_m": 0.0009172800991823033,
+            "max_loop_or_virtual_gap_m": 0.338453974610944,
+            "max_hinge_axis_mismatch": 4.388048165228091e-07,
+            "samples": 481,
+            "active_angle_range_rad": 4.348449230194092,
+            "solver_converged_fraction": 0.9916666666666667,
+            "max_r_p": 0.0,
+            "max_r_d": 4.0284548958879896e-06,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.017799900146201253
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": false,
+            "retained_joint_axes": true,
+            "open_control_separation": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-A-r2-20261029T051615202886Z/trajectory.npz",
+          "raw_sha256": "c910bb7de56c176d9d57809ca27bf840007bf68a6ed75002460875bb61056ccb",
+          "body_q_sha256": "28a9e013f02c793f7de2c7ea288c14747f42f6a4fd6257820960ceb5565f5371"
+        },
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-B-r1-20261029T051615199770Z",
+          "variant": "B",
+          "repeat": 1,
+          "status": "passed",
+          "metrics": {
+            "max_retained_joint_gap_m": 9.292412246657289e-06,
+            "max_loop_or_virtual_gap_m": 9.282181626907435e-06,
+            "max_hinge_axis_mismatch": 1.1553866725583642e-07,
+            "samples": 481,
+            "active_angle_range_rad": 0.7912125587463379,
+            "solver_converged_fraction": 0.5395833333333333,
+            "max_r_p": 0.0,
+            "max_r_d": 1.1772499419748783e-05,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.017165200086310506
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": true,
+            "retained_joint_axes": true,
+            "closed_loop_gap": true,
+            "nontrivial_motion": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-B-r1-20261029T051615199770Z/trajectory.npz",
+          "raw_sha256": "23597630f8eae82ddac5ae3c1f11cdecc01448a50ce6f8bd89cd8fa9941f4d5b",
+          "body_q_sha256": "cc86662dc9c8d9d0a08f7907f9eaf456e7d4762268ba85b4b01a571c36c1ce1b"
+        },
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-B-r2-20261029T051615202886Z",
+          "variant": "B",
+          "repeat": 2,
+          "status": "passed",
+          "metrics": {
+            "max_retained_joint_gap_m": 9.292412246657289e-06,
+            "max_loop_or_virtual_gap_m": 9.282181626907435e-06,
+            "max_hinge_axis_mismatch": 1.1553866725583642e-07,
+            "samples": 481,
+            "active_angle_range_rad": 0.7912125587463379,
+            "solver_converged_fraction": 0.5395833333333333,
+            "max_r_p": 0.0,
+            "max_r_d": 1.1772499419748783e-05,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.01709609990939498
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": true,
+            "retained_joint_axes": true,
+            "closed_loop_gap": true,
+            "nontrivial_motion": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt960-B-r2-20261029T051615202886Z/trajectory.npz",
+          "raw_sha256": "2be9dbe0b2c1a23e62dfccaf146c673019bb84861af4815eeee0e75bd14e1da9",
+          "body_q_sha256": "cc86662dc9c8d9d0a08f7907f9eaf456e7d4762268ba85b4b01a571c36c1ce1b"
+        }
+      ],
+      "criteria": {
+        "exactly_two_repeats_each_variant": true,
+        "independent_repeat_A": true,
+        "independent_repeat_B": true,
+        "open_closed_gap_ratio": true,
+        "all_per_run_gates": false
+      },
+      "repeat_comparison": {
+        "A": {
+          "body_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "body_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          }
+        },
+        "B": {
+          "body_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "body_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          }
+        }
+      },
+      "open_closed_gap_ratio": 36462.76147299517,
+      "metrics": {
+        "A_r1": {
+          "max_retained_joint_gap_m": 0.0009172800991823033,
+          "max_loop_or_virtual_gap_m": 0.338453974610944,
+          "max_hinge_axis_mismatch": 4.388048165228091e-07,
+          "samples": 481,
+          "active_angle_range_rad": 4.348449230194092,
+          "solver_converged_fraction": 0.9916666666666667,
+          "max_r_p": 0.0,
+          "max_r_d": 4.0284548958879896e-06,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.01741919992491603
+        },
+        "A_r2": {
+          "max_retained_joint_gap_m": 0.0009172800991823033,
+          "max_loop_or_virtual_gap_m": 0.338453974610944,
+          "max_hinge_axis_mismatch": 4.388048165228091e-07,
+          "samples": 481,
+          "active_angle_range_rad": 4.348449230194092,
+          "solver_converged_fraction": 0.9916666666666667,
+          "max_r_p": 0.0,
+          "max_r_d": 4.0284548958879896e-06,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.017799900146201253
+        },
+        "B_r1": {
+          "max_retained_joint_gap_m": 9.292412246657289e-06,
+          "max_loop_or_virtual_gap_m": 9.282181626907435e-06,
+          "max_hinge_axis_mismatch": 1.1553866725583642e-07,
+          "samples": 481,
+          "active_angle_range_rad": 0.7912125587463379,
+          "solver_converged_fraction": 0.5395833333333333,
+          "max_r_p": 0.0,
+          "max_r_d": 1.1772499419748783e-05,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.017165200086310506
+        },
+        "B_r2": {
+          "max_retained_joint_gap_m": 9.292412246657289e-06,
+          "max_loop_or_virtual_gap_m": 9.282181626907435e-06,
+          "max_hinge_axis_mismatch": 1.1553866725583642e-07,
+          "samples": 481,
+          "active_angle_range_rad": 0.7912125587463379,
+          "solver_converged_fraction": 0.5395833333333333,
+          "max_r_p": 0.0,
+          "max_r_d": 1.1772499419748783e-05,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.01709609990939498
+        }
+      },
+      "observation": "dt=0.00104166666667s; retained-joint maximum gap: A=0.0009172800991823033m, B=9.292412246657289e-06m; frozen full-pair classification=completed_with_failed_criteria. All original 0.5mm/axis/nontrivial-motion/separation gates retained. A smaller velocity residual or a converged flag alone does not certify position-level accuracy.",
+      "limitations": [
+        "one fixed-base four-bar, one active hinge, planar branch near initial pose",
+        "no contacts, joint limits, motors, multiworld, GPU, singular toggle configurations or underactuated FK",
+        "no claim of general loop solvability, global branch selection, long-time stability or backend performance",
+        "Timestep refinement does not prove integrator convergence order, long-time accuracy, general closed-loop behavior or performance superiority.",
+        "Follow-up selected after the preserved 1/240s negative result; each new timestep protocol was frozen before its runs.",
+        "Only timestep-local topology comparisons passing every original gate are accepted; no convergence order, long-time accuracy or solver ranking is inferred."
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 899
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 978
+        },
+        {
+          "path": "newton/tests/utils/basics.py",
+          "line": 1271
+        }
+      ]
+    },
+    {
+      "id": "kamino_fourbar_loop_dt3840",
+      "title": "闭环约束与移除闭环边的动力学对照",
+      "status": "passed",
+      "variants": {
+        "A": {
+          "loop_closing_hinge": false
+        },
+        "B": {
+          "loop_closing_hinge": true
+        }
+      },
+      "runs": [
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-A-r1-20261029T051725446081Z",
+          "variant": "A",
+          "repeat": 1,
+          "status": "passed",
+          "metrics": {
+            "max_retained_joint_gap_m": 6.575629799185955e-05,
+            "max_loop_or_virtual_gap_m": 0.3316745962370776,
+            "max_hinge_axis_mismatch": 4.1501040054220297e-07,
+            "samples": 1921,
+            "active_angle_range_rad": 4.370102882385254,
+            "solver_converged_fraction": 0.965625,
+            "max_r_p": 0.0,
+            "max_r_d": 1.701754445093684e-05,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.017207899829372764
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": true,
+            "retained_joint_axes": true,
+            "open_control_separation": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-A-r1-20261029T051725446081Z/trajectory.npz",
+          "raw_sha256": "706e87ff6c00d622b341b275aa381feb5ca6afc6ddf7cdc7e19e125f104ce371",
+          "body_q_sha256": "75128380e89a7d2b1a939268aa3d9ed6833a991000a45540ae15b79a698c258a"
+        },
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-A-r2-20261029T051725454779Z",
+          "variant": "A",
+          "repeat": 2,
+          "status": "passed",
+          "metrics": {
+            "max_retained_joint_gap_m": 6.575629799185955e-05,
+            "max_loop_or_virtual_gap_m": 0.3316745962370776,
+            "max_hinge_axis_mismatch": 4.1501040054220297e-07,
+            "samples": 1921,
+            "active_angle_range_rad": 4.370102882385254,
+            "solver_converged_fraction": 0.965625,
+            "max_r_p": 0.0,
+            "max_r_d": 1.701754445093684e-05,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.017223200062289834
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": true,
+            "retained_joint_axes": true,
+            "open_control_separation": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-A-r2-20261029T051725454779Z/trajectory.npz",
+          "raw_sha256": "38fac19ea0e1a2b2bd012d75151a77c9584b6f667b9a10d291c8ae9de6c258de",
+          "body_q_sha256": "75128380e89a7d2b1a939268aa3d9ed6833a991000a45540ae15b79a698c258a"
+        },
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-B-r1-20261029T051725441421Z",
+          "variant": "B",
+          "repeat": 1,
+          "status": "passed",
+          "metrics": {
+            "max_retained_joint_gap_m": 1.5080154285995723e-06,
+            "max_loop_or_virtual_gap_m": 1.5043454146706565e-06,
+            "max_hinge_axis_mismatch": 1.4036639524272886e-07,
+            "samples": 1921,
+            "active_angle_range_rad": 0.7881780862808228,
+            "solver_converged_fraction": 0.4796875,
+            "max_r_p": 0.0,
+            "max_r_d": 4.5000790123594925e-05,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.01770410011522472
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": true,
+            "retained_joint_axes": true,
+            "closed_loop_gap": true,
+            "nontrivial_motion": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-B-r1-20261029T051725441421Z/trajectory.npz",
+          "raw_sha256": "d77e4bb1639463bd9765ee4b58944c68fb58f02c4aa97185486d17a67bb67fb9",
+          "body_q_sha256": "68ed6080d6add63a57c0598ca6911dc115adc1571aa8f1ce6000a314e93213e5"
+        },
+        {
+          "run": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-B-r2-20261029T051725448457Z",
+          "variant": "B",
+          "repeat": 2,
+          "status": "passed",
+          "metrics": {
+            "max_retained_joint_gap_m": 1.5080154285995723e-06,
+            "max_loop_or_virtual_gap_m": 1.5043454146706565e-06,
+            "max_hinge_axis_mismatch": 1.4036639524272886e-07,
+            "samples": 1921,
+            "active_angle_range_rad": 0.7881780862808228,
+            "solver_converged_fraction": 0.4796875,
+            "max_r_p": 0.0,
+            "max_r_d": 4.5000790123594925e-05,
+            "max_r_c": 0.0,
+            "median_step_seconds_after_5": 0.017458499874919653
+          },
+          "criteria": {
+            "protocol_hash": true,
+            "runner_hash": true,
+            "raw_hash": true,
+            "all_arrays_finite": true,
+            "retained_joint_gaps": true,
+            "retained_joint_axes": true,
+            "closed_loop_gap": true,
+            "nontrivial_motion": true
+          },
+          "raw_file": "experiments/kamino_mechanism_lab/loop_fk/runs/kamino_fourbar_loop_dt3840-B-r2-20261029T051725448457Z/trajectory.npz",
+          "raw_sha256": "904262a0a30735b58071b5ff511b773c928ccd256845c13402d1fa274ea7aa97",
+          "body_q_sha256": "68ed6080d6add63a57c0598ca6911dc115adc1571aa8f1ce6000a314e93213e5"
+        }
+      ],
+      "criteria": {
+        "exactly_two_repeats_each_variant": true,
+        "independent_repeat_A": true,
+        "independent_repeat_B": true,
+        "open_closed_gap_ratio": true,
+        "all_per_run_gates": true
+      },
+      "repeat_comparison": {
+        "A": {
+          "body_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "body_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          }
+        },
+        "B": {
+          "body_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "body_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_q": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          },
+          "joint_qd": {
+            "max_abs_diff": 0.0,
+            "passed": true
+          }
+        }
+      },
+      "open_closed_gap_ratio": 220477.6861766754,
+      "metrics": {
+        "A_r1": {
+          "max_retained_joint_gap_m": 6.575629799185955e-05,
+          "max_loop_or_virtual_gap_m": 0.3316745962370776,
+          "max_hinge_axis_mismatch": 4.1501040054220297e-07,
+          "samples": 1921,
+          "active_angle_range_rad": 4.370102882385254,
+          "solver_converged_fraction": 0.965625,
+          "max_r_p": 0.0,
+          "max_r_d": 1.701754445093684e-05,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.017207899829372764
+        },
+        "A_r2": {
+          "max_retained_joint_gap_m": 6.575629799185955e-05,
+          "max_loop_or_virtual_gap_m": 0.3316745962370776,
+          "max_hinge_axis_mismatch": 4.1501040054220297e-07,
+          "samples": 1921,
+          "active_angle_range_rad": 4.370102882385254,
+          "solver_converged_fraction": 0.965625,
+          "max_r_p": 0.0,
+          "max_r_d": 1.701754445093684e-05,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.017223200062289834
+        },
+        "B_r1": {
+          "max_retained_joint_gap_m": 1.5080154285995723e-06,
+          "max_loop_or_virtual_gap_m": 1.5043454146706565e-06,
+          "max_hinge_axis_mismatch": 1.4036639524272886e-07,
+          "samples": 1921,
+          "active_angle_range_rad": 0.7881780862808228,
+          "solver_converged_fraction": 0.4796875,
+          "max_r_p": 0.0,
+          "max_r_d": 4.5000790123594925e-05,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.01770410011522472
+        },
+        "B_r2": {
+          "max_retained_joint_gap_m": 1.5080154285995723e-06,
+          "max_loop_or_virtual_gap_m": 1.5043454146706565e-06,
+          "max_hinge_axis_mismatch": 1.4036639524272886e-07,
+          "samples": 1921,
+          "active_angle_range_rad": 0.7881780862808228,
+          "solver_converged_fraction": 0.4796875,
+          "max_r_p": 0.0,
+          "max_r_d": 4.5000790123594925e-05,
+          "max_r_c": 0.0,
+          "median_step_seconds_after_5": 0.017458499874919653
+        }
+      },
+      "observation": "dt=0.000260416666667s; retained-joint maximum gap: A=6.575629799185955e-05m, B=1.5080154285995723e-06m; frozen full-pair classification=passed. All original 0.5mm/axis/nontrivial-motion/separation gates retained. A smaller velocity residual or a converged flag alone does not certify position-level accuracy.",
+      "limitations": [
+        "one fixed-base four-bar, one active hinge, planar branch near initial pose",
+        "no contacts, joint limits, motors, multiworld, GPU, singular toggle configurations or underactuated FK",
+        "no claim of general loop solvability, global branch selection, long-time stability or backend performance",
+        "Timestep refinement does not prove integrator convergence order, long-time accuracy, general closed-loop behavior or performance superiority.",
+        "Follow-up selected after the preserved 1/240s negative result; each new timestep protocol was frozen before its runs.",
+        "Only timestep-local topology comparisons passing every original gate are accepted; no convergence order, long-time accuracy or solver ranking is inferred."
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 899
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 978
+        },
+        {
+          "path": "newton/tests/utils/basics.py",
+          "line": 1271
+        }
+      ]
+    }
+  ],
+  "failed_runs_preserved": [
+    {
+      "case_id": "kamino_fourbar_fk",
+      "variant": "A",
+      "repeat": 1,
+      "run_id": "kamino_fourbar_fk-A-r1-20261029T051020299457Z",
+      "started_utc": "20261029T051020299457Z",
+      "protocol_sha256": "9f84bd8d778405f698db1bb1a08dba90666ecce6e6458f4a35ecaa2fec28b13a",
+      "runner_sha256": "eabd2437af9a2610bbee0f05922306ce2bc1d5c6b74fe73d048eeadaaa76fcc9",
+      "status": "failed",
+      "error": "ValueError: Installed Kamino must be the fixed source snapshot"
+    }
+  ],
+  "analysis": "Independent NumPy analytic geometry, with unchanged original thresholds. Original analysis is preserved."
+}

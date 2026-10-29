@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_runs",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "case": {
+    "id": "kamino_pd_finite_limit_switch",
+    "title": "Finite positive effort-limit switching with public model notification",
+    "variants": {
+      "A": {
+        "label": "notified .25 / 4 Nm switching",
+        "limits_Nm": [
+          0.25,
+          4.0,
+          0.25,
+          0.25,
+          4.0,
+          0.25
+        ]
+      },
+      "B": {
+        "label": "fixed .25 Nm control",
+        "limits_Nm": [
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      }
+    }
+  },
+  "scene": {
+    "mass_kg": 1.0,
+    "inertia_diagonal_kg_m2": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "com_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis": "Y",
+    "gravity": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "kp_Nm_per_rad": 20.0,
+    "kd_Nms_per_rad": 2.0,
+    "mode": "POSITION",
+    "initial_q_rad": 0.0,
+    "initial_qd_rad_s": 0.0,
+    "collision": false,
+    "armature": 0.0,
+    "joint_friction": 0.0,
+    "joint_damping": 0.0
+  },
+  "run": {
+    "dt_s": 0.005,
+    "phase_steps": 20,
+    "target_q_rad": [
+      0.1,
+      0.1,
+      0.1,
+      -0.1,
+      -0.1,
+      -0.1
+    ],
+    "steps": 120,
+    "independent_repeats": [
+      1,
+      2
+    ],
+    "device": "cpu",
+    "notify_flag": "JOINT_DOF_FORCE_PROPERTIES"
+  },
+  "solver": {
+    "dynamics_solver": "padmm",
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": false,
+    "use_fk_solver": false,
+    "max_iterations": 200,
+    "use_acceleration": true,
+    "dynamics_preconditioning": true,
+    "warmstart_mode": "containers",
+    "primal_tolerance": 1e-07,
+    "dual_tolerance": 1e-07,
+    "compl_tolerance": 1e-07,
+    "use_graph_conditionals": false
+  },
+  "criteria": {
+    "effort_reference_Nm": 0.002,
+    "speed_reference_rad_s": 0.002,
+    "angle_reference_rad": 0.001,
+    "effort_bound_excess_Nm": 0.002,
+    "bound_impulse_error_Nms": 1e-07,
+    "notify_state_change": 1e-07,
+    "integration_residual_rad": 1e-05,
+    "momentum_residual_Nm": 0.002,
+    "anchor_drift_m": 1e-05,
+    "unsaturated_margin_Nm": 0.1,
+    "stale_limit_steps": 0,
+    "repeat_q_atol": 1e-05,
+    "repeat_qd_atol": 0.0001,
+    "repeat_effort_atol": 0.002,
+    "repeat_rtol": 1e-05,
+    "installed_locked_python_files": 809,
+    "dof_act_paths": [
+      2
+    ],
+    "effort_row_count": 1
+  },
+  "branch_expectation_A": [
+    "positive_saturated",
+    "positive_unsaturated",
+    "positive_saturated",
+    "negative_saturated",
+    "negative_unsaturated",
+    "negative_saturated"
+  ],
+  "status_policy": "Strict 1e-7 convergence is diagnostic; physical acceptance does not imply convergence. Initial unsolved status may be undefined; post-step status must be finite.",
+  "limitations": "One finite-positive limit update contract on one CPU Y hinge, no route topology change, no zero/inf/sentinel, no unnotified update, no gain/mode change, contacts, GPU, graph capture, multiworld or general convergence claim.",
+  "source_refs": [
+    {
+      "path": "newton/_src/solvers/kamino/solver_kamino.py",
+      "line": 1198,
+      "end_line": 1210,
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L1198"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/solver_kamino.py",
+      "line": 1558,
+      "end_line": 1647,
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L1558"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+      "line": 2126,
+      "end_line": 2144,
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "sha256": "cae601049d228f6c8fa4b3f7f72722d8a5f0f16eb097c0458a8edf91820afe76",
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L2126"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/kinematics/joints.py",
+      "line": 1036,
+      "end_line": 1063,
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "sha256": "16933d9f1465da0763644d79af24a5630aea815ccc8022f85c034916fccbfbc3",
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/kinematics/joints.py#L1036"
+    },
+    {
+      "path": "newton/_src/solvers/kamino/_src/integrators/euler.py",
+      "line": 90,
+      "end_line": 145,
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "sha256": "7bbe00eaad480dea594f9d9375d3e0efd8596bbf66d9e1235980ac26b233aa66",
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/integrators/euler.py#L90"
+    },
+    {
+      "path": "newton/tests/kamino/test_kamino_solver_kamino_notify.py",
+      "line": 669,
+      "end_line": 694,
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "sha256": "c0775feeb8ff19fb20d02b1d49daf976d75df848dc2bf2fedfa92a5af7a6ffad",
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/kamino/test_kamino_solver_kamino_notify.py#L669"
+    }
+  ],
+  "frozen_at_utc": "2026-10-29T06:41:18.509786+00:00",
+  "reviewed_by": "root: public notification contract, independent scalar recurrence, nonvacuous branches and separate convergence diagnostics",
+  "design_sha256": "8ba930088bc392e1ddcd536974802854648ff5fdf814fdde65d732f0e7ebdda6",
+  "reference": {
+    "equations": "tau_free=[kp*(r-q)-(kd+h*kp)*v]/[1+(h*kd+h*h*kp)/I]; tau=clip(tau_free,-L,L); v_next=v+h*tau/I; q_next=q+h*v_next. Float64 independent recurrence, I=1, no Newton import.",
+    "sampling": "Notify is called before step; bound_a may remain old until step assembly and must equal h*new_limit after that step. State unchanged across notify. Actual wrench and reported effort both checked."
+  },
+  "branch_criteria": "All 20 samples in each phase must realize the preregistered sign and saturation branch. Saturated force follows signed L within .002 Nm; unsaturated force stays at least .1 Nm inside L. First step after every update must meet the new reference; zero stale-limit steps allowed.",
+  "criteria_rationale": "Frozen effort gate .002 Nm is far below predicted smallest branch separation >.5 Nm. Float32 pose/velocity tolerances permit roundoff but reject wrong mode/sign, missing notifications or stale limit. Raw state and solved status must be finite; initial unsolved status excluded. See frozen DESIGN.md for complete rationale."
+}

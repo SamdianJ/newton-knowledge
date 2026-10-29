@@ -1,0 +1,42 @@
+{
+  "status": "frozen_before_runs",
+  "baseline_build": "d3dadd66d507ae9c9fbdca19",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "frozen_at_utc": "2026-10-29T05:09:35.242270+00:00",
+  "protocols": [
+    {
+      "group": "loop_fk",
+      "path": "experiments/kamino_mechanism_lab/loop_fk/protocol.json",
+      "sha256": "9f84bd8d778405f698db1bb1a08dba90666ecce6e6458f4a35ecaa2fec28b13a",
+      "case_ids": [
+        "kamino_fourbar_fk",
+        "kamino_fourbar_loop_dynamics"
+      ]
+    },
+    {
+      "group": "backends",
+      "path": "experiments/kamino_mechanism_lab/backends/protocol.json",
+      "sha256": "b6cac2aa44540efe13d6961f559714dcbb3c74807c073b78049896bfdd81dbaa",
+      "case_ids": [
+        "kamino_backend_guided_contact"
+      ]
+    },
+    {
+      "group": "drive_reset",
+      "path": "experiments/kamino_mechanism_lab/drive_reset/protocol.json",
+      "sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+      "case_ids": [
+        "kamino_drive_effort_paths",
+        "kamino_reset_default_replay",
+        "kamino_reset_preserve_replay"
+      ]
+    }
+  ],
+  "planned_cases": 6,
+  "planned_independent_runs": 24,
+  "rules": [
+    "No physical threshold changes after seeing results.",
+    "Runtime and physical failures are retained. Harness fixes must have new fingerprint and explicit reason; subsequent scenario/criteria changes require separate preregistration.",
+    "CPU single-world scenarios; not general Kamino coverage or a performance benchmark."
+  ]
+}

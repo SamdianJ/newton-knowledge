@@ -1,0 +1,472 @@
+[
+  {
+    "id": "map:variational",
+    "title_zh": "惯性目标与隐式积分",
+    "paper_id": "paper:vbd2024",
+    "paper_locator": "PDF p.3 Eqs.(2)–(4); p.4 Eq.(6)",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._initialize_particles@L3187",
+        "name": "SolverVBD._initialize_particles",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 3187,
+          "end_line": 3224,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3187-L3224"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::solve_elasticity@L2720",
+        "name": "solve_elasticity",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 2720,
+          "end_line": 2857,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2720-L2857"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._finalize_particles@L4625",
+        "name": "SolverVBD._finalize_particles",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 4625,
+          "end_line": 4636,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4625-L4636"
+        }
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:iterations"
+    ],
+    "experiment_id": "exp:implicit_spring",
+    "correspondence": "implementation_of_core_idea; full nonlinear convergence not proven by probe",
+    "version": "1.7.0"
+  },
+  {
+    "id": "map:block",
+    "title_zh": "局部 3×3 系统与着色",
+    "paper_id": "paper:vbd2024",
+    "paper_locator": "PDF p.4 Eqs.(7)–(9); Sec.3.9",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._solve_particle_iteration@L3747",
+        "name": "SolverVBD._solve_particle_iteration",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 3747,
+          "end_line": 3982,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L3747-L3982"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::solve_elasticity@L2720",
+        "name": "solve_elasticity",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 2720,
+          "end_line": 2857,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2720-L2857"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::make_solve_elasticity_tile@L2499",
+        "name": "make_solve_elasticity_tile",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 2499,
+          "end_line": 2716,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2499-L2716"
+        }
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:iterations",
+      "newton:1.7.0:SolverVBD:particle_enable_tile_solve"
+    ],
+    "experiment_id": "exp:implicit_spring",
+    "correspondence": "scalar and tile kernels are distinct implementations",
+    "version": "1.7.0"
+  },
+  {
+    "id": "map:elastic",
+    "title_zh": "膜、弯曲与体积弹性",
+    "paper_id": "paper:vbd2024",
+    "paper_locator": "Sec.3 material-energy framework",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::evaluate_neo_hookean_membrane_force_hessian@L533",
+        "name": "evaluate_neo_hookean_membrane_force_hessian",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 533,
+          "end_line": 662,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L533-L662"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::evaluate_dihedral_angle_based_bending_force_hessian@L695",
+        "name": "evaluate_dihedral_angle_based_bending_force_hessian",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 695,
+          "end_line": 846,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L695-L846"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::evaluate_volumetric_neo_hookean_force_and_hessian@L179",
+        "name": "evaluate_volumetric_neo_hookean_force_and_hessian",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 179,
+          "end_line": 322,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L179-L322"
+        }
+      }
+    ],
+    "parameter_ids": [],
+    "experiment_id": null,
+    "correspondence": "constitutive-model correspondence, not identical discretization of every paper experiment",
+    "version": "1.7.0",
+    "local_experiments": [
+      {
+        "record_id": "lab:membrane",
+        "scope": "固定单三角形和载荷下，同时改变 tri_ke 与 tri_ka 的薄膜位移响应。",
+        "limitation": "联合干预不能分别识别两项贡献；没有验证 tet、厚度换算或网格收敛。"
+      },
+      {
+        "record_id": "lab:bending",
+        "scope": "两个三角形折页中，保持面内材料不变并改变 edge_ke 的弯曲响应。",
+        "limitation": "只支持该固定拓扑的方向性结果，不是连续弯曲模量或真实材料标定。"
+      }
+    ],
+    "unvalidated_scope": [
+      "tet 体积材料、近不可压条件及其收敛。",
+      "客观阻尼在刚体旋转叠加下的响应、薄膜厚度换算与网格收敛。"
+    ],
+    "validation_status": "partial_local_evidence"
+  },
+  {
+    "id": "map:legacy",
+    "title_zh": "legacy AVBD primal / dual / penalty",
+    "paper_id": "paper:avbd2025",
+    "paper_locator": "PDF p.3 Eqs.(8)–(12); p.6 Algorithm 1",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::solve_rigid_body@L6219",
+        "name": "solve_rigid_body",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 6219,
+          "end_line": 6493,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L6219-L6493"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::ldlt6_solve@L326",
+        "name": "ldlt6_solve",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 326,
+          "end_line": 408,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L326-L408"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::update_duals_joint@L6497",
+        "name": "update_duals_joint",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 6497,
+          "end_line": 7093,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L6497-L7093"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_ramp_penalty_k@L1151",
+        "name": "_ramp_penalty_k",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 1151,
+          "end_line": 1158,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L1151-L1158"
+        }
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_avbd_beta",
+      "newton:1.7.0:SolverVBD:rigid_avbd_alpha",
+      "newton:1.7.0:SolverVBD:rigid_avbd_gamma"
+    ],
+    "experiment_id": "exp:default_modes",
+    "correspondence": "legacy foundation; source default beta=0/gamma=.999 differ from paper experiment settings",
+    "version": "1.7.0"
+  },
+  {
+    "id": "map:compliant",
+    "title_zh": "compliant ALM 工程扩展",
+    "paper_id": null,
+    "paper_locator": "source equations; no identical paper equation asserted",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_compliant_alm_coefficients@L117",
+        "name": "_compliant_alm_coefficients",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 117,
+          "end_line": 134,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L117-L134"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_alm_relaxed_ascent@L138",
+        "name": "_alm_relaxed_ascent",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 138,
+          "end_line": 149,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L138-L149"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_material_force_terms@L153",
+        "name": "_material_force_terms",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 153,
+          "end_line": 163,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L153-L163"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_compliant_contact_dual_step@L1078",
+        "name": "_compliant_contact_dual_step",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 1078,
+          "end_line": 1103,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L1078-L1103"
+        }
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:rigid_compliant_alm",
+      "newton:1.7.0:SolverVBD:rigid_joint_linear_ke"
+    ],
+    "experiment_id": "exp:default_modes",
+    "correspondence": "source_extension; mode probe does not validate all ALM dynamics",
+    "version": "1.7.0"
+  },
+  {
+    "id": "map:friction",
+    "title_zh": "平滑摩擦与接触投影",
+    "paper_id": "paper:vbd2024",
+    "paper_locator": "Sec.3.6",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::compute_friction@L1348",
+        "name": "compute_friction",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 1348,
+          "end_line": 1378,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L1348-L1378"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::_compliant_contact_dual_step@L1078",
+        "name": "_compliant_contact_dual_step",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 1078,
+          "end_line": 1103,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L1078-L1103"
+        }
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:friction_epsilon"
+    ],
+    "experiment_id": null,
+    "correspondence": "particle regularization vs compliant rigid Coulomb projection must be distinguished",
+    "version": "1.7.0",
+    "local_experiments": [
+      {
+        "record_id": "lab:friction",
+        "scope": "相同初速度的单粒子平面滑动，改变接触 mu 后的位移。",
+        "limitation": "没有验证刚体 Coulomb 锥投影、抓持或密集堆叠。"
+      },
+      {
+        "record_id": "lab:friction_epsilon",
+        "scope": "相同 mu、小恒力驱动单粒子时，friction_epsilon 改变低速蠕滑。",
+        "limitation": "仅支持粒子平滑摩擦；不验证刚体接触历史和跨设备结果。"
+      }
+    ],
+    "unvalidated_scope": [
+      "compliant 刚体 Coulomb 投影、抓持/堆叠以及匹配历史摩擦。",
+      "不同步长、载荷与几何下的摩擦参数泛化。"
+    ],
+    "validation_status": "partial_local_evidence"
+  },
+  {
+    "id": "map:dat",
+    "title_zh": "平面划分与位移截断",
+    "paper_id": "paper:dat2026",
+    "paper_locator": "PDF p.4 Eqs.(11)–(16); Sec.3",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::create_vertex_triangle_division_plane_closest_pt@L1971",
+        "name": "create_vertex_triangle_division_plane_closest_pt",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 1971,
+          "end_line": 2006,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L1971-L2006"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::create_edge_edge_division_plane_closest_pt@L2010",
+        "name": "create_edge_edge_division_plane_closest_pt",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 2010,
+          "end_line": 2050,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2010-L2050"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/particle_vbd_kernels.py::apply_planar_truncation_parallel_by_collision@L2054",
+        "name": "apply_planar_truncation_parallel_by_collision",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+          "line": 2054,
+          "end_line": 2188,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/particle_vbd_kernels.py#L2054-L2188"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/rigid_vbd_kernels.py::rigid_trajectory_truncation_t@L7944",
+        "name": "rigid_trajectory_truncation_t",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+          "line": 7944,
+          "end_line": 8058,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/rigid_vbd_kernels.py#L7944-L8058"
+        }
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:dat_conservative_bound_relaxation",
+      "newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+      "newton:1.7.0:SolverVBD:rigid_soft_dat_use_interval_arithmetic"
+    ],
+    "experiment_id": null,
+    "correspondence": "conditional geometry mechanism; dense collision runtime validation pending",
+    "version": "1.7.0",
+    "local_experiments": [
+      {
+        "record_id": "lab:dat",
+        "scope": "零半径高速质点冲向薄板、弱 penalty 条件下，开启刚柔 DAT 后的位移截断。",
+        "limitation": "不是任意无穿透证明；没有验证自接触平面分配、tet 翻转或旋转刚体轨迹。"
+      },
+      {
+        "record_id": "lab:dat_relaxation",
+        "scope": "同一简单刚柔 DAT 场景中，保守系数改变接近接触面的过程。",
+        "limitation": "没有验证密集候选、容量溢出、刚体 interval arithmetic 或所有调度组合。"
+      }
+    ],
+    "unvalidated_scope": [
+      "VT/EE 分隔平面机制的逐项验证与密集/初始相交场景。",
+      "旋转刚体、interval arithmetic、复杂非凸候选覆盖和 tet 反转。"
+    ],
+    "validation_status": "partial_local_evidence"
+  },
+  {
+    "id": "map:detect",
+    "title_zh": "候选检测范围与兼容层",
+    "paper_id": "paper:dat2026",
+    "paper_locator": "neighborhood coverage assumption; no constructor naming in paper",
+    "symbols": [
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD.__init__@L353",
+        "name": "SolverVBD.__init__",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 353,
+          "end_line": 1000,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000"
+        }
+      },
+      {
+        "id": "code:1.7.0:newton/_src/solvers/vbd/solver_vbd.py::SolverVBD._collision_detection_penetration_free@L4831",
+        "name": "SolverVBD._collision_detection_penetration_free",
+        "source": {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/vbd/solver_vbd.py",
+          "line": 4831,
+          "end_line": 4851,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L4831-L4851"
+        }
+      }
+    ],
+    "parameter_ids": [
+      "newton:1.7.0:SolverVBD:particle_self_contact_margin",
+      "newton:1.7.0:SolverVBD:particle_self_contact_gap",
+      "newton:1.7.0:SolverVBD:particle_vertex_contact_buffer_size",
+      "newton:1.7.0:SolverVBD:particle_edge_contact_buffer_size"
+    ],
+    "experiment_id": "exp:margin_compatibility",
+    "correspondence": "engineering API semantics; paper has no Newton parameter defaults",
+    "version": "1.7.0"
+  }
+]

@@ -1,0 +1,609 @@
+{
+  "schema_version": "2.0",
+  "version": "1.7.0",
+  "tools": {
+    "search_knowledge": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "kind": {
+            "type": "string",
+            "default": "all"
+          },
+          "domain": {
+            "enum": [
+              "all",
+              "framework",
+              "workflow",
+              "solver",
+              "development"
+            ],
+            "default": "all"
+          },
+          "stage": {
+            "enum": [
+              "all",
+              "asset_import",
+              "preprocess",
+              "initialization",
+              "control",
+              "collision",
+              "solver_step",
+              "output"
+            ],
+            "default": "all"
+          },
+          "solver": {
+            "enum": [
+              "all",
+              "shared",
+              "vbd",
+              "mujoco",
+              "kamino",
+              "featherstone",
+              "implicit-mpm",
+              "semi-implicit",
+              "style3d",
+              "xpbd"
+            ],
+            "default": "all"
+          },
+          "include_shared": {
+            "type": "boolean",
+            "default": false
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "default": 6
+          },
+          "cursor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "version": {
+            "type": "string",
+            "default": "1.7.0",
+            "maxLength": 32
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "status",
+          "version",
+          "source_commit",
+          "build_id",
+          "read_only",
+          "requested_scope",
+          "resolved_scope",
+          "applied_filters"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "const": "1.7.0"
+          },
+          "source_commit": {
+            "const": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "build_id": {
+            "type": "string"
+          },
+          "read_only": {
+            "const": true
+          },
+          "requested_scope": {
+            "type": "object"
+          },
+          "resolved_scope": {
+            "type": "object"
+          },
+          "applied_filters": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    "get_parameter": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "record_id": {
+            "type": "string",
+            "default": ""
+          },
+          "solver": {
+            "enum": [
+              "shared",
+              "vbd",
+              "mujoco",
+              "kamino",
+              "featherstone",
+              "implicit-mpm",
+              "semi-implicit",
+              "style3d",
+              "xpbd"
+            ],
+            "default": "vbd"
+          },
+          "version": {
+            "type": "string",
+            "default": "1.7.0",
+            "maxLength": 32
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "status",
+          "version",
+          "source_commit",
+          "build_id",
+          "read_only",
+          "requested_scope",
+          "resolved_scope",
+          "applied_filters"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "const": "1.7.0"
+          },
+          "source_commit": {
+            "const": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "build_id": {
+            "type": "string"
+          },
+          "read_only": {
+            "const": true
+          },
+          "requested_scope": {
+            "type": "object"
+          },
+          "resolved_scope": {
+            "type": "object"
+          },
+          "applied_filters": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    "get_experiment": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "experiment_id": {
+            "type": "string"
+          },
+          "detail": {
+            "enum": [
+              "summary",
+              "full"
+            ],
+            "default": "summary"
+          },
+          "solver": {
+            "enum": [
+              "vbd",
+              "mujoco",
+              "kamino",
+              "featherstone",
+              "implicit-mpm",
+              "semi-implicit",
+              "style3d",
+              "xpbd"
+            ],
+            "default": "vbd"
+          },
+          "version": {
+            "type": "string",
+            "default": "1.7.0",
+            "maxLength": 32
+          }
+        },
+        "required": [
+          "experiment_id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "status",
+          "version",
+          "source_commit",
+          "build_id",
+          "read_only",
+          "requested_scope",
+          "resolved_scope",
+          "applied_filters"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "const": "1.7.0"
+          },
+          "source_commit": {
+            "const": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "build_id": {
+            "type": "string"
+          },
+          "read_only": {
+            "const": true
+          },
+          "requested_scope": {
+            "type": "object"
+          },
+          "resolved_scope": {
+            "type": "object"
+          },
+          "applied_filters": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    "get_relations": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "node_id": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 30,
+            "default": 12
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0
+          },
+          "cursor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "edge_cursor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "version": {
+            "type": "string",
+            "default": "1.7.0",
+            "maxLength": 32
+          }
+        },
+        "required": [
+          "node_id"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "status",
+          "version",
+          "source_commit",
+          "build_id",
+          "read_only",
+          "requested_scope",
+          "resolved_scope",
+          "applied_filters"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "const": "1.7.0"
+          },
+          "source_commit": {
+            "const": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "build_id": {
+            "type": "string"
+          },
+          "read_only": {
+            "const": true
+          },
+          "requested_scope": {
+            "type": "object"
+          },
+          "resolved_scope": {
+            "type": "object"
+          },
+          "applied_filters": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    "get_document": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "default": ""
+          },
+          "record_id": {
+            "type": "string",
+            "default": ""
+          },
+          "section": {
+            "type": "string",
+            "default": ""
+          },
+          "start_line": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+          },
+          "max_lines": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200,
+            "default": 100
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "default": 50
+          },
+          "cursor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "include_outline": {
+            "type": "boolean",
+            "default": false
+          },
+          "version": {
+            "type": "string",
+            "default": "1.7.0",
+            "maxLength": 32
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "status",
+          "version",
+          "source_commit",
+          "build_id",
+          "read_only",
+          "requested_scope",
+          "resolved_scope",
+          "applied_filters"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "const": "1.7.0"
+          },
+          "source_commit": {
+            "const": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "build_id": {
+            "type": "string"
+          },
+          "read_only": {
+            "const": true
+          },
+          "requested_scope": {
+            "type": "object"
+          },
+          "resolved_scope": {
+            "type": "object"
+          },
+          "applied_filters": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    "get_source": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "default": ""
+          },
+          "symbol_id": {
+            "type": "string",
+            "default": ""
+          },
+          "start_line": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+          },
+          "max_lines": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200,
+            "default": 100
+          },
+          "scope": {
+            "enum": [
+              "newton",
+              "experiment"
+            ],
+            "default": "newton"
+          },
+          "version": {
+            "type": "string",
+            "default": "1.7.0",
+            "maxLength": 32
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "status",
+          "version",
+          "source_commit",
+          "build_id",
+          "read_only",
+          "requested_scope",
+          "resolved_scope",
+          "applied_filters"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "const": "1.7.0"
+          },
+          "source_commit": {
+            "const": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "build_id": {
+            "type": "string"
+          },
+          "read_only": {
+            "const": true
+          },
+          "requested_scope": {
+            "type": "object"
+          },
+          "resolved_scope": {
+            "type": "object"
+          },
+          "applied_filters": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  },
+  "statuses": [
+    "ok",
+    "no_match",
+    "not_indexed",
+    "no_measured_evidence",
+    "unsupported_feature",
+    "unsupported_version"
+  ],
+  "errors": [
+    "INVALID_ARGUMENT",
+    "UNKNOWN_ARGUMENT",
+    "INVALID_CURSOR",
+    "STALE_CURSOR",
+    "SCOPE_CONFLICT",
+    "SOURCE_INTEGRITY_MISMATCH",
+    "BUILD_MISMATCH"
+  ],
+  "envelope_required": [
+    "status",
+    "version",
+    "source_commit",
+    "build_id",
+    "read_only",
+    "requested_scope",
+    "resolved_scope",
+    "applied_filters"
+  ],
+  "budgets": {
+    "compact_search_5_max_chars": 6000,
+    "text_window_max_chars": 18000,
+    "response_max_chars": 32000,
+    "parameter_task_calls": 4,
+    "cross_module_task_calls": 8
+  }
+}

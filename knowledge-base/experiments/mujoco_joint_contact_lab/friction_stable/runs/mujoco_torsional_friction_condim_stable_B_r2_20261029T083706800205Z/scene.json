@@ -1,0 +1,51 @@
+{
+  "id": "mujoco_torsional_friction_condim_stable",
+  "title": "球体法线自旋：condim 3 与 4 的扭转摩擦作用（固定impratio=1000的新场景）",
+  "shape": "sphere",
+  "radius_m": 0.1,
+  "inertia_diagonal_kg_m2": [
+    0.004,
+    0.004,
+    0.004
+  ],
+  "initial_velocity_world": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    10.0
+  ],
+  "body_mu_torsional_m": 0.002,
+  "body_mu_rolling_m": 0.0,
+  "steps": 500,
+  "variants": {
+    "A": {
+      "body_mu": 0.3,
+      "body_condim": 3
+    },
+    "B": {
+      "body_mu": 0.3,
+      "body_condim": 4
+    }
+  },
+  "direct_intervention": "body mujoco.condim only; fixed torsional coefficient .002 m, plane condim3/torsion0 and equal priority. Sphere single point eliminates multi-point tangential-friction spin torque.",
+  "reference": "A has no torsion component and omega_z stays10. B while spinning: omega_z(t)=omega_z(.05)-mu_torsion*m*g/Izz*(t-.05). Independent angular momentum: Izz*(omega_z[n]-omega_z[0])=sum_k dt*tau_world_z_about_COM[k]. Verify torque opposing spin and actual enabled contact dim.",
+  "criteria": {
+    "analytic_spin_velocity_max_error_rad_s": 0.25,
+    "spin_A_max_change_rad_s": 0.02,
+    "torsion_A_max_abs_torque_Nm": 1e-05,
+    "torsion_B_ratio_abs_error_m": 0.00025,
+    "minimum_spin_speed_rad_s": 5.0,
+    "lateral_speed_max_m_s": 0.005,
+    "off_axis_angular_speed_max_rad_s": 0.02,
+    "height_deviation_from_initial_max_m": 0.003,
+    "kinetic_energy_max_positive_step_J": 0.0001,
+    "angular_impulse_balance_max_error_Nms": 2e-05
+  },
+  "paired_criteria": {
+    "final_omega_A_minus_B_min_rad_s": 1.5,
+    "integrated_torsion_impulse_B_min_Nms": 0.006
+  },
+  "parent_negative_case_id": "mujoco_torsional_friction_condim"
+}

@@ -1,0 +1,746 @@
+{
+  "phase": "P5",
+  "status": "passed",
+  "build_id": "8a7a02fd821cc6b9eebd093f",
+  "passed": 184,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "identical-input rebuild reuses complete snapshot ",
+      "passed": true
+    },
+    {
+      "name": "immutable snapshots and timestamps unchanged on reuse",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation concept:collisions",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation concept:collisions",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation concept:collisions",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report concept:collisions",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation concept:coupling",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation concept:coupling",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation concept:coupling",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report concept:coupling",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation concept:solver-observables",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation concept:solver-observables",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation concept:solver-observables",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report concept:solver-observables",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation concept:worlds",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation concept:worlds",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation concept:worlds",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report concept:worlds",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation diagnostic:mujoco:1",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation diagnostic:mujoco:1",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report diagnostic:mujoco:1",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation lab:full_surface",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation lab:full_surface",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation lab:full_surface",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report lab:full_surface",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation module:controllers",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation module:controllers",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation module:controllers",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report module:controllers",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation module:geometry",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation module:geometry",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation module:geometry",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report module:geometry",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation module:selection",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation module:selection",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation module:selection",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report module:selection",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation module:sensors",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation module:sensors",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation module:sensors",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report module:sensors",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation newton:1.7.0:SolverVBD:iterations",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation newton:1.7.0:SolverVBD:iterations",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation newton:1.7.0:SolverVBD:iterations",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report newton:1.7.0:SolverVBD:iterations",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation newton:1.7.0:kamino:config.padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation newton:1.7.0:kamino:config.padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation newton:1.7.0:kamino:config.padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report newton:1.7.0:kamino:config.padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation newton:1.7.0:mujoco:iterations",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation newton:1.7.0:mujoco:iterations",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation newton:1.7.0:mujoco:iterations",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report newton:1.7.0:mujoco:iterations",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation pipeline:enable_rigid_soft_full_surface_contact",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation pipeline:enable_rigid_soft_full_surface_contact",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation pipeline:enable_rigid_soft_full_surface_contact",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report pipeline:enable_rigid_soft_full_surface_contact",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:actuator-effort-scheduling",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:actuator-effort-scheduling",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:actuator-effort-scheduling",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:actuator-effort-scheduling",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:collision-preflight",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:collision-preflight",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:collision-preflight",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:collision-preflight",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:contact-capacity-diagnosis",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:contact-capacity-diagnosis",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:contact-capacity-diagnosis",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:contact-capacity-diagnosis",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:contact-frame-imu-observation",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:contact-frame-imu-observation",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:contact-frame-imu-observation",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:contact-frame-imu-observation",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:control-target-layout",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:control-target-layout",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:control-target-layout",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:control-target-layout",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:coupled-rigid-deformable",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:coupling-interface-ownership",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:coupling-interface-ownership",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:coupling-interface-ownership",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:coupling-interface-ownership",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:differentiable-rollout-history",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:differentiable-rollout-history",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:differentiable-rollout-history",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:differentiable-rollout-history",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:external-collision",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:external-collision",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:external-collision",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:external-collision",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:ik-mujoco-contact",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:kamino-backend-config-resolve",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:kamino-backend-config-resolve",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:kamino-backend-config-resolve",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:kamino-backend-config-resolve",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:masked-reset-state-history",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:masked-reset-state-history",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:masked-reset-state-history",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:masked-reset-state-history",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:model-update-notification",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:model-update-notification",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:model-update-notification",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:model-update-notification",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:mujoco-contact-conversion",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:mujoco-contact-conversion",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:mujoco-contact-conversion",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:mujoco-contact-conversion",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:mujoco-native-contact",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:solver-owned-collision",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:vbd-dat-preconditions",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:vbd-dat-preconditions",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:vbd-dat-preconditions",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:vbd-dat-preconditions",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report recipe:worlds-reset",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation solver:kamino",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation solver:kamino",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation solver:kamino",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report solver:kamino",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation solver:mujoco",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation solver:mujoco",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation solver:mujoco",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report solver:mujoco",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation solver:vbd",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation solver:vbd",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation solver:vbd",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report solver:vbd",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation solver:xpbd",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation solver:xpbd",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation solver:xpbd",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report solver:xpbd",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation topic:coupling",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation topic:coupling",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation topic:coupling",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report topic:coupling",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report topic:differentiable-simulation",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report topic:lifecycle-observation",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation topic:robot-control",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation topic:robot-control",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation topic:robot-control",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report topic:robot-control",
+      "passed": true
+    },
+    {
+      "name": "unchanged body/source retains task validation topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "name": "changed source loses task validation topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "name": "changed body loses task validation topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "name": "MCP can read immutable validation report topic:worlds-batching",
+      "passed": true
+    },
+    {
+      "name": "added and removed public API detected in disposable releases",
+      "passed": true
+    },
+    {
+      "name": "public constructor signature difference detected",
+      "passed": true
+    },
+    {
+      "name": "constructor and configuration declaration defaults compared",
+      "passed": true
+    },
+    {
+      "name": "new-version proposal cannot inherit physical evidence or publish automatically",
+      "passed": true
+    },
+    {
+      "name": "clean source fixture accepted",
+      "passed": true
+    },
+    {
+      "name": "source mutation detected before regeneration",
+      "passed": true
+    },
+    {
+      "name": "valid report receipt accepted",
+      "passed": true
+    },
+    {
+      "name": "tampered validation report rejected",
+      "passed": true
+    },
+    {
+      "name": "interrupted/incomplete staging cannot replace current build",
+      "passed": true
+    },
+    {
+      "name": "complete staging promoted atomically within workspace",
+      "passed": true
+    },
+    {
+      "name": "mixed/tampered snapshot rejected before reading",
+      "passed": true
+    },
+    {
+      "name": "changed runtime program rejected",
+      "passed": true
+    },
+    {
+      "name": "changed contract rejected before tools can use mixed schemas",
+      "passed": true
+    },
+    {
+      "name": "stale pagination rejected across generations",
+      "passed": true
+    },
+    {
+      "name": "same-build regression reports retained by content hash",
+      "passed": true
+    },
+    {
+      "name": "current measured pairs vbd",
+      "passed": true
+    },
+    {
+      "name": "current measured pairs mujoco",
+      "passed": true
+    },
+    {
+      "name": "current measured pairs kamino",
+      "passed": true
+    },
+    {
+      "name": "no cross-solver experiment borrowing",
+      "passed": true
+    }
+  ],
+  "fixture_scope": "Synthetic releases and corrupt files existed only under a temporary directory; pinned Newton and real experiment arrays were untouched."
+}

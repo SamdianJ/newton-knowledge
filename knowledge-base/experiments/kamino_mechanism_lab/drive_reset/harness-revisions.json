@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+  "physics_or_threshold_changes": false,
+  "revisions": [
+    {
+      "runner_sha256": "b3beb4a4e529089ac8f2b0d02e80e59fea96a4af4a30061a4a4e7e18bd569a50",
+      "change": "Initial path check assumed editable import; rejected before physics",
+      "classification": "preflight_failed"
+    },
+    {
+      "runner_sha256": "4a0f91f9b966917ddae278c803fcd263bdcb956b890a3b037b91ef1daf79b325",
+      "change": "Installed wrapper contents matched but full installed tree not yet checked",
+      "classification": "excluded_instrumentation_incomplete"
+    },
+    {
+      "runner_sha256": "83e332424f96c1024b4413f1eb5cec4dc9eb81dd1bd9356159ddc0258faf9871",
+      "change": "Full 809-file verification; lazy State lambda column omitted from initial-key serialization",
+      "classification": "excluded_instrumentation_incomplete"
+    },
+    {
+      "runner_sha256": "cd8cb9b8937956931332a4b2580f3b78e84ca207eb6498db5f64107c25c1b84f",
+      "change": "Initial lambda channel captured from allocated backend zeros; exact snapshot channel-set assertion",
+      "classification": "formal"
+    }
+  ],
+  "policy": "All earlier runs retained. Completed old runs are not physics failures and are excluded from acceptance due to source or sampling completeness."
+}

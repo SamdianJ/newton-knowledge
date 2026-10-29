@@ -1,0 +1,14 @@
+{
+  "coordinate_system": "maximal body coordinates",
+  "deformable_solver": false,
+  "experimental": true,
+  "source_refs": [
+    {
+      "repository": "newton-physics/newton",
+      "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+      "path": "docs/solvers/kamino.rst",
+      "line": 5,
+      "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L5"
+    }
+  ]
+}

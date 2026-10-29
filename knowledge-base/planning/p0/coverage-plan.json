@@ -1,0 +1,1766 @@
+{
+  "schema_version": "2.0",
+  "version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "prd_sha256": "ca92c00e9a281b96d3d0b7b6c0fe245fa328c2ac731e4b0f4b97aae0ef40483d",
+  "stages": [
+    "asset_import",
+    "preprocess",
+    "initialization",
+    "control",
+    "collision",
+    "solver_step",
+    "output"
+  ],
+  "solver_keys": [
+    "vbd",
+    "mujoco",
+    "kamino",
+    "featherstone",
+    "implicit-mpm",
+    "semi-implicit",
+    "style3d",
+    "xpbd"
+  ],
+  "entries": [
+    {
+      "id": "module:newton",
+      "family": "api",
+      "title": "核心对象与生命周期",
+      "source_path": "newton/__init__.py",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "control",
+        "collision",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton"
+      ],
+      "canonical_path": "knowledge/pages/module/newton.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "MAXVAL",
+        "Axis",
+        "AxisType",
+        "__version__",
+        "use_coord_layout_targets",
+        "SDF",
+        "Gaussian",
+        "GeoType",
+        "Heightfield",
+        "Mesh",
+        "ParticleFlags",
+        "ShapeFlags",
+        "TetMesh",
+        "intersect_ray",
+        "BodyFlags",
+        "CollisionPipeline",
+        "Contacts",
+        "Control",
+        "JointTargetMode",
+        "JointType",
+        "Model",
+        "ModelBuilder",
+        "ModelFlags",
+        "Rod",
+        "State",
+        "StateFlags",
+        "eval_fk",
+        "eval_ik",
+        "eval_inverse_dynamics_force",
+        "eval_inverse_dynamics_passive",
+        "eval_jacobian",
+        "eval_mass_matrix",
+        "eval_mimic",
+        "eval_rigid_contact_kinematics",
+        "actuators",
+        "controllers",
+        "geometry",
+        "ik",
+        "math",
+        "selection",
+        "sensors",
+        "solvers",
+        "usd",
+        "utils",
+        "viewer"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/__init__.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "4adf43936dc13fc83f6ac59a720046bbcf9d3bf917fe21795cb6518277db6b05",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/__init__.py"
+        }
+      ]
+    },
+    {
+      "id": "module:actuators",
+      "family": "api",
+      "title": "执行器与驱动",
+      "source_path": "newton/actuators.py",
+      "owner_module": "newton.actuators",
+      "stages": [
+        "control"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.actuators"
+      ],
+      "canonical_path": "knowledge/pages/module/actuators.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "Actuator",
+        "ActuatorParsed",
+        "ClampingBase",
+        "ClampingDCMotor",
+        "ClampingMaxEffort",
+        "ClampingPositionBased",
+        "ComponentKind",
+        "Delay",
+        "DriveBase",
+        "DriveNeuralGRU",
+        "DriveNeuralLSTM",
+        "DriveNeuralMLP",
+        "DrivePD",
+        "DrivePID",
+        "JointSpaceResponse",
+        "SchemaNames",
+        "parse_actuator_prim",
+        "register_actuator_component"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/actuators.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "e07ad13c5bd0f17ef0d2e916eb2a8f7d042462881d60abb26b011934af2adf70",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/actuators.py"
+        }
+      ]
+    },
+    {
+      "id": "module:controllers",
+      "family": "api",
+      "title": "机器人控制器",
+      "source_path": "newton/controllers.py",
+      "owner_module": "newton.controllers",
+      "stages": [
+        "control"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.controllers"
+      ],
+      "canonical_path": "knowledge/pages/module/controllers.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "ControllerBase",
+        "ControllerDifferentialIK",
+        "ControllerDifferentialIKModelFree",
+        "ControllerJointImpedance",
+        "ControllerJointImpedanceModelFree",
+        "ControllerOperationalSpace",
+        "ControllerOperationalSpaceModelFree",
+        "DifferentialIKMethod"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/controllers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7660c5864a8a35da51f10e0ef8d8648c67e91ed1d17ec93189f50371f11834b2",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/controllers.py"
+        }
+      ]
+    },
+    {
+      "id": "module:geometry",
+      "family": "api",
+      "title": "几何与碰撞工具",
+      "source_path": "newton/geometry.py",
+      "owner_module": "newton.geometry",
+      "stages": [
+        "preprocess",
+        "collision"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.geometry"
+      ],
+      "canonical_path": "knowledge/pages/module/geometry.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "BroadPhaseAllPairs",
+        "BroadPhaseExplicit",
+        "BroadPhaseSAP",
+        "HydroelasticSDF",
+        "NarrowPhase",
+        "ParticleSurface",
+        "TriMeshCollisionInfo",
+        "collide_box_box",
+        "collide_capsule_box",
+        "collide_capsule_capsule",
+        "collide_plane_box",
+        "collide_plane_capsule",
+        "collide_plane_cylinder",
+        "collide_plane_ellipsoid",
+        "collide_plane_sphere",
+        "collide_sphere_box",
+        "collide_sphere_capsule",
+        "collide_sphere_cylinder",
+        "collide_sphere_sphere",
+        "compute_inertia_shape",
+        "compute_offset_mesh",
+        "create_empty_sdf_data",
+        "extract_particle_surface",
+        "sdf_box",
+        "sdf_capsule",
+        "sdf_cone",
+        "sdf_cylinder",
+        "sdf_mesh",
+        "sdf_plane",
+        "sdf_sphere",
+        "transform_inertia"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/geometry.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "cfadcd32d370218b9a4caa3fa18fe2c7e4ce3d4d5eda981c4cf90c955f2b3f63",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/geometry.py"
+        }
+      ]
+    },
+    {
+      "id": "module:ik",
+      "family": "api",
+      "title": "逆运动学",
+      "source_path": "newton/ik.py",
+      "owner_module": "newton.ik",
+      "stages": [
+        "initialization",
+        "control"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.ik"
+      ],
+      "canonical_path": "knowledge/pages/module/ik.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "IKJacobianType",
+        "IKObjective",
+        "IKObjectiveJointLimit",
+        "IKObjectivePosition",
+        "IKObjectiveRotation",
+        "IKOptimizer",
+        "IKOptimizerLBFGS",
+        "IKOptimizerLM",
+        "IKSampler",
+        "IKSolver"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/ik.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "95a11b3977378866955a54a1d60864974ba842e95bac912be23589a9b9b0c06a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/ik.py"
+        }
+      ]
+    },
+    {
+      "id": "module:math",
+      "family": "api",
+      "title": "空间数学与坐标",
+      "source_path": "newton/math.py",
+      "owner_module": "newton.math",
+      "stages": [
+        "preprocess",
+        "control",
+        "solver_step"
+      ],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.math"
+      ],
+      "canonical_path": "knowledge/pages/module/math.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "boltzmann",
+        "leaky_max",
+        "leaky_min",
+        "normalize_with_norm",
+        "orthonormal_basis",
+        "quat_between_axes",
+        "quat_between_vectors_robust",
+        "quat_decompose",
+        "quat_velocity",
+        "safe_div",
+        "smooth_max",
+        "smooth_min",
+        "transform_twist",
+        "transform_wrench",
+        "vec_abs",
+        "vec_allclose",
+        "vec_inside_limits",
+        "vec_leaky_max",
+        "vec_leaky_min",
+        "vec_max",
+        "vec_min",
+        "velocity_at_point"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/math.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "bab5602cebaca1c0351b9d974b9df016ebc60e5f370e9c369c158c550efafdde",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/math.py"
+        }
+      ]
+    },
+    {
+      "id": "module:selection",
+      "family": "api",
+      "title": "批量对象选择",
+      "source_path": "newton/selection.py",
+      "owner_module": "newton.selection",
+      "stages": [
+        "initialization",
+        "control"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.selection"
+      ],
+      "canonical_path": "knowledge/pages/module/selection.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "ArticulationView"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/selection.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "daee993a9068a11462db9c157d018d0471caf4092839fd0ac5ece0d9216f18d5",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/selection.py"
+        }
+      ]
+    },
+    {
+      "id": "module:sensors",
+      "family": "api",
+      "title": "传感器与量测",
+      "source_path": "newton/sensors.py",
+      "owner_module": "newton.sensors",
+      "stages": [
+        "initialization",
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.sensors"
+      ],
+      "canonical_path": "knowledge/pages/module/sensors.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "SensorCamera",
+        "SensorContact",
+        "SensorFrameTransform",
+        "SensorIMU",
+        "SensorTiledCamera"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/sensors.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "0f60fe6502ea25c5a761e65138ef450f408a54c208989a96ff8760ac9e80a516",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/sensors.py"
+        }
+      ]
+    },
+    {
+      "id": "module:solvers",
+      "family": "api",
+      "title": "求解器接口与后端",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.solvers"
+      ],
+      "canonical_path": "knowledge/pages/module/solvers.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "SolverBase",
+        "SolverFeatherstone",
+        "SolverImplicitMPM",
+        "SolverKamino",
+        "SolverMuJoCo",
+        "SolverSemiImplicit",
+        "SolverStyle3D",
+        "SolverVBD",
+        "SolverXPBD",
+        "style3d",
+        "experimental"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "module:usd",
+      "family": "api",
+      "title": "USD 资产与 Schema",
+      "source_path": "newton/usd.py",
+      "owner_module": "newton.usd",
+      "stages": [
+        "asset_import",
+        "preprocess"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.usd"
+      ],
+      "canonical_path": "knowledge/pages/module/usd.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "DEFORMABLE_LEGACY_NAMESPACES",
+        "find_tetmesh_prims",
+        "get_attribute",
+        "get_attributes_in_namespace",
+        "get_custom_attribute_declarations",
+        "get_custom_attribute_values",
+        "get_float",
+        "get_gprim_axis",
+        "get_mesh",
+        "get_physics_scenes",
+        "get_quat",
+        "get_scale",
+        "get_tetmesh",
+        "get_transform",
+        "has_applied_api_schema",
+        "has_attribute",
+        "type_to_warp",
+        "value_to_warp",
+        "PrimType",
+        "SchemaResolver",
+        "SchemaResolverMjc",
+        "SchemaResolverNewton",
+        "SchemaResolverPhysx"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/usd.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7d1fe3fa576b57b9a28bab92ffff13024a72266802349d0693b54ceb2bcfb0d9",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/usd.py"
+        }
+      ]
+    },
+    {
+      "id": "module:utils",
+      "family": "api",
+      "title": "预处理与开发工具",
+      "source_path": "newton/utils.py",
+      "owner_module": "newton.utils",
+      "stages": [
+        "preprocess",
+        "output"
+      ],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.utils"
+      ],
+      "canonical_path": "knowledge/pages/module/utils.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "color_graph",
+        "plot_graph",
+        "MeshAdjacency",
+        "MeshAdjacencyData",
+        "remesh_mesh",
+        "solidify_mesh",
+        "validate_tet_mesh",
+        "validate_triangle_mesh",
+        "rasterize_mesh_to_heightfield",
+        "bourke_color_map",
+        "ColorSpace",
+        "color_linear_to_srgb",
+        "color_srgb_to_linear",
+        "CableStiffness",
+        "create_cable_stiffness_from_elastic_moduli",
+        "create_parallel_transport_cable_quaternions",
+        "create_straight_cable_points",
+        "create_straight_cable_points_and_quaternions",
+        "compute_world_offsets",
+        "download_asset",
+        "EventTracer",
+        "event_scope",
+        "run_benchmark",
+        "string_to_warp",
+        "load_texture",
+        "normalize_texture"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/utils.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "2a69eee9de6421270081570e086657c2e2e64a1f9c2412cff4b9bc79a58b80a1",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/utils.py"
+        }
+      ]
+    },
+    {
+      "id": "module:viewer",
+      "family": "api",
+      "title": "查看 记录与导出",
+      "source_path": "newton/viewer.py",
+      "owner_module": "newton.viewer",
+      "stages": [
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "newton.viewer"
+      ],
+      "canonical_path": "knowledge/pages/module/viewer.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "public_exports": [
+        "Layer",
+        "ViewerBase",
+        "ViewerFile",
+        "ViewerGL",
+        "ViewerNull",
+        "ViewerRTX",
+        "ViewerRerun",
+        "ViewerUSD",
+        "ViewerViser"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/viewer.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "a017fd64bd4ec9cd71bd13cdef1a5efd9fb5a9fe72a24d139bd9f639011a2881",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/viewer.py"
+        }
+      ]
+    },
+    {
+      "id": "concept:worlds",
+      "family": "concept",
+      "title": "Worlds 与批量场景",
+      "source_path": "docs/concepts/worlds.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "control"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/worlds.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/worlds.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "0455c06cabc53bed8a9d9c0b5c95c045fc5d478c922fe43c915f08d80fba2650",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/worlds.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:articulations",
+      "family": "concept",
+      "title": "关节与机械系统",
+      "source_path": "docs/concepts/articulations.rst",
+      "owner_module": "newton",
+      "stages": [
+        "asset_import",
+        "initialization",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/articulations.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/articulations.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "182503e44d0c15749f2e80b443b29c0bd515b45f88de4b43a450f58490fd141c",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/articulations.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:deformables",
+      "family": "concept",
+      "title": "可变形体与离散化",
+      "source_path": "docs/concepts/deformable_objects.rst",
+      "owner_module": "newton",
+      "stages": [
+        "preprocess",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/deformables.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/deformable_objects.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "e5876fc3c22840cc33ab8817302ef211c1a67e0c62231604ebba756d1a6a5171",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/deformable_objects.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:mass-inertia",
+      "family": "concept",
+      "title": "质量 惯量与质心",
+      "source_path": "docs/concepts/mass_inertia.rst",
+      "owner_module": "newton",
+      "stages": [
+        "preprocess",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/mass-inertia.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/mass_inertia.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "cd7de3f3c8a1c03f745b196574bee3224c53ae5adc3dee2acb29ff1808b36636",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/mass_inertia.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:sites",
+      "family": "concept",
+      "title": "Sites 与参考坐标",
+      "source_path": "docs/concepts/sites.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/sites.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/sites.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "c7345a691412590128d2ff2c8b50833baad5dbf249d6e16e50281061794dd74f",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/sites.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:sensors",
+      "family": "concept",
+      "title": "传感器生命周期",
+      "source_path": "docs/concepts/sensors.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/sensors.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/sensors.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "188871416066a44ffc48dcccccb6f1de2a96cc9f9349efa18cbd6158a2453f55",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/sensors.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:conventions",
+      "family": "concept",
+      "title": "单位 坐标与布局约定",
+      "source_path": "docs/concepts/conventions.rst",
+      "owner_module": "newton",
+      "stages": [
+        "asset_import",
+        "preprocess",
+        "initialization",
+        "control",
+        "collision",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/conventions.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/conventions.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3399231a4008130dd8adcc2148201dfdf8b1314a63cba9464e761089c25a0008",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/conventions.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:usd-parsing",
+      "family": "concept",
+      "title": "USD 解析与 Schema",
+      "source_path": "docs/concepts/usd_parsing.rst",
+      "owner_module": "newton",
+      "stages": [
+        "asset_import"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/usd-parsing.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/usd_parsing.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "0aa24493928981951df876af2d4c2a2318dfe6c54b0957d06c1f9179481de6d2",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/usd_parsing.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:custom-attributes",
+      "family": "concept",
+      "title": "自定义属性与注册",
+      "source_path": "docs/concepts/custom_attributes.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/custom-attributes.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/custom_attributes.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "02eee1d6acc6c8844a674bf1f3a3526960adffc6832acb6a0e890bd383c0819a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/custom_attributes.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:solver-observables",
+      "family": "concept",
+      "title": "求解器观测资源",
+      "source_path": "docs/concepts/solver_observables.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/solver-observables.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/solver_observables.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "47fe3b01b7e598b8a0e5f9961b54b7313fba2cb59e47e6a771fc00282529d281",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:collisions",
+      "family": "concept",
+      "title": "碰撞与 Contacts",
+      "source_path": "docs/concepts/collisions.rst",
+      "owner_module": "newton",
+      "stages": [
+        "preprocess",
+        "collision",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/collisions.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/collisions.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9f636761ef4b3914b4087e870420eb1ace24fa3afb9f96f535124adcf4a1b508",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/collisions.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:simulation-tuning",
+      "family": "concept",
+      "title": "仿真调参与诊断",
+      "source_path": "docs/concepts/simulation_tuning.rst",
+      "owner_module": "newton",
+      "stages": [
+        "control",
+        "collision",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/simulation-tuning.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/simulation_tuning.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "8f67ad70aee2b52f8753b7fbe457a5966979dd21ead702cd39b68258ff163d80",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/simulation_tuning.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:coupling",
+      "family": "concept",
+      "title": "多求解器耦合",
+      "source_path": "docs/concepts/coupling.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/coupling.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/coupling.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c88667aadf1665a246c7138832180b9f483dbdf4687084bf06ac8bba371abbe",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/coupling.rst"
+        }
+      ]
+    },
+    {
+      "id": "concept:actuators",
+      "family": "concept",
+      "title": "执行器组合与控制",
+      "source_path": "docs/concepts/actuators.rst",
+      "owner_module": "newton",
+      "stages": [
+        "control",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/concept/actuators.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/actuators.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7133878225ca17451672733ef37301b1aba8035e892ba4b5155d9a162fb451b7",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/actuators.rst"
+        }
+      ]
+    },
+    {
+      "id": "solver:vbd",
+      "family": "solver",
+      "title": "SolverVBD",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "explained",
+      "phase": "P2",
+      "aliases": [
+        "SolverVBD",
+        "solver:VBD:1.7.0"
+      ],
+      "canonical_path": "knowledge/pages/solver/vbd.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "vbd",
+      "public_class": "SolverVBD",
+      "existing_experiment_count": 17,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "solver:mujoco",
+      "family": "solver",
+      "title": "SolverMuJoCo",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "explained",
+      "phase": "P2",
+      "aliases": [
+        "SolverMuJoCo",
+        "solver:mujoco:1.7.0"
+      ],
+      "canonical_path": "knowledge/pages/solver/mujoco.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "mujoco",
+      "public_class": "SolverMuJoCo",
+      "existing_experiment_count": 0,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "solver:kamino",
+      "family": "solver",
+      "title": "SolverKamino",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "explained",
+      "phase": "P2",
+      "aliases": [
+        "SolverKamino",
+        "solver:kamino:1.7.0"
+      ],
+      "canonical_path": "knowledge/pages/solver/kamino.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "kamino",
+      "public_class": "SolverKamino",
+      "existing_experiment_count": 0,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "solver:featherstone",
+      "family": "solver",
+      "title": "SolverFeatherstone",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "SolverFeatherstone"
+      ],
+      "canonical_path": "knowledge/pages/solver/featherstone.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "featherstone",
+      "public_class": "SolverFeatherstone",
+      "existing_experiment_count": 0,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "solver:implicit-mpm",
+      "family": "solver",
+      "title": "SolverImplicitMPM",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "SolverImplicitMPM"
+      ],
+      "canonical_path": "knowledge/pages/solver/implicit-mpm.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "implicit-mpm",
+      "public_class": "SolverImplicitMPM",
+      "existing_experiment_count": 0,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "solver:semi-implicit",
+      "family": "solver",
+      "title": "SolverSemiImplicit",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "SolverSemiImplicit"
+      ],
+      "canonical_path": "knowledge/pages/solver/semi-implicit.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "semi-implicit",
+      "public_class": "SolverSemiImplicit",
+      "existing_experiment_count": 0,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "solver:style3d",
+      "family": "solver",
+      "title": "SolverStyle3D",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "SolverStyle3D"
+      ],
+      "canonical_path": "knowledge/pages/solver/style3d.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "style3d",
+      "public_class": "SolverStyle3D",
+      "existing_experiment_count": 0,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "solver:xpbd",
+      "family": "solver",
+      "title": "SolverXPBD",
+      "source_path": "newton/solvers.py",
+      "owner_module": "newton.solvers",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [
+        "SolverXPBD"
+      ],
+      "canonical_path": "knowledge/pages/solver/xpbd.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "solver": "xpbd",
+      "public_class": "SolverXPBD",
+      "existing_experiment_count": 0,
+      "source_refs": [
+        {
+          "path": "newton/solvers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "3676383a1c8c0db44ec9e601f8cd16e6d39317ea0f836ffcf95604ab58b0d71a",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/solvers.py"
+        }
+      ]
+    },
+    {
+      "id": "topic:robot-control",
+      "family": "topic",
+      "title": "运动学与机器人控制",
+      "source_path": "newton/controllers.py",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "control"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/robot-control.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "newton/controllers.py",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7660c5864a8a35da51f10e0ef8d8648c67e91ed1d17ec93189f50371f11834b2",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/controllers.py"
+        }
+      ]
+    },
+    {
+      "id": "topic:worlds-batching",
+      "family": "topic",
+      "title": "Worlds 与批量复位",
+      "source_path": "docs/concepts/worlds.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "control",
+        "solver_step"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/worlds-batching.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/worlds.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "0455c06cabc53bed8a9d9c0b5c95c045fc5d478c922fe43c915f08d80fba2650",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/worlds.rst"
+        }
+      ]
+    },
+    {
+      "id": "topic:coupling",
+      "family": "topic",
+      "title": "刚体与可变形体耦合",
+      "source_path": "docs/concepts/coupling.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/coupling.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/coupling.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c88667aadf1665a246c7138832180b9f483dbdf4687084bf06ac8bba371abbe",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/coupling.rst"
+        }
+      ]
+    },
+    {
+      "id": "topic:differentiable-simulation",
+      "family": "topic",
+      "title": "可微仿真",
+      "source_path": "docs/solvers/index.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/differentiable-simulation.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/solvers/index.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "c236670d25eb27344712457586a7f924c190423b47edace6b8c4946104ef4721",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/index.rst"
+        }
+      ]
+    },
+    {
+      "id": "topic:lifecycle-observation",
+      "family": "topic",
+      "title": "生命周期 复位与量测",
+      "source_path": "docs/concepts/solver_observables.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/lifecycle-observation.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/solver_observables.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "47fe3b01b7e598b8a0e5f9961b54b7313fba2cb59e47e6a771fc00282529d281",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst"
+        }
+      ]
+    },
+    {
+      "id": "topic:environment",
+      "family": "topic",
+      "title": "环境与兼容",
+      "source_path": "docs/guide/compatibility.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/environment.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/guide/compatibility.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "ecd51c5a73c2b747cb8f50f34fa40470ab724086b73b282db5c2288e07023439",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/guide/compatibility.rst"
+        }
+      ]
+    },
+    {
+      "id": "topic:development-testing",
+      "family": "topic",
+      "title": "开发规范与 Newton 测试",
+      "source_path": "docs/guide/development.rst",
+      "owner_module": "newton",
+      "stages": [],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/development-testing.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/guide/development.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7ed29386ecaca0c7c811564799e5fdd51e1f4ff37c7f0050d1acbf13b3aaf468",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/guide/development.rst"
+        }
+      ]
+    },
+    {
+      "id": "topic:migration-integrations",
+      "family": "topic",
+      "title": "版本迁移与外部集成",
+      "source_path": "docs/migration.rst",
+      "owner_module": "newton",
+      "stages": [],
+      "target_depth": "I",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/topic/migration-integrations.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/migration.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "52f3340042c1b6a80d691218a788fec837b9eff3b526d3ff26cfefe6a21c182b",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/migration.rst"
+        }
+      ]
+    },
+    {
+      "id": "stage:asset_import",
+      "family": "stage",
+      "title": "资产导入",
+      "source_path": "docs/guide/overview.rst",
+      "owner_module": "newton",
+      "stages": [
+        "asset_import"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/stage/asset_import.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/guide/overview.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "278d6e9d5a5041c6e0a52d62946a6217db7b408ca2b5a3705895ece8ebe090cb",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/guide/overview.rst"
+        }
+      ]
+    },
+    {
+      "id": "stage:preprocess",
+      "family": "stage",
+      "title": "构建与预处理",
+      "source_path": "docs/concepts/collisions.rst",
+      "owner_module": "newton",
+      "stages": [
+        "preprocess"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/stage/preprocess.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/collisions.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9f636761ef4b3914b4087e870420eb1ace24fa3afb9f96f535124adcf4a1b508",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/collisions.rst"
+        }
+      ]
+    },
+    {
+      "id": "stage:initialization",
+      "family": "stage",
+      "title": "Model 与运行时初始化",
+      "source_path": "docs/guide/overview.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/stage/initialization.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/guide/overview.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "278d6e9d5a5041c6e0a52d62946a6217db7b408ca2b5a3705895ece8ebe090cb",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/guide/overview.rst"
+        }
+      ]
+    },
+    {
+      "id": "stage:control",
+      "family": "stage",
+      "title": "Control 与外力",
+      "source_path": "docs/concepts/actuators.rst",
+      "owner_module": "newton",
+      "stages": [
+        "control"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/stage/control.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/actuators.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7133878225ca17451672733ef37301b1aba8035e892ba4b5155d9a162fb451b7",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/actuators.rst"
+        }
+      ]
+    },
+    {
+      "id": "stage:collision",
+      "family": "stage",
+      "title": "碰撞检测与 Contacts",
+      "source_path": "docs/concepts/collisions.rst",
+      "owner_module": "newton",
+      "stages": [
+        "collision"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/stage/collision.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/collisions.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "9f636761ef4b3914b4087e870420eb1ace24fa3afb9f96f535124adcf4a1b508",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/collisions.rst"
+        }
+      ]
+    },
+    {
+      "id": "stage:solver_step",
+      "family": "stage",
+      "title": "Solver step 与状态推进",
+      "source_path": "docs/solvers/index.rst",
+      "owner_module": "newton",
+      "stages": [
+        "solver_step"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/stage/solver_step.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/solvers/index.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "c236670d25eb27344712457586a7f924c190423b47edace6b8c4946104ef4721",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/index.rst"
+        }
+      ]
+    },
+    {
+      "id": "stage:output",
+      "family": "stage",
+      "title": "观测 记录 导出与渲染",
+      "source_path": "docs/guide/visualization.rst",
+      "owner_module": "newton",
+      "stages": [
+        "output"
+      ],
+      "target_depth": "E",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/stage/output.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/guide/visualization.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "d323bdee978c456a88958f95e87a3593791f16639a2b64aa01d3066eccd31792",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/guide/visualization.rst"
+        }
+      ]
+    },
+    {
+      "id": "recipe:external-collision",
+      "family": "recipe",
+      "title": "外部碰撞与步进",
+      "source_path": "docs/concepts/solver_observables.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/recipe/external-collision.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/solver_observables.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "47fe3b01b7e598b8a0e5f9961b54b7313fba2cb59e47e6a771fc00282529d281",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst"
+        }
+      ]
+    },
+    {
+      "id": "recipe:solver-owned-collision",
+      "family": "recipe",
+      "title": "Solver 持有碰撞资源",
+      "source_path": "docs/concepts/solver_observables.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/recipe/solver-owned-collision.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/solver_observables.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "47fe3b01b7e598b8a0e5f9961b54b7313fba2cb59e47e6a771fc00282529d281",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst"
+        }
+      ]
+    },
+    {
+      "id": "recipe:mujoco-native-contact",
+      "family": "recipe",
+      "title": "MuJoCo 原生接触量测",
+      "source_path": "docs/concepts/solver_observables.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/recipe/mujoco-native-contact.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/solver_observables.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "47fe3b01b7e598b8a0e5f9961b54b7313fba2cb59e47e6a771fc00282529d281",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/solver_observables.rst"
+        }
+      ]
+    },
+    {
+      "id": "recipe:coupled-rigid-deformable",
+      "family": "recipe",
+      "title": "刚体与 VBD 耦合方案",
+      "source_path": "docs/concepts/coupling.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "collision",
+        "solver_step"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/recipe/coupled-rigid-deformable.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/coupling.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7c88667aadf1665a246c7138832180b9f483dbdf4687084bf06ac8bba371abbe",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/coupling.rst"
+        }
+      ]
+    },
+    {
+      "id": "recipe:ik-mujoco-contact",
+      "family": "recipe",
+      "title": "多机器人 IK 控制与接触力",
+      "source_path": "docs/concepts/sensors.rst",
+      "owner_module": "newton",
+      "stages": [
+        "asset_import",
+        "initialization",
+        "control",
+        "solver_step",
+        "output"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/recipe/ik-mujoco-contact.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/sensors.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "188871416066a44ffc48dcccccb6f1de2a96cc9f9349efa18cbd6158a2453f55",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/sensors.rst"
+        }
+      ]
+    },
+    {
+      "id": "recipe:worlds-reset",
+      "family": "recipe",
+      "title": "批量选择与复位",
+      "source_path": "docs/concepts/worlds.rst",
+      "owner_module": "newton",
+      "stages": [
+        "initialization",
+        "control",
+        "solver_step"
+      ],
+      "target_depth": "T",
+      "observed_depth": "not_curated",
+      "phase": "P2",
+      "aliases": [],
+      "canonical_path": "knowledge/pages/recipe/worlds-reset.md",
+      "deferred": "首版按目标深度交付；逐符号教程和额外物理实验按任务扩充。",
+      "source_refs": [
+        {
+          "path": "docs/concepts/worlds.rst",
+          "line": 1,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "0455c06cabc53bed8a9d9c0b5c95c045fc5d478c922fe43c915f08d80fba2650",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/worlds.rst"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "api": 12,
+    "concept": 14,
+    "solver": 8,
+    "topic": 8,
+    "stage": 7,
+    "recipe": 6
+  }
+}

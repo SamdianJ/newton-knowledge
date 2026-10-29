@@ -1,0 +1,338 @@
+{
+  "phase": "P5",
+  "status": "passed",
+  "build_id": "8a7a02fd821cc6b9eebd093f",
+  "passed": 82,
+  "failed": 0,
+  "calls": 19,
+  "checks": [
+    {
+      "name": "call success search_knowledge {'query': 'iterations', 'kind': 'parameter', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases search_knowledge",
+      "passed": true
+    },
+    {
+      "name": "five-hit budget including legacy aliases",
+      "passed": true
+    },
+    {
+      "name": "legacy hit shape and executable next_call",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'iterations', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy declared default vbd iterations",
+      "passed": true
+    },
+    {
+      "name": "legacy parameter shape iterations",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'iterations', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy declared default mujoco iterations",
+      "passed": true
+    },
+    {
+      "name": "legacy parameter shape iterations",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'padmm.max_iterations', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy declared default kamino padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "name": "legacy parameter shape padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'full_surface', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy declared default vbd full_surface",
+      "passed": true
+    },
+    {
+      "name": "legacy parameter shape full_surface",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'substeps', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy declared default vbd substeps",
+      "passed": true
+    },
+    {
+      "name": "legacy parameter shape substeps",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'tri_ke'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy group aliases tri_ke",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'tri_ka'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy group aliases tri_ka",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'edge_ke'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy group aliases edge_ke",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'contact_ke'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy group aliases contact_ke",
+      "passed": true
+    },
+    {
+      "name": "call success get_parameter {'name': 'contact_mu'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_parameter",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_parameter",
+      "passed": true
+    },
+    {
+      "name": "legacy group aliases contact_mu",
+      "passed": true
+    },
+    {
+      "name": "call success get_experiment {'experiment_id': 'full_surface', 'detail': 'full'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_experiment",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_experiment",
+      "passed": true
+    },
+    {
+      "name": "flat experiment aliases",
+      "passed": true
+    },
+    {
+      "name": "legacy artifact dictionary local files",
+      "passed": true
+    },
+    {
+      "name": "legacy web URL and variant raw data",
+      "passed": true
+    },
+    {
+      "name": "call success get_document {'limit': 10}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_document",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_document",
+      "passed": true
+    },
+    {
+      "name": "legacy document inventory usable paths",
+      "passed": true
+    },
+    {
+      "name": "call success get_document {'path': 'knowledge/pages/concept/actuators.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_document",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_document",
+      "passed": true
+    },
+    {
+      "name": "legacy document content continuation",
+      "passed": true
+    },
+    {
+      "name": "call success get_source {'path': 'newton/_src/solvers/vbd/solver_vbd.py', 'start_line': 80, 'max_lines': 200}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_source",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_source",
+      "passed": true
+    },
+    {
+      "name": "legacy source content continuation",
+      "passed": true
+    },
+    {
+      "name": "call success get_relations {'node_id': 'concept:collisions', 'limit': 10}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_relations",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_relations",
+      "passed": true
+    },
+    {
+      "name": "call success get_relations {'node_id': 'concept:collisions', 'limit': 10, 'cursor': 'eyJidWlsZCI6IjhhN2EwMmZkODIxY2M2YjllZWJkMDkzZiIsInN0cmVhbSI6InJlbGF0aW9ucyIsInF1ZXJ5IjoiOTQxMDFmNTk1ZjBmMWRmNWNmMTU4MWVmYTZjZmVjYzJlNjlkZGM0MzVhZmQzNDM4OWE3MDdhYzMxOWYzNTYyMSIsIm9mZnNldCI6MTB9'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_relations",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_relations",
+      "passed": true
+    },
+    {
+      "name": "call success get_relations {'node_id': 'concept:collisions', 'limit': 10, 'cursor': 'eyJidWlsZCI6IjhhN2EwMmZkODIxY2M2YjllZWJkMDkzZiIsInN0cmVhbSI6InJlbGF0aW9ucyIsInF1ZXJ5IjoiOTQxMDFmNTk1ZjBmMWRmNWNmMTU4MWVmYTZjZmVjYzJlNjlkZGM0MzVhZmQzNDM4OWE3MDdhYzMxOWYzNTYyMSIsIm9mZnNldCI6MjB9'}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_relations",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_relations",
+      "passed": true
+    },
+    {
+      "name": "validation provenance discovered by relation",
+      "passed": true
+    },
+    {
+      "name": "call success get_document {'record_id': 'validation:dc08f7e990ce91c6667fb921', 'max_lines': 30}",
+      "passed": true
+    },
+    {
+      "name": "legacy envelope get_document",
+      "passed": true
+    },
+    {
+      "name": "bounded aliases get_document",
+      "passed": true
+    },
+    {
+      "name": "validation report readable, separate from physics",
+      "passed": true
+    }
+  ]
+}

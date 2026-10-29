@@ -1,0 +1,19 @@
+{
+  "run_id": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z",
+  "case": "kamino_pd_unsaturated_step_reversal",
+  "variant": "A",
+  "repeat": 1,
+  "status": "failed",
+  "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+  "runner_sha256": "c9c293ab70fad3478450aab6b95a426cd29833d53c6bc15e75fbc4fe857c6b08",
+  "started_at_utc": "2026-10-29T06:40:04.882628+00:00",
+  "error": "ValueError('Unknown config field constraints.preconditioning')",
+  "finished_at_utc": "2026-10-29T06:40:09.250374+00:00",
+  "files_sha256": {
+    "environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "run.log": "d5692362d04b5cdde6f4aa679af1e452c6abe062dd56fbd20fc03b21badd1c73",
+    "runner.py": "c9c293ab70fad3478450aab6b95a426cd29833d53c6bc15e75fbc4fe857c6b08"
+  }
+}

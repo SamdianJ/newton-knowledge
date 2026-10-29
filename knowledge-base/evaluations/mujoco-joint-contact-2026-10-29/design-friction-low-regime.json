@@ -1,0 +1,380 @@
+{
+  "status": "analytical_design_only",
+  "no_new_physics": true,
+  "script_sha256": "e862030f1f9ea557ba917aeb214cfe4f05adb796a1b7df815b56ab59cbbb30f3",
+  "calculations": [
+    {
+      "variant": "A",
+      "shape": "box",
+      "dim": 3,
+      "speed": 0.2,
+      "slide_coefficient": 0.001,
+      "torsion_coefficient_m": 0,
+      "branch": "saturated_boundary",
+      "boundary_kkt_lambda": [
+        0.04209530526848321,
+        0.042095305236303907,
+        0.0420953052684832,
+        0.04209530523630389
+      ],
+      "boundary_kkt_residual": [
+        9.43689570931383e-16,
+        7.105427357601002e-15,
+        2.7131075164277263e-15,
+        4.9960036108132044e-15
+      ],
+      "unconstrained_cone_utilization": [
+        8999.732367235798,
+        2778.1177202662193,
+        8999.732367235665,
+        2778.1177202662284
+      ],
+      "normal_total_N": 9.82804772254134,
+      "world_force_N": [
+        -0.009828047722541339,
+        0.0,
+        9.82804772254134
+      ],
+      "world_torque_Nm": [
+        5.551115123125783e-17,
+        1.0894045786539585e-06,
+        1.1741165758230478e-19
+      ],
+      "initial_vertical_acceleration_mps2": 0.018047722541339795,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": null,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 0.001,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    },
+    {
+      "variant": "A",
+      "shape": "box",
+      "dim": 3,
+      "speed": 0.02,
+      "slide_coefficient": 0.001,
+      "torsion_coefficient_m": 0,
+      "branch": "saturated_boundary",
+      "boundary_kkt_lambda": [
+        0.004200605006139799,
+        0.004200604974082959,
+        0.004200605006139799,
+        0.00420060497408296
+      ],
+      "boundary_kkt_residual": [
+        3.0730626376929138e-15,
+        5.924080670460796e-16,
+        1.2967057982926633e-15,
+        4.735795089416683e-15
+      ],
+      "unconstrained_cone_utilization": [
+        448.2433458381065,
+        403.26278506792636,
+        448.2433458381099,
+        403.2627850679311
+      ],
+      "normal_total_N": 9.790645161365411,
+      "world_force_N": [
+        -0.009790645161365411,
+        0.0,
+        9.790645161365411
+      ],
+      "world_torque_Nm": [
+        1.1102230246251565e-16,
+        1.0852586361001454e-06,
+        -6.823904011438629e-21
+      ],
+      "initial_vertical_acceleration_mps2": -0.0193548386345892,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": null,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 0.001,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    },
+    {
+      "variant": "B",
+      "shape": "box",
+      "dim": 3,
+      "speed": 0.2,
+      "slide_coefficient": 0.004,
+      "torsion_coefficient_m": 0,
+      "branch": "saturated_boundary",
+      "boundary_kkt_lambda": [
+        0.16825969051433623,
+        0.16825968842876643,
+        0.16825969051433623,
+        0.16825968842876646
+      ],
+      "boundary_kkt_residual": [
+        1.6930901125533637e-15,
+        8.326672684688674e-16,
+        1.6930901125533637e-15,
+        2.7478019859472624e-15
+      ],
+      "unconstrained_cone_utilization": [
+        2249.9330918089495,
+        694.5294300665548,
+        2249.9330918089163,
+        694.5294300665571
+      ],
+      "normal_total_N": 9.952573607858277,
+      "world_force_N": [
+        -0.039810294431433094,
+        0.0,
+        9.952573607858277
+      ],
+      "world_torque_Nm": [
+        -5.551115123125783e-17,
+        4.4128972422688945e-06,
+        -3.316269956313774e-19
+      ],
+      "initial_vertical_acceleration_mps2": 0.14257360785827622,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": null,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 0.004,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    },
+    {
+      "variant": "B",
+      "shape": "box",
+      "dim": 3,
+      "speed": 0.02,
+      "slide_coefficient": 0.004,
+      "torsion_coefficient_m": 0,
+      "branch": "saturated_boundary",
+      "boundary_kkt_lambda": [
+        0.016683163554313336,
+        0.016683161500094027,
+        0.016683163554313336,
+        0.016683161500094024
+      ],
+      "boundary_kkt_residual": [
+        1.4606371667724716e-15,
+        3.271688475692258e-15,
+        3.157196726277789e-16,
+        2.0539125955565396e-15
+      ],
+      "unconstrained_cone_utilization": [
+        112.06083645952663,
+        100.81569626698159,
+        112.06083645952748,
+        100.81569626698277
+      ],
+      "normal_total_N": 9.8029656077255,
+      "world_force_N": [
+        -0.039211862430901995,
+        0.0,
+        9.8029656077255
+      ],
+      "world_torque_Nm": [
+        -5.551115123125783e-17,
+        4.346562165807995e-06,
+        1.8150927578827655e-21
+      ],
+      "initial_vertical_acceleration_mps2": -0.007034392274499979,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": null,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 0.004,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    },
+    {
+      "variant": "A",
+      "shape": "sphere",
+      "dim": 3,
+      "speed": 1.0,
+      "slide_coefficient": 0.3,
+      "torsion_coefficient_m": 2e-05,
+      "branch": "cone_interior",
+      "boundary_kkt_lambda": [
+        0.0
+      ],
+      "boundary_kkt_residual": [
+        0.0
+      ],
+      "unconstrained_cone_utilization": [
+        0.0
+      ],
+      "normal_total_N": 9.419486679136162,
+      "world_force_N": [
+        0.0,
+        0.0,
+        9.419486679136162
+      ],
+      "world_torque_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_vertical_acceleration_mps2": -0.39051332086383894,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": null,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 0.3,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    },
+    {
+      "variant": "A",
+      "shape": "sphere",
+      "dim": 3,
+      "speed": 1.0,
+      "slide_coefficient": 0.03,
+      "torsion_coefficient_m": 2e-05,
+      "branch": "cone_interior",
+      "boundary_kkt_lambda": [
+        0.0
+      ],
+      "boundary_kkt_residual": [
+        0.0
+      ],
+      "unconstrained_cone_utilization": [
+        0.0
+      ],
+      "normal_total_N": 9.419486679136162,
+      "world_force_N": [
+        0.0,
+        0.0,
+        9.419486679136162
+      ],
+      "world_torque_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_vertical_acceleration_mps2": -0.39051332086383894,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": null,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 0.03,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    },
+    {
+      "variant": "B",
+      "shape": "sphere",
+      "dim": 4,
+      "speed": 1.0,
+      "slide_coefficient": 0.3,
+      "torsion_coefficient_m": 2e-05,
+      "branch": "cone_interior",
+      "boundary_kkt_lambda": [
+        -0.0402280178502787
+      ],
+      "boundary_kkt_residual": [
+        2.2737367544323206e-13
+      ],
+      "unconstrained_cone_utilization": [
+        0.09436500757213835
+      ],
+      "normal_total_N": 9.419486679136162,
+      "world_force_N": [
+        0.0,
+        0.0,
+        9.419486679136162
+      ],
+      "world_torque_Nm": [
+        0.0,
+        0.0,
+        -1.7777398636046806e-05
+      ],
+      "initial_vertical_acceleration_mps2": -0.39051332086383894,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": 11842108.235134676,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 2e-05,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    },
+    {
+      "variant": "B",
+      "shape": "sphere",
+      "dim": 4,
+      "speed": 1.0,
+      "slide_coefficient": 0.03,
+      "torsion_coefficient_m": 2e-05,
+      "branch": "saturated_boundary",
+      "boundary_kkt_lambda": [
+        0.0037632284881453006
+      ],
+      "boundary_kkt_residual": [
+        2.688821387764051e-16
+      ],
+      "unconstrained_cone_utilization": [
+        9.416820023785487
+      ],
+      "normal_total_N": 9.423061746155039,
+      "world_force_N": [
+        0.0,
+        0.0,
+        9.423061746155039
+      ],
+      "world_torque_Nm": [
+        0.0,
+        0.0,
+        -0.00018846123492310079
+      ],
+      "initial_vertical_acceleration_mps2": -0.3869382538449617,
+      "R_normal": 0.05263159215615413,
+      "R_torsion": 118421.08235134676,
+      "regularization_reference_b": 210.52632313686084,
+      "minimum_coefficient_above_native_floor": 2e-05,
+      "native_mjMINMU": 1e-05,
+      "source_geometry": "original archived initial geometry only; all velocity/friction inputs overwritten analytically; no new trajectory generated"
+    }
+  ],
+  "counterfactual_status": "These are pre-run design calculations, not measured experiment results. Cone-interior outcomes must not be described as saturated.",
+  "reference_expected_effects": {
+    "box_v0_0p2_T0p3": {
+      "A_delta_v_mps": 0.0029430000000000003,
+      "B_delta_v_mps": 0.011772000000000001,
+      "A_minus_B_final_speed_mps": 0.008829
+    },
+    "box_v0_0p02_T0p3": {
+      "A_final_speed_mps": 0.017057,
+      "B_final_speed_mps": 0.008228,
+      "A_minus_B_final_speed_mps": 0.008829
+    },
+    "sphere_T0p5": {
+      "B_omega_loss_radps": 0.024525,
+      "B_torsional_impulse_Nms": 9.810000000000001e-05
+    }
+  },
+  "recommended_gates": {
+    "box": {
+      "minimum_positive_speed_mps": 0.005,
+      "settled_reference_velocity_error_mps_max": 0.001,
+      "force_ratio_abs_error_max": 0.0003,
+      "A_minus_B_final_speed_mps_min": 0.007,
+      "integrated_tangent_impulse_B_minus_A_Ns_min": 0.007,
+      "early_active_positive_normal_saturated_samples_min": 20,
+      "early_window_s": 0.02,
+      "cone_utilization_min": 0.98,
+      "cone_utilization_max": 1.00001
+    },
+    "sphere": {
+      "minimum_spin_speed_radps": 0.95,
+      "settled_reference_spin_error_radps_max": 0.005,
+      "A_max_spin_change_radps": 0.001,
+      "B_to_A_final_spin_gap_radps_min": 0.018,
+      "B_torsional_impulse_Nms_min": 7.5e-05,
+      "B_torque_normal_ratio_error_m_max": 2e-06,
+      "early_active_positive_normal_saturated_samples_min": 20,
+      "early_window_s": 0.02,
+      "cone_utilization_min": 0.98,
+      "cone_utilization_max": 1.00001
+    },
+    "shared": "Keep independent impulse checks, >=99% actual bearing after .05s, full transient geometry and energy retained. Candidate ncon is not bearing. Require physical effect and nonempty saturation. Suggested early20 samples assumes dt=1e-4, adjust explicit count to time-window if protocol chooses .001."
+  },
+  "limitations": [
+    "The box v0=.2 proposal produces initial N slightly above mg; stable bearing is not proven by the first-step result.",
+    "The box v0=.02 alternative has initial N below mg and sustained positive-speed Coulomb prediction through .3s; full nonlinear stability still requires experiment.",
+    "Sphere slide=.3 gives cone-interior weak torque for torsion2e-5/omega1 at impratio1; slide=.03 restores initial saturation without changing A/B condim intervention.",
+    "Native floor1e-5 is below torsion2e-5; floor is not the cause of weak torque."
+  ]
+}

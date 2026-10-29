@@ -1,0 +1,12 @@
+{
+  "status": "frozen_before_runs",
+  "group": "friction_low_regime",
+  "protocol": "experiments/mujoco_joint_contact_lab/friction_low_regime/protocol.json",
+  "sha256": "7136df96193e18891909fbface417912db6bc724121f092cf328be9958dc272a",
+  "frozen_at_utc": "2026-10-29T08:41:21.164670+00:00",
+  "baseline_build": "35d4e7b6c3450093fc489405",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "formal_runs": 8,
+  "design_reference": "evaluations/mujoco-joint-contact-2026-10-29/design-friction-low-regime.json",
+  "design_reference_sha256": "ee20526eeb1d347e04ea90945fe495273e57c40d9c0db49678cffb0f3f14ffb7"
+}

@@ -1,0 +1,26 @@
+{
+  "case": "kamino_pd_finite_limit_switch",
+  "run_id": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z",
+  "variant": "B",
+  "repeat": 2,
+  "status": "completed",
+  "runner_sha256": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+  "protocol_sha256": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+  "started_at": "2026-10-29T06:42:26.850180+00:00",
+  "run_directory": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z",
+  "samples": 121,
+  "raw_sha256": "f408c64ff4f08ca0af341daf8cf69347a313081114a7a858285538f4fc5336e9",
+  "note": "Execution completion is separate from physical acceptance and convergence diagnostics",
+  "finished_at": "2026-10-29T06:42:48.540625+00:00",
+  "files_sha256": {
+    "environment.json": "2cad369bd4d440e310fe9ce07197fdab929b2831570b75988038a4de25611ad9",
+    "events.json": "e1c2a2ec7ec3c7405ea1e0704033b00b02e33c08513d27176447c0d9332f8785",
+    "installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "protocol.json": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+    "resolved-config.json": "c12ee7d31ca17909821e2362c76d205907b9bc867dd6103ae9243e305ee0183c",
+    "run.log": "4ba0379e4982a39cedeeb83c153ef8a2823ce99dfc712b62b6dff43a95056800",
+    "runner.py": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+    "scene.json": "925030bf485810e133725b8f90b260c11d9548a98cc774954652022b8beaf250",
+    "trajectory.npz": "f408c64ff4f08ca0af341daf8cf69347a313081114a7a858285538f4fc5336e9"
+  }
+}

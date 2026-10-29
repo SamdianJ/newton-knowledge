@@ -1,0 +1,4 @@
+# Tested on Python 3.12.14, Windows, CPU. Newton is built from the preserved official v1.7.0 snapshot.
+# Recreate an isolated venv, install these dependencies, then install ./sources/newton-v1.7.0.
+numpy==2.5.4
+warp-lang==1.18.0

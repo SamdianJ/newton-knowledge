@@ -1,0 +1,21 @@
+{
+  "run_id": "mujoco_joint_pd_damping-A-r1-20261029T081709544495Z",
+  "case": "mujoco_joint_pd_damping",
+  "variant": "A",
+  "repeat": 1,
+  "status": "completed",
+  "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+  "runner_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+  "started_at_utc": "2026-10-29T08:17:09.546497+00:00",
+  "samples": 1001,
+  "finished_at_utc": "2026-10-29T08:17:14.005024+00:00",
+  "files_sha256": {
+    "environment.json": "033151c20edf505add6444caa655e6cece8896e596ed92ff3b3b0da9c2153c8c",
+    "installed-source-validation.json": "ea9da0ca34fb345be758bfbff9a94dc238031ea3735aed4d04f1e4af4961534a",
+    "protocol.json": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+    "resolved-config.json": "be2a03a0ba3b71bc66323ccd77c96c9df7f6ed16f9645f39181a7e1682d76484",
+    "run.log": "4e0e3944161a00b8645f5976c023df12ff5df023a97e80273d6be5b6ec860b60",
+    "runner.py": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+    "trajectory.npz": "239ac3765304b15351c76447266435960e0eb9989d6ee1905b4e41479d17d885"
+  }
+}

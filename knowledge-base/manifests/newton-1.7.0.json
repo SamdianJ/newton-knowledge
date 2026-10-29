@@ -1,0 +1,116 @@
+{
+  "repository": "https://github.com/newton-physics/newton",
+  "tag": "v1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "source_path": "sources/newton-v1.7.0",
+  "source_role": "read_only_official_release",
+  "kb_created_local_date": "2026-10-27",
+  "source_license": "Code Apache-2.0; documentation files may be CC-BY-4.0; preserve per-file SPDX and LICENSE.md",
+  "inspected_files": [
+    {
+      "path": "newton/_src/solvers/vbd/__init__.py",
+      "sha256": "deab41e98e6f0205ecf0965b30c90d92c67a09812f2fead84260d0df9068b95e",
+      "lines": 8
+    },
+    {
+      "path": "newton/_src/solvers/vbd/interval_arithmetic.py",
+      "sha256": "fc41466f8f0aa6210ff45c41bd4fbdbf3ec8d812301261cdb32d5b4ba141d656",
+      "lines": 211
+    },
+    {
+      "path": "newton/_src/solvers/vbd/particle_vbd_kernels.py",
+      "sha256": "7ef9e5bf696775e7fea9ef2be978923195513cc24caec77a52eaf2bb6f1d754e",
+      "lines": 3051
+    },
+    {
+      "path": "newton/_src/solvers/vbd/rigid_vbd_kernels.py",
+      "sha256": "8423db7a550ebcd30b3a22105938ddb7b0be636855cf3951be76a423d08f15fc",
+      "lines": 8247
+    },
+    {
+      "path": "newton/_src/solvers/vbd/solver_vbd.py",
+      "sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+      "lines": 4866
+    },
+    {
+      "path": "newton/_src/solvers/vbd/tri_mesh_collision.py",
+      "sha256": "1d082804c13ea41edda70daae09d9ef735b5cbcb570fbd92daf3476d0d45e422",
+      "lines": 42
+    },
+    {
+      "path": "newton/_src/solvers/vbd/vbd_coupling_kernels.py",
+      "sha256": "5884bcb56046400ec49d6ac2d996772cadb9eff118e21e9e32f9cee5b98a5af8",
+      "lines": 545
+    },
+    {
+      "path": "newton/_src/geometry/tri_mesh_collision.py",
+      "sha256": "4dd38e8716a0df868fc1b8997f0feca96c53633ad91811c8c4e437adda212d6e",
+      "lines": 1055
+    },
+    {
+      "path": "newton/_src/solvers/solver.py",
+      "sha256": "3adf367616666f889a1cae37a312c07acd4ab6f0e7bbd497da4ea2f0b55da8d1",
+      "lines": 1131
+    },
+    {
+      "path": "newton/_src/sim/model.py",
+      "sha256": "69db914983d83601283d3eeef7f5bbe427dfffca68a5ba43091361246112e169",
+      "lines": 2349
+    },
+    {
+      "path": "newton/_src/sim/builder.py",
+      "sha256": "d5a0066cdfa741f432167e6fc8cdf582d30e021ab5a295dec1bdde5e71588767",
+      "lines": 15283,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "docs/solvers/vbd.rst",
+      "sha256": "8565d12a83461e7b50bf60da5ef312545f4618ca28d065d3effb3a272310315e",
+      "lines": 131,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "docs/concepts/simulation_tuning_vbd.rst",
+      "sha256": "c600a0b7c0c8006a52dc58628d039916055fa77b8eae433c38316eea7f04f3d6",
+      "lines": 125,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "newton/tests/test_solver_vbd.py",
+      "sha256": "8dd2c0dd524238e51fd6f3ee9a47002c6da3fe4f36987af1128d1ccb7a5ff484",
+      "lines": 8146,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "newton/tests/test_solver_vbd_contact_force.py",
+      "sha256": "e245662daba9973208f140f07a774865ed21ae535f4ee4373d898b2d090a5fa7",
+      "lines": 1080,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "newton/tests/test_vbd_interval_arithmetic.py",
+      "sha256": "c2826e05f14edb0c7d9994f50bc037e1fd6c6eeb479337fbe9709e84b80ed7f5",
+      "lines": 346,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "newton/examples/multiphysics/example_vbd_dat_rigid_soft.py",
+      "sha256": "09db9226cafaed9ceaa65d0cd6ed2434ab19b942eab04d03d1a2b500cc7d922f",
+      "lines": 408,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "newton/examples/multiphysics/example_mujoco_vbd_coupled_solver.py",
+      "sha256": "6ac42908a72a8262ee12520d28fab5384240cb935f9abfd479ecee493092b05b",
+      "lines": 397,
+      "scope": "reference file preserved; not every line manually reviewed"
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "6d1d968fb225eca367cb7f0b8831ab012a35d92b547e945e17ef8e7b05c3e5cc",
+      "lines": 176,
+      "scope": "reference file preserved; not every line manually reviewed"
+    }
+  ],
+  "latest_web_docs_authoritative": false
+}

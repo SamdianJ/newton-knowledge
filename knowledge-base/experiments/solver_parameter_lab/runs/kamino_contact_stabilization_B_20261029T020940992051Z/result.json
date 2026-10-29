@@ -1,0 +1,337 @@
+{
+  "run_id": "kamino_contact_stabilization_B_20261029T020940992051Z",
+  "case_id": "kamino_contact_stabilization",
+  "solver": "kamino",
+  "variant": "B",
+  "version": "1.7.0",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "started_at": "2026-10-29T02:09:40.995051+00:00",
+  "status": "completed",
+  "run_class": "full_variant",
+  "program_sha256": "9b8fc8c95f058ba8453e480141871af4bffc9ab5c511693bb02c0a3b43a47be5",
+  "protocol_sha256": "8a6c4b348b6c8f329138e191757e5afed1e900f93de3a67634ce84a48bc90f99",
+  "protocol_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_B_20261029T020940992051Z/protocol.json",
+  "archived_program": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_B_20261029T020940992051Z/run_program.py",
+  "timing_scope": "Newton solver.step plus device synchronization; state export and serialization excluded. Report initialization and cold compilation separately where observable, median after first five steps, never cross-solver performance ranking.",
+  "warmup_steps": 5,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "packages": {
+      "newton": "1.7.0",
+      "numpy": "2.5.4",
+      "warp-lang": "1.18.0",
+      "mujoco": "3.15.0",
+      "mujoco-warp": "3.15.0"
+    },
+    "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+    "warp_devices": [
+      "cpu"
+    ]
+  },
+  "source_verification": {
+    "path": "newton/_src/solvers/kamino/solver_kamino.py",
+    "installed_path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\kamino\\solver_kamino.py",
+    "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "expected_sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "matches_snapshot": true
+  },
+  "scene_sha256": "528621817875da88c0e6a8427fad148fd9b31c7fb27d28af903e7cbcccd2f631",
+  "initialization_ms": 1101.6473001800478,
+  "config": {
+    "constructor": {
+      "sparse_jacobian": false,
+      "sparse_dynamics": false,
+      "use_collision_detector": true,
+      "use_fk_solver": false,
+      "collision_detector": {
+        "pipeline": "unified",
+        "broadphase": "explicit",
+        "bvtype": "aabb",
+        "max_contacts": null,
+        "max_contacts_per_world": 128,
+        "max_contacts_per_pair": 12,
+        "max_triangle_pairs": 1000000,
+        "default_gap": 1e-05
+      },
+      "constraints": {
+        "alpha": 0.01,
+        "beta": 0.01,
+        "gamma": 0.2,
+        "delta": 1e-06
+      },
+      "dynamics": {
+        "preconditioning": true,
+        "linear_solver_type": "LLTB",
+        "linear_solver_kwargs": {},
+        "cull_speculative_contacts": true
+      },
+      "padmm": {
+        "primal_tolerance": 1e-06,
+        "dual_tolerance": 1e-06,
+        "compl_tolerance": 1e-06,
+        "restart_tolerance": 0.999,
+        "eta": 1e-05,
+        "rho_0": 1.0,
+        "rho_min": 1e-05,
+        "a_0": 1.0,
+        "alpha": 10.0,
+        "tau": 1.5,
+        "max_iterations": 60,
+        "penalty_update_freq": 1,
+        "penalty_update_method": "fixed",
+        "linear_solver_tolerance": 0.0,
+        "linear_solver_tolerance_ratio": 0.0,
+        "use_acceleration": true,
+        "use_graph_conditionals": false,
+        "warmstart_mode": "containers",
+        "warmstart_scale": 0.9,
+        "contact_warmstart_method": "key_and_position"
+      },
+      "dvi": {
+        "tolerance": 1e-05,
+        "regularization": 1e-06,
+        "omega": 1.0,
+        "max_alternating_iterations": 24,
+        "inequality_sweeps_per_iteration": 2,
+        "use_schur_complement": false,
+        "bilateral_solve_interval": 1,
+        "tangential_warmstart_scale": 0.97,
+        "bilateral_solver_type": "LLTB",
+        "bilateral_solver_kwargs": {},
+        "warmstart_mode": "containers",
+        "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+      },
+      "fk": null,
+      "materials": {
+        "friction_mix_mode": "average",
+        "restitution_mix_mode": "min"
+      },
+      "rotation_correction": "twopi",
+      "integrator": "euler",
+      "dynamics_solver": "padmm",
+      "angular_velocity_damping": 0.0,
+      "collect_solver_info": false,
+      "compute_solution_metrics": false
+    },
+    "treatment": {
+      "gamma": 0.2
+    },
+    "material_values": {
+      "ke": 20000.0,
+      "kd": 300.0
+    },
+    "dt": 0.004166666666666667,
+    "steps": 144,
+    "model": {
+      "world_count": 1,
+      "body_mass": [
+        1.0
+      ],
+      "body_inertia": [
+        [
+          [
+            0.004000000189989805,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.004000000189989805,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.004000000189989805
+          ]
+        ]
+      ],
+      "body_com": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "body_world": [
+        0
+      ],
+      "shape_world": [
+        -1,
+        0
+      ],
+      "gravity": [
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ],
+        [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ]
+      ],
+      "shape_material_ke": [
+        20000.0,
+        20000.0
+      ],
+      "shape_material_kd": [
+        300.0,
+        300.0
+      ],
+      "shape_material_mu": [
+        0.6000000238418579,
+        0.6000000238418579
+      ]
+    },
+    "scene_description": {
+      "world_count": 1,
+      "up_axis": "Z",
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "floor_z": 0.0,
+      "bodies": [
+        {
+          "shape": "sphere",
+          "radius": 0.1,
+          "density": 238.732414637843,
+          "at": [
+            0,
+            0,
+            0.085
+          ],
+          "tilt_y": 0.0
+        }
+      ],
+      "mu": 0.6,
+      "common_ke": 20000.0,
+      "common_kd": 300.0
+    },
+    "seed": "no RNG"
+  },
+  "visual": {
+    "body_shapes": [
+      {
+        "body": 0,
+        "type": "sphere",
+        "radius": 0.1
+      }
+    ],
+    "floor": 0.0
+  },
+  "metrics": {
+    "finite": true,
+    "steps": 144,
+    "initial_penetration_mm": 14.999999105930334,
+    "max_penetration_mm": 14.999999105930334,
+    "final_penetration_mm": 0.0,
+    "tail_penetration_mm": 0.0,
+    "initial_stack_height_m": 0.18500000089406968,
+    "final_stack_height_m": 0.2000009998679161,
+    "max_speed_m_s": 0.719952404499054,
+    "final_kinetic_energy_J": 3.2454095834355545e-13,
+    "max_kinetic_energy_J": 0.2591657340526581,
+    "step_ms_median_after_warmup": 7.027,
+    "r_p_final": 0.0,
+    "r_p_p95": 4.9559655934672264e-08,
+    "r_p_mean": 2.548966375624949e-08,
+    "r_d_final": 8.317297215398867e-07,
+    "r_d_p95": 8.317297215398867e-07,
+    "r_d_mean": 6.446669794415871e-07,
+    "r_c_final": 0.0,
+    "r_c_p95": 1.2418018542348352e-07,
+    "r_c_mean": 1.555736644139512e-08,
+    "iterations_final": 9.0,
+    "iterations_p95": 9.0,
+    "iterations_mean": 8.715277777777779,
+    "converged_final": 1.0,
+    "converged_p95": 1.0,
+    "converged_mean": 1.0
+  },
+  "raw_file": "experiments/solver_parameter_lab/runs/kamino_contact_stabilization_B_20261029T020940992051Z/trajectory.npz",
+  "raw_sha256": "c3e8f6f94fa167d5e63634a200ea2e4adadc8cfaef95a093561a67597ab685be",
+  "samples": 145,
+  "duration_seconds": 0.6,
+  "resolved_backend": {
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": true,
+    "use_fk_solver": false,
+    "collision_detector": {
+      "pipeline": "unified",
+      "broadphase": "explicit",
+      "bvtype": "aabb",
+      "max_contacts": null,
+      "max_contacts_per_world": 128,
+      "max_contacts_per_pair": 12,
+      "max_triangle_pairs": 1000000,
+      "default_gap": 1e-05
+    },
+    "constraints": {
+      "alpha": 0.01,
+      "beta": 0.01,
+      "gamma": 0.2,
+      "delta": 1e-06
+    },
+    "dynamics": {
+      "preconditioning": true,
+      "linear_solver_type": "LLTB",
+      "linear_solver_kwargs": {},
+      "cull_speculative_contacts": true
+    },
+    "padmm": {
+      "primal_tolerance": 1e-06,
+      "dual_tolerance": 1e-06,
+      "compl_tolerance": 1e-06,
+      "restart_tolerance": 0.999,
+      "eta": 1e-05,
+      "rho_0": 1.0,
+      "rho_min": 1e-05,
+      "a_0": 1.0,
+      "alpha": 10.0,
+      "tau": 1.5,
+      "max_iterations": 60,
+      "penalty_update_freq": 1,
+      "penalty_update_method": "fixed",
+      "linear_solver_tolerance": 0.0,
+      "linear_solver_tolerance_ratio": 0.0,
+      "use_acceleration": true,
+      "use_graph_conditionals": false,
+      "warmstart_mode": "containers",
+      "warmstart_scale": 0.9,
+      "contact_warmstart_method": "key_and_position"
+    },
+    "dvi": {
+      "tolerance": 1e-05,
+      "regularization": 1e-06,
+      "omega": 1.0,
+      "max_alternating_iterations": 24,
+      "inequality_sweeps_per_iteration": 2,
+      "use_schur_complement": false,
+      "bilateral_solve_interval": 1,
+      "tangential_warmstart_scale": 0.97,
+      "bilateral_solver_type": "LLTB",
+      "bilateral_solver_kwargs": {},
+      "warmstart_mode": "containers",
+      "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+    },
+    "fk": null,
+    "materials": {
+      "friction_mix_mode": "average",
+      "restitution_mix_mode": "min"
+    },
+    "rotation_correction": "twopi",
+    "integrator": "euler",
+    "dynamics_solver": "padmm",
+    "angular_velocity_damping": 0.0,
+    "collect_solver_info": false,
+    "compute_solution_metrics": false
+  },
+  "finished_at": "2026-10-29T02:09:46.431806+00:00"
+}

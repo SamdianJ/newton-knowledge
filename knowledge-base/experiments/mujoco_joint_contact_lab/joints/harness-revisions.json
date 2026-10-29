@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+  "revisions": [
+    {
+      "old_runner_sha256": "0f830e455f422e717b4148826160d496278f9cfd9d244c832b26be8864d3299c",
+      "failed_run": "mujoco_joint_passive_damping-A-r1-20261029T081425465819Z",
+      "failure": "MjData.qM removed in installed MuJoCo3.15; no simulation step taken",
+      "new_runner_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+      "fix": "Read native M via mj_fullM(model,data,dst), preserve dense generalized inertia as native_mass_matrix. Physical protocol/config unchanged.",
+      "approved_by": "root prior to rerun"
+    }
+  ],
+  "class_descriptor_checks": {
+    "qfrc_passive": true,
+    "qfrc_actuator": true,
+    "qfrc_applied": true,
+    "qfrc_constraint": true,
+    "qacc": true,
+    "M": true,
+    "solver_niter": true,
+    "nefc": true,
+    "warning": true,
+    "qpos": true,
+    "qvel": true
+  },
+  "mj_fullM_signature": "mj_fullM(m: mujoco._structs.MjModel, d: mujoco._structs.MjData, dst: typing.Annotated[numpy.typing.NDArray[numpy.float64], \"[m, n]\", \"flags.writeable\", \"flags.c_contiguous\"]) -> None\n\nConvert sparse inertia matrix into full (i.e. dense) matrix.\n"
+}

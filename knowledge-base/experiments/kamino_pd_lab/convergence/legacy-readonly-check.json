@@ -1,0 +1,60 @@
+{
+  "status": "passed_readonly_check",
+  "runs": [
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r1_20261029T051555321909Z",
+      "raw_sha256": "2f597ada7cb5380ae60ead29d9b5de02b3ed81a19b7347a11499d12a75f309b4",
+      "solved_samples": 80,
+      "converged_fraction": 0.0,
+      "independent_stop_matches": true,
+      "iterations_unique": [
+        200
+      ],
+      "r_p_range": [
+        9.934107758624577e-09,
+        1.1175870895385742e-08
+      ],
+      "r_d_range": [
+        0.0,
+        2.6031257939409125e-15
+      ],
+      "r_c_range": [
+        4.0203335061050893e-07,
+        4.568249210024078e-07
+      ],
+      "violations": {
+        "primal": 0,
+        "dual": 0,
+        "compl": 80
+      }
+    },
+    {
+      "run": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_B_r2_20261029T051607693722Z",
+      "raw_sha256": "011b8bac4b08ab9989f3d49e9945cae8b97c3a349dd2a2ebbf2ab6ec1cdc997a",
+      "solved_samples": 80,
+      "converged_fraction": 0.0,
+      "independent_stop_matches": true,
+      "iterations_unique": [
+        200
+      ],
+      "r_p_range": [
+        9.934107758624577e-09,
+        1.1175870895385742e-08
+      ],
+      "r_d_range": [
+        0.0,
+        2.6031257939409125e-15
+      ],
+      "r_c_range": [
+        4.0203335061050893e-07,
+        4.568249210024078e-07
+      ],
+      "violations": {
+        "primal": 0,
+        "dual": 0,
+        "compl": 80
+      }
+    }
+  ],
+  "limits": "Old NPZ does not include x/y/z or per-iteration histories, so cannot establish stagnation or precision floor from those files alone."
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-27",
+  "newton": "1.7.0",
+  "warp": "1.18.0",
+  "numpy": "2.5.4",
+  "python": "3.12.14",
+  "device": "cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "solver_file_sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+  "solver_file_matches_snapshot": true,
+  "failures": [],
+  "timing_scope": "CPU solver.step including owned collision, after first 5 steps; excludes numpy readback/rendering; not GPU benchmark"
+}

@@ -1,0 +1,42 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "cpu",
+  "packages": {
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "newton": "1.7.0",
+    "mujoco": "3.15.0",
+    "mujoco-warp": "3.15.0"
+  },
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39",
+  "wrapper_path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\mujoco\\solver_mujoco.py",
+  "wrapper_sha256": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+  "native_libraries": {
+    "mujoco.dll": "127144b04e9dce183b2a3935d21be30bafb7a2965fb652ca7a8749bed128f32b",
+    "_callbacks.cp312-win_amd64.pyd": "10c5dbb6ee358bb886a8b47c9b90ad934bf9b11b25f7525a92f11ec7b3992da3",
+    "_constants.cp312-win_amd64.pyd": "9004a5e10cc540a421af424649f6a16ac74fba05bd2e213f592179dc6c116be0",
+    "_enums.cp312-win_amd64.pyd": "ca9579b98b5e111873916773b3f413143143dd3527b4521fabdb327a339ebd00",
+    "_errors.cp312-win_amd64.pyd": "b70458249b4c2519b6cbe8331bba32c782ae85bbdcddde2eb0bd2582648aaca5",
+    "_functions.cp312-win_amd64.pyd": "ea919223876a15d7557339ffd242e5654b5f065eb122d543f9622bac91b35860",
+    "_render.cp312-win_amd64.pyd": "7a2a8cb4e92e6a70f2c70d8074a61e59d8947c6f29ebd19fc67ddc0fcf715e94",
+    "_render_filament.cp312-win_amd64.pyd": "9c9194a5aef09fe65d97cf7b385f3d03e812bcaa7097ea361006c5ed5f0e62cf",
+    "_rollout.cp312-win_amd64.pyd": "8b07a3d077239f0826b75a4d287c1c125ada8759b0463d55a9a849624c45a1d0",
+    "_simulate.cp312-win_amd64.pyd": "ef4f5d7810b72f2bcaa08ad5896cdf512e07a8f795d392c651da568d2d2108dd",
+    "_specs.cp312-win_amd64.pyd": "5867d84a60773b2201a2c5fda8fc4e5268bc29d912af66ed54a53a6fc16e3789",
+    "_structs.cp312-win_amd64.pyd": "7e9835fab810f55b529d9aa5751beb80ec040ca7a5aae843cee0f1087c33a9ba",
+    "plugin/actuator.dll": "e87be897ac9581c736f9737d7d7f892ff501dae2742afd6a0d7ea38056607692",
+    "plugin/elasticity.dll": "da5819af6a75c1de3fb03194fa71728bbc8563c690d80798f4e9c4d73324dc14",
+    "plugin/sdf_plugin.dll": "b13982cd692c73e9c458aac3a455e41f82c79e85d6947eb4e30f06f63abd7ccf",
+    "plugin/sensor.dll": "4df461e35f590ea9dd4b116529d98caf956b36d96b75ad7fedebac729e9962fd",
+    "experimental/dear_imgui/dear_imgui.cp312-win_amd64.pyd": "c333471401d1c7229bf556225cdc69e73762a1c5f7b9cb61129e0e8d793ba80e",
+    "experimental/implot/implot.cp312-win_amd64.pyd": "5694052e069dd5b5d82d8add076300a800cfa53e60b125b0841cbb9bad3d5c3e",
+    "experimental/studio/native_viewer_cc.cp312-win_amd64.pyd": "31624bee22589536c1fb31476d503385b59434dc50606f9abf177e2657645bae",
+    "experimental/studio/renderer.cp312-win_amd64.pyd": "183626fbbac7957b2dbc724bf0746fce51425f50047dedc50a23d4dece59b888",
+    "experimental/studio/sim.cp312-win_amd64.pyd": "d01046f5c0530525c224fe21250543b44d3f1741ad7db0801f9d712986e2a93a",
+    "experimental/studio/ux.cp312-win_amd64.pyd": "f0fbb937de4e09d4ed3343776f8900ebb93502a80b283c87cd76118bb2b1098f",
+    "experimental/studio/window.cp312-win_amd64.pyd": "11845b954b6d49b1a87cf4fdaf3adab313c57b11dee2c39995e3617c20abdbe7"
+  },
+  "instrumentation": "Read-only native MjModel/MjData and mj_contactForce. No Newton CONTACT_F request."
+}

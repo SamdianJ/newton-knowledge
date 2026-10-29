@@ -1,0 +1,28 @@
+{
+  "case": "kamino_pd_convergence",
+  "run_id": "kamino_pd_convergence_budget1000_r2_20261029T064227376663Z",
+  "variant": "budget1000",
+  "repeat": 2,
+  "status": "completed",
+  "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+  "runner_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+  "started_at": "2026-10-29T06:42:27.381986+00:00",
+  "run_directory": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z",
+  "samples": 81,
+  "active_iteration_samples": 80000,
+  "raw_sha256": "7dcdfcbcd237ec4ec2294ca88e5018acf503709778ef61875be5a8142731fee8",
+  "iteration_sha256": "51d14e86eeffd629a96eaf301bb4961ae233993438bd8ad25986d6d7834919c8",
+  "note": "Completion is not physical or strict convergence acceptance",
+  "finished_at": "2026-10-29T06:43:03.214540+00:00",
+  "files_sha256": {
+    "environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "iterations.npz": "51d14e86eeffd629a96eaf301bb4961ae233993438bd8ad25986d6d7834919c8",
+    "protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "resolved-config.json": "bede162f2155d19ce596aa8d83d1cc9db7e163219e3a6f746b285c9f1b09b1ea",
+    "run.log": "6e45e5df69ffa7f022bd3a53bc3505c411b4fd5181b7da622f47fbc6d8aac70b",
+    "runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "trajectory.npz": "7dcdfcbcd237ec4ec2294ca88e5018acf503709778ef61875be5a8142731fee8"
+  }
+}

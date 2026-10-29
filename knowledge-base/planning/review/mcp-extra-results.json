@@ -1,0 +1,1412 @@
+{
+  "initialized": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      }
+    },
+    "serverInfo": {
+      "name": "newton_knowledge",
+      "version": "1.1.0"
+    },
+    "instructions": "Read-only local knowledge for Newton 1.7.0 / VBD, MuJoCo and Kamino. Use search_knowledge then exact readers. Specify solver for same-named parameters. Kamino names are qualified, e.g. config.padmm.max_iterations. Only VBD currently has saved parameter A/B runs; MuJoCo/Kamino diagnostic plans are proposed, not measured. Preserve version, source references and evidence scope. Experimental A/B values are not universal tuning recommendations. The local website is optional; no HTTP requests or simulation runs occur. Unknown versions are rejected."
+  },
+  "calls": [
+    {
+      "label": "F1",
+      "tool": "get_source",
+      "arguments": {
+        "path": "newton/_src/sim/collide.py",
+        "start_line": 1338,
+        "max_lines": 15
+      },
+      "elapsed_ms": 96.89,
+      "payload_chars": 2427,
+      "wire_chars": 5155,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"shared\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"scope\": \"newton\",\n  \"path\": \"newton/_src/sim/collide.py\",\n  \"total_lines\": 2804,\n  \"start_line\": 1338,\n  \"end_line\": 1352,\n  \"content\": \"            enable_rigid_soft_full_surface_contact: Generate soft contacts over the full soft-mesh\\n                surface -- the edges and triangle interiors -- against rigid SDFs, in addition to the\\n                per-vertex (particle) contacts. Catches rigid features that pass between soft vertices\\n                (e.g. a thin box edge through a coarse cloth cell), which the per-particle path misses.\\n                Requires an SDF on every participating rigid mesh/convex shape (provision via\\n                :meth:`ModelBuilder.ShapeConfig.configure_sdf`, e.g. ``configure_sdf(force_sdf=True)`` on\\n                the builder's ``default_shape_cfg``), and is consumed only by\\n                :class:`~newton.solvers.SolverVBD`; other solvers raise on such contacts. Records are\\n                emitted into :attr:`Contacts.soft_contact_indices`. Defaults to False. Fixed at\\n                construction because it sizes the soft-contact buffer headroom.\\n            requires_grad: Whether pipeline-generated soft contacts and the\\n                deprecated automatic rigid-contact outputs require gradients.\\n                If None, uses ``model.requires_grad``. Explicit calls to\\n                :func:`newton.eval_rigid_contact_kinematics` do not\\n                depend on this flag.\",\n  \"truncated\": true,\n  \"next_start_line\": 1353,\n  \"sha256\": \"9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040\",\n  \"matches_recorded_hash\": null,\n  \"source\": {\n    \"path\": \"sources/newton-v1.7.0/newton/_src/sim/collide.py\",\n    \"local_path\": \"D:\\\\RAG\\\\Newton knowledge\\\\sources\\\\newton-v1.7.0\\\\newton\\\\_src\\\\sim\\\\collide.py\",\n    \"file_uri\": \"file:///D:/RAG/Newton%20knowledge/sources/newton-v1.7.0/newton/_src/sim/collide.py\",\n    \"web_url\": \"http://127.0.0.1:18448/files/sources/newton-v1.7.0/newton/_src/sim/collide.py\"\n  },\n  \"upstream_url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1338\",\n  \"evidence_type\": \"pinned_source_excerpt\",\n  \"hash_note\": \"Content hash returned; this file has no individually recorded hash in the inspected-file manifest.\"\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "shared",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "scope": "newton",
+          "path": "newton/_src/sim/collide.py",
+          "total_lines": 2804,
+          "start_line": 1338,
+          "end_line": 1352,
+          "content": "            enable_rigid_soft_full_surface_contact: Generate soft contacts over the full soft-mesh\n                surface -- the edges and triangle interiors -- against rigid SDFs, in addition to the\n                per-vertex (particle) contacts. Catches rigid features that pass between soft vertices\n                (e.g. a thin box edge through a coarse cloth cell), which the per-particle path misses.\n                Requires an SDF on every participating rigid mesh/convex shape (provision via\n                :meth:`ModelBuilder.ShapeConfig.configure_sdf`, e.g. ``configure_sdf(force_sdf=True)`` on\n                the builder's ``default_shape_cfg``), and is consumed only by\n                :class:`~newton.solvers.SolverVBD`; other solvers raise on such contacts. Records are\n                emitted into :attr:`Contacts.soft_contact_indices`. Defaults to False. Fixed at\n                construction because it sizes the soft-contact buffer headroom.\n            requires_grad: Whether pipeline-generated soft contacts and the\n                deprecated automatic rigid-contact outputs require gradients.\n                If None, uses ``model.requires_grad``. Explicit calls to\n                :func:`newton.eval_rigid_contact_kinematics` do not\n                depend on this flag.",
+          "truncated": true,
+          "next_start_line": 1353,
+          "sha256": "9325abd206d7bcc06919f91d6772d11ff72685407449109bddeed2a56aac7040",
+          "matches_recorded_hash": null,
+          "source": {
+            "path": "sources/newton-v1.7.0/newton/_src/sim/collide.py",
+            "local_path": "D:\\RAG\\Newton knowledge\\sources\\newton-v1.7.0\\newton\\_src\\sim\\collide.py",
+            "file_uri": "file:///D:/RAG/Newton%20knowledge/sources/newton-v1.7.0/newton/_src/sim/collide.py",
+            "web_url": "http://127.0.0.1:18448/files/sources/newton-v1.7.0/newton/_src/sim/collide.py"
+          },
+          "upstream_url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1338",
+          "evidence_type": "pinned_source_excerpt",
+          "hash_note": "Content hash returned; this file has no individually recorded hash in the inspected-file manifest."
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F2",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "collision"
+      },
+      "elapsed_ms": 34.95,
+      "payload_chars": 5693,
+      "wire_chars": 13488,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"all\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"query\": \"collision\",\n  \"kind\": \"all\",\n  \"hits\": [\n    {\n      \"id\": \"newton:1.7.0:SolverVBD:particle_collision_detection_interval\",\n      \"kind\": \"parameter\",\n      \"title\": \"particle_collision_detection_interval\",\n      \"summary\": \"旧调度：负数 PRE_INIT，0 PRE_POST_INIT，正 n ITERATIONS；新配置用 collision_frequency_type/frequency。\",\n      \"route\": \"#parameter/particle_collision_detection_interval\",\n      \"solver\": \"vbd\",\n      \"score\": -79,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#parameter/particle_collision_detection_interval\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"particle_collision_detection_interval\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 370,\n          \"end_line\": 370,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L370\"\n        }\n      ]\n    },\n    {\n      \"id\": \"newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps\",\n      \"kind\": \"parameter\",\n      \"title\": \"rigid_contact_stick_motion_eps\",\n      \"summary\": \"已弃用且忽略；传数值不产生 deadzone 效果。几何持久化应在 CollisionPipeline 配置 sticky matching。\",\n      \"route\": \"#parameter/rigid_contact_stick_motion_eps\",\n      \"solver\": \"vbd\",\n      \"score\": -79,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#parameter/rigid_contact_stick_motion_eps\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"rigid_contact_stick_motion_eps\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 389,\n          \"end_line\": 389,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L389\"\n        }\n      ]\n    },\n    {\n      \"id\": \"newton:1.7.0:SolverVBD:rigid_body_contact_buffer_size\",\n      \"kind\": \"parameter\",\n      \"title\": \"rigid_body_contact_buffer_size\",\n      \"summary\": \"每刚体接触邻接表容量；不同于 CollisionPipeline 的全局 rigid_contact_max。\",\n      \"route\": \"#parameter/rigid_body_contact_buffer_size\",\n      \"solver\": \"vbd\",\n      \"score\": -79,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#parameter/rigid_body_contact_buffer_size\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"rigid_body_contact_buffer_size\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 393,\n          \"end_line\": 393,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L393\"\n        }\n      ]\n    },\n    {\n      \"id\": \"newton:1.7.0:SolverVBD:collision_pipeline\",\n      \"kind\": \"parameter\",\n      \"title\": \"collision_pipeline\",\n      \"summary\": \"传入后 solver 持有 pipeline/contacts 并按调度执行检测；step 必须传 contacts=None。未传时由调用者外部检测。\",\n      \"route\": \"#parameter/collision_pipeline\",\n      \"solver\": \"vbd\",\n      \"score\": -79,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#parameter/collision_pipeline\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"collision_pipeline\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 407,\n          \"end_line\": 407,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L407\"\n        }\n      ]\n    },\n    {\n      \"id\": \"newton:1.7.0:SolverVBD:collision_frequency\",\n      \"kind\": \"parameter\",\n      \"title\": \"collision_frequency\",\n      \"summary\": \"按 CollisionSlot 配置 ITERATIONS 模式的 k；与 frequency_type 合用，可经 set_collision_frequency 更新。\",\n      \"route\": \"#parameter/collision_frequency\",\n      \"solver\": \"vbd\",\n      \"score\": -79,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#parameter/collision_frequency\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"collision_frequency\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 408,\n          \"end_line\": 408,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L408\"\n        }\n      ]\n    },\n    {\n      \"id\": \"newton:1.7.0:SolverVBD:collision_frequency_type\",\n      \"kind\": \"parameter\",\n      \"title\": \"collision_frequency_type\",\n      \"summary\": \"AUTO 默认：启用软自接触为 PRE_POST_INIT；owned rigid 默认 PRE_INIT，开启 rigid_soft DAT 时为 PRE_POST_INIT。\",\n      \"route\": \"#parameter/collision_frequency_type\",\n      \"solver\": \"vbd\",\n      \"score\": -79,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#parameter/collision_frequency_type\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"collision_frequency_type\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 409,\n          \"end_line\": 409,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L409\"\n        }\n      ]\n    }\n  ],\n  \"has_more\": true,\n  \"method\": \"shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings\",\n  \"limitations\": [\n    \"Search scores are ranking signals, not confidence probabilities.\",\n    \"Experimental evidence is conditional on the recorded setup.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "all",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "query": "collision",
+          "kind": "all",
+          "hits": [
+            {
+              "id": "newton:1.7.0:SolverVBD:particle_collision_detection_interval",
+              "kind": "parameter",
+              "title": "particle_collision_detection_interval",
+              "summary": "旧调度：负数 PRE_INIT，0 PRE_POST_INIT，正 n ITERATIONS；新配置用 collision_frequency_type/frequency。",
+              "route": "#parameter/particle_collision_detection_interval",
+              "solver": "vbd",
+              "score": -79,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#parameter/particle_collision_detection_interval",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "particle_collision_detection_interval",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 370,
+                  "end_line": 370,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L370"
+                }
+              ]
+            },
+            {
+              "id": "newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps",
+              "kind": "parameter",
+              "title": "rigid_contact_stick_motion_eps",
+              "summary": "已弃用且忽略；传数值不产生 deadzone 效果。几何持久化应在 CollisionPipeline 配置 sticky matching。",
+              "route": "#parameter/rigid_contact_stick_motion_eps",
+              "solver": "vbd",
+              "score": -79,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#parameter/rigid_contact_stick_motion_eps",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "rigid_contact_stick_motion_eps",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 389,
+                  "end_line": 389,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L389"
+                }
+              ]
+            },
+            {
+              "id": "newton:1.7.0:SolverVBD:rigid_body_contact_buffer_size",
+              "kind": "parameter",
+              "title": "rigid_body_contact_buffer_size",
+              "summary": "每刚体接触邻接表容量；不同于 CollisionPipeline 的全局 rigid_contact_max。",
+              "route": "#parameter/rigid_body_contact_buffer_size",
+              "solver": "vbd",
+              "score": -79,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#parameter/rigid_body_contact_buffer_size",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "rigid_body_contact_buffer_size",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 393,
+                  "end_line": 393,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L393"
+                }
+              ]
+            },
+            {
+              "id": "newton:1.7.0:SolverVBD:collision_pipeline",
+              "kind": "parameter",
+              "title": "collision_pipeline",
+              "summary": "传入后 solver 持有 pipeline/contacts 并按调度执行检测；step 必须传 contacts=None。未传时由调用者外部检测。",
+              "route": "#parameter/collision_pipeline",
+              "solver": "vbd",
+              "score": -79,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#parameter/collision_pipeline",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "collision_pipeline",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 407,
+                  "end_line": 407,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L407"
+                }
+              ]
+            },
+            {
+              "id": "newton:1.7.0:SolverVBD:collision_frequency",
+              "kind": "parameter",
+              "title": "collision_frequency",
+              "summary": "按 CollisionSlot 配置 ITERATIONS 模式的 k；与 frequency_type 合用，可经 set_collision_frequency 更新。",
+              "route": "#parameter/collision_frequency",
+              "solver": "vbd",
+              "score": -79,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#parameter/collision_frequency",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "collision_frequency",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 408,
+                  "end_line": 408,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L408"
+                }
+              ]
+            },
+            {
+              "id": "newton:1.7.0:SolverVBD:collision_frequency_type",
+              "kind": "parameter",
+              "title": "collision_frequency_type",
+              "summary": "AUTO 默认：启用软自接触为 PRE_POST_INIT；owned rigid 默认 PRE_INIT，开启 rigid_soft DAT 时为 PRE_POST_INIT。",
+              "route": "#parameter/collision_frequency_type",
+              "solver": "vbd",
+              "score": -79,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#parameter/collision_frequency_type",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "collision_frequency_type",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 409,
+                  "end_line": 409,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L409"
+                }
+              ]
+            }
+          ],
+          "has_more": true,
+          "method": "shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings",
+          "limitations": [
+            "Search scores are ranking signals, not confidence probabilities.",
+            "Experimental evidence is conditional on the recorded setup."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F3",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "SolverXPBD",
+        "solver": "all"
+      },
+      "elapsed_ms": 17.38,
+      "payload_chars": 489,
+      "wire_chars": 1179,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"all\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"query\": \"SolverXPBD\",\n  \"kind\": \"all\",\n  \"hits\": [],\n  \"has_more\": false,\n  \"method\": \"shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings\",\n  \"limitations\": [\n    \"Search scores are ranking signals, not confidence probabilities.\",\n    \"Experimental evidence is conditional on the recorded setup.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "all",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "query": "SolverXPBD",
+          "kind": "all",
+          "hits": [],
+          "has_more": false,
+          "method": "shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings",
+          "limitations": [
+            "Search scores are ranking signals, not confidence probabilities.",
+            "Experimental evidence is conditional on the recorded setup."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F4",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "SolverXPBD",
+        "solver": "xpbd"
+      },
+      "elapsed_ms": 1.14,
+      "payload_chars": 320,
+      "wire_chars": 376,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Error executing tool search_knowledge: 1 validation error for search_knowledgeArguments\nsolver\n  Input should be 'all', 'vbd', 'mujoco' or 'kamino' [type=literal_error, input_value='xpbd', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"
+          }
+        ],
+        "isError": true,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F5",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "requires_grad"
+      },
+      "elapsed_ms": 16.96,
+      "payload_chars": 492,
+      "wire_chars": 1185,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"all\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"query\": \"requires_grad\",\n  \"kind\": \"all\",\n  \"hits\": [],\n  \"has_more\": false,\n  \"method\": \"shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings\",\n  \"limitations\": [\n    \"Search scores are ranking signals, not confidence probabilities.\",\n    \"Experimental evidence is conditional on the recorded setup.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "all",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "query": "requires_grad",
+          "kind": "all",
+          "hits": [],
+          "has_more": false,
+          "method": "shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings",
+          "limitations": [
+            "Search scores are ranking signals, not confidence probabilities.",
+            "Experimental evidence is conditional on the recorded setup."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F6",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "URDF",
+        "limit": 5
+      },
+      "elapsed_ms": 17.55,
+      "payload_chars": 483,
+      "wire_chars": 1167,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"all\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"query\": \"URDF\",\n  \"kind\": \"all\",\n  \"hits\": [],\n  \"has_more\": false,\n  \"method\": \"shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings\",\n  \"limitations\": [\n    \"Search scores are ranking signals, not confidence probabilities.\",\n    \"Experimental evidence is conditional on the recorded setup.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "all",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "query": "URDF",
+          "kind": "all",
+          "hits": [],
+          "has_more": false,
+          "method": "shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings",
+          "limitations": [
+            "Search scores are ranking signals, not confidence probabilities.",
+            "Experimental evidence is conditional on the recorded setup."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F7",
+      "tool": "get_relations",
+      "arguments": {
+        "node_id": "newton:1.7.0:SolverVBD:iterations",
+        "limit": 1
+      },
+      "elapsed_ms": 16.05,
+      "payload_chars": 941,
+      "wire_chars": 2269,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"VBD\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"seed\": {\n    \"id\": \"newton:1.7.0:SolverVBD:iterations\",\n    \"type\": \"parameter\",\n    \"label\": \"iterations\",\n    \"record_file\": \"solvers/vbd/parameters.json\",\n    \"base_graph\": true\n  },\n  \"hops\": 1,\n  \"neighbors\": [\n    {\n      \"id\": \"lab:iterations\",\n      \"type\": \"lab_experiment\",\n      \"label\": \"弹簧链：求解预算\",\n      \"experiment_id\": \"iterations\"\n    }\n  ],\n  \"edges\": [\n    {\n      \"source\": \"lab:iterations\",\n      \"relation\": \"varies_in_case\",\n      \"target\": \"newton:1.7.0:SolverVBD:iterations\",\n      \"evidence\": \"experiments/vbd_parameter_lab/report-data.json\"\n    }\n  ],\n  \"total_neighbors\": 7,\n  \"offset\": 0,\n  \"next_offset\": 1,\n  \"edges_truncated\": false,\n  \"evidence_type\": \"curated_one_hop_relations_plus_explicit_lab_associations\",\n  \"limitations\": [\n    \"Adjacency is not causal proof.\",\n    \"varies_group_in_case denotes a joint intervention, not isolated component effects.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "VBD",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "seed": {
+            "id": "newton:1.7.0:SolverVBD:iterations",
+            "type": "parameter",
+            "label": "iterations",
+            "record_file": "solvers/vbd/parameters.json",
+            "base_graph": true
+          },
+          "hops": 1,
+          "neighbors": [
+            {
+              "id": "lab:iterations",
+              "type": "lab_experiment",
+              "label": "弹簧链：求解预算",
+              "experiment_id": "iterations"
+            }
+          ],
+          "edges": [
+            {
+              "source": "lab:iterations",
+              "relation": "varies_in_case",
+              "target": "newton:1.7.0:SolverVBD:iterations",
+              "evidence": "experiments/vbd_parameter_lab/report-data.json"
+            }
+          ],
+          "total_neighbors": 7,
+          "offset": 0,
+          "next_offset": 1,
+          "edges_truncated": false,
+          "evidence_type": "curated_one_hop_relations_plus_explicit_lab_associations",
+          "limitations": [
+            "Adjacency is not causal proof.",
+            "varies_group_in_case denotes a joint intervention, not isolated component effects."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F8",
+      "tool": "get_relations",
+      "arguments": {
+        "node_id": "newton:1.7.0:SolverVBD:iterations",
+        "limit": 1,
+        "offset": 1
+      },
+      "elapsed_ms": 15.36,
+      "payload_chars": 954,
+      "wire_chars": 2293,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"VBD\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"seed\": {\n    \"id\": \"newton:1.7.0:SolverVBD:iterations\",\n    \"type\": \"parameter\",\n    \"label\": \"iterations\",\n    \"record_file\": \"solvers/vbd/parameters.json\",\n    \"base_graph\": true\n  },\n  \"hops\": 1,\n  \"neighbors\": [\n    {\n      \"id\": \"c:implicit\",\n      \"type\": \"claim\",\n      \"label\": \"VBD 通过惯性势能与材料能量构造隐式积分问题，逐顶点解 3×3 局部系统；每次局部 Newton 更新不等于完整求解全局最小值。\",\n      \"record_file\": \"solvers/vbd/claims.json\",\n      \"base_graph\": true\n    }\n  ],\n  \"edges\": [\n    {\n      \"source\": \"c:implicit\",\n      \"relation\": \"concerns_parameter\",\n      \"target\": \"newton:1.7.0:SolverVBD:iterations\"\n    }\n  ],\n  \"total_neighbors\": 7,\n  \"offset\": 1,\n  \"next_offset\": 2,\n  \"edges_truncated\": false,\n  \"evidence_type\": \"curated_one_hop_relations_plus_explicit_lab_associations\",\n  \"limitations\": [\n    \"Adjacency is not causal proof.\",\n    \"varies_group_in_case denotes a joint intervention, not isolated component effects.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "VBD",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "seed": {
+            "id": "newton:1.7.0:SolverVBD:iterations",
+            "type": "parameter",
+            "label": "iterations",
+            "record_file": "solvers/vbd/parameters.json",
+            "base_graph": true
+          },
+          "hops": 1,
+          "neighbors": [
+            {
+              "id": "c:implicit",
+              "type": "claim",
+              "label": "VBD 通过惯性势能与材料能量构造隐式积分问题，逐顶点解 3×3 局部系统；每次局部 Newton 更新不等于完整求解全局最小值。",
+              "record_file": "solvers/vbd/claims.json",
+              "base_graph": true
+            }
+          ],
+          "edges": [
+            {
+              "source": "c:implicit",
+              "relation": "concerns_parameter",
+              "target": "newton:1.7.0:SolverVBD:iterations"
+            }
+          ],
+          "total_neighbors": 7,
+          "offset": 1,
+          "next_offset": 2,
+          "edges_truncated": false,
+          "evidence_type": "curated_one_hop_relations_plus_explicit_lab_associations",
+          "limitations": [
+            "Adjacency is not causal proof.",
+            "varies_group_in_case denotes a joint intervention, not isolated component effects."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F9",
+      "tool": "get_experiment",
+      "arguments": {
+        "experiment_id": "full_surface",
+        "detail": "full",
+        "solver": "vbd"
+      },
+      "elapsed_ms": 25.99,
+      "payload_chars": 6769,
+      "wire_chars": 17206,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"VBD\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"id\": \"full_surface\",\n  \"title\": \"粗三角形能托住小球吗？\",\n  \"parameter\": \"enable_rigid_soft_full_surface_contact\",\n  \"group\": \"碰撞管线\",\n  \"scene\": \"full_surface\",\n  \"question\": \"顶点没有碰到球，三角形内部接触是否仍被求解？\",\n  \"values\": [\n    false,\n    true\n  ],\n  \"duration_seconds\": 0.4,\n  \"common_settings\": {},\n  \"metric\": \"球底相对支撑面的高度\",\n  \"unit\": \"mm\",\n  \"variants\": [\n    {\n      \"variant\": \"A\",\n      \"value\": false,\n      \"metrics\": {\n        \"final\": -761.1505126953125,\n        \"min\": -761.1505126953125,\n        \"max\": 40.0,\n        \"tail_mean\": -622.1757202148438,\n        \"step_ms_median_after_warmup\": 5.114200059324503,\n        \"max_soft_contact_records\": 0,\n        \"max_edge_face_records\": 0,\n        \"finite\": true,\n        \"steps\": 48,\n        \"estimated_solver_ms_total\": 245.48160284757614\n      },\n      \"config\": {\n        \"solver\": {\n          \"iterations\": 10,\n          \"particle_enable_tile_solve\": false,\n          \"rigid_compliant_alm\": true\n        },\n        \"pipeline\": {\n          \"broad_phase\": \"nxn\",\n          \"soft_contact_gap\": 0.06,\n          \"enable_rigid_soft_full_surface_contact\": false\n        },\n        \"common\": {},\n        \"treatment\": {\n          \"enable_rigid_soft_full_surface_contact\": false\n        },\n        \"dt\": 0.008333333333333333,\n        \"duration\": 0.4,\n        \"gravity\": [\n          0.0,\n          0.0,\n          -9.8100004196167\n        ],\n        \"model_counts\": {\n          \"particles\": 3,\n          \"bodies\": 1,\n          \"triangles\": 1,\n          \"springs\": 0\n        },\n        \"particle_mass\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"body_mass\": [\n          0.5\n        ],\n        \"seed\": \"deterministic construction; no RNG\"\n      },\n      \"runner_sha256\": \"2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a\",\n      \"raw_data\": {\n        \"path\": \"experiments/vbd_parameter_lab/data/full_surface/A.npz\",\n        \"local_path\": \"D:\\\\RAG\\\\Newton knowledge\\\\experiments\\\\vbd_parameter_lab\\\\data\\\\full_surface\\\\A.npz\",\n        \"file_uri\": \"file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/data/full_surface/A.npz\",\n        \"web_url\": \"http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/data/full_surface/A.npz\"\n      },\n      \"initial_state\": {\n        \"particle_q\": [\n          [\n            -0.30000001192092896,\n            -0.30000001192092896,\n            0.0\n          ],\n          [\n            0.30000001192092896,\n            -0.30000001192092896,\n            0.0\n          ],\n          [\n            0.0,\n            0.30000001192092896,\n            0.0\n          ]\n        ],\n        \"body_q\": [\n          [\n            0.0,\n            0.0,\n            0.14000000059604645,\n            0.0,\n            0.0,\n            0.0,\n            1.0\n          ]\n        ],\n        \"visual_topology\": {\n          \"view\": \"iso\",\n          \"body_shapes\": [\n            {\n              \"body\": 0,\n              \"type\": \"sphere\",\n              \"radius\": 0.1\n            }\n          ],\n          \"triangles\": [\n            [\n              0,\n              1,\n              2\n            ]\n          ],\n          \"springs\": [],\n          \"fixed\": [\n            0,\n            1,\n            2\n          ],\n          \"floor\": null,\n          \"particle_radii\": [\n            0.0,\n            0.0,\n            0.0\n          ]\n        }\n      }\n    },\n    {\n      \"variant\": \"B\",\n      \"value\": true,\n      \"metrics\": {\n        \"final\": -0.24528801441192627,\n        \"min\": -0.6820783019065857,\n        \"max\": 40.0,\n        \"tail_mean\": -0.24528202414512634,\n        \"step_ms_median_after_warmup\": 5.110300146043301,\n        \"max_soft_contact_records\": 1,\n        \"max_edge_face_records\": 1,\n        \"finite\": true,\n        \"steps\": 48,\n        \"estimated_solver_ms_total\": 245.29440701007843\n      },\n      \"config\": {\n        \"solver\": {\n          \"iterations\": 10,\n          \"particle_enable_tile_solve\": false,\n          \"rigid_compliant_alm\": true\n        },\n        \"pipeline\": {\n          \"broad_phase\": \"nxn\",\n          \"soft_contact_gap\": 0.06,\n          \"enable_rigid_soft_full_surface_contact\": true\n        },\n        \"common\": {},\n        \"treatment\": {\n          \"enable_rigid_soft_full_surface_contact\": true\n        },\n        \"dt\": 0.008333333333333333,\n        \"duration\": 0.4,\n        \"gravity\": [\n          0.0,\n          0.0,\n          -9.8100004196167\n        ],\n        \"model_counts\": {\n          \"particles\": 3,\n          \"bodies\": 1,\n          \"triangles\": 1,\n          \"springs\": 0\n        },\n        \"particle_mass\": [\n          0.0,\n          0.0,\n          0.0\n        ],\n        \"body_mass\": [\n          0.5\n        ],\n        \"seed\": \"deterministic construction; no RNG\"\n      },\n      \"runner_sha256\": \"2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a\",\n      \"raw_data\": {\n        \"path\": \"experiments/vbd_parameter_lab/data/full_surface/B.npz\",\n        \"local_path\": \"D:\\\\RAG\\\\Newton knowledge\\\\experiments\\\\vbd_parameter_lab\\\\data\\\\full_surface\\\\B.npz\",\n        \"file_uri\": \"file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/data/full_surface/B.npz\",\n        \"web_url\": \"http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/data/full_surface/B.npz\"\n      },\n      \"initial_state\": {\n        \"particle_q\": [\n          [\n            -0.30000001192092896,\n            -0.30000001192092896,\n            0.0\n          ],\n          [\n            0.30000001192092896,\n            -0.30000001192092896,\n            0.0\n          ],\n          [\n            0.0,\n            0.30000001192092896,\n            0.0\n          ]\n        ],\n        \"body_q\": [\n          [\n            0.0,\n            0.0,\n            0.14000000059604645,\n            0.0,\n            0.0,\n            0.0,\n            1.0\n          ]\n        ],\n        \"visual_topology\": {\n          \"view\": \"iso\",\n          \"body_shapes\": [\n            {\n              \"body\": 0,\n              \"type\": \"sphere\",\n              \"radius\": 0.1\n            }\n          ],\n          \"triangles\": [\n            [\n              0,\n              1,\n              2\n            ]\n          ],\n          \"springs\": [],\n          \"fixed\": [\n            0,\n            1,\n            2\n          ],\n          \"floor\": null,\n          \"particle_radii\": [\n            0.0,\n            0.0,\n            0.0\n          ]\n        }\n      }\n    }\n  ],\n  \"observation\": \"A 未生成接触，球底降到支撑面下 761 mm；B 生成面接触并被托住，终态压入约 0.245 mm。覆盖面内接触得到支持，但有限 penalty 仍有小压入。\",\n  \"expected_mechanism\": \"开启后应出现 edge/face 接触；仅粒子检测可能漏掉面内接触。\",\n  \"evidence_type\": \"measured_in_recorded_minimal_case\",\n  \"comparison_status\": \"observed_in_this_minimal_case\",\n  \"environment\": {\n    \"date\": \"2026-10-27\",\n    \"newton\": \"1.7.0\",\n    \"warp\": \"1.18.0\",\n    \"numpy\": \"2.5.4\",\n    \"python\": \"3.12.14\",\n    \"device\": \"cpu\",\n    \"platform\": \"Windows-11-10.0.26200-SP0\",\n    \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n    \"solver_file_sha256\": \"3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57\",\n    \"solver_file_matches_snapshot\": true,\n    \"failures\": [],\n    \"timing_scope\": \"CPU solver.step including owned collision, after first 5 steps; excludes numpy readback/rendering; not GPU benchmark\"\n  },\n  \"source_refs\": [\n    {\n      \"path\": \"newton/_src/sim/collide.py\",\n      \"line\": 1338,\n      \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1338\",\n      \"needle\": \"enable_rigid_soft_full_surface_contact: Generate\"\n    }\n  ],\n  \"guide_url\": \"https://newton-physics.github.io/newton/latest/concepts/collisions.html\",\n  \"reference_kind\": null,\n  \"associations\": [\n    \"pipeline:enable_rigid_soft_full_surface_contact\"\n  ],\n  \"artifacts\": {\n    \"curve\": {\n      \"path\": \"experiments/vbd_parameter_lab/plots/full_surface.svg\",\n      \"local_path\": \"D:\\\\RAG\\\\Newton knowledge\\\\experiments\\\\vbd_parameter_lab\\\\plots\\\\full_surface.svg\",\n      \"file_uri\": \"file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/plots/full_surface.svg\",\n      \"web_url\": \"http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/plots/full_surface.svg\"\n    },\n    \"runner\": {\n      \"path\": \"experiments/vbd_parameter_lab/run_lab.py\",\n      \"local_path\": \"D:\\\\RAG\\\\Newton knowledge\\\\experiments\\\\vbd_parameter_lab\\\\run_lab.py\",\n      \"file_uri\": \"file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/run_lab.py\",\n      \"web_url\": \"http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/run_lab.py\"\n    },\n    \"report\": {\n      \"path\": \"experiments/vbd_parameter_lab/index-3d.html\",\n      \"local_path\": \"D:\\\\RAG\\\\Newton knowledge\\\\experiments\\\\vbd_parameter_lab\\\\index-3d.html\",\n      \"file_uri\": \"file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/index-3d.html\",\n      \"web_url\": \"http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/index-3d.html\"\n    },\n    \"viewer_url\": \"http://127.0.0.1:18448/#experiments?case=full_surface\"\n  },\n  \"limitations\": [\n    \"One exploratory A/B pair; not a universal parameter range or robustness proof.\",\n    \"CPU measurements; no GPU performance validation.\",\n    \"No trajectory arrays are returned by default; full adds initial geometry only.\",\n    \"For full geometry/construction, read get_source(scope=\\\"experiment\\\", path=\\\"run_lab.py\\\").\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "VBD",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "id": "full_surface",
+          "title": "粗三角形能托住小球吗？",
+          "parameter": "enable_rigid_soft_full_surface_contact",
+          "group": "碰撞管线",
+          "scene": "full_surface",
+          "question": "顶点没有碰到球，三角形内部接触是否仍被求解？",
+          "values": [
+            false,
+            true
+          ],
+          "duration_seconds": 0.4,
+          "common_settings": {},
+          "metric": "球底相对支撑面的高度",
+          "unit": "mm",
+          "variants": [
+            {
+              "variant": "A",
+              "value": false,
+              "metrics": {
+                "final": -761.1505126953125,
+                "min": -761.1505126953125,
+                "max": 40.0,
+                "tail_mean": -622.1757202148438,
+                "step_ms_median_after_warmup": 5.114200059324503,
+                "max_soft_contact_records": 0,
+                "max_edge_face_records": 0,
+                "finite": true,
+                "steps": 48,
+                "estimated_solver_ms_total": 245.48160284757614
+              },
+              "config": {
+                "solver": {
+                  "iterations": 10,
+                  "particle_enable_tile_solve": false,
+                  "rigid_compliant_alm": true
+                },
+                "pipeline": {
+                  "broad_phase": "nxn",
+                  "soft_contact_gap": 0.06,
+                  "enable_rigid_soft_full_surface_contact": false
+                },
+                "common": {},
+                "treatment": {
+                  "enable_rigid_soft_full_surface_contact": false
+                },
+                "dt": 0.008333333333333333,
+                "duration": 0.4,
+                "gravity": [
+                  0.0,
+                  0.0,
+                  -9.8100004196167
+                ],
+                "model_counts": {
+                  "particles": 3,
+                  "bodies": 1,
+                  "triangles": 1,
+                  "springs": 0
+                },
+                "particle_mass": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "body_mass": [
+                  0.5
+                ],
+                "seed": "deterministic construction; no RNG"
+              },
+              "runner_sha256": "2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a",
+              "raw_data": {
+                "path": "experiments/vbd_parameter_lab/data/full_surface/A.npz",
+                "local_path": "D:\\RAG\\Newton knowledge\\experiments\\vbd_parameter_lab\\data\\full_surface\\A.npz",
+                "file_uri": "file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/data/full_surface/A.npz",
+                "web_url": "http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/data/full_surface/A.npz"
+              },
+              "initial_state": {
+                "particle_q": [
+                  [
+                    -0.30000001192092896,
+                    -0.30000001192092896,
+                    0.0
+                  ],
+                  [
+                    0.30000001192092896,
+                    -0.30000001192092896,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.30000001192092896,
+                    0.0
+                  ]
+                ],
+                "body_q": [
+                  [
+                    0.0,
+                    0.0,
+                    0.14000000059604645,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "visual_topology": {
+                  "view": "iso",
+                  "body_shapes": [
+                    {
+                      "body": 0,
+                      "type": "sphere",
+                      "radius": 0.1
+                    }
+                  ],
+                  "triangles": [
+                    [
+                      0,
+                      1,
+                      2
+                    ]
+                  ],
+                  "springs": [],
+                  "fixed": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "floor": null,
+                  "particle_radii": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                }
+              }
+            },
+            {
+              "variant": "B",
+              "value": true,
+              "metrics": {
+                "final": -0.24528801441192627,
+                "min": -0.6820783019065857,
+                "max": 40.0,
+                "tail_mean": -0.24528202414512634,
+                "step_ms_median_after_warmup": 5.110300146043301,
+                "max_soft_contact_records": 1,
+                "max_edge_face_records": 1,
+                "finite": true,
+                "steps": 48,
+                "estimated_solver_ms_total": 245.29440701007843
+              },
+              "config": {
+                "solver": {
+                  "iterations": 10,
+                  "particle_enable_tile_solve": false,
+                  "rigid_compliant_alm": true
+                },
+                "pipeline": {
+                  "broad_phase": "nxn",
+                  "soft_contact_gap": 0.06,
+                  "enable_rigid_soft_full_surface_contact": true
+                },
+                "common": {},
+                "treatment": {
+                  "enable_rigid_soft_full_surface_contact": true
+                },
+                "dt": 0.008333333333333333,
+                "duration": 0.4,
+                "gravity": [
+                  0.0,
+                  0.0,
+                  -9.8100004196167
+                ],
+                "model_counts": {
+                  "particles": 3,
+                  "bodies": 1,
+                  "triangles": 1,
+                  "springs": 0
+                },
+                "particle_mass": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "body_mass": [
+                  0.5
+                ],
+                "seed": "deterministic construction; no RNG"
+              },
+              "runner_sha256": "2449d08a6b410b91fd9efa4e6547f0f5ba8949814be05d6fab14369a3d0e978a",
+              "raw_data": {
+                "path": "experiments/vbd_parameter_lab/data/full_surface/B.npz",
+                "local_path": "D:\\RAG\\Newton knowledge\\experiments\\vbd_parameter_lab\\data\\full_surface\\B.npz",
+                "file_uri": "file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/data/full_surface/B.npz",
+                "web_url": "http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/data/full_surface/B.npz"
+              },
+              "initial_state": {
+                "particle_q": [
+                  [
+                    -0.30000001192092896,
+                    -0.30000001192092896,
+                    0.0
+                  ],
+                  [
+                    0.30000001192092896,
+                    -0.30000001192092896,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.30000001192092896,
+                    0.0
+                  ]
+                ],
+                "body_q": [
+                  [
+                    0.0,
+                    0.0,
+                    0.14000000059604645,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "visual_topology": {
+                  "view": "iso",
+                  "body_shapes": [
+                    {
+                      "body": 0,
+                      "type": "sphere",
+                      "radius": 0.1
+                    }
+                  ],
+                  "triangles": [
+                    [
+                      0,
+                      1,
+                      2
+                    ]
+                  ],
+                  "springs": [],
+                  "fixed": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "floor": null,
+                  "particle_radii": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                }
+              }
+            }
+          ],
+          "observation": "A 未生成接触，球底降到支撑面下 761 mm；B 生成面接触并被托住，终态压入约 0.245 mm。覆盖面内接触得到支持，但有限 penalty 仍有小压入。",
+          "expected_mechanism": "开启后应出现 edge/face 接触；仅粒子检测可能漏掉面内接触。",
+          "evidence_type": "measured_in_recorded_minimal_case",
+          "comparison_status": "observed_in_this_minimal_case",
+          "environment": {
+            "date": "2026-10-27",
+            "newton": "1.7.0",
+            "warp": "1.18.0",
+            "numpy": "2.5.4",
+            "python": "3.12.14",
+            "device": "cpu",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+            "solver_file_sha256": "3b51c883777ebfc999cd4738906f7218e2aa437f80a471cdb796bfc76ae10e57",
+            "solver_file_matches_snapshot": true,
+            "failures": [],
+            "timing_scope": "CPU solver.step including owned collision, after first 5 steps; excludes numpy readback/rendering; not GPU benchmark"
+          },
+          "source_refs": [
+            {
+              "path": "newton/_src/sim/collide.py",
+              "line": 1338,
+              "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/collide.py#L1338",
+              "needle": "enable_rigid_soft_full_surface_contact: Generate"
+            }
+          ],
+          "guide_url": "https://newton-physics.github.io/newton/latest/concepts/collisions.html",
+          "reference_kind": null,
+          "associations": [
+            "pipeline:enable_rigid_soft_full_surface_contact"
+          ],
+          "artifacts": {
+            "curve": {
+              "path": "experiments/vbd_parameter_lab/plots/full_surface.svg",
+              "local_path": "D:\\RAG\\Newton knowledge\\experiments\\vbd_parameter_lab\\plots\\full_surface.svg",
+              "file_uri": "file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/plots/full_surface.svg",
+              "web_url": "http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/plots/full_surface.svg"
+            },
+            "runner": {
+              "path": "experiments/vbd_parameter_lab/run_lab.py",
+              "local_path": "D:\\RAG\\Newton knowledge\\experiments\\vbd_parameter_lab\\run_lab.py",
+              "file_uri": "file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/run_lab.py",
+              "web_url": "http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/run_lab.py"
+            },
+            "report": {
+              "path": "experiments/vbd_parameter_lab/index-3d.html",
+              "local_path": "D:\\RAG\\Newton knowledge\\experiments\\vbd_parameter_lab\\index-3d.html",
+              "file_uri": "file:///D:/RAG/Newton%20knowledge/experiments/vbd_parameter_lab/index-3d.html",
+              "web_url": "http://127.0.0.1:18448/files/experiments/vbd_parameter_lab/index-3d.html"
+            },
+            "viewer_url": "http://127.0.0.1:18448/#experiments?case=full_surface"
+          },
+          "limitations": [
+            "One exploratory A/B pair; not a universal parameter range or robustness proof.",
+            "CPU measurements; no GPU performance validation.",
+            "No trajectory arrays are returned by default; full adds initial geometry only.",
+            "For full geometry/construction, read get_source(scope=\"experiment\", path=\"run_lab.py\")."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F10",
+      "tool": "get_parameter",
+      "arguments": {
+        "name": "body_f",
+        "solver": "mujoco"
+      },
+      "elapsed_ms": 7.87,
+      "payload_chars": 162,
+      "wire_chars": 218,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Error executing tool get_parameter: PARAMETER_NOT_FOUND: body_f. Similar names: . Use search_knowledge to discover supported inputs."
+          }
+        ],
+        "isError": true,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F11",
+      "tool": "get_parameter",
+      "arguments": {
+        "name": "use_mujoco_contacts",
+        "solver": "mujoco"
+      },
+      "elapsed_ms": 12.54,
+      "payload_chars": 1639,
+      "wire_chars": 3792,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"MuJoCo\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"requested_name\": \"use_mujoco_contacts\",\n  \"resolution\": \"exact_identifier\",\n  \"parameters\": [\n    {\n      \"id\": \"newton:1.7.0:mujoco:use_mujoco_contacts\",\n      \"name\": \"use_mujoco_contacts\",\n      \"owner\": \"newton.solvers.SolverMuJoCo.__init__\",\n      \"layer\": \"solver_constructor\",\n      \"summary\": \"选择 MuJoCo 内建碰撞检测或导入 Newton contacts；响应仍由 MuJoCo 约束体系求解。\",\n      \"units\": \"以源码字段说明为准\",\n      \"evidence_type\": \"pinned_source_static\",\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/mujoco/solver_mujoco.py\",\n          \"line\": 4102,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4102\"\n        }\n      ],\n      \"associated_experiments\": [],\n      \"related_node_id\": \"newton:1.7.0:mujoco:use_mujoco_contacts\",\n      \"type\": \"bool\",\n      \"required\": false,\n      \"declared_default\": \"True\",\n      \"resolved_default\": \"True\",\n      \"status\": \"source_checked\",\n      \"documentation\": \"If True, use the MuJoCo contact solver. If False, use the Newton contact solver (newton contacts must be passed in through the step function in that case).\",\n      \"lifecycle\": \"构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。\",\n      \"default_policy\": null,\n      \"conditional_defaults\": null\n    }\n  ],\n  \"limitations\": [\n    \"No universal recommended tuning range is established.\",\n    \"An associated group experiment does not independently validate each component.\",\n    \"The base record is static source evidence; associated experiments are separately identified.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "MuJoCo",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "requested_name": "use_mujoco_contacts",
+          "resolution": "exact_identifier",
+          "parameters": [
+            {
+              "id": "newton:1.7.0:mujoco:use_mujoco_contacts",
+              "name": "use_mujoco_contacts",
+              "owner": "newton.solvers.SolverMuJoCo.__init__",
+              "layer": "solver_constructor",
+              "summary": "选择 MuJoCo 内建碰撞检测或导入 Newton contacts；响应仍由 MuJoCo 约束体系求解。",
+              "units": "以源码字段说明为准",
+              "evidence_type": "pinned_source_static",
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+                  "line": 4102,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4102"
+                }
+              ],
+              "associated_experiments": [],
+              "related_node_id": "newton:1.7.0:mujoco:use_mujoco_contacts",
+              "type": "bool",
+              "required": false,
+              "declared_default": "True",
+              "resolved_default": "True",
+              "status": "source_checked",
+              "documentation": "If True, use the MuJoCo contact solver. If False, use the Newton contact solver (newton contacts must be passed in through the step function in that case).",
+              "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+              "default_policy": null,
+              "conditional_defaults": null
+            }
+          ],
+          "limitations": [
+            "No universal recommended tuning range is established.",
+            "An associated group experiment does not independently validate each component.",
+            "The base record is static source evidence; associated experiments are separately identified."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F12",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "Solver Observables",
+        "limit": 5
+      },
+      "elapsed_ms": 19.29,
+      "payload_chars": 4551,
+      "wire_chars": 10527,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"all\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"query\": \"Solver Observables\",\n  \"kind\": \"all\",\n  \"hits\": [\n    {\n      \"id\": \"newton:1.7.0:mujoco:solver\",\n      \"kind\": \"parameter\",\n      \"title\": \"solver\",\n      \"summary\": \"选择 CG/Newton 约束求解方法。\",\n      \"route\": \"#solver/mujoco/parameter/solver\",\n      \"solver\": \"mujoco\",\n      \"score\": -1006,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#solver/mujoco/parameter/solver\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"solver\",\n          \"solver\": \"mujoco\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/mujoco/solver_mujoco.py\",\n          \"line\": 4081,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4081\"\n        }\n      ]\n    },\n    {\n      \"id\": \"c:observable\",\n      \"kind\": \"claim\",\n      \"title\": \"c:observable\",\n      \"summary\": \"CONTACT_F 在最终迭代构形导出刚体-刚体与刚柔接触记录；不包含软体自接触力，不能把它当作所有接触力。\",\n      \"route\": \"#evidence/c%3Aobservable\",\n      \"solver\": \"vbd\",\n      \"score\": -5.9736027162281395,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#evidence/c%3Aobservable\",\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 167,\n          \"end_line\": 4866,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167-L4866\"\n        }\n      ]\n    },\n    {\n      \"id\": \"newton:1.7.0:mujoco:disable_sensors\",\n      \"kind\": \"parameter\",\n      \"title\": \"disable_sensors\",\n      \"summary\": \"禁用常规传感器计算；部分请求的观测量仍按源码路径更新。\",\n      \"route\": \"#solver/mujoco/parameter/disable_sensors\",\n      \"solver\": \"mujoco\",\n      \"score\": -4.164579459826866,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#solver/mujoco/parameter/disable_sensors\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"disable_sensors\",\n          \"solver\": \"mujoco\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/mujoco/solver_mujoco.py\",\n          \"line\": 4099,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4099\"\n        }\n      ]\n    },\n    {\n      \"id\": \"doc:implementation:3\",\n      \"kind\": \"document\",\n      \"title\": \"step 的真实顺序\",\n      \"summary\": \"step 的真实顺序\\n\\n依据 [`SolverVBD.step`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2513-L2609)：\\n\\n```text\\n解析 contacts 所有权与 observables\\n解析本步 rigid / soft-self-contact 检测调度并验证 DAT 条件\\n需要时执行初始化前检测\\n初始化刚体 → 初始化粒子\\n需要时执行初始化后检测\\n重复 iterations 次：\\n    需要时更新检测结果\\n    刚体迭代：颜色组 primal、相关 dual/penalty 等\\n    粒子迭代：颜色组接触/弹簧/材料力与 Hessian、位移及截断\\n可选：在最终迭代构形导出接触力\\n保存刚体接触历史 → 最终更新刚体 → 最终更新粒子速度\\n```\\n\\n源码会使用 `state_in` 内的数组承载部分中间迭代，不应把其命名理解成函数式只读输入。需要\",\n      \"route\": \"#doc/solvers/vbd/implementation.md\",\n      \"solver\": \"vbd\",\n      \"score\": -3.239577963373804,\n      \"evidence_type\": \"authored_document_may_contain_multiple_evidence_types\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#doc/solvers/vbd/implementation.md\",\n      \"next_call\": {\n        \"tool\": \"get_document\",\n        \"arguments\": {\n          \"path\": \"solvers/vbd/implementation.md\"\n        }\n      }\n    },\n    {\n      \"id\": \"page:solvers/vbd/implementation.md\",\n      \"kind\": \"document\",\n      \"title\": \"源码导读\",\n      \"summary\": \"# 源码导读与生命周期\\n\\n官方版本：`7e75abe28b8d69522bc0b34837aaed2c303dff5a`。源码路径均在 `sources/newton-v1.7.0`。公开入口为 `newton.solvers.SolverVBD`；`_src` 只用于证据定位，业务代码使用公开入口。\\n\\n## 模块地图\\n\\n| 文件 | 职责 | 重点入口 |\\n|---|---|---|\\n| `solver_vbd.py` | 配置解析、内存、三阶段 step、历史、调度、导出 | [`SolverVBD.__init__`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000)；[`SolverVBD.step`](https://github.com/newton-ph\",\n      \"route\": \"#doc/solvers/vbd/implementation.md\",\n      \"solver\": \"vbd\",\n      \"score\": -1.4414687233764458,\n      \"evidence_type\": \"authored_document_may_contain_multiple_evidence_types\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#doc/solvers/vbd/implementation.md\",\n      \"next_call\": {\n        \"tool\": \"get_document\",\n        \"arguments\": {\n          \"path\": \"solvers/vbd/implementation.md\"\n        }\n      }\n    }\n  ],\n  \"has_more\": true,\n  \"method\": \"shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings\",\n  \"limitations\": [\n    \"Search scores are ranking signals, not confidence probabilities.\",\n    \"Experimental evidence is conditional on the recorded setup.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "all",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "query": "Solver Observables",
+          "kind": "all",
+          "hits": [
+            {
+              "id": "newton:1.7.0:mujoco:solver",
+              "kind": "parameter",
+              "title": "solver",
+              "summary": "选择 CG/Newton 约束求解方法。",
+              "route": "#solver/mujoco/parameter/solver",
+              "solver": "mujoco",
+              "score": -1006,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#solver/mujoco/parameter/solver",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "solver",
+                  "solver": "mujoco"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+                  "line": 4081,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4081"
+                }
+              ]
+            },
+            {
+              "id": "c:observable",
+              "kind": "claim",
+              "title": "c:observable",
+              "summary": "CONTACT_F 在最终迭代构形导出刚体-刚体与刚柔接触记录；不包含软体自接触力，不能把它当作所有接触力。",
+              "route": "#evidence/c%3Aobservable",
+              "solver": "vbd",
+              "score": -5.9736027162281395,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#evidence/c%3Aobservable",
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 167,
+                  "end_line": 4866,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L167-L4866"
+                }
+              ]
+            },
+            {
+              "id": "newton:1.7.0:mujoco:disable_sensors",
+              "kind": "parameter",
+              "title": "disable_sensors",
+              "summary": "禁用常规传感器计算；部分请求的观测量仍按源码路径更新。",
+              "route": "#solver/mujoco/parameter/disable_sensors",
+              "solver": "mujoco",
+              "score": -4.164579459826866,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#solver/mujoco/parameter/disable_sensors",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "disable_sensors",
+                  "solver": "mujoco"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+                  "line": 4099,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4099"
+                }
+              ]
+            },
+            {
+              "id": "doc:implementation:3",
+              "kind": "document",
+              "title": "step 的真实顺序",
+              "summary": "step 的真实顺序\n\n依据 [`SolverVBD.step`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2513-L2609)：\n\n```text\n解析 contacts 所有权与 observables\n解析本步 rigid / soft-self-contact 检测调度并验证 DAT 条件\n需要时执行初始化前检测\n初始化刚体 → 初始化粒子\n需要时执行初始化后检测\n重复 iterations 次：\n    需要时更新检测结果\n    刚体迭代：颜色组 primal、相关 dual/penalty 等\n    粒子迭代：颜色组接触/弹簧/材料力与 Hessian、位移及截断\n可选：在最终迭代构形导出接触力\n保存刚体接触历史 → 最终更新刚体 → 最终更新粒子速度\n```\n\n源码会使用 `state_in` 内的数组承载部分中间迭代，不应把其命名理解成函数式只读输入。需要",
+              "route": "#doc/solvers/vbd/implementation.md",
+              "solver": "vbd",
+              "score": -3.239577963373804,
+              "evidence_type": "authored_document_may_contain_multiple_evidence_types",
+              "viewer_url": "http://127.0.0.1:18448/#doc/solvers/vbd/implementation.md",
+              "next_call": {
+                "tool": "get_document",
+                "arguments": {
+                  "path": "solvers/vbd/implementation.md"
+                }
+              }
+            },
+            {
+              "id": "page:solvers/vbd/implementation.md",
+              "kind": "document",
+              "title": "源码导读",
+              "summary": "# 源码导读与生命周期\n\n官方版本：`7e75abe28b8d69522bc0b34837aaed2c303dff5a`。源码路径均在 `sources/newton-v1.7.0`。公开入口为 `newton.solvers.SolverVBD`；`_src` 只用于证据定位，业务代码使用公开入口。\n\n## 模块地图\n\n| 文件 | 职责 | 重点入口 |\n|---|---|---|\n| `solver_vbd.py` | 配置解析、内存、三阶段 step、历史、调度、导出 | [`SolverVBD.__init__`](https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L353-L1000)；[`SolverVBD.step`](https://github.com/newton-ph",
+              "route": "#doc/solvers/vbd/implementation.md",
+              "solver": "vbd",
+              "score": -1.4414687233764458,
+              "evidence_type": "authored_document_may_contain_multiple_evidence_types",
+              "viewer_url": "http://127.0.0.1:18448/#doc/solvers/vbd/implementation.md",
+              "next_call": {
+                "tool": "get_document",
+                "arguments": {
+                  "path": "solvers/vbd/implementation.md"
+                }
+              }
+            }
+          ],
+          "has_more": true,
+          "method": "shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings",
+          "limitations": [
+            "Search scores are ranking signals, not confidence probabilities.",
+            "Experimental evidence is conditional on the recorded setup."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F13",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "contact_f",
+        "solver": "mujoco",
+        "limit": 5
+      },
+      "elapsed_ms": 15.28,
+      "payload_chars": 491,
+      "wire_chars": 1183,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"MuJoCo\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"query\": \"contact_f\",\n  \"kind\": \"all\",\n  \"hits\": [],\n  \"has_more\": false,\n  \"method\": \"shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings\",\n  \"limitations\": [\n    \"Search scores are ranking signals, not confidence probabilities.\",\n    \"Experimental evidence is conditional on the recorded setup.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "MuJoCo",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "query": "contact_f",
+          "kind": "all",
+          "hits": [],
+          "has_more": false,
+          "method": "shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings",
+          "limitations": [
+            "Search scores are ranking signals, not confidence probabilities.",
+            "Experimental evidence is conditional on the recorded setup."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F14",
+      "tool": "search_knowledge",
+      "arguments": {
+        "query": "节点不存在",
+        "limit": 5
+      },
+      "elapsed_ms": 17.5,
+      "payload_chars": 4452,
+      "wire_chars": 10384,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"all\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"query\": \"节点不存在\",\n  \"kind\": \"all\",\n  \"hits\": [\n    {\n      \"id\": \"c:rigid_dat_requires\",\n      \"kind\": \"claim\",\n      \"title\": \"c:rigid_dat_requires\",\n      \"summary\": \"rigid_soft_enable_dat 要求 solver-owned collision_pipeline，禁止 external rigid solver，存在刚柔查询时要求 soft_contact_gap+最小粒子半径+最小 shape_margin 为正。\",\n      \"route\": \"#evidence/c%3Arigid_dat_requires\",\n      \"solver\": \"vbd\",\n      \"score\": -3.9465187886018365,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#evidence/c%3Arigid_dat_requires\",\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 2837,\n          \"end_line\": 2896,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2837-L2896\"\n        }\n      ]\n    },\n    {\n      \"id\": \"newton:1.7.0:SolverVBD:rigid_soft_enable_dat\",\n      \"kind\": \"parameter\",\n      \"title\": \"rigid_soft_enable_dat\",\n      \"summary\": \"为刚柔接触启用刚体与粒子运动截断；要求 solver-owned pipeline，禁止 external rigid，实际查询存在时最小查询半径须为正。不能推广为全场景无穿透保证。\",\n      \"route\": \"#parameter/rigid_soft_enable_dat\",\n      \"solver\": \"vbd\",\n      \"score\": -3.916010966877034,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#parameter/rigid_soft_enable_dat\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"rigid_soft_enable_dat\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/vbd/solver_vbd.py\",\n          \"line\": 404,\n          \"end_line\": 404,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L404\"\n        }\n      ]\n    },\n    {\n      \"id\": \"model:tri_materials\",\n      \"kind\": \"model_input\",\n      \"title\": \"tri_materials\",\n      \"summary\": \"前三项为膜弹性与阻尼；内核乘静止面积，不能仅按 Pa 标签把真实三维杨氏模量直接填入；需明确厚度与离散能量约定。后两项存在不等于 VBD 全部使用。\",\n      \"route\": \"#model/tri_materials\",\n      \"solver\": \"vbd\",\n      \"score\": -3.6879395770278176,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#model/tri_materials\",\n      \"next_call\": {\n        \"tool\": \"get_parameter\",\n        \"arguments\": {\n          \"name\": \"tri_materials\",\n          \"solver\": \"vbd\"\n        }\n      },\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/sim/model.py\",\n          \"line\": 909,\n          \"end_line\": 909,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L909\"\n        }\n      ]\n    },\n    {\n      \"id\": \"page:evaluations/REPORT.md\",\n      \"kind\": \"document\",\n      \"title\": \"知识库验证记录\",\n      \"summary\": \"# 验证记录\\n\\n日期：2026-10-27；Newton 1.7.0；commit `7e75abe28b8d69522bc0b34837aaed2c303dff5a`。\\n\\n结果：**passed**。结构检查 38/38；手工检索冒烟问题 24/24 在前 8 条中命中预期证据。\\n\\n- 48 个 constructor 输入（47 个可选项）与真实签名核对。\\n- 3885 个源引用经过路径、版本和行号范围校验；源码/PDF 哈希已校验。\\n- 关系图 586 个节点、265 条边，无悬挂引用。\\n- 4 组真实 CPU 探针通过：模式默认值、margin/gap 兼容、单弹簧隐式一步、构造约束。\\n- 单弹簧：理论 x=1.198019801980198，实测 x=1.1980198621749878，绝对误差约 6.02e-8。\\n\\n依赖为 Python 3.12.14、Newton 1.7.0、Warp 1.18.0、NumPy 2.5.4。核对的是保存的官方 solver 文件与实际加载\",\n      \"route\": \"#doc/evaluations/REPORT.md\",\n      \"solver\": \"shared\",\n      \"score\": -3.650771800098722,\n      \"evidence_type\": \"authored_document_may_contain_multiple_evidence_types\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#doc/evaluations/REPORT.md\",\n      \"next_call\": {\n        \"tool\": \"get_document\",\n        \"arguments\": {\n          \"path\": \"evaluations/REPORT.md\"\n        }\n      }\n    },\n    {\n      \"id\": \"claim:kamino:diagnostics\",\n      \"kind\": \"claim\",\n      \"title\": \"claim:kamino:diagnostics\",\n      \"summary\": \"status 总是维护；collect_solver_info 控制额外统计而非 status 是否存在。\",\n      \"route\": \"#evidence/claim%3Akamino%3Adiagnostics\",\n      \"solver\": \"kamino\",\n      \"score\": -3.60911548863328,\n      \"evidence_type\": \"pinned_source_or_curated_mapping\",\n      \"viewer_url\": \"http://127.0.0.1:18448/#evidence/claim%3Akamino%3Adiagnostics\",\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"docs/solvers/kamino.rst\",\n          \"line\": 125,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L125\"\n        }\n      ]\n    }\n  ],\n  \"has_more\": true,\n  \"method\": \"shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings\",\n  \"limitations\": [\n    \"Search scores are ranking signals, not confidence probabilities.\",\n    \"Experimental evidence is conditional on the recorded setup.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "all",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "query": "节点不存在",
+          "kind": "all",
+          "hits": [
+            {
+              "id": "c:rigid_dat_requires",
+              "kind": "claim",
+              "title": "c:rigid_dat_requires",
+              "summary": "rigid_soft_enable_dat 要求 solver-owned collision_pipeline，禁止 external rigid solver，存在刚柔查询时要求 soft_contact_gap+最小粒子半径+最小 shape_margin 为正。",
+              "route": "#evidence/c%3Arigid_dat_requires",
+              "solver": "vbd",
+              "score": -3.9465187886018365,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#evidence/c%3Arigid_dat_requires",
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 2837,
+                  "end_line": 2896,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L2837-L2896"
+                }
+              ]
+            },
+            {
+              "id": "newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+              "kind": "parameter",
+              "title": "rigid_soft_enable_dat",
+              "summary": "为刚柔接触启用刚体与粒子运动截断；要求 solver-owned pipeline，禁止 external rigid，实际查询存在时最小查询半径须为正。不能推广为全场景无穿透保证。",
+              "route": "#parameter/rigid_soft_enable_dat",
+              "solver": "vbd",
+              "score": -3.916010966877034,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#parameter/rigid_soft_enable_dat",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "rigid_soft_enable_dat",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/vbd/solver_vbd.py",
+                  "line": 404,
+                  "end_line": 404,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/vbd/solver_vbd.py#L404"
+                }
+              ]
+            },
+            {
+              "id": "model:tri_materials",
+              "kind": "model_input",
+              "title": "tri_materials",
+              "summary": "前三项为膜弹性与阻尼；内核乘静止面积，不能仅按 Pa 标签把真实三维杨氏模量直接填入；需明确厚度与离散能量约定。后两项存在不等于 VBD 全部使用。",
+              "route": "#model/tri_materials",
+              "solver": "vbd",
+              "score": -3.6879395770278176,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#model/tri_materials",
+              "next_call": {
+                "tool": "get_parameter",
+                "arguments": {
+                  "name": "tri_materials",
+                  "solver": "vbd"
+                }
+              },
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/sim/model.py",
+                  "line": 909,
+                  "end_line": 909,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L909"
+                }
+              ]
+            },
+            {
+              "id": "page:evaluations/REPORT.md",
+              "kind": "document",
+              "title": "知识库验证记录",
+              "summary": "# 验证记录\n\n日期：2026-10-27；Newton 1.7.0；commit `7e75abe28b8d69522bc0b34837aaed2c303dff5a`。\n\n结果：**passed**。结构检查 38/38；手工检索冒烟问题 24/24 在前 8 条中命中预期证据。\n\n- 48 个 constructor 输入（47 个可选项）与真实签名核对。\n- 3885 个源引用经过路径、版本和行号范围校验；源码/PDF 哈希已校验。\n- 关系图 586 个节点、265 条边，无悬挂引用。\n- 4 组真实 CPU 探针通过：模式默认值、margin/gap 兼容、单弹簧隐式一步、构造约束。\n- 单弹簧：理论 x=1.198019801980198，实测 x=1.1980198621749878，绝对误差约 6.02e-8。\n\n依赖为 Python 3.12.14、Newton 1.7.0、Warp 1.18.0、NumPy 2.5.4。核对的是保存的官方 solver 文件与实际加载",
+              "route": "#doc/evaluations/REPORT.md",
+              "solver": "shared",
+              "score": -3.650771800098722,
+              "evidence_type": "authored_document_may_contain_multiple_evidence_types",
+              "viewer_url": "http://127.0.0.1:18448/#doc/evaluations/REPORT.md",
+              "next_call": {
+                "tool": "get_document",
+                "arguments": {
+                  "path": "evaluations/REPORT.md"
+                }
+              }
+            },
+            {
+              "id": "claim:kamino:diagnostics",
+              "kind": "claim",
+              "title": "claim:kamino:diagnostics",
+              "summary": "status 总是维护；collect_solver_info 控制额外统计而非 status 是否存在。",
+              "route": "#evidence/claim%3Akamino%3Adiagnostics",
+              "solver": "kamino",
+              "score": -3.60911548863328,
+              "evidence_type": "pinned_source_or_curated_mapping",
+              "viewer_url": "http://127.0.0.1:18448/#evidence/claim%3Akamino%3Adiagnostics",
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "docs/solvers/kamino.rst",
+                  "line": 125,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L125"
+                }
+              ]
+            }
+          ],
+          "has_more": true,
+          "method": "shared local FTS5 + identifier matching; lexical retrieval, not semantic embeddings",
+          "limitations": [
+            "Search scores are ranking signals, not confidence probabilities.",
+            "Experimental evidence is conditional on the recorded setup."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F15",
+      "tool": "get_source",
+      "arguments": {
+        "path": "docs/concepts/sensors.rst",
+        "start_line": 181,
+        "max_lines": 30
+      },
+      "elapsed_ms": 13.28,
+      "payload_chars": 2685,
+      "wire_chars": 5684,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"shared\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"scope\": \"newton\",\n  \"path\": \"docs/concepts/sensors.rst\",\n  \"total_lines\": 233,\n  \"start_line\": 181,\n  \"end_line\": 210,\n  \"content\": \"at least three, with the remaining rays evenly spaced around it. With two samples,\\nthey use an off-center pair so the sample pattern remains centered on the pixel.\\n\\nSolver Observables\\n------------------\\n\\n``SensorIMU`` requires ``SolverBase.ObservableKind.BODY_QDD`` and ``SensorContact``\\nrequires ``SolverBase.ObservableKind.CONTACT_F``. ``SensorContact`` uses only the\\nlinear part of each ``CONTACT_F`` wrench (force [N]); the torque part is ignored.\\nEach sensor's ``solver_observable_kinds`` property provides its requirements\\nwithout mutating the model. Union the sets when both sensors are present.\\nConstruct the collision pipeline before requesting contact-indexed observables,\\nthen pass its contacts buffer to the factory to bind the observable container.\\nReuse that same buffer for the solver step and sensor:\\n\\n.. code-block:: python\\n\\n   kinds = imu.solver_observable_kinds | contact_sensor.solver_observable_kinds\\n   observables = solver.observables(kinds=kinds, contacts=contacts)\\n\\n   solver.step(state_in, state_out, control, contacts, dt, observables=observables)\\n   imu.update(state_out, observables=observables)\\n   contact_sensor.update(state_out, contacts, observables=observables)\\n\\nContact observables are allocated from the model's resolved rigid and soft contact\\ncapacities, not the current number of contacts. See :ref:`solver_observables` for\\npipeline setup with native collision backends and graph capture.\\n\\nBoth :class:`~newton.solvers.SolverKamino` and\\n:class:`~newton.solvers.SolverMuJoCo` populate ``body_qdd``. Kamino reports\",\n  \"truncated\": true,\n  \"next_start_line\": 211,\n  \"sha256\": \"188871416066a44ffc48dcccccb6f1de2a96cc9f9349efa18cbd6158a2453f55\",\n  \"matches_recorded_hash\": null,\n  \"source\": {\n    \"path\": \"sources/newton-v1.7.0/docs/concepts/sensors.rst\",\n    \"local_path\": \"D:\\\\RAG\\\\Newton knowledge\\\\sources\\\\newton-v1.7.0\\\\docs\\\\concepts\\\\sensors.rst\",\n    \"file_uri\": \"file:///D:/RAG/Newton%20knowledge/sources/newton-v1.7.0/docs/concepts/sensors.rst\",\n    \"web_url\": \"http://127.0.0.1:18448/files/sources/newton-v1.7.0/docs/concepts/sensors.rst\"\n  },\n  \"upstream_url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/sensors.rst#L181\",\n  \"evidence_type\": \"pinned_source_excerpt\",\n  \"hash_note\": \"Content hash returned; this file has no individually recorded hash in the inspected-file manifest.\"\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "shared",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "scope": "newton",
+          "path": "docs/concepts/sensors.rst",
+          "total_lines": 233,
+          "start_line": 181,
+          "end_line": 210,
+          "content": "at least three, with the remaining rays evenly spaced around it. With two samples,\nthey use an off-center pair so the sample pattern remains centered on the pixel.\n\nSolver Observables\n------------------\n\n``SensorIMU`` requires ``SolverBase.ObservableKind.BODY_QDD`` and ``SensorContact``\nrequires ``SolverBase.ObservableKind.CONTACT_F``. ``SensorContact`` uses only the\nlinear part of each ``CONTACT_F`` wrench (force [N]); the torque part is ignored.\nEach sensor's ``solver_observable_kinds`` property provides its requirements\nwithout mutating the model. Union the sets when both sensors are present.\nConstruct the collision pipeline before requesting contact-indexed observables,\nthen pass its contacts buffer to the factory to bind the observable container.\nReuse that same buffer for the solver step and sensor:\n\n.. code-block:: python\n\n   kinds = imu.solver_observable_kinds | contact_sensor.solver_observable_kinds\n   observables = solver.observables(kinds=kinds, contacts=contacts)\n\n   solver.step(state_in, state_out, control, contacts, dt, observables=observables)\n   imu.update(state_out, observables=observables)\n   contact_sensor.update(state_out, contacts, observables=observables)\n\nContact observables are allocated from the model's resolved rigid and soft contact\ncapacities, not the current number of contacts. See :ref:`solver_observables` for\npipeline setup with native collision backends and graph capture.\n\nBoth :class:`~newton.solvers.SolverKamino` and\n:class:`~newton.solvers.SolverMuJoCo` populate ``body_qdd``. Kamino reports",
+          "truncated": true,
+          "next_start_line": 211,
+          "sha256": "188871416066a44ffc48dcccccb6f1de2a96cc9f9349efa18cbd6158a2453f55",
+          "matches_recorded_hash": null,
+          "source": {
+            "path": "sources/newton-v1.7.0/docs/concepts/sensors.rst",
+            "local_path": "D:\\RAG\\Newton knowledge\\sources\\newton-v1.7.0\\docs\\concepts\\sensors.rst",
+            "file_uri": "file:///D:/RAG/Newton%20knowledge/sources/newton-v1.7.0/docs/concepts/sensors.rst",
+            "web_url": "http://127.0.0.1:18448/files/sources/newton-v1.7.0/docs/concepts/sensors.rst"
+          },
+          "upstream_url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/concepts/sensors.rst#L181",
+          "evidence_type": "pinned_source_excerpt",
+          "hash_note": "Content hash returned; this file has no individually recorded hash in the inspected-file manifest."
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    },
+    {
+      "label": "F16",
+      "tool": "get_parameter",
+      "arguments": {
+        "name": "config",
+        "solver": "kamino"
+      },
+      "elapsed_ms": 11.43,
+      "payload_chars": 1878,
+      "wire_chars": 4277,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"version\": \"1.7.0\",\n  \"solver\": \"Kamino\",\n  \"source_commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n  \"knowledge_built_at\": \"2026-10-28T16:51:44.387739+08:00\",\n  \"read_only\": true,\n  \"requested_name\": \"config\",\n  \"resolution\": \"exact_identifier\",\n  \"parameters\": [\n    {\n      \"id\": \"newton:1.7.0:kamino:config\",\n      \"name\": \"config\",\n      \"owner\": \"newton.solvers.SolverKamino.__init__\",\n      \"layer\": \"solver_constructor\",\n      \"summary\": \"Explicit user-provided configurations for the Kamino solver.\",\n      \"units\": \"以源码字段说明为准\",\n      \"evidence_type\": \"pinned_source_static\",\n      \"source_refs\": [\n        {\n          \"repository\": \"newton-physics/newton\",\n          \"commit\": \"7e75abe28b8d69522bc0b34837aaed2c303dff5a\",\n          \"path\": \"newton/_src/solvers/kamino/solver_kamino.py\",\n          \"line\": 737,\n          \"url\": \"https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L737\"\n        }\n      ],\n      \"associated_experiments\": [],\n      \"related_node_id\": \"newton:1.7.0:kamino:config\",\n      \"type\": \"Config | None\",\n      \"required\": false,\n      \"declared_default\": \"None\",\n      \"resolved_default\": \"条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。\",\n      \"status\": \"source_checked\",\n      \"documentation\": \"Explicit user-provided configurations for the Kamino solver.\\n\\n        If `None`, configurations will be parsed from the Newton model's\\n        custom attributes using :meth:`SolverKamino.Config.from_model`,\\n        e.g. to be loaded from USD assets. If that also fails, then\\n        default configurations will be used.\",\n      \"lifecycle\": \"构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。\",\n      \"default_policy\": \"声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。\",\n      \"conditional_defaults\": null\n    }\n  ],\n  \"limitations\": [\n    \"No universal recommended tuning range is established.\",\n    \"An associated group experiment does not independently validate each component.\",\n    \"The base record is static source evidence; associated experiments are separately identified.\"\n  ]\n}"
+          }
+        ],
+        "structuredContent": {
+          "version": "1.7.0",
+          "solver": "Kamino",
+          "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "knowledge_built_at": "2026-10-28T16:51:44.387739+08:00",
+          "read_only": true,
+          "requested_name": "config",
+          "resolution": "exact_identifier",
+          "parameters": [
+            {
+              "id": "newton:1.7.0:kamino:config",
+              "name": "config",
+              "owner": "newton.solvers.SolverKamino.__init__",
+              "layer": "solver_constructor",
+              "summary": "Explicit user-provided configurations for the Kamino solver.",
+              "units": "以源码字段说明为准",
+              "evidence_type": "pinned_source_static",
+              "source_refs": [
+                {
+                  "repository": "newton-physics/newton",
+                  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+                  "path": "newton/_src/solvers/kamino/solver_kamino.py",
+                  "line": 737,
+                  "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L737"
+                }
+              ],
+              "associated_experiments": [],
+              "related_node_id": "newton:1.7.0:kamino:config",
+              "type": "Config | None",
+              "required": false,
+              "declared_default": "None",
+              "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+              "status": "source_checked",
+              "documentation": "Explicit user-provided configurations for the Kamino solver.\n\n        If `None`, configurations will be parsed from the Newton model's\n        custom attributes using :meth:`SolverKamino.Config.from_model`,\n        e.g. to be loaded from USD assets. If that also fails, then\n        default configurations will be used.",
+              "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+              "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。",
+              "conditional_defaults": null
+            }
+          ],
+          "limitations": [
+            "No universal recommended tuning range is established.",
+            "An associated group experiment does not independently validate each component.",
+            "The base record is static source evidence; associated experiments are separately identified."
+          ]
+        },
+        "isError": false,
+        "resultType": "complete"
+      }
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "kind": "fixed-base planar parallelogram in XZ plane; four boxes and four revolute Y hinges",
+  "body_names": [
+    "base",
+    "right",
+    "top",
+    "left"
+  ],
+  "dimensions_xyz_m": [
+    [
+      0.1,
+      0.01,
+      0.01
+    ],
+    [
+      0.01,
+      0.01,
+      0.1
+    ],
+    [
+      0.1,
+      0.01,
+      0.01
+    ],
+    [
+      0.01,
+      0.01,
+      0.1
+    ]
+  ],
+  "mass_kg": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "inertia": "diagonal cuboid mass formula m*(b^2+c^2)/12, explicit mass/inertia with lock_inertia=True",
+  "body_centers_m": [
+    [
+      0,
+      0,
+      0.005
+    ],
+    [
+      0.056,
+      0,
+      0.061
+    ],
+    [
+      0,
+      0,
+      0.117
+    ],
+    [
+      -0.056,
+      0,
+      0.061
+    ]
+  ],
+  "hinge_positions_m": [
+    [
+      0.056,
+      0,
+      0.005
+    ],
+    [
+      0.056,
+      0,
+      0.117
+    ],
+    [
+      -0.056,
+      0,
+      0.117
+    ],
+    [
+      -0.056,
+      0,
+      0.005
+    ]
+  ],
+  "joint_order": [
+    "world_fixed_base",
+    "base_right",
+    "right_top",
+    "top_left",
+    "left_base_loop"
+  ],
+  "articulation": "world_fixed_base plus first three revolute joints form spanning tree; loop hinge remains outside articulation",
+  "actuation": "base_right EFFORT; all other revolute joints NONE; no limits, armature, friction or PD",
+  "collision": "none: no contact generation, all shapes noncolliding; shape geometry only for replay",
+  "worlds": 1,
+  "randomness": "none",
+  "loop_closing_hinge": false,
+  "model_arrays": {
+    "joint_parent": [
+      -1,
+      0,
+      1,
+      2
+    ],
+    "joint_child": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "joint_X_p": [
+      [
+        0.0,
+        0.0,
+        0.004999999888241291,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0560000017285347,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0560000017285347,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        -0.0560000017285347,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "joint_X_c": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0560000017285347,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0560000017285347,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0560000017285347,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "joint_q_start": [
+      0,
+      0,
+      1,
+      2,
+      3
+    ],
+    "joint_qd_start": [
+      0,
+      0,
+      1,
+      2,
+      3
+    ],
+    "body_mass": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "body_inertia": [
+      [
+        [
+          1.6666666851961054e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0008416666532866657,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0008416666532866657
+        ]
+      ],
+      [
+        [
+          0.0008416666532866657,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0008416666532866657,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.6666666851961054e-05
+        ]
+      ],
+      [
+        [
+          1.6666666851961054e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0008416666532866657,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0008416666532866657
+        ]
+      ],
+      [
+        [
+          0.0008416666532866657,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0008416666532866657,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.6666666851961054e-05
+        ]
+      ]
+    ]
+  },
+  "internal_instrumentation": "Read solver._config solely to archive resolved settings; simulation uses public ModelBuilder/SolverKamino/reset/step/status."
+}

@@ -1,0 +1,31 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 12.8 (insufficient CUDA driver version!)
+   Devices:
+     "cpu"      : "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+   Kernel cache:
+     \\?\C:\Users\admin\AppData\Local\NVIDIA\warp\Cache\1.18.0
+Warp UserWarning: 
+   Insufficient CUDA driver version.
+   The minimum required CUDA driver version is 13.0, but the installed CUDA driver version is 12.8.
+   Visit https://nvidia.github.io/warp/stable/user_guide/installation.html for guidance.
+Module validate_and_correct_inertia_kernel_1ff2ac62 6ad45b8 load on device 'cpu' took 2.39 ms  (cached)
+D:\RAG\Newton knowledge\experiments\kamino_pd_lab\convergence\runner.py:75: DeprecationWarning: Model.request_state_attributes() is deprecated in Newton 1.7; request SolverBase.Observables from the solver instead.
+  model.request_state_attributes("body_qdd")
+Module newton._src.solvers.kamino._src.core.conversions b9bda9f load on device 'cpu' took 1.54 ms  (cached)
+Module newton._src.solvers.kamino._src.core.bodies e83a87a load on device 'cpu' took 1.16 ms  (cached)
+Module newton._src.solvers.kamino._src.kinematics.constraints 60abbd4 load on device 'cpu' took 2.17 ms  (cached)
+Module newton._src.solvers.kamino._src.kinematics.jacobians d76f533 load on device 'cpu' took 1.61 ms  (cached)
+Module newton._src.sim.articulation 2e73608 load on device 'cpu' took 1.11 ms  (cached)
+Module newton._src.solvers.kamino._src.kinematics.joints 1ab8c41 load on device 'cpu' took 1.66 ms  (cached)
+Module newton._src.solvers.kamino._src.dynamics.wrenches e7bf119 load on device 'cpu' took 1.86 ms  (cached)
+Module newton._src.solvers.kamino._src.dynamics.delassus bbe513b load on device 'cpu' took 1.37 ms  (cached)
+Module newton._src.solvers.kamino._src.dynamics.dual 1ef9e87 load on device 'cpu' took 1.28 ms  (cached)
+Module newton._src.solvers.kamino._src.geometry.keying 3044dc2 load on device 'cpu' took 1.39 ms  (cached)
+Module newton._src.solvers.kamino._src.solvers.warmstart 92cf25c load on device 'cpu' took 1.27 ms  (cached)
+Module newton._src.solvers.kamino._src.solvers.common 00884db load on device 'cpu' took 1.21 ms  (cached)
+Module newton._src.solvers.kamino._src.solvers.padmm.kernels 6af942a load on device 'cpu' took 1.38 ms  (cached)
+Module newton._src.solvers.kamino._src.linalg.factorize.llt_blocked 8c970fb load on device 'cpu' took 1.24 ms  (cached)
+Module make_desaxce_correction_and_velocity_bias_kernel__locals___compute_desaxce_correction_and_velocity_bias_79564be9 78727e6 load on device 'cpu' took 1.78 ms  (cached)
+Module _make_project_dual_convergence_accel_kernel__locals___project_dual_convergence_accel_71790f5b 78fea3d load on device 'cpu' took 1.62 ms  (cached)
+Module newton._src.solvers.kamino._src.integrators.euler ac6227a load on device 'cpu' took 1.53 ms  (cached)
+Module newton._src.solvers.kamino._src.core.time ebc5e68 load on device 'cpu' took 1.36 ms  (cached)

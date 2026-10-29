@@ -1,0 +1,21 @@
+{
+  "run_id": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z",
+  "case": "kamino_pd_unsaturated_step_reversal",
+  "variant": "A",
+  "repeat": 2,
+  "status": "completed",
+  "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+  "runner_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+  "started_at_utc": "2026-10-29T06:43:49.865953+00:00",
+  "samples": 801,
+  "finished_at_utc": "2026-10-29T06:45:12.621193+00:00",
+  "files_sha256": {
+    "environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "resolved-config.json": "bc0cd624752fd6d7fa7cd9a7b7ef9c381ab191191c5bcc4fd0e98bf4c30ccd60",
+    "run.log": "56e29cf310228e985a305a88db0889edd99c00a12d9f6026d575a28e2f117186",
+    "runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "trajectory.npz": "4a1b297e57469f84cf47ee0a70432e11da4b64e2cf65181f0eaa4b1f8d99a6a9"
+  }
+}

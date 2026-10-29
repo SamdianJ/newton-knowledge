@@ -1,0 +1,18 @@
+{
+  "case": "kamino_drive_effort_paths",
+  "variant": "A",
+  "repeat": 1,
+  "status": "failed",
+  "protocol_sha256": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+  "runner_sha256": "b3beb4a4e529089ac8f2b0d02e80e59fea96a4af4a30061a4a4e7e18bd569a50",
+  "started_at": "2026-10-29T05:10:23.675574+00:00",
+  "run_directory": "experiments/kamino_mechanism_lab/drive_reset/runs/kamino_drive_effort_paths_A_r1_20261029T051023670602Z",
+  "error": "ValueError(\"'D:\\\\\\\\RAG\\\\\\\\Newton knowledge\\\\\\\\experiments\\\\\\\\.venv_multisolver\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\newton\\\\\\\\_src\\\\\\\\solvers\\\\\\\\kamino\\\\\\\\solver_kamino.py' is not in the subpath of 'D:\\\\\\\\RAG\\\\\\\\Newton knowledge\\\\\\\\sources\\\\\\\\newton-v1.7.0'\")",
+  "finished_at": "2026-10-29T05:10:26.445036+00:00",
+  "files_sha256": {
+    "protocol.json": "9b4c235d475b1cb915714acebd078a4d0d5155736e8a300b0da52d02fa6dff74",
+    "run.log": "dc7c3aba14c8590e8ac497390a9064e8ea1e3aff3c7f13203b264e3785746a6b",
+    "runner.py": "b3beb4a4e529089ac8f2b0d02e80e59fea96a4af4a30061a4a4e7e18bd569a50",
+    "scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad"
+  }
+}

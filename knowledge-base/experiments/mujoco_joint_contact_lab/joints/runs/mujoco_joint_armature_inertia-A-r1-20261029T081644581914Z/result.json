@@ -1,0 +1,21 @@
+{
+  "run_id": "mujoco_joint_armature_inertia-A-r1-20261029T081644581914Z",
+  "case": "mujoco_joint_armature_inertia",
+  "variant": "A",
+  "repeat": 1,
+  "status": "completed",
+  "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+  "runner_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+  "started_at_utc": "2026-10-29T08:16:44.583915+00:00",
+  "samples": 1001,
+  "finished_at_utc": "2026-10-29T08:16:49.116766+00:00",
+  "files_sha256": {
+    "environment.json": "033151c20edf505add6444caa655e6cece8896e596ed92ff3b3b0da9c2153c8c",
+    "installed-source-validation.json": "ea9da0ca34fb345be758bfbff9a94dc238031ea3735aed4d04f1e4af4961534a",
+    "protocol.json": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+    "resolved-config.json": "8295a9ff75438bc383ee6223c832e4d7e55ba68e617e32fd44af21cdcfb20d68",
+    "run.log": "d7860d7df031b36b27986cd92d34cf42a9075e5d571d25736b8ac22bdc79b790",
+    "runner.py": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+    "trajectory.npz": "09a2bdda87ba8bcd29dfffe95e5eb25bb33184e15f7cc07861e930b2cf07a703"
+  }
+}

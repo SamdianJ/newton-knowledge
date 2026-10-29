@@ -1,0 +1,10 @@
+{
+  "status": "frozen_before_runs",
+  "reason": "Follow-up to preserved 1/240s open-chain retained-joint gap 7.3148mm; no relaxed acceptance thresholds. Same physical scene, initial state, forces, solver iteration budget and 0.5s duration. Each timestep gets its own topology pair; only a pair meeting all original criteria is accepted.",
+  "protocol_file": "experiments/kamino_mechanism_lab/loop_fk/protocol-refinement.json",
+  "sha256": "9cdc6a4e7d276036d6b6edbf4e70cee12705d39805824ba63336438471056e04",
+  "additional_cases": 2,
+  "additional_independent_runs": 8,
+  "prior_results_preserved": true,
+  "frozen_at_utc": "2026-10-29T05:15:54.543149+00:00"
+}

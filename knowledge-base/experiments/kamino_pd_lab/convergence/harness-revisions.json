@@ -1,0 +1,20 @@
+{
+  "revisions": [
+    {
+      "old_runner_sha256": "c5355e8962de4c21de624391dae3d5475e60eb2ce694d3a8c7b994d9075a4b3e",
+      "new_runner_sha256": "845f8d6ee807c6f1f41193cd96dc8f2a28c866b73c357b8ac0c8f4c3bc9b8ae7",
+      "excluded_run": "kamino_pd_convergence_baseline_r1_20261029T063922420841Z",
+      "cause": "CPU numpy structured scalar was a shared view of Warp status; before-status mutated after delegating original iteration. Assertion compared current status to itself.",
+      "change": "Copy the pre-iteration structured status scalar; all physics, protocol and numerical arrays unchanged.",
+      "reported_to_root_before_fix": true
+    },
+    {
+      "old_runner_sha256": "845f8d6ee807c6f1f41193cd96dc8f2a28c866b73c357b8ac0c8f4c3bc9b8ae7",
+      "new_runner_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+      "retained_completed_run": "kamino_pd_convergence_baseline_r1_20261029T063959218053Z",
+      "cause": "Allocated internal vectors have 3006 capacity rows but only 6 active rows; storing inactive capacity would use excessive memory at1000 iterations.",
+      "change": "Read only active vio:vio+dim rows of internal x/y/z/pre/P. All six physical rows, layout, bound, residual and status channels retained. Existing full-capacity baseline remains valid unchanged. New rows explicitly record allocated_capacity; schema normalization uses active dim=6 for cross-version repeats.",
+      "reported_to_root_before_fix": true
+    }
+  ]
+}

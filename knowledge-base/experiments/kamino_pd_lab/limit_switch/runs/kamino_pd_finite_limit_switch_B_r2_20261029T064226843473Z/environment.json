@@ -1,0 +1,32 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "newton": "1.7.0"
+  },
+  "device": "cpu",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39",
+  "source_refs_sha256": {
+    "newton/_src/solvers/kamino/solver_kamino.py": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "newton/_src/solvers/kamino/_src/core/conversions.py": "cae601049d228f6c8fa4b3f7f72722d8a5f0f16eb097c0458a8edf91820afe76",
+    "newton/_src/solvers/kamino/_src/kinematics/joints.py": "16933d9f1465da0763644d79af24a5630aea815ccc8022f85c034916fccbfbc3",
+    "newton/_src/solvers/kamino/_src/integrators/euler.py": "7bbe00eaad480dea594f9d9375d3e0efd8596bbf66d9e1235980ac26b233aa66",
+    "newton/tests/kamino/test_kamino_solver_kamino_notify.py": "c0775feeb8ff19fb20d02b1d49daf976d75df848dc2bf2fedfa92a5af7a6ffad"
+  },
+  "installed_source_validation": {
+    "checked_python_files": 809,
+    "missing": [],
+    "changed": [],
+    "installed_parent": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages"
+  },
+  "private_instrumentation": [
+    "_model_kamino.joints.dof_act_paths",
+    "_model_kamino.joints.num_effort_cts",
+    "_solver_kamino.data.joints.bound_a",
+    "_solver_kamino.data.bodies.w_a_i",
+    "_solver_kamino.data.time"
+  ]
+}

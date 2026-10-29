@@ -1,0 +1,58 @@
+{
+  "worlds": 1,
+  "device": "cpu",
+  "gravity": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "body_shape": "sphere",
+  "radius_m": 0.1,
+  "mass_kg": 1.0,
+  "inertia_kg_m2": [
+    0.004,
+    0.004,
+    0.004
+  ],
+  "initial_position_m": [
+    0.0,
+    0.0,
+    0.35
+  ],
+  "initial_quaternion_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "initial_velocity": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "joint": "world-to-body passive prismatic; parent frame at initial body origin; child frame identity",
+  "joint_axis": [
+    0.6,
+    0.0,
+    -0.8
+  ],
+  "joint_coordinate": 0.0,
+  "joint_limits": "unbounded",
+  "joint_armature_damping_friction": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "joint_target_mode": "NONE",
+  "floor_z_m": 0.0,
+  "contact_mu": 0.3,
+  "contact_restitution": 0.0,
+  "shape_ke_kd": [
+    20000.0,
+    300.0
+  ],
+  "seed": "no RNG; programmatic primitives"
+}

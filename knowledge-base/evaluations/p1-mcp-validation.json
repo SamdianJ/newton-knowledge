@@ -1,0 +1,2962 @@
+{
+  "phase": "P1",
+  "status": "passed",
+  "build_id": "20ff987101029bf587c835c6",
+  "passed": 738,
+  "failed": 0,
+  "calls": 241,
+  "checks": [
+    {
+      "check": "actual stdio initialize",
+      "passed": true
+    },
+    {
+      "check": "exactly six tool names preserved",
+      "passed": true
+    },
+    {
+      "check": "strict published input schema: search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "strict published input schema: get_parameter",
+      "passed": true
+    },
+    {
+      "check": "strict published input schema: get_experiment",
+      "passed": true
+    },
+    {
+      "check": "strict published input schema: get_relations",
+      "passed": true
+    },
+    {
+      "check": "strict published input schema: get_document",
+      "passed": true
+    },
+    {
+      "check": "strict published input schema: get_source",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'model', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:model",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'iterations', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:iterations",
+      "passed": true
+    },
+    {
+      "check": "scoped default vbd",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'friction_epsilon', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:friction_epsilon",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'dat_conservative_bound_relaxation', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:dat_conservative_bound_relaxation",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'integrate_with_external_rigid_solver', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:integrate_with_external_rigid_solver",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_enable_self_contact', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_enable_self_contact",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_self_contact_radius', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_self_contact_radius",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_self_contact_margin', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_self_contact_margin",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_self_contact_gap', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_self_contact_gap",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_conservative_bound_relaxation', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_conservative_bound_relaxation",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_vertex_contact_buffer_size', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_vertex_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_edge_contact_buffer_size', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_edge_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_collision_detection_interval', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_collision_detection_interval",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_edge_parallel_epsilon', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_edge_parallel_epsilon",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_enable_tile_solve', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_enable_tile_solve",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_topological_contact_filter_threshold', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_topological_contact_filter_threshold",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_rest_shape_contact_exclusion_radius', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_rest_shape_contact_exclusion_radius",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_external_vertex_contact_filtering_map', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_external_vertex_contact_filtering_map",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'particle_external_edge_contact_filtering_map', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:particle_external_edge_contact_filtering_map",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_compliant_alm', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_compliant_alm",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_avbd_alpha', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_avbd_alpha",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_avbd_joint_alpha', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_avbd_joint_alpha",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_avbd_contact_alpha', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_avbd_contact_alpha",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_avbd_beta', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_avbd_beta",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_avbd_linear_beta', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_avbd_linear_beta",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_avbd_angular_beta', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_avbd_angular_beta",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_avbd_gamma', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_avbd_gamma",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_contact_hard', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_contact_hard",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_contact_history', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_contact_history",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_contact_stick_motion_eps', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_contact_stick_motion_eps",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_contact_stick_freeze_translation_eps', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_contact_stick_freeze_translation_eps",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_contact_stick_freeze_angular_eps', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_contact_stick_freeze_angular_eps",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_contact_k_start', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_contact_k_start",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_body_contact_buffer_size', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_body_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_body_particle_contact_buffer_size', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_body_particle_contact_buffer_size",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_soft_contact_use_log_barrier', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_soft_contact_use_log_barrier",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_joint_linear_ke', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_joint_linear_ke",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_joint_angular_ke', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_joint_angular_ke",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_joint_linear_k_start', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_joint_linear_k_start",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_joint_angular_k_start', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_joint_angular_k_start",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_joint_linear_kd', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_joint_linear_kd",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_joint_angular_kd', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_joint_angular_kd",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_soft_enable_dat', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_soft_enable_dat",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'rigid_soft_dat_use_interval_arithmetic', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:rigid_soft_dat_use_interval_arithmetic",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'deterministic', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:deterministic",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'collision_pipeline', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:collision_pipeline",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'collision_frequency', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:collision_frequency",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'collision_frequency_type', 'solver': 'vbd'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:SolverVBD:collision_frequency_type",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'model', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:model",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'separate_worlds', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:separate_worlds",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'njmax', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:njmax",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'njmax_nnz', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:njmax_nnz",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'nconmax', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:nconmax",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'iterations', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:iterations",
+      "passed": true
+    },
+    {
+      "check": "scoped default mujoco",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'ls_iterations', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:ls_iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'ccd_iterations', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:ccd_iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'sdf_iterations', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:sdf_iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'sdf_initpoints', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:sdf_initpoints",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'solver', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:solver",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'integrator', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:integrator",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'cone', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:cone",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'jacobian', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:jacobian",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'impratio', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:impratio",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'tolerance', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'ls_tolerance', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:ls_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'ccd_tolerance', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:ccd_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'density', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:density",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'viscosity', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:viscosity",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'wind', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:wind",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'magnetic', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:magnetic",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'use_mujoco_cpu', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:use_mujoco_cpu",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'enable_multiccd', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:enable_multiccd",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'enable_sleeping', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:enable_sleeping",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'nvmax', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:nvmax",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'sleep_tolerance', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:sleep_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'disable_contacts', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:disable_contacts",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'disable_sensors', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:disable_sensors",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'update_data_interval', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:update_data_interval",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'save_to_mjcf', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:save_to_mjcf",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'use_mujoco_contacts', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:use_mujoco_contacts",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'include_sites', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:include_sites",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'skip_visual_only_geoms', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:skip_visual_only_geoms",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'deterministic', 'solver': 'mujoco'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:mujoco:deterministic",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'model', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:model",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.sparse_jacobian', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.sparse_jacobian",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.sparse_dynamics', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.sparse_dynamics",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.use_collision_detector', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.use_collision_detector",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.use_fk_solver', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.use_fk_solver",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.constraints', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.constraints",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dynamics', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dynamics",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.materials', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.materials",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.rotation_correction', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.rotation_correction",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.integrator', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.integrator",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dynamics_solver', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dynamics_solver",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.angular_velocity_damping', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.angular_velocity_damping",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collect_solver_info', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collect_solver_info",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.compute_solution_metrics', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.compute_solution_metrics",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'reset.body_poses', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:reset.body_poses",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'reset.body_velocities', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:reset.body_velocities",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'reset.base_pose', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:reset.base_pose",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'reset.base_velocity', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:reset.base_velocity",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.pipeline', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.pipeline",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.broadphase', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.broadphase",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.bvtype', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.bvtype",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.max_contacts', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.max_contacts",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.max_contacts_per_world', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.max_contacts_per_world",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.max_contacts_per_pair', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.max_contacts_per_pair",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.max_triangle_pairs', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.max_triangle_pairs",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.collision_detector.default_gap', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.collision_detector.default_gap",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.constraints.alpha', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.constraints.alpha",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.constraints.beta', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.constraints.beta",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.constraints.gamma', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.constraints.gamma",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.constraints.delta', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.constraints.delta",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dynamics.preconditioning', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dynamics.preconditioning",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dynamics.linear_solver_type', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dynamics.linear_solver_type",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dynamics.linear_solver_kwargs', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dynamics.linear_solver_kwargs",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dynamics.cull_speculative_contacts', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dynamics.cull_speculative_contacts",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.primal_tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.primal_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.dual_tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.dual_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.compl_tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.compl_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.restart_tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.restart_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.eta', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.eta",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.rho_0', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.rho_0",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.rho_min', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.rho_min",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.a_0', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.a_0",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.alpha', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.alpha",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.tau', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.tau",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.max_iterations', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.max_iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.penalty_update_freq', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.penalty_update_freq",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.penalty_update_method', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.penalty_update_method",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.linear_solver_tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.linear_solver_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.linear_solver_tolerance_ratio', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.linear_solver_tolerance_ratio",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.use_acceleration', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.use_acceleration",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.use_graph_conditionals', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.use_graph_conditionals",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.warmstart_mode', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.warmstart_mode",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.warmstart_scale', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.warmstart_scale",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.padmm.contact_warmstart_method', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.padmm.contact_warmstart_method",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.regularization', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.regularization",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.omega', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.omega",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.max_alternating_iterations', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.inequality_sweeps_per_iteration', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.use_schur_complement', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.use_schur_complement",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.bilateral_solve_interval', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.bilateral_solve_interval",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.tangential_warmstart_scale', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.tangential_warmstart_scale",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.bilateral_solver_type', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.bilateral_solver_type",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.bilateral_solver_kwargs', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.bilateral_solver_kwargs",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.warmstart_mode', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.warmstart_mode",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.dvi.contact_warmstart_method', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.dvi.contact_warmstart_method",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.max_newton_iterations', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.max_newton_iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.max_line_search_iterations', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.max_line_search_iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.reset_state', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.reset_state",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.add_axis_joints', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.add_axis_joints",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.use_incremental_solve', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.use_incremental_solve",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.max_linear_incremental_step', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.max_linear_incremental_step",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.max_angular_incremental_step', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.max_angular_incremental_step",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.use_regularization', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.use_regularization",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.regularization_weight', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.regularization_weight",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.use_sparsity', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.use_sparsity",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.preconditioner', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.preconditioner",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.fk.use_adaptive_cg_tolerance', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.fk.use_adaptive_cg_tolerance",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.materials.friction_mix_mode', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.materials.friction_mix_mode",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'config.materials.restitution_mix_mode', 'solver': 'kamino'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy exact parameter: newton:1.7.0:kamino:config.materials.restitution_mix_mode",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/theory.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/theory.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/implementation.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/papers.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/papers.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/paper-code-map.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/parameters.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/model-inputs.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/diagnostics.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/vbd/version-notes.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/vbd/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'agent/WORKFLOW.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document agent/WORKFLOW.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'experiments/vbd_parameter_lab/README.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document experiments/vbd_parameter_lab/README.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'experiments/vbd_parameter_lab/PILOT_NOTES.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document experiments/vbd_parameter_lab/PILOT_NOTES.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'evaluations/REPORT.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document evaluations/REPORT.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'README.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document README.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'site/README.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document site/README.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'mcp_service/README.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document mcp_service/README.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/theory.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/theory.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/implementation.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/papers.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/papers.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/parameters.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/model-inputs.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/paper-code-map.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/diagnostics.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/mujoco/version-notes.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/mujoco/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/theory.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/theory.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/implementation.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/implementation.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/papers.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/papers.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/parameters.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/parameters.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/model-inputs.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/model-inputs.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/paper-code-map.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/paper-code-map.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/diagnostics.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/diagnostics.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_document {'path': 'solvers/kamino/version-notes.md', 'max_lines': 4}",
+      "passed": true
+    },
+    {
+      "check": "same build get_document",
+      "passed": true
+    },
+    {
+      "check": "legacy readable document solvers/kamino/version-notes.md",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'full_surface'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B full_surface",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'iterations'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B iterations",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'substeps'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B substeps",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'stiffness'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B stiffness",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'damping'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B damping",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'self_contact'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B self_contact",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'self_margin'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B self_margin",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'contact_stiffness'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B contact_stiffness",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'friction'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B friction",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'friction_epsilon'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B friction_epsilon",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'dat'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B dat",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'dat_relaxation'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B dat_relaxation",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'rigid_mode'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B rigid_mode",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'joint_stiffness'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B joint_stiffness",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'membrane'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B membrane",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'bending'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B bending",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'experiment_id': 'stabilization'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "legacy measured A/B stabilization",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'tri_ke'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias tri_ke",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible tri_ke",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'tri_ka'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias tri_ka",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible tri_ka",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'tri_ke + tri_ka'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias tri_ke + tri_ka",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible tri_ke + tri_ka",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'edge_ke'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias edge_ke",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible edge_ke",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'contact_ke'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias contact_ke",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible contact_ke",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'contact_mu'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias contact_mu",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible contact_mu",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'full_surface'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias full_surface",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible full_surface",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'enable_rigid_soft_full_surface_contact'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias enable_rigid_soft_full_surface_contact",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible enable_rigid_soft_full_surface_contact",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_parameter {'name': 'substeps'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_parameter",
+      "passed": true
+    },
+    {
+      "check": "legacy explicit group / process alias substeps",
+      "passed": true
+    },
+    {
+      "check": "omitted solver visible substeps",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'vbd', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback vbd",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'mujoco', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback mujoco",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'kamino', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback kamino",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'featherstone', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback featherstone",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'implicit-mpm', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback implicit-mpm",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'semi-implicit', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback semi-implicit",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'style3d', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback style3d",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'Solver', 'solver': 'xpbd', 'limit': 5}",
+      "passed": true
+    },
+    {
+      "check": "same build search_knowledge",
+      "passed": true
+    },
+    {
+      "check": "no hidden VBD fallback xpbd",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'solver': 'mujoco', 'experiment_id': 'full_surface'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "missing run cannot borrow VBD mujoco",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'solver': 'kamino', 'experiment_id': 'full_surface'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "missing run cannot borrow VBD kamino",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_experiment {'solver': 'xpbd', 'experiment_id': 'full_surface'}",
+      "passed": true
+    },
+    {
+      "check": "same build get_experiment",
+      "passed": true
+    },
+    {
+      "check": "missing run cannot borrow VBD xpbd",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_relations {'node_id': 'pipeline:enable_rigid_soft_full_surface_contact', 'limit': 30}",
+      "passed": true
+    },
+    {
+      "check": "same build get_relations",
+      "passed": true
+    },
+    {
+      "check": "shared parameter links measured VBD evidence",
+      "passed": true
+    },
+    {
+      "check": "protocol result get_source {'symbol_id': 'symbol:newton.ModelBuilder.add_urdf', 'max_lines': 8}",
+      "passed": true
+    },
+    {
+      "check": "same build get_source",
+      "passed": true
+    },
+    {
+      "check": "symbol reader verifies full pinned source manifest",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'contact', 'unknown_filter': 'ignored?'}",
+      "passed": true
+    },
+    {
+      "check": "protocol result search_knowledge {'query': 'contact', 'stage': 'bogus'}",
+      "passed": true
+    }
+  ]
+}

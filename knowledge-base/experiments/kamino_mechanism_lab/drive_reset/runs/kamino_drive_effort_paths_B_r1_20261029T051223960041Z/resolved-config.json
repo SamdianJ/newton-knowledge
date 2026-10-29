@@ -1,0 +1,116 @@
+{
+  "solver": {
+    "sparse_jacobian": false,
+    "sparse_dynamics": false,
+    "use_collision_detector": false,
+    "use_fk_solver": false,
+    "collision_detector": null,
+    "constraints": {
+      "alpha": 0.01,
+      "beta": 0.01,
+      "gamma": 0.01,
+      "delta": 1e-06
+    },
+    "dynamics": {
+      "preconditioning": true,
+      "linear_solver_type": "LLTB",
+      "linear_solver_kwargs": {},
+      "cull_speculative_contacts": true
+    },
+    "padmm": {
+      "primal_tolerance": 1e-07,
+      "dual_tolerance": 1e-07,
+      "compl_tolerance": 1e-07,
+      "restart_tolerance": 0.999,
+      "eta": 1e-05,
+      "rho_0": 1.0,
+      "rho_min": 1e-05,
+      "a_0": 1.0,
+      "alpha": 10.0,
+      "tau": 1.5,
+      "max_iterations": 200,
+      "penalty_update_freq": 1,
+      "penalty_update_method": "fixed",
+      "linear_solver_tolerance": 0.0,
+      "linear_solver_tolerance_ratio": 0.0,
+      "use_acceleration": true,
+      "use_graph_conditionals": false,
+      "warmstart_mode": "containers",
+      "warmstart_scale": 0.9,
+      "contact_warmstart_method": "key_and_position"
+    },
+    "dvi": {
+      "tolerance": 1e-05,
+      "regularization": 1e-06,
+      "omega": 1.0,
+      "max_alternating_iterations": 24,
+      "inequality_sweeps_per_iteration": 2,
+      "use_schur_complement": false,
+      "bilateral_solve_interval": 1,
+      "tangential_warmstart_scale": 0.97,
+      "bilateral_solver_type": "LLTB",
+      "bilateral_solver_kwargs": {},
+      "warmstart_mode": "containers",
+      "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+    },
+    "fk": null,
+    "materials": {
+      "friction_mix_mode": "average",
+      "restitution_mix_mode": "min"
+    },
+    "rotation_correction": "twopi",
+    "integrator": "euler",
+    "dynamics_solver": "padmm",
+    "angular_velocity_damping": 0.0,
+    "collect_solver_info": false,
+    "compute_solution_metrics": false
+  },
+  "drive": "bounded_implicit_pd",
+  "joint_target_mode": [
+    1
+  ],
+  "dof_act_paths": [
+    2
+  ],
+  "dof_act_types": [
+    2
+  ],
+  "body_mass": [
+    1.0
+  ],
+  "body_inertia": [
+    [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  ],
+  "body_com": [
+    [
+      0.5,
+      0.0,
+      0.0
+    ]
+  ],
+  "joint_effort_limit": [
+    1.0
+  ],
+  "joint_target_ke": [
+    100.0
+  ],
+  "joint_target_kd": [
+    2.0
+  ]
+}

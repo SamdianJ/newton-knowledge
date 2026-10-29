@@ -1,0 +1,21 @@
+{
+  "run_id": "mujoco_joint_passive_damping-B-r1-20261029T081632299133Z",
+  "case": "mujoco_joint_passive_damping",
+  "variant": "B",
+  "repeat": 1,
+  "status": "completed",
+  "protocol_sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+  "runner_sha256": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+  "started_at_utc": "2026-10-29T08:16:32.303861+00:00",
+  "samples": 1001,
+  "finished_at_utc": "2026-10-29T08:16:36.660585+00:00",
+  "files_sha256": {
+    "environment.json": "033151c20edf505add6444caa655e6cece8896e596ed92ff3b3b0da9c2153c8c",
+    "installed-source-validation.json": "ea9da0ca34fb345be758bfbff9a94dc238031ea3735aed4d04f1e4af4961534a",
+    "protocol.json": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+    "resolved-config.json": "a1529064228ac2df6f7db9be532c19c353602a3feb939812eaa7f15c71842440",
+    "run.log": "b652819da2519dfe1b739d3f1b888040d8e78931373072c9db2f85a8878ff6b7",
+    "runner.py": "a1d1bc3bdcedc290549f9b2a503bbb55299498ef5f1884378a818182b1f65c43",
+    "trajectory.npz": "8095fb454c0b500eda5984e077bdaed6840ef29853988c254d9e5beb3f6857b5"
+  }
+}

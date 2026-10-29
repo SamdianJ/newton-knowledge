@@ -1,0 +1,10 @@
+{
+  "status": "frozen_before_runs",
+  "group": "joints",
+  "protocol": "experiments/mujoco_joint_contact_lab/joints/protocol.json",
+  "sha256": "36ffb87df53457e8cefd36324a8d95fdf4bd49d915d495a28639b6372f90b77c",
+  "frozen_at_utc": "2026-10-29T08:13:37.668963+00:00",
+  "baseline_build": "35d4e7b6c3450093fc489405",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "formal_runs": 16
+}

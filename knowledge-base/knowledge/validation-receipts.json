@@ -1,0 +1,333 @@
+{
+  "version": "1.7.0",
+  "records": {
+    "concept:collisions": {
+      "id": "concept:collisions",
+      "body_sha256": "1c2672cdabbe23099731b55721a5dd3448233f525988530651474f1882b2d3c9",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "bf6a6c80252715465bf97cab8565e807c3c1878a89fd06a95564ec8b1793cf61"
+    },
+    "concept:coupling": {
+      "id": "concept:coupling",
+      "body_sha256": "0f5473f86f763b6e475432a392af4dbb7662a7e72c7877b1fddfada4241148b4",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "4328d87fe3120b84d9988e4490416d55964570d661517bbb8856306989cd3a92"
+    },
+    "concept:solver-observables": {
+      "id": "concept:solver-observables",
+      "body_sha256": "23e5c0998a7d969eb174df8c7b54a9e2fd938c65730ad7e7dcd7e78964a7ff97",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "18a71bc29c34b78248fe3520e0f711e90ba80ca6803ebdaaba2e92a78e358b35"
+    },
+    "concept:worlds": {
+      "id": "concept:worlds",
+      "body_sha256": "e5ed71eae3040e2910cd3a13b8002f7bda0dd0500b8801e6dd1abbf4b7446bb8",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "4da4bc184a8feb49299331ada2206fec7353b25c3f49d42b5ce2cedff5664051"
+    },
+    "diagnostic:mujoco:1": {
+      "id": "diagnostic:mujoco:1",
+      "body_sha256": "2ab9e2522143428b3716a9ba1bcc1b2908a78ac244fa3efa0c3869c102ad12f2",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "lab:full_surface": {
+      "id": "lab:full_surface",
+      "body_sha256": "a91962f6c69a596675d21d4f9f75061c695947f8a5de0965d4d18006008ba0ea",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "766b52156a2074cebcaf32e6de78ab3fbbbc6c9849cac679e480e079d85e7776"
+    },
+    "module:controllers": {
+      "id": "module:controllers",
+      "body_sha256": "97d74ca13eea116d0999e06967f4ec267953a693ce310b61687dedb898d0d19c",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "77192248fba45fb499e59d03c6735446d40ae25dd6b7586bc97d6d8fde0fc244"
+    },
+    "module:geometry": {
+      "id": "module:geometry",
+      "body_sha256": "c74b1d4023fe7d056718c3dfdbf06f9aec30a972af081147f2fe54e1d338c6a8",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "b193b8717588302c49068b6c04fe20b1182eba175cb074bf91611299cd318047"
+    },
+    "module:selection": {
+      "id": "module:selection",
+      "body_sha256": "47e28435670d0afe325836247412e8f8955bdc4aff2cddc0c3f8d19283f14b21",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "4ae9f296c0b43eb7036d7003bc0992ab8a87adbd420224dcc7ff0dc0395f9c47"
+    },
+    "module:sensors": {
+      "id": "module:sensors",
+      "body_sha256": "1f6dada8cd754447f3071e4c74f44484baf64bba17b60644e938bd10c473e42d",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "6af5413ee2e1ceb9067189a5d30276a4649ba3c5afa48f68d17d582ed0339982"
+    },
+    "newton:1.7.0:SolverVBD:iterations": {
+      "id": "newton:1.7.0:SolverVBD:iterations",
+      "body_sha256": "7924a5de031806483a71b2b220e982bd185ed83082fa191fd1d5b672e106a88f",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "d413d08accd60329a6dfafeb65eeb9dd68fa3a122729ce7398cc7389d65b9819"
+    },
+    "newton:1.7.0:kamino:config.padmm.max_iterations": {
+      "id": "newton:1.7.0:kamino:config.padmm.max_iterations",
+      "body_sha256": "865c777bb142a7b584d282659b59437db15a25a84d3a5e67f6a9fad0dfbb0787",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "835b5200a575188d3cb6b5ed34bb64a5d4563bb8e1366a7867f3a8c2d861b030"
+    },
+    "newton:1.7.0:mujoco:iterations": {
+      "id": "newton:1.7.0:mujoco:iterations",
+      "body_sha256": "e1d4bd2118605d5a1d668319f78b0ffc46d5647261540e08eaacb22af6d92eb6",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "9ad653f7edcd6402ba806fff0ef883c71f63f20cf7cf3cb5c06d4a5aac2a6d39"
+    },
+    "pipeline:enable_rigid_soft_full_surface_contact": {
+      "id": "pipeline:enable_rigid_soft_full_surface_contact",
+      "body_sha256": "187aef9f3513ae67b9da492d13af5c5927b76628e23469115b41003f237fe356",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "4dd50219c132db527f2974d8a0257fd10b96424d41e6f828378c4a4c30fcba7f"
+    },
+    "recipe:coupled-rigid-deformable": {
+      "id": "recipe:coupled-rigid-deformable",
+      "body_sha256": "64ef092936ae651e397dcb66a5ea7add7b7827de9b21ca609ade087700b9fb99",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "532fc4e7807c537b704171fbd76dd48d39b88dd249b47e5b7939958be9104a17"
+    },
+    "recipe:external-collision": {
+      "id": "recipe:external-collision",
+      "body_sha256": "b9696898664346b877b640dbd6fd0fbe748c6bcd9a267fa4d87716a95c90d0b7",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "18a71bc29c34b78248fe3520e0f711e90ba80ca6803ebdaaba2e92a78e358b35"
+    },
+    "recipe:ik-mujoco-contact": {
+      "id": "recipe:ik-mujoco-contact",
+      "body_sha256": "8f570892a2cd077a701607a6ba3e08cd4cba635b0c92bea66f14d2a6d1ecc280",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "c1a76a674c7c51776915500a0f70f447fb77b3a0c7c550b342805d41225eeb2d"
+    },
+    "recipe:mujoco-native-contact": {
+      "id": "recipe:mujoco-native-contact",
+      "body_sha256": "5df192c2e48852ef1890a7a1d020396c98a43db345a2c561bb70d2de8fbdccf4",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "18a71bc29c34b78248fe3520e0f711e90ba80ca6803ebdaaba2e92a78e358b35"
+    },
+    "recipe:solver-owned-collision": {
+      "id": "recipe:solver-owned-collision",
+      "body_sha256": "d22ab6003e79a262668f5662eceb5177bd89b9c175bbdab1fdbad855c56aa5f4",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "18a71bc29c34b78248fe3520e0f711e90ba80ca6803ebdaaba2e92a78e358b35"
+    },
+    "recipe:worlds-reset": {
+      "id": "recipe:worlds-reset",
+      "body_sha256": "693244e74691a14c60d910577585627d26f18be39557c7a4ad3445ec66cd8ce9",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "656a2f2f61fb4abb50e3251c25c7665db2ff45c08e7a41c31d7f42545f057908"
+    },
+    "solver:kamino": {
+      "id": "solver:kamino",
+      "body_sha256": "5e93571dfb092d4cac1bce2a9f9bffd4ad0ca55dddaccd0ff9085e6a7399b7e9",
+      "validated_build_id": "f000fc51b5d491c4d7827aa8",
+      "report": "evaluations/history/f000fc51b5d491c4d7827aa8/p2-mcp-validation.json",
+      "report_sha256": "cbfa80816d72b928186eeef016323290bda457ecbf41d6ee1d0ca5133e853674",
+      "source_refs_sha256": "e0ed984c49b3435197fa8230a887d030302008caaa6f154fd69ec74417247ecf"
+    },
+    "solver:mujoco": {
+      "id": "solver:mujoco",
+      "body_sha256": "de6c721e7d3590aae45b344461a34f5a3ab47768a42118042d2eab6a7d71547e",
+      "validated_build_id": "f000fc51b5d491c4d7827aa8",
+      "report": "evaluations/history/f000fc51b5d491c4d7827aa8/p2-mcp-validation.json",
+      "report_sha256": "cbfa80816d72b928186eeef016323290bda457ecbf41d6ee1d0ca5133e853674",
+      "source_refs_sha256": "843df14ca3b1c1ebb8e6dfdbc40e80f6043502352b624ee624429abc7f6117e7"
+    },
+    "solver:vbd": {
+      "id": "solver:vbd",
+      "body_sha256": "287a392c18b65802feeb9f7e640984fb99c3a8aef6f3dd787bf738dc39cb03a6",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "121186ee9da78bc58147149111191def43810c57d206838ef1ea424cebce30e3"
+    },
+    "solver:xpbd": {
+      "id": "solver:xpbd",
+      "body_sha256": "ba9c61082d6fa88c01cdef9da5fdb744acc57b431f662ac7b773d24ac5b569e9",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "8d8047721c89124a0fe64b98caec9031fd77ef1dc4e62d18fac2c8c8734cb1f0"
+    },
+    "topic:coupling": {
+      "id": "topic:coupling",
+      "body_sha256": "6351713f85cec0ac88729620ef53c8fc6fe49177b70284c42f6f613a2b57c3c2",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "760e5e6823e57010b416c12bbec5310c001d911c74cf6b9591dbef5c78b5970b"
+    },
+    "topic:differentiable-simulation": {
+      "id": "topic:differentiable-simulation",
+      "body_sha256": "c3eff1e98ece5ccd8d2e332c8e0a0b85c71d68a9e543c19d5a6879ac1a048986",
+      "validated_build_id": "f000fc51b5d491c4d7827aa8",
+      "report": "evaluations/history/f000fc51b5d491c4d7827aa8/p2-mcp-validation.json",
+      "report_sha256": "cbfa80816d72b928186eeef016323290bda457ecbf41d6ee1d0ca5133e853674",
+      "source_refs_sha256": "3d5e1c3aaf6a9968507739541694e215ce2d32cf35dc5c720eb03cdd9fc75b06"
+    },
+    "topic:lifecycle-observation": {
+      "id": "topic:lifecycle-observation",
+      "body_sha256": "9adf09a35d7b0d3a1e25d7aafb80637aad4e84d7c50e77e1ce7dca43b1ab0420",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p2-mcp-validation.json",
+      "report_sha256": "dc08f7e990ce91c6667fb9212f983057616da83bf6668adec079530fb9b2f359",
+      "source_refs_sha256": "f670d6359de78d050c72f9d6ba9987e588958ab2e7dbca34d1efb549178570d7"
+    },
+    "topic:robot-control": {
+      "id": "topic:robot-control",
+      "body_sha256": "13d88c4cb3cf7755f45318051c1cc3c67a82587d9d92fb879c7575fe6dad97f6",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "c92a02bdd049ae1065e01a67550d89ac2c4215f18b4cc7c9ac95c0f9e97c849c"
+    },
+    "topic:worlds-batching": {
+      "id": "topic:worlds-batching",
+      "body_sha256": "cd0f8fee3e6c78fd6c77e8cc6de2b52a3dfb6ce6a29fe9147ae1b912cf4fa56c",
+      "validated_build_id": "e510a8e7d1685e1eb83b9f30",
+      "report": "evaluations/history/e510a8e7d1685e1eb83b9f30/p2-mcp-validation.json",
+      "report_sha256": "cfaa7c4e2fc0e34fff95e7b453cee59ec74171a30957c9e7a1754b3bdef62878",
+      "source_refs_sha256": "d46d1e6a6d284e926bf38ed17d6e2fd93ba5ecd28135d027f3af2201da1200ee"
+    },
+    "recipe:control-target-layout": {
+      "id": "recipe:control-target-layout",
+      "body_sha256": "05633789f602a1d770fce7a331313eaa2c53d7cd61f7c91a94eb3a4db5f953e7",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "69461bd8b23f0a5d900aceaaae18022937f0c5d2b6a2483f2a205b51b59d8336"
+    },
+    "recipe:actuator-effort-scheduling": {
+      "id": "recipe:actuator-effort-scheduling",
+      "body_sha256": "1d87ec8410c42419071945189ec49d982aa5df2ae4f6915a5d1d1b2d6efab16a",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "870f0eece74682378572a49892e47301f781bc2e1fd367e23c98558dcd4a64a4"
+    },
+    "recipe:collision-preflight": {
+      "id": "recipe:collision-preflight",
+      "body_sha256": "52aa9a99cf100adb735c221e5bca357c3fbbd730782a22590b447082778df164",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "6fa6581c7e78261a1ee41ba0fe584ab1ec1120278008e600551aa94837b7c801"
+    },
+    "recipe:contact-capacity-diagnosis": {
+      "id": "recipe:contact-capacity-diagnosis",
+      "body_sha256": "ac58b6b30b193eed0d23c3736a0dfe158b8c9b87759c48f56c8986ad3bed43e2",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p3-mcp-validation.json",
+      "report_sha256": "f6acb3500fc2acf38e4af2e051b034eca8197be8a4318d92329e333ea30b0802",
+      "source_refs_sha256": "4f2eaab7fbcbba76f1c4c2b7fe77f0e85fa0615b71970db1af8ab64400542af0"
+    },
+    "recipe:model-update-notification": {
+      "id": "recipe:model-update-notification",
+      "body_sha256": "55678ac32b40c93fe731c497d54cd6dc1804aefce9697aa095928a90ea34ab11",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "5614a1c1a3ced5cc888221c1087b8f84738dbda442bcf9f6802efbf91e240e24"
+    },
+    "recipe:masked-reset-state-history": {
+      "id": "recipe:masked-reset-state-history",
+      "body_sha256": "e8e3f701e4572c3ba9297c3e215caeee50ea9a31dbb7010b7978e6f1f3e20131",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "52f162208b291c3282f80fabd1cc8f1bc7f525bb2ef8b7243696e513e12dc5b8"
+    },
+    "recipe:contact-frame-imu-observation": {
+      "id": "recipe:contact-frame-imu-observation",
+      "body_sha256": "b4d9c13b96e0b2e369d85c3e0cb917c7868c7b01ea25f08d77595ae7cbefcfd2",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "4fd2cd04aa643cd0fca2da1d7a9e2b1d4f18ea0b661c6d61965db364be4fbacc"
+    },
+    "recipe:coupling-interface-ownership": {
+      "id": "recipe:coupling-interface-ownership",
+      "body_sha256": "43a953e907c0ff3c31b4abe8acd6cbd0890730b2c1228a7e987043b0f1ae60a2",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "034f7d0ac488d8303923faefd0793cda05517cf8702298762e3c601b7e81dacd"
+    },
+    "recipe:differentiable-rollout-history": {
+      "id": "recipe:differentiable-rollout-history",
+      "body_sha256": "c3a76d1b4147fcb43bd1ab26a1bf11153e03e4aec6a3ad94a9e4be617b3cf79f",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "fbc87b570d60f2df68d381691812d889d62d99fce372b5bf90626cd9f3ae07b8"
+    },
+    "recipe:mujoco-contact-conversion": {
+      "id": "recipe:mujoco-contact-conversion",
+      "body_sha256": "c7415be05602353bea0ebc22ab6dda2cd6c1fb8607c54dbf86b65a074960287d",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p3-mcp-validation.json",
+      "report_sha256": "f6acb3500fc2acf38e4af2e051b034eca8197be8a4318d92329e333ea30b0802",
+      "source_refs_sha256": "c19a89d71f45fc8fb2622949780d0888e55ef1031937a575feb55e4def29018d"
+    },
+    "recipe:kamino-backend-config-resolve": {
+      "id": "recipe:kamino-backend-config-resolve",
+      "body_sha256": "2ec3e86f3672d5551598cfc773b76a6ce9c004a6e4f6f91c854eddd9495bba10",
+      "validated_build_id": "552a0887bd3f9e13b8e40b39",
+      "report": "evaluations/history/552a0887bd3f9e13b8e40b39/p3-mcp-validation.json",
+      "report_sha256": "88cfbad25addcfe452125bcbdb1a766fe0ffc155e2d8a2a639e5d4174bd75ee5",
+      "source_refs_sha256": "fbe36918fc8762be9361f8fa4104b8a8cbd4ff07cb51b9615d6f88859b9900cd"
+    },
+    "recipe:vbd-dat-preconditions": {
+      "id": "recipe:vbd-dat-preconditions",
+      "body_sha256": "cbde57692a365c6895f7f8752e8b08e68415d8f50212df2cd86bd00df4dbeaf8",
+      "validated_build_id": "9a95b5a5289c936a2b6580d3",
+      "report": "evaluations/history/9a95b5a5289c936a2b6580d3/p3-mcp-validation.json",
+      "report_sha256": "f6acb3500fc2acf38e4af2e051b034eca8197be8a4318d92329e333ea30b0802",
+      "source_refs_sha256": "ed391dbc9c0da4d667f9ac7f8ef4147b69a011370e2250b7b7d483c1d7020664"
+    }
+  }
+}

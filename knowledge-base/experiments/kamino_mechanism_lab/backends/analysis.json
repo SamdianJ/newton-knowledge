@@ -1,0 +1,792 @@
+{
+  "status": "passed",
+  "physical_outcome": "passed",
+  "cases": [
+    {
+      "id": "kamino_backend_guided_contact",
+      "title": "PADMM / DVI：倾斜导轨滑块与地面接触",
+      "solver": "kamino",
+      "protocol_sha256": "b6cac2aa44540efe13d6961f559714dcbb3c74807c073b78049896bfdd81dbaa",
+      "variants": [
+        {
+          "run_id": "kamino_backend_guided_contact_A_r1_20261029T051006438387Z",
+          "variant": "A",
+          "repeat": 1,
+          "metrics": {
+            "precontact_position_error_max_m": 0.0032700095558234653,
+            "precontact_velocity_error_max_m_s": 6.582397099870649e-07,
+            "off_axis_distance_max_m": 1.6304112028731966e-07,
+            "rotation_deviation_max_rad": 4.768371582031262e-07,
+            "peak_penetration_max_m": 0.0,
+            "tail_contact_center_error_max_m": 1.3817517362428084e-06,
+            "tail_speed_max_m_s": 4.451374907176117e-07,
+            "energy_growth_over_initial_max_j": 0.0,
+            "contact_count_max": 1,
+            "contact_steps": 114,
+            "converged_fraction": 0.22916666666666666,
+            "status_iterations_max": 200,
+            "r_p_max": 2.867402315587242e-07,
+            "r_d_max": 5.65459267818369e-05,
+            "r_c_max": 1.022781816573115e-05,
+            "final_position_m": [
+              0.1874990463256836,
+              2.703550938676358e-09,
+              0.10000099986791611
+            ],
+            "final_velocity_m_s": [
+              3.648416964097123e-07,
+              -1.0859558694994997e-14,
+              2.50339638796504e-07
+            ],
+            "joint_coordinate_geometry_error_max_m": 2.86102294633217e-08
+          },
+          "physical_criteria": [
+            {
+              "metric": "precontact_position_error_max_m",
+              "actual": 0.0032700095558234653,
+              "limit": 0.004,
+              "passed": true
+            },
+            {
+              "metric": "precontact_velocity_error_max_m_s",
+              "actual": 6.582397099870649e-07,
+              "limit": 0.005,
+              "passed": true
+            },
+            {
+              "metric": "off_axis_distance_max_m",
+              "actual": 1.6304112028731966e-07,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "rotation_deviation_max_rad",
+              "actual": 4.768371582031262e-07,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "peak_penetration_max_m",
+              "actual": 0.0,
+              "limit": 0.015,
+              "passed": true
+            },
+            {
+              "metric": "tail_contact_center_error_max_m",
+              "actual": 1.3817517362428084e-06,
+              "limit": 0.01,
+              "passed": true
+            },
+            {
+              "metric": "tail_speed_max_m_s",
+              "actual": 4.451374907176117e-07,
+              "limit": 0.05,
+              "passed": true
+            },
+            {
+              "metric": "energy_growth_over_initial_max_j",
+              "actual": 0.0,
+              "limit": 0.05,
+              "passed": true
+            }
+          ],
+          "evidence_checks": [
+            {
+              "check": "completed",
+              "passed": true
+            },
+            {
+              "check": "samples and per-step statuses",
+              "passed": true
+            },
+            {
+              "check": "raw arrays finite",
+              "passed": true
+            },
+            {
+              "check": "actual contact active",
+              "passed": true
+            },
+            {
+              "check": "actual iterations active",
+              "passed": true
+            },
+            {
+              "check": "intended backend and dependent config",
+              "passed": true
+            }
+          ],
+          "physical_passed": true,
+          "evidence_passed": true,
+          "result_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/result.json",
+          "raw_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/trajectory.npz",
+          "raw_sha256": "1a948029ad08059522c542f85aea7c28b91d0f01a06c330dc322fbbe9e7f3b67"
+        },
+        {
+          "run_id": "kamino_backend_guided_contact_A_r2_20261029T051120146042Z",
+          "variant": "A",
+          "repeat": 2,
+          "metrics": {
+            "precontact_position_error_max_m": 0.0032700095558234653,
+            "precontact_velocity_error_max_m_s": 6.582397099870649e-07,
+            "off_axis_distance_max_m": 1.6304112028731966e-07,
+            "rotation_deviation_max_rad": 4.768371582031262e-07,
+            "peak_penetration_max_m": 0.0,
+            "tail_contact_center_error_max_m": 1.3817517362428084e-06,
+            "tail_speed_max_m_s": 4.451374907176117e-07,
+            "energy_growth_over_initial_max_j": 0.0,
+            "contact_count_max": 1,
+            "contact_steps": 114,
+            "converged_fraction": 0.22916666666666666,
+            "status_iterations_max": 200,
+            "r_p_max": 2.867402315587242e-07,
+            "r_d_max": 5.65459267818369e-05,
+            "r_c_max": 1.022781816573115e-05,
+            "final_position_m": [
+              0.1874990463256836,
+              2.703550938676358e-09,
+              0.10000099986791611
+            ],
+            "final_velocity_m_s": [
+              3.648416964097123e-07,
+              -1.0859558694994997e-14,
+              2.50339638796504e-07
+            ],
+            "joint_coordinate_geometry_error_max_m": 2.86102294633217e-08
+          },
+          "physical_criteria": [
+            {
+              "metric": "precontact_position_error_max_m",
+              "actual": 0.0032700095558234653,
+              "limit": 0.004,
+              "passed": true
+            },
+            {
+              "metric": "precontact_velocity_error_max_m_s",
+              "actual": 6.582397099870649e-07,
+              "limit": 0.005,
+              "passed": true
+            },
+            {
+              "metric": "off_axis_distance_max_m",
+              "actual": 1.6304112028731966e-07,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "rotation_deviation_max_rad",
+              "actual": 4.768371582031262e-07,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "peak_penetration_max_m",
+              "actual": 0.0,
+              "limit": 0.015,
+              "passed": true
+            },
+            {
+              "metric": "tail_contact_center_error_max_m",
+              "actual": 1.3817517362428084e-06,
+              "limit": 0.01,
+              "passed": true
+            },
+            {
+              "metric": "tail_speed_max_m_s",
+              "actual": 4.451374907176117e-07,
+              "limit": 0.05,
+              "passed": true
+            },
+            {
+              "metric": "energy_growth_over_initial_max_j",
+              "actual": 0.0,
+              "limit": 0.05,
+              "passed": true
+            }
+          ],
+          "evidence_checks": [
+            {
+              "check": "completed",
+              "passed": true
+            },
+            {
+              "check": "samples and per-step statuses",
+              "passed": true
+            },
+            {
+              "check": "raw arrays finite",
+              "passed": true
+            },
+            {
+              "check": "actual contact active",
+              "passed": true
+            },
+            {
+              "check": "actual iterations active",
+              "passed": true
+            },
+            {
+              "check": "intended backend and dependent config",
+              "passed": true
+            }
+          ],
+          "physical_passed": true,
+          "evidence_passed": true,
+          "result_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/result.json",
+          "raw_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/trajectory.npz",
+          "raw_sha256": "2a43befa42d7777ad15a1456674d2800977e0142f7f276650b640fb10054652f"
+        },
+        {
+          "run_id": "kamino_backend_guided_contact_B_r1_20261029T051023455230Z",
+          "variant": "B",
+          "repeat": 1,
+          "metrics": {
+            "precontact_position_error_max_m": 0.0032700095558235056,
+            "precontact_velocity_error_max_m_s": 5.288431823652926e-07,
+            "off_axis_distance_max_m": 8.734860658195783e-08,
+            "rotation_deviation_max_rad": 7.300048299977715e-08,
+            "peak_penetration_max_m": 0.0,
+            "tail_contact_center_error_max_m": 1.2061580696544099e-06,
+            "tail_speed_max_m_s": 1.2862912259911625e-06,
+            "energy_growth_over_initial_max_j": 0.0,
+            "contact_count_max": 1,
+            "contact_steps": 114,
+            "converged_fraction": 0.9930555555555556,
+            "status_iterations_max": 48,
+            "r_p_max": 0.0,
+            "r_d_max": 2.574920654296875e-05,
+            "r_c_max": 2.086162567138672e-07,
+            "final_position_m": [
+              0.18749931454658508,
+              8.867136358503558e-09,
+              0.10000099241733551
+            ],
+            "final_velocity_m_s": [
+              -1.2043865353916772e-06,
+              -4.3517474346277396e-11,
+              -2.6027373678516597e-07
+            ],
+            "joint_coordinate_geometry_error_max_m": 2.86102294633217e-08
+          },
+          "physical_criteria": [
+            {
+              "metric": "precontact_position_error_max_m",
+              "actual": 0.0032700095558235056,
+              "limit": 0.004,
+              "passed": true
+            },
+            {
+              "metric": "precontact_velocity_error_max_m_s",
+              "actual": 5.288431823652926e-07,
+              "limit": 0.005,
+              "passed": true
+            },
+            {
+              "metric": "off_axis_distance_max_m",
+              "actual": 8.734860658195783e-08,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "rotation_deviation_max_rad",
+              "actual": 7.300048299977715e-08,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "peak_penetration_max_m",
+              "actual": 0.0,
+              "limit": 0.015,
+              "passed": true
+            },
+            {
+              "metric": "tail_contact_center_error_max_m",
+              "actual": 1.2061580696544099e-06,
+              "limit": 0.01,
+              "passed": true
+            },
+            {
+              "metric": "tail_speed_max_m_s",
+              "actual": 1.2862912259911625e-06,
+              "limit": 0.05,
+              "passed": true
+            },
+            {
+              "metric": "energy_growth_over_initial_max_j",
+              "actual": 0.0,
+              "limit": 0.05,
+              "passed": true
+            }
+          ],
+          "evidence_checks": [
+            {
+              "check": "completed",
+              "passed": true
+            },
+            {
+              "check": "samples and per-step statuses",
+              "passed": true
+            },
+            {
+              "check": "raw arrays finite",
+              "passed": true
+            },
+            {
+              "check": "actual contact active",
+              "passed": true
+            },
+            {
+              "check": "actual iterations active",
+              "passed": true
+            },
+            {
+              "check": "intended backend and dependent config",
+              "passed": true
+            }
+          ],
+          "physical_passed": true,
+          "evidence_passed": true,
+          "result_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/result.json",
+          "raw_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/trajectory.npz",
+          "raw_sha256": "d09271d4a979454df61856b3a7b74c809c7177baceb678fdca12606caba064f5"
+        },
+        {
+          "run_id": "kamino_backend_guided_contact_B_r2_20261029T051120147005Z",
+          "variant": "B",
+          "repeat": 2,
+          "metrics": {
+            "precontact_position_error_max_m": 0.0032700095558235056,
+            "precontact_velocity_error_max_m_s": 5.288431823652926e-07,
+            "off_axis_distance_max_m": 8.734860658195783e-08,
+            "rotation_deviation_max_rad": 7.300048299977715e-08,
+            "peak_penetration_max_m": 0.0,
+            "tail_contact_center_error_max_m": 1.2061580696544099e-06,
+            "tail_speed_max_m_s": 1.2862912259911625e-06,
+            "energy_growth_over_initial_max_j": 0.0,
+            "contact_count_max": 1,
+            "contact_steps": 114,
+            "converged_fraction": 0.9930555555555556,
+            "status_iterations_max": 48,
+            "r_p_max": 0.0,
+            "r_d_max": 2.574920654296875e-05,
+            "r_c_max": 2.086162567138672e-07,
+            "final_position_m": [
+              0.18749931454658508,
+              8.867136358503558e-09,
+              0.10000099241733551
+            ],
+            "final_velocity_m_s": [
+              -1.2043865353916772e-06,
+              -4.3517474346277396e-11,
+              -2.6027373678516597e-07
+            ],
+            "joint_coordinate_geometry_error_max_m": 2.86102294633217e-08
+          },
+          "physical_criteria": [
+            {
+              "metric": "precontact_position_error_max_m",
+              "actual": 0.0032700095558235056,
+              "limit": 0.004,
+              "passed": true
+            },
+            {
+              "metric": "precontact_velocity_error_max_m_s",
+              "actual": 5.288431823652926e-07,
+              "limit": 0.005,
+              "passed": true
+            },
+            {
+              "metric": "off_axis_distance_max_m",
+              "actual": 8.734860658195783e-08,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "rotation_deviation_max_rad",
+              "actual": 7.300048299977715e-08,
+              "limit": 0.0002,
+              "passed": true
+            },
+            {
+              "metric": "peak_penetration_max_m",
+              "actual": 0.0,
+              "limit": 0.015,
+              "passed": true
+            },
+            {
+              "metric": "tail_contact_center_error_max_m",
+              "actual": 1.2061580696544099e-06,
+              "limit": 0.01,
+              "passed": true
+            },
+            {
+              "metric": "tail_speed_max_m_s",
+              "actual": 1.2862912259911625e-06,
+              "limit": 0.05,
+              "passed": true
+            },
+            {
+              "metric": "energy_growth_over_initial_max_j",
+              "actual": 0.0,
+              "limit": 0.05,
+              "passed": true
+            }
+          ],
+          "evidence_checks": [
+            {
+              "check": "completed",
+              "passed": true
+            },
+            {
+              "check": "samples and per-step statuses",
+              "passed": true
+            },
+            {
+              "check": "raw arrays finite",
+              "passed": true
+            },
+            {
+              "check": "actual contact active",
+              "passed": true
+            },
+            {
+              "check": "actual iterations active",
+              "passed": true
+            },
+            {
+              "check": "intended backend and dependent config",
+              "passed": true
+            }
+          ],
+          "physical_passed": true,
+          "evidence_passed": true,
+          "result_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/result.json",
+          "raw_file": "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/trajectory.npz",
+          "raw_sha256": "c9290aa1f756c900cd2f3523326d7de15a59bfa82396154d66bd360586df6d3d"
+        }
+      ],
+      "metrics": {
+        "tail_position_difference_max_m": 2.6839529709832277e-07,
+        "tail_velocity_difference_max_m_s": 1.7029981336236233e-06,
+        "all_time_position_difference_max_m": 3.129247829747328e-07,
+        "all_time_velocity_difference_max_m_s": 6.883388414280489e-05,
+        "narrow_tail_agreement_passed": true
+      },
+      "criteria": {
+        "evidence_validity": [
+          "source hashes equal fixed lock",
+          "resolved dynamics_solver equals intended backend",
+          "same A/B initial state and mass/inertia arrays",
+          "all 145 state samples and 144 status samples present and finite",
+          "both independent repeats meet absolute/relative tolerance",
+          "actual terminal iterations become positive and internal model_active_contacts becomes positive"
+        ],
+        "physical_criteria": {
+          "precontact_position_error_max_m": 0.004,
+          "precontact_velocity_error_max_m_s": 0.005,
+          "off_axis_distance_max_m": 0.0002,
+          "rotation_deviation_max_rad": 0.0002,
+          "peak_penetration_max_m": 0.015,
+          "tail_window_s": [
+            0.5,
+            0.6
+          ],
+          "tail_contact_center_error_max_m": 0.01,
+          "tail_speed_max_m_s": 0.05,
+          "energy_growth_over_initial_max_j": 0.05
+        },
+        "criterion_rationale": "Precontact Euler truncation bound is 0.5*a_parallel*t*dt=0.00327m at 0.2s, hence 0.004m; velocity is constant-acceleration reference. Guide/rotation bounds are absolute SI errors at one-body float32 scale. 15mm permits roughly two contact-time vertical increments (~7.4mm each), but catches unresolved penetration. Tail 10mm/0.05m/s and energy +0.05J are scenario-specific, predeclared physical limits, not solver tolerances.",
+        "repeat_tolerance": {
+          "body_q_atol": 1e-05,
+          "body_qd_atol": 0.0001,
+          "joint_q_atol": 1e-05,
+          "joint_qd_atol": 0.0001,
+          "rtol": 1e-05,
+          "timing_excluded": true
+        },
+        "pair_comparison": "Report complete differences; no required winner or minimum effect. Physical pass/fail is judged per backend. Tail position difference <=0.005m and velocity difference <=0.02m/s support only narrow agreement; disagreement is a valid negative result, not grounds to change protocol.",
+        "tail_pair_position_tolerance_m": 0.005,
+        "tail_pair_velocity_tolerance_m_s": 0.02,
+        "terminal_convergence": "Record fraction and all r_p/r_d/r_c arrays separately. Do not compare same-named residuals as identical or use converged alone as physical correctness. Physical criteria may fail despite converged. No universal common residual acceptance threshold."
+      },
+      "observation": "两配置组均通过事前物理门槛，且在此单导轨/单接触尾段一致。 配置差异是后端及其依赖默认组；同名残差定义不同，耗时未用于排名。",
+      "limitations": [
+        "one CPU world and one sphere with a passive prismatic guide",
+        "one contact patch, no contact-rich stack or closed loop",
+        "default backend configuration groups only; no DVI Schur/sparse-dynamics or PADMM branch sweep",
+        "no GPU, performance ranking or long-horizon stability claim",
+        "friction cone present but this is not a friction coefficient calibration experiment"
+      ],
+      "source_refs": [
+        {
+          "path": "docs/solvers/kamino.rst",
+          "line": 41
+        },
+        {
+          "path": "docs/solvers/kamino.rst",
+          "line": 84
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 797
+        },
+        {
+          "path": "newton/_src/sim/builder.py",
+          "line": 5798
+        }
+      ],
+      "evidence_valid": true,
+      "physical_criteria_passed": true,
+      "configuration_differences": {
+        "requested_config": {
+          "dynamics.linear_solver_type": {
+            "A": "LLTB",
+            "B": "LLTBRCM"
+          },
+          "dynamics.preconditioning": {
+            "A": true,
+            "B": false
+          },
+          "dynamics_solver": {
+            "A": "padmm",
+            "B": "dvi"
+          },
+          "sparse_jacobian": {
+            "A": false,
+            "B": true
+          }
+        },
+        "resolved_config": {
+          "dynamics.linear_solver_type": {
+            "A": "LLTB",
+            "B": "LLTBRCM"
+          },
+          "dynamics.preconditioning": {
+            "A": true,
+            "B": false
+          },
+          "dynamics_solver": {
+            "A": "padmm",
+            "B": "dvi"
+          },
+          "sparse_jacobian": {
+            "A": false,
+            "B": true
+          }
+        }
+      },
+      "repeatability": [
+        {
+          "variant": "A",
+          "field": "body_q",
+          "max_abs_difference": 0.0,
+          "atol": 1e-05,
+          "rtol": 1e-05,
+          "passed": true
+        },
+        {
+          "variant": "A",
+          "field": "body_qd",
+          "max_abs_difference": 0.0,
+          "atol": 0.0001,
+          "rtol": 1e-05,
+          "passed": true
+        },
+        {
+          "variant": "A",
+          "field": "joint_q",
+          "max_abs_difference": 0.0,
+          "atol": 1e-05,
+          "rtol": 1e-05,
+          "passed": true
+        },
+        {
+          "variant": "A",
+          "field": "joint_qd",
+          "max_abs_difference": 0.0,
+          "atol": 0.0001,
+          "rtol": 1e-05,
+          "passed": true
+        },
+        {
+          "variant": "B",
+          "field": "body_q",
+          "max_abs_difference": 0.0,
+          "atol": 1e-05,
+          "rtol": 1e-05,
+          "passed": true
+        },
+        {
+          "variant": "B",
+          "field": "body_qd",
+          "max_abs_difference": 0.0,
+          "atol": 0.0001,
+          "rtol": 1e-05,
+          "passed": true
+        },
+        {
+          "variant": "B",
+          "field": "joint_q",
+          "max_abs_difference": 0.0,
+          "atol": 1e-05,
+          "rtol": 1e-05,
+          "passed": true
+        },
+        {
+          "variant": "B",
+          "field": "joint_qd",
+          "max_abs_difference": 0.0,
+          "atol": 0.0001,
+          "rtol": 1e-05,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "protocol unchanged kamino_backend_guided_contact_A_r1_20261029T051006438387Z",
+      "passed": true
+    },
+    {
+      "check": "archived runner intact kamino_backend_guided_contact_A_r1_20261029T051006438387Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_backend_guided_contact_A_r1_20261029T051006438387Z",
+      "passed": true
+    },
+    {
+      "check": "protocol unchanged kamino_backend_guided_contact_A_r2_20261029T051120146042Z",
+      "passed": true
+    },
+    {
+      "check": "archived runner intact kamino_backend_guided_contact_A_r2_20261029T051120146042Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_backend_guided_contact_A_r2_20261029T051120146042Z",
+      "passed": true
+    },
+    {
+      "check": "protocol unchanged kamino_backend_guided_contact_B_r1_20261029T051023455230Z",
+      "passed": true
+    },
+    {
+      "check": "archived runner intact kamino_backend_guided_contact_B_r1_20261029T051023455230Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_backend_guided_contact_B_r1_20261029T051023455230Z",
+      "passed": true
+    },
+    {
+      "check": "protocol unchanged kamino_backend_guided_contact_B_r2_20261029T051120147005Z",
+      "passed": true
+    },
+    {
+      "check": "archived runner intact kamino_backend_guided_contact_B_r2_20261029T051120147005Z",
+      "passed": true
+    },
+    {
+      "check": "raw hash kamino_backend_guided_contact_B_r2_20261029T051120147005Z",
+      "passed": true
+    },
+    {
+      "check": "four independently spawned successful runs",
+      "passed": true
+    },
+    {
+      "check": "same initial physical state body_q",
+      "passed": true
+    },
+    {
+      "check": "same initial physical state body_qd",
+      "passed": true
+    },
+    {
+      "check": "same initial physical state joint_q",
+      "passed": true
+    },
+    {
+      "check": "same initial physical state joint_qd",
+      "passed": true
+    },
+    {
+      "check": "same physical model body_mass",
+      "passed": true
+    },
+    {
+      "check": "same physical model body_inertia",
+      "passed": true
+    },
+    {
+      "check": "exact predeclared configuration-group difference requested_config",
+      "passed": true
+    },
+    {
+      "check": "exact predeclared configuration-group difference resolved_config",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "kamino_backend_guided_contact_A_r1_20261029T051006438387Z",
+      "status": "completed",
+      "variant": "A",
+      "repeat": 1
+    },
+    {
+      "run_id": "kamino_backend_guided_contact_A_r2_20261029T051120146042Z",
+      "status": "completed",
+      "variant": "A",
+      "repeat": 2
+    },
+    {
+      "run_id": "kamino_backend_guided_contact_B_r1_20261029T051023455230Z",
+      "status": "completed",
+      "variant": "B",
+      "repeat": 1
+    },
+    {
+      "run_id": "kamino_backend_guided_contact_B_r2_20261029T051120147005Z",
+      "status": "completed",
+      "variant": "B",
+      "repeat": 2
+    }
+  ],
+  "artifacts_sha256": {
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/environment.json": "b7ed91c82e22c5df3357ff75a5602cd7e0fcaf64097500f46b7fd80c46004157",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/protocol.json": "b6cac2aa44540efe13d6961f559714dcbb3c74807c073b78049896bfdd81dbaa",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/result.json": "d85e3a59363d84f90b77c98e629a4d28addebd52874fa4b7913f35428e895769",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/run.log": "db70fb40b2f4eba6424484a5a72c2dec27b241b4613e27e902ec6b1eacebf805",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/runner.py": "9affa9a812976c3d82efece859787781a547333ab883867a047a8dbcc096b53b",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/scene.json": "7c48c3cf1af13ec8aff417ffa8cee0db770b34fa5d2ac20edbd4293fa215d8c9",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r1_20261029T051006438387Z/trajectory.npz": "1a948029ad08059522c542f85aea7c28b91d0f01a06c330dc322fbbe9e7f3b67",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/environment.json": "3bea77554c0ecd636705abd26197dc444dbabe4db7aa126f5f5e0b019af2a2f6",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/protocol.json": "b6cac2aa44540efe13d6961f559714dcbb3c74807c073b78049896bfdd81dbaa",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/result.json": "07250e418cf28fcc5af4a098eee4fcc596cb4e2eeec71e40dfe2cc857c008922",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/run.log": "fb756e5603bd983d9ca8936a55ddfdf6ccd52e84171bf0b4ea3e70f6ec23637f",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/runner.py": "9affa9a812976c3d82efece859787781a547333ab883867a047a8dbcc096b53b",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/scene.json": "7c48c3cf1af13ec8aff417ffa8cee0db770b34fa5d2ac20edbd4293fa215d8c9",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_A_r2_20261029T051120146042Z/trajectory.npz": "2a43befa42d7777ad15a1456674d2800977e0142f7f276650b640fb10054652f",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/environment.json": "29159d427336e5573009a46ee9076455f69be1203dcf0d25cb7401bd98fddc84",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/protocol.json": "b6cac2aa44540efe13d6961f559714dcbb3c74807c073b78049896bfdd81dbaa",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/result.json": "245fcfe3806c1dbdbe08fe36cd01ba3e09f63d053fc57524aa46b5b110554c8c",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/run.log": "fe21a8a674d34d4820be83f781a56527ec6dbefebd3d7bfdbc448af3f2952601",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/runner.py": "9affa9a812976c3d82efece859787781a547333ab883867a047a8dbcc096b53b",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/scene.json": "7c48c3cf1af13ec8aff417ffa8cee0db770b34fa5d2ac20edbd4293fa215d8c9",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r1_20261029T051023455230Z/trajectory.npz": "d09271d4a979454df61856b3a7b74c809c7177baceb678fdca12606caba064f5",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/environment.json": "56d3a8c6868703d099b4e91af0eb17b7d33abb86ffe591df1d26e7cab06f50b2",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/protocol.json": "b6cac2aa44540efe13d6961f559714dcbb3c74807c073b78049896bfdd81dbaa",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/result.json": "eedb6f35c708f0eb6b6007533486613bf45021fa76cec75299347c82152c715d",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/run.log": "28d407375c42f2754a5548829525c1489de57b73287c58329bf2589d6dc8d2b0",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/runner.py": "9affa9a812976c3d82efece859787781a547333ab883867a047a8dbcc096b53b",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/scene.json": "7c48c3cf1af13ec8aff417ffa8cee0db770b34fa5d2ac20edbd4293fa215d8c9",
+    "experiments/kamino_mechanism_lab/backends/runs/kamino_backend_guided_contact_B_r2_20261029T051120147005Z/trajectory.npz": "c9290aa1f756c900cd2f3523326d7de15a59bfa82396154d66bd360586df6d3d"
+  },
+  "analyzer_sha256": "96d072ccaa46dcea1c953a1abb831397f76325f3721517c423598105ad7f1450",
+  "limitations": "Analysis independently derives geometry/continuous reference/energy from NPZ; solver status is logged instrumentation, not a physical oracle. Negative physical results do not invalidate properly collected evidence.",
+  "plot": "experiments/kamino_mechanism_lab/backends/curves.svg",
+  "plot_sha256": "764d93b374b67443bf8e76180a5fbe530d542178fd60a2fb6905fe8f5d486648"
+}

@@ -1,0 +1,430 @@
+{
+  "newton/__init__.py": [
+    "MAXVAL",
+    "Axis",
+    "AxisType",
+    "__version__",
+    "use_coord_layout_targets",
+    "SDF",
+    "Gaussian",
+    "GeoType",
+    "Heightfield",
+    "Mesh",
+    "ParticleFlags",
+    "ShapeFlags",
+    "TetMesh",
+    "intersect_ray",
+    "BodyFlags",
+    "CollisionPipeline",
+    "Contacts",
+    "Control",
+    "JointTargetMode",
+    "JointType",
+    "Model",
+    "ModelBuilder",
+    "ModelFlags",
+    "Rod",
+    "State",
+    "StateFlags",
+    "eval_fk",
+    "eval_ik",
+    "eval_inverse_dynamics_force",
+    "eval_inverse_dynamics_passive",
+    "eval_jacobian",
+    "eval_mass_matrix",
+    "eval_mimic",
+    "eval_rigid_contact_kinematics",
+    "actuators",
+    "controllers",
+    "geometry",
+    "ik",
+    "math",
+    "selection",
+    "sensors",
+    "solvers",
+    "usd",
+    "utils",
+    "viewer"
+  ],
+  "newton/actuators.py": [
+    "Actuator",
+    "ActuatorParsed",
+    "ClampingBase",
+    "ClampingDCMotor",
+    "ClampingMaxEffort",
+    "ClampingPositionBased",
+    "ComponentKind",
+    "Delay",
+    "DriveBase",
+    "DriveNeuralGRU",
+    "DriveNeuralLSTM",
+    "DriveNeuralMLP",
+    "DrivePD",
+    "DrivePID",
+    "JointSpaceResponse",
+    "SchemaNames",
+    "parse_actuator_prim",
+    "register_actuator_component"
+  ],
+  "newton/controllers.py": [
+    "ControllerBase",
+    "ControllerDifferentialIK",
+    "ControllerDifferentialIKModelFree",
+    "ControllerJointImpedance",
+    "ControllerJointImpedanceModelFree",
+    "ControllerOperationalSpace",
+    "ControllerOperationalSpaceModelFree",
+    "DifferentialIKMethod"
+  ],
+  "newton/geometry.py": [
+    "BroadPhaseAllPairs",
+    "BroadPhaseExplicit",
+    "BroadPhaseSAP",
+    "HydroelasticSDF",
+    "NarrowPhase",
+    "ParticleSurface",
+    "TriMeshCollisionInfo",
+    "collide_box_box",
+    "collide_capsule_box",
+    "collide_capsule_capsule",
+    "collide_plane_box",
+    "collide_plane_capsule",
+    "collide_plane_cylinder",
+    "collide_plane_ellipsoid",
+    "collide_plane_sphere",
+    "collide_sphere_box",
+    "collide_sphere_capsule",
+    "collide_sphere_cylinder",
+    "collide_sphere_sphere",
+    "compute_inertia_shape",
+    "compute_offset_mesh",
+    "create_empty_sdf_data",
+    "extract_particle_surface",
+    "sdf_box",
+    "sdf_capsule",
+    "sdf_cone",
+    "sdf_cylinder",
+    "sdf_mesh",
+    "sdf_plane",
+    "sdf_sphere",
+    "transform_inertia"
+  ],
+  "newton/ik.py": [
+    "IKJacobianType",
+    "IKObjective",
+    "IKObjectiveJointLimit",
+    "IKObjectivePosition",
+    "IKObjectiveRotation",
+    "IKOptimizer",
+    "IKOptimizerLBFGS",
+    "IKOptimizerLM",
+    "IKSampler",
+    "IKSolver"
+  ],
+  "newton/math.py": [
+    "boltzmann",
+    "leaky_max",
+    "leaky_min",
+    "normalize_with_norm",
+    "orthonormal_basis",
+    "quat_between_axes",
+    "quat_between_vectors_robust",
+    "quat_decompose",
+    "quat_velocity",
+    "safe_div",
+    "smooth_max",
+    "smooth_min",
+    "transform_twist",
+    "transform_wrench",
+    "vec_abs",
+    "vec_allclose",
+    "vec_inside_limits",
+    "vec_leaky_max",
+    "vec_leaky_min",
+    "vec_max",
+    "vec_min",
+    "velocity_at_point"
+  ],
+  "newton/selection.py": [
+    "ArticulationView"
+  ],
+  "newton/sensors.py": [
+    "SensorCamera",
+    "SensorContact",
+    "SensorFrameTransform",
+    "SensorIMU",
+    "SensorTiledCamera"
+  ],
+  "newton/usd.py": [
+    "DEFORMABLE_LEGACY_NAMESPACES",
+    "find_tetmesh_prims",
+    "get_attribute",
+    "get_attributes_in_namespace",
+    "get_custom_attribute_declarations",
+    "get_custom_attribute_values",
+    "get_float",
+    "get_gprim_axis",
+    "get_mesh",
+    "get_physics_scenes",
+    "get_quat",
+    "get_scale",
+    "get_tetmesh",
+    "get_transform",
+    "has_applied_api_schema",
+    "has_attribute",
+    "type_to_warp",
+    "value_to_warp",
+    "PrimType",
+    "SchemaResolver",
+    "SchemaResolverMjc",
+    "SchemaResolverNewton",
+    "SchemaResolverPhysx"
+  ],
+  "newton/utils.py": [
+    "color_graph",
+    "plot_graph",
+    "MeshAdjacency",
+    "MeshAdjacencyData",
+    "remesh_mesh",
+    "solidify_mesh",
+    "validate_tet_mesh",
+    "validate_triangle_mesh",
+    "rasterize_mesh_to_heightfield",
+    "bourke_color_map",
+    "ColorSpace",
+    "color_linear_to_srgb",
+    "color_srgb_to_linear",
+    "CableStiffness",
+    "create_cable_stiffness_from_elastic_moduli",
+    "create_parallel_transport_cable_quaternions",
+    "create_straight_cable_points",
+    "create_straight_cable_points_and_quaternions",
+    "compute_world_offsets",
+    "download_asset",
+    "EventTracer",
+    "event_scope",
+    "run_benchmark",
+    "string_to_warp",
+    "load_texture",
+    "normalize_texture"
+  ],
+  "newton/viewer.py": [
+    "Layer",
+    "ViewerBase",
+    "ViewerFile",
+    "ViewerGL",
+    "ViewerNull",
+    "ViewerRTX",
+    "ViewerRerun",
+    "ViewerUSD",
+    "ViewerViser"
+  ],
+  "newton/_src/solvers/__init__.py": [
+    "SolverBase",
+    "SolverFeatherstone",
+    "SolverImplicitMPM",
+    "SolverKamino",
+    "SolverMuJoCo",
+    "SolverSemiImplicit",
+    "SolverStyle3D",
+    "SolverVBD",
+    "SolverXPBD",
+    "style3d"
+  ],
+  "newton/_src/solvers/coupled/__init__.py": [
+    "CouplingInterface",
+    "ModelView",
+    "SolverCoupled",
+    "SolverCoupledADMM",
+    "SolverCoupledProxy"
+  ],
+  "indexed_counts": [
+    [
+      "kamino",
+      "claim",
+      6
+    ],
+    [
+      "kamino",
+      "diagnostic",
+      5
+    ],
+    [
+      "kamino",
+      "document",
+      8
+    ],
+    [
+      "kamino",
+      "mapping",
+      6
+    ],
+    [
+      "kamino",
+      "model_input",
+      10
+    ],
+    [
+      "kamino",
+      "paper",
+      2
+    ],
+    [
+      "kamino",
+      "parameter",
+      86
+    ],
+    [
+      "mujoco",
+      "claim",
+      6
+    ],
+    [
+      "mujoco",
+      "diagnostic",
+      4
+    ],
+    [
+      "mujoco",
+      "document",
+      8
+    ],
+    [
+      "mujoco",
+      "mapping",
+      6
+    ],
+    [
+      "mujoco",
+      "model_input",
+      15
+    ],
+    [
+      "mujoco",
+      "paper",
+      2
+    ],
+    [
+      "mujoco",
+      "parameter",
+      35
+    ],
+    [
+      "shared",
+      "document",
+      7
+    ],
+    [
+      "vbd",
+      "capabilities",
+      1
+    ],
+    [
+      "vbd",
+      "claim",
+      22
+    ],
+    [
+      "vbd",
+      "diagnostic",
+      8
+    ],
+    [
+      "vbd",
+      "document",
+      30
+    ],
+    [
+      "vbd",
+      "experiment",
+      4
+    ],
+    [
+      "vbd",
+      "lab_experiment",
+      17
+    ],
+    [
+      "vbd",
+      "mapping",
+      8
+    ],
+    [
+      "vbd",
+      "model_input",
+      20
+    ],
+    [
+      "vbd",
+      "paper",
+      3
+    ],
+    [
+      "vbd",
+      "parameter",
+      48
+    ]
+  ],
+  "index_count": 367,
+  "counts": {
+    "solvers": 3,
+    "parameters": 169,
+    "papers": 7,
+    "documents": 31,
+    "nodes": 968,
+    "edges": 776
+  },
+  "solver_counts": {
+    "vbd": {
+      "parameters": 47,
+      "model_inputs": 20,
+      "papers": 3,
+      "experiments": 17,
+      "runs": 34,
+      "nodes": 605,
+      "edges": 284
+    },
+    "mujoco": {
+      "constructor_optional": 34,
+      "config_fields": 0,
+      "reset_fields": 0,
+      "parameters": 35,
+      "model_inputs": 15,
+      "papers": 2,
+      "experiments": 0
+    },
+    "kamino": {
+      "constructor_optional": 1,
+      "config_fields": 80,
+      "reset_fields": 4,
+      "parameters": 86,
+      "model_inputs": 10,
+      "papers": 2,
+      "experiments": 0
+    }
+  },
+  "graph_node_types": {
+    "solver": 3,
+    "paper": 7,
+    "code_symbol": 650,
+    "parameter": 169,
+    "claim": 34,
+    "mechanism_mapping": 20,
+    "experiment": 4,
+    "model_input": 45,
+    "diagnostic": 17,
+    "pipeline_setting": 1,
+    "process_setting": 1,
+    "lab_experiment": 17
+  },
+  "public_doc_paths": [
+    "agent/WORKFLOW.md",
+    "experiments/vbd_parameter_lab/README.md",
+    "experiments/vbd_parameter_lab/PILOT_NOTES.md",
+    "evaluations/REPORT.md",
+    "README.md",
+    "site/README.md",
+    "mcp_service/README.md"
+  ],
+  "prd_sha256": "1c31e25e70aeebdc6cda0d37e1829f0872ace3f742e1161cb72a89a93f0c352d"
+}

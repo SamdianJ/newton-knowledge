@@ -1,0 +1,1020 @@
+{
+  "phase": "P4",
+  "status": "passed",
+  "passed": 252,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "mujoco_iterations_stackA independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA installed source",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA sample times",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackA actual native contacts",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB installed source",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB sample times",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stackB actual native contacts",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stack identical initial pose",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stack identical initial velocity",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stack identical masses",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stack consumed backend treatment",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stack same program/environment",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stack only declared requested treatment differs",
+      "passed": true
+    },
+    {
+      "name": "mujoco_iterations_stack only declared backend treatment differs",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA installed source",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA sample times",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseA actual native contacts",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB installed source",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB sample times",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_responseB actual native contacts",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_response identical initial pose",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_response identical initial velocity",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_response identical masses",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_response consumed backend treatment",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_response same program/environment",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_response only declared requested treatment differs",
+      "passed": true
+    },
+    {
+      "name": "mujoco_contact_response only declared backend treatment differs",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA installed source",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA sample times",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA backend status iterations",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA backend status converged",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA backend status r_p",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA backend status r_d",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetA backend status r_c",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB installed source",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB sample times",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB backend status iterations",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB backend status converged",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB backend status r_p",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB backend status r_d",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budgetB backend status r_c",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budget identical initial pose",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budget identical initial velocity",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budget identical masses",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budget consumed backend treatment",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budget same program/environment",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budget only declared requested treatment differs",
+      "passed": true
+    },
+    {
+      "name": "kamino_padmm_budget only declared backend treatment differs",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA installed source",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA sample times",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA backend status iterations",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA backend status converged",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA backend status r_p",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA backend status r_d",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationA backend status r_c",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB independently repeated full runs",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB hash trajectory.npz",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB hash run_program.py",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB hash protocol.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB hash scene.json",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB frozen protocol",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB installed source",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB current reproducible runner",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB repeat raw hash",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB independent process reproduction body_q",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB independent process reproduction body_qd",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB bounded response, stress runs excluded",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB finite raw arrays",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB sample times",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB independent curve penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB independent curve stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB independent curve kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric max_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric final_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric tail_penetration_mm",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric final_stack_height_m",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric final_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric max_kinetic_energy_J",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric max_speed_m_s",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB raw metric step_ms_median_after_warmup",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB backend status iterations",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB backend status converged",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB backend status r_p",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB backend status r_d",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilizationB backend status r_c",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilization identical initial pose",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilization identical initial velocity",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilization identical masses",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilization consumed backend treatment",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilization same program/environment",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilization only declared requested treatment differs",
+      "passed": true
+    },
+    {
+      "name": "kamino_contact_stabilization only declared backend treatment differs",
+      "passed": true
+    }
+  ],
+  "pairs": 4,
+  "runs": 8,
+  "analyzer_sha256": "fbf2d0f0a76ce57390305e6c8122eeda8e87be30f1b693c0663b6f372aea68e8",
+  "catalog_sha256": "ab0b1a14b23955069e4fe108372524d5df9228f035836a19a02a06c38f5bb38d"
+}

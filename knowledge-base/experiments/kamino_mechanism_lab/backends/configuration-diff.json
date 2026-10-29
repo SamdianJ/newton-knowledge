@@ -1,0 +1,38 @@
+{
+  "requested_config": {
+    "dynamics.linear_solver_type": {
+      "A": "LLTB",
+      "B": "LLTBRCM"
+    },
+    "dynamics.preconditioning": {
+      "A": true,
+      "B": false
+    },
+    "dynamics_solver": {
+      "A": "padmm",
+      "B": "dvi"
+    },
+    "sparse_jacobian": {
+      "A": false,
+      "B": true
+    }
+  },
+  "resolved_config": {
+    "dynamics.linear_solver_type": {
+      "A": "LLTB",
+      "B": "LLTBRCM"
+    },
+    "dynamics.preconditioning": {
+      "A": true,
+      "B": false
+    },
+    "dynamics_solver": {
+      "A": "padmm",
+      "B": "dvi"
+    },
+    "sparse_jacobian": {
+      "A": false,
+      "B": true
+    }
+  }
+}

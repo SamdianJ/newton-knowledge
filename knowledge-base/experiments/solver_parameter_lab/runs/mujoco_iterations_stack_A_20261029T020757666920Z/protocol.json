@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.2-probe",
+  "version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "status": "designed_before_runs",
+  "environment": "isolated experiments/.venv_multisolver; initial target Python3.12.14, numpy2.5.4, warp-lang1.18.0, mujoco3.15.0, mujoco-warp3.15.0, locally built pinned Newton1.7.0; actual resolved environment recorded",
+  "device_plan": "CPU first; Kamino CUDA graph conditionals disabled for CPU. Record real limitations or any explicit backend/environment revision; failed runs do not count as measured pairs.",
+  "common": {
+    "dt_seconds": 0.004166666666666667,
+    "gravity_m_s2": [
+      0,
+      0,
+      -9.81
+    ],
+    "up_axis": "Z",
+    "worlds": 1,
+    "seed": "no RNG; deterministic primitive construction",
+    "sample_every_step": true,
+    "timing": "Newton solver.step plus device synchronization; state export and serialization excluded. Report initialization and cold compilation separately where observable, median after first five steps, never cross-solver performance ranking.",
+    "assets": "programmatic primitives; freeze model description and runner SHA256; no external asset download"
+  },
+  "cases": [
+    {
+      "id": "mujoco_iterations_stack",
+      "solver": "mujoco",
+      "scene": "five-box stack over global plane; 0.2m cubes, deterministic small tilt and gaps",
+      "duration_seconds": 1.0,
+      "backend": "native MuJoCo CPU, internal collision",
+      "parameter_group": "SolverMuJoCo.iterations",
+      "A": {
+        "iterations": 5
+      },
+      "B": {
+        "iterations": 50
+      },
+      "primary": "ground penetration mm and final stack height m",
+      "secondary": [
+        "body trajectory",
+        "max speed",
+        "kinetic energy",
+        "actual solver iteration counters if available",
+        "step time"
+      ],
+      "hypothesis": "Tight coupled contact response can be under-solved at one iteration; an insignificant difference is also an admissible result.",
+      "source": "newton/_src/solvers/mujoco/solver_mujoco.py; docs/solvers/mujoco.rst"
+    },
+    {
+      "id": "mujoco_contact_response",
+      "solver": "mujoco",
+      "scene": "radius0.1m sphere, density-derived mass1kg, drop from centerZ0.35m onto plane",
+      "duration_seconds": 1.0,
+      "backend": "native MuJoCo CPU, internal collision",
+      "parameter_group": "shape_material_ke / shape_material_kd on both shapes, fixed legacy numerical damping ratio",
+      "A": {
+        "ke": 2000,
+        "kd_rule": "2*sqrt(2000)"
+      },
+      "B": {
+        "ke": 200000,
+        "kd_rule": "2*sqrt(200000)"
+      },
+      "common_solver": {
+        "iterations": 50
+      },
+      "primary": "tail sphere-floor penetration mm",
+      "secondary": [
+        "peak penetration",
+        "height and velocity",
+        "actual geom_solref and refsafe/timestep",
+        "step time"
+      ],
+      "hypothesis": "Stronger numerical contact response changes sag/settling, with refsafe imposing a positive-solref time-constant floor. The ke/kd co-intervention is not isolated ke or a universal physical critical-damping rule.",
+      "source": "docs/solvers/mujoco.rst: shape-material conversion; newton/_src/solvers/mujoco/kernels.py::convert_solref"
+    },
+    {
+      "id": "kamino_padmm_budget",
+      "solver": "kamino",
+      "scene": "same deterministic five-box stack",
+      "duration_seconds": 0.8,
+      "backend": "PADMM with CPU-compatible unrolled iteration scheduling",
+      "parameter_group": "config.padmm.max_iterations",
+      "A": {
+        "max_iterations": 20
+      },
+      "B": {
+        "max_iterations": 60
+      },
+      "common_solver": {
+        "dynamics_solver": "padmm",
+        "use_collision_detector": true,
+        "use_graph_conditionals": false
+      },
+      "primary": "PADMM residuals and converged fraction alongside physical ground penetration/stack height",
+      "secondary": [
+        "actual iterations",
+        "r_p impulse units",
+        "r_d velocity units",
+        "r_c J",
+        "trajectory",
+        "step time"
+      ],
+      "hypothesis": "A small iteration budget may leave larger constraint residuals; interpretation stays within the same residual definitions and scene.",
+      "source": "docs/solvers/kamino.rst; newton/_src/solvers/kamino/config.py"
+    },
+    {
+      "id": "kamino_contact_stabilization",
+      "solver": "kamino",
+      "scene": "radius0.1m sphere intentionally starts at centerZ0.085m, 15mm initial plane overlap",
+      "duration_seconds": 0.6,
+      "backend": "PADMM",
+      "parameter_group": "config.constraints.gamma: unilateral contact Baumgarte stabilization",
+      "A": {
+        "gamma": 0.0
+      },
+      "B": {
+        "gamma": 0.2
+      },
+      "common_solver": {
+        "max_iterations": 60,
+        "delta_m": 1e-06,
+        "use_collision_detector": true,
+        "use_graph_conditionals": false
+      },
+      "primary": "residual overlap mm and recovery/overshoot trajectory",
+      "secondary": [
+        "r_p",
+        "r_d",
+        "r_c",
+        "converged",
+        "step time"
+      ],
+      "hypothesis": "Contact position-error correction differs from iteration convergence; alpha is for bilateral joints, beta for joint limits, gamma for contacts, delta is penetration margin.",
+      "source": "newton/_src/solvers/kamino/config.py::ConstraintStabilizationConfig"
+    }
+  ],
+  "acceptance": [
+    "at least two successful reproducible A/B pairs per new solver, with identical initial state/common inputs within each pair",
+    "full requested and resolved config, actual diff and evidence that the treatment reaches its backend setting",
+    "finite states and valid nonempty physical sampling; failures/unsupported environments kept separate",
+    "runner, protocol, model/asset, dependency and raw hashes; explicit run IDs, units, sample times and timing scope",
+    "metrics independently recomputed from raw arrays and matching displayed curves/replay; source mechanism and limits cited",
+    "preserve all original VBD NPZ and frozen runner hashes; do not borrow VBD measurements for another solver"
+  ]
+}

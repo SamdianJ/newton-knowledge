@@ -1,0 +1,1195 @@
+{
+  "status": "passed",
+  "checks_total": 207,
+  "checks_passed": 207,
+  "checks": [
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 1.6289164161964464e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 3.567481571264963e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.5768883401843254e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.5768883401843254e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239828586578369
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239828535753123
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/energy jump excluded frozen rule",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/endpoint held-target alignment",
+      "passed": true,
+      "actual": 0.00011050552129746039
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 1.6289164161964464e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 3.567481571264963e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.5768883401843254e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.5768883401843254e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239828586578369
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239828535753123
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/energy jump excluded frozen rule",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/endpoint held-target alignment",
+      "passed": true,
+      "actual": 0.00011050552129746039
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 1.5648869153284117e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 2.797091077089142e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.669388261240414e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.669388261240414e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239826202392578
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239828535753123
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/energy jump excluded frozen rule",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/endpoint held-target alignment",
+      "passed": true,
+      "actual": 0.00011047571897507269
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 1.5648869153284117e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 2.797091077089142e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.669388261240414e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 3.669388261240414e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239826202392578
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 5.239828535753123
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/energy jump excluded frozen rule",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/endpoint held-target alignment",
+      "passed": true,
+      "actual": 0.00011047571897507269
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat A body_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat A body_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat A joint_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat A joint_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat B body_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat B body_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat B joint_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_step_reversal repeat B joint_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "mirror1joint_q",
+      "passed": true,
+      "actual": 1.4156103134155273e-07
+    },
+    {
+      "name": "mirror1joint_qd",
+      "passed": true,
+      "actual": 1.1920928955078125e-07
+    },
+    {
+      "name": "mirror2joint_q",
+      "passed": true,
+      "actual": 1.4156103134155273e-07
+    },
+    {
+      "name": "mirror2joint_qd",
+      "passed": true,
+      "actual": 1.1920928955078125e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/nonzero velocity reference supplied",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 1.5978517781123358e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 4.2543061636035606e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 6.246958341060704e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 6.246958341060704e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 7.009787321090698
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 7.009786885339876
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/steady complete-period RMS",
+      "passed": true,
+      "actual": 0.019377798449222463
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/nonzero velocity reference supplied",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 1.5978517781123358e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 4.2543061636035606e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 6.246958341060704e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 6.246958341060704e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 7.009787321090698
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 7.009786885339876
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/steady complete-period RMS",
+      "passed": true,
+      "actual": 0.019377798449222463
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/nonzero velocity reference supplied",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 2.209854401136191e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 4.944909932566577e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 8.11436535408383e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 8.11436535408383e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 9.29639983177185
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 9.296401218199819
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/steady complete-period RMS",
+      "passed": true,
+      "actual": 0.06645294668070098
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/archive hashes",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/frozen protocol and archived runner",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/command-state time alignment",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/independent commands",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/nonzero velocity reference supplied",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/model inertia and gains",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": 2.209854401136191e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/published metric joint_position_reference_max_abs_rad",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": 4.944909932566577e-07
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/published metric joint_velocity_reference_max_abs_rad_s",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 8.11436535408383e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/published metric reported_effort_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": 8.11436535408383e-06
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/published metric applied_wrench_reference_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/published metric reported_vs_applied_max_abs_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 9.29639983177185
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/published metric minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": 9.296401218199819
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/published metric reference_minimum_effort_margin_Nm",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/full RMS matches",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/steady complete-period RMS",
+      "passed": true,
+      "actual": 0.06645294668070098
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/independent strict stop",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat A body_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat A body_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat A joint_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat A joint_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat B body_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat B body_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat B joint_q",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "kamino_pd_unsaturated_sine_modes repeat B joint_qd",
+      "passed": true,
+      "actual": 0.0
+    },
+    {
+      "name": "RMS improvement 1",
+      "passed": true,
+      "actual": 0.7083982062927829
+    },
+    {
+      "name": "RMS improvement 2",
+      "passed": true,
+      "actual": 0.7083982062927829
+    },
+    {
+      "name": "eight formal runs",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z",
+      "case": "kamino_pd_unsaturated_step_reversal",
+      "variant": "A",
+      "repeat": 1,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 1.6289164161964464e-07,
+        "joint_velocity_reference_max_abs_rad_s": 3.567481571264963e-07,
+        "reported_effort_reference_max_abs_Nm": 3.5768883401843254e-06,
+        "applied_wrench_reference_max_abs_Nm": 3.5768883401843254e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 5.239828586578369,
+        "reference_minimum_effort_margin_Nm": 5.239828535753123
+      },
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z",
+      "case": "kamino_pd_unsaturated_step_reversal",
+      "variant": "A",
+      "repeat": 2,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 1.6289164161964464e-07,
+        "joint_velocity_reference_max_abs_rad_s": 3.567481571264963e-07,
+        "reported_effort_reference_max_abs_Nm": 3.5768883401843254e-06,
+        "applied_wrench_reference_max_abs_Nm": 3.5768883401843254e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 5.239828586578369,
+        "reference_minimum_effort_margin_Nm": 5.239828535753123
+      },
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z",
+      "case": "kamino_pd_unsaturated_step_reversal",
+      "variant": "B",
+      "repeat": 1,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 1.5648869153284117e-07,
+        "joint_velocity_reference_max_abs_rad_s": 2.797091077089142e-07,
+        "reported_effort_reference_max_abs_Nm": 3.669388261240414e-06,
+        "applied_wrench_reference_max_abs_Nm": 3.669388261240414e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 5.239826202392578,
+        "reference_minimum_effort_margin_Nm": 5.239828535753123
+      },
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z",
+      "case": "kamino_pd_unsaturated_step_reversal",
+      "variant": "B",
+      "repeat": 2,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 1.5648869153284117e-07,
+        "joint_velocity_reference_max_abs_rad_s": 2.797091077089142e-07,
+        "reported_effort_reference_max_abs_Nm": 3.669388261240414e-06,
+        "applied_wrench_reference_max_abs_Nm": 3.669388261240414e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 5.239826202392578,
+        "reference_minimum_effort_margin_Nm": 5.239828535753123
+      },
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z",
+      "case": "kamino_pd_unsaturated_sine_modes",
+      "variant": "A",
+      "repeat": 1,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 1.5978517781123358e-07,
+        "joint_velocity_reference_max_abs_rad_s": 4.2543061636035606e-07,
+        "reported_effort_reference_max_abs_Nm": 6.246958341060704e-06,
+        "applied_wrench_reference_max_abs_Nm": 6.246958341060704e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 7.009787321090698,
+        "reference_minimum_effort_margin_Nm": 7.009786885339876,
+        "steady_RMS_rad": 0.019377798449222463
+      },
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z",
+      "case": "kamino_pd_unsaturated_sine_modes",
+      "variant": "A",
+      "repeat": 2,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 1.5978517781123358e-07,
+        "joint_velocity_reference_max_abs_rad_s": 4.2543061636035606e-07,
+        "reported_effort_reference_max_abs_Nm": 6.246958341060704e-06,
+        "applied_wrench_reference_max_abs_Nm": 6.246958341060704e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 7.009787321090698,
+        "reference_minimum_effort_margin_Nm": 7.009786885339876,
+        "steady_RMS_rad": 0.019377798449222463
+      },
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z",
+      "case": "kamino_pd_unsaturated_sine_modes",
+      "variant": "B",
+      "repeat": 1,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 2.209854401136191e-07,
+        "joint_velocity_reference_max_abs_rad_s": 4.944909932566577e-07,
+        "reported_effort_reference_max_abs_Nm": 8.11436535408383e-06,
+        "applied_wrench_reference_max_abs_Nm": 8.11436535408383e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 9.29639983177185,
+        "reference_minimum_effort_margin_Nm": 9.296401218199819,
+        "steady_RMS_rad": 0.06645294668070098
+      },
+      "strict_fraction": 1.0
+    },
+    {
+      "run_id": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z",
+      "case": "kamino_pd_unsaturated_sine_modes",
+      "variant": "B",
+      "repeat": 2,
+      "independent_metrics": {
+        "joint_position_reference_max_abs_rad": 2.209854401136191e-07,
+        "joint_velocity_reference_max_abs_rad_s": 4.944909932566577e-07,
+        "reported_effort_reference_max_abs_Nm": 8.11436535408383e-06,
+        "applied_wrench_reference_max_abs_Nm": 8.11436535408383e-06,
+        "reported_vs_applied_max_abs_Nm": 0.0,
+        "minimum_effort_margin_Nm": 9.29639983177185,
+        "reference_minimum_effort_margin_Nm": 9.296401218199819,
+        "steady_RMS_rad": 0.06645294668070098
+      },
+      "strict_fraction": 1.0
+    }
+  ],
+  "findings": [],
+  "source_semantics": {
+    "equation": "Solve [1,-h;h*kp,I+h*kd] [q_next,v_next] = [q,I*v+h*kp*qref+h*kd*vref_used]. Interior bounded-row optimality plus Euler integration; no clipping in the reference, separately certified by >=4Nm margin.",
+    "POSITION": "target_qd is ignored as a reference, while kd still contributes damping. Source kinematics/joints.py:1033-1054 and core/joints.py:1999.",
+    "sampling": "State[n+1] follows command[n] at n*dt; final period uses state401..800 with commands400..799.",
+    "energy": "Both fixed-target segments independently evaluated; no cross-jump energy term, and pair400->401 is excluded exactly as preregistered."
+  },
+  "scope": "Independent saved-data and static-source review, without importing subgroup analyzer or executing physics.",
+  "limitations": [
+    "One gain, inertia, frequency and time step; CPU single rotor interior response only.",
+    "Preconditioning field in frozen protocol has a constraints label but runner documents mapping to actual dynamics.preconditioning and archives resolved values.",
+    "Successful convergence here does not resolve old saturated high-gain/offset-COM failure."
+  ],
+  "evidence_sha256": {
+    "experiments/kamino_pd_lab/tracking/analysis.json": "f52dc227b2da41e8ca5c979effe24fb4c2cb33d94c06cb24be91f64f98646fa7",
+    "experiments/kamino_pd_lab/tracking/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "evaluations/kamino-pd-2026-10-29/review_tracking.py": "18b7cdd12e896600a64adfb37f0a0d0ecadd77d261bfb89544b52a5efb0645d5"
+  }
+}

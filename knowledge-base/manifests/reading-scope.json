@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-27",
+  "scope": "VBD release-specific sample; no claim of exhaustive manual review of every repository line",
+  "papers": [
+    {"id":"paper:vbd2024","full_text_extracted":true,"focused_reading":"Sec.3, especially pp.3-4 equations and local-system limitations","visually_checked_pdf_pages":[3],"preview":"sources/papers/previews/vbd-p3.png"},
+    {"id":"paper:avbd2025","full_text_extracted":true,"focused_reading":"pp.3-6 primal/dual/penalty/warm start and Algorithm 1","visually_checked_pdf_pages":[6],"preview":"sources/papers/previews/avbd-p6.png"},
+    {"id":"paper:dat2026","full_text_extracted":true,"focused_reading":"Sec.3 geometric construction, candidate assumptions and planar truncation; archived arXiv v1","visually_checked_pdf_pages":[4],"preview":"sources/papers/previews/dat-p4.png"}
+  ],
+  "code_review_scope": "Static mechanism and interface reading: constructor resolution, step orchestration, material kernels, rigid ALM and contact/DAT controls. Not a security/bug audit or full runtime dataflow analysis.",
+  "experiments": "Four narrow CPU groups in experiments/results.cpu.json; upstream test references are not assertions of execution.",
+  "empirical_tuning_history_imported": false,
+  "open_questions": ["thin-membrane and bending dimensional conventions for material calibration", "GPU tile behavior/performance on compatible drivers", "dense contact and DAT scene-level robustness", "real-reference parameter identifiability"]
+}

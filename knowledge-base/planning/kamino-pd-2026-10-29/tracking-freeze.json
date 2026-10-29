@@ -1,0 +1,14 @@
+{
+  "status": "frozen_before_runs",
+  "group": "tracking",
+  "protocol": "experiments/kamino_pd_lab/tracking/protocol.json",
+  "sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+  "frozen_at_utc": "2026-10-29T06:38:01.989182+00:00",
+  "baseline_build": "37213b4b24552935be27464a",
+  "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "rules": [
+    "No physical gate changes after simulations.",
+    "Every attempt retained; pure harness fixes documented with new runner hash.",
+    "Solver convergence, physical acceptance and instrumentation consistency are separate."
+  ]
+}

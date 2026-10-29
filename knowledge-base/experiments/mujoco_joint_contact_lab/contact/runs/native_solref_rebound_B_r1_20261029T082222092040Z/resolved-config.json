@@ -1,0 +1,194 @@
+{
+  "requested": {
+    "use_mujoco_cpu": true,
+    "use_mujoco_contacts": true,
+    "enable_multiccd": false,
+    "solver": "newton",
+    "integrator": "euler",
+    "iterations": 100,
+    "tolerance": 1e-12,
+    "update_data_interval": 1
+  },
+  "variant": {
+    "solref": [
+      0.02,
+      1
+    ],
+    "margin": 0,
+    "gap": 0
+  },
+  "use_mujoco_cpu": true,
+  "zero_margins_for_native_ccd": false,
+  "native_option_sampling": "after_construction_before_first_step; actual timestep recorded per step",
+  "native_option": {
+    "timestep": 0.002,
+    "iterations": 100,
+    "tolerance": 1e-12,
+    "solver": 2,
+    "integrator": 0,
+    "enableflags": 0,
+    "disableflags": 524288,
+    "gravity": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "refsafe_enabled": true,
+  "native_geom": {
+    "geom_type": [
+      0,
+      2
+    ],
+    "geom_bodyid": [
+      0,
+      1
+    ],
+    "geom_priority": [
+      0,
+      1
+    ],
+    "geom_solref": [
+      [
+        0.07999999821186066,
+        1.0
+      ],
+      [
+        0.019999999552965164,
+        1.0
+      ]
+    ],
+    "geom_solimp": [
+      [
+        0.9900000095367432,
+        0.9900000095367432,
+        0.0010000000474974513,
+        0.5,
+        2.0
+      ],
+      [
+        0.9900000095367432,
+        0.9900000095367432,
+        0.0010000000474974513,
+        0.5,
+        2.0
+      ]
+    ],
+    "geom_margin": [
+      0.0,
+      0.0
+    ],
+    "geom_gap": [
+      0.0,
+      0.0
+    ],
+    "geom_condim": [
+      1,
+      1
+    ],
+    "geom_friction": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "native_body_mass": [
+    0.0,
+    1.0
+  ],
+  "native_body_inertia": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0010000000474974513,
+      0.000999999581836164,
+      0.000999999581836164
+    ]
+  ],
+  "newton": {
+    "shape_margin": [
+      0.0,
+      0.0
+    ],
+    "shape_gap": [
+      0.0,
+      0.0
+    ],
+    "shape_material_ke": [
+      2500.0,
+      156.25
+    ],
+    "shape_material_kd": [
+      100.0,
+      25.0
+    ],
+    "body_mass": [
+      1.0
+    ],
+    "body_inertia": [
+      [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513
+        ]
+      ]
+    ]
+  },
+  "custom": {
+    "solref": [
+      [
+        0.019999999552965164,
+        1.0
+      ],
+      [
+        0.07999999821186066,
+        1.0
+      ]
+    ],
+    "solref_mode": [
+      1,
+      1
+    ],
+    "geom_priority": [
+      1,
+      0
+    ],
+    "geom_solimp": [
+      [
+        0.9900000095367432,
+        0.9900000095367432,
+        0.0010000000474974513,
+        0.5,
+        2.0
+      ],
+      [
+        0.9900000095367432,
+        0.9900000095367432,
+        0.0010000000474974513,
+        0.5,
+        2.0
+      ]
+    ]
+  }
+}

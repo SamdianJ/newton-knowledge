@@ -1,0 +1,487 @@
+[
+  {
+    "id": "map:kamino:backend_defaults",
+    "solver": "kamino",
+    "title_zh": "Config 构造时按 PADMM/DVI 和 sparsity 解析 Jacobian、预条件与线性求解器默认值。",
+    "paper_id": "paper:kamino-loops-2025",
+    "paper_ids": [
+      "paper:kamino-loops-2025",
+      "paper:proximal-admm-2024"
+    ],
+    "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+    "correspondence": "Config 构造时按 PADMM/DVI 和 sparsity 解析 Jacobian、预条件与线性求解器默认值。",
+    "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dynamics_solver",
+      "newton:1.7.0:kamino:config.sparse_jacobian",
+      "newton:1.7.0:kamino:config.dynamics.preconditioning",
+      "newton:1.7.0:kamino:config.dynamics.linear_solver_type"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 485,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L485"
+      }
+    ],
+    "symbols": [],
+    "mapping_kind": "implementation_fact",
+    "evidence_type": "source_checked"
+  },
+  {
+    "id": "map:kamino:padmm_controls",
+    "solver": "kamino",
+    "title_zh": "PADMM 的 rho_0/eta、三种残差容差与最大迭代共同控制数值求解。",
+    "paper_id": "paper:kamino-loops-2025",
+    "paper_ids": [
+      "paper:kamino-loops-2025",
+      "paper:proximal-admm-2024"
+    ],
+    "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+    "correspondence": "PADMM 的 rho_0/eta、三种残差容差与最大迭代共同控制数值求解。",
+    "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.padmm.rho_0",
+      "newton:1.7.0:kamino:config.padmm.eta",
+      "newton:1.7.0:kamino:config.padmm.max_iterations",
+      "newton:1.7.0:kamino:config.padmm.primal_tolerance",
+      "newton:1.7.0:kamino:config.padmm.dual_tolerance",
+      "newton:1.7.0:kamino:config.padmm.compl_tolerance"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 469,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L469"
+      }
+    ],
+    "symbols": [],
+    "mapping_kind": "implementation_fact",
+    "evidence_type": "source_checked"
+  },
+  {
+    "id": "map:kamino:dvi_controls",
+    "solver": "kamino",
+    "title_zh": "DVI 外层交替迭代与单边投影 sweeps 是两层预算，不等同于 PADMM iterations。",
+    "paper_id": "paper:kamino-loops-2025",
+    "paper_ids": [
+      "paper:kamino-loops-2025",
+      "paper:proximal-admm-2024"
+    ],
+    "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+    "correspondence": "DVI 外层交替迭代与单边投影 sweeps 是两层预算，不等同于 PADMM iterations。",
+    "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+      "newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration",
+      "newton:1.7.0:kamino:config.dvi.omega"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 797,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L797"
+      }
+    ],
+    "symbols": [],
+    "mapping_kind": "implementation_fact",
+    "evidence_type": "source_checked"
+  },
+  {
+    "id": "map:kamino:stabilization",
+    "solver": "kamino",
+    "title_zh": "alpha/beta/gamma 分别控制双边关节、单边限位、单边接触稳定化。",
+    "paper_id": "paper:kamino-loops-2025",
+    "paper_ids": [
+      "paper:kamino-loops-2025",
+      "paper:proximal-admm-2024"
+    ],
+    "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+    "correspondence": "alpha/beta/gamma 分别控制双边关节、单边限位、单边接触稳定化。",
+    "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.constraints.alpha",
+      "newton:1.7.0:kamino:config.constraints.beta",
+      "newton:1.7.0:kamino:config.constraints.gamma",
+      "newton:1.7.0:kamino:config.constraints.delta"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 225,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L225"
+      }
+    ],
+    "symbols": [],
+    "mapping_kind": "implementation_fact",
+    "evidence_type": "source_checked"
+  },
+  {
+    "id": "map:kamino:diagnostics",
+    "solver": "kamino",
+    "title_zh": "status 总是维护",
+    "paper_id": "paper:kamino-loops-2025",
+    "paper_ids": [
+      "paper:kamino-loops-2025",
+      "paper:proximal-admm-2024"
+    ],
+    "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+    "correspondence": "status 总是维护；collect_solver_info 控制额外统计而非 status 是否存在。",
+    "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.collect_solver_info",
+      "newton:1.7.0:kamino:config.compute_solution_metrics"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "docs/solvers/kamino.rst",
+        "line": 125,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L125"
+      }
+    ],
+    "symbols": [],
+    "mapping_kind": "implementation_fact",
+    "evidence_type": "source_checked"
+  },
+  {
+    "id": "map:kamino:restrictions",
+    "solver": "kamino",
+    "title_zh": "DVI 预条件、PADMM 自适应罚参数与稀疏设置受显式校验约束。",
+    "paper_id": "paper:kamino-loops-2025",
+    "paper_ids": [
+      "paper:kamino-loops-2025",
+      "paper:proximal-admm-2024"
+    ],
+    "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+    "correspondence": "DVI 预条件、PADMM 自适应罚参数与稀疏设置受显式校验约束。",
+    "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.dynamics.preconditioning",
+      "newton:1.7.0:kamino:config.padmm.penalty_update_method",
+      "newton:1.7.0:kamino:config.sparse_dynamics"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 467,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L467"
+      }
+    ],
+    "symbols": [],
+    "mapping_kind": "implementation_fact",
+    "evidence_type": "source_checked"
+  },
+  {
+    "id": "map:kamino:padmm_variables_desaxce",
+    "solver": "kamino",
+    "title_zh": "PADMM 变量分裂与 De Saxcé 修正",
+    "paper_id": "paper:proximal-admm-2024",
+    "paper_ids": [
+      "paper:proximal-admm-2024",
+      "paper:kamino-loops-2025"
+    ],
+    "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-B/C，式(32)–(36)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.23 · VI-F，式(165)–(166)；p.24 式(167a)](../../sources/papers/kamino-loops-2025/paper.pdf#page=23)",
+    "correspondence": "PADMM 中 x 是无约束冲量迭代，y 是投影后的可行冲量，z 是使二者一致的对偶变量，s 是 De Saxcé 速度修正；它们不是刚体位置。2024 的 f/y/z 分裂在 2025 报告中扩展为含双边关节、限位和接触的最大坐标系统。当前 _step 先调用 _update_desaxce_and_velocity_bias，以接触局部切向滑移估计法向修正并构造全体约束的线性右端；只有接触块需要该摩擦修正。",
+    "boundary": "变量在当前求解器内可经对角预条件缩放，不能直接把 x/y 当成最终物理冲量。当前融合 kernel、可选加速和 GPU 批处理是实现细节，不是论文代码逐行复现；非接触双边约束不因此变成摩擦锥。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.padmm.eta",
+      "newton:1.7.0:kamino:config.padmm.rho_0",
+      "newton:1.7.0:kamino:config.dynamics.preconditioning"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 562,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L562"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 955,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L955"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 395,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L395"
+      }
+    ],
+    "symbols": [
+      {
+        "name": "PADMMSolver._step",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 562,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L562"
+      },
+      {
+        "name": "PADMMSolver._update_desaxce_and_velocity_bias",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 955,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L955"
+      },
+      {
+        "name": "_compute_desaxce_correction",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 395,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L395"
+      }
+    ],
+    "mapping_kind": "mechanism_correspondence",
+    "evidence_type": "curated_mapping"
+  },
+  {
+    "id": "map:kamino:padmm_linear_subproblem",
+    "solver": "kamino",
+    "title_zh": "近端线性子问题与 Delassus 求解",
+    "paper_id": "paper:proximal-admm-2024",
+    "paper_ids": [
+      "paper:proximal-admm-2024",
+      "paper:kamino-loops-2025"
+    ],
+    "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-C，式(36a)、(37)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.24 · VI-F，式(167b)、(168)](../../sources/papers/kamino-loops-2025/paper.pdf#page=24)",
+    "correspondence": "近端项 eta 与增广罚参数 rho 共同正则化线性子问题。在未缩放记法下，(D+(eta+rho)I)x = -v_f-s+eta*x_prev+rho*y_prev+z_prev。当前 _compute_velocity_bias 的符号与该右端一致；_update_unconstrained_solution 调用 problem._delassus.solve，_update_regularization 管理对应正则项。线性求解器/稀疏选项属于 dynamics 配置，eta/rho 不是材料接触刚度。",
+    "boundary": "该式解释 PADMM 的基本非加速迭代；当前默认启用加速，实际迭代按加速分支阅读。预条件和自适应罚参数也需按当前分支读代码。2024 的 G+R 与 2025 的 D 记号不应直接当成同名数组；当前 Delassus 对象还包含关节、限位及驱动相关约束。未复现论文性能。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.padmm.eta",
+      "newton:1.7.0:kamino:config.padmm.rho_0",
+      "newton:1.7.0:kamino:config.dynamics.linear_solver_type",
+      "newton:1.7.0:kamino:config.sparse_dynamics"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 447,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L447"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 995,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L995"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 527,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L527"
+      }
+    ],
+    "symbols": [
+      {
+        "name": "_compute_velocity_bias",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 447,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L447"
+      },
+      {
+        "name": "PADMMSolver._update_unconstrained_solution",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 995,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L995"
+      },
+      {
+        "name": "PADMMSolver._update_regularization",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 527,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L527"
+      }
+    ],
+    "mapping_kind": "mechanism_correspondence",
+    "evidence_type": "curated_mapping"
+  },
+  {
+    "id": "map:kamino:padmm_projection_dual",
+    "solver": "kamino",
+    "title_zh": "可行集合投影与对偶变量更新",
+    "paper_id": "paper:proximal-admm-2024",
+    "paper_ids": [
+      "paper:proximal-admm-2024",
+      "paper:kamino-loops-2025"
+    ],
+    "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-C，式(36b/c)、(38)–(39)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.24 · VI-F，式(167c/d)、(169)](../../sources/papers/kamino-loops-2025/paper.pdf#page=24)",
+    "correspondence": "基本迭代把 x-z_prev/rho 投影到可行集得到 y，再以 z=z_prev+rho*(y-x) 更新对偶变量。当前 _update_projection_argument 准备投影输入，_project_to_feasible_cone 分别处理有界乘子、非负限位和 Coulomb 接触锥；无界双边乘子不需要同样的锥截断。make_update_dual_variables_and_compute_primal_dual_residuals 实现 z 更新与残差。",
+    "boundary": "论文式展示基本迭代；当前加速/松弛路径、批量约束布局和 effort-limited implicit PD 的有界乘子扩展必须从源码辨识。PADMM 的全局线性子问题加投影，不等同于 DVI 每次局部 PGS 扫描。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.padmm.rho_0",
+      "newton:1.7.0:kamino:config.padmm.max_iterations"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 1009,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1009"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 617,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L617"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 698,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+      }
+    ],
+    "symbols": [
+      {
+        "name": "PADMMSolver._update_projection_argument",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 1009,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1009"
+      },
+      {
+        "name": "_project_to_feasible_cone",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 617,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L617"
+      },
+      {
+        "name": "make_update_dual_variables_and_compute_primal_dual_residuals",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 698,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+      }
+    ],
+    "mapping_kind": "mechanism_correspondence",
+    "evidence_type": "curated_mapping",
+    "local_experiments": [
+      {
+        "record_id": "lab:kamino_drive_effort_paths",
+        "scope": "单 revolute 的正反饱和力矩与有界 implicit PD 输出，记录实际路由及报告 effort",
+        "limitation": "未隔离证明投影 kernel 或论文算法；未验证无饱和跟踪、其他关节及所有停止容差"
+      }
+    ],
+    "unvalidated_scope": [
+      "未隔离证明投影 kernel 或论文算法；未验证无饱和跟踪、其他关节及所有停止容差"
+    ],
+    "validation_status": "partial_local_evidence"
+  },
+  {
+    "id": "map:kamino:physical_residuals_backend_boundary",
+    "solver": "kamino",
+    "title_zh": "停止残差的物理单位与 DVI 实现边界",
+    "paper_id": "paper:proximal-admm-2024",
+    "paper_ids": [
+      "paper:proximal-admm-2024",
+      "paper:kamino-loops-2025"
+    ],
+    "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-D，式(40)–(43)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.24 · VI-F，式(170a–c)](../../sources/papers/kamino-loops-2025/paper.pdf#page=24)",
+    "correspondence": "论文用原始共识、对偶变化和互补性残差检查迭代。当前 PADMM 报告 r_p=||P(x-y)||inf（冲量），r_d=||P^-1[eta*Δx+rho*Δy]||inf（速度），r_c 为不等式块冲量与速度内积绝对值最大值（能量）。_update_convergence_check 对照各自容差，status 给每 world 的终态。DVI 当前 solve/_solve_dense_inequality_pgs 则组合双边直接解与单边投影扫描，其 r_p 是物理冲量锥投影距离，r_d 是对偶锥距离/双边速度违反，r_c 是互补内积。",
+    "boundary": "三个残差都是物理量的绝对最大值，不除以约束数或参考范数，不能无量纲混合比较。PADMM 公式映射不证明 DVI 逐行复现上述论文；DVI 的定义依据当前 docs/solvers/kamino.rst 和源码。收敛标记与有限步轨迹精度/物理真实性不同，仍需实验。",
+    "parameter_ids": [
+      "newton:1.7.0:kamino:config.padmm.primal_tolerance",
+      "newton:1.7.0:kamino:config.padmm.dual_tolerance",
+      "newton:1.7.0:kamino:config.padmm.compl_tolerance",
+      "newton:1.7.0:kamino:config.dvi.omega"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 1203,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1203"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 698,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+        "line": 450,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L450"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+        "line": 698,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L698"
+      },
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "docs/solvers/kamino.rst",
+        "line": 111,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L111"
+      }
+    ],
+    "symbols": [
+      {
+        "name": "PADMMSolver._update_convergence_check",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+        "line": 1203,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1203"
+      },
+      {
+        "name": "make_update_dual_variables_and_compute_primal_dual_residuals",
+        "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+        "line": 698,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+      },
+      {
+        "name": "DVISolver.solve",
+        "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+        "line": 450,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L450"
+      },
+      {
+        "name": "DVISolver._solve_dense_inequality_pgs",
+        "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+        "line": 698,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L698"
+      },
+      {
+        "name": "Terminal residual definitions",
+        "path": "docs/solvers/kamino.rst",
+        "line": 111,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L111"
+      }
+    ],
+    "mapping_kind": "mechanism_correspondence",
+    "evidence_type": "curated_mapping",
+    "local_experiments": [
+      {
+        "record_id": "lab:kamino_backend_guided_contact",
+        "scope": "同一倾斜导轨单接触场景的 PADMM/DVI 配置组、实际状态和各自残差时间序列",
+        "limitation": "同名残差和收敛率不能直接比较准确性；未覆盖稀疏动态、复杂接触、性能或论文基准"
+      }
+    ],
+    "unvalidated_scope": [
+      "同名残差和收敛率不能直接比较准确性；未覆盖稀疏动态、复杂接触、性能或论文基准"
+    ],
+    "validation_status": "partial_local_evidence"
+  }
+]

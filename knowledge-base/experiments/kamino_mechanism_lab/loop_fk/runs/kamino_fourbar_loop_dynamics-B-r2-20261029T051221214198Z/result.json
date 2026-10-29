@@ -1,0 +1,30 @@
+{
+  "case_id": "kamino_fourbar_loop_dynamics",
+  "variant": "B",
+  "repeat": 2,
+  "run_id": "kamino_fourbar_loop_dynamics-B-r2-20261029T051221214198Z",
+  "started_utc": "20261029T051221214198Z",
+  "protocol_sha256": "9f84bd8d778405f698db1bb1a08dba90666ecce6e6458f4a35ecaa2fec28b13a",
+  "runner_sha256": "c6e1b4622ab4fa6771233c030328f634161e9374c0f02adfb829c9005c19c9cb",
+  "status": "completed",
+  "samples": 121,
+  "trajectory_sha256": "aa8509cb8c94b134148a36696f7c0a32f63103a4f904e8bb1547db10fd5e13c0",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "packages": {
+      "numpy": "2.5.4",
+      "warp-lang": "1.18.0",
+      "newton": "1.7.0"
+    },
+    "kamino_source": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\kamino\\solver_kamino.py",
+    "kamino_sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "source_lock_sha256": "26260a86a4431fabc27dde52d90343cf453ab35395d1d38413f1b23808692d39",
+    "installed_locked_python_files_verified": 809,
+    "installed_unlocked_python_paths": [],
+    "source_verified": true
+  },
+  "all_finite": true,
+  "scope": "FK samples are ordered pose queries, not time integration; loop dynamics samples include t=0 and all 120 steps."
+}

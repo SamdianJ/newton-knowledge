@@ -1,0 +1,125 @@
+[
+  {
+    "id": "claim:mujoco:defaults",
+    "solver": "mujoco",
+    "statement_zh": "构造值优先于模型 mujoco 自定义属性，再到注册/后端默认；None 不等于固定数值默认。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:iterations",
+      "newton:1.7.0:mujoco:integrator",
+      "newton:1.7.0:mujoco:solver"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+        "line": 1655,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1655"
+      }
+    ]
+  },
+  {
+    "id": "claim:mujoco:worlds",
+    "solver": "mujoco",
+    "statement_zh": "separate_worlds=None 时，实际分支为 not use_mujoco_cpu and model.world_count > 1。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:separate_worlds",
+      "newton:1.7.0:mujoco:use_mujoco_cpu"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+        "line": 4418,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4418"
+      }
+    ]
+  },
+  {
+    "id": "claim:mujoco:integration",
+    "solver": "mujoco",
+    "statement_zh": "Newton 注册的默认积分器是 implicitfast，不应套用原生 MuJoCo 默认 Euler。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:integrator"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+        "line": 1844,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L1844"
+      }
+    ]
+  },
+  {
+    "id": "claim:mujoco:contact_source",
+    "solver": "mujoco",
+    "statement_zh": "外部 Newton contacts 只由 MuJoCo Warp 的 use_mujoco_contacts=False 分支转换并消费；native CPU 不消费传入 contacts，仍使用原生检测。约束响应均由 MuJoCo 负责。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:use_mujoco_contacts",
+      "newton:1.7.0:mujoco:use_mujoco_cpu"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+        "line": 4583,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4583"
+      }
+    ]
+  },
+  {
+    "id": "claim:mujoco:capacity",
+    "solver": "mujoco",
+    "statement_zh": "nconmax/njmax 控制容量而非数值收敛预算，初始化不足可能告警扩容。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:nconmax",
+      "newton:1.7.0:mujoco:njmax",
+      "newton:1.7.0:mujoco:iterations"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+        "line": 4117,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L4117"
+      }
+    ]
+  },
+  {
+    "id": "claim:mujoco:sleeping",
+    "solver": "mujoco",
+    "statement_zh": "sleeping 的有效组合受后端、优化方法、积分器与接触来源限制。",
+    "scope": "Newton 1.7.0 static source only",
+    "evidence_type": "source_checked",
+    "parameter_ids": [
+      "newton:1.7.0:mujoco:enable_sleeping",
+      "newton:1.7.0:mujoco:use_mujoco_cpu",
+      "newton:1.7.0:mujoco:solver",
+      "newton:1.7.0:mujoco:integrator"
+    ],
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+        "line": 6277,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/mujoco/solver_mujoco.py#L6277"
+      }
+    ]
+  }
+]

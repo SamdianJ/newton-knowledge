@@ -1,0 +1,3020 @@
+{
+  "status": "passed",
+  "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+  "runner_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+  "analyzer_sha256": "87660b578c9e3fa052e10d74a6cf63e61ebd5be3aadc3b1f57a3e55f0092ff3e",
+  "formal_runs": 8,
+  "passed_checks": 198,
+  "failed_checks": 0,
+  "cases": [
+    {
+      "id": "kamino_pd_unsaturated_step_reversal",
+      "title": "非饱和隐式PD：正负位置目标与中途反向",
+      "status": "passed",
+      "variants": [
+        {
+          "id": "A",
+          "runs": [
+            {
+              "run_id": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 1.6289164159188907e-07,
+                "joint_velocity_reference_max_abs_rad_s": 3.567481571820075e-07,
+                "reported_effort_reference_max_abs_Nm": 3.5768883401843254e-06,
+                "applied_wrench_reference_max_abs_Nm": 3.5768883401843254e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 5.239828586578369,
+                "reference_minimum_effort_margin_Nm": 5.239828535753123,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+                "joint_position_max_abs_rad": 0.09994486719369888,
+                "joint_velocity_max_abs_rad_s": 0.3632468581199646,
+                "full_tracking_rmse_rad": 0.05568558520363911,
+                "full_tracking_peak_error_rad": 0.1998271182179451,
+                "segment_end_error_max_abs_rad": 0.00011050552129746039,
+                "segment_end_velocity_max_abs_rad_s": 0.0005008926382288337,
+                "segment_constant_target_energy_max_positive_increment_J": 0.0
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 14,
+                "iterations_mean": 9.39125,
+                "residual_max": {
+                  "r_p": 5.1109158571982505e-11,
+                  "r_d": 9.99702294279814e-08,
+                  "r_c": 8.731265155326184e-10
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 6.24610976274198e-08,
+                  "r_c": 7.770348221195628e-14
+                },
+                "iteration_distribution": {
+                  "2": 1,
+                  "4": 23,
+                  "5": 1,
+                  "6": 54,
+                  "7": 65,
+                  "8": 99,
+                  "9": 254,
+                  "11": 149,
+                  "12": 104,
+                  "13": 30,
+                  "14": 20
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 1.6289164159188907e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 3.567481571820075e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.5768883401843254e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.5768883401843254e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239828586578369,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239828535753123,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 8.344650268554688e-07,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.09994486719369888,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.3632468581199646,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "segment_end_error_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.00011050552129746039,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "segment_end_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.0005008926382288337,
+                  "expected": {
+                    "max": 0.01
+                  }
+                },
+                {
+                  "name": "segment_constant_target_energy_max_positive_increment_J",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/trajectory.npz",
+              "raw_sha256": "70415b708272b6b100e4b94ce50df6bcc1a2c7cc29c54b8acb099c92109ae288",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  1
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/result.json"
+            },
+            {
+              "run_id": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 1.6289164159188907e-07,
+                "joint_velocity_reference_max_abs_rad_s": 3.567481571820075e-07,
+                "reported_effort_reference_max_abs_Nm": 3.5768883401843254e-06,
+                "applied_wrench_reference_max_abs_Nm": 3.5768883401843254e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 5.239828586578369,
+                "reference_minimum_effort_margin_Nm": 5.239828535753123,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+                "joint_position_max_abs_rad": 0.09994486719369888,
+                "joint_velocity_max_abs_rad_s": 0.3632468581199646,
+                "full_tracking_rmse_rad": 0.05568558520363911,
+                "full_tracking_peak_error_rad": 0.1998271182179451,
+                "segment_end_error_max_abs_rad": 0.00011050552129746039,
+                "segment_end_velocity_max_abs_rad_s": 0.0005008926382288337,
+                "segment_constant_target_energy_max_positive_increment_J": 0.0
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 14,
+                "iterations_mean": 9.39125,
+                "residual_max": {
+                  "r_p": 5.1109158571982505e-11,
+                  "r_d": 9.99702294279814e-08,
+                  "r_c": 8.731265155326184e-10
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 6.24610976274198e-08,
+                  "r_c": 7.770348221195628e-14
+                },
+                "iteration_distribution": {
+                  "2": 1,
+                  "4": 23,
+                  "5": 1,
+                  "6": 54,
+                  "7": 65,
+                  "8": 99,
+                  "9": 254,
+                  "11": 149,
+                  "12": 104,
+                  "13": 30,
+                  "14": 20
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 1.6289164159188907e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 3.567481571820075e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.5768883401843254e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.5768883401843254e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239828586578369,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239828535753123,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 8.344650268554688e-07,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.09994486719369888,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.3632468581199646,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "segment_end_error_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.00011050552129746039,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "segment_end_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.0005008926382288337,
+                  "expected": {
+                    "max": 0.01
+                  }
+                },
+                {
+                  "name": "segment_constant_target_energy_max_positive_increment_J",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/trajectory.npz",
+              "raw_sha256": "4a1b297e57469f84cf47ee0a70432e11da4b64e2cf65181f0eaa4b1f8d99a6a9",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  1
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/result.json"
+            }
+          ],
+          "repeat_checks": [
+            {
+              "name": "repeat_body_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_body_qd",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_qd",
+              "passed": true,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "runs": [
+            {
+              "run_id": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 1.564886915050856e-07,
+                "joint_velocity_reference_max_abs_rad_s": 2.7970910776442537e-07,
+                "reported_effort_reference_max_abs_Nm": 3.669388261240414e-06,
+                "applied_wrench_reference_max_abs_Nm": 3.669388261240414e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 5.239826202392578,
+                "reference_minimum_effort_margin_Nm": 5.239828535753123,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+                "joint_position_max_abs_rad": 0.09994489699602127,
+                "joint_velocity_max_abs_rad_s": 0.3632467985153198,
+                "full_tracking_rmse_rad": 0.055685583654182955,
+                "full_tracking_peak_error_rad": 0.1998271256685257,
+                "segment_end_error_max_abs_rad": 0.00011047571897507269,
+                "segment_end_velocity_max_abs_rad_s": 0.0005008758162148297,
+                "segment_constant_target_energy_max_positive_increment_J": 0.0
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 14,
+                "iterations_mean": 9.3875,
+                "residual_max": {
+                  "r_p": 5.1109158571982505e-11,
+                  "r_d": 9.99702294279814e-08,
+                  "r_c": 1.1236914732037917e-09
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 6.244452777082188e-08,
+                  "r_c": 4.144185266220096e-13
+                },
+                "iteration_distribution": {
+                  "2": 1,
+                  "4": 23,
+                  "5": 1,
+                  "6": 54,
+                  "7": 65,
+                  "8": 99,
+                  "9": 254,
+                  "10": 1,
+                  "11": 148,
+                  "12": 105,
+                  "13": 30,
+                  "14": 19
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 1.564886915050856e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 2.7970910776442537e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.669388261240414e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.669388261240414e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239826202392578,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239828535753123,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 8.344650268554688e-07,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.09994489699602127,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.3632467985153198,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "segment_end_error_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.00011047571897507269,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "segment_end_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.0005008758162148297,
+                  "expected": {
+                    "max": 0.01
+                  }
+                },
+                {
+                  "name": "segment_constant_target_energy_max_positive_increment_J",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/trajectory.npz",
+              "raw_sha256": "e39c25e4e4de46270561b4c87b755271a2c6706d0ee5c636dffad6ce0943a06d",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  1
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/result.json"
+            },
+            {
+              "run_id": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 1.564886915050856e-07,
+                "joint_velocity_reference_max_abs_rad_s": 2.7970910776442537e-07,
+                "reported_effort_reference_max_abs_Nm": 3.669388261240414e-06,
+                "applied_wrench_reference_max_abs_Nm": 3.669388261240414e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 5.239826202392578,
+                "reference_minimum_effort_margin_Nm": 5.239828535753123,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+                "joint_position_max_abs_rad": 0.09994489699602127,
+                "joint_velocity_max_abs_rad_s": 0.3632467985153198,
+                "full_tracking_rmse_rad": 0.055685583654182955,
+                "full_tracking_peak_error_rad": 0.1998271256685257,
+                "segment_end_error_max_abs_rad": 0.00011047571897507269,
+                "segment_end_velocity_max_abs_rad_s": 0.0005008758162148297,
+                "segment_constant_target_energy_max_positive_increment_J": 0.0
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 14,
+                "iterations_mean": 9.3875,
+                "residual_max": {
+                  "r_p": 5.1109158571982505e-11,
+                  "r_d": 9.99702294279814e-08,
+                  "r_c": 1.1236914732037917e-09
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 6.244452777082188e-08,
+                  "r_c": 4.144185266220096e-13
+                },
+                "iteration_distribution": {
+                  "2": 1,
+                  "4": 23,
+                  "5": 1,
+                  "6": 54,
+                  "7": 65,
+                  "8": 99,
+                  "9": 254,
+                  "10": 1,
+                  "11": 148,
+                  "12": 105,
+                  "13": 30,
+                  "14": 19
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 1.564886915050856e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 2.7970910776442537e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.669388261240414e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 3.669388261240414e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239826202392578,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 5.239828535753123,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 8.344650268554688e-07,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.09994489699602127,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.3632467985153198,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "segment_end_error_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.00011047571897507269,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "segment_end_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.0005008758162148297,
+                  "expected": {
+                    "max": 0.01
+                  }
+                },
+                {
+                  "name": "segment_constant_target_energy_max_positive_increment_J",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/trajectory.npz",
+              "raw_sha256": "fb60d363724d632d3f57eeb45493cecb642f15faaee7023676b491cd93f55bc1",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  1
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/result.json"
+            }
+          ],
+          "repeat_checks": [
+            {
+              "name": "repeat_body_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_body_qd",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_qd",
+              "passed": true,
+              "max_abs": 0.0
+            }
+          ]
+        }
+      ],
+      "paired_checks": [
+        {
+          "name": "mirrored_q_max_abs_sum_rad",
+          "repeat": 1,
+          "actual": 1.4156103134155273e-07,
+          "max": 1e-05,
+          "passed": true
+        },
+        {
+          "name": "mirrored_v_max_abs_sum_rad_s",
+          "repeat": 1,
+          "actual": 1.1920928955078125e-07,
+          "max": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "mirrored_q_max_abs_sum_rad",
+          "repeat": 2,
+          "actual": 1.4156103134155273e-07,
+          "max": 1e-05,
+          "passed": true
+        },
+        {
+          "name": "mirrored_v_max_abs_sum_rad_s",
+          "repeat": 2,
+          "actual": 1.1920928955078125e-07,
+          "max": 0.0001,
+          "passed": true
+        }
+      ],
+      "criteria": {
+        "joint_position_reference_max_abs_rad": 0.0005,
+        "joint_velocity_reference_max_abs_rad_s": 0.001,
+        "reported_effort_reference_max_abs_Nm": 0.002,
+        "applied_wrench_reference_max_abs_Nm": 0.002,
+        "reported_vs_applied_max_abs_Nm": 0.0001,
+        "minimum_effort_margin_Nm": 4,
+        "reference_minimum_effort_margin_Nm": 4,
+        "joint_anchor_origin_max_norm_m": 1e-05,
+        "joint_vs_body_angle_max_abs_rad": 1e-05,
+        "body_quaternion_norm_max_abs_error": 1e-05,
+        "joint_position_max_abs_rad": 0.2,
+        "joint_velocity_max_abs_rad_s": 1,
+        "actual_drive_path": [
+          2
+        ],
+        "finite": true,
+        "segment_end_error_max_abs_rad": 0.002,
+        "segment_end_velocity_max_abs_rad_s": 0.01,
+        "mirrored_q_max_abs_sum_rad": 1e-05,
+        "mirrored_v_max_abs_sum_rad_s": 0.0001,
+        "segment_constant_target_energy_max_positive_increment_J": 1e-05
+      },
+      "limitations": [
+        "Newton1.7.0 pinned commit only, CPU singleworld dense PADMM",
+        "No contacts/gravity/armature/friction or translation eccentricity",
+        "Only bounded implicit PD interior; saturation and runtime limit changes belong to separate experiments",
+        "Private state/config reads are observational instrumentation, not supported user API",
+        "Single critically damped gain setting and fixed dt, not universal PD tuning",
+        "Mirror comparison is symmetry evidence; scalar recurrence supplies independent correctness evidence"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/joints.py",
+          "line": 1033
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+          "line": 1999
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/constraints.py",
+          "line": 400
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/integrators/euler.py",
+          "line": 45
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/wrenches.py",
+          "line": 334
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 276
+        }
+      ],
+      "plot": "tracking/kamino_pd_unsaturated_step_reversal.svg"
+    },
+    {
+      "id": "kamino_pd_unsaturated_sine_modes",
+      "title": "动态目标与速度参考语义：POSITION_VELOCITY 对 POSITION",
+      "status": "passed",
+      "variants": [
+        {
+          "id": "A",
+          "runs": [
+            {
+              "run_id": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 1.597851777973558e-07,
+                "joint_velocity_reference_max_abs_rad_s": 4.254306163187227e-07,
+                "reported_effort_reference_max_abs_Nm": 6.246958337507991e-06,
+                "applied_wrench_reference_max_abs_Nm": 6.246958337507991e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 7.009787321090698,
+                "reference_minimum_effort_margin_Nm": 7.009786885339876,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+                "joint_position_max_abs_rad": 0.11446049809455872,
+                "joint_velocity_max_abs_rad_s": 0.3592399060726166,
+                "full_tracking_rmse_rad": 0.018845778356504476,
+                "full_tracking_peak_error_rad": 0.027439065915857506,
+                "steady_tracking_rmse_rad": 0.01937779844922247,
+                "steady_target_rmse_A_max_rad": 0.01937779844922247
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 14,
+                "iterations_mean": 12.2125,
+                "residual_max": {
+                  "r_p": 4.088733518425869e-10,
+                  "r_d": 9.971120817908741e-08,
+                  "r_c": 5.208293241132367e-10
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 8.06077338211253e-08,
+                  "r_c": 1.288787739722741e-11
+                },
+                "iteration_distribution": {
+                  "4": 2,
+                  "5": 1,
+                  "7": 2,
+                  "8": 5,
+                  "9": 64,
+                  "11": 74,
+                  "12": 173,
+                  "13": 469,
+                  "14": 10
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 1.597851777973558e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 4.254306163187227e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 6.246958337507991e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 6.246958337507991e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 7.009787321090698,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 7.009786885339876,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 8.344650268554688e-07,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.11446049809455872,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.3592399060726166,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "steady_target_rmse_A_max_rad",
+                  "passed": true,
+                  "actual": 0.01937779844922247,
+                  "expected": {
+                    "max": 0.03
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/trajectory.npz",
+              "raw_sha256": "bdf986d5156486e024ab7f2369260162054b4bbc5d9114ce44db250e50ba7ae5",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION_VELOCITY",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  3
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/result.json"
+            },
+            {
+              "run_id": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 1.597851777973558e-07,
+                "joint_velocity_reference_max_abs_rad_s": 4.254306163187227e-07,
+                "reported_effort_reference_max_abs_Nm": 6.246958337507991e-06,
+                "applied_wrench_reference_max_abs_Nm": 6.246958337507991e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 7.009787321090698,
+                "reference_minimum_effort_margin_Nm": 7.009786885339876,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+                "joint_position_max_abs_rad": 0.11446049809455872,
+                "joint_velocity_max_abs_rad_s": 0.3592399060726166,
+                "full_tracking_rmse_rad": 0.018845778356504476,
+                "full_tracking_peak_error_rad": 0.027439065915857506,
+                "steady_tracking_rmse_rad": 0.01937779844922247,
+                "steady_target_rmse_A_max_rad": 0.01937779844922247
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 14,
+                "iterations_mean": 12.2125,
+                "residual_max": {
+                  "r_p": 4.088733518425869e-10,
+                  "r_d": 9.971120817908741e-08,
+                  "r_c": 5.208293241132367e-10
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 8.06077338211253e-08,
+                  "r_c": 1.288787739722741e-11
+                },
+                "iteration_distribution": {
+                  "4": 2,
+                  "5": 1,
+                  "7": 2,
+                  "8": 5,
+                  "9": 64,
+                  "11": 74,
+                  "12": 173,
+                  "13": 469,
+                  "14": 10
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 1.597851777973558e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 4.254306163187227e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 6.246958337507991e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 6.246958337507991e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 7.009787321090698,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 7.009786885339876,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 8.344650268554688e-07,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.11446049809455872,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.3592399060726166,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "steady_target_rmse_A_max_rad",
+                  "passed": true,
+                  "actual": 0.01937779844922247,
+                  "expected": {
+                    "max": 0.03
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/trajectory.npz",
+              "raw_sha256": "ab1f1911cc523e8df2a9bd133b7d3acd93f4019de69534a9589b151a16c1aa59",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION_VELOCITY",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  3
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/result.json"
+            }
+          ],
+          "repeat_checks": [
+            {
+              "name": "repeat_body_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_body_qd",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_qd",
+              "passed": true,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "runs": [
+            {
+              "run_id": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z",
+              "repeat": 1,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 2.209854401136191e-07,
+                "joint_velocity_reference_max_abs_rad_s": 4.94490993173391e-07,
+                "reported_effort_reference_max_abs_Nm": 8.114365353417696e-06,
+                "applied_wrench_reference_max_abs_Nm": 8.114365353417696e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 9.29639983177185,
+                "reference_minimum_effort_margin_Nm": 9.29640121819982,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 1.1324882507324219e-06,
+                "joint_position_max_abs_rad": 0.07502641528844833,
+                "joint_velocity_max_abs_rad_s": 0.22559790313243866,
+                "full_tracking_rmse_rad": 0.061900983956331625,
+                "full_tracking_peak_error_rad": 0.0946544635711464,
+                "steady_tracking_rmse_rad": 0.06645294668070098,
+                "steady_target_rmse_B_max_rad": 0.06645294668070098
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 13,
+                "iterations_mean": 11.3225,
+                "residual_max": {
+                  "r_p": 2.5554581020714728e-11,
+                  "r_d": 9.971133607677984e-08,
+                  "r_c": 1.1351226208988763e-10
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 8.909740500939733e-08,
+                  "r_c": 1.2408509983408145e-11
+                },
+                "iteration_distribution": {
+                  "2": 2,
+                  "4": 2,
+                  "6": 1,
+                  "7": 2,
+                  "8": 9,
+                  "9": 122,
+                  "11": 143,
+                  "12": 464,
+                  "13": 55
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 2.209854401136191e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 4.94490993173391e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 8.114365353417696e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 8.114365353417696e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 9.29639983177185,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 9.29640121819982,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 1.1324882507324219e-06,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.07502641528844833,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.22559790313243866,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "steady_target_rmse_B_max_rad",
+                  "passed": true,
+                  "actual": 0.06645294668070098,
+                  "expected": {
+                    "max": 0.08
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/trajectory.npz",
+              "raw_sha256": "a6893f9e68b03fa35a3294c6541e02a312530b8e36174cb0ab4b471925b19c3d",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  1
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/result.json"
+            },
+            {
+              "run_id": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z",
+              "run": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z",
+              "repeat": 2,
+              "status": "passed",
+              "metrics": {
+                "joint_position_reference_max_abs_rad": 2.209854401136191e-07,
+                "joint_velocity_reference_max_abs_rad_s": 4.94490993173391e-07,
+                "reported_effort_reference_max_abs_Nm": 8.114365353417696e-06,
+                "applied_wrench_reference_max_abs_Nm": 8.114365353417696e-06,
+                "reported_vs_applied_max_abs_Nm": 0.0,
+                "minimum_effort_margin_Nm": 9.29639983177185,
+                "reference_minimum_effort_margin_Nm": 9.29640121819982,
+                "joint_anchor_origin_max_norm_m": 0.0,
+                "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+                "body_quaternion_norm_max_abs_error": 1.1324882507324219e-06,
+                "joint_position_max_abs_rad": 0.07502641528844833,
+                "joint_velocity_max_abs_rad_s": 0.22559790313243866,
+                "full_tracking_rmse_rad": 0.061900983956331625,
+                "full_tracking_peak_error_rad": 0.0946544635711464,
+                "steady_tracking_rmse_rad": 0.06645294668070098,
+                "steady_target_rmse_B_max_rad": 0.06645294668070098
+              },
+              "solver_diagnostics": {
+                "converged_fraction": 1.0,
+                "all_steps_converged": true,
+                "iterations_max": 13,
+                "iterations_mean": 11.3225,
+                "residual_max": {
+                  "r_p": 2.5554581020714728e-11,
+                  "r_d": 9.971133607677984e-08,
+                  "r_c": 1.1351226208988763e-10
+                },
+                "residual_final": {
+                  "r_p": 0.0,
+                  "r_d": 8.909740500939733e-08,
+                  "r_c": 1.2408509983408145e-11
+                },
+                "iteration_distribution": {
+                  "2": 2,
+                  "4": 2,
+                  "6": 1,
+                  "7": 2,
+                  "8": 9,
+                  "9": 122,
+                  "11": 143,
+                  "12": 464,
+                  "13": 55
+                }
+              },
+              "checks": [
+                {
+                  "name": "archive_hashes",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "installed_source_809",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "sample_counts",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "finite_physical_and_poststep_status",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_model",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "frozen_solver_actual_values",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "actual_drive_path",
+                  "passed": true,
+                  "actual": [
+                    2
+                  ],
+                  "expected": [
+                    2
+                  ]
+                },
+                {
+                  "name": "command_schedule",
+                  "passed": true,
+                  "actual": null,
+                  "expected": null
+                },
+                {
+                  "name": "joint_position_reference_max_abs_rad",
+                  "passed": true,
+                  "actual": 2.209854401136191e-07,
+                  "expected": {
+                    "max": 0.0005
+                  }
+                },
+                {
+                  "name": "joint_velocity_reference_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 4.94490993173391e-07,
+                  "expected": {
+                    "max": 0.001
+                  }
+                },
+                {
+                  "name": "reported_effort_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 8.114365353417696e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "applied_wrench_reference_max_abs_Nm",
+                  "passed": true,
+                  "actual": 8.114365353417696e-06,
+                  "expected": {
+                    "max": 0.002
+                  }
+                },
+                {
+                  "name": "reported_vs_applied_max_abs_Nm",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 0.0001
+                  }
+                },
+                {
+                  "name": "minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 9.29639983177185,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "reference_minimum_effort_margin_Nm",
+                  "passed": true,
+                  "actual": 9.29640121819982,
+                  "expected": {
+                    "min": 4
+                  }
+                },
+                {
+                  "name": "joint_anchor_origin_max_norm_m",
+                  "passed": true,
+                  "actual": 0.0,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_vs_body_angle_max_abs_rad",
+                  "passed": true,
+                  "actual": 8.940696716308594e-08,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "body_quaternion_norm_max_abs_error",
+                  "passed": true,
+                  "actual": 1.1324882507324219e-06,
+                  "expected": {
+                    "max": 1e-05
+                  }
+                },
+                {
+                  "name": "joint_position_max_abs_rad",
+                  "passed": true,
+                  "actual": 0.07502641528844833,
+                  "expected": {
+                    "max": 0.2
+                  }
+                },
+                {
+                  "name": "joint_velocity_max_abs_rad_s",
+                  "passed": true,
+                  "actual": 0.22559790313243866,
+                  "expected": {
+                    "max": 1
+                  }
+                },
+                {
+                  "name": "steady_target_rmse_B_max_rad",
+                  "passed": true,
+                  "actual": 0.06645294668070098,
+                  "expected": {
+                    "max": 0.08
+                  }
+                }
+              ],
+              "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/trajectory.npz",
+              "raw_sha256": "8c0588473b7111d1d16c3abd3870254b78ce7f259be22f2673d5e7ac5525748f",
+              "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+              "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+              "config": {
+                "solver": {
+                  "sparse_jacobian": false,
+                  "sparse_dynamics": false,
+                  "use_collision_detector": false,
+                  "use_fk_solver": false,
+                  "collision_detector": null,
+                  "constraints": {
+                    "alpha": 0.01,
+                    "beta": 0.01,
+                    "gamma": 0.01,
+                    "delta": 1e-06
+                  },
+                  "dynamics": {
+                    "preconditioning": true,
+                    "linear_solver_type": "LLTB",
+                    "linear_solver_kwargs": {},
+                    "cull_speculative_contacts": true
+                  },
+                  "padmm": {
+                    "primal_tolerance": 1e-07,
+                    "dual_tolerance": 1e-07,
+                    "compl_tolerance": 1e-07,
+                    "restart_tolerance": 0.999,
+                    "eta": 1e-05,
+                    "rho_0": 1.0,
+                    "rho_min": 1e-05,
+                    "a_0": 1.0,
+                    "alpha": 10.0,
+                    "tau": 1.5,
+                    "max_iterations": 200,
+                    "penalty_update_freq": 1,
+                    "penalty_update_method": "fixed",
+                    "linear_solver_tolerance": 0.0,
+                    "linear_solver_tolerance_ratio": 0.0,
+                    "use_acceleration": true,
+                    "use_graph_conditionals": false,
+                    "warmstart_mode": "containers",
+                    "warmstart_scale": 0.9,
+                    "contact_warmstart_method": "key_and_position"
+                  },
+                  "dvi": {
+                    "tolerance": 1e-05,
+                    "regularization": 1e-06,
+                    "omega": 1.0,
+                    "max_alternating_iterations": 24,
+                    "inequality_sweeps_per_iteration": 2,
+                    "use_schur_complement": false,
+                    "bilateral_solve_interval": 1,
+                    "tangential_warmstart_scale": 0.97,
+                    "bilateral_solver_type": "LLTB",
+                    "bilateral_solver_kwargs": {},
+                    "warmstart_mode": "containers",
+                    "contact_warmstart_method": "key_and_position_with_tangential_net_force"
+                  },
+                  "fk": null,
+                  "materials": {
+                    "friction_mix_mode": "average",
+                    "restitution_mix_mode": "min"
+                  },
+                  "rotation_correction": "twopi",
+                  "integrator": "euler",
+                  "dynamics_solver": "padmm",
+                  "angular_velocity_damping": 0,
+                  "collect_solver_info": false,
+                  "compute_solution_metrics": false
+                },
+                "protocol_to_api_mapping": {
+                  "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+                },
+                "target_mode": "POSITION",
+                "body_mass": [
+                  1.0
+                ],
+                "body_inertia": [
+                  [
+                    [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      1.0
+                    ]
+                  ]
+                ],
+                "body_com": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "joint_target_mode": [
+                  1
+                ],
+                "dof_act_paths": [
+                  2
+                ],
+                "joint_target_ke": [
+                  25.0
+                ],
+                "joint_target_kd": [
+                  10.0
+                ],
+                "joint_effort_limit": [
+                  10.0
+                ]
+              },
+              "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/result.json"
+            }
+          ],
+          "repeat_checks": [
+            {
+              "name": "repeat_body_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_body_qd",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_q",
+              "passed": true,
+              "max_abs": 0.0
+            },
+            {
+              "name": "repeat_joint_qd",
+              "passed": true,
+              "max_abs": 0.0
+            }
+          ]
+        }
+      ],
+      "paired_checks": [
+        {
+          "name": "steady_rmse_relative_improvement_A_min",
+          "repeat": 1,
+          "actual": 0.7083982062927828,
+          "min": 0.3,
+          "passed": true
+        },
+        {
+          "name": "steady_rmse_relative_improvement_A_min",
+          "repeat": 2,
+          "actual": 0.7083982062927828,
+          "min": 0.3,
+          "passed": true
+        }
+      ],
+      "criteria": {
+        "joint_position_reference_max_abs_rad": 0.0005,
+        "joint_velocity_reference_max_abs_rad_s": 0.001,
+        "reported_effort_reference_max_abs_Nm": 0.002,
+        "applied_wrench_reference_max_abs_Nm": 0.002,
+        "reported_vs_applied_max_abs_Nm": 0.0001,
+        "minimum_effort_margin_Nm": 4,
+        "reference_minimum_effort_margin_Nm": 4,
+        "joint_anchor_origin_max_norm_m": 1e-05,
+        "joint_vs_body_angle_max_abs_rad": 1e-05,
+        "body_quaternion_norm_max_abs_error": 1e-05,
+        "joint_position_max_abs_rad": 0.2,
+        "joint_velocity_max_abs_rad_s": 1,
+        "actual_drive_path": [
+          2
+        ],
+        "finite": true,
+        "steady_target_rmse_A_max_rad": 0.03,
+        "steady_target_rmse_B_max_rad": 0.08,
+        "steady_rmse_relative_improvement_A_min": 0.3
+      },
+      "limitations": [
+        "Newton1.7.0 pinned commit only, CPU singleworld dense PADMM",
+        "No contacts/gravity/armature/friction or translation eccentricity",
+        "Only bounded implicit PD interior; saturation and runtime limit changes belong to separate experiments",
+        "Private state/config reads are observational instrumentation, not supported user API",
+        "One smooth frequency/amplitude only; no claim of arbitrary-bandwidth tracking",
+        "Comparison tests target-mode semantics, not solver backend ranking"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/joints.py",
+          "line": 1033
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+          "line": 1999
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/constraints.py",
+          "line": 400
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/integrators/euler.py",
+          "line": 45
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/wrenches.py",
+          "line": 334
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 276
+        }
+      ],
+      "plot": "tracking/kamino_pd_unsaturated_sine_modes.svg"
+    }
+  ],
+  "excluded_runs": [
+    {
+      "run_id": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z",
+      "status": "failed",
+      "reason": "ValueError('Unknown config field constraints.preconditioning')",
+      "runner_sha256": "c9c293ab70fad3478450aab6b95a426cd29833d53c6bc15e75fbc4fe857c6b08"
+    }
+  ],
+  "acceptance_scope": "Physical acceptance only; strict solver-convergence flags are independently reported and never inferred from physical agreement."
+}

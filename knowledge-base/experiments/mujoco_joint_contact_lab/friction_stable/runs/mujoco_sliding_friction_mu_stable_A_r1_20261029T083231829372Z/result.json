@@ -1,0 +1,26 @@
+{
+  "case": "mujoco_sliding_friction_mu_stable",
+  "variant": "A",
+  "repeat": 1,
+  "run_id": "mujoco_sliding_friction_mu_stable_A_r1_20261029T083231829372Z",
+  "run_directory": "experiments/mujoco_joint_contact_lab/friction_stable/runs/mujoco_sliding_friction_mu_stable_A_r1_20261029T083231829372Z",
+  "status": "completed",
+  "started_at": "2026-10-29T08:32:31.834826+00:00",
+  "runner_sha256": "5618113797309194a7318b8501fcf6a52d64dbeffa3d33913f94e9c552805fd3",
+  "protocol_sha256": "0205504e415b5942cfc98a286841597ddd10b9d42c62fc06c0eb347b97865cfb",
+  "samples": 301,
+  "raw_sha256": "30828d6c03fd4816073995379f06b0e2c26b381966067c825ed971ba8e120a65",
+  "note": "Completion is not physical acceptance",
+  "finished_at": "2026-10-29T08:32:36.255623+00:00",
+  "files_sha256": {
+    "environment.json": "7433a8e146312db11c0f900510fe174263b7b721083eb73c36a4e1931cf7d915",
+    "installed-source-validation.json": "453ff6aac8be19bed1b8bbdf9b8c2e7d4f20cb7b7d3186219952e4708c8837e5",
+    "model.xml": "8cc7286c6efee444710a549b17b65c0be3a3d0a24c21e3eacae1c2ba1391dbda",
+    "protocol.json": "0205504e415b5942cfc98a286841597ddd10b9d42c62fc06c0eb347b97865cfb",
+    "resolved-config.json": "31dab0d3318f566d8396b6a352d463410c300e628d76bfe7789949ce66004917",
+    "run.log": "1843ab86c8160558a61beb5c182ecdc9746b9c2b98e6ab2230ff63d39357a531",
+    "runner.py": "5618113797309194a7318b8501fcf6a52d64dbeffa3d33913f94e9c552805fd3",
+    "scene.json": "b7a5ab94a93dc414a38c9db83722aea6d8f8555f0a9d94b2d6a0016d544d6423",
+    "trajectory.npz": "30828d6c03fd4816073995379f06b0e2c26b381966067c825ed971ba8e120a65"
+  }
+}

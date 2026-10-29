@@ -1,0 +1,3262 @@
+{
+  "id": "kamino",
+  "name": "Kamino",
+  "version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "parameters": [
+    {
+      "id": "newton:1.7.0:kamino:model",
+      "solver": "kamino",
+      "name": "model",
+      "owner": "newton.solvers.SolverKamino.__init__",
+      "type": "Model",
+      "required": true,
+      "declared_default_expression": null,
+      "resolved_default": null,
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 736,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L736"
+      },
+      "documentation": "The Newton model for which to create the Kamino solver instance.",
+      "summary_zh": "The Newton model for which to create the Kamino solver instance.",
+      "units": "以源码字段说明为准",
+      "category": "solver_constructor",
+      "layer": "solver_constructor",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config",
+      "solver": "kamino",
+      "name": "config",
+      "owner": "newton.solvers.SolverKamino.__init__",
+      "type": "Config | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 737,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L737"
+      },
+      "documentation": "Explicit user-provided configurations for the Kamino solver.\n\n        If `None`, configurations will be parsed from the Newton model's\n        custom attributes using :meth:`SolverKamino.Config.from_model`,\n        e.g. to be loaded from USD assets. If that also fails, then\n        default configurations will be used.",
+      "summary_zh": "Explicit user-provided configurations for the Kamino solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_constructor",
+      "layer": "solver_constructor",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.sparse_jacobian",
+      "solver": "kamino",
+      "name": "config.sparse_jacobian",
+      "owner": "SolverKamino.Config",
+      "type": "bool | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "PADMM=False；DVI=True（未显式指定时）",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 191,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L191"
+      },
+      "documentation": "Whether to use a sparse Jacobian representation. When unspecified, defaults to `True` for DVI and `False`\n        for PADMM.",
+      "summary_zh": "None 时 DVI=True、PADMM=False；属于表示/后端组合设置。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.sparse_dynamics",
+      "solver": "kamino",
+      "name": "config.sparse_dynamics",
+      "owner": "SolverKamino.Config",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 197,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L197"
+      },
+      "documentation": "Flag to indicate whether the solver should use sparse data representations for the dynamics.",
+      "summary_zh": "启用稀疏动力学；要求 sparse_jacobian=True。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.use_collision_detector",
+      "solver": "kamino",
+      "name": "config.use_collision_detector",
+      "owner": "SolverKamino.Config",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 202,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L202"
+      },
+      "documentation": "Flag to indicate whether the Kamino-provided collision detector should be used.",
+      "summary_zh": "是否启用 Kamino 内部碰撞管线；默认 False 时由调用方提供 Newton contacts。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.use_fk_solver",
+      "solver": "kamino",
+      "name": "config.use_fk_solver",
+      "owner": "SolverKamino.Config",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 207,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L207"
+      },
+      "documentation": "Flag to indicate whether the Kamino-provided FK solver should be enabled.\n\n\n        The FK solver is used for computing consistent initial states given input\n        joint positions, joint velocities and optional base body poses and twists.\n\n        It is specifically designed to handle the presence of:\n        - kinematic loops\n        - passive joints\n        - over/under-actuation",
+      "summary_zh": "config 配置：Flag to indicate whether the Kamino-provided FK solver should be enabled.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector",
+      "solver": "kamino",
+      "name": "config.collision_detector",
+      "owner": "SolverKamino.Config",
+      "type": "CollisionDetectorConfig | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 220,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L220"
+      },
+      "documentation": "Configurations for the collision detector.\n\n        See :class:`CollisionDetectorConfig` for more details.\n\n        If `None`, the default configuration will be used.",
+      "summary_zh": "config 配置：Configurations for the collision detector.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.constraints",
+      "solver": "kamino",
+      "name": "config.constraints",
+      "owner": "SolverKamino.Config",
+      "type": "ConstraintStabilizationConfig | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 227,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L227"
+      },
+      "documentation": "Configurations for the constraint stabilization parameters.\n\n        See :class:`ConstraintStabilizationConfig` for more details.\n\n        If `None`, default values will be used.",
+      "summary_zh": "config 配置：Configurations for the constraint stabilization parameters.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dynamics",
+      "solver": "kamino",
+      "name": "config.dynamics",
+      "owner": "SolverKamino.Config",
+      "type": "ConstrainedDynamicsConfig | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 234,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L234"
+      },
+      "documentation": "Configurations for the constrained dynamics problem.\n\n        See :class:`ConstrainedDynamicsConfig` for more details.\n\n        If `None`, default values will be used.",
+      "summary_zh": "config 配置：Configurations for the constrained dynamics problem.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm",
+      "solver": "kamino",
+      "name": "config.padmm",
+      "owner": "SolverKamino.Config",
+      "type": "PADMMSolverConfig | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 241,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L241"
+      },
+      "documentation": "Configurations for the PADMM dynamics solver.\n\n        See :class:`PADMMSolverConfig` for more details.\n\n        If `None`, default values will be used.",
+      "summary_zh": "config 配置：Configurations for the PADMM dynamics solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi",
+      "solver": "kamino",
+      "name": "config.dvi",
+      "owner": "SolverKamino.Config",
+      "type": "DVISolverConfig | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 248,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L248"
+      },
+      "documentation": "Configurations for the DVI dynamics solver.\n\n        See :class:`DVISolverConfig` for more details.\n\n        If `None`, default values will be used.",
+      "summary_zh": "config 配置：Configurations for the DVI dynamics solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk",
+      "solver": "kamino",
+      "name": "config.fk",
+      "owner": "SolverKamino.Config",
+      "type": "ForwardKinematicsSolverConfig | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 255,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L255"
+      },
+      "documentation": "Configurations for the forward kinematics solver.\n\n        See :class:`ForwardKinematicsSolverConfig` for more details.\n\n        If `None`, default values will be used.",
+      "summary_zh": "config 配置：Configurations for the forward kinematics solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.materials",
+      "solver": "kamino",
+      "name": "config.materials",
+      "owner": "SolverKamino.Config",
+      "type": "MaterialManagerConfig | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 262,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L262"
+      },
+      "documentation": "Configurations for the material manager and material property mixing.\n        See :class:`MaterialManagerConfig` for more details.\n        If `None`, default values will be used.",
+      "summary_zh": "config 配置：Configurations for the material manager and material property mixing.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.rotation_correction",
+      "solver": "kamino",
+      "name": "config.rotation_correction",
+      "owner": "SolverKamino.Config",
+      "type": "Literal['twopi', 'continuous', 'none']",
+      "required": false,
+      "declared_default_expression": "'twopi'",
+      "resolved_default": "'twopi'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 269,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L269"
+      },
+      "documentation": "The rotation correction mode to use for rotational DoFs.\n\n        See :class:`JointCorrectionMode` for available options.\n        Defaults to `twopi`.",
+      "summary_zh": "config 配置：The rotation correction mode to use for rotational DoFs.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.integrator",
+      "solver": "kamino",
+      "name": "config.integrator",
+      "owner": "SolverKamino.Config",
+      "type": "Literal['euler', 'moreau']",
+      "required": false,
+      "declared_default_expression": "'euler'",
+      "resolved_default": "'euler'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 276,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L276"
+      },
+      "documentation": "The time-integrator to use for state integration. The ``\"moreau\"`` option requires\n        ``use_collision_detector=True``.\n\n\n        See available options in the `integrators` module.\n\n        Defaults to `\"euler\"`.",
+      "summary_zh": "Euler/Moreau；Moreau 要求内部碰撞检测，不应单独切换。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dynamics_solver",
+      "solver": "kamino",
+      "name": "config.dynamics_solver",
+      "owner": "SolverKamino.Config",
+      "type": "Literal['padmm', 'dvi']",
+      "required": false,
+      "declared_default_expression": "'padmm'",
+      "resolved_default": "'padmm'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 285,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L285"
+      },
+      "documentation": "The forward dynamics solver to use. Construct the config with this value\n        so solver-dependent defaults are initialized consistently. Defaults to\n        `\"padmm\"`.",
+      "summary_zh": "PADMM/DVI 后端选择；应在创建 Config 时指定，以一致解析依赖默认值。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.angular_velocity_damping",
+      "solver": "kamino",
+      "name": "config.angular_velocity_damping",
+      "owner": "SolverKamino.Config",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.0",
+      "resolved_default": "0.0",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 292,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L292"
+      },
+      "documentation": "A damping factor applied to the angular velocity of bodies during state integration.\n\n        This can help stabilize simulations with large time steps or high angular velocities.\n\n        Defaults to `0.0` (i.e. no damping).",
+      "summary_zh": "config 配置：A damping factor applied to the angular velocity of bodies during state integration.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collect_solver_info",
+      "solver": "kamino",
+      "name": "config.collect_solver_info",
+      "owner": "SolverKamino.Config",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 299,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L299"
+      },
+      "documentation": "Enables additional collection of solver convergence and performance information.\n\n        Per-world terminal status remains available through :attr:`SolverKamino.status`\n        when this option is disabled. Enabling detailed collection adds runtime and memory\n        overhead.\n\n        Defaults to `False`.",
+      "summary_zh": "收集额外诊断，有开销；status 在 False 时仍然存在。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.compute_solution_metrics",
+      "solver": "kamino",
+      "name": "config.compute_solution_metrics",
+      "owner": "SolverKamino.Config",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 308,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L308"
+      },
+      "documentation": "Enables/disables computation of solution metrics at each simulation step.\n\n        Enabling this option as it will significantly increase the runtime of the solver.\n\n        Defaults to `False`.",
+      "summary_zh": "config 配置：Enables/disables computation of solution metrics at each simulation step.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:reset.body_poses",
+      "solver": "kamino",
+      "name": "reset.body_poses",
+      "owner": "SolverKamino.ResetConfig",
+      "type": "ToDefault | Preserve | FromJointQ | FromActuatorQ",
+      "required": false,
+      "declared_default_expression": "ToDefault()",
+      "resolved_default": "ToDefault()",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 644,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L644"
+      },
+      "documentation": "Reset option for body poses:\n\n        - ToDefault: reset poses to their initial values.\n        - Preserve: preserve poses in the state container, assuming they are consistent.\n        - FromJointQ: extract actuator coordinates from joint coordinates, and compute consistent\n          body poses with a position-level forward kinematics solve.\n        - FromActuatorQ: compute consistent body poses for the prescribed actuator coordinates with\n          a position-level forward kinematics solve.",
+      "summary_zh": "reset 配置：Reset option for body poses:",
+      "units": "以源码字段说明为准",
+      "category": "reset_configuration",
+      "layer": "reset_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:reset.body_velocities",
+      "solver": "kamino",
+      "name": "reset.body_velocities",
+      "owner": "SolverKamino.ResetConfig",
+      "type": "ToDefault | Preserve | FromJointU | FromActuatorU",
+      "required": false,
+      "declared_default_expression": "ToDefault()",
+      "resolved_default": "ToDefault()",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 656,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L656"
+      },
+      "documentation": "Reset option for body velocities:\n\n        - ToDefault: reset velocities to zero.\n        - Preserve: if body poses are preserved, preserve velocities in the state container, assuming\n          they are consistent. Otherwise, behaves like FromJointU, transferring current joint velocities\n          in the state container, to the extent possible, to the new body poses.\n        - FromJointU: extract actuator velocities from joint velocities, and compute consistent body\n          velocities with a velocity-level forward kinematics solve.\n        - FromActuatorU: compute consistent body velocities for the prescribed actuator velocities with\n          a velocity-level forward kinematics solve.",
+      "summary_zh": "reset 配置：Reset option for body velocities:",
+      "units": "以源码字段说明为准",
+      "category": "reset_configuration",
+      "layer": "reset_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:reset.base_pose",
+      "solver": "kamino",
+      "name": "reset.base_pose",
+      "owner": "SolverKamino.ResetConfig",
+      "type": "ToDefault | Preserve | FromJointQ | FromBaseQ",
+      "required": false,
+      "declared_default_expression": "ToDefault()",
+      "resolved_default": "ToDefault()",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 670,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L670"
+      },
+      "documentation": "Reset option for the floating base pose:\n\n        - ToDefault: reset the base pose to its initial value.\n        - Preserve: preserve the current base pose, as read from current joint coordinates (if a base joint\n          was set) or body poses (otherwise).\n        - FromJointQ: read the base pose from joint coordinates, assuming a base joint was set. Behaves\n          like ToDefault otherwise (as a fallback).\n        - FromBaseQ: use the provided base pose.\n\n        Body poses and velocities are transformed (if needed) to match the prescribed base pose, while\n        preserving relative poses and velocities.\n        All options are ignored for worlds for which no base body is set.",
+      "summary_zh": "reset 配置：Reset option for the floating base pose:",
+      "units": "以源码字段说明为准",
+      "category": "reset_configuration",
+      "layer": "reset_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:reset.base_velocity",
+      "solver": "kamino",
+      "name": "reset.base_velocity",
+      "owner": "SolverKamino.ResetConfig",
+      "type": "ToDefault | Preserve | FromJointU | FromBaseU",
+      "required": false,
+      "declared_default_expression": "ToDefault()",
+      "resolved_default": "ToDefault()",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/solver_kamino.py",
+        "line": 686,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L686"
+      },
+      "documentation": "Reset option for the floating base velocity:\n\n        - ToDefault: reset the base velocity to zero.\n        - Preserve: preserve the current base velocity, as read from current joint velocities (if a base joint\n          was set) or body velocities (otherwise), up to transformation due to the new base pose if applicable.\n        - FromJointU: read the base velocity from joint velocities, assuming a base joint was set. Behaves\n          like ToDefault otherwise (as a fallback).\n        - FromBaseU: use the provided base velocity.\n\n        Body velocities are updated to match the prescribed base velocity, while preserving relative velocities.\n        All options are ignored for worlds for which no base body is set.",
+      "summary_zh": "reset 配置：Reset option for the floating base velocity:",
+      "units": "以源码字段说明为准",
+      "category": "reset_configuration",
+      "layer": "reset_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.pipeline",
+      "solver": "kamino",
+      "name": "config.collision_detector.pipeline",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "Literal['primitive', 'unified']",
+      "required": false,
+      "declared_default_expression": "'unified'",
+      "resolved_default": "'unified'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 83,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L83"
+      },
+      "documentation": "The type of collision-detection pipeline to use, either `primitive` or `unified`.\n\n    Defaults to `unified`.",
+      "summary_zh": "config.collision_detector 配置：The type of collision-detection pipeline to use, either `primitive` or `unified`.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.broadphase",
+      "solver": "kamino",
+      "name": "config.collision_detector.broadphase",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "Literal['nxn', 'sap', 'explicit']",
+      "required": false,
+      "declared_default_expression": "'explicit'",
+      "resolved_default": "'explicit'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 89,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L89"
+      },
+      "documentation": "The broad-phase collision-detection to use (`nxn`, `sap`, or `explicit`).\n\n    Defaults to `explicit`.",
+      "summary_zh": "config.collision_detector 配置：The broad-phase collision-detection to use (`nxn`, `sap`, or `explicit`).",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.bvtype",
+      "solver": "kamino",
+      "name": "config.collision_detector.bvtype",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "Literal['aabb', 'bs']",
+      "required": false,
+      "declared_default_expression": "'aabb'",
+      "resolved_default": "'aabb'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 95,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L95"
+      },
+      "documentation": "The type of bounding volume to use in the broad-phase.\n\n    Defaults to `aabb`.",
+      "summary_zh": "config.collision_detector 配置：The type of bounding volume to use in the broad-phase.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.max_contacts",
+      "solver": "kamino",
+      "name": "config.collision_detector.max_contacts",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "int | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 101,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L101"
+      },
+      "documentation": "Model-wide cap on contact buffer capacity during collision-detector\n    initialization.\n\n    When ``max_contacts_per_world`` is None, the geometry-based estimate is\n    capped at this value; otherwise this field is ignored.\n\n    Defaults to ``None``, leaving the geometry-based estimate uncapped.",
+      "summary_zh": "config.collision_detector 配置：Model-wide cap on contact buffer capacity during collision-detector",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.max_contacts_per_world",
+      "solver": "kamino",
+      "name": "config.collision_detector.max_contacts_per_world",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "int | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 110,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L110"
+      },
+      "documentation": "Per-world contact buffer capacity override.\n\n    When set, allocates ``max_contacts_per_world`` contacts for every world\n    (``num_worlds * max_contacts_per_world`` total), bypassing the\n    geometry-based estimate and ``max_contacts``.\n\n    Defaults to ``None``.",
+      "summary_zh": "config.collision_detector 配置：Per-world contact buffer capacity override.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.max_contacts_per_pair",
+      "solver": "kamino",
+      "name": "config.collision_detector.max_contacts_per_pair",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "int | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 119,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L119"
+      },
+      "documentation": "The maximum number of contacts to generate per candidate geom-pair.\n\n    Used to compute the total maximum contacts allocated for the model,\n    in conjunction with the total number of candidate geom-pairs.\n\n    Defaults to `DEFAULT_GEOM_PAIR_MAX_CONTACTS` (`12`) if unspecified.",
+      "summary_zh": "config.collision_detector 配置：The maximum number of contacts to generate per candidate geom-pair.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.max_triangle_pairs",
+      "solver": "kamino",
+      "name": "config.collision_detector.max_triangle_pairs",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "int | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 127,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L127"
+      },
+      "documentation": "The maximum number of triangle-primitive shape pairs to consider in the narrow-phase.\n\n    Used only when the model contains triangle meshes or heightfields.\n\n    Defaults to `DEFAULT_TRIANGLE_MAX_PAIRS` (`1_000_000`) if unspecified.",
+      "summary_zh": "config.collision_detector 配置：The maximum number of triangle-primitive shape pairs to consider in the narrow-phase.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.collision_detector.default_gap",
+      "solver": "kamino",
+      "name": "config.collision_detector.default_gap",
+      "owner": "kamino.config.CollisionDetectorConfig",
+      "type": "float | None",
+      "required": false,
+      "declared_default_expression": "None",
+      "resolved_default": "条件解析；由 Config.__post_init__ / from_model 补全，见默认策略。",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 134,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L134"
+      },
+      "documentation": "The default detection gap [m] applied as a floor to per-geometry gaps.\n\n    Defaults to `DEFAULT_GEOM_PAIR_CONTACT_GAP` (`0.0`) if unspecified.",
+      "summary_zh": "config.collision_detector 配置：The default detection gap [m] applied as a floor to per-geometry gaps.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.constraints.alpha",
+      "solver": "kamino",
+      "name": "config.constraints.alpha",
+      "owner": "kamino.config.ConstraintStabilizationConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.01",
+      "resolved_default": "0.01",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 234,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L234"
+      },
+      "documentation": "Global default Baumgarte stabilization parameter for bilateral joint constraints.\n\n    Must be in range `[0, 1.0]`.\n\n    Defaults to `0.01`.",
+      "summary_zh": "双边关节 Baumgarte 稳定化比例，范围 [0,1]。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.constraints.beta",
+      "solver": "kamino",
+      "name": "config.constraints.beta",
+      "owner": "kamino.config.ConstraintStabilizationConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.01",
+      "resolved_default": "0.01",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 241,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L241"
+      },
+      "documentation": "Global default Baumgarte stabilization parameter for unilateral joint-limit constraints.\n\n    Must be in range `[0, 1.0]`.\n\n    Defaults to `0.01`.",
+      "summary_zh": "单边关节限位 Baumgarte 稳定化比例，范围 [0,1]。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.constraints.gamma",
+      "solver": "kamino",
+      "name": "config.constraints.gamma",
+      "owner": "kamino.config.ConstraintStabilizationConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.01",
+      "resolved_default": "0.01",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 248,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L248"
+      },
+      "documentation": "Global default Baumgarte stabilization parameter for unilateral contact constraints.\n\n    Must be in range `[0, 1.0]`.\n\n    Defaults to `0.01`.",
+      "summary_zh": "单边接触 Baumgarte 稳定化比例，范围 [0,1]。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.constraints.delta",
+      "solver": "kamino",
+      "name": "config.constraints.delta",
+      "owner": "kamino.config.ConstraintStabilizationConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-06",
+      "resolved_default": "1e-06",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 255,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L255"
+      },
+      "documentation": "Contact penetration margin used for unilateral contact constraints.\n\n    Must be non-negative.\n\n    Defaults to `1.0e-6`.",
+      "summary_zh": "接触穿透容许 margin，非负，不能补偿碰撞漏检。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dynamics.preconditioning",
+      "solver": "kamino",
+      "name": "config.dynamics.preconditioning",
+      "owner": "kamino.config.ConstrainedDynamicsConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "PADMM=True；DVI=False（自动创建 dynamics 子配置时）",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 366,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L366"
+      },
+      "documentation": "Set to `True` to enable preconditioning of the dual problem.\n\n    Defaults to `True`.",
+      "summary_zh": "对偶预条件；DVI 必须为 False，直接 dataclass 默认与 Config 组合解析不同。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。 PADMM 默认 LLTB/预条件 True；DVI dense-dynamics 默认 LLTBRCM/False；DVI sparse-dynamics 默认 CR/False。",
+      "conditional_defaults": {
+        "standalone_subconfig": true,
+        "padmm": true,
+        "dvi": false
+      }
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dynamics.linear_solver_type",
+      "solver": "kamino",
+      "name": "config.dynamics.linear_solver_type",
+      "owner": "kamino.config.ConstrainedDynamicsConfig",
+      "type": "Literal['LLTB', 'LLTBRCM', 'CR', 'CRF']",
+      "required": false,
+      "declared_default_expression": "'LLTB'",
+      "resolved_default": "独立子配置/PADMM=LLTB；DVI dense-dynamics=LLTBRCM；DVI sparse-dynamics=CR",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 372,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L372"
+      },
+      "documentation": "The type of linear solver to use for the dynamics problem.\n\n    See :class:`LinearSolverType` for available options.\n\n    Defaults to 'LLTB' (:class:`LLTBlockedSolver`, dense blocked LLT). The\n    RCM-reordered semi-sparse variant is available as 'LLTBRCM'\n    (:class:`LLTBlockedRCMSolver`) and is currently opt-in pending further\n    performance optimization.",
+      "summary_zh": "直接子配置默认 LLTB；默认 DVI 组合改为 LLTBRCM，稀疏 DVI 改为 CR。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。 PADMM 默认 LLTB/预条件 True；DVI dense-dynamics 默认 LLTBRCM/False；DVI sparse-dynamics 默认 CR/False。",
+      "conditional_defaults": {
+        "standalone_subconfig": "LLTB",
+        "padmm": "LLTB",
+        "dvi_dense_dynamics": "LLTBRCM",
+        "dvi_sparse_dynamics": "CR"
+      }
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dynamics.linear_solver_kwargs",
+      "solver": "kamino",
+      "name": "config.dynamics.linear_solver_kwargs",
+      "owner": "kamino.config.ConstrainedDynamicsConfig",
+      "type": "dict[str, Any]",
+      "required": false,
+      "declared_default_expression": "field(default_factory=dict)",
+      "resolved_default": "field(default_factory=dict)",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 382,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L382"
+      },
+      "documentation": "Additional keyword arguments to pass to the linear solver.\n\n    Defaults to an empty dictionary.",
+      "summary_zh": "config.dynamics 配置：Additional keyword arguments to pass to the linear solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。 PADMM 默认 LLTB/预条件 True；DVI dense-dynamics 默认 LLTBRCM/False；DVI sparse-dynamics 默认 CR/False。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dynamics.cull_speculative_contacts",
+      "solver": "kamino",
+      "name": "config.dynamics.cull_speculative_contacts",
+      "owner": "kamino.config.ConstrainedDynamicsConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "True",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 388,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L388"
+      },
+      "documentation": "Whether to cull speculative (= separated) contacts in the dynamics solve.\n    These contacts have occasionally led to numerical instabilities, and\n    can yield inaccurate restitutive impacts.",
+      "summary_zh": "config.dynamics 配置：Whether to cull speculative (= separated) contacts in the dynamics solve.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。 PADMM 默认 LLTB/预条件 True；DVI dense-dynamics 默认 LLTBRCM/False；DVI sparse-dynamics 默认 CR/False。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.primal_tolerance",
+      "solver": "kamino",
+      "name": "config.padmm.primal_tolerance",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-06",
+      "resolved_default": "1e-06",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 474,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L474"
+      },
+      "documentation": "The target tolerance on the total primal residual `r_primal`.\n\n    Must be greater than zero. Defaults to `1e-6`.",
+      "summary_zh": "config.padmm 配置：The target tolerance on the total primal residual `r_primal`.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.dual_tolerance",
+      "solver": "kamino",
+      "name": "config.padmm.dual_tolerance",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-06",
+      "resolved_default": "1e-06",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 480,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L480"
+      },
+      "documentation": "The target tolerance on the total dual residual `r_dual`.\n\n    Must be greater than zero. Defaults to `1e-6`.",
+      "summary_zh": "config.padmm 配置：The target tolerance on the total dual residual `r_dual`.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.compl_tolerance",
+      "solver": "kamino",
+      "name": "config.padmm.compl_tolerance",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-06",
+      "resolved_default": "1e-06",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 486,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L486"
+      },
+      "documentation": "The target tolerance on the complementarity residual `r_compl`.\n\n    Must be greater than zero. Defaults to `1e-6`.",
+      "summary_zh": "config.padmm 配置：The target tolerance on the complementarity residual `r_compl`.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.restart_tolerance",
+      "solver": "kamino",
+      "name": "config.padmm.restart_tolerance",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.999",
+      "resolved_default": "0.999",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 492,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L492"
+      },
+      "documentation": "The tolerance on the total combined primal-dual residual `r_comb`,\n    for determining when gradient acceleration should be restarted.\n\n    Must be greater than zero. Defaults to `0.999`.",
+      "summary_zh": "config.padmm 配置：The tolerance on the total combined primal-dual residual `r_comb`,",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.eta",
+      "solver": "kamino",
+      "name": "config.padmm.eta",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-05",
+      "resolved_default": "1e-05",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 499,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L499"
+      },
+      "documentation": "The proximal regularization parameter.\n\n    Must be greater than zero. Defaults to `1e-5`.",
+      "summary_zh": "近端正则化强度；影响子问题数值性质。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.rho_0",
+      "solver": "kamino",
+      "name": "config.padmm.rho_0",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1.0",
+      "resolved_default": "1.0",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 505,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L505"
+      },
+      "documentation": "The initial value of the ALM penalty parameter.\n\n    Must be greater than zero. Defaults to `1.0`.",
+      "summary_zh": "PADMM 初始增广罚参数；属于数值参数，不是接触材料刚度。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.rho_min",
+      "solver": "kamino",
+      "name": "config.padmm.rho_min",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-05",
+      "resolved_default": "1e-05",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 511,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L511"
+      },
+      "documentation": "The lower-bound applied to the ALM penalty parameter.\n\n    Used to ensure numerical stability when adaptive penalty updates are used.\n\n    Must be greater than zero. Defaults to `1e-5`.",
+      "summary_zh": "config.padmm 配置：The lower-bound applied to the ALM penalty parameter.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.a_0",
+      "solver": "kamino",
+      "name": "config.padmm.a_0",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1.0",
+      "resolved_default": "1.0",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 518,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L518"
+      },
+      "documentation": "The initial value of the acceleration parameter.\n\n    Must be greater than zero. Defaults to `1.0`.",
+      "summary_zh": "config.padmm 配置：The initial value of the acceleration parameter.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.alpha",
+      "solver": "kamino",
+      "name": "config.padmm.alpha",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "10.0",
+      "resolved_default": "10.0",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 524,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L524"
+      },
+      "documentation": "The primal-dual residual threshold used to determine when penalty updates are needed.\n    Must be greater than one. Defaults to `10.0`.",
+      "summary_zh": "config.padmm 配置：The primal-dual residual threshold used to determine when penalty updates are needed.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.tau",
+      "solver": "kamino",
+      "name": "config.padmm.tau",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1.5",
+      "resolved_default": "1.5",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 530,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L530"
+      },
+      "documentation": "The factor by which the ALM penalty is increased/decreased when\n    the primal-dual residual ratios exceed the threshold `alpha`.\n\n    Must be greater than `1.0`. Defaults to `1.5`.",
+      "summary_zh": "config.padmm 配置：The factor by which the ALM penalty is increased/decreased when",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.max_iterations",
+      "solver": "kamino",
+      "name": "config.padmm.max_iterations",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "int",
+      "required": false,
+      "declared_default_expression": "200",
+      "resolved_default": "200",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 537,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L537"
+      },
+      "documentation": "The maximum number of solver iterations.\n\n    Must be greater than zero. Defaults to `200`.",
+      "summary_zh": "PADMM 最大迭代预算；同时核对三个残差和 converged。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.penalty_update_freq",
+      "solver": "kamino",
+      "name": "config.padmm.penalty_update_freq",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "int",
+      "required": false,
+      "declared_default_expression": "1",
+      "resolved_default": "1",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 543,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L543"
+      },
+      "documentation": "The permitted frequency of penalty updates.\n\n    If zero, no updates are performed. Otherwise, updates are performed every\n    `penalty_update_freq` iterations. Defaults to `1`.",
+      "summary_zh": "config.padmm 配置：The permitted frequency of penalty updates.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.penalty_update_method",
+      "solver": "kamino",
+      "name": "config.padmm.penalty_update_method",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "Literal['fixed', 'balanced']",
+      "required": false,
+      "declared_default_expression": "'fixed'",
+      "resolved_default": "'fixed'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 550,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L550"
+      },
+      "documentation": "The penalty update method used to adapt the penalty parameter.\n\n    Defaults to `fixed`. See :class:`PADMMPenaltyUpdate` for details.",
+      "summary_zh": "罚参数更新策略；非 fixed 需要 sparse_dynamics=True。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.linear_solver_tolerance",
+      "solver": "kamino",
+      "name": "config.padmm.linear_solver_tolerance",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.0",
+      "resolved_default": "0.0",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 556,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L556"
+      },
+      "documentation": "The default absolute tolerance for the iterative linear solver.\n\n    When zero, the iterative solver's own tolerance is left unchanged.\n\n    When positive, the iterative solver's atol is initialized\n    to this value at the start of each ADMM solve.\n\n    Must be non-negative. Defaults to `0.0`.",
+      "summary_zh": "config.padmm 配置：The default absolute tolerance for the iterative linear solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.linear_solver_tolerance_ratio",
+      "solver": "kamino",
+      "name": "config.padmm.linear_solver_tolerance_ratio",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.0",
+      "resolved_default": "0.0",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 565,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L565"
+      },
+      "documentation": "The ratio used to adapt the iterative linear solver tolerance from the ADMM primal residual.\n\n    When zero, the linear solver tolerance is not adapted (fixed tolerance).\n\n    When positive, the linear solver absolute tolerance is\n    set to `ratio * ||r_primal||_2` at each ADMM iteration.\n\n    Must be non-negative. Defaults to `0.0`.",
+      "summary_zh": "config.padmm 配置：The ratio used to adapt the iterative linear solver tolerance from the ADMM primal residual.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.use_acceleration",
+      "solver": "kamino",
+      "name": "config.padmm.use_acceleration",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "True",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 574,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L574"
+      },
+      "documentation": "Enables Nesterov-type acceleration, i.e. use APADMM instead of standard PADMM.\n\n    Defaults to `True`.",
+      "summary_zh": "config.padmm 配置：Enables Nesterov-type acceleration, i.e. use APADMM instead of standard PADMM.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.use_graph_conditionals",
+      "solver": "kamino",
+      "name": "config.padmm.use_graph_conditionals",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "True",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 580,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L580"
+      },
+      "documentation": "Enables use of CUDA graph conditional nodes in iterative solvers.\n\n    If `False`, replaces `wp.capture_while` with unrolled for-loops over max iterations.\n\n    Defaults to `True`.",
+      "summary_zh": "CUDA 条件图迭代控制；不适用的平台应选择固定上限循环路径。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.warmstart_mode",
+      "solver": "kamino",
+      "name": "config.padmm.warmstart_mode",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "Literal['none', 'internal', 'containers']",
+      "required": false,
+      "declared_default_expression": "'containers'",
+      "resolved_default": "'containers'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 587,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L587"
+      },
+      "documentation": "Warmstart mode to be used for the dynamics solver.\n\n    See :class:`PADMMWarmStartMode` for the available options.\n\n    Defaults to `containers` to warmstart from the solver data containers.",
+      "summary_zh": "config.padmm 配置：Warmstart mode to be used for the dynamics solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.warmstart_scale",
+      "solver": "kamino",
+      "name": "config.padmm.warmstart_scale",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.9",
+      "resolved_default": "0.9",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 594,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L594"
+      },
+      "documentation": "Scale applied to cached constraint forces during warm-starting.\n\n    Must be in the range [0, 1]. Defaults to `0.9`.\n\n    PADMM converges to a minimum-norm deviation from its initial guess. Scaling\n    the warm-start forces makes null-space forces converge to the overall\n    minimum-norm solution.",
+      "summary_zh": "缓存约束反力的 warmstart 缩放，不等同于材料耗散。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.padmm.contact_warmstart_method",
+      "solver": "kamino",
+      "name": "config.padmm.contact_warmstart_method",
+      "owner": "kamino.config.PADMMSolverConfig",
+      "type": "Literal['key_and_position', 'geom_pair_net_force', 'geom_pair_net_wrench', 'key_and_position_with_net_force_backup', 'key_and_position_with_net_wrench_backup']",
+      "required": false,
+      "declared_default_expression": "'key_and_position'",
+      "resolved_default": "'key_and_position'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 604,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L604"
+      },
+      "documentation": "Method to be used for warm-starting contacts.\n\n    See :class:`WarmstarterContacts.Method` for available options.\n\n    Defaults to `key_and_position`.",
+      "summary_zh": "config.padmm 配置：Method to be used for warm-starting contacts.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.tolerance",
+      "solver": "kamino",
+      "name": "config.dvi.tolerance",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-05",
+      "resolved_default": "1e-05",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 802,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L802"
+      },
+      "documentation": "The convergence tolerance on the projected update size.\n    Must be non-negative. Defaults to `1e-5`.",
+      "summary_zh": "config.dvi 配置：The convergence tolerance on the projected update size.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.regularization",
+      "solver": "kamino",
+      "name": "config.dvi.regularization",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-06",
+      "resolved_default": "1e-06",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 808,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L808"
+      },
+      "documentation": "Diagonal regularization added to each projected update denominator.\n    Must be positive. Defaults to `1e-6`.",
+      "summary_zh": "config.dvi 配置：Diagonal regularization added to each projected update denominator.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.omega",
+      "solver": "kamino",
+      "name": "config.dvi.omega",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1.0",
+      "resolved_default": "1.0",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 814,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L814"
+      },
+      "documentation": "Relaxation factor applied to projected Gauss-Seidel updates.\n    Must be in the range `(0, 2]`. Defaults to `1.0`.",
+      "summary_zh": "投影 Gauss-Seidel 松弛比例，范围 (0,2]。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+      "solver": "kamino",
+      "name": "config.dvi.max_alternating_iterations",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "int",
+      "required": false,
+      "declared_default_expression": "24",
+      "resolved_default": "24",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 820,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L820"
+      },
+      "documentation": "Maximum number of outer DVI iterations alternating direct bilateral\n    solves with projected inequality solves. Must be greater than zero.\n    This schedule is also used when no bilateral constraints are present;\n    in that case, the bilateral solve is skipped. Defaults to `24`.",
+      "summary_zh": "DVI 外层双边直接解与单边投影交替预算。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration",
+      "solver": "kamino",
+      "name": "config.dvi.inequality_sweeps_per_iteration",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "int",
+      "required": false,
+      "declared_default_expression": "2",
+      "resolved_default": "2",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 828,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L828"
+      },
+      "documentation": "Number of projected Gauss-Seidel sweeps used for unilateral inequalities\n    during each alternating DVI iteration. Contacts use graph-colored sweeps\n    on CUDA. Must be greater than zero. Defaults to `2`.",
+      "summary_zh": "每个 DVI 外层迭代中的单边投影扫描次数。",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.use_schur_complement",
+      "solver": "kamino",
+      "name": "config.dvi.use_schur_complement",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 835,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L835"
+      },
+      "documentation": "Whether to eliminate bilateral rows from the unilateral solve through a Schur complement.\n\n    .. experimental::\n\n        The ``True`` mode may change without prior notice. It requires the same\n        setting in every world and adds response-matrix setup and storage.\n\n    Defaults to ``False``.",
+      "summary_zh": "config.dvi 配置：Whether to eliminate bilateral rows from the unilateral solve through a Schur complement.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.bilateral_solve_interval",
+      "solver": "kamino",
+      "name": "config.dvi.bilateral_solve_interval",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "int",
+      "required": false,
+      "declared_default_expression": "1",
+      "resolved_default": "1",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 847,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L847"
+      },
+      "documentation": "Number of alternating DVI iterations between repeated direct bilateral solves.\n    This controls coupling when :attr:`use_schur_complement` is ``False``.\n    Larger values trade coupling accuracy for fewer direct solves. Must be greater\n    than zero. Defaults to `1`.",
+      "summary_zh": "config.dvi 配置：Number of alternating DVI iterations between repeated direct bilateral solves.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.tangential_warmstart_scale",
+      "solver": "kamino",
+      "name": "config.dvi.tangential_warmstart_scale",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.97",
+      "resolved_default": "0.97",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 855,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L855"
+      },
+      "documentation": "Scale applied to cached tangential contact reactions before a DVI solve.\n    Normal reactions remain fully warm-started. Must be in the range `[0, 1]`.\n    Defaults to `0.97`.",
+      "summary_zh": "config.dvi 配置：Scale applied to cached tangential contact reactions before a DVI solve.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.bilateral_solver_type",
+      "solver": "kamino",
+      "name": "config.dvi.bilateral_solver_type",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "Literal['LLTB', 'LLTBRCM']",
+      "required": false,
+      "declared_default_expression": "'LLTB'",
+      "resolved_default": "'LLTB'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 862,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L862"
+      },
+      "documentation": "Direct linear solver used for the bilateral constraint block.\n    ``LLTBRCM`` can accelerate large sparse articulated systems, while\n    ``LLTB`` remains preferable for small or dense systems. Defaults to\n    ``LLTB``.",
+      "summary_zh": "config.dvi 配置：Direct linear solver used for the bilateral constraint block.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.bilateral_solver_kwargs",
+      "solver": "kamino",
+      "name": "config.dvi.bilateral_solver_kwargs",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "dict[str, Any]",
+      "required": false,
+      "declared_default_expression": "field(default_factory=dict)",
+      "resolved_default": "field(default_factory=dict)",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 870,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L870"
+      },
+      "documentation": "Additional keyword arguments passed to the bilateral linear solver.\n    Defaults to an empty dictionary.",
+      "summary_zh": "config.dvi 配置：Additional keyword arguments passed to the bilateral linear solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.warmstart_mode",
+      "solver": "kamino",
+      "name": "config.dvi.warmstart_mode",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "Literal['none', 'internal', 'containers']",
+      "required": false,
+      "declared_default_expression": "'containers'",
+      "resolved_default": "'containers'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 876,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L876"
+      },
+      "documentation": "Warmstart mode to be used for the DVI solver.\n    Uses the same choices as the other dual dynamics solvers. Defaults to `containers`.",
+      "summary_zh": "config.dvi 配置：Warmstart mode to be used for the DVI solver.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.dvi.contact_warmstart_method",
+      "solver": "kamino",
+      "name": "config.dvi.contact_warmstart_method",
+      "owner": "kamino.config.DVISolverConfig",
+      "type": "Literal['key_and_position', 'geom_pair_net_force', 'key_and_position_with_net_force_backup', 'key_and_position_with_tangential_net_force', 'key_and_position_with_net_force_backup_and_tangential_net_force']",
+      "required": false,
+      "declared_default_expression": "'key_and_position_with_tangential_net_force'",
+      "resolved_default": "'key_and_position_with_tangential_net_force'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 882,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L882"
+      },
+      "documentation": "The contact warmstart method used when `warmstart_mode` is `containers`.\n    See :class:`WarmstarterContacts.Method` for available options.\n    Defaults to `key_and_position_with_tangential_net_force`.",
+      "summary_zh": "config.dvi 配置：The contact warmstart method used when `warmstart_mode` is `containers`.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.tolerance",
+      "solver": "kamino",
+      "name": "config.fk.tolerance",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-06",
+      "resolved_default": "1e-06",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 983,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L983"
+      },
+      "documentation": "Maximal absolute kinematic constraint value that is acceptable at the solution.\n    This setting can be altered after the solver's construction (but will get baked in captured graphs).\n    Defaults to `1e-6`.",
+      "summary_zh": "config.fk 配置：Maximal absolute kinematic constraint value that is acceptable at the solution.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.max_newton_iterations",
+      "solver": "kamino",
+      "name": "config.fk.max_newton_iterations",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "int",
+      "required": false,
+      "declared_default_expression": "30",
+      "resolved_default": "30",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 990,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L990"
+      },
+      "documentation": "Maximal number of Gauss-Newton iterations.\n    This setting can be altered after the solver's construction (but will get baked in captured graphs).\n    Defaults to `30`.",
+      "summary_zh": "config.fk 配置：Maximal number of Gauss-Newton iterations.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.max_line_search_iterations",
+      "solver": "kamino",
+      "name": "config.fk.max_line_search_iterations",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "int",
+      "required": false,
+      "declared_default_expression": "20",
+      "resolved_default": "20",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 997,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L997"
+      },
+      "documentation": "Maximal line search iterations in the inner loop.\n    This setting can be altered after the solver's construction (but will get baked in captured graphs).\n    Defaults to `20`.",
+      "summary_zh": "config.fk 配置：Maximal line search iterations in the inner loop.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.reset_state",
+      "solver": "kamino",
+      "name": "config.fk.reset_state",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "True",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1004,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1004"
+      },
+      "documentation": "Whether to reset the state before the FK solve, using the reference state of the system as initial guess.\n    If False, the current body poses are used as initial guess, which often leads to faster convergence\n    when solving forward kinematics along a trajectory (as opposed to isolated poses).\n    This setting can be altered after the solver's construction (but will get baked in captured graphs).\n    Defaults to `True`.",
+      "summary_zh": "config.fk 配置：Whether to reset the state before the FK solve, using the reference state of the system as initial guess.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.add_axis_joints",
+      "solver": "kamino",
+      "name": "config.fk.add_axis_joints",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "True",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1013,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1013"
+      },
+      "documentation": "Whether to automatically add axis joints to take out superfluous DoFs at tie rods (i.e. bodies\n    between two passive spherical or gimbal joints, that may rotate freely about the connecting axis),\n    that otherwise render the FK problem ill-posed.\n    Defaults to `True`.",
+      "summary_zh": "config.fk 配置：Whether to automatically add axis joints to take out superfluous DoFs at tie rods (i.e. bodies",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.use_incremental_solve",
+      "solver": "kamino",
+      "name": "config.fk.use_incremental_solve",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "True",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1021,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1021"
+      },
+      "documentation": "Whether to automatically split large steps in actuator coordinates into smaller steps\n    in the FK solve, to improve the solver's robustness for a mild added cost.\n    Defaults to `True`.",
+      "summary_zh": "config.fk 配置：Whether to automatically split large steps in actuator coordinates into smaller steps",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.max_linear_incremental_step",
+      "solver": "kamino",
+      "name": "config.fk.max_linear_incremental_step",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "0.05",
+      "resolved_default": "0.05",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1028,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1028"
+      },
+      "documentation": "If incremental solve is enabled, maximal allowed step in linear actuator coordinates\n    per solver iteration, in meters. A lower value results in more incremental steps.\n    Defaults to `0.05`.",
+      "summary_zh": "config.fk 配置：If incremental solve is enabled, maximal allowed step in linear actuator coordinates",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.max_angular_incremental_step",
+      "solver": "kamino",
+      "name": "config.fk.max_angular_incremental_step",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "math.radians(10.0)",
+      "resolved_default": "math.radians(10.0)",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1035,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1035"
+      },
+      "documentation": "If incremental solve is enabled, maximal allowed step in angular actuator coordinates\n    per solver iteration, in radians. A lower value results in more incremental steps.\n    Defaults to `math.radians(10.0)`, i.e. 10 degrees.",
+      "summary_zh": "config.fk 配置：If incremental solve is enabled, maximal allowed step in angular actuator coordinates",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.use_regularization",
+      "solver": "kamino",
+      "name": "config.fk.use_regularization",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1042,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1042"
+      },
+      "documentation": "Whether to regularize the FK problem by trying to preserve the rigid body poses with a small weight.\n    This might result in constraint violations of the order of the regularization weight, but allows to\n    tackle systems with solution sub-spaces, in particular underactuated systems.\n\n    Important note: the default tolerance of 1e-6 may not be reachable if regularization is enabled,\n    using 1e-5 instead is recommended in most cases.\n\n    For systems that are only underactuated due to tie rods being free to rotate about their own axis,\n    enabling `add_axis_joints` is recommended instead.\n\n    Defaults to `False`.",
+      "summary_zh": "config.fk 配置：Whether to regularize the FK problem by trying to preserve the rigid body poses with a small weight.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.regularization_weight",
+      "solver": "kamino",
+      "name": "config.fk.regularization_weight",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "float",
+      "required": false,
+      "declared_default_expression": "1e-05",
+      "resolved_default": "1e-05",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1057,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1057"
+      },
+      "documentation": "Weight applied to the rigid body pose least-squares regularizer, if regularization is enabled.\n    This setting can be altered after the solver's construction (but will get baked in captured graphs).\n    Defaults to `1e-5`.",
+      "summary_zh": "config.fk 配置：Weight applied to the rigid body pose least-squares regularizer, if regularization is enabled.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.use_sparsity",
+      "solver": "kamino",
+      "name": "config.fk.use_sparsity",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "False",
+      "resolved_default": "False",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1064,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1064"
+      },
+      "documentation": "Whether to use sparse Jacobian and solver; else dense versions are used (recommended for most systems).\n    Defaults to `False`.",
+      "summary_zh": "config.fk 配置：Whether to use sparse Jacobian and solver; else dense versions are used (recommended for most systems).",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.preconditioner",
+      "solver": "kamino",
+      "name": "config.fk.preconditioner",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "Literal['none', 'jacobi_diagonal', 'jacobi_block_diagonal']",
+      "required": false,
+      "declared_default_expression": "'jacobi_block_diagonal'",
+      "resolved_default": "'jacobi_block_diagonal'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1070,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1070"
+      },
+      "documentation": "Preconditioner to use for the Conjugate Gradient solver if sparsity is enabled.\n    Defaults to `jacobi_block_diagonal`.",
+      "summary_zh": "config.fk 配置：Preconditioner to use for the Conjugate Gradient solver if sparsity is enabled.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.fk.use_adaptive_cg_tolerance",
+      "solver": "kamino",
+      "name": "config.fk.use_adaptive_cg_tolerance",
+      "owner": "kamino.config.ForwardKinematicsSolverConfig",
+      "type": "bool",
+      "required": false,
+      "declared_default_expression": "True",
+      "resolved_default": "True",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1076,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1076"
+      },
+      "documentation": "Whether to use an adaptive tolerance strategy for the Conjugate Gradient solver if sparsity\n    is enabled, which reduces the number of CG iterations in most cases.\n    This setting can be altered after the solver's construction (but will get baked in captured graphs).\n    Defaults to `True`.",
+      "summary_zh": "config.fk 配置：Whether to use an adaptive tolerance strategy for the Conjugate Gradient solver if sparsity",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.materials.friction_mix_mode",
+      "solver": "kamino",
+      "name": "config.materials.friction_mix_mode",
+      "owner": "kamino.config.MaterialManagerConfig",
+      "type": "Literal['average', 'multiply', 'max', 'min']",
+      "required": false,
+      "declared_default_expression": "'average'",
+      "resolved_default": "'average'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1155,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1155"
+      },
+      "documentation": "The mixing mode to use for friction.\n\n    Defaults to `average`.",
+      "summary_zh": "config.materials 配置：The mixing mode to use for friction.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    },
+    {
+      "id": "newton:1.7.0:kamino:config.materials.restitution_mix_mode",
+      "solver": "kamino",
+      "name": "config.materials.restitution_mix_mode",
+      "owner": "kamino.config.MaterialManagerConfig",
+      "type": "Literal['average', 'multiply', 'max', 'min']",
+      "required": false,
+      "declared_default_expression": "'min'",
+      "resolved_default": "'min'",
+      "definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/config.py",
+        "line": 1161,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L1161"
+      },
+      "documentation": "The mixing mode to use for restitution.\n\n    Defaults to `min`.",
+      "summary_zh": "config.materials 配置：The mixing mode to use for restitution.",
+      "units": "以源码字段说明为准",
+      "category": "solver_configuration",
+      "layer": "solver_configuration",
+      "status": "source_checked",
+      "lifecycle": "构造/配置时读取；运行期变更需按对应 API 更新，已捕获图可能需要重建。",
+      "experiments": [],
+      "default_policy": "声明默认来自所属 dataclass；完整 Config.__post_init__ / from_model 可覆盖或补全子配置。"
+    }
+  ],
+  "model_inputs": [
+    {
+      "id": "model:kamino:body_mass",
+      "solver": "kamino",
+      "field": "body_mass",
+      "units": "kg",
+      "description_zh": "刚体质量；先从参考尺度与密度确定，避免用质量补偿错误接触。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 972,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L972"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1598,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1598"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:body_inertia",
+      "solver": "kamino",
+      "field": "body_inertia",
+      "units": "kg·m²",
+      "description_zh": "刚体惯量张量；影响转动与约束条件数。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 968,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L968"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1601,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1601"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:joint_armature",
+      "solver": "kamino",
+      "field": "joint_armature",
+      "units": "依自由度而定",
+      "description_zh": "关节附加惯量；需区分转动与平移自由度。 Kamino 关节动力学/implicit PD 当前限于 revolute、prismatic、gimbal；按 DoF 路由驱动，但 FK 仍按整 joint 分被动/驱动。保持约束分配时可通知数值变化；跨零改变动态分配、增删有界 PD 或改变驱动分区必须重建。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 1050,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1050"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1211,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1211"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:joint_target_ke",
+      "solver": "kamino",
+      "field": "joint_target_ke",
+      "units": "依自由度而定",
+      "description_zh": "关节 PD 比例增益；不同 solver 的执行/隐式路径需分别核对。 Kamino 关节动力学/implicit PD 当前限于 revolute、prismatic、gimbal；按 DoF 路由驱动，但 FK 仍按整 joint 分被动/驱动。保持约束分配时可通知数值变化；跨零改变动态分配、增删有界 PD 或改变驱动分区必须重建。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 1054,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1054"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1213,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1213"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:joint_target_kd",
+      "solver": "kamino",
+      "field": "joint_target_kd",
+      "units": "依自由度而定",
+      "description_zh": "关节 PD 导数增益。 Kamino 关节动力学/implicit PD 当前限于 revolute、prismatic、gimbal；按 DoF 路由驱动，但 FK 仍按整 joint 分被动/驱动。保持约束分配时可通知数值变化；跨零改变动态分配、增删有界 PD 或改变驱动分区必须重建。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 1056,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1056"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1214,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1214"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:joint_effort_limit",
+      "solver": "kamino",
+      "field": "joint_effort_limit",
+      "units": "N 或 N·m",
+      "description_zh": "执行器力/力矩上限；与驱动方式共同作用。 Kamino 关节动力学/implicit PD 当前限于 revolute、prismatic、gimbal；按 DoF 路由驱动，但 FK 仍按整 joint 分被动/驱动。保持约束分配时可通知数值变化；跨零改变动态分配、增删有界 PD 或改变驱动分区必须重建。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 1060,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1060"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1216,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1216"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:joint_limit_lower",
+      "solver": "kamino",
+      "field": "joint_limit_lower",
+      "units": "m 或 rad",
+      "description_zh": "关节下限及参考坐标约定。 已有有限限位可通知数值更新；改变有限/无限状态导致约束结构变化，必须重建。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 1070,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1070"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1225,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1225"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:joint_limit_upper",
+      "solver": "kamino",
+      "field": "joint_limit_upper",
+      "units": "m 或 rad",
+      "description_zh": "关节上限及参考坐标约定。 已有有限限位可通知数值更新；改变有限/无限状态导致约束结构变化，必须重建。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 1072,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L1072"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1226,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1226"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:shape_material_mu",
+      "solver": "kamino",
+      "field": "shape_material_mu",
+      "units": "无量纲",
+      "description_zh": "形状表面摩擦；需同时检查材料混合和接触维度。 内部碰撞器经 SHAPE_PROPERTIES 更新固定材质表；共享 material 的 shapes 若分歧为不同材质值，必须重建以拆分分组。外部 Newton contacts 直接读 shape 材质，不使用内部材质表。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 706,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L706"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1429,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1429"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    },
+    {
+      "id": "model:kamino:shape_material_restitution",
+      "solver": "kamino",
+      "field": "shape_material_restitution",
+      "units": "无量纲",
+      "description_zh": "碰撞恢复系数；与 material manager 的混合模式共同决定成对材料响应。 内部碰撞器经 SHAPE_PROPERTIES 更新固定材质表；共享 material 的 shapes 若分歧为不同材质值，必须重建以拆分分组。外部 Newton contacts 直接读 shape 材质，不使用内部材质表。",
+      "model_definition": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/sim/model.py",
+        "line": 708,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/sim/model.py#L708"
+      },
+      "consumer": {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+        "line": 1429,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L1429"
+      },
+      "consumer_scope": "First static source occurrence, not complete data-flow analysis.",
+      "default_policy": "由实际 ModelBuilder / 导入模型决定，未声明跨场景通用默认值。",
+      "experiments": []
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim:kamino:backend_defaults",
+      "solver": "kamino",
+      "statement_zh": "Config 构造时按 PADMM/DVI 和 sparsity 解析 Jacobian、预条件与线性求解器默认值。",
+      "scope": "Newton 1.7.0 static source only",
+      "evidence_type": "source_checked",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dynamics_solver",
+        "newton:1.7.0:kamino:config.sparse_jacobian",
+        "newton:1.7.0:kamino:config.dynamics.preconditioning",
+        "newton:1.7.0:kamino:config.dynamics.linear_solver_type"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 485,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L485"
+        }
+      ]
+    },
+    {
+      "id": "claim:kamino:padmm_controls",
+      "solver": "kamino",
+      "statement_zh": "PADMM 的 rho_0/eta、三种残差容差与最大迭代共同控制数值求解。",
+      "scope": "Newton 1.7.0 static source only",
+      "evidence_type": "source_checked",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.padmm.rho_0",
+        "newton:1.7.0:kamino:config.padmm.eta",
+        "newton:1.7.0:kamino:config.padmm.max_iterations",
+        "newton:1.7.0:kamino:config.padmm.primal_tolerance",
+        "newton:1.7.0:kamino:config.padmm.dual_tolerance",
+        "newton:1.7.0:kamino:config.padmm.compl_tolerance"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 469,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L469"
+        }
+      ]
+    },
+    {
+      "id": "claim:kamino:dvi_controls",
+      "solver": "kamino",
+      "statement_zh": "DVI 外层交替迭代与单边投影 sweeps 是两层预算，不等同于 PADMM iterations。",
+      "scope": "Newton 1.7.0 static source only",
+      "evidence_type": "source_checked",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+        "newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration",
+        "newton:1.7.0:kamino:config.dvi.omega"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 797,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L797"
+        }
+      ]
+    },
+    {
+      "id": "claim:kamino:stabilization",
+      "solver": "kamino",
+      "statement_zh": "alpha/beta/gamma 分别控制双边关节、单边限位、单边接触稳定化。",
+      "scope": "Newton 1.7.0 static source only",
+      "evidence_type": "source_checked",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.constraints.alpha",
+        "newton:1.7.0:kamino:config.constraints.beta",
+        "newton:1.7.0:kamino:config.constraints.gamma",
+        "newton:1.7.0:kamino:config.constraints.delta"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 225,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L225"
+        }
+      ]
+    },
+    {
+      "id": "claim:kamino:diagnostics",
+      "solver": "kamino",
+      "statement_zh": "status 总是维护；collect_solver_info 控制额外统计而非 status 是否存在。",
+      "scope": "Newton 1.7.0 static source only",
+      "evidence_type": "source_checked",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.collect_solver_info",
+        "newton:1.7.0:kamino:config.compute_solution_metrics"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "docs/solvers/kamino.rst",
+          "line": 125,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L125"
+        }
+      ]
+    },
+    {
+      "id": "claim:kamino:restrictions",
+      "solver": "kamino",
+      "statement_zh": "DVI 预条件、PADMM 自适应罚参数与稀疏设置受显式校验约束。",
+      "scope": "Newton 1.7.0 static source only",
+      "evidence_type": "source_checked",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dynamics.preconditioning",
+        "newton:1.7.0:kamino:config.padmm.penalty_update_method",
+        "newton:1.7.0:kamino:config.sparse_dynamics"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 467,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L467"
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "id": "map:kamino:backend_defaults",
+      "solver": "kamino",
+      "title_zh": "Config 构造时按 PADMM/DVI 和 sparsity 解析 Jacobian、预条件与线性求解器默认值。",
+      "paper_id": "paper:kamino-loops-2025",
+      "paper_ids": [
+        "paper:kamino-loops-2025",
+        "paper:proximal-admm-2024"
+      ],
+      "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+      "correspondence": "Config 构造时按 PADMM/DVI 和 sparsity 解析 Jacobian、预条件与线性求解器默认值。",
+      "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dynamics_solver",
+        "newton:1.7.0:kamino:config.sparse_jacobian",
+        "newton:1.7.0:kamino:config.dynamics.preconditioning",
+        "newton:1.7.0:kamino:config.dynamics.linear_solver_type"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 485,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L485"
+        }
+      ],
+      "symbols": [],
+      "mapping_kind": "implementation_fact",
+      "evidence_type": "source_checked"
+    },
+    {
+      "id": "map:kamino:padmm_controls",
+      "solver": "kamino",
+      "title_zh": "PADMM 的 rho_0/eta、三种残差容差与最大迭代共同控制数值求解。",
+      "paper_id": "paper:kamino-loops-2025",
+      "paper_ids": [
+        "paper:kamino-loops-2025",
+        "paper:proximal-admm-2024"
+      ],
+      "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+      "correspondence": "PADMM 的 rho_0/eta、三种残差容差与最大迭代共同控制数值求解。",
+      "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.padmm.rho_0",
+        "newton:1.7.0:kamino:config.padmm.eta",
+        "newton:1.7.0:kamino:config.padmm.max_iterations",
+        "newton:1.7.0:kamino:config.padmm.primal_tolerance",
+        "newton:1.7.0:kamino:config.padmm.dual_tolerance",
+        "newton:1.7.0:kamino:config.padmm.compl_tolerance"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 469,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L469"
+        }
+      ],
+      "symbols": [],
+      "mapping_kind": "implementation_fact",
+      "evidence_type": "source_checked"
+    },
+    {
+      "id": "map:kamino:dvi_controls",
+      "solver": "kamino",
+      "title_zh": "DVI 外层交替迭代与单边投影 sweeps 是两层预算，不等同于 PADMM iterations。",
+      "paper_id": "paper:kamino-loops-2025",
+      "paper_ids": [
+        "paper:kamino-loops-2025",
+        "paper:proximal-admm-2024"
+      ],
+      "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+      "correspondence": "DVI 外层交替迭代与单边投影 sweeps 是两层预算，不等同于 PADMM iterations。",
+      "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+        "newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration",
+        "newton:1.7.0:kamino:config.dvi.omega"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 797,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L797"
+        }
+      ],
+      "symbols": [],
+      "mapping_kind": "implementation_fact",
+      "evidence_type": "source_checked"
+    },
+    {
+      "id": "map:kamino:stabilization",
+      "solver": "kamino",
+      "title_zh": "alpha/beta/gamma 分别控制双边关节、单边限位、单边接触稳定化。",
+      "paper_id": "paper:kamino-loops-2025",
+      "paper_ids": [
+        "paper:kamino-loops-2025",
+        "paper:proximal-admm-2024"
+      ],
+      "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+      "correspondence": "alpha/beta/gamma 分别控制双边关节、单边限位、单边接触稳定化。",
+      "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.constraints.alpha",
+        "newton:1.7.0:kamino:config.constraints.beta",
+        "newton:1.7.0:kamino:config.constraints.gamma",
+        "newton:1.7.0:kamino:config.constraints.delta"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 225,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/config.py#L225"
+        }
+      ],
+      "symbols": [],
+      "mapping_kind": "implementation_fact",
+      "evidence_type": "source_checked"
+    },
+    {
+      "id": "map:kamino:diagnostics",
+      "solver": "kamino",
+      "title_zh": "status 总是维护",
+      "paper_id": "paper:kamino-loops-2025",
+      "paper_ids": [
+        "paper:kamino-loops-2025",
+        "paper:proximal-admm-2024"
+      ],
+      "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+      "correspondence": "status 总是维护；collect_solver_info 控制额外统计而非 status 是否存在。",
+      "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.collect_solver_info",
+        "newton:1.7.0:kamino:config.compute_solution_metrics"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "docs/solvers/kamino.rst",
+          "line": 125,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L125"
+        }
+      ],
+      "symbols": [],
+      "mapping_kind": "implementation_fact",
+      "evidence_type": "source_checked"
+    },
+    {
+      "id": "map:kamino:restrictions",
+      "solver": "kamino",
+      "title_zh": "DVI 预条件、PADMM 自适应罚参数与稀疏设置受显式校验约束。",
+      "paper_id": "paper:kamino-loops-2025",
+      "paper_ids": [
+        "paper:kamino-loops-2025",
+        "paper:proximal-admm-2024"
+      ],
+      "paper_locator": "源码事实；所连论文只提供方法背景，不是此包装层行为的逐项出处",
+      "correspondence": "DVI 预条件、PADMM 自适应罚参数与稀疏设置受显式校验约束。",
+      "boundary": "保留兼容 ID 的 implementation_fact。默认、分支和包装层行为由固定源码支持；不计作独立论文算法映射或已复现性能。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dynamics.preconditioning",
+        "newton:1.7.0:kamino:config.padmm.penalty_update_method",
+        "newton:1.7.0:kamino:config.sparse_dynamics"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 467,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L467"
+        }
+      ],
+      "symbols": [],
+      "mapping_kind": "implementation_fact",
+      "evidence_type": "source_checked"
+    },
+    {
+      "id": "map:kamino:padmm_variables_desaxce",
+      "solver": "kamino",
+      "title_zh": "PADMM 变量分裂与 De Saxcé 修正",
+      "paper_id": "paper:proximal-admm-2024",
+      "paper_ids": [
+        "paper:proximal-admm-2024",
+        "paper:kamino-loops-2025"
+      ],
+      "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-B/C，式(32)–(36)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.23 · VI-F，式(165)–(166)；p.24 式(167a)](../../sources/papers/kamino-loops-2025/paper.pdf#page=23)",
+      "correspondence": "PADMM 中 x 是无约束冲量迭代，y 是投影后的可行冲量，z 是使二者一致的对偶变量，s 是 De Saxcé 速度修正；它们不是刚体位置。2024 的 f/y/z 分裂在 2025 报告中扩展为含双边关节、限位和接触的最大坐标系统。当前 _step 先调用 _update_desaxce_and_velocity_bias，以接触局部切向滑移估计法向修正并构造全体约束的线性右端；只有接触块需要该摩擦修正。",
+      "boundary": "变量在当前求解器内可经对角预条件缩放，不能直接把 x/y 当成最终物理冲量。当前融合 kernel、可选加速和 GPU 批处理是实现细节，不是论文代码逐行复现；非接触双边约束不因此变成摩擦锥。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.padmm.eta",
+        "newton:1.7.0:kamino:config.padmm.rho_0",
+        "newton:1.7.0:kamino:config.dynamics.preconditioning"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 562,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L562"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 955,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L955"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 395,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L395"
+        }
+      ],
+      "symbols": [
+        {
+          "name": "PADMMSolver._step",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 562,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L562"
+        },
+        {
+          "name": "PADMMSolver._update_desaxce_and_velocity_bias",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 955,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L955"
+        },
+        {
+          "name": "_compute_desaxce_correction",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 395,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L395"
+        }
+      ],
+      "mapping_kind": "mechanism_correspondence",
+      "evidence_type": "curated_mapping"
+    },
+    {
+      "id": "map:kamino:padmm_linear_subproblem",
+      "solver": "kamino",
+      "title_zh": "近端线性子问题与 Delassus 求解",
+      "paper_id": "paper:proximal-admm-2024",
+      "paper_ids": [
+        "paper:proximal-admm-2024",
+        "paper:kamino-loops-2025"
+      ],
+      "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-C，式(36a)、(37)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.24 · VI-F，式(167b)、(168)](../../sources/papers/kamino-loops-2025/paper.pdf#page=24)",
+      "correspondence": "近端项 eta 与增广罚参数 rho 共同正则化线性子问题。在未缩放记法下，(D+(eta+rho)I)x = -v_f-s+eta*x_prev+rho*y_prev+z_prev。当前 _compute_velocity_bias 的符号与该右端一致；_update_unconstrained_solution 调用 problem._delassus.solve，_update_regularization 管理对应正则项。线性求解器/稀疏选项属于 dynamics 配置，eta/rho 不是材料接触刚度。",
+      "boundary": "该式解释 PADMM 的基本非加速迭代；当前默认启用加速，实际迭代按加速分支阅读。预条件和自适应罚参数也需按当前分支读代码。2024 的 G+R 与 2025 的 D 记号不应直接当成同名数组；当前 Delassus 对象还包含关节、限位及驱动相关约束。未复现论文性能。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.padmm.eta",
+        "newton:1.7.0:kamino:config.padmm.rho_0",
+        "newton:1.7.0:kamino:config.dynamics.linear_solver_type",
+        "newton:1.7.0:kamino:config.sparse_dynamics"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 447,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L447"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 995,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L995"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 527,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L527"
+        }
+      ],
+      "symbols": [
+        {
+          "name": "_compute_velocity_bias",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 447,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L447"
+        },
+        {
+          "name": "PADMMSolver._update_unconstrained_solution",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 995,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L995"
+        },
+        {
+          "name": "PADMMSolver._update_regularization",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 527,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L527"
+        }
+      ],
+      "mapping_kind": "mechanism_correspondence",
+      "evidence_type": "curated_mapping"
+    },
+    {
+      "id": "map:kamino:padmm_projection_dual",
+      "solver": "kamino",
+      "title_zh": "可行集合投影与对偶变量更新",
+      "paper_id": "paper:proximal-admm-2024",
+      "paper_ids": [
+        "paper:proximal-admm-2024",
+        "paper:kamino-loops-2025"
+      ],
+      "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-C，式(36b/c)、(38)–(39)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.24 · VI-F，式(167c/d)、(169)](../../sources/papers/kamino-loops-2025/paper.pdf#page=24)",
+      "correspondence": "基本迭代把 x-z_prev/rho 投影到可行集得到 y，再以 z=z_prev+rho*(y-x) 更新对偶变量。当前 _update_projection_argument 准备投影输入，_project_to_feasible_cone 分别处理有界乘子、非负限位和 Coulomb 接触锥；无界双边乘子不需要同样的锥截断。make_update_dual_variables_and_compute_primal_dual_residuals 实现 z 更新与残差。",
+      "boundary": "论文式展示基本迭代；当前加速/松弛路径、批量约束布局和 effort-limited implicit PD 的有界乘子扩展必须从源码辨识。PADMM 的全局线性子问题加投影，不等同于 DVI 每次局部 PGS 扫描。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.padmm.rho_0",
+        "newton:1.7.0:kamino:config.padmm.max_iterations"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 1009,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1009"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 617,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L617"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 698,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+        }
+      ],
+      "symbols": [
+        {
+          "name": "PADMMSolver._update_projection_argument",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 1009,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1009"
+        },
+        {
+          "name": "_project_to_feasible_cone",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 617,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L617"
+        },
+        {
+          "name": "make_update_dual_variables_and_compute_primal_dual_residuals",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 698,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+        }
+      ],
+      "mapping_kind": "mechanism_correspondence",
+      "evidence_type": "curated_mapping",
+      "local_experiments": [
+        {
+          "record_id": "lab:kamino_drive_effort_paths",
+          "scope": "单 revolute 的正反饱和力矩与有界 implicit PD 输出，记录实际路由及报告 effort",
+          "limitation": "未隔离证明投影 kernel 或论文算法；未验证无饱和跟踪、其他关节及所有停止容差"
+        }
+      ],
+      "unvalidated_scope": [
+        "未隔离证明投影 kernel 或论文算法；未验证无饱和跟踪、其他关节及所有停止容差"
+      ],
+      "validation_status": "partial_local_evidence"
+    },
+    {
+      "id": "map:kamino:physical_residuals_backend_boundary",
+      "solver": "kamino",
+      "title_zh": "停止残差的物理单位与 DVI 实现边界",
+      "paper_id": "paper:proximal-admm-2024",
+      "paper_ids": [
+        "paper:proximal-admm-2024",
+        "paper:kamino-loops-2025"
+      ],
+      "paper_locator": "[proximal-admm-2024 · PDF p.6 · III-D，式(40)–(43)](../../sources/papers/proximal-admm-2024/paper.pdf#page=6)；[kamino-loops-2025 · PDF p.24 · VI-F，式(170a–c)](../../sources/papers/kamino-loops-2025/paper.pdf#page=24)",
+      "correspondence": "论文用原始共识、对偶变化和互补性残差检查迭代。当前 PADMM 报告 r_p=||P(x-y)||inf（冲量），r_d=||P^-1[eta*Δx+rho*Δy]||inf（速度），r_c 为不等式块冲量与速度内积绝对值最大值（能量）。_update_convergence_check 对照各自容差，status 给每 world 的终态。DVI 当前 solve/_solve_dense_inequality_pgs 则组合双边直接解与单边投影扫描，其 r_p 是物理冲量锥投影距离，r_d 是对偶锥距离/双边速度违反，r_c 是互补内积。",
+      "boundary": "三个残差都是物理量的绝对最大值，不除以约束数或参考范数，不能无量纲混合比较。PADMM 公式映射不证明 DVI 逐行复现上述论文；DVI 的定义依据当前 docs/solvers/kamino.rst 和源码。收敛标记与有限步轨迹精度/物理真实性不同，仍需实验。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.padmm.primal_tolerance",
+        "newton:1.7.0:kamino:config.padmm.dual_tolerance",
+        "newton:1.7.0:kamino:config.padmm.compl_tolerance",
+        "newton:1.7.0:kamino:config.dvi.omega"
+      ],
+      "source_refs": [
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 1203,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1203"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 698,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+          "line": 450,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L450"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+          "line": 698,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L698"
+        },
+        {
+          "repository": "newton-physics/newton",
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "path": "docs/solvers/kamino.rst",
+          "line": 111,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L111"
+        }
+      ],
+      "symbols": [
+        {
+          "name": "PADMMSolver._update_convergence_check",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 1203,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/solver.py#L1203"
+        },
+        {
+          "name": "make_update_dual_variables_and_compute_primal_dual_residuals",
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 698,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py#L698"
+        },
+        {
+          "name": "DVISolver.solve",
+          "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+          "line": 450,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L450"
+        },
+        {
+          "name": "DVISolver._solve_dense_inequality_pgs",
+          "path": "newton/_src/solvers/kamino/_src/solvers/dvi/solver.py",
+          "line": 698,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/solvers/dvi/solver.py#L698"
+        },
+        {
+          "name": "Terminal residual definitions",
+          "path": "docs/solvers/kamino.rst",
+          "line": 111,
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L111"
+        }
+      ],
+      "mapping_kind": "mechanism_correspondence",
+      "evidence_type": "curated_mapping",
+      "local_experiments": [
+        {
+          "record_id": "lab:kamino_backend_guided_contact",
+          "scope": "同一倾斜导轨单接触场景的 PADMM/DVI 配置组、实际状态和各自残差时间序列",
+          "limitation": "同名残差和收敛率不能直接比较准确性；未覆盖稀疏动态、复杂接触、性能或论文基准"
+        }
+      ],
+      "unvalidated_scope": [
+        "同名残差和收敛率不能直接比较准确性；未覆盖稀疏动态、复杂接触、性能或论文基准"
+      ],
+      "validation_status": "partial_local_evidence"
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "diagnostic:kamino:1",
+      "solver": "kamino",
+      "symptom": "闭环漂移或关节约束不一致",
+      "plan": [
+        "先校验几何、关节拓扑和初始姿态。",
+        "检查 FK 是否启用及其收敛。",
+        "冻结 dt，扫描约束稳定化与 solver 预算，记录闭环误差及三类残差。"
+      ],
+      "caution": "不能仅用更强稳定化掩盖错误关节模型。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.constraints.alpha",
+        "newton:1.7.0:kamino:config.fk.tolerance"
+      ],
+      "evidence_type": "proposed",
+      "status": "not_run"
+    },
+    {
+      "id": "diagnostic:kamino:2",
+      "solver": "kamino",
+      "symptom": "PADMM 未收敛或反复达到上限",
+      "plan": [
+        "读取 status 的 converged/iterations/r_p/r_d/r_c。",
+        "冻结尺度和模型，比较 max_iterations 与各容差。",
+        "再探索 eta/rho_0、warmstart 和合法的罚参数策略。"
+      ],
+      "caution": "残差阈值不是所有任务通用的物理精度保证。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.padmm.max_iterations",
+        "newton:1.7.0:kamino:config.padmm.rho_0"
+      ],
+      "evidence_type": "proposed",
+      "status": "not_run"
+    },
+    {
+      "id": "diagnostic:kamino:3",
+      "solver": "kamino",
+      "symptom": "DVI 多接触误差增大",
+      "plan": [
+        "核对 preconditioning=False 和后端默认组合。",
+        "分别扫描外层迭代与 inequality sweeps。",
+        "在相同接触/步长/模型下与 PADMM 比较。"
+      ],
+      "caution": "后端同名残差定义不同，不可直接以单个数字排名。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dvi.max_alternating_iterations",
+        "newton:1.7.0:kamino:config.dvi.inequality_sweeps_per_iteration"
+      ],
+      "evidence_type": "proposed",
+      "status": "not_run"
+    },
+    {
+      "id": "diagnostic:kamino:4",
+      "solver": "kamino",
+      "symptom": "接触漏检或穿透",
+      "plan": [
+        "确认使用内部 collision detector 还是外部 contacts。",
+        "检查容量、gap 与几何。",
+        "最后扫描 gamma/delta 与 dt。"
+      ],
+      "caution": "delta 和稳定化不能生成缺失接触。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.use_collision_detector",
+        "newton:1.7.0:kamino:config.constraints.gamma"
+      ],
+      "evidence_type": "proposed",
+      "status": "not_run"
+    },
+    {
+      "id": "diagnostic:kamino:5",
+      "solver": "kamino",
+      "symptom": "改后端或积分器后配置报错",
+      "plan": [
+        "从新的 Config(dynamics_solver=...) 重建。",
+        "核对 sparse_dynamics / sparse_jacobian / preconditioning。",
+        "Moreau 同时启用内部碰撞；按异常定位组合约束。"
+      ],
+      "caution": "不要在完成默认解析后只改一个字段。",
+      "parameter_ids": [
+        "newton:1.7.0:kamino:config.dynamics_solver",
+        "newton:1.7.0:kamino:config.integrator"
+      ],
+      "evidence_type": "proposed",
+      "status": "not_run"
+    }
+  ],
+  "papers": [
+    {
+      "id": "paper:kamino-loops-2025",
+      "solver": "kamino",
+      "title": "On Solving the Dynamics of Constrained Rigid Multi-Body Systems with Kinematic Loops",
+      "year": 2025,
+      "url": "https://arxiv.org/pdf/2504.19771v1",
+      "doi": "10.48550/arXiv.2504.19771",
+      "role": "最大坐标、闭环机械系统与对偶接触求解；Kamino 源码直接引用。",
+      "local_path": "sources/papers/kamino-loops-2025/paper.pdf",
+      "text_path": "sources/papers/kamino-loops-2025/text.txt",
+      "pages": 66,
+      "sha256": "9ce6f6b0cebc5712aa114589f22036055330a65abb04c5ee1b56f6f2416edbcb",
+      "acquired_at": "2026-10-28T08:42:05.623550+00:00",
+      "evidence_type": "paper_background",
+      "rights": "Original authors/publishers retain rights."
+    },
+    {
+      "id": "paper:proximal-admm-2024",
+      "solver": "kamino",
+      "title": "From Compliant to Rigid Contact Simulation: a Unified and Efficient Approach",
+      "year": 2024,
+      "url": "https://arxiv.org/pdf/2405.17020v1",
+      "doi": "10.48550/arXiv.2405.17020",
+      "role": "近端 ADMM、接触锥投影及残差控制背景；Kamino 源码直接引用。",
+      "local_path": "sources/papers/proximal-admm-2024/paper.pdf",
+      "text_path": "sources/papers/proximal-admm-2024/text.txt",
+      "pages": 14,
+      "sha256": "f9601cb6358aa0ca4e508cf8570a8292dcd4c97088931791f73d109788665a95",
+      "acquired_at": "2026-10-28T08:42:06.165788+00:00",
+      "evidence_type": "paper_background",
+      "rights": "Original authors/publishers retain rights."
+    }
+  ],
+  "experiments": [],
+  "counts": {
+    "constructor_optional": 1,
+    "config_fields": 80,
+    "reset_fields": 4,
+    "parameters": 86,
+    "model_inputs": 10,
+    "papers": 2,
+    "experiments": 0
+  },
+  "evidence_status": "Source and paper curation; archived lab cases are joined by the unified build. This generator performs no simulations.",
+  "capabilities": {
+    "coordinate_system": "maximal body coordinates",
+    "deformable_solver": false,
+    "experimental": true,
+    "source_refs": [
+      {
+        "repository": "newton-physics/newton",
+        "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+        "path": "docs/solvers/kamino.rst",
+        "line": 5,
+        "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/docs/solvers/kamino.rst#L5"
+      }
+    ]
+  }
+}

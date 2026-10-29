@@ -1,0 +1,48 @@
+[
+  {
+    "id": "paper:vbd2024",
+    "title": "Vertex Block Descent",
+    "year": 2024,
+    "doi": "10.1145/3658179",
+    "url": "https://graphics.cs.utah.edu/research/projects/vbd/vbd-siggraph2024.pdf",
+    "file": "vbd2024.pdf",
+    "role": "particle variational block descent foundation",
+    "local_path": "sources/papers/vbd2024.pdf",
+    "sha256": "4ba65c4e49e8e8740aca491c2bf466b6eeb6f8824a152c12d1f7800828959132",
+    "pages": 16,
+    "downloaded_date": "2026-10-27",
+    "extraction_note": "Plain text may lose formula layout; check original PDF. Page numbers are PDF pages starting at 1.",
+    "license": "Original authors/publisher license; not relicensed by this knowledge base."
+  },
+  {
+    "id": "paper:avbd2025",
+    "title": "Augmented Vertex Block Descent",
+    "year": 2025,
+    "doi": "10.1145/3731195",
+    "url": "https://graphics.cs.utah.edu/research/projects/avbd/Augmented_VBD-SIGGRAPH25.pdf",
+    "file": "avbd2025.pdf",
+    "role": "legacy rigid AVBD foundation; not identical to compliant ALM extension",
+    "local_path": "sources/papers/avbd2025.pdf",
+    "sha256": "7957d116b9130cfb0aa5a48ab7cd0d74a64ad79f75c99acd291bdece2be3f2d6",
+    "pages": 12,
+    "downloaded_date": "2026-10-27",
+    "extraction_note": "Plain text may lose formula layout; check original PDF. Page numbers are PDF pages starting at 1.",
+    "license": "Original authors/publisher license; not relicensed by this knowledge base."
+  },
+  {
+    "id": "paper:dat2026",
+    "title": "Divide and Truncate: A Penetration and Inversion Free Framework for Coupled Multi-physics Systems",
+    "year": 2026,
+    "doi": "10.1145/3799902.3811143",
+    "arxiv": "2604.15513v1",
+    "url": "https://arxiv.org/pdf/2604.15513v1",
+    "file": "dat2026.pdf",
+    "role": "collision-bound and motion truncation foundation",
+    "local_path": "sources/papers/dat2026.pdf",
+    "sha256": "5bce3f51f03e8bd8801baaabe42e9fab7e202940aff1d3d45f4898b23ad44719",
+    "pages": 14,
+    "downloaded_date": "2026-10-27",
+    "extraction_note": "Plain text may lose formula layout; check original PDF. Page numbers are PDF pages starting at 1.",
+    "license": "Original authors/publisher license; not relicensed by this knowledge base."
+  }
+]

@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "status": "frozen_before_runs",
+  "case_id": "kamino_backend_guided_contact",
+  "title": "PADMM / DVI：倾斜导轨滑块与地面接触",
+  "version": "1.7.0",
+  "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+  "question": "在同一带五个双边约束与接触不等式的最小机械系统中，两种公开默认配置组能否保持导轨约束、处理落地并复现？",
+  "scene": {
+    "worlds": 1,
+    "device": "cpu",
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "body_shape": "sphere",
+    "radius_m": 0.1,
+    "mass_kg": 1.0,
+    "inertia_kg_m2": [
+      0.004,
+      0.004,
+      0.004
+    ],
+    "initial_position_m": [
+      0.0,
+      0.0,
+      0.35
+    ],
+    "initial_quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "initial_velocity": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "joint": "world-to-body passive prismatic; parent frame at initial body origin; child frame identity",
+    "joint_axis": [
+      0.6,
+      0.0,
+      -0.8
+    ],
+    "joint_coordinate": 0.0,
+    "joint_limits": "unbounded",
+    "joint_armature_damping_friction": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "joint_target_mode": "NONE",
+    "floor_z_m": 0.0,
+    "contact_mu": 0.3,
+    "contact_restitution": 0.0,
+    "shape_ke_kd": [
+      20000.0,
+      300.0
+    ],
+    "seed": "no RNG; programmatic primitives"
+  },
+  "simulation": {
+    "dt_s": 0.004166666666666667,
+    "steps": 144,
+    "duration_s": 0.6,
+    "sample_every_step": true,
+    "repeats_per_variant": 2
+  },
+  "variants": {
+    "A": {
+      "dynamics_solver": "padmm",
+      "description": "public PADMM defaults: dense Jacobian/dynamics, preconditioning on, LLTB, max_iterations=200, default acceleration and container warmstart"
+    },
+    "B": {
+      "dynamics_solver": "dvi",
+      "description": "public DVI defaults: sparse Jacobian, dense dynamics, preconditioning off, LLTBRCM dynamics, max_alternating_iterations=24 with 2 inequality sweeps, default container warmstart"
+    }
+  },
+  "common_overrides": {
+    "use_collision_detector": true,
+    "use_fk_solver": false,
+    "integrator": "euler",
+    "all_available_use_graph_conditionals": false,
+    "constraints.alpha": 0.1,
+    "constraints.gamma": 0.1,
+    "constraints.delta": 1e-06,
+    "collision_detector.max_contacts_per_world": 32
+  },
+  "intervention_scope": "A backend CONFIGURATION GROUP comparison; dependent defaults, warmstart details, regularization and iteration schedules may differ. Full requested/resolved configs and all diffs are archived. Not a single-factor dynamics_solver-only intervention; no equal-iteration or speed ranking.",
+  "allowed_configuration_diff_paths": [
+    "dynamics_solver",
+    "sparse_jacobian",
+    "dynamics.preconditioning",
+    "dynamics.linear_solver_type"
+  ],
+  "configuration_validation": "Both configs retain both padmm and dvi subcontainers with identical saved values; selecting the backend activates different schedules. Requested and resolved differences must be exactly the four allowed paths. Validate PADMM sparse_jacobian=False/preconditioning=True/LLTB, DVI sparse_jacobian=True/preconditioning=False/LLTBRCM, both sparse_dynamics=False and integrator=euler. Any extra difference is a protocol violation and reported, not silently ignored.",
+  "reference": {
+    "precontact_window_s": [
+      0.0,
+      0.2
+    ],
+    "formula": "a_parallel=dot(g,axis)=7.848 m/s2; p(t)=p0+0.5*a_parallel*t^2*axis; v(t)=a_parallel*t*axis. Independent continuous mechanics reference; first-order Euler position error allowed.",
+    "contact_coordinate_m": 0.3125,
+    "contact_center_m": [
+      0.1875,
+      0.0,
+      0.1
+    ],
+    "geometry": "sphere-floor penetration=max(0,radius-z); off-axis distance=norm((p-p0)-axis*dot(p-p0,axis)); quaternion identity angular deviation; kinetic plus m*g*z potential energy"
+  },
+  "acceptance": {
+    "evidence_validity": [
+      "source hashes equal fixed lock",
+      "resolved dynamics_solver equals intended backend",
+      "same A/B initial state and mass/inertia arrays",
+      "all 145 state samples and 144 status samples present and finite",
+      "both independent repeats meet absolute/relative tolerance",
+      "actual terminal iterations become positive and internal model_active_contacts becomes positive"
+    ],
+    "physical_criteria": {
+      "precontact_position_error_max_m": 0.004,
+      "precontact_velocity_error_max_m_s": 0.005,
+      "off_axis_distance_max_m": 0.0002,
+      "rotation_deviation_max_rad": 0.0002,
+      "peak_penetration_max_m": 0.015,
+      "tail_window_s": [
+        0.5,
+        0.6
+      ],
+      "tail_contact_center_error_max_m": 0.01,
+      "tail_speed_max_m_s": 0.05,
+      "energy_growth_over_initial_max_j": 0.05
+    },
+    "criterion_rationale": "Precontact Euler truncation bound is 0.5*a_parallel*t*dt=0.00327m at 0.2s, hence 0.004m; velocity is constant-acceleration reference. Guide/rotation bounds are absolute SI errors at one-body float32 scale. 15mm permits roughly two contact-time vertical increments (~7.4mm each), but catches unresolved penetration. Tail 10mm/0.05m/s and energy +0.05J are scenario-specific, predeclared physical limits, not solver tolerances.",
+    "repeat_tolerance": {
+      "body_q_atol": 1e-05,
+      "body_qd_atol": 0.0001,
+      "joint_q_atol": 1e-05,
+      "joint_qd_atol": 0.0001,
+      "rtol": 1e-05,
+      "timing_excluded": true
+    },
+    "pair_comparison": "Report complete differences; no required winner or minimum effect. Physical pass/fail is judged per backend. Tail position difference <=0.005m and velocity difference <=0.02m/s support only narrow agreement; disagreement is a valid negative result, not grounds to change protocol.",
+    "tail_pair_position_tolerance_m": 0.005,
+    "tail_pair_velocity_tolerance_m_s": 0.02,
+    "terminal_convergence": "Record fraction and all r_p/r_d/r_c arrays separately. Do not compare same-named residuals as identical or use converged alone as physical correctness. Physical criteria may fail despite converged. No universal common residual acceptance threshold."
+  },
+  "residuals": {
+    "PADMM": "r_p physical impulse consensus; r_d physical velocity weighted ADMM change; r_c inequality complementarity J",
+    "DVI": "r_p unilateral cone projection distance in impulse; r_d dual-cone distance/bilateral velocity violation; r_c inequality complementarity J"
+  },
+  "artifacts": [
+    "runner.py",
+    "protocol.json",
+    "scene.json",
+    "environment.json",
+    "result.json",
+    "run.log",
+    "trajectory.npz: time/body_q/body_qd/joint_q/joint_qd/status_*/contact_count/body_mass/body_inertia",
+    "configuration-diff.json",
+    "analysis.json"
+  ],
+  "instrumentation": "Scenario and SolverKamino construction use public APIs. Read-only solver._config and solver._contacts_kamino.model_active_contacts are version-pinned internal instrumentation, not public API promises.",
+  "failure_policy": "Every attempt gets an immutable run directory. Runtime failure, nonfinite states, criterion failure and disagreement are retained and reported. Fixing an implementation mistake requires a new runner hash and explicit exclusion reason; changing scene/config/criteria requires a new protocol version before rerun. No posthoc threshold relaxation.",
+  "limitations": [
+    "one CPU world and one sphere with a passive prismatic guide",
+    "one contact patch, no contact-rich stack or closed loop",
+    "default backend configuration groups only; no DVI Schur/sparse-dynamics or PADMM branch sweep",
+    "no GPU, performance ranking or long-horizon stability claim",
+    "friction cone present but this is not a friction coefficient calibration experiment"
+  ],
+  "source_refs": [
+    {
+      "path": "docs/solvers/kamino.rst",
+      "line": 41
+    },
+    {
+      "path": "docs/solvers/kamino.rst",
+      "line": 84
+    },
+    {
+      "path": "newton/_src/solvers/kamino/config.py",
+      "line": 797
+    },
+    {
+      "path": "newton/_src/sim/builder.py",
+      "line": 5798
+    }
+  ],
+  "frozen_at_utc": "2026-10-29T05:09:35.240679+00:00",
+  "reviewed_by": "root agent: static source and physical reference review before any runtime"
+}

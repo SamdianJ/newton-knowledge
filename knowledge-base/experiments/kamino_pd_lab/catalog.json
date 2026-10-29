@@ -1,0 +1,2970 @@
+{
+  "schema_version": "1.0",
+  "status": "passed",
+  "status_meaning": "Evidence integrity only; physical and strict/configured convergence verdicts remain separate.",
+  "cases": [
+    {
+      "id": "kamino_pd_iteration_budget",
+      "title": "有界 PD：200 与 1000 次迭代预算",
+      "solver": "kamino",
+      "experiment_kind": "pd_diagnostics",
+      "observation": "两设置均通过冻结的物理门槛；200→1000 次迭代后，原严格三容差 1e-7 下收敛比例仍为 0%；终止残差及 body/joint 轨迹逐元素相同，r_c 中位数 4.25416e-07 J。预定六个时间步的尾20次有界行 x/y/z 均不再变化，支持持续停滞而非仅200次预算不足。",
+      "physical_acceptance": "passed",
+      "strict_convergence_acceptance": "failed_criteria",
+      "limitations": "仅固定的CPU单转子饱和场景，物理门槛通过不代表严格收敛通过；未证明普适float32精度下限，没有改求解器实现；每迭代观测同步开销不支持性能排名。",
+      "association_scope": "相同物理初态和驱动，直接单因素比较 config.padmm.max_iterations；严格 baseline 在四个配对页复用，两次独立重复按唯一run计数。",
+      "association_relation": "measures_behavior_of",
+      "associations": [
+        "newton:1.7.0:kamino:config.padmm.max_iterations"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/math.py",
+          "line": 109
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 939
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 1017
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 387
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 562
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/dual.py",
+          "line": 1135
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 469
+        }
+      ],
+      "variants": [
+        {
+          "variant": "A",
+          "label": "baseline",
+          "run_id": "kamino_pd_convergence_baseline_r1_20261029T063959218053Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 0.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 200,
+            "terminal_rp_median": 1.0761949553739214e-08,
+            "terminal_rd_median": 0.0,
+            "terminal_rc_median_J": 4.254156209526627e-07,
+            "terminal_rc_min_J": 4.0203335061050893e-07,
+            "terminal_rc_max_J": 4.568249210024078e-07
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz",
+          "raw_sha256": "a9f6350ad7c811d59b69ceafefa6e663ceeaaa8b58e6dc8856096a10600c58da",
+          "program_sha256": "845f8d6ee807c6f1f41193cd96dc8f2a28c866b73c357b8ac0c8f4c3bc9b8ae7",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/iterations.npz",
+          "iteration_sha256": "08b7a2efe05455ee0b1209519766f4a000389c3e2e0de35e64c2a07153004b17",
+          "config": {
+            "treatment": {
+              "overrides": {},
+              "purpose": "Reproduce legacy strict saturated PD and validate passive observation against both old baseline repeats."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_baseline_r2_20261029T064207274762Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/trajectory.npz",
+            "raw_sha256": "0427806e0348c0cbe1675168257b987ea1ebc01cf3e266a1825f46dda613a515",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/iterations.npz",
+            "iteration_sha256": "282caba70e21b5d0dceaff8ff2373fbdc142f7bf9dcd96b2ff1fbc84a2555269",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/environment.json"
+        },
+        {
+          "variant": "B",
+          "label": "budget1000",
+          "run_id": "kamino_pd_convergence_budget1000_r1_20261029T064207273880Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 0.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 1000,
+            "terminal_rp_median": 1.0761949553739214e-08,
+            "terminal_rd_median": 0.0,
+            "terminal_rc_median_J": 4.254156209526627e-07,
+            "terminal_rc_min_J": 4.0203335061050893e-07,
+            "terminal_rc_max_J": 4.568249210024078e-07
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/trajectory.npz",
+          "raw_sha256": "3efb1fd66d15b42e9143ccfa3e0bc1bfb226e4a398e7aaa4adebff3e30786434",
+          "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/iterations.npz",
+          "iteration_sha256": "51d14e86eeffd629a96eaf301bb4961ae233993438bd8ad25986d6d7834919c8",
+          "config": {
+            "treatment": {
+              "overrides": {
+                "padmm.max_iterations": 1000
+              },
+              "purpose": "Distinguish insufficient 200-iteration budget from persistent plateau under unchanged strict tolerances."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 1000,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_budget1000_r2_20261029T064227376663Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/trajectory.npz",
+            "raw_sha256": "7dcdfcbcd237ec4ec2294ca88e5018acf503709778ef61875be5a8142731fee8",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/iterations.npz",
+            "iteration_sha256": "51d14e86eeffd629a96eaf301bb4961ae233993438bd8ad25986d6d7834919c8",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/environment.json"
+        }
+      ],
+      "protocol_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/protocol.json",
+      "runner_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+      "curve_file": "experiments/kamino_pd_lab/convergence/kamino_pd_iteration_budget.svg",
+      "sample_kind": "time",
+      "record_id": "lab:kamino_pd_iteration_budget",
+      "artifact_root": "experiments/kamino_pd_lab/",
+      "evidence_valid": true,
+      "parameter": "有界 PD：200 与 1000 次迭代预算",
+      "diagnosis_evidence": {
+        "interpretation": "baseline与1000的预定六步尾20次有界x/y/z不变；第0步x距上界26ULP，gap约9.68575e-8乘|z|4.39956生成rc4.26130e-7J，非零对偶增量小于z半ULP2.38419e-7并在float32加法中丢失。支持当前算术与缩放下量化停滞，未证明普适floor；仅放宽互补容差不算严格收敛修复。",
+        "representative_step": {
+          "outer_step": 0,
+          "terminal_iteration": 200,
+          "tail_count": 20,
+          "tail20_rc_range_J": [
+            4.2613021378201665e-07,
+            4.2613021378201665e-07
+          ],
+          "tail20_relative_span": 0.0,
+          "tail20_unique_complete_states": 2,
+          "tail20_unique_bounded_states": 1,
+          "bounded_x": 0.045000094920396805,
+          "bounded_y": 0.044999998062849045,
+          "bounded_z": -4.3995561599731445,
+          "pre_z_input": -4.3995561599731445,
+          "actual_z_change": 0.0,
+          "float32_add_loses_increment": true,
+          "complementary_bound": 0.044999998062849045,
+          "gap_x_to_bound": 9.685754776000977e-08,
+          "gap_in_bound_ULPs": 26.0,
+          "dual_update_rho_y_minus_x": -9.685754776000977e-08,
+          "half_ULP_z": 2.384185791015625e-07,
+          "dual_update_below_half_ULP": true,
+          "recomputed_product_J": 4.26130220887444e-07,
+          "projected_y_equals_bound": true,
+          "preconditioner_P": 0.1111111119389534
+        },
+        "original_strict_convergence_resolved": false,
+        "analysis_file": "experiments/kamino_pd_lab/convergence/analysis.json"
+      },
+      "viewer_url": "/files/experiments/kamino_pd_lab/index.html?case=kamino_pd_iteration_budget",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz"
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/trajectory.npz"
+        }
+      ],
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+          "start_line": 1,
+          "max_lines": 80
+        }
+      }
+    },
+    {
+      "id": "kamino_pd_complementarity_gate",
+      "title": "有界 PD：仅改变互补停止容差",
+      "solver": "kamino",
+      "experiment_kind": "pd_diagnostics",
+      "observation": "两设置均通过冻结的物理门槛；仅将互补容差从 1e-7 改为 1e-6 J，配置收敛比例由 0% 到 100%，最多 16 次；按原严格三容差重算仍为 0%。r_c 中位数仍为 4.25639e-07 J。这识别了停止门槛，不是严格收敛问题已经解决。",
+      "physical_acceptance": "passed",
+      "strict_convergence_acceptance": "failed_criteria",
+      "limitations": "仅固定的CPU单转子饱和场景，物理门槛通过不代表严格收敛通过；未证明普适float32精度下限，没有改求解器实现；每迭代观测同步开销不支持性能排名。",
+      "association_scope": "相同物理初态和驱动，直接单因素比较 config.padmm.compl_tolerance；严格 baseline 在四个配对页复用，两次独立重复按唯一run计数。",
+      "association_relation": "measures_behavior_of",
+      "associations": [
+        "newton:1.7.0:kamino:config.padmm.compl_tolerance"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/math.py",
+          "line": 109
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 939
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 1017
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 387
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 562
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/dual.py",
+          "line": 1135
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 469
+        }
+      ],
+      "variants": [
+        {
+          "variant": "A",
+          "label": "baseline",
+          "run_id": "kamino_pd_convergence_baseline_r1_20261029T063959218053Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 0.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 200,
+            "terminal_rp_median": 1.0761949553739214e-08,
+            "terminal_rd_median": 0.0,
+            "terminal_rc_median_J": 4.254156209526627e-07,
+            "terminal_rc_min_J": 4.0203335061050893e-07,
+            "terminal_rc_max_J": 4.568249210024078e-07
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz",
+          "raw_sha256": "a9f6350ad7c811d59b69ceafefa6e663ceeaaa8b58e6dc8856096a10600c58da",
+          "program_sha256": "845f8d6ee807c6f1f41193cd96dc8f2a28c866b73c357b8ac0c8f4c3bc9b8ae7",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/iterations.npz",
+          "iteration_sha256": "08b7a2efe05455ee0b1209519766f4a000389c3e2e0de35e64c2a07153004b17",
+          "config": {
+            "treatment": {
+              "overrides": {},
+              "purpose": "Reproduce legacy strict saturated PD and validate passive observation against both old baseline repeats."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_baseline_r2_20261029T064207274762Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/trajectory.npz",
+            "raw_sha256": "0427806e0348c0cbe1675168257b987ea1ebc01cf3e266a1825f46dda613a515",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/iterations.npz",
+            "iteration_sha256": "282caba70e21b5d0dceaff8ff2373fbdc142f7bf9dcd96b2ff1fbc84a2555269",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/environment.json"
+        },
+        {
+          "variant": "B",
+          "label": "compl1e6",
+          "run_id": "kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 2.0581483847759152e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1008403311716393e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 1.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 16,
+            "terminal_rp_median": 1.0761949553739214e-08,
+            "terminal_rd_median": 6.872080504649603e-08,
+            "terminal_rc_median_J": 4.2563945612528187e-07,
+            "terminal_rc_min_J": 4.0203337903221836e-07,
+            "terminal_rc_max_J": 4.56958986205791e-07
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/trajectory.npz",
+          "raw_sha256": "4d501b65ccb39cad36d26ad3dfe57796233638cf85db3e5983ff11aafecdb01f",
+          "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/iterations.npz",
+          "iteration_sha256": "4e0c2a7f030c8f471e828a69be0601aac24b5977f4a2115eef4c723928b80c62",
+          "config": {
+            "treatment": {
+              "overrides": {
+                "padmm.compl_tolerance": 1e-06
+              },
+              "purpose": "Isolate complementarity stopping tolerance only; always also score original strict gates, never label relaxed stop a strict convergence solution."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-06,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/trajectory.npz",
+            "raw_sha256": "cbb978858606c68f2d53531f8b699a6be282df5a7f7d594dcc40e3909760e587",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/iterations.npz",
+            "iteration_sha256": "4e0c2a7f030c8f471e828a69be0601aac24b5977f4a2115eef4c723928b80c62",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/environment.json"
+        }
+      ],
+      "protocol_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/protocol.json",
+      "runner_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+      "curve_file": "experiments/kamino_pd_lab/convergence/kamino_pd_complementarity_gate.svg",
+      "sample_kind": "time",
+      "record_id": "lab:kamino_pd_complementarity_gate",
+      "artifact_root": "experiments/kamino_pd_lab/",
+      "evidence_valid": true,
+      "parameter": "有界 PD：仅改变互补停止容差",
+      "viewer_url": "/files/experiments/kamino_pd_lab/index.html?case=kamino_pd_complementarity_gate",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz"
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/trajectory.npz"
+        }
+      ],
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+          "start_line": 1,
+          "max_lines": 80
+        }
+      }
+    },
+    {
+      "id": "kamino_pd_acceleration",
+      "title": "有界 PD：仅关闭加速",
+      "solver": "kamino",
+      "experiment_kind": "pd_diagnostics",
+      "observation": "两设置均通过冻结的物理门槛；仅关闭加速，严格收敛比例仍为 0%，用满200次；r_c 中位数 4.25532e-07 J，最大值 6.52368e-07 J。该对照未消除停滞，不能把失败归结为仅加速分支。",
+      "physical_acceptance": "passed",
+      "strict_convergence_acceptance": "failed_criteria",
+      "limitations": "仅固定的CPU单转子饱和场景，物理门槛通过不代表严格收敛通过；未证明普适float32精度下限，没有改求解器实现；每迭代观测同步开销不支持性能排名。",
+      "association_scope": "相同物理初态和驱动，直接单因素比较 config.padmm.use_acceleration；严格 baseline 在四个配对页复用，两次独立重复按唯一run计数。",
+      "association_relation": "measures_behavior_of",
+      "associations": [
+        "newton:1.7.0:kamino:config.padmm.use_acceleration"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/math.py",
+          "line": 109
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 939
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 1017
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 387
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 562
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/dual.py",
+          "line": 1135
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 469
+        }
+      ],
+      "variants": [
+        {
+          "variant": "A",
+          "label": "baseline",
+          "run_id": "kamino_pd_convergence_baseline_r1_20261029T063959218053Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 0.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 200,
+            "terminal_rp_median": 1.0761949553739214e-08,
+            "terminal_rd_median": 0.0,
+            "terminal_rc_median_J": 4.254156209526627e-07,
+            "terminal_rc_min_J": 4.0203335061050893e-07,
+            "terminal_rc_max_J": 4.568249210024078e-07
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz",
+          "raw_sha256": "a9f6350ad7c811d59b69ceafefa6e663ceeaaa8b58e6dc8856096a10600c58da",
+          "program_sha256": "845f8d6ee807c6f1f41193cd96dc8f2a28c866b73c357b8ac0c8f4c3bc9b8ae7",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/iterations.npz",
+          "iteration_sha256": "08b7a2efe05455ee0b1209519766f4a000389c3e2e0de35e64c2a07153004b17",
+          "config": {
+            "treatment": {
+              "overrides": {},
+              "purpose": "Reproduce legacy strict saturated PD and validate passive observation against both old baseline repeats."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_baseline_r2_20261029T064207274762Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/trajectory.npz",
+            "raw_sha256": "0427806e0348c0cbe1675168257b987ea1ebc01cf3e266a1825f46dda613a515",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/iterations.npz",
+            "iteration_sha256": "282caba70e21b5d0dceaff8ff2373fbdc142f7bf9dcd96b2ff1fbc84a2555269",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/environment.json"
+        },
+        {
+          "variant": "B",
+          "label": "noaccel",
+          "run_id": "kamino_pd_convergence_noaccel_r1_20261029T064305315289Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 2.505183220591345e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.100625690422021e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 0.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 200,
+            "terminal_rp_median": 1.0761949553739214e-08,
+            "terminal_rd_median": 0.0,
+            "terminal_rc_median_J": 4.2553182311166893e-07,
+            "terminal_rc_min_J": 4.0203335061050893e-07,
+            "terminal_rc_max_J": 6.523679871861532e-07
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/trajectory.npz",
+          "raw_sha256": "b9c488c682c9b295cfac2cad4916db71793803092d2032fe487cd7abf5a9b85b",
+          "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/iterations.npz",
+          "iteration_sha256": "43b04231b38145501eccda050a5c6a4a1dc8db67540cc5eb5b4530894429849c",
+          "config": {
+            "treatment": {
+              "overrides": {
+                "padmm.use_acceleration": false
+              },
+              "purpose": "Test acceleration/restart path involvement with all tolerances and budget fixed."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": false,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_noaccel_r2_20261029T064315283851Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/trajectory.npz",
+            "raw_sha256": "8a166ccb07fee89ff139651f7fce5a811fcc86c5d51e6d9040dc383ace5b9bd0",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/iterations.npz",
+            "iteration_sha256": "43b04231b38145501eccda050a5c6a4a1dc8db67540cc5eb5b4530894429849c",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/environment.json"
+        }
+      ],
+      "protocol_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/protocol.json",
+      "runner_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+      "curve_file": "experiments/kamino_pd_lab/convergence/kamino_pd_acceleration.svg",
+      "sample_kind": "time",
+      "record_id": "lab:kamino_pd_acceleration",
+      "artifact_root": "experiments/kamino_pd_lab/",
+      "evidence_valid": true,
+      "parameter": "有界 PD：仅关闭加速",
+      "viewer_url": "/files/experiments/kamino_pd_lab/index.html?case=kamino_pd_acceleration",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz"
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/trajectory.npz"
+        }
+      ],
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+          "start_line": 1,
+          "max_lines": 80
+        }
+      }
+    },
+    {
+      "id": "kamino_pd_preconditioning",
+      "title": "有界 PD：仅关闭对角预条件",
+      "solver": "kamino",
+      "experiment_kind": "pd_diagnostics",
+      "observation": "两设置均通过冻结的物理门槛；仅关闭对角预条件，严格收敛比例仍为 0%，r_c 中位数从 4.25416e-07 升至 0.000460158 J；200次下数值残差更大。物理力矩/轨迹仍通过事前门槛，不能据此推荐关闭预条件或声称收敛修复。",
+      "physical_acceptance": "passed",
+      "strict_convergence_acceptance": "failed_criteria",
+      "limitations": "仅固定的CPU单转子饱和场景，物理门槛通过不代表严格收敛通过；未证明普适float32精度下限，没有改求解器实现；每迭代观测同步开销不支持性能排名。",
+      "association_scope": "相同物理初态和驱动，直接单因素比较 config.dynamics.preconditioning；严格 baseline 在四个配对页复用，两次独立重复按唯一run计数。",
+      "association_relation": "measures_behavior_of",
+      "associations": [
+        "newton:1.7.0:kamino:config.dynamics.preconditioning"
+      ],
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/math.py",
+          "line": 109
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 939
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/kernels.py",
+          "line": 1017
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 387
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/solvers/padmm/solver.py",
+          "line": 562
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/dual.py",
+          "line": 1135
+        },
+        {
+          "path": "newton/_src/solvers/kamino/config.py",
+          "line": 469
+        }
+      ],
+      "variants": [
+        {
+          "variant": "A",
+          "label": "baseline",
+          "run_id": "kamino_pd_convergence_baseline_r1_20261029T063959218053Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 2.3561716086528683e-07,
+            "joint_position_euler_reference_max_abs_rad": 1.0387182237947545e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1005999971966958e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 0.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 200,
+            "terminal_rp_median": 1.0761949553739214e-08,
+            "terminal_rd_median": 0.0,
+            "terminal_rc_median_J": 4.254156209526627e-07,
+            "terminal_rc_min_J": 4.0203335061050893e-07,
+            "terminal_rc_max_J": 4.568249210024078e-07
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz",
+          "raw_sha256": "a9f6350ad7c811d59b69ceafefa6e663ceeaaa8b58e6dc8856096a10600c58da",
+          "program_sha256": "845f8d6ee807c6f1f41193cd96dc8f2a28c866b73c357b8ac0c8f4c3bc9b8ae7",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/iterations.npz",
+          "iteration_sha256": "08b7a2efe05455ee0b1209519766f4a000389c3e2e0de35e64c2a07153004b17",
+          "config": {
+            "treatment": {
+              "overrides": {},
+              "purpose": "Reproduce legacy strict saturated PD and validate passive observation against both old baseline repeats."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_baseline_r2_20261029T064207274762Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/trajectory.npz",
+            "raw_sha256": "0427806e0348c0cbe1675168257b987ea1ebc01cf3e266a1825f46dda613a515",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/iterations.npz",
+            "iteration_sha256": "282caba70e21b5d0dceaff8ff2373fbdc142f7bf9dcd96b2ff1fbc84a2555269",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/environment.json"
+        },
+        {
+          "variant": "B",
+          "label": "noprecondition",
+          "run_id": "kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z",
+          "metrics": {
+            "joint_velocity_reference_max_abs_rad_s": 3.2180547715199292e-06,
+            "joint_position_euler_reference_max_abs_rad": 4.1300773619482034e-07,
+            "applied_effort_signed_max_abs_error_Nm": 0.0,
+            "applied_effort_max_Nm": 1.0,
+            "joint_anchor_origin_max_norm_m": 3.1465633583138697e-06,
+            "bounded_reported_effort_max_error_Nm": 0.0,
+            "configured_converged_fraction": 0.0,
+            "strict_converged_fraction": 0.0,
+            "independently_reconstructed_strict_fraction": 0.0,
+            "iterations_max": 200,
+            "terminal_rp_median": 1.153256744146347e-05,
+            "terminal_rd_median": 5.587991225297628e-08,
+            "terminal_rc_median_J": 0.0004601580003509298,
+            "terminal_rc_min_J": 0.00017525788280181587,
+            "terminal_rc_max_J": 0.00048298860201612115
+          },
+          "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/trajectory.npz",
+          "raw_sha256": "91700dd6fbb0453814af29eefd5033a92a35488fe3faac580e5937e1d9be7697",
+          "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+          "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+          "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/iterations.npz",
+          "iteration_sha256": "ba3a55d38a96f48b3f54e9dc04fce4d53ed98a15c70764e94691ad21d9c7bc7c",
+          "config": {
+            "treatment": {
+              "overrides": {
+                "dynamics.preconditioning": false
+              },
+              "purpose": "Test diagonal scaling involvement with fixed strict stopping tolerances and budget."
+            },
+            "resolved": {
+              "dynamics": {
+                "preconditioning": false,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/result.json",
+          "reproduction": {
+            "run_id": "kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z",
+            "raw_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/trajectory.npz",
+            "raw_sha256": "e0bb4065f7249d312f81d626e2072d7a3fe4b9fa86fe6d6e6eab1f827dda33b1",
+            "program_sha256": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+            "protocol_sha256": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+            "iteration_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/iterations.npz",
+            "iteration_sha256": "ba3a55d38a96f48b3f54e9dc04fce4d53ed98a15c70764e94691ad21d9c7bc7c",
+            "result_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/result.json"
+          },
+          "environment_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/environment.json"
+        }
+      ],
+      "protocol_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/protocol.json",
+      "runner_file": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+      "curve_file": "experiments/kamino_pd_lab/convergence/kamino_pd_preconditioning.svg",
+      "sample_kind": "time",
+      "record_id": "lab:kamino_pd_preconditioning",
+      "artifact_root": "experiments/kamino_pd_lab/",
+      "evidence_valid": true,
+      "parameter": "有界 PD：仅关闭对角预条件",
+      "viewer_url": "/files/experiments/kamino_pd_lab/index.html?case=kamino_pd_preconditioning",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz"
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/trajectory.npz"
+        }
+      ],
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py",
+          "start_line": 1,
+          "max_lines": 80
+        }
+      }
+    },
+    {
+      "id": "kamino_pd_unsaturated_step_reversal",
+      "record_id": "lab:kamino_pd_unsaturated_step_reversal",
+      "solver": "kamino",
+      "title": "非饱和隐式PD：正负位置目标与中途反向",
+      "parameter": "joint_target_ke joint_target_kd joint_effort_limit target_mode",
+      "experiment_kind": "pd_diagnostics",
+      "observation": "正负目标在2s反向，四次运行最大离散参考角误差 1.62892e-07 rad；物理验收 passed。收敛比例范围 100.000%–100.000%，不能从物理吻合推断逐步求解收敛。",
+      "physical_acceptance": "passed",
+      "limitations": "Newton1.7.0 pinned commit only, CPU singleworld dense PADMM; No contacts/gravity/armature/friction or translation eccentricity; Only bounded implicit PD interior; saturation and runtime limit changes belong to separate experiments; Private state/config reads are observational instrumentation, not supported user API; Single critically damped gain setting and fixed dt, not universal PD tuning; Mirror comparison is symmetry evidence; scalar recurrence supplies independent correctness evidence; Strict solver termination is diagnosed separately; physical pass does not imply every step converged.",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/joints.py",
+          "line": 1033
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+          "line": 1999
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/constraints.py",
+          "line": 400
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/integrators/euler.py",
+          "line": 45
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/wrenches.py",
+          "line": 334
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 276
+        }
+      ],
+      "associations": [
+        "model:kamino:joint_target_ke",
+        "model:kamino:joint_target_kd",
+        "model:kamino:joint_effort_limit"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "直接测量固定增益/有限力限下的非饱和跟踪机制及target-mode语义；未逐参数扫描kp/kd/力限，不外推任意频率、带宽或步长。",
+      "protocol_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/protocol.json",
+      "runner_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/runner.py",
+      "variants": [
+        {
+          "run_id": "kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z",
+          "metrics": {
+            "joint_position_reference_max_abs_rad": 1.6289164159188907e-07,
+            "joint_velocity_reference_max_abs_rad_s": 3.567481571820075e-07,
+            "reported_effort_reference_max_abs_Nm": 3.5768883401843254e-06,
+            "applied_wrench_reference_max_abs_Nm": 3.5768883401843254e-06,
+            "reported_vs_applied_max_abs_Nm": 0.0,
+            "minimum_effort_margin_Nm": 5.239828586578369,
+            "reference_minimum_effort_margin_Nm": 5.239828535753123,
+            "joint_anchor_origin_max_norm_m": 0.0,
+            "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+            "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+            "joint_position_max_abs_rad": 0.09994486719369888,
+            "joint_velocity_max_abs_rad_s": 0.3632468581199646,
+            "full_tracking_rmse_rad": 0.05568558520363911,
+            "full_tracking_peak_error_rad": 0.1998271182179451,
+            "segment_end_error_max_abs_rad": 0.00011050552129746039,
+            "segment_end_velocity_max_abs_rad_s": 0.0005008926382288337,
+            "segment_constant_target_energy_max_positive_increment_J": 0.0
+          },
+          "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/trajectory.npz",
+          "raw_sha256": "70415b708272b6b100e4b94ce50df6bcc1a2c7cc29c54b8acb099c92109ae288",
+          "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+          "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+          "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/result.json",
+          "variant": "A",
+          "solver_diagnostics": {
+            "converged_fraction": 1.0,
+            "all_steps_converged": true,
+            "iterations_max": 14,
+            "iterations_mean": 9.39125,
+            "residual_max": {
+              "r_p": 5.1109158571982505e-11,
+              "r_d": 9.99702294279814e-08,
+              "r_c": 8.731265155326184e-10
+            },
+            "residual_final": {
+              "r_p": 0.0,
+              "r_d": 6.24610976274198e-08,
+              "r_c": 7.770348221195628e-14
+            },
+            "iteration_distribution": {
+              "2": 1,
+              "4": 23,
+              "5": 1,
+              "6": 54,
+              "7": 65,
+              "8": 99,
+              "9": 254,
+              "11": 149,
+              "12": 104,
+              "13": 30,
+              "14": 20
+            }
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "config": {
+            "treatment": {
+              "target_mode": "POSITION"
+            },
+            "resolved": {
+              "dynamics_solver": "padmm",
+              "integrator": "euler",
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/resolved-config.json",
+            "protocol_to_api_mapping": {
+              "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+            }
+          },
+          "reproduction": {
+            "run_id": "kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z",
+            "metrics": {
+              "joint_position_reference_max_abs_rad": 1.6289164159188907e-07,
+              "joint_velocity_reference_max_abs_rad_s": 3.567481571820075e-07,
+              "reported_effort_reference_max_abs_Nm": 3.5768883401843254e-06,
+              "applied_wrench_reference_max_abs_Nm": 3.5768883401843254e-06,
+              "reported_vs_applied_max_abs_Nm": 0.0,
+              "minimum_effort_margin_Nm": 5.239828586578369,
+              "reference_minimum_effort_margin_Nm": 5.239828535753123,
+              "joint_anchor_origin_max_norm_m": 0.0,
+              "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+              "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+              "joint_position_max_abs_rad": 0.09994486719369888,
+              "joint_velocity_max_abs_rad_s": 0.3632468581199646,
+              "full_tracking_rmse_rad": 0.05568558520363911,
+              "full_tracking_peak_error_rad": 0.1998271182179451,
+              "segment_end_error_max_abs_rad": 0.00011050552129746039,
+              "segment_end_velocity_max_abs_rad_s": 0.0005008926382288337,
+              "segment_constant_target_energy_max_positive_increment_J": 0.0
+            },
+            "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/trajectory.npz",
+            "raw_sha256": "4a1b297e57469f84cf47ee0a70432e11da4b64e2cf65181f0eaa4b1f8d99a6a9",
+            "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+            "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+            "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/result.json",
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "body_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              },
+              "joint_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "joint_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              }
+            },
+            "solver_diagnostics": {
+              "converged_fraction": 1.0,
+              "all_steps_converged": true,
+              "iterations_max": 14,
+              "iterations_mean": 9.39125,
+              "residual_max": {
+                "r_p": 5.1109158571982505e-11,
+                "r_d": 9.99702294279814e-08,
+                "r_c": 8.731265155326184e-10
+              },
+              "residual_final": {
+                "r_p": 0.0,
+                "r_d": 6.24610976274198e-08,
+                "r_c": 7.770348221195628e-14
+              },
+              "iteration_distribution": {
+                "2": 1,
+                "4": 23,
+                "5": 1,
+                "6": 54,
+                "7": 65,
+                "8": 99,
+                "9": 254,
+                "11": 149,
+                "12": 104,
+                "13": 30,
+                "14": 20
+              }
+            }
+          },
+          "environment_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/environment.json"
+        },
+        {
+          "run_id": "kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z",
+          "metrics": {
+            "joint_position_reference_max_abs_rad": 1.564886915050856e-07,
+            "joint_velocity_reference_max_abs_rad_s": 2.7970910776442537e-07,
+            "reported_effort_reference_max_abs_Nm": 3.669388261240414e-06,
+            "applied_wrench_reference_max_abs_Nm": 3.669388261240414e-06,
+            "reported_vs_applied_max_abs_Nm": 0.0,
+            "minimum_effort_margin_Nm": 5.239826202392578,
+            "reference_minimum_effort_margin_Nm": 5.239828535753123,
+            "joint_anchor_origin_max_norm_m": 0.0,
+            "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+            "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+            "joint_position_max_abs_rad": 0.09994489699602127,
+            "joint_velocity_max_abs_rad_s": 0.3632467985153198,
+            "full_tracking_rmse_rad": 0.055685583654182955,
+            "full_tracking_peak_error_rad": 0.1998271256685257,
+            "segment_end_error_max_abs_rad": 0.00011047571897507269,
+            "segment_end_velocity_max_abs_rad_s": 0.0005008758162148297,
+            "segment_constant_target_energy_max_positive_increment_J": 0.0
+          },
+          "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/trajectory.npz",
+          "raw_sha256": "e39c25e4e4de46270561b4c87b755271a2c6706d0ee5c636dffad6ce0943a06d",
+          "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+          "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+          "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/result.json",
+          "variant": "B",
+          "solver_diagnostics": {
+            "converged_fraction": 1.0,
+            "all_steps_converged": true,
+            "iterations_max": 14,
+            "iterations_mean": 9.3875,
+            "residual_max": {
+              "r_p": 5.1109158571982505e-11,
+              "r_d": 9.99702294279814e-08,
+              "r_c": 1.1236914732037917e-09
+            },
+            "residual_final": {
+              "r_p": 0.0,
+              "r_d": 6.244452777082188e-08,
+              "r_c": 4.144185266220096e-13
+            },
+            "iteration_distribution": {
+              "2": 1,
+              "4": 23,
+              "5": 1,
+              "6": 54,
+              "7": 65,
+              "8": 99,
+              "9": 254,
+              "10": 1,
+              "11": 148,
+              "12": 105,
+              "13": 30,
+              "14": 19
+            }
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "config": {
+            "treatment": {
+              "target_mode": "POSITION"
+            },
+            "resolved": {
+              "dynamics_solver": "padmm",
+              "integrator": "euler",
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/resolved-config.json",
+            "protocol_to_api_mapping": {
+              "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+            }
+          },
+          "reproduction": {
+            "run_id": "kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z",
+            "metrics": {
+              "joint_position_reference_max_abs_rad": 1.564886915050856e-07,
+              "joint_velocity_reference_max_abs_rad_s": 2.7970910776442537e-07,
+              "reported_effort_reference_max_abs_Nm": 3.669388261240414e-06,
+              "applied_wrench_reference_max_abs_Nm": 3.669388261240414e-06,
+              "reported_vs_applied_max_abs_Nm": 0.0,
+              "minimum_effort_margin_Nm": 5.239826202392578,
+              "reference_minimum_effort_margin_Nm": 5.239828535753123,
+              "joint_anchor_origin_max_norm_m": 0.0,
+              "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+              "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+              "joint_position_max_abs_rad": 0.09994489699602127,
+              "joint_velocity_max_abs_rad_s": 0.3632467985153198,
+              "full_tracking_rmse_rad": 0.055685583654182955,
+              "full_tracking_peak_error_rad": 0.1998271256685257,
+              "segment_end_error_max_abs_rad": 0.00011047571897507269,
+              "segment_end_velocity_max_abs_rad_s": 0.0005008758162148297,
+              "segment_constant_target_energy_max_positive_increment_J": 0.0
+            },
+            "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/trajectory.npz",
+            "raw_sha256": "fb60d363724d632d3f57eeb45493cecb642f15faaee7023676b491cd93f55bc1",
+            "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+            "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+            "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/result.json",
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "body_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              },
+              "joint_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "joint_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              }
+            },
+            "solver_diagnostics": {
+              "converged_fraction": 1.0,
+              "all_steps_converged": true,
+              "iterations_max": 14,
+              "iterations_mean": 9.3875,
+              "residual_max": {
+                "r_p": 5.1109158571982505e-11,
+                "r_d": 9.99702294279814e-08,
+                "r_c": 1.1236914732037917e-09
+              },
+              "residual_final": {
+                "r_p": 0.0,
+                "r_d": 6.244452777082188e-08,
+                "r_c": 4.144185266220096e-13
+              },
+              "iteration_distribution": {
+                "2": 1,
+                "4": 23,
+                "5": 1,
+                "6": 54,
+                "7": 65,
+                "8": 99,
+                "9": 254,
+                "10": 1,
+                "11": 148,
+                "12": 105,
+                "13": 30,
+                "14": 19
+              }
+            }
+          },
+          "environment_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/environment.json"
+        }
+      ],
+      "analysis_file": "experiments/kamino_pd_lab/tracking/analysis.json",
+      "artifact_root": "experiments/kamino_pd_lab/",
+      "evidence_valid": true,
+      "sample_kind": "time",
+      "viewer_url": "/files/experiments/kamino_pd_lab/index.html?case=kamino_pd_unsaturated_step_reversal",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/trajectory.npz"
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/trajectory.npz"
+        }
+      ],
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/runner.py",
+          "start_line": 1,
+          "max_lines": 80
+        }
+      },
+      "curve_file": "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_step_reversal.svg"
+    },
+    {
+      "id": "kamino_pd_unsaturated_sine_modes",
+      "record_id": "lab:kamino_pd_unsaturated_sine_modes",
+      "solver": "kamino",
+      "title": "动态目标与速度参考语义：POSITION_VELOCITY 对 POSITION",
+      "parameter": "joint_target_ke joint_target_kd joint_effort_limit target_mode",
+      "experiment_kind": "pd_diagnostics",
+      "observation": "同传位置/速度正弦参考，POSITION_VELOCITY 与 POSITION 末周期 RMS 为 0.0193778/0.0664529 rad，前者改善 70.84%；物理验收 passed。POSITION 按实现忽略速度参考而保留阻尼。收敛比例范围 100.000%–100.000%。",
+      "physical_acceptance": "passed",
+      "limitations": "Newton1.7.0 pinned commit only, CPU singleworld dense PADMM; No contacts/gravity/armature/friction or translation eccentricity; Only bounded implicit PD interior; saturation and runtime limit changes belong to separate experiments; Private state/config reads are observational instrumentation, not supported user API; One smooth frequency/amplitude only; no claim of arbitrary-bandwidth tracking; Comparison tests target-mode semantics, not solver backend ranking; Strict solver termination is diagnosed separately; physical pass does not imply every step converged.",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/joints.py",
+          "line": 1033
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/joints.py",
+          "line": 1999
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/constraints.py",
+          "line": 400
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/integrators/euler.py",
+          "line": 45
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/dynamics/wrenches.py",
+          "line": 334
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 276
+        }
+      ],
+      "associations": [
+        "model:kamino:joint_target_ke",
+        "model:kamino:joint_target_kd",
+        "model:kamino:joint_effort_limit"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "直接测量固定增益/有限力限下的非饱和跟踪机制及target-mode语义；未逐参数扫描kp/kd/力限，不外推任意频率、带宽或步长。",
+      "protocol_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/protocol.json",
+      "runner_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/runner.py",
+      "variants": [
+        {
+          "run_id": "kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z",
+          "metrics": {
+            "joint_position_reference_max_abs_rad": 1.597851777973558e-07,
+            "joint_velocity_reference_max_abs_rad_s": 4.254306163187227e-07,
+            "reported_effort_reference_max_abs_Nm": 6.246958337507991e-06,
+            "applied_wrench_reference_max_abs_Nm": 6.246958337507991e-06,
+            "reported_vs_applied_max_abs_Nm": 0.0,
+            "minimum_effort_margin_Nm": 7.009787321090698,
+            "reference_minimum_effort_margin_Nm": 7.009786885339876,
+            "joint_anchor_origin_max_norm_m": 0.0,
+            "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+            "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+            "joint_position_max_abs_rad": 0.11446049809455872,
+            "joint_velocity_max_abs_rad_s": 0.3592399060726166,
+            "full_tracking_rmse_rad": 0.018845778356504476,
+            "full_tracking_peak_error_rad": 0.027439065915857506,
+            "steady_tracking_rmse_rad": 0.01937779844922247,
+            "steady_target_rmse_A_max_rad": 0.01937779844922247
+          },
+          "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/trajectory.npz",
+          "raw_sha256": "bdf986d5156486e024ab7f2369260162054b4bbc5d9114ce44db250e50ba7ae5",
+          "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+          "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+          "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/result.json",
+          "variant": "A",
+          "solver_diagnostics": {
+            "converged_fraction": 1.0,
+            "all_steps_converged": true,
+            "iterations_max": 14,
+            "iterations_mean": 12.2125,
+            "residual_max": {
+              "r_p": 4.088733518425869e-10,
+              "r_d": 9.971120817908741e-08,
+              "r_c": 5.208293241132367e-10
+            },
+            "residual_final": {
+              "r_p": 0.0,
+              "r_d": 8.06077338211253e-08,
+              "r_c": 1.288787739722741e-11
+            },
+            "iteration_distribution": {
+              "4": 2,
+              "5": 1,
+              "7": 2,
+              "8": 5,
+              "9": 64,
+              "11": 74,
+              "12": 173,
+              "13": 469,
+              "14": 10
+            }
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "config": {
+            "treatment": {
+              "target_mode": "POSITION_VELOCITY"
+            },
+            "resolved": {
+              "dynamics_solver": "padmm",
+              "integrator": "euler",
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/resolved-config.json",
+            "protocol_to_api_mapping": {
+              "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+            }
+          },
+          "reproduction": {
+            "run_id": "kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z",
+            "metrics": {
+              "joint_position_reference_max_abs_rad": 1.597851777973558e-07,
+              "joint_velocity_reference_max_abs_rad_s": 4.254306163187227e-07,
+              "reported_effort_reference_max_abs_Nm": 6.246958337507991e-06,
+              "applied_wrench_reference_max_abs_Nm": 6.246958337507991e-06,
+              "reported_vs_applied_max_abs_Nm": 0.0,
+              "minimum_effort_margin_Nm": 7.009787321090698,
+              "reference_minimum_effort_margin_Nm": 7.009786885339876,
+              "joint_anchor_origin_max_norm_m": 0.0,
+              "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+              "body_quaternion_norm_max_abs_error": 8.344650268554688e-07,
+              "joint_position_max_abs_rad": 0.11446049809455872,
+              "joint_velocity_max_abs_rad_s": 0.3592399060726166,
+              "full_tracking_rmse_rad": 0.018845778356504476,
+              "full_tracking_peak_error_rad": 0.027439065915857506,
+              "steady_tracking_rmse_rad": 0.01937779844922247,
+              "steady_target_rmse_A_max_rad": 0.01937779844922247
+            },
+            "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/trajectory.npz",
+            "raw_sha256": "ab1f1911cc523e8df2a9bd133b7d3acd93f4019de69534a9589b151a16c1aa59",
+            "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+            "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+            "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/result.json",
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "body_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              },
+              "joint_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "joint_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              }
+            },
+            "solver_diagnostics": {
+              "converged_fraction": 1.0,
+              "all_steps_converged": true,
+              "iterations_max": 14,
+              "iterations_mean": 12.2125,
+              "residual_max": {
+                "r_p": 4.088733518425869e-10,
+                "r_d": 9.971120817908741e-08,
+                "r_c": 5.208293241132367e-10
+              },
+              "residual_final": {
+                "r_p": 0.0,
+                "r_d": 8.06077338211253e-08,
+                "r_c": 1.288787739722741e-11
+              },
+              "iteration_distribution": {
+                "4": 2,
+                "5": 1,
+                "7": 2,
+                "8": 5,
+                "9": 64,
+                "11": 74,
+                "12": 173,
+                "13": 469,
+                "14": 10
+              }
+            }
+          },
+          "environment_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/environment.json"
+        },
+        {
+          "run_id": "kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z",
+          "metrics": {
+            "joint_position_reference_max_abs_rad": 2.209854401136191e-07,
+            "joint_velocity_reference_max_abs_rad_s": 4.94490993173391e-07,
+            "reported_effort_reference_max_abs_Nm": 8.114365353417696e-06,
+            "applied_wrench_reference_max_abs_Nm": 8.114365353417696e-06,
+            "reported_vs_applied_max_abs_Nm": 0.0,
+            "minimum_effort_margin_Nm": 9.29639983177185,
+            "reference_minimum_effort_margin_Nm": 9.29640121819982,
+            "joint_anchor_origin_max_norm_m": 0.0,
+            "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+            "body_quaternion_norm_max_abs_error": 1.1324882507324219e-06,
+            "joint_position_max_abs_rad": 0.07502641528844833,
+            "joint_velocity_max_abs_rad_s": 0.22559790313243866,
+            "full_tracking_rmse_rad": 0.061900983956331625,
+            "full_tracking_peak_error_rad": 0.0946544635711464,
+            "steady_tracking_rmse_rad": 0.06645294668070098,
+            "steady_target_rmse_B_max_rad": 0.06645294668070098
+          },
+          "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/trajectory.npz",
+          "raw_sha256": "a6893f9e68b03fa35a3294c6541e02a312530b8e36174cb0ab4b471925b19c3d",
+          "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+          "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+          "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/result.json",
+          "variant": "B",
+          "solver_diagnostics": {
+            "converged_fraction": 1.0,
+            "all_steps_converged": true,
+            "iterations_max": 13,
+            "iterations_mean": 11.3225,
+            "residual_max": {
+              "r_p": 2.5554581020714728e-11,
+              "r_d": 9.971133607677984e-08,
+              "r_c": 1.1351226208988763e-10
+            },
+            "residual_final": {
+              "r_p": 0.0,
+              "r_d": 8.909740500939733e-08,
+              "r_c": 1.2408509983408145e-11
+            },
+            "iteration_distribution": {
+              "2": 2,
+              "4": 2,
+              "6": 1,
+              "7": 2,
+              "8": 9,
+              "9": 122,
+              "11": 143,
+              "12": 464,
+              "13": 55
+            }
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "config": {
+            "treatment": {
+              "target_mode": "POSITION"
+            },
+            "resolved": {
+              "dynamics_solver": "padmm",
+              "integrator": "euler",
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              }
+            },
+            "full_config_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/resolved-config.json",
+            "protocol_to_api_mapping": {
+              "solver.constraints.preconditioning": "SolverKamino.Config.dynamics.preconditioning"
+            }
+          },
+          "reproduction": {
+            "run_id": "kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z",
+            "metrics": {
+              "joint_position_reference_max_abs_rad": 2.209854401136191e-07,
+              "joint_velocity_reference_max_abs_rad_s": 4.94490993173391e-07,
+              "reported_effort_reference_max_abs_Nm": 8.114365353417696e-06,
+              "applied_wrench_reference_max_abs_Nm": 8.114365353417696e-06,
+              "reported_vs_applied_max_abs_Nm": 0.0,
+              "minimum_effort_margin_Nm": 9.29639983177185,
+              "reference_minimum_effort_margin_Nm": 9.29640121819982,
+              "joint_anchor_origin_max_norm_m": 0.0,
+              "joint_vs_body_angle_max_abs_rad": 8.940696716308594e-08,
+              "body_quaternion_norm_max_abs_error": 1.1324882507324219e-06,
+              "joint_position_max_abs_rad": 0.07502641528844833,
+              "joint_velocity_max_abs_rad_s": 0.22559790313243866,
+              "full_tracking_rmse_rad": 0.061900983956331625,
+              "full_tracking_peak_error_rad": 0.0946544635711464,
+              "steady_tracking_rmse_rad": 0.06645294668070098,
+              "steady_target_rmse_B_max_rad": 0.06645294668070098
+            },
+            "raw_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/trajectory.npz",
+            "raw_sha256": "8c0588473b7111d1d16c3abd3870254b78ce7f259be22f2673d5e7ac5525748f",
+            "program_sha256": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+            "protocol_sha256": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+            "result_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/result.json",
+            "tolerances": {
+              "body_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "body_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              },
+              "joint_q": {
+                "atol": 1e-05,
+                "rtol": 1e-05
+              },
+              "joint_qd": {
+                "atol": 0.0001,
+                "rtol": 1e-05
+              }
+            },
+            "solver_diagnostics": {
+              "converged_fraction": 1.0,
+              "all_steps_converged": true,
+              "iterations_max": 13,
+              "iterations_mean": 11.3225,
+              "residual_max": {
+                "r_p": 2.5554581020714728e-11,
+                "r_d": 9.971133607677984e-08,
+                "r_c": 1.1351226208988763e-10
+              },
+              "residual_final": {
+                "r_p": 0.0,
+                "r_d": 8.909740500939733e-08,
+                "r_c": 1.2408509983408145e-11
+              },
+              "iteration_distribution": {
+                "2": 2,
+                "4": 2,
+                "6": 1,
+                "7": 2,
+                "8": 9,
+                "9": 122,
+                "11": 143,
+                "12": 464,
+                "13": 55
+              }
+            }
+          },
+          "environment_file": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/environment.json"
+        }
+      ],
+      "analysis_file": "experiments/kamino_pd_lab/tracking/analysis.json",
+      "artifact_root": "experiments/kamino_pd_lab/",
+      "evidence_valid": true,
+      "sample_kind": "time",
+      "viewer_url": "/files/experiments/kamino_pd_lab/index.html?case=kamino_pd_unsaturated_sine_modes",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/trajectory.npz"
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/trajectory.npz"
+        }
+      ],
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/runner.py",
+          "start_line": 1,
+          "max_lines": 80
+        }
+      },
+      "curve_file": "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_sine_modes.svg"
+    },
+    {
+      "id": "kamino_pd_finite_limit_switch",
+      "record_id": "lab:kamino_pd_finite_limit_switch",
+      "solver": "kamino",
+      "title": "有界隐式 PD：有限正力限切换、释放与重新饱和",
+      "parameter": "joint_effort_limit notify_model_changed POSITION",
+      "observation": "已按公开通知契约完成正反力限切换，全部预设物理门槛通过。物理门槛与严格 PADMM 收敛诊断分开记录。 最大力矩参考误差 2.66e-06 N·m；A 每次切换在同一步采用新限值，状态在通知前后不跳变；A/B 收敛标记比例 100%/100%，仅适用于本小驱动场景，不覆盖旧高增益场景。",
+      "physical_acceptance": "passed",
+      "limitations": "One finite-positive limit update contract on one CPU Y hinge, no route topology change, no zero/inf/sentinel, no unnotified update, no gain/mode change, contacts, GPU, graph capture, multiworld or general convergence claim. Strict convergence statistics are diagnostics and may fail even if physical gates pass.",
+      "source_refs": [
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 1198,
+          "end_line": 1210,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L1198"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/solver_kamino.py",
+          "line": 1558,
+          "end_line": 1647,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/solver_kamino.py#L1558"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/core/conversions.py",
+          "line": 2126,
+          "end_line": 2144,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "cae601049d228f6c8fa4b3f7f72722d8a5f0f16eb097c0458a8edf91820afe76",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/core/conversions.py#L2126"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/kinematics/joints.py",
+          "line": 1036,
+          "end_line": 1063,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "16933d9f1465da0763644d79af24a5630aea815ccc8022f85c034916fccbfbc3",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/kinematics/joints.py#L1036"
+        },
+        {
+          "path": "newton/_src/solvers/kamino/_src/integrators/euler.py",
+          "line": 90,
+          "end_line": 145,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "7bbe00eaad480dea594f9d9375d3e0efd8596bbf66d9e1235980ac26b233aa66",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/_src/solvers/kamino/_src/integrators/euler.py#L90"
+        },
+        {
+          "path": "newton/tests/kamino/test_kamino_solver_kamino_notify.py",
+          "line": 669,
+          "end_line": 694,
+          "commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a",
+          "sha256": "c0775feeb8ff19fb20d02b1d49daf976d75df848dc2bf2fedfa92a5af7a6ffad",
+          "url": "https://github.com/newton-physics/newton/blob/7e75abe28b8d69522bc0b34837aaed2c303dff5a/newton/tests/kamino/test_kamino_solver_kamino_notify.py#L669"
+        }
+      ],
+      "associations": [
+        "model:kamino:joint_effort_limit"
+      ],
+      "association_relation": "measures_behavior_of",
+      "association_scope": "Only finite positive effort limit is varied via public notify; gains, mode, solver budget and timestep fixed. No zero/infinite or route-allocation change coverage.",
+      "variants": [
+        {
+          "run_id": "kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z",
+          "raw_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/trajectory.npz",
+          "raw_sha256": "c0856c6bd38f6ab0f2b39cae8d1610b0c54564020db8ceb7a073d1978bab7a79",
+          "program_sha256": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+          "protocol_sha256": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+          "result_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/result.json",
+          "variant": "A",
+          "label": "notified .25 / 4 Nm switching",
+          "metrics": {
+            "angle_reference_rad": 1.4049535024263093e-07,
+            "speed_reference_rad_s": 9.931948088959253e-07,
+            "effort_reference_Nm": 2.6592179578344144e-06,
+            "wrench_reference_Nm": 2.6592179578344144e-06,
+            "effort_bound_excess_Nm": 0.0,
+            "wrench_bound_excess_Nm": 0.0,
+            "bound_impulse_error_Nms": 4.470348362317633e-10,
+            "integration_residual_rad": 1.1478550732135773e-07,
+            "momentum_residual_Nm": 1.3589859008789062e-05,
+            "body_momentum_residual_Nm": 1.3589859008789062e-05,
+            "anchor_drift_m": 0.0,
+            "notify_state_change": 0.0,
+            "stale_limit_steps": 0,
+            "status_converged_fraction": 1.0,
+            "status_max_iterations": 20,
+            "status_residual_maxima": {
+              "r_p": 6.588493306480814e-08,
+              "r_d": 7.3096799724226e-08,
+              "r_c": 8.100788306819595e-08
+            },
+            "status_by_phase": [
+              {
+                "phase": 0,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 1,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 2,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 3,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 4,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 5,
+                "converged_fraction": 1.0
+              }
+            ],
+            "phase_observations": [
+              {
+                "phase": 0,
+                "target_rad": 0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  1.9063582384957944,
+                  1.9792182088075212
+                ],
+                "actual_effort_range_Nm": [
+                  0.25,
+                  0.25
+                ]
+              },
+              {
+                "phase": 1,
+                "target_rad": 0.1,
+                "limit_Nm": 4.0,
+                "reference_free_effort_range_Nm": [
+                  1.3620693810379396,
+                  1.9012864918357253
+                ],
+                "actual_effort_range_Nm": [
+                  1.3620696067810059,
+                  1.901286244392395
+                ]
+              },
+              {
+                "phase": 2,
+                "target_rad": 0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  0.8996790845113356,
+                  1.3291474000306562
+                ],
+                "actual_effort_range_Nm": [
+                  0.25,
+                  0.25
+                ]
+              },
+              {
+                "phase": 3,
+                "target_rad": -0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  -3.413352747392905,
+                  -3.0825979400378607
+                ],
+                "actual_effort_range_Nm": [
+                  -0.25,
+                  -0.25
+                ]
+              },
+              {
+                "phase": 4,
+                "target_rad": -0.1,
+                "limit_Nm": 4.0,
+                "reference_free_effort_range_Nm": [
+                  -3.4295238837679296,
+                  -2.847444219411941
+                ],
+                "actual_effort_range_Nm": [
+                  -3.4295248985290527,
+                  -2.8474433422088623
+                ]
+              },
+              {
+                "phase": 5,
+                "target_rad": -0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  -2.805210926952126,
+                  -2.4920808163043833
+                ],
+                "actual_effort_range_Nm": [
+                  -0.25,
+                  -0.25
+                ]
+              }
+            ]
+          },
+          "config": {
+            "treatment": {
+              "label": "notified .25 / 4 Nm switching",
+              "limits_Nm": [
+                0.25,
+                4.0,
+                0.25,
+                0.25,
+                4.0,
+                0.25
+              ]
+            },
+            "resolved": {
+              "dynamics_solver": "padmm",
+              "integrator": "euler",
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              },
+              "joint_target_mode": [
+                1
+              ],
+              "joint_effort_limit": [
+                0.25
+              ],
+              "joint_target_ke": [
+                20.0
+              ],
+              "joint_target_kd": [
+                2.0
+              ],
+              "dof_act_paths": [
+                2
+              ],
+              "effort_row_count": 1
+            },
+            "full_config_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "reproduction": {
+            "run_id": "kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z",
+            "raw_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/trajectory.npz",
+            "raw_sha256": "c0856c6bd38f6ab0f2b39cae8d1610b0c54564020db8ceb7a073d1978bab7a79",
+            "program_sha256": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+            "protocol_sha256": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+            "result_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/result.json",
+            "tolerances": {
+              "q_atol": 1e-05,
+              "qd_atol": 0.0001,
+              "effort_atol": 0.002,
+              "rtol": 1e-05
+            }
+          },
+          "environment_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/environment.json"
+        },
+        {
+          "run_id": "kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z",
+          "raw_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/trajectory.npz",
+          "raw_sha256": "f408c64ff4f08ca0af341daf8cf69347a313081114a7a858285538f4fc5336e9",
+          "program_sha256": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+          "protocol_sha256": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+          "result_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/result.json",
+          "variant": "B",
+          "label": "fixed .25 Nm control",
+          "metrics": {
+            "angle_reference_rad": 7.392764090133341e-08,
+            "speed_reference_rad_s": 2.42842361320144e-07,
+            "effort_reference_Nm": 0.0,
+            "wrench_reference_Nm": 0.0,
+            "effort_bound_excess_Nm": 0.0,
+            "wrench_bound_excess_Nm": 0.0,
+            "bound_impulse_error_Nms": 2.7939677264485208e-11,
+            "integration_residual_rad": 1.105363480746746e-07,
+            "momentum_residual_Nm": 1.430511474609375e-06,
+            "body_momentum_residual_Nm": 1.430511474609375e-06,
+            "anchor_drift_m": 0.0,
+            "notify_state_change": 0.0,
+            "stale_limit_steps": 0,
+            "status_converged_fraction": 1.0,
+            "status_max_iterations": 9,
+            "status_residual_maxima": {
+              "r_p": 1.1582076631100335e-08,
+              "r_d": 8.697823711267816e-11,
+              "r_c": 1.22776766531274e-08
+            },
+            "status_by_phase": [
+              {
+                "phase": 0,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 1,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 2,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 3,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 4,
+                "converged_fraction": 1.0
+              },
+              {
+                "phase": 5,
+                "converged_fraction": 1.0
+              }
+            ],
+            "phase_observations": [
+              {
+                "phase": 0,
+                "target_rad": 0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  1.9063582384957944,
+                  1.9792182088075212
+                ],
+                "actual_effort_range_Nm": [
+                  0.25,
+                  0.25
+                ]
+              },
+              {
+                "phase": 1,
+                "target_rad": 0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  1.7814200890648195,
+                  1.9012864918357253
+                ],
+                "actual_effort_range_Nm": [
+                  0.25,
+                  0.25
+                ]
+              },
+              {
+                "phase": 2,
+                "target_rad": 0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  1.6070014844136566,
+                  1.7738743196437408
+                ],
+                "actual_effort_range_Nm": [
+                  0.25,
+                  0.25
+                ]
+              },
+              {
+                "phase": 3,
+                "target_rad": -0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  -2.4296140524492835,
+                  -2.361454725383474
+                ],
+                "actual_effort_range_Nm": [
+                  -0.25,
+                  -0.25
+                ]
+              },
+              {
+                "phase": 4,
+                "target_rad": -0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  -2.4531172686788723,
+                  -2.431964374072242
+                ],
+                "actual_effort_range_Nm": [
+                  -0.25,
+                  -0.25
+                ]
+              },
+              {
+                "phase": 5,
+                "target_rad": -0.1,
+                "limit_Nm": 0.25,
+                "reference_free_effort_range_Nm": [
+                  -2.452993567540822,
+                  -2.427140029688274
+                ],
+                "actual_effort_range_Nm": [
+                  -0.25,
+                  -0.25
+                ]
+              }
+            ]
+          },
+          "config": {
+            "treatment": {
+              "label": "fixed .25 Nm control",
+              "limits_Nm": [
+                0.25,
+                0.25,
+                0.25,
+                0.25,
+                0.25,
+                0.25
+              ]
+            },
+            "resolved": {
+              "dynamics_solver": "padmm",
+              "integrator": "euler",
+              "sparse_jacobian": false,
+              "sparse_dynamics": false,
+              "dynamics": {
+                "preconditioning": true,
+                "linear_solver_type": "LLTB",
+                "linear_solver_kwargs": {},
+                "cull_speculative_contacts": true
+              },
+              "padmm": {
+                "primal_tolerance": 1e-07,
+                "dual_tolerance": 1e-07,
+                "compl_tolerance": 1e-07,
+                "restart_tolerance": 0.999,
+                "eta": 1e-05,
+                "rho_0": 1.0,
+                "rho_min": 1e-05,
+                "a_0": 1.0,
+                "alpha": 10.0,
+                "tau": 1.5,
+                "max_iterations": 200,
+                "penalty_update_freq": 1,
+                "penalty_update_method": "fixed",
+                "linear_solver_tolerance": 0.0,
+                "linear_solver_tolerance_ratio": 0.0,
+                "use_acceleration": true,
+                "use_graph_conditionals": false,
+                "warmstart_mode": "containers",
+                "warmstart_scale": 0.9,
+                "contact_warmstart_method": "key_and_position"
+              },
+              "joint_target_mode": [
+                1
+              ],
+              "joint_effort_limit": [
+                0.25
+              ],
+              "joint_target_ke": [
+                20.0
+              ],
+              "joint_target_kd": [
+                2.0
+              ],
+              "dof_act_paths": [
+                2
+              ],
+              "effort_row_count": 1
+            },
+            "full_config_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/resolved-config.json"
+          },
+          "environment": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "packages": {
+              "numpy": "2.5.4",
+              "warp-lang": "1.18.0",
+              "newton": "1.7.0"
+            },
+            "device": "cpu",
+            "source_commit": "7e75abe28b8d69522bc0b34837aaed2c303dff5a"
+          },
+          "reproduction": {
+            "run_id": "kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z",
+            "raw_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/trajectory.npz",
+            "raw_sha256": "f408c64ff4f08ca0af341daf8cf69347a313081114a7a858285538f4fc5336e9",
+            "program_sha256": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+            "protocol_sha256": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+            "result_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/result.json",
+            "tolerances": {
+              "q_atol": 1e-05,
+              "qd_atol": 0.0001,
+              "effort_atol": 0.002,
+              "rtol": 1e-05
+            }
+          },
+          "environment_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/environment.json"
+        }
+      ],
+      "protocol_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/protocol.json",
+      "runner_file": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/runner.py",
+      "experiment_kind": "pd_diagnostics",
+      "artifact_root": "experiments/kamino_pd_lab/",
+      "evidence_valid": true,
+      "sample_kind": "time",
+      "viewer_url": "/files/experiments/kamino_pd_lab/index.html?case=kamino_pd_finite_limit_switch",
+      "initial_geometry": [
+        {
+          "variant": "A",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/trajectory.npz"
+        },
+        {
+          "variant": "B",
+          "body_q": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_count": 1,
+          "particle_count": 0,
+          "truncated": false,
+          "full_geometry_artifact": "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/trajectory.npz"
+        }
+      ],
+      "program_source_call": {
+        "tool": "get_source",
+        "arguments": {
+          "scope": "experiment",
+          "path": "kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/runner.py",
+          "start_line": 1,
+          "max_lines": 80
+        }
+      },
+      "curve_file": "experiments/kamino_pd_lab/limit_switch/limit-switch.svg"
+    }
+  ],
+  "formal_runs": 22,
+  "analyzer_sha256": "405370fbfb495d1742ea92a9c844e496824dc80f73bb8d9102d5a569b3b356b9",
+  "report_sha256": "36e4217fb3faa20f4b06eba9646724a911dfd172e4090d5fdcaf3692bffc98c2",
+  "evidence_files": {
+    "experiments/kamino_pd_lab/convergence/analysis-console.json": "0c70512729fb2756d146d42ccf1ebb7eaf738f0810fae85f1cc2aeaea5637af7",
+    "experiments/kamino_pd_lab/convergence/analysis.json": "18e3c9af8a5a03c61d1be5195b1ac9adecd4eb1e934be8737c06d9191b1804da",
+    "experiments/kamino_pd_lab/convergence/analyze.py": "b38e0a1994591a22b56be34adadcc915c7b0ee56f1b11aa396db14b906314ebf",
+    "experiments/kamino_pd_lab/convergence/build_publication.py": "6c2195e3d00a12a545907d4481a4c233908de2b1da1d6a94004f2a39ad988e66",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_baseline_r1_20261029T063959218053Z-residuals.npz": "20b04ec6401b9bf984c50abd7e3e6c8896f2880308e302bb197c04a541ff8be9",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_baseline_r2_20261029T064207274762Z-residuals.npz": "20b04ec6401b9bf984c50abd7e3e6c8896f2880308e302bb197c04a541ff8be9",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z-residuals.npz": "86a54518b8fb7c4102038d34fe7129e1362e49311ba9f1aadefbb66cb0a0fd81",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z-residuals.npz": "86a54518b8fb7c4102038d34fe7129e1362e49311ba9f1aadefbb66cb0a0fd81",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z-residuals.npz": "9593465513d380b16124a8618d95c6eee0154342f70aed6f3ccaf9fb30135cc5",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z-residuals.npz": "9593465513d380b16124a8618d95c6eee0154342f70aed6f3ccaf9fb30135cc5",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z-residuals.npz": "667eeb6669b313a5cc2342a00bc766942c1bfcc4124e763edbfc88f2b58c5172",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z-residuals.npz": "667eeb6669b313a5cc2342a00bc766942c1bfcc4124e763edbfc88f2b58c5172",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z-residuals.npz": "75bbb20283c2a8371aebc8f657f668878f3526e273148f52ac84810aaff11f50",
+    "experiments/kamino_pd_lab/convergence/derived/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z-residuals.npz": "75bbb20283c2a8371aebc8f657f668878f3526e273148f52ac84810aaff11f50",
+    "experiments/kamino_pd_lab/convergence/DESIGN.md": "5dd585d2837e5a3138bc2ed021ab6016e9dd28fa4ae1590cfc7eff0df507d713",
+    "experiments/kamino_pd_lab/convergence/harness-revisions.json": "ccdd11ac8ed0198a52e9e3e74f0817c6426c6a72b8d88f061ec0030ad7911511",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_acceleration.png": "5d95ad47c26b796a2b9371d01dbb77266cc33f1419f866230d24d922f9f1ee25",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_acceleration.svg": "7d7d30237731ae22ac84d20fa4577271d84bfbd50d80562e0d6a4404e0f49527",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_complementarity_gate.png": "0730d150c435913aeba7c9b7f6f0e22c57f823e50274929c66fa7aa3dedbedb7",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_complementarity_gate.svg": "e9e41ad7df4d2ca97d892947b580a54ca330b48ed1da4fdadb71e5f761997b26",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_iteration_budget.png": "39313237586a0d12f5c8d04db8ec1b21e54ec326a93094216365caf056644c94",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_iteration_budget.svg": "74a9aa7c22ae1b7262527cc21fb21efc5102b2b5ed85f7ce7cef6219de4eb42e",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_preconditioning.png": "677e5632a8ae0bf489189df95995ac7abe985e98b05169375af1d404151fb2b5",
+    "experiments/kamino_pd_lab/convergence/kamino_pd_preconditioning.svg": "63710c0f7e4a864bd3fff0a3d5a82b2228c823bb56b6fbfc5e245cf7f167d972",
+    "experiments/kamino_pd_lab/convergence/legacy-readonly-check.json": "aa66401d849bebbaaddeeb8ce3b048c3838e2527a7c512585c5efc58336d87ef",
+    "experiments/kamino_pd_lab/convergence/protocol-draft.json": "117cb168cbe8da8bc2cf6eaeff166b4fbe0bdebab81773b2121196794ef9e514",
+    "experiments/kamino_pd_lab/convergence/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/publication.json": "106da5dbd50f31e7cef6a32dbdda2544a6c888121a4a6020405b3584653e98b3",
+    "experiments/kamino_pd_lab/convergence/REPRODUCE.md": "74e5f964b8d2b72507dd90fecc1be62cc32e45df60ce0ffe920fe678ce3f8993",
+    "experiments/kamino_pd_lab/convergence/RESULTS.md": "beb7e6686150fa1b09c1d63708410f2e12fd3ed26616a5f7b8236c0ed777b796",
+    "experiments/kamino_pd_lab/convergence/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/resolved-config.json": "9dd3550e0c7889f8db9d83083d4eeb4f690552a73d9360de121d535faa363a26",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/result.json": "027a416628e97a1938a8961be8600acccb1bf449a774f1dcc9875d2dc0679ebf",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/run.log": "b2e3131583dafe95609501e121b7450c79a39e67f819cbd7a20cfe833391dfe4",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/runner.py": "c5355e8962de4c21de624391dae3d5475e60eb2ce694d3a8c7b994d9075a4b3e",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063922420841Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/iterations.npz": "08b7a2efe05455ee0b1209519766f4a000389c3e2e0de35e64c2a07153004b17",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/resolved-config.json": "9dd3550e0c7889f8db9d83083d4eeb4f690552a73d9360de121d535faa363a26",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/result.json": "fdb364c80101e15430572fe7aa945c1cc135c396418e5508f2c0e9b68326116a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/run.log": "bab45da379ac098efb187622c609214c621bceb0b1ccc8998ff06c068f0b9bf8",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/runner.py": "845f8d6ee807c6f1f41193cd96dc8f2a28c866b73c357b8ac0c8f4c3bc9b8ae7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r1_20261029T063959218053Z/trajectory.npz": "a9f6350ad7c811d59b69ceafefa6e663ceeaaa8b58e6dc8856096a10600c58da",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/iterations.npz": "282caba70e21b5d0dceaff8ff2373fbdc142f7bf9dcd96b2ff1fbc84a2555269",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/resolved-config.json": "9dd3550e0c7889f8db9d83083d4eeb4f690552a73d9360de121d535faa363a26",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/result.json": "6912b1ff97c2c0ccb19aba51cb9c713547f2f97536716fa582fc5f5fdc671e21",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/run.log": "2841e5c519f52a698970551f2bd7ee5e58cf0f99a87b47c852f4ad05cade1690",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_baseline_r2_20261029T064207274762Z/trajectory.npz": "0427806e0348c0cbe1675168257b987ea1ebc01cf3e266a1825f46dda613a515",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/iterations.npz": "51d14e86eeffd629a96eaf301bb4961ae233993438bd8ad25986d6d7834919c8",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/resolved-config.json": "bede162f2155d19ce596aa8d83d1cc9db7e163219e3a6f746b285c9f1b09b1ea",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/result.json": "c78b44993648821cad2759a6443ee7b8fac147f636b79fc2e9e127103d443d41",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/run.log": "f51ba376a31bcf48865651b168ca7bd193f6930a5fc4941047aa286f46305346",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r1_20261029T064207273880Z/trajectory.npz": "3efb1fd66d15b42e9143ccfa3e0bc1bfb226e4a398e7aaa4adebff3e30786434",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/iterations.npz": "51d14e86eeffd629a96eaf301bb4961ae233993438bd8ad25986d6d7834919c8",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/resolved-config.json": "bede162f2155d19ce596aa8d83d1cc9db7e163219e3a6f746b285c9f1b09b1ea",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/result.json": "4c2b03d7ad80677228506cbe165f77eb58c210cf6eb44165507aaedcd6e08b83",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/run.log": "6e45e5df69ffa7f022bd3a53bc3505c411b4fd5181b7da622f47fbc6d8aac70b",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_budget1000_r2_20261029T064227376663Z/trajectory.npz": "7dcdfcbcd237ec4ec2294ca88e5018acf503709778ef61875be5a8142731fee8",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/iterations.npz": "4e0c2a7f030c8f471e828a69be0601aac24b5977f4a2115eef4c723928b80c62",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/resolved-config.json": "247dcfb5e8c3bd8632092cc6103b20d82af0bc52804524e542d8ca52f935f584",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/result.json": "234299242f57df198d54cf750160ae847e04388760e4c94b5c6f5119edf53f68",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/run.log": "0dea9d348a938055e660e6a9d5edd3f6b3fdff6a212f42feac885880aa9431f5",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r1_20261029T064240089503Z/trajectory.npz": "4d501b65ccb39cad36d26ad3dfe57796233638cf85db3e5983ff11aafecdb01f",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/iterations.npz": "4e0c2a7f030c8f471e828a69be0601aac24b5977f4a2115eef4c723928b80c62",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/resolved-config.json": "247dcfb5e8c3bd8632092cc6103b20d82af0bc52804524e542d8ca52f935f584",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/result.json": "21d7ce79a1aea28b65470b8c73ee195ae575a1aebdb2673ddd32896c3c353d23",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/run.log": "3b48b1edeb6e0389e176b84fd54f0998d3372c823c459cf9110c995b2df802d9",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_compl1e6_r2_20261029T064257823450Z/trajectory.npz": "cbb978858606c68f2d53531f8b699a6be282df5a7f7d594dcc40e3909760e587",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/iterations.npz": "43b04231b38145501eccda050a5c6a4a1dc8db67540cc5eb5b4530894429849c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/resolved-config.json": "5d6c95602472125f54f159bd225c3ba9818aebc648f02890f320a3487dfee02d",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/result.json": "5c5ae4ac137e81b143783bdcbf632f82d21b37c1bf33a61253d32d2e432124be",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/run.log": "060363c51c41fda8eb9b2057a087371a185cda3bc308da96667ffc43ed565259",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r1_20261029T064305315289Z/trajectory.npz": "b9c488c682c9b295cfac2cad4916db71793803092d2032fe487cd7abf5a9b85b",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/iterations.npz": "43b04231b38145501eccda050a5c6a4a1dc8db67540cc5eb5b4530894429849c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/resolved-config.json": "5d6c95602472125f54f159bd225c3ba9818aebc648f02890f320a3487dfee02d",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/result.json": "b0351f07125021a5e012172667d3abd52f2be09aa8ce3561008e45138cadc53c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/run.log": "9a1c130b08f2b25a59e1235a875d0932964f312e5ed268100015fa7e7efd0acf",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noaccel_r2_20261029T064315283851Z/trajectory.npz": "8a166ccb07fee89ff139651f7fce5a811fcc86c5d51e6d9040dc383ace5b9bd0",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/iterations.npz": "ba3a55d38a96f48b3f54e9dc04fce4d53ed98a15c70764e94691ad21d9c7bc7c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/resolved-config.json": "2b78730dc5c0c1a745650065875b13dab4b4009340f7d551b6e3ae4ce32b28a0",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/result.json": "51f1f673f7a0f655774ca7513fdd4bd22f18a11b35d01a9239d3cecd235d4936",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/run.log": "03320d66da998d2cf4a52fb26a05377e1abf63c7bce1b5ad71733b148a287fa7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r1_20261029T064330835911Z/trajectory.npz": "91700dd6fbb0453814af29eefd5033a92a35488fe3faac580e5937e1d9be7697",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/environment.json": "fe4aa5db1857cc19a99cc68356ad2aea3e9fc727c6dad9563ab06b138470c4bc",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/iterations.npz": "ba3a55d38a96f48b3f54e9dc04fce4d53ed98a15c70764e94691ad21d9c7bc7c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/protocol.json": "79614e42dc3f2f954ce04fa54b03e828265f03ddc45e35ed0741ea70aa3da50a",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/resolved-config.json": "2b78730dc5c0c1a745650065875b13dab4b4009340f7d551b6e3ae4ce32b28a0",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/result.json": "016b81f1abafc59ff2ca8e2090bbc18cc309b234c85d0830f333c94b2ebb5107",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/run.log": "43e6a8c0c9ae619d0c903c9ab147066b7156d48299d99582295340d69ac069d2",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/runner.py": "cbf3c0ffaebbd6e4bd08905429c004e67e1ba8a9d968ea80107f0fc6c0a29d2c",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/scene.json": "7724caccd508e166a260f1970333eafea44889b258361cd6a7cdba2c139cbcad",
+    "experiments/kamino_pd_lab/convergence/runs/kamino_pd_convergence_noprecondition_r2_20261029T064336714234Z/trajectory.npz": "e0bb4065f7249d312f81d626e2072d7a3fe4b9fa86fe6d6e6eab1f827dda33b1",
+    "experiments/kamino_pd_lab/tracking/analysis.json": "f52dc227b2da41e8ca5c979effe24fb4c2cb33d94c06cb24be91f64f98646fa7",
+    "experiments/kamino_pd_lab/tracking/analyze.py": "87660b578c9e3fa052e10d74a6cf63e61ebd5be3aadc3b1f57a3e55f0092ff3e",
+    "experiments/kamino_pd_lab/tracking/DESIGN.md": "8826948bc6317a8bbf3c534c0a4e9d239024af3785c03fbb6b433bc7ca8a1650",
+    "experiments/kamino_pd_lab/tracking/harness-revisions.json": "f4f81f793d15beffb7815b9839bb22c77c8c8e2ed175afa09dba9093042a787f",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z-reference.npz": "7a0676872d3be56da53684d00736abccbc4a9029cb3a1e597cdd12892c6c8f54",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z-reference.npz": "7a0676872d3be56da53684d00736abccbc4a9029cb3a1e597cdd12892c6c8f54",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z-reference.npz": "0c9863f38ff1218f8ca49d5c7977da445681ab77d60c1a64fb2552dcc0cdb26c",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z-reference.npz": "0c9863f38ff1218f8ca49d5c7977da445681ab77d60c1a64fb2552dcc0cdb26c",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_sine_modes.png": "f63abb5b27c0442effb19fe55885cb5e6ff84862d25b831918d53582e0862c98",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_sine_modes.svg": "46fa5e2e1ee68c3c9a4d76b6b66265dcbe638ea473e9e87e5faf5d261500699b",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z-reference.npz": "8cb30751a1910d132a011a3a33d77fefcad339accdaca8cd9591e1b222c500e3",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z-reference.npz": "8cb30751a1910d132a011a3a33d77fefcad339accdaca8cd9591e1b222c500e3",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z-reference.npz": "3015ec928a36a98a0891d83ca0947e0058c945129bd3952f38e19583b67b8407",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z-reference.npz": "3015ec928a36a98a0891d83ca0947e0058c945129bd3952f38e19583b67b8407",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_step_reversal.png": "d2b512191fbd04f2a413c12c14368a8ec006ec66421f5ae712a2f390772eaa39",
+    "experiments/kamino_pd_lab/tracking/kamino_pd_unsaturated_step_reversal.svg": "3ff201bf644af50c9ac912d40b111878bf11e5b064a271da7235c4c71f92cd86",
+    "experiments/kamino_pd_lab/tracking/protocol-draft.json": "33590843d4ac38a9ed4ea0648bd67c15c61c33307e8ced245b1c537f65bf0e77",
+    "experiments/kamino_pd_lab/tracking/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/publication.json": "4249b7bd40309064660c55b1aa607b8ffd6535c021574908ac58ffa2bfac74b7",
+    "experiments/kamino_pd_lab/tracking/publish.py": "a422784edfd1a7cc96bafd11d70549837b074fea9a7f7158bca7f0c758b723f2",
+    "experiments/kamino_pd_lab/tracking/REPRODUCE.md": "c25d9396ca1a69e4ff67418708b9c128ba074faf08fe245b533050d13a6e1c83",
+    "experiments/kamino_pd_lab/tracking/RESULTS.md": "001746eaadece73456cb8829f0ed4b4c8441a9f06e9d2b2f15fa7deac24b6e93",
+    "experiments/kamino_pd_lab/tracking/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/resolved-config.json": "22b04688f81750974972de128bce694b174a7472b8878bfdcdb8cfcc4c146e9c",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/result.json": "80e87a0a86d0bfd1ba18e935ae47fad6b4940ba23f4896a6b9375d3ee16d9fde",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/run.log": "9bf1708fa5da61aed7168c0d1a7acd7d443cb44cd3675d217eac8e2747fb66aa",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r1-20261029T064754256287Z/trajectory.npz": "bdf986d5156486e024ab7f2369260162054b4bbc5d9114ce44db250e50ba7ae5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/resolved-config.json": "22b04688f81750974972de128bce694b174a7472b8878bfdcdb8cfcc4c146e9c",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/result.json": "f41e55bd78d33dc856050ba14ad8fe19fc49a69b0e6895e7a90808a289d11152",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/run.log": "d2263809b91da4e453865b76d0ee6aa8ccc85c0db9f1cd1c9a7862aa35eb7235",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-A-r2-20261029T064914874877Z/trajectory.npz": "ab1f1911cc523e8df2a9bd133b7d3acd93f4019de69534a9589b151a16c1aa59",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/resolved-config.json": "bc0cd624752fd6d7fa7cd9a7b7ef9c381ab191191c5bcc4fd0e98bf4c30ccd60",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/result.json": "56d04eae1409006e0a294cff98812495bc4ba104c4696e78e2e38a637d9ad09e",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/run.log": "f7277ef5a1bd052cc10422cf3e8d6a369d117a46deb923ff7829cadcc88d86e1",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r1-20261029T065039814477Z/trajectory.npz": "a6893f9e68b03fa35a3294c6541e02a312530b8e36174cb0ab4b471925b19c3d",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/resolved-config.json": "bc0cd624752fd6d7fa7cd9a7b7ef9c381ab191191c5bcc4fd0e98bf4c30ccd60",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/result.json": "d6e4ca0f924efac10b2d886e1e107fd3913bef14b71ecde8427884df20ca40fe",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/run.log": "c7dc0e78db9990caa76887c0814b96b0212f5c664a42d9815a1e42d8f070aa08",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_sine_modes-B-r2-20261029T065158307013Z/trajectory.npz": "8c0588473b7111d1d16c3abd3870254b78ce7f259be22f2673d5e7ac5525748f",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z/result.json": "31d7b7f87a8afd56ec3e8f22799f34d8a3a8e1fde37b30708b2e4084b022f673",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z/run.log": "d5692362d04b5cdde6f4aa679af1e452c6abe062dd56fbd20fc03b21badd1c73",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064004878893Z/runner.py": "c9c293ab70fad3478450aab6b95a426cd29833d53c6bc15e75fbc4fe857c6b08",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/resolved-config.json": "bc0cd624752fd6d7fa7cd9a7b7ef9c381ab191191c5bcc4fd0e98bf4c30ccd60",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/result.json": "133b651aa27dc72a6a9e01127c8d6e513bc439df088950858052ce69377a8f34",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/run.log": "4cb03c64b89178a8cc11db09643c0b9910c02d8b5bd751ce59ee1edf5d352341",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r1-20261029T064151888040Z/trajectory.npz": "70415b708272b6b100e4b94ce50df6bcc1a2c7cc29c54b8acb099c92109ae288",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/resolved-config.json": "bc0cd624752fd6d7fa7cd9a7b7ef9c381ab191191c5bcc4fd0e98bf4c30ccd60",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/result.json": "38f88c07525bb9a76cd5dfaa81fbe6fef30356f2bd5343f453a0f612f27a0330",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/run.log": "56e29cf310228e985a305a88db0889edd99c00a12d9f6026d575a28e2f117186",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-A-r2-20261029T064349862784Z/trajectory.npz": "4a1b297e57469f84cf47ee0a70432e11da4b64e2cf65181f0eaa4b1f8d99a6a9",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/resolved-config.json": "bc0cd624752fd6d7fa7cd9a7b7ef9c381ab191191c5bcc4fd0e98bf4c30ccd60",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/result.json": "fbf5617e2fc933d3481fb8e1d6ef4e5addf6fb8411600eaa7dad8778e7dce659",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/run.log": "6adad437eeb29e8d8c79cb06ab01eefb56ad7b097b2b9a213aab76e26821de83",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r1-20261029T064514314031Z/trajectory.npz": "e39c25e4e4de46270561b4c87b755271a2c6706d0ee5c636dffad6ce0943a06d",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/environment.json": "9d1674b90a6f20b0da26d6716553d8eb3e1b0e4cdf777f0de6605ec6893cb2f5",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/installed-source-validation.json": "01277757c0e23803a64b6f9015da1ac070afae856cb6f8431e98373de05642b3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/protocol.json": "42406443ed54c3562b9f4af4bca1ec9cf3e1dc22f6027ca097507296032286db",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/resolved-config.json": "bc0cd624752fd6d7fa7cd9a7b7ef9c381ab191191c5bcc4fd0e98bf4c30ccd60",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/result.json": "bc510729837c73524572c8dbf63bf50cdf1b2f2e60153a60963c43ba1a2c23d3",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/run.log": "d9c852777771d6d4d466cd1e3bfa3dede797214779da71c31e6fd1235c42af04",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/runner.py": "595b6dc3c51be31430e67519e1663736f7d645cb6abe0472f439e0263ef46e24",
+    "experiments/kamino_pd_lab/tracking/runs/kamino_pd_unsaturated_step_reversal-B-r2-20261029T064635124849Z/trajectory.npz": "fb60d363724d632d3f57eeb45493cecb642f15faaee7023676b491cd93f55bc1",
+    "experiments/kamino_pd_lab/tracking/static-config-validation.json": "03a8d78078a8e5fea8e374b19740569d14a2bb78536d1bdf0b7541231cfed0dc",
+    "experiments/kamino_pd_lab/limit_switch/analysis.json": "fe3afee2dad99b6256ed4d09b7ed90dd2b26c22352c87a0b78b28927f4aa6682",
+    "experiments/kamino_pd_lab/limit_switch/analyze.py": "6d8c8726d98bb6ec2507e4c47ca780a742eb29cf680910804e6d7b031d96ff13",
+    "experiments/kamino_pd_lab/limit_switch/DESIGN.md": "8ba930088bc392e1ddcd536974802854648ff5fdf814fdde65d732f0e7ebdda6",
+    "experiments/kamino_pd_lab/limit_switch/limit-switch.png": "166d3014a6bd81f109709c73915d767d0564266232713341819e2eeeeeb046c0",
+    "experiments/kamino_pd_lab/limit_switch/limit-switch.svg": "d316e3ddf643b4cd2ebfb5b26c44c1b77d0147d75cc3ce6e432ab8b259b4d10e",
+    "experiments/kamino_pd_lab/limit_switch/protocol-draft.json": "7d680b7e4ee95920ba2402799660a6f1543402893c42a26e441b6b13ec25a00d",
+    "experiments/kamino_pd_lab/limit_switch/protocol.json": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+    "experiments/kamino_pd_lab/limit_switch/publication.json": "9bd23479686d974c7b4290c1d070c0b34079af4f47bcb419016c670bafb30546",
+    "experiments/kamino_pd_lab/limit_switch/REPRODUCE.md": "43cc65152ebaa348e8175bb501c9306eabab2f6d16a36e47470fda7384f201ee",
+    "experiments/kamino_pd_lab/limit_switch/RESULTS.md": "be06987dbac461aef24bf503e0c0c4109a6f58443482dbae77d15c1533a9743e",
+    "experiments/kamino_pd_lab/limit_switch/runner.py": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/environment.json": "2cad369bd4d440e310fe9ce07197fdab929b2831570b75988038a4de25611ad9",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/events.json": "099baecf7bcd1e53841880791c4a1a2fdcdd6bfa7a3baf5983a88ba15015ba17",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/protocol.json": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/resolved-config.json": "945a66fcf1b3dc029c15d8b945c00e940a592bc760b44e01e4ca094bdda04aa7",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/result.json": "e2035cee46bd1baa1a2f7e0eb3aadcaa43658c63dd9dc21006f9ad9a4e241b8d",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/run.log": "55c4e472cfcdaa16f716082bd277e6b906241a582ddaa0f06ecbe6c3ac8febe9",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/runner.py": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/scene.json": "925030bf485810e133725b8f90b260c11d9548a98cc774954652022b8beaf250",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r1_20261029T064142085242Z/trajectory.npz": "c0856c6bd38f6ab0f2b39cae8d1610b0c54564020db8ceb7a073d1978bab7a79",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/environment.json": "2cad369bd4d440e310fe9ce07197fdab929b2831570b75988038a4de25611ad9",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/events.json": "099baecf7bcd1e53841880791c4a1a2fdcdd6bfa7a3baf5983a88ba15015ba17",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/protocol.json": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/resolved-config.json": "945a66fcf1b3dc029c15d8b945c00e940a592bc760b44e01e4ca094bdda04aa7",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/result.json": "4da85eec99f7f1c1e901288ecc97e2605b17fad29454ccfa7f8c53ac8c5f3240",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/run.log": "d7301d2b6f77864971722ef226e9c4567d3454038eae8d288e99ae30d0109681",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/runner.py": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/scene.json": "925030bf485810e133725b8f90b260c11d9548a98cc774954652022b8beaf250",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_A_r2_20261029T064226837771Z/trajectory.npz": "c0856c6bd38f6ab0f2b39cae8d1610b0c54564020db8ceb7a073d1978bab7a79",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/environment.json": "2cad369bd4d440e310fe9ce07197fdab929b2831570b75988038a4de25611ad9",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/events.json": "e1c2a2ec7ec3c7405ea1e0704033b00b02e33c08513d27176447c0d9332f8785",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/protocol.json": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/resolved-config.json": "c12ee7d31ca17909821e2362c76d205907b9bc867dd6103ae9243e305ee0183c",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/result.json": "338da9cbd658b214e87d09d65281af69098f808a678dd242a8758ebf9e0ebf85",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/run.log": "2070648ccbbb739b6a08e82cb7a7833607b321e121d7ed58768c98ce7ca8b823",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/runner.py": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/scene.json": "925030bf485810e133725b8f90b260c11d9548a98cc774954652022b8beaf250",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r1_20261029T064226843473Z/trajectory.npz": "f408c64ff4f08ca0af341daf8cf69347a313081114a7a858285538f4fc5336e9",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/environment.json": "2cad369bd4d440e310fe9ce07197fdab929b2831570b75988038a4de25611ad9",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/events.json": "e1c2a2ec7ec3c7405ea1e0704033b00b02e33c08513d27176447c0d9332f8785",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/installed-source-validation.json": "b6327fc839361fd2ee4cf0095332a5c33da7dbfd1feb056ad182e691a68f3bf7",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/protocol.json": "14094dfd45befa263e2fe7ac4e06d9437281ba0de1aeb6a97aa83d2d815bcb2e",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/resolved-config.json": "c12ee7d31ca17909821e2362c76d205907b9bc867dd6103ae9243e305ee0183c",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/result.json": "ca8f8efddeabc161d187c859f8ed7ce554d56d999af655e15dc697ad7292d416",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/run.log": "4ba0379e4982a39cedeeb83c153ef8a2823ce99dfc712b62b6dff43a95056800",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/runner.py": "ec129bb5080867c3d944d7eb2d7107250aa6191993ff72bee428c776d542e016",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/scene.json": "925030bf485810e133725b8f90b260c11d9548a98cc774954652022b8beaf250",
+    "experiments/kamino_pd_lab/limit_switch/runs/kamino_pd_finite_limit_switch_B_r2_20261029T064226843473Z/trajectory.npz": "f408c64ff4f08ca0af341daf8cf69347a313081114a7a858285538f4fc5336e9"
+  },
+  "physical_acceptance_counts": {
+    "passed": 7,
+    "failed_criteria": 0
+  }
+}

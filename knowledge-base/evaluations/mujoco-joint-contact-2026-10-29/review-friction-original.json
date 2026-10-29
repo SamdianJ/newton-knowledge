@@ -1,0 +1,1188 @@
+{
+  "status": "passed",
+  "purpose": "Audit negative original physical findings, not reclassify them",
+  "physical_original_status": "failed_criteria (both cases)",
+  "checks": 85,
+  "passed_checks": 85,
+  "review_script_sha256": "55a51d82725bdf408520279266e23c077ad2fe8cd57b74b868caf28b296b7b33",
+  "source_sha256": {
+    "newton/_src/solvers/mujoco/solver_mujoco.py": "651c556bbf2123e6a8855c7e8d683e57453a2f08a50972bc8b701a0b180c277f",
+    "engine_core_constraint.c": "a18146e7766c627d4421947d1e023d92fc6ebb60afcbbf0f0384d0aff44f0b11",
+    "engine_collision_driver.c": "67ce97bd1ea28cc1dd6fe9086e60afdad84ccf248fd38e0d3e72b65ae03ec6fc"
+  },
+  "reviewed_group_files_sha256": {
+    "protocol.json": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+    "runner.py": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+    "analyze.py": "a49a800b8b86025c4e79f1073c70c5295b09cc1e54f5e90406cd53703427cdfd",
+    "analysis.json": "5362d218f89ec700f360e083e3f7431cc8efd140b8709fc0d302bcee4ac08651",
+    "harness-revisions.json": "c3138f6c9b5894d3897ff72ddb4aa780ebd42a8fe034209ef2249ed3c4122049"
+  },
+  "measurements": [
+    {
+      "case": "mujoco_sliding_friction_mu",
+      "variant": "A",
+      "repeat": 1,
+      "run_id": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z\\trajectory.npz",
+      "raw_sha256": "a7c653411c6db23998132765fe25697a608393dbcefa906aae72a559d535f25f",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          12.550997723435884,
+          12.867239358396935,
+          12.550997723435913,
+          12.867239358396905
+        ],
+        "normal_total_N": 50.83647416366564,
+        "measured_normal_N": 50.83647457373141,
+        "error_N": -4.100657662320373e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          12.552603418486486,
+          12.868899700203603,
+          12.55260341848669,
+          12.868899700203396
+        ],
+        "normal_total_N": 50.84300623738018,
+        "measured_normal_N": 50.83647457373141,
+        "error_N": 0.0065316636487722235,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 50.83647457373141,
+      "first_step_vertical_acceleration_mps2": 41.02647304534912,
+      "first_step_height_change_m": 4.102662205696106e-05,
+      "settled_active_fraction": 0.188,
+      "settled_positive_normal_fraction": 0.188,
+      "settled_mean_normal_N": 9.61207177484086,
+      "maximum_native_solver_iterations": 2,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 0.0006929885836617355,
+      "max_kinetic_increment_step": 61,
+      "force_at_max_kinetic_increment_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_energy_increment_same_step_J": -0.0007410980388522226,
+      "total_energy_increment_same_step_J": -4.810945519029275e-05,
+      "max_total_energy_increment_J": -4.810915353781198e-05,
+      "force_acceleration_identity_error_mps": 5.956240951409536e-08,
+      "ballistic_velocity_identity_error_mps": 3.0672550211524596e-09,
+      "max_surface_distance_m": 0.00028599616678864903,
+      "min_surface_distance_m": -7.328771863301942e-05,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    },
+    {
+      "case": "mujoco_sliding_friction_mu",
+      "variant": "A",
+      "repeat": 2,
+      "run_id": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z\\trajectory.npz",
+      "raw_sha256": "a7c653411c6db23998132765fe25697a608393dbcefa906aae72a559d535f25f",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          12.550997723435884,
+          12.867239358396935,
+          12.550997723435913,
+          12.867239358396905
+        ],
+        "normal_total_N": 50.83647416366564,
+        "measured_normal_N": 50.83647457373141,
+        "error_N": -4.100657662320373e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          12.552603418486486,
+          12.868899700203603,
+          12.55260341848669,
+          12.868899700203396
+        ],
+        "normal_total_N": 50.84300623738018,
+        "measured_normal_N": 50.83647457373141,
+        "error_N": 0.0065316636487722235,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 50.83647457373141,
+      "first_step_vertical_acceleration_mps2": 41.02647304534912,
+      "first_step_height_change_m": 4.102662205696106e-05,
+      "settled_active_fraction": 0.188,
+      "settled_positive_normal_fraction": 0.188,
+      "settled_mean_normal_N": 9.61207177484086,
+      "maximum_native_solver_iterations": 2,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 0.0006929885836617355,
+      "max_kinetic_increment_step": 61,
+      "force_at_max_kinetic_increment_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_energy_increment_same_step_J": -0.0007410980388522226,
+      "total_energy_increment_same_step_J": -4.810945519029275e-05,
+      "max_total_energy_increment_J": -4.810915353781198e-05,
+      "force_acceleration_identity_error_mps": 5.956240951409536e-08,
+      "ballistic_velocity_identity_error_mps": 3.0672550211524596e-09,
+      "max_surface_distance_m": 0.00028599616678864903,
+      "min_surface_distance_m": -7.328771863301942e-05,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    },
+    {
+      "case": "mujoco_sliding_friction_mu",
+      "variant": "B",
+      "repeat": 1,
+      "run_id": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z\\trajectory.npz",
+      "raw_sha256": "aaaea85dd3ae68438cbca268b56dfc4989d39a2ab3930b91e5e7d50a7d4dc124",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          36.04759748819411,
+          39.82075994604061,
+          36.04759748819361,
+          39.82075994604111
+        ],
+        "normal_total_N": 151.73671486846945,
+        "measured_normal_N": 151.73671522550814,
+        "error_N": -3.570386866158515e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          36.11103951716676,
+          39.89366219542287,
+          36.11103951716767,
+          39.893662195421946
+        ],
+        "normal_total_N": 152.00940342517924,
+        "measured_normal_N": 151.73671522550814,
+        "error_N": 0.2726881996711086,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 151.73671522550814,
+      "first_step_vertical_acceleration_mps2": 141.92672073841095,
+      "first_step_height_change_m": 0.000141926109790802,
+      "settled_active_fraction": 0.304,
+      "settled_positive_normal_fraction": 0.304,
+      "settled_mean_normal_N": 10.253939694377543,
+      "maximum_native_solver_iterations": 2,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 0.0013504278479365972,
+      "max_kinetic_increment_step": 29,
+      "force_at_max_kinetic_increment_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_energy_increment_same_step_J": -0.0013985443487763427,
+      "total_energy_increment_same_step_J": -4.811650083968999e-05,
+      "max_total_energy_increment_J": -4.810757395823373e-05,
+      "force_acceleration_identity_error_mps": 5.862101041913259e-08,
+      "ballistic_velocity_identity_error_mps": 6.792545319614374e-09,
+      "max_surface_distance_m": 0.002028505828966319,
+      "min_surface_distance_m": -0.0004576092800282136,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    },
+    {
+      "case": "mujoco_sliding_friction_mu",
+      "variant": "B",
+      "repeat": 2,
+      "run_id": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z\\trajectory.npz",
+      "raw_sha256": "aaaea85dd3ae68438cbca268b56dfc4989d39a2ab3930b91e5e7d50a7d4dc124",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          36.04759748819411,
+          39.82075994604061,
+          36.04759748819361,
+          39.82075994604111
+        ],
+        "normal_total_N": 151.73671486846945,
+        "measured_normal_N": 151.73671522550814,
+        "error_N": -3.570386866158515e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          36.11103951716676,
+          39.89366219542287,
+          36.11103951716767,
+          39.893662195421946
+        ],
+        "normal_total_N": 152.00940342517924,
+        "measured_normal_N": 151.73671522550814,
+        "error_N": 0.2726881996711086,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 151.73671522550814,
+      "first_step_vertical_acceleration_mps2": 141.92672073841095,
+      "first_step_height_change_m": 0.000141926109790802,
+      "settled_active_fraction": 0.304,
+      "settled_positive_normal_fraction": 0.304,
+      "settled_mean_normal_N": 10.253939694377543,
+      "maximum_native_solver_iterations": 2,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 0.0013504278479365972,
+      "max_kinetic_increment_step": 29,
+      "force_at_max_kinetic_increment_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_energy_increment_same_step_J": -0.0013985443487763427,
+      "total_energy_increment_same_step_J": -4.811650083968999e-05,
+      "max_total_energy_increment_J": -4.810757395823373e-05,
+      "force_acceleration_identity_error_mps": 5.862101041913259e-08,
+      "ballistic_velocity_identity_error_mps": 6.792545319614374e-09,
+      "max_surface_distance_m": 0.002028505828966319,
+      "min_surface_distance_m": -0.0004576092800282136,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    },
+    {
+      "case": "mujoco_torsional_friction_condim",
+      "variant": "A",
+      "repeat": 1,
+      "run_id": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z\\trajectory.npz",
+      "raw_sha256": "60d2e269e6dd7bfcf667f0515678e16fb78a35da651fa9c722093d7984df3f3f",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          9.419486679136162
+        ],
+        "normal_total_N": 9.419486679136162,
+        "measured_normal_N": 9.419487077772024,
+        "error_N": -3.986358620977626e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          9.419486679136162
+        ],
+        "normal_total_N": 9.419486679136162,
+        "measured_normal_N": 9.419487077772024,
+        "error_N": -3.986358620977626e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 9.419487077772024,
+      "first_step_vertical_acceleration_mps2": -0.3905133344233036,
+      "first_step_height_change_m": -3.8743019104003906e-07,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "settled_mean_normal_N": 9.810294753758058,
+      "maximum_native_solver_iterations": 1,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 2.64261248245079e-07,
+      "max_kinetic_increment_step": 3,
+      "force_at_max_kinetic_increment_N": [
+        -1.567448117195606e-16,
+        -1.705605168332727e-25,
+        9.627527712388625
+      ],
+      "potential_energy_increment_same_step_J": -1.1036619544047e-05,
+      "total_energy_increment_same_step_J": -1.0772358295829676e-05,
+      "max_total_energy_increment_J": 1.5258790520000787e-07,
+      "force_acceleration_identity_error_mps": 4.733663043791567e-10,
+      "ballistic_velocity_identity_error_mps": 0.0,
+      "max_surface_distance_m": -9.998679161071777e-06,
+      "min_surface_distance_m": -4.900991916656494e-05,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    },
+    {
+      "case": "mujoco_torsional_friction_condim",
+      "variant": "A",
+      "repeat": 2,
+      "run_id": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z\\trajectory.npz",
+      "raw_sha256": "60d2e269e6dd7bfcf667f0515678e16fb78a35da651fa9c722093d7984df3f3f",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          9.419486679136162
+        ],
+        "normal_total_N": 9.419486679136162,
+        "measured_normal_N": 9.419487077772024,
+        "error_N": -3.986358620977626e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          9.419486679136162
+        ],
+        "normal_total_N": 9.419486679136162,
+        "measured_normal_N": 9.419487077772024,
+        "error_N": -3.986358620977626e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 9.419487077772024,
+      "first_step_vertical_acceleration_mps2": -0.3905133344233036,
+      "first_step_height_change_m": -3.8743019104003906e-07,
+      "settled_active_fraction": 1.0,
+      "settled_positive_normal_fraction": 1.0,
+      "settled_mean_normal_N": 9.810294753758058,
+      "maximum_native_solver_iterations": 1,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 2.64261248245079e-07,
+      "max_kinetic_increment_step": 3,
+      "force_at_max_kinetic_increment_N": [
+        -1.567448117195606e-16,
+        -1.705605168332727e-25,
+        9.627527712388625
+      ],
+      "potential_energy_increment_same_step_J": -1.1036619544047e-05,
+      "total_energy_increment_same_step_J": -1.0772358295829676e-05,
+      "max_total_energy_increment_J": 1.5258790520000787e-07,
+      "force_acceleration_identity_error_mps": 4.733663043791567e-10,
+      "ballistic_velocity_identity_error_mps": 0.0,
+      "max_surface_distance_m": -9.998679161071777e-06,
+      "min_surface_distance_m": -4.900991916656494e-05,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    },
+    {
+      "case": "mujoco_torsional_friction_condim",
+      "variant": "B",
+      "repeat": 1,
+      "run_id": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z\\trajectory.npz",
+      "raw_sha256": "26124063820c95659780cab8538e2bb78d0c8c979422105dd8473609ebd0e69c",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          13.346747165411138
+        ],
+        "normal_total_N": 13.346747165411138,
+        "measured_normal_N": 13.346747563412393,
+        "error_N": -3.9800125506417317e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          13.406690271598515
+        ],
+        "normal_total_N": 13.406690271598515,
+        "measured_normal_N": 13.346747563412393,
+        "error_N": 0.05994270818612257,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 13.346747563412393,
+      "first_step_vertical_acceleration_mps2": 3.536747070029378,
+      "first_step_height_change_m": 3.5390257835388184e-06,
+      "settled_active_fraction": 0.7511111111111111,
+      "settled_positive_normal_fraction": 0.7511111111111111,
+      "settled_mean_normal_N": 9.785945477782555,
+      "maximum_native_solver_iterations": 1,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 0.00013661735236625283,
+      "max_kinetic_increment_step": 82,
+      "force_at_max_kinetic_increment_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_energy_increment_same_step_J": -0.00018469892442229963,
+      "total_energy_increment_same_step_J": -4.8081572056046795e-05,
+      "max_total_energy_increment_J": -4.8020187179531604e-05,
+      "force_acceleration_identity_error_mps": 8.638302287020116e-10,
+      "ballistic_velocity_identity_error_mps": 7.744505991363893e-10,
+      "max_surface_distance_m": 9.5367431640625e-06,
+      "min_surface_distance_m": -3.664195537567139e-05,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    },
+    {
+      "case": "mujoco_torsional_friction_condim",
+      "variant": "B",
+      "repeat": 2,
+      "run_id": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z",
+      "raw_file": "experiments\\mujoco_joint_contact_lab\\friction\\runs\\mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z\\trajectory.npz",
+      "raw_sha256": "26124063820c95659780cab8538e2bb78d0c8c979422105dd8473609ebd0e69c",
+      "actual_gap_per_geom_m": [
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "actual_margin_per_geom_m": [
+        0.0,
+        0.0
+      ],
+      "actual_impratio": 1.0,
+      "actual_cone": 1,
+      "first_step_qp": {
+        "normal_components_N": [
+          13.346747165411138
+        ],
+        "normal_total_N": 13.346747165411138,
+        "measured_normal_N": 13.346747563412393,
+        "error_N": -3.9800125506417317e-07,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 1.0
+      },
+      "posthoc_analytic_impratio1000_same_boundary": {
+        "normal_components_N": [
+          13.406690271598515
+        ],
+        "normal_total_N": 13.406690271598515,
+        "measured_normal_N": 13.346747563412393,
+        "error_N": 0.05994270818612257,
+        "fixed_boundary_assumption": "initial pure slip/spin; correct only while force is on same cone boundary",
+        "tangent_R_over_normal_R": 0.001
+      },
+      "first_step_normal_N": 13.346747563412393,
+      "first_step_vertical_acceleration_mps2": 3.536747070029378,
+      "first_step_height_change_m": 3.5390257835388184e-06,
+      "settled_active_fraction": 0.7511111111111111,
+      "settled_positive_normal_fraction": 0.7511111111111111,
+      "settled_mean_normal_N": 9.785945477782555,
+      "maximum_native_solver_iterations": 1,
+      "native_warnings": 0,
+      "max_kinetic_energy_increment_J": 0.00013661735236625283,
+      "max_kinetic_increment_step": 82,
+      "force_at_max_kinetic_increment_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_energy_increment_same_step_J": -0.00018469892442229963,
+      "total_energy_increment_same_step_J": -4.8081572056046795e-05,
+      "max_total_energy_increment_J": -4.8020187179531604e-05,
+      "force_acceleration_identity_error_mps": 8.638302287020116e-10,
+      "ballistic_velocity_identity_error_mps": 7.744505991363893e-10,
+      "max_surface_distance_m": 9.5367431640625e-06,
+      "min_surface_distance_m": -3.664195537567139e-05,
+      "notes": "Total mechanical energy is post-hoc diagnosis only; frozen kinetic-energy gate is not replaced."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "explanation",
+      "claim": "Initial normal launch is quantitatively explained by the native elliptic-cone regularized constraint objective with moving friction dimensions. Independent initial-state reduced QP matches all four A/B normal totals, including box ~151.7 N. This supports contact/friction model coupling, not an incorrect force sign or gap activation interpretation.",
+      "evidence": "first_step_qp fields; core_constraint.c R/KBIP 2187-2218, elliptic R coupling 2268-2278, cone force 3596-3651"
+    },
+    {
+      "severity": "boundary",
+      "claim": "Observed iterations <=2 and zero warnings do not certify optimization convergence; originals lack gradient/stop residual histories. However the independent first-step optimum and momentum identity provide stronger evidence than iteration counts that this launch is a model response, not simply too few iterations."
+    },
+    {
+      "severity": "boundary",
+      "claim": "Increasing impratio alone changes friction regularization but does not remove cone coupling, nor guarantee reduced normal force. With an unchanged cone boundary and unchanged reference acceleration, reducing tangential R decreases the reduced quadratic denominator, and can increase first-step normal force. It may still alter later slip/sticking; a new experiment must treat the direction as an unverified hypothesis."
+    },
+    {
+      "severity": "boundary",
+      "claim": "The default geom gap=.1 m produces early candidate contacts; positive distance contacts are inactive and carry exactly zero wrench. Their continued presence is not sustained bearing. First launch creates positive distance, inactive constraint and ballistic return; this repeats as chatter."
+    },
+    {
+      "severity": "boundary",
+      "claim": "A kinetic-energy increase alone under gravity is not proof of solver energy injection. Total mechanical energy (kinetic+mgz) is diagnosed separately at the maximum kinetic increment; the original frozen kinetic gate remains failed when exceeded."
+    }
+  ],
+  "checks_detail": [
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z positive distance excluded",
+      "actual": 972,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z force explains acceleration",
+      "actual": 5.956240951409536e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z zero force flights ballistic",
+      "actual": 3.0672550211524596e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r1_20261029T082418973552Z first-step QP normal",
+      "actual": 4.100657662320373e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z positive distance excluded",
+      "actual": 972,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z force explains acceleration",
+      "actual": 5.956240951409536e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z zero force flights ballistic",
+      "actual": 3.0672550211524596e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_A_r2_20261029T082425536583Z first-step QP normal",
+      "actual": 4.100657662320373e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z positive distance excluded",
+      "actual": 1030,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z force explains acceleration",
+      "actual": 5.862101041913259e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z zero force flights ballistic",
+      "actual": 6.792545319614374e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r1_20261029T082432013169Z first-step QP normal",
+      "actual": 3.570386866158515e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z positive distance excluded",
+      "actual": 1030,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z force explains acceleration",
+      "actual": 5.862101041913259e-08,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z zero force flights ballistic",
+      "actual": 6.792545319614374e-09,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_mu_B_r2_20261029T082438566952Z first-step QP normal",
+      "actual": 3.570386866158515e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z positive distance excluded",
+      "actual": 0,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z force explains acceleration",
+      "actual": 4.733663043791567e-10,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z zero force flights ballistic",
+      "actual": 0.0,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r1_20261029T082445148686Z first-step QP normal",
+      "actual": 3.986358620977626e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z positive distance excluded",
+      "actual": 0,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z force explains acceleration",
+      "actual": 4.733663043791567e-10,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z zero force flights ballistic",
+      "actual": 0.0,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_A_r2_20261029T082451711752Z first-step QP normal",
+      "actual": 3.986358620977626e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z positive distance excluded",
+      "actual": 126,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z force explains acceleration",
+      "actual": 8.638302287020116e-10,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z zero force flights ballistic",
+      "actual": 7.744505991363893e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r1_20261029T082458254953Z first-step QP normal",
+      "actual": 3.9800125506417317e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z archive integrity",
+      "actual": 9,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z frozen protocol",
+      "actual": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "expected": "50c8d2ac17f5ffd8c698e684712342f3f6712975e2903430f26930d510847f9b",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z latest observation code",
+      "actual": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "expected": "d50b7cdc8d685949d164250d2fdfdd8680a18458c202b02097afdd56af8437ce",
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z actual ellipse/impratio",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z inactive contacts force zero",
+      "actual": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z positive distance excluded",
+      "actual": 126,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z no warning",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z force explains acceleration",
+      "actual": 8.638302287020116e-10,
+      "expected": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z zero force flights ballistic",
+      "actual": 7.744505991363893e-10,
+      "expected": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condim_B_r2_20261029T082504859137Z first-step QP normal",
+      "actual": 3.9800125506417317e-07,
+      "expected": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "formal eight",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_muA exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_sliding_friction_muB exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condimA exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "mujoco_torsional_friction_condimB exact repeat",
+      "actual": {
+        "body_q": 0.0,
+        "body_qd": 0.0,
+        "joint_q": 0.0,
+        "joint_qd": 0.0,
+        "t": 0.0,
+        "ncon": 0.0,
+        "contact_dim": 0.0,
+        "contact_geom": 0.0,
+        "contact_dist": 0.0,
+        "contact_pos": 0.0,
+        "contact_frame": 0.0,
+        "contact_friction": 0.0,
+        "contact_solref": 0.0,
+        "contact_solimp": 0.0,
+        "contact_efc_address": 0.0,
+        "contact_wrench": 0.0,
+        "world_contact_force": 0.0,
+        "world_contact_torque": 0.0,
+        "pre_com": 0.0,
+        "native_qpos": 0.0,
+        "native_qvel": 0.0,
+        "native_qacc": 0.0,
+        "native_qfrc_constraint": 0.0,
+        "solver_niter": 0.0,
+        "warning_number": 0.0,
+        "native_timestep": 0.0
+      },
+      "expected": 0,
+      "passed": true
+    }
+  ],
+  "excluded_original_attempts": [
+    "mujoco_sliding_friction_mu_A_r1_20261029T082036185701Z",
+    "mujoco_sliding_friction_mu_A_r2_20261029T082049098060Z",
+    "mujoco_sliding_friction_mu_B_r1_20261029T082056008365Z",
+    "mujoco_sliding_friction_mu_B_r2_20261029T082102777868Z",
+    "mujoco_torsional_friction_condim_A_r1_20261029T082109601899Z",
+    "mujoco_torsional_friction_condim_A_r2_20261029T082116469830Z",
+    "mujoco_torsional_friction_condim_B_r1_20261029T082123213679Z",
+    "mujoco_torsional_friction_condim_B_r2_20261029T082129873757Z"
+  ],
+  "no_new_simulation": true
+}

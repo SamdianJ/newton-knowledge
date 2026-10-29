@@ -1,0 +1,11 @@
+[
+  {
+    "change": "Allow locally installed wheel paths; verify all installed source-lock Python contents instead of absolute-path equality",
+    "approved_by": "root before rerun",
+    "protocol_changed": false,
+    "old_runner_sha256": "eabd2437af9a2610bbee0f05922306ce2bc1d5c6b74fe73d048eeadaaa76fcc9",
+    "new_runner_sha256": "c6e1b4622ab4fa6771233c030328f634161e9374c0f02adfb829c9005c19c9cb",
+    "failed_run": "runs/kamino_fourbar_fk-A-r1-20261029T051020299457Z",
+    "simulation_reached_in_failed_run": false
+  }
+]

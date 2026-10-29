@@ -1,0 +1,7 @@
+# Python 3.12.14; run from D:\RAG\Newton knowledge
+# Install pinned Newton separately: uv pip install --python .venv\Scripts\python.exe .\sources\newton-v1.7.0
+numpy==2.5.4
+warp-lang==1.18.0
+matplotlib==3.11.2
+playwright==1.64.1
+# Browser verification uses the installed Microsoft Edge (channel='msedge').

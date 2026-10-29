@@ -1,0 +1,5042 @@
+[
+  {
+    "step_index": 0,
+    "phase": 0,
+    "time_s": 0.0,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0
+    ],
+    "bound_after_notify": [
+      0.0
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 1,
+    "phase": 0,
+    "time_s": 0.005,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 2,
+    "phase": 0,
+    "time_s": 0.01,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 3,
+    "phase": 0,
+    "time_s": 0.015,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 4,
+    "phase": 0,
+    "time_s": 0.02,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 5,
+    "phase": 0,
+    "time_s": 0.025,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 6,
+    "phase": 0,
+    "time_s": 0.03,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 7,
+    "phase": 0,
+    "time_s": 0.035,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 8,
+    "phase": 0,
+    "time_s": 0.04,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 9,
+    "phase": 0,
+    "time_s": 0.045,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 10,
+    "phase": 0,
+    "time_s": 0.05,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 11,
+    "phase": 0,
+    "time_s": 0.055,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 12,
+    "phase": 0,
+    "time_s": 0.06,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 13,
+    "phase": 0,
+    "time_s": 0.065,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 14,
+    "phase": 0,
+    "time_s": 0.07,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 15,
+    "phase": 0,
+    "time_s": 0.075,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 16,
+    "phase": 0,
+    "time_s": 0.08,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 17,
+    "phase": 0,
+    "time_s": 0.085,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 18,
+    "phase": 0,
+    "time_s": 0.09,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 19,
+    "phase": 0,
+    "time_s": 0.095,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 20,
+    "phase": 1,
+    "time_s": 0.1,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 21,
+    "phase": 1,
+    "time_s": 0.105,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 22,
+    "phase": 1,
+    "time_s": 0.11,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 23,
+    "phase": 1,
+    "time_s": 0.115,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 24,
+    "phase": 1,
+    "time_s": 0.12,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 25,
+    "phase": 1,
+    "time_s": 0.125,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 26,
+    "phase": 1,
+    "time_s": 0.13,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 27,
+    "phase": 1,
+    "time_s": 0.135,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 28,
+    "phase": 1,
+    "time_s": 0.14,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 29,
+    "phase": 1,
+    "time_s": 0.145,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 30,
+    "phase": 1,
+    "time_s": 0.15,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 31,
+    "phase": 1,
+    "time_s": 0.155,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 32,
+    "phase": 1,
+    "time_s": 0.16,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 33,
+    "phase": 1,
+    "time_s": 0.165,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 34,
+    "phase": 1,
+    "time_s": 0.17,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 35,
+    "phase": 1,
+    "time_s": 0.17500000000000002,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 36,
+    "phase": 1,
+    "time_s": 0.18,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 37,
+    "phase": 1,
+    "time_s": 0.185,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 38,
+    "phase": 1,
+    "time_s": 0.19,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 39,
+    "phase": 1,
+    "time_s": 0.195,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 40,
+    "phase": 2,
+    "time_s": 0.2,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 41,
+    "phase": 2,
+    "time_s": 0.20500000000000002,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 42,
+    "phase": 2,
+    "time_s": 0.21,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 43,
+    "phase": 2,
+    "time_s": 0.215,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 44,
+    "phase": 2,
+    "time_s": 0.22,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 45,
+    "phase": 2,
+    "time_s": 0.225,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 46,
+    "phase": 2,
+    "time_s": 0.23,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 47,
+    "phase": 2,
+    "time_s": 0.23500000000000001,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 48,
+    "phase": 2,
+    "time_s": 0.24,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 49,
+    "phase": 2,
+    "time_s": 0.245,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 50,
+    "phase": 2,
+    "time_s": 0.25,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 51,
+    "phase": 2,
+    "time_s": 0.255,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 52,
+    "phase": 2,
+    "time_s": 0.26,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 53,
+    "phase": 2,
+    "time_s": 0.265,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 54,
+    "phase": 2,
+    "time_s": 0.27,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 55,
+    "phase": 2,
+    "time_s": 0.275,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 56,
+    "phase": 2,
+    "time_s": 0.28,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 57,
+    "phase": 2,
+    "time_s": 0.28500000000000003,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 58,
+    "phase": 2,
+    "time_s": 0.29,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 59,
+    "phase": 2,
+    "time_s": 0.295,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 60,
+    "phase": 3,
+    "time_s": 0.3,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 61,
+    "phase": 3,
+    "time_s": 0.305,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 62,
+    "phase": 3,
+    "time_s": 0.31,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 63,
+    "phase": 3,
+    "time_s": 0.315,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 64,
+    "phase": 3,
+    "time_s": 0.32,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 65,
+    "phase": 3,
+    "time_s": 0.325,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 66,
+    "phase": 3,
+    "time_s": 0.33,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 67,
+    "phase": 3,
+    "time_s": 0.335,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 68,
+    "phase": 3,
+    "time_s": 0.34,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 69,
+    "phase": 3,
+    "time_s": 0.34500000000000003,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 70,
+    "phase": 3,
+    "time_s": 0.35000000000000003,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 71,
+    "phase": 3,
+    "time_s": 0.355,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 72,
+    "phase": 3,
+    "time_s": 0.36,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 73,
+    "phase": 3,
+    "time_s": 0.365,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 74,
+    "phase": 3,
+    "time_s": 0.37,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 75,
+    "phase": 3,
+    "time_s": 0.375,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 76,
+    "phase": 3,
+    "time_s": 0.38,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 77,
+    "phase": 3,
+    "time_s": 0.385,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 78,
+    "phase": 3,
+    "time_s": 0.39,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 79,
+    "phase": 3,
+    "time_s": 0.395,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 80,
+    "phase": 4,
+    "time_s": 0.4,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 81,
+    "phase": 4,
+    "time_s": 0.405,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 82,
+    "phase": 4,
+    "time_s": 0.41000000000000003,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 83,
+    "phase": 4,
+    "time_s": 0.41500000000000004,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 84,
+    "phase": 4,
+    "time_s": 0.42,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 85,
+    "phase": 4,
+    "time_s": 0.425,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 86,
+    "phase": 4,
+    "time_s": 0.43,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 87,
+    "phase": 4,
+    "time_s": 0.435,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 88,
+    "phase": 4,
+    "time_s": 0.44,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 89,
+    "phase": 4,
+    "time_s": 0.445,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 90,
+    "phase": 4,
+    "time_s": 0.45,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 91,
+    "phase": 4,
+    "time_s": 0.455,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 92,
+    "phase": 4,
+    "time_s": 0.46,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 93,
+    "phase": 4,
+    "time_s": 0.465,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 94,
+    "phase": 4,
+    "time_s": 0.47000000000000003,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 95,
+    "phase": 4,
+    "time_s": 0.47500000000000003,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 96,
+    "phase": 4,
+    "time_s": 0.48,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 97,
+    "phase": 4,
+    "time_s": 0.485,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 98,
+    "phase": 4,
+    "time_s": 0.49,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 99,
+    "phase": 4,
+    "time_s": 0.495,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 100,
+    "phase": 5,
+    "time_s": 0.5,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 101,
+    "phase": 5,
+    "time_s": 0.505,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 102,
+    "phase": 5,
+    "time_s": 0.51,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 103,
+    "phase": 5,
+    "time_s": 0.515,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 104,
+    "phase": 5,
+    "time_s": 0.52,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 105,
+    "phase": 5,
+    "time_s": 0.525,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 106,
+    "phase": 5,
+    "time_s": 0.53,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 107,
+    "phase": 5,
+    "time_s": 0.535,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 108,
+    "phase": 5,
+    "time_s": 0.54,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 109,
+    "phase": 5,
+    "time_s": 0.545,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 110,
+    "phase": 5,
+    "time_s": 0.55,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 111,
+    "phase": 5,
+    "time_s": 0.555,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 112,
+    "phase": 5,
+    "time_s": 0.56,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 113,
+    "phase": 5,
+    "time_s": 0.5650000000000001,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 114,
+    "phase": 5,
+    "time_s": 0.5700000000000001,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 115,
+    "phase": 5,
+    "time_s": 0.5750000000000001,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 116,
+    "phase": 5,
+    "time_s": 0.58,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 117,
+    "phase": 5,
+    "time_s": 0.585,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 118,
+    "phase": 5,
+    "time_s": 0.59,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  },
+  {
+    "step_index": 119,
+    "phase": 5,
+    "time_s": 0.595,
+    "limit_before": [
+      0.25
+    ],
+    "limit_after": [
+      0.25
+    ],
+    "bound_before": [
+      0.0012499999720603228
+    ],
+    "bound_after_notify": [
+      0.0012499999720603228
+    ],
+    "path_before": [
+      2
+    ],
+    "path_after": [
+      2
+    ],
+    "effort_row_count": 1,
+    "notify_called": false,
+    "sequence": [
+      "unchanged_model",
+      "control",
+      "step"
+    ],
+    "notify_state_max_abs": {
+      "body_q": 0.0,
+      "body_qd": 0.0,
+      "joint_q": 0.0,
+      "joint_qd": 0.0
+    },
+    "bound_after_step": [
+      0.0012499999720603228
+    ],
+    "path_after_step": [
+      2
+    ]
+  }
+]

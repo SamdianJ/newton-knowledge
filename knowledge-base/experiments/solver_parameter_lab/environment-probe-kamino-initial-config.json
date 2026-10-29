@@ -1,0 +1,24 @@
+{
+  "solver": "kamino",
+  "status": "probe_failed",
+  "counts_as_ab": false,
+  "python": "3.12.14",
+  "executable": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Scripts\\python.exe",
+  "packages": {
+    "newton": "1.7.0",
+    "numpy": "2.5.4",
+    "warp-lang": "1.18.0",
+    "mujoco": "3.15.0",
+    "mujoco-warp": "3.15.0"
+  },
+  "warp_devices": [
+    "cpu"
+  ],
+  "solver_source": {
+    "path": "D:\\RAG\\Newton knowledge\\experiments\\.venv_multisolver\\Lib\\site-packages\\newton\\_src\\solvers\\kamino\\solver_kamino.py",
+    "sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d",
+    "manifest_sha256": "80956fb4f99e10d78e1dc369ddfacb1c9d554940a5a02391562184679a24727d"
+  },
+  "error": "AttributeError: 'NoneType' object has no attribute 'max_contacts_per_world'",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\RAG\\Newton knowledge\\experiments\\solver_parameter_lab\\probe_environment.py\", line 44, in main\n    config.padmm.max_iterations=4;config.collision_detector.max_contacts_per_world=16\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'max_contacts_per_world'\n"
+}
